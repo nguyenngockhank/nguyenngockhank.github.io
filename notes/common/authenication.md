@@ -3,11 +3,8 @@
 
 Xác thực một HTTP request bằng một dấu hiệu nào đó:
 
-1/ Tạo ra dấu hiệu gì
-3/ Kiểm tra dấu hiệu thế nào
 
-
-## 1/ Tạo ra dấu hiệu gì
+## Tạo ra dấu hiệu gì
 
 ```
 POST /post?api_key=12321323 HTTP/1.1        (URL)
@@ -19,11 +16,9 @@ X-token: CUSTOM_TOKEN                       (Custom header)
 body                                        (Body)
 ```
 
-## 2/ Lưu trữ dấu hiệu ở đâu
+## Lưu trữ dấu hiệu ở đâu
 
 Basic Authentication
-
-
 
 Session-based Authentication
 

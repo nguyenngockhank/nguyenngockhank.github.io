@@ -4,8 +4,8 @@
 
 ```javascript
 var input = '/tac-gia/nguyen-khank.html';
-var chunks = input.match(/(tac\-gia\/)([a-z])(\.html)/);
-var char = chunks[2]; // nguyen-khank
+var chunks = input.match(/(tac\-gia\/)([a-z\-]+)(\.html)/);
+var authorSlug = chunks[2]; // nguyen-khank
 ```
 
 ## Case: Đổi size của href hình 
