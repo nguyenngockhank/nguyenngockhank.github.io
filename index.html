@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nguyễn Khánk</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .text-center {
+            text-align: center;
+        }
+        .mb-10 { margin-bottom: 10px; }
+
+        .circle-image {
+            border-radius: 50%;
+        }
+
+        .avatar {
+            max-height: 300px;
+            border: 10px solid #e74c3c;
+        }
+
+        .container {
+            max-width: 600px; 
+            margin: auto;
+            margin-top: 60px;
+        }
+
+        .circle-text {
+            display: inline-block;
+        }
+        .circle-char {
+            position:absolute;
+            transform-origin:0 100%;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        .greet-wrapper {
+           position: relative; top: -55px;;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center container">
+
+        <div class="greet-wrapper">
+            <div class="circle-text"></div>
+        </div>
+        
+        <div class="mb-10">
+            <img class="avatar circle-image" src="./images/avatar.jpg" alt="Khank's avatar">
+        </div>
+
+        <div>
+            <h2  class="mb-10">Lời đầu tiên</h2>
+            <p>Xin gửi đến quý bạn và các vị một lời chúc sức khoẻ và lời chào chân trọng nhất!</p>
+
+            <a href="/docs">Nguyễn Khánk's Wiki</a>
+        </div>
+    </div>
+
+
+    <script>
+        var CIRLE_TEXT = "Hello, Khánk nè!                                     ";
+
+        var RADIUS = 210;
+        circularText(CIRLE_TEXT, RADIUS, 0);
+
+        function circularText(txt, radius) {
+            var chars = txt.split("");
+            var el = document.getElementsByClassName("circle-text")[0];
+
+            var deg = 360 / txt.length, origin = 0;
+
+            el.innerHTML = '';
+
+            chars.forEach((ch) => {
+                var  str = `<p class="circle-char" style='height:${radius}px;transform:rotate(${origin}deg);'>${ch}</p>`;
+                el.innerHTML += str;
+                origin += deg;
+            });
+        }
+
+
+        var info = {  text: CIRLE_TEXT  };
+        function processText() {
+            circularText(info.text, RADIUS);
+        }
+        processText();
+
+        // setInterval(() => {
+        // //     // var firstChar = info.text[0];
+        // //     // var text = info.text.substring(1) + firstChar;
+
+        //     var lastChar = info.text[info.text.length - 1];
+        //     var text = lastChar + info.text.substr(0, info.text.length - 1);
+
+        //     info.text = text;
+        //     processText();
+
+        // }, 111)
+    </script>
+</body>
+</html>
