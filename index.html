@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nguyễn Khánk</title>
 
@@ -19,14 +19,16 @@
         }
 
         .avatar {
-            max-height: 300px;
+            height: 200px;
             border: 10px solid #e74c3c;
         }
 
         .container {
             max-width: 600px; 
             margin: auto;
-            margin-top: 60px;
+            margin-top: 50px;
+            padding: 0 15px;
+            font-size: 14px;
         }
 
         .circle-text {
@@ -36,12 +38,12 @@
             position:absolute;
             transform-origin:0 100%;
             font-weight: 700;
-            font-size: 30px;
+            font-size: 18px;
         }
         .greet-wrapper {
-           position: relative; top: -55px;;
+           position: relative; top: -22px;;
         }
-        .link-item { color:blueviolet; display: block; padding: 7px; }
+        .link-item { color:blueviolet; display: block; padding: 7px; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -72,10 +74,10 @@
 
 
     <script>
-        var CIRLE_TEXT = "Hello, Khánk nè!                                     ";
+        var CIRLE_TEXT = "o, Khánk nè!                                     Hell";
 
-        var RADIUS = 210;
-        circularText(CIRLE_TEXT, RADIUS, 0);
+        var RADIUS = 125;
+        circularText(CIRLE_TEXT, RADIUS);
 
         function circularText(txt, radius) {
             var chars = txt.split("");
