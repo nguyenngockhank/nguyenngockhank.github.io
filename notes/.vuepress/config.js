@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
   title: 'Nguyễn Khánk\'s Wiki',
   description: 'Wikipedia của tui',
-  base: '/',
+  base: '/docs/',
   dest: '../docs',
   themeConfig: {
     nav: [
