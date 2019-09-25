@@ -34,6 +34,7 @@ module.exports = {
             '/javascript/hoist',
             '/javascript/stories/es6',
             '/javascript/stories/weird',
+            '/snippets/custom_promise_all',
         ]
       },
 
