@@ -42,6 +42,7 @@ module.exports = {
         children: [
           '/common/optimize_web',
           '/common/cross_domain',
+          '/snippets/regex',
         ]
       },
 
