@@ -1,4 +1,6 @@
-# Vấn đề 
+# Custom Promise All
+
+## Vấn đề
 Ta hay dùng  `Promise.all(promises)` (hàm có sẵn ES6)  để bắt được lúc mà `tất cả` các promise thực thi xong. 
 
 Thế nhưng không thể biết được `từng` promise thực thi xong 
