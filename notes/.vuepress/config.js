@@ -46,6 +46,7 @@ module.exports = {
             '/javascript/stories/es6',
             '/javascript/stories/weird',
             '/snippets/custom_promise_all',
+            '/javascript/add_custom_fn',
         ]
       },
 
