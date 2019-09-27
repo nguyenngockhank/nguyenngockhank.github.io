@@ -47,7 +47,7 @@ Nên cẩn trọng khi làm việc tính toán, nên nhớ có case NaN này.
 
 Cú pháp của `array.map` 
 
-```
+```javascript
 var new_array = arr.map(function callback(currentValue[, index[, array]]) {
     // Return element for new_array
 }[, thisArg])
@@ -55,7 +55,7 @@ var new_array = arr.map(function callback(currentValue[, index[, array]]) {
 
 Cú pháp của `parseInt`
 
-```
+```javascript
 parseInt(string, radix);
 ```
 
@@ -64,7 +64,7 @@ parseInt(string, radix);
 ### Phòng tránh 
 - Viết rõ ràng ra, đừng viết tắt, giả bộ nguy hiểm làm gì =)) 
 
-```
+```javascript
 ["1", "2", "3"].map((v) => parseInt(v)); 
 ```
 
@@ -73,6 +73,7 @@ parseInt(string, radix);
 ## Mất attribute khi "JSON.stringify"
 
 + Server Node: Dùng `express` truyền dữ liệu JSON xuống client
+
 ```javascript
 obj.total = 2000;
 res.json(obj); 

@@ -45,6 +45,7 @@ module.exports = {
             '/javascript/hoist',
             '/javascript/stories/es6',
             '/javascript/stories/weird',
+            '/javascript/tricks',
             '/snippets/regex',
             '/javascript/add_custom_fn',
             '/snippets/custom_promise_all',
@@ -62,8 +63,19 @@ module.exports = {
         ]
       },
 
+     
+
       {
-        title: "Tricks",
+        title: "Algorithm / DS",
+        children: [
+            '/algorithm/string',
+            '/algorithm/rate_limit',
+            '/algorithm/authority',
+        ]
+      },
+
+      {
+        title: "Tools / Tricks",
         children: [
           '/tricks/git',
           '/tricks/linux',
@@ -72,21 +84,12 @@ module.exports = {
         ]
       },
 
-      {
-        title: "Thuật toán",
-        children: [
-            '/algorithm/string',
-            '/algorithm/rate_limit',
-            '/tricks/authority',
-        ]
-      },
-
-      {
-        title: "Others",
-        children: [
+      // {
+      //   title: "Others",
+      //   children: [
          
-        ]
-      },
+      //   ]
+      // },
     ]
   },
   configureWebpack: {
