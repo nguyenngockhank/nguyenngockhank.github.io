@@ -45,8 +45,10 @@ module.exports = {
             '/javascript/hoist',
             '/javascript/stories/es6',
             '/javascript/stories/weird',
-            '/snippets/custom_promise_all',
+            '/snippets/regex',
             '/javascript/add_custom_fn',
+            '/snippets/custom_promise_all',
+            '/snippets/event_storage',
         ]
       },
 
@@ -57,7 +59,6 @@ module.exports = {
           '/common/cross_domain',
           '/common/authenication',
           '/common/realtime',
-          '/snippets/regex',
         ]
       },
 
@@ -67,15 +68,23 @@ module.exports = {
           '/tricks/git',
           '/tricks/linux',
           '/tricks/mac',
+          '/tricks/selenium_ide',
+        ]
+      },
+
+      {
+        title: "Thuật toán",
+        children: [
+            '/algorithm/string',
+            '/algorithm/rate_limit',
+            '/tricks/authority',
         ]
       },
 
       {
         title: "Others",
         children: [
-          '/tricks/authority',
-          '/tricks/selenium_ide',
-          '/tricks/rate_limit',
+         
         ]
       },
     ]

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Event Storage | Nguyễn Khánk&#39;s Wiki</title>
+    <meta name="description" content="Wikipedia của tui">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../public/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../public/favicons/favicon-16x16.png">
+  <link rel="manifest" href="../public/favicons/site.webmanifest">
+  <link rel="mask-icon" href="../public/favicons/safari-pinned-tab.svg" color="#3a0839">
+  <link rel="shortcut icon" href="../public/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#3a0839">
+  <meta name="msapplication-config" content="../public/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.10c81e38.css" as="style"><link rel="preload" href="/docs/assets/js/app.79d6080b.js" as="script"><link rel="preload" href="/docs/assets/js/29.b44aea0f.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.53bc128f.js"><link rel="prefetch" href="/docs/assets/js/11.16cfd92b.js"><link rel="prefetch" href="/docs/assets/js/12.0090688d.js"><link rel="prefetch" href="/docs/assets/js/13.efefd4cf.js"><link rel="prefetch" href="/docs/assets/js/14.2bccc3b9.js"><link rel="prefetch" href="/docs/assets/js/15.e5a08089.js"><link rel="prefetch" href="/docs/assets/js/16.b44aaed0.js"><link rel="prefetch" href="/docs/assets/js/17.e0ab2129.js"><link rel="prefetch" href="/docs/assets/js/18.722296f8.js"><link rel="prefetch" href="/docs/assets/js/19.bb716bad.js"><link rel="prefetch" href="/docs/assets/js/2.5b07ba1d.js"><link rel="prefetch" href="/docs/assets/js/20.28484a59.js"><link rel="prefetch" href="/docs/assets/js/21.1e9a5d0c.js"><link rel="prefetch" href="/docs/assets/js/22.d3d4a71a.js"><link rel="prefetch" href="/docs/assets/js/23.eeed8c35.js"><link rel="prefetch" href="/docs/assets/js/24.959ca89a.js"><link rel="prefetch" href="/docs/assets/js/25.2c598d28.js"><link rel="prefetch" href="/docs/assets/js/26.a1432751.js"><link rel="prefetch" href="/docs/assets/js/27.fe6b6484.js"><link rel="prefetch" href="/docs/assets/js/28.936b6103.js"><link rel="prefetch" href="/docs/assets/js/3.1511bd4e.js"><link rel="prefetch" href="/docs/assets/js/30.8d884327.js"><link rel="prefetch" href="/docs/assets/js/31.ec3004e9.js"><link rel="prefetch" href="/docs/assets/js/32.95559583.js"><link rel="prefetch" href="/docs/assets/js/33.fa628189.js"><link rel="prefetch" href="/docs/assets/js/34.16ed52c1.js"><link rel="prefetch" href="/docs/assets/js/35.2b1e18f9.js"><link rel="prefetch" href="/docs/assets/js/36.3c3bd4a4.js"><link rel="prefetch" href="/docs/assets/js/37.ffd2781f.js"><link rel="prefetch" href="/docs/assets/js/38.3c719a6f.js"><link rel="prefetch" href="/docs/assets/js/39.e49e6dc0.js"><link rel="prefetch" href="/docs/assets/js/4.913b877c.js"><link rel="prefetch" href="/docs/assets/js/40.2315b2f6.js"><link rel="prefetch" href="/docs/assets/js/5.6d98ed6d.js"><link rel="prefetch" href="/docs/assets/js/6.0a1c5b8a.js"><link rel="prefetch" href="/docs/assets/js/7.ba6fef03.js"><link rel="prefetch" href="/docs/assets/js/8.c7171e62.js"><link rel="prefetch" href="/docs/assets/js/9.7893bac8.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.10c81e38.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Nguyễn Khánk's Wiki</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading"><span>PHP</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Node</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>Javascript</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/docs/javascript/hoist.html" class="sidebar-link">Hoisting</a></li><li><a href="/docs/javascript/stories/es6.html" class="sidebar-link">ES6 Chuyện khó ưa</a></li><li><a href="/docs/javascript/stories/weird.html" class="sidebar-link">Javascript kỳ dị</a></li><li><a href="/docs/snippets/regex.html" class="sidebar-link">Regular Expression</a></li><li><a href="/docs/javascript/add_custom_fn.html" class="sidebar-link">Add custom function</a></li><li><a href="/docs/snippets/custom_promise_all.html" class="sidebar-link">Custom Promise All</a></li><li><a href="/docs/snippets/event_storage.html" class="active sidebar-link">Event Storage</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/snippets/event_storage.html#solution" class="sidebar-link">Solution</a></li></ul></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Common</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Tricks</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Thuật toán</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Others</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="event-storage"><a href="#event-storage" aria-hidden="true" class="header-anchor">#</a> Event Storage</h1> <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event" target="_blank" rel="noopener noreferrer">Xem thêm tại đây<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>Sử dụng để đồng bộ dữ liệu giữa các tab, và nhìn có vẻ như realtime =))</p> <p><em><strong>Ví dụ:</strong></em>
+Tính năng: <code>Accept Cookie Preferences</code></p> <ul><li>Hiển thị cái <code>popup</code> khi User chưa nhấn nút accept</li> <li>User mở nhiều tabs, tab nào cũng hiển thị cái <code>popup</code> vì người dùng accept</li> <li>User accept -&gt; tắt <code>popup</code> màn trên tab hiện tại</li> <li>Những tab khác cũng tự tắt cái <code>popup</code></li></ul> <h2 id="solution"><a href="#solution" aria-hidden="true" class="header-anchor">#</a> Solution</h2> <p>Lợi dụng vào <code>built-in event</code> của storage để liên lạc giữa các tab ^^!</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;storage&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// your code ...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Implemented by Khank</p> <p><strong>1/ EventStorageFactory</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">randomString</span><span class="token punctuation">(</span><span class="token parameter">length</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> text <span class="token operator">=</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> possible <span class="token operator">=</span> <span class="token string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        text <span class="token operator">+=</span> possible<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> possible<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> text<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">parseJSON</span><span class="token punctuation">(</span><span class="token parameter">v</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span> 
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">var</span> <span class="token function-variable function">EventStorageFactory</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> factoryInstance <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">function</span> <span class="token function">EventStorage</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> instance <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>config <span class="token operator">||</span> <span class="token operator">!</span>config<span class="token punctuation">.</span>prefix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'`EventStorage` needs valid config!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">var</span> <span class="token constant">PREFIX_DATASTORE</span> <span class="token operator">=</span> config<span class="token punctuation">.</span>prefix<span class="token punctuation">;</span> <span class="token comment">// </span>
+        <span class="token keyword">var</span> <span class="token constant">KEY_DATASTORE</span> <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> onReceive <span class="token operator">=</span> config<span class="token punctuation">.</span>listen<span class="token punctuation">;</span>
+        <span class="token keyword">var</span> listenPrefixes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">function</span> <span class="token function">generateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token constant">KEY_DATASTORE</span> <span class="token operator">=</span> <span class="token constant">PREFIX_DATASTORE</span> <span class="token operator">+</span> <span class="token function">randomString</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">+</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            listenPrefixes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token constant">PREFIX_DATASTORE</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">function</span> <span class="token function">eventValid</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> pre <span class="token operator">=</span> listenPrefixes<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">prefix</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> name<span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span>prefix<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> pre<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+
+        <span class="token keyword">function</span> <span class="token function">startEvents</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// load </span>
+            window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;storage&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">var</span> key <span class="token operator">=</span> e<span class="token punctuation">.</span>key<span class="token punctuation">;</span>
+                <span class="token comment">// same tab</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">===</span> <span class="token constant">KEY_DATASTORE</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token comment">/// not the relevant event ...</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">eventValid</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+                    <span class="token keyword">return</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+                <span class="token keyword">var</span> values <span class="token operator">=</span> <span class="token function">parseJSON</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>newValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>onReceive<span class="token punctuation">)</span> <span class="token function">onReceive</span><span class="token punctuation">(</span>values<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">/// unload </span>
+            window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'unload'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                localStorage<span class="token punctuation">.</span><span class="token function">removeItem</span><span class="token punctuation">(</span><span class="token constant">KEY_DATASTORE</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        instance<span class="token punctuation">.</span><span class="token function-variable function">fire</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            localStorage<span class="token punctuation">[</span><span class="token constant">KEY_DATASTORE</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        instance<span class="token punctuation">.</span><span class="token function-variable function">init</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">generateKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">startEvents</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    factoryInstance<span class="token punctuation">.</span><span class="token function-variable function">create</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> eventIns <span class="token operator">=</span> <span class="token function">EventStorage</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        eventIns<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> eventIns<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> factoryInstance<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>2/ Sử dụng</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// create event store </span>
+<span class="token keyword">var</span> eventStore <span class="token operator">=</span> EventStorageFactory<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    prefix<span class="token punctuation">:</span> <span class="token string">'ACCEPT_COOKIE'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">listen</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span> value <span class="token operator">&amp;&amp;</span> value<span class="token punctuation">.</span>action <span class="token operator">===</span> <span class="token string">'accepted'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">processAccepting</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p><strong>3/ Demo</strong> <a href="https://nguyenngockhank.github.io/demo/event_storage.html" target="_blank" rel="noopener noreferrer">Xem demo tại đây<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/docs/snippets/custom_promise_all.html" class="prev">
+          Custom Promise All
+        </a></span> <span class="next"><a href="/docs/common/optimize_web.html">
+          Performance website
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/docs/assets/js/app.79d6080b.js" defer></script><script src="/docs/assets/js/29.b44aea0f.js" defer></script>
+  </body>
+</html>

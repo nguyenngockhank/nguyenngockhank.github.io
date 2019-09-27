@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="notify">PLEASE CLICK ACCEPT BUTTON</div>
+    <button id="accept-btn">
+        ACCEPT
+    </button>
+
+<script>
+function randomString(length) {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for (var i = 0; i < length; i++){
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+}
+
+function parseJSON(v) {
+    try {
+        return JSON.parse(v);
+    } catch (e) {  }
+    return false 
+}
+
+var EventStorageFactory = function () {
+    var factoryInstance = {};
+
+    function EventStorage(config) {
+        var instance = {};
+        if (!config || !config.prefix) {
+            console.warn('`EventStorage` needs valid config!');
+            return {};
+        }
+
+        var PREFIX_DATASTORE = config.prefix; // 
+        var KEY_DATASTORE = '';
+        var onReceive = config.listen;
+        var listenPrefixes = [];
+
+        function generateKey() {
+            KEY_DATASTORE = PREFIX_DATASTORE + randomString(4) + Date.now();
+            listenPrefixes.push(PREFIX_DATASTORE)
+        }
+
+        function eventValid(name) {
+            var pre = listenPrefixes.filter(function(prefix) {
+                return name.startsWith(prefix);
+            });
+            return pre.length > 0;
+        }
+
+
+        function startEvents() {
+            // load 
+            window.addEventListener("storage", function(e) {
+                var key = e.key;
+                // same tab
+                if (key === KEY_DATASTORE) {
+                    return;
+                }
+
+                /// not the relevant event ...
+                if (!eventValid(key)) { 
+                    return;
+                }
+
+                var values = parseJSON(e.newValue);
+
+                if (onReceive) onReceive(values);
+            }, false);
+
+            /// unload 
+            window.addEventListener('unload', function(event) {
+                localStorage.removeItem(KEY_DATASTORE);
+            });
+        }
+
+        instance.fire = function(value) {
+            localStorage[KEY_DATASTORE] = JSON.stringify(value);
+        }
+
+        instance.init = function() {
+            generateKey();
+            startEvents();
+        }
+
+        return instance;
+    }
+
+    factoryInstance.create = function (config) {
+        var eventIns = EventStorage(config);
+        eventIns.init();
+        return eventIns;
+    }
+
+    return factoryInstance;
+}();
+
+</script>
+
+
+<script>
+function processAccepting() {
+    document.getElementById('notify').innerHTML = 'THANK YOU FOR CLICKING THE BUTTON';
+}
+
+// create event store 
+var eventStore = EventStorageFactory.create({
+    prefix: 'ACCEPT_',
+    listen: (value) => {
+        if( value && value.action === 'accepted') {
+            processAccepting()
+        }
+    }
+});
+
+// set events for page
+document.getElementById('accept-btn').addEventListener('click', () => {
+    processAccepting();
+    eventStore.fire( {action: 'accepted'});
+});
+</script>
+
+</body>
+</html>
