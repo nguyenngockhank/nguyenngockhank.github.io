@@ -1,5 +1,7 @@
 # Regular Expression
 
+[Tham khảo thêm](https://medium.com/@j_lim_j/summary-of-javascript-regular-expressions-regex-tutorial-by-net-ninja-6cb5215dd658)
+
 ## Case: Bóc tách tên tác giả
 
 ```javascript

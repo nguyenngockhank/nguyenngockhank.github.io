@@ -13,11 +13,14 @@ const index = 0;
 
 ```javascript
 
-// xoá ký tự đầu 
-'abcdef'.slice(1);  // bcdef
+// xoá 2 ký tự đầu 
+'abcdef'.slice(2);  // cdef
 
-// xoá ký tự cuối
-'abcdef'.slice(0, -1); // abcde
+// xoá 2 ký tự cuối
+'abcdef'.slice(0, -2); // abcd
+
+// xoá chuỗi ở giữa - chỉ replace vị trí thứ nhất
+'abcdef'.replace('de', ''); // abcf
 
 // lấy 2 ký tự cuối 
 'abcdef'.slick(-2); // ef
