@@ -1,4 +1,4 @@
-# [PHP] self and static
+# self vs. static
 
 Xem đoạn code: 
 

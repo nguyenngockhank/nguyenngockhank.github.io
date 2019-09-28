@@ -42,7 +42,6 @@ module.exports = {
       {
         title: "Javascript",
         children: [
-            '/javascript/hoist',
             '/javascript/stories/es6',
             '/javascript/stories/weird',
             '/javascript/tricks',
@@ -80,14 +79,14 @@ module.exports = {
           '/tricks/git',
           '/tricks/linux',
           '/tricks/mac',
-          '/tricks/selenium_ide',
+          '/snippets/selenium_ide',
         ]
       },
 
       {
         title: "Terminology",
         children: [
-          
+          '/terms/javascript',
         ]
       },
     ]

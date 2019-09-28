@@ -8,6 +8,21 @@
 - undefined
 - symbol
 
+## Objects
+
+All other types are called `primitive` because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities. 
+
+
+## Symbols
+
+The `symbol` type is used to create `unique identifiers` for objects. 
+
+```javascript
+typeof Symbol("id") // "symbol"
+
+Symbol('id') === Symbol('id'); // false
+```
+
 ## Falsy values
 - false
 - null
@@ -17,4 +32,4 @@
 - NaN
 
 ## Truthy values
-. All values are truthy unless they are defined as falsy
+All values are truthy unless they are defined as falsy

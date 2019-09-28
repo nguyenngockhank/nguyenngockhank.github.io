@@ -1,5 +1,7 @@
 # Rate limitting
 
+[Bài viết tham khảo](https://nghethuatcoding.com/2019/06/15/thiet-ke-api-rate-limiting/)
+
 2 Thuật toán cơ bản: **Fixed Window**, **Sliding Window**
 
 - Fixed Window:  Request được tính trong khung thời gian cố định 

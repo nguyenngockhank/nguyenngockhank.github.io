@@ -88,7 +88,7 @@ const result = avengers.reduce((avenger, { age, name }) => {
 ```
 
 
-## Thêm custom function vào 
+## Thêm custom function  
 
 ```javascript
 Array.prototype.sum = function() {

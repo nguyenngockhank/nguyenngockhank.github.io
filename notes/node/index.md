@@ -6,12 +6,7 @@ Ghi chép nhẹ về NodeJS... ai cũng bik là nó được sinh ra để viế
 
 ***Note nhanh***
 
-Tất cả các giao tiếp IO đều là async (non-blocking IO) như là xử lý với File, Database, Socket, API, ... tuy nhiên xử lý với file vẫn có những hàm built-in đồng bộ với file như `fs.mkdirSync`, `fs.readdirSync`, `fs.readFileSync`, ... kết thúc với chữ Sync thường dùng trong khởi tạo App. 
+Tất cả các giao tiếp IO đều là async **(non-blocking IO)** như là xử lý với File, Database, Socket, API, ... 
 
----
+Tuy nhiên xử lý với file vẫn có những hàm built-in đồng bộ với file như `fs.mkdirSync`, `fs.readdirSync`, `fs.readFileSync`, ... kết thúc với chữ Sync thường dùng trong khởi tạo App. 
 
-Danh sách các bài viết
-* [npm](npm.md)
-* [n](n.md)
-* [.env](env.md)   
-* [Sequelize (ORM)](sequelize.md)  
