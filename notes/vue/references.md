@@ -35,3 +35,10 @@ https://github.com/samturrell/vue-match-heights
 
 ### portal-vue
 https://github.com/LinusBorg/portal-vue
+
+
+
+## Awesome posts
+
+### Replacing Template Features with Plain JavaScript
+https://vuejs.org/v2/guide/render-function.html#Replacing-Template-Features-with-Plain-JavaScript
