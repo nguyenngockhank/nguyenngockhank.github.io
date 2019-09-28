@@ -60,6 +60,7 @@ module.exports = {
           '/common/cross_domain',
           '/common/authenication',
           '/common/realtime',
+          '/common/crawl',
         ]
       },
 
