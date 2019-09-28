@@ -45,6 +45,7 @@ Link tham khảo khi cần
 
 ### Luyện tập võ công
 - File `.env`. Xem thêm bài [.env](env.md) để hiểu thêm chi tiết :smiling_imp:
+
 ```
 DB_DIALECT=mysql
 DB_HOST=localhost

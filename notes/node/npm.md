@@ -11,7 +11,7 @@ Và sổ sách của cái kho đó là **package.json**, nhìn cái đuôi **.js
 
 ```javascript
 {
-  "name": "Project Name",
+  "name": "ProjectName",
   "version": "1.0.0",
   "description": "Description",
   "main": "index.js",

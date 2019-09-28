@@ -47,6 +47,7 @@ if ( dep_trai ) {
 /// thông thái =))) 
 dep_trai && gai_theo();
 ```
+
 ## Kiểm tra Object rỗng
 
 ```
@@ -87,6 +88,14 @@ const result = avengers.reduce((avenger, { age, name }) => {
 ```
 
 
+## Thêm custom function vào 
 
+```javascript
+Array.prototype.sum = function() {
+    return this.reduce((total, amount) => total + amount); 
+};
+
+[ 11, 22 , 44 ].sum(); // 77
+```
 
 

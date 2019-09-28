@@ -35,7 +35,7 @@ module.exports = {
             '/node/npm',
             '/node/n',
             '/node/env',
-            '/snippets/node_arguments',
+            '/node/node_arguments',
             '/node/sequelize',
         ]
       },
@@ -47,7 +47,6 @@ module.exports = {
             '/javascript/stories/weird',
             '/javascript/tricks',
             '/snippets/regex',
-            '/javascript/add_custom_fn',
             '/snippets/custom_promise_all',
             '/snippets/event_storage',
         ]
@@ -85,12 +84,12 @@ module.exports = {
         ]
       },
 
-      // {
-      //   title: "Others",
-      //   children: [
-         
-      //   ]
-      // },
+      {
+        title: "Terminology",
+        children: [
+          
+        ]
+      },
     ]
   },
   configureWebpack: {
