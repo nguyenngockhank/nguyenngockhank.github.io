@@ -87,6 +87,7 @@ module.exports = {
         title: "Terminology",
         children: [
           '/terms/javascript',
+          '/terms/oop',
         ]
       },
     ]
