@@ -33,3 +33,12 @@ Symbol('id') === Symbol('id'); // false
 
 ## Truthy values
 All values are truthy unless they are defined as falsy
+
+
+## Type Coertion
+
+![Type Coertion](@/images/js-coercion.png)
+
+## References
+
+[Equality comparisons and sameness](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)

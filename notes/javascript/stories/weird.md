@@ -32,6 +32,45 @@ console.log( a == a ); // false
 
 Nên cẩn trọng khi làm việc tính toán, nên nhớ có case NaN này.
 
+---
+
+## [] == true (false) và ![] == true (false)
+
+```js
+[] == true // false
+![] == true  // false -> ???  
+
+/// thử so sánh với false
+[] == false // true
+![] == false // false -> hợp lý hơn rồi 
+```
+
+### [] == true (false)
+
+Khi so sánh `==` thì đây là dạng so sánh giữa Object (A) và Boolean (B)
+
+**Bước 1**: 
+- **A** sẽ lần lượt gọi hàm `valueOf`, `toString` để trở thành primitive value `ToPrimitive(A)`
+- **B** sẽ trở thành số `ToNumber(B)` (tương đương với **`+B`**) 
+
+**Bước 2**:
+Hiện tại **A** đã là string (''), **B** đã là Number (0)
+- Tại đây, A sẽ ép thành số là có thể so sánh được `ToNumber(A)`
+
+Xem thêm [JS Data type](/javascript/data_type.md#type-coertion)
+
+```js
+// xem thêm 1 vài ví dụ khác về việc ẩn ý ép kiểu 
+[1, 2] == '1,2' // true
+['1', '2'] == '1,2' // true
+```
+
+### ![] == true (false)
+
+Ở trường hợp này, vì `![]` sẽ ưu tiên chạy trước `==` nên sự ép kiểu giữa Object và Boolean không còn. 
+
+Mà thay vào đó: `[]` không phải là kiểu `Falsy` nên khi phủ định lại là `false`, `false` so sánh với `true` thì ra `false`
+
 --- 
 
 ## ["1", "2", "3"].map(parseInt); 
