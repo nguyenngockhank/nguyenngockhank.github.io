@@ -45,9 +45,11 @@ module.exports = {
             '/javascript/stories/es6',
             '/javascript/stories/weird',
             '/javascript/tricks',
-            '/snippets/regex',
             '/snippets/custom_promise_all',
             '/snippets/event_storage',
+            '/javascript/axios_jqueryajax',
+            '/snippets/regex',
+            '/javascript/data_type',
         ]
       },
 
@@ -61,8 +63,6 @@ module.exports = {
           '/common/crawl',
         ]
       },
-
-     
 
       {
         title: "Algorithm / DS",
@@ -86,9 +86,10 @@ module.exports = {
 
       {
         title: "Terminology",
+        sidebarDepth: 2, 
         children: [
           '/terms/javascript',
-          '/terms/oop',
+          '/terms/oop', 
         ]
       },
     ]

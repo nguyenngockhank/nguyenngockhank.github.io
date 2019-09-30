@@ -4,7 +4,7 @@ Vietsub: Lập trình hướng đối tượng
 - OOP là một kỹ thuật lập trình cho phép lập trình viên `tạo ra các đối tượng` trong code để `trừu tượng hóa` các đối tượng thực tế trong cuộc sống.
 
 
-## ✌️✌️4 tính chất 
+## ✅ 4 tính chất 
 
 ### Encapsulation - Tính đóng gói
 - Che dấu những tính chất xử lý bên trong của đối tượng giống như nội tâm của 1 con người vậy đó =))
@@ -29,7 +29,7 @@ Vietsub: Lập trình hướng đối tượng
 
 ---
 
-## 👉👌 Mối quan hệ
+## ✅ Mối quan hệ
 
 Dưới đây là 1 số mối quan hệ giữa các class với nhau
 
@@ -71,7 +71,7 @@ class A {
 ```
 
 
-## 🙏🙏 Design Pattern
+## ✅ Design Pattern
 Design pattern mô tả một giải pháp được thiết lập cho các vấn đè thường gặp nhất trong thiết kế phần mềm
 
 Giang hồ truyền miệng nhau có 3 loại chính: **Creational**,  **Structural**,  **Behavioral**
@@ -86,7 +86,7 @@ Sau khi xem qua sơ 2 web trên đó, bạn có thể nhận thấy họ vẽ c�
 
 ---
 
-## 🖐🖐 Unified Modeling Language (UML)
+## ✅ Unified Modeling Language (UML)
 Vietsub: (Theo wiki) Ngôn ngữ mô hình hóa thống nhất =)) 
 
 UML là một ngôn ngữ mô hình gồm các ký hiệu đồ họa mà các phương pháp hướng đối tượng sử dụng để thiết kế các hệ thống thông tin một cách nhanh chóng.
@@ -98,34 +98,45 @@ Cho tấm hình nghiền ngẫm chứ chả biết nói gì thêm :p
 ---
 
 
-## 👍👍 SOLID Principles
+## ✅ SOLID Principles
 
 SOLID là viết tắt của 5 chữ cái đầu trong 5 nguyên tắc thiết kế hướng đối tượng
 
 ### Single responsibility priciple (SRP)
-> Một class chỉ nên giữ 1 trách nhiệm duy nhất 
-> (Chỉ có thể sửa đổi class với 1 lý do duy nhất)
-
+::: tip
+Một class chỉ nên giữ 1 trách nhiệm duy nhất 
+(Chỉ có thể sửa đổi class với 1 lý do duy nhất)
+:::
 
 ### Open/Closed principle (OCP)
-> Có thể thoải mái mở rộng 1 class, nhưng không được sửa đổi bên trong class đó 
-> (open for extension but closed for modification).
+::: tip
+Có thể thoải mái mở rộng 1 class, nhưng không được sửa đổi bên trong class đó
+(open for extension but closed for modification).
+:::
 
 ### Liskov substitution principe (LSP)
-> Trong một chương trình, các object của class con có thể thay thế class cha mà không làm thay đổi tính đúng đắn của chương trình
+::: tip
+Trong một chương trình, các object của class con có thể thay thế class cha mà không làm thay đổi tính đúng đắn của chương trình
+:::
 
 ### Interface segregation principle (ISP)
-> Thay vì dùng 1 interface lớn, ta nên tách thành nhiều interface nhỏ, với nhiều mục đích cụ thể
+::: tip
+Thay vì dùng 1 interface lớn, ta nên tách thành nhiều interface nhỏ, với nhiều mục đích cụ thể
+:::
 
 ### Dependency inversion principle (DIP)
-> 1. Các module cấp cao không nên phụ thuộc vào các modules cấp thấp. Cả 2 nên phụ thuộc vào abstraction.
 
-> 2. Interface (abstraction) không nên phụ thuộc vào chi tiết, mà ngược lại. ( Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation.)
+::: tip
+1. Các module cấp cao không nên phụ thuộc vào các modules cấp thấp. Cả 2 nên phụ thuộc vào abstraction.
+:::
+
+::: tip
+2. Interface (abstraction) không nên phụ thuộc vào chi tiết, mà ngược lại. ( Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation.)
+:::
 
 ---
 
-
-## 👌👌 note nhẹ
+## note nhẹ
 
 - Trong 1 App thì có nhiều Class 
 - 1 Class thì có nhiều `instance` (`đối tượng` có thể gọi là `cá thể`)
@@ -135,7 +146,7 @@ SOLID là viết tắt của 5 chữ cái đầu trong 5 nguyên tắc thiết k
 Bên cạnh `Abstract class` là class ko thể khởi tạo trực tiếp thì ngược lại với nó là **Concrete class**
 
 
-## 🤘🤘 References 
+## ✅ References 
 
 - [Design bí lục (hồi 1)](http://www.giaosucan.com/2016/10/design-bi-luc-hoi-1.html)
 - [Design Bí kíp – Hồi 2: UML truyền thuyết](http://www.giaosucan.com/2016/11/design-bi-kip-hoi-2-uml-truyen-thuyet.html)
