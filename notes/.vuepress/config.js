@@ -70,6 +70,7 @@ module.exports = {
             '/algorithm/string',
             '/algorithm/rate_limit',
             '/algorithm/authority',
+            '/algorithm/sort',
         ]
       },
 
