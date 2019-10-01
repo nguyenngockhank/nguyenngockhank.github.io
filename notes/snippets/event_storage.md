@@ -4,7 +4,8 @@
 
 Sử dụng để đồng bộ dữ liệu giữa các tab, và nhìn có vẻ như realtime =))
 
-***Ví dụ:***
+## Vấn đề
+
 Tính năng: `Accept Cookie Preferences` 
 - Hiển thị cái `popup` khi User chưa nhấn nút accept
 - User mở nhiều tabs, tab nào cũng hiển thị cái `popup` vì người dùng accept
@@ -12,7 +13,7 @@ Tính năng: `Accept Cookie Preferences`
 - Những tab khác cũng tự tắt cái `popup`
 
 
-## Solution
+## Giải quyết
 
 Lợi dụng vào `built-in event` của storage để liên lạc giữa các tab ^^!
 
@@ -22,9 +23,15 @@ window.addEventListener("storage", function(e) {
 });
 ```
 
+
+## My Code
+
 Implemented by Khank
 
-**1/ EventStorageFactory** 
+### Demo
+Mở 2 tab và quan sát :D [Xem demo tại đây](https://nguyenngockhank.github.io/demo/event_storage.html)
+
+### EventStorageFactory
 
 ```javascript
 function randomString(length) {
@@ -121,7 +128,7 @@ var EventStorageFactory = function () {
 }();
 ```
 
-**2/ Sử dụng** 
+### Sử dụng
 
 ```javascript
 // create event store 
@@ -135,5 +142,3 @@ var eventStore = EventStorageFactory.create({
 });
 ```
 
-**3/ Demo**
-[Xem demo tại đây](https://nguyenngockhank.github.io/demo/event_storage.html)

@@ -27,12 +27,13 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
         * [Wordpress](php/wordpress.md)
         * [Laravel](php/laravel.md)
         * Slim
-        * Codeigniter ( Chắc là sẽ ko viết đâu <3 )
+        * Codeigniter ( Chắc sẽ ko rờ tới nữa đâu <3 )
             * HMVC
 
 ---
 
 * Javascript
+    * [Tricks lạ, độc](javascript/tricks.md)
     * [Khái niệm](terms/javascript.md)
         * [Closure](javascript/closure.md)
         * [Hoisting](javascript/hoist.md)
@@ -42,12 +43,11 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
             * [Customize promiseAll](snippets/custom_promise_all.md)
         * Event Loop 
         * this, call, bind & apply
-        * [Tricks lạ, độc](javascript/tricks.md)
     * [Airbnb (Coding style)](https://github.com/airbnb/javascript)
     * Design Pattern
     * Chuyện vớ vỉn
-        * [ES6 khó ưa](javascript/stories/es6.md)
         * [JS Kỳ dị](javascript/stories/weird.md)
+        * [ES6 khó ưa](javascript/stories/es6.md)
     * Browser
         * IndexedDB
         * localStorage / sessionStorage

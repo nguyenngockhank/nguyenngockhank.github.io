@@ -5,6 +5,11 @@ module.exports = {
   description: 'Wikipedia của tui',
   base: '/docs/',
   dest: '../docs',
+  locales: {
+    '/': {
+      lang: 'vi', // this will be set as the lang attribute on <html>
+    }
+  },
   head: [
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "../public/favicons/apple-touch-icon.png"}],
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "../public/favicons/favicon-32x32.png"}],
@@ -17,42 +22,15 @@ module.exports = {
     ['meta', { name: "theme-color", content: "#ffffff"}],
   ],
   themeConfig: {
-    nav: [
-      { text: 'Home', link: 'https://nguyenngockhank.github.io' },
-    ],
+    '/': {
+      nav: [
+        { text: 'Home', link: 'https://nguyenngockhank.github.io' },
+      ],
+      
+    },
     sidebar: [
       {
-        title: "PHP",
-        children: [
-            '/php/self_static',
-            '/php/wordpress',
-            '/php/laravel',
-        ]
-      },
-      {
-        title: "Node",
-        children: [
-            '/node/npm',
-            '/node/n',
-            '/node/env',
-            '/node/node_arguments',
-            '/node/sequelize',
-        ]
-      },
-      {
-        title: "Javascript",
-        children: [
-            '/javascript/stories/es6',
-            '/javascript/stories/weird',
-            '/javascript/tricks',
-            '/snippets/regex',
-            '/snippets/custom_promise_all',
-            '/snippets/event_storage',
-        ]
-      },
-
-      {
-        title: "Common",
+        title: "Chuyện muôn thuở",
         children: [
           '/common/optimize_web',
           '/common/cross_domain',
@@ -61,28 +39,36 @@ module.exports = {
           '/common/crawl',
         ]
       },
-
-     
-
       {
-        title: "Algorithm / DS",
+        title: "Javascript",
+        children: [
+          '/javascript/tricks',
+          '/javascript/stories/weird',
+          '/javascript/stories/es6',
+          '/snippets/regex',
+          '/snippets/custom_promise_all',
+          '/snippets/event_storage',
+        ]
+      },
+      {
+        title: "Giải Toán",
         children: [
             '/algorithm/string',
             '/algorithm/rate_limit',
             '/algorithm/authority',
         ]
       },
-
       {
-        title: "Tools / Tricks",
+        title: "Tools",
         children: [
+          '/node/npm',
           '/tricks/git',
           '/tricks/linux',
           '/tricks/mac',
           '/snippets/selenium_ide',
+          '/snippets/mocha',
         ]
       },
-
       {
         title: "Terminology",
         children: [
