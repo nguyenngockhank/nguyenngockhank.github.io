@@ -24,8 +24,8 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
         * [static / self](php/self_static.md)
     * DDD trong PHP
     * Framework / CMS 
-        * [Wordpress](php/wordpress.md)
-        * [Laravel](php/laravel.md)
+        * [Wordpress](php/wordpress.md) (Snippets)
+        * [Laravel](php/laravel.md) (Snippets)
         * Slim
         * Codeigniter ( Chắc sẽ ko rờ tới nữa đâu <3 )
             * HMVC
@@ -50,9 +50,11 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
         * [ES6 khó ưa](javascript/stories/es6.md)
     * Browser
         * IndexedDB
+        * WebSQL và ...
         * localStorage / sessionStorage
             * [Case sử dụng Event Storage](snippets/event_storage.md)
         * PWA
+    * [Axios vs. Jquery Ajax](javascript/axios_jqueryajax.md)
     * VueJS
     * ReactJS
     * React Native

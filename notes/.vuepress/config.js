@@ -48,6 +48,7 @@ module.exports = {
           '/snippets/regex',
           '/snippets/custom_promise_all',
           '/snippets/event_storage',
+          '/javascript/axios_jqueryajax',
         ]
       },
       {
@@ -60,7 +61,7 @@ module.exports = {
         ]
       },
       {
-        title: "Tools",
+        title: "Tools / Toys",
         children: [
           '/node/npm',
           '/tricks/git',
@@ -71,7 +72,7 @@ module.exports = {
         ]
       },
       {
-        title: "Terminology",
+        title: "Thuật ngữ",
         sidebarDepth: 2, 
         children: [
           '/terms/javascript',
