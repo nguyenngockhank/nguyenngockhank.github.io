@@ -56,6 +56,7 @@ module.exports = {
             '/algorithm/string',
             '/algorithm/rate_limit',
             '/algorithm/authority',
+            '/algorithm/sort',
         ]
       },
       {
@@ -71,9 +72,10 @@ module.exports = {
       },
       {
         title: "Terminology",
+        sidebarDepth: 2, 
         children: [
           '/terms/javascript',
-          '/terms/oop',
+          '/terms/oop', 
         ]
       },
     ]
