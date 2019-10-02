@@ -35,6 +35,7 @@ module.exports = {
           '/common/optimize_web',
           '/common/cross_domain',
           '/common/authenication',
+          '/common/seo',
           '/common/realtime',
           '/common/crawl',
         ]
@@ -77,6 +78,7 @@ module.exports = {
         children: [
           '/terms/javascript',
           '/terms/oop', 
+          '/terms/testing', 
         ]
       },
     ]
