@@ -41,18 +41,6 @@ module.exports = {
         ]
       },
       {
-        title: "Javascript",
-        children: [
-          '/javascript/tricks',
-          '/javascript/stories/weird',
-          '/javascript/stories/es6',
-          '/snippets/regex',
-          '/snippets/custom_promise_all',
-          '/snippets/event_storage',
-          '/javascript/axios_jqueryajax',
-        ]
-      },
-      {
         title: "Giải Toán",
         children: [
             '/algorithm/string',
@@ -79,6 +67,18 @@ module.exports = {
           '/terms/javascript',
           '/terms/oop', 
           '/terms/testing', 
+        ]
+      },
+      {
+        title: "Javascript",
+        children: [
+          '/javascript/tricks',
+          '/javascript/stories/weird',
+          '/javascript/stories/es6',
+          '/snippets/regex',
+          '/snippets/custom_promise_all',
+          '/snippets/event_storage',
+          '/javascript/axios_jqueryajax',
         ]
       },
     ]

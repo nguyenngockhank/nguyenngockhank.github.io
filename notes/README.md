@@ -19,7 +19,7 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
         * Coding Style (PSR 2)
         * Autoload (PSR 4++)
     * OOP trong PHP
-        * Magic method
+        * [Magic method](php/magic.md)
         * trait 
         * [static / self](php/self_static.md)
     * DDD trong PHP
@@ -76,7 +76,7 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
     * [Cross domain](common/cross_domain.md)
     * [Realtime](common/realtime.md)
     * [Crawling](common/crawl.md)
-    * SEO Website
+    * [SEO](common/seo.md)
     * SPA
     * AAA
     * Bảo mật Website
