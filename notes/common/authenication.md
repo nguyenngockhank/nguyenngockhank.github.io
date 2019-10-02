@@ -1,12 +1,11 @@
 
 # Authenication
 
-Tóm tắt [bài viết](https://viblo.asia/p/authentication-story-part-1-authentication-la-lam-gi-63vKj2YMK2R)
-
 Theo Wiki =)) 
 
-> Xác thực là một hành động nhằm thiết lập hoặc chứng thực một cái gì đó đáng tin cậy, có nghĩa là, những lời khai báo do người đó đưa ra hoặc về vật đó là sự thật. Xác thực một đối tượng còn có nghĩa là công nhận nguồn gốc của đối tượng, trong khi, xác thực một người thường bao gồm việc thẩm tra nhận dạng của họ.
-
+::: tip
+Xác thực là một hành động nhằm thiết lập hoặc chứng thực một cái gì đó đáng tin cậy, có nghĩa là, những lời khai báo do người đó đưa ra hoặc về vật đó là sự thật. Xác thực một đối tượng còn có nghĩa là công nhận nguồn gốc của đối tượng, trong khi, xác thực một người thường bao gồm việc thẩm tra nhận dạng của họ.
+:::
 
 ## Dấu hiệu chung
 
@@ -20,7 +19,9 @@ Xác thực một HTTP request bằng một dấu hiệu nào đó trên request
 
 ## Basic Authentication
 
-> Cách hoạt động của Basic Auth là gửi chính `username` + `password` của người dùng theo `mỗi request`.
+::: tip
+Cách hoạt động của Basic Auth là gửi chính `username` + `password` của người dùng theo `mỗi request`.
+:::
 
 **Ưu điểm**
 
@@ -37,7 +38,9 @@ Xác thực một HTTP request bằng một dấu hiệu nào đó trên request
 
 Thi thoảng được gọi là cookie-based authentication. 
 
-> Session-based authentication là cơ chế đăng nhập người dùng dựa trên việc tạo ra `session` của người dùng ở `phía server`.
+::: tip
+Session-based authentication là cơ chế đăng nhập người dùng dựa trên việc tạo ra `session` của người dùng ở `phía server`.
+:::
 
 Thường được dùng trong các website và những ứng dụng web làm việc `chủ yếu với browser`, những `hệ thống monolithic` do cần sự tập trung trong việc lưu session data và sự hạn chế về domain.
 
@@ -58,8 +61,9 @@ Thường được dùng trong các website và những ứng dụng web làm vi
 
 ## Token-based Authentication
 
-> `Token-based Authentication` là cơ chế đăng nhập người dùng dựa trên việc tạo ra `token` - một chuỗi ký tự (thường được mã hóa) `mang thông tin xác định người dùng` được server tạo ra và `lưu ở client`. Server sau đó [có thể] không lưu lại token này.
-
+::: tip
+`Token-based Authentication` là cơ chế đăng nhập người dùng dựa trên việc tạo ra `token` - một chuỗi ký tự (thường được mã hóa) `mang thông tin xác định người dùng` được server tạo ra và `lưu ở client`. Server sau đó [có thể] không lưu lại token này.
+:::
 
 Thường được sử dụng trong các hệ thống `Web API`, `các hệ thống phân tán`, `micro-services`, các hệ thống có sự tham gia của các nền tảng khác như `mobile`, `IoT`, `server`,..., hoặc các `website kiểu mới` (phân tách rõ UI app và API).
 
@@ -78,3 +82,5 @@ Thường được sử dụng trong các hệ thống `Web API`, `các hệ th�
 - Thông tin dễ lộ => thông thường chỉ lưu 1 số thông tin thiết yếu như `user_id`, `username` mà không lưu thông tin nhạy cảm như `password` vào token
 - Dung lượng truyền tải lớn
 
+
+Tóm tắt [bài viết gốc](https://viblo.asia/p/authentication-story-part-1-authentication-la-lam-gi-63vKj2YMK2R)
