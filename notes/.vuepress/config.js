@@ -47,7 +47,7 @@ module.exports = {
             '/algorithm/rate_limit',
             '/algorithm/authority',
             '/algorithm/sort',
-            '/algorithm/no_if',
+            '/algorithm/no_if_loop',
         ]
       },
       {
