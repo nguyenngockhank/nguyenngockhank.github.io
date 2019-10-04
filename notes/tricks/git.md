@@ -1,32 +1,6 @@
 # Git
+[[toc]]
 
-* Branch
-    * [Find current branch](#find-current-branch)
-    * [Delete Branch](#delete-branch)
-    * [Rename current branch name](#rename-current-branch-name)
-    * [Create new branch](#create-new-branch)
-
-* Remote
-    * [List](#list-all)
-    * [Add remote](#add-remote)
-    * [Delete remote](#delete-remote)
-
-* [Cherry-pick](#cherry-pick)
-
-## Cherry pick
-```
-git cherry-pick <<<commit_hash>>>
-```
-
-### Override last commit 
-```
-git commit --amend -m "Message"
-```
-
-### Combine commits
-```
-git rebase -i HEAD~3
-```
 
 ## Branch
 ### Find current branch
@@ -73,4 +47,22 @@ git remote rm <<<remote_name>>>
 ### Delete remote 
 ```
 git remote add <<<remote_name>>> <<<remote_link>>>
+```
+
+
+## Others
+
+### Cherry pick
+```
+git cherry-pick <<<commit_hash>>>
+```
+
+### Override last commit 
+```
+git commit --amend -m "Message"
+```
+
+### Combine commits
+```
+git rebase -i HEAD~3
 ```

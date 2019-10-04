@@ -151,3 +151,4 @@ Bên cạnh `Abstract class` là class ko thể khởi tạo trực tiếp thì 
 - [Design bí lục (hồi 1)](http://www.giaosucan.com/2016/10/design-bi-luc-hoi-1.html)
 - [Design Bí kíp – Hồi 2: UML truyền thuyết](http://www.giaosucan.com/2016/11/design-bi-kip-hoi-2-uml-truyen-thuyet.html)
 - [SOLID LÀ GÌ?](https://toidicodedao.com/2015/03/24/solid-la-gi-ap-dung-cac-nguyen-ly-solid-de-tro-thanh-lap-trinh-vien-code-cung/)
+- [Quan Hệ Giữa SOLID, GoF và Coding Guideline, Tại Sao Bạn Phải Quan Tâm?](https://medium.com/eway/quan-h%E1%BB%87-gi%E1%BB%AFa-solid-gof-v%C3%A0-coding-guideline-t%E1%BA%A1i-sao-b%E1%BA%A1n-ph%E1%BA%A3i-quan-t%C3%A2m-ca755e6c3ad5)

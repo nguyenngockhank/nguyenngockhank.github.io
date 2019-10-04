@@ -4,6 +4,8 @@ Cũng như ngoài thực tế - giao tiếp là 1 kỹ năng mềm rất ư là 
 
 Ừm, quan trọng như vậy nên tui có bài viết này
 
+[[toc]]
+
 ## Từ cha xuống con bằng `props` 
 
 Cách này dùng trong quan hệ trực tiếp gia phả Cha - Con

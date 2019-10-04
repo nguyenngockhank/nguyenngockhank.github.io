@@ -38,6 +38,7 @@ module.exports = {
           '/common/seo',
           '/common/realtime',
           '/common/crawl',
+          '/common/refactor',
         ]
       },
       {
