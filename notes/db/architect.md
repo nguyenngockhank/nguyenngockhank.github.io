@@ -1,4 +1,4 @@
-# Mô hình SQL
+# Scalable Database Architectures
 
 [[toc]]
 

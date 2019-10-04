@@ -69,6 +69,7 @@ module.exports = {
           '/terms/javascript',
           '/terms/oop', 
           '/terms/testing', 
+          '/terms/ddd', 
         ]
       },
       {
