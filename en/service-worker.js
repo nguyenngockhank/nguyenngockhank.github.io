@@ -27,15 +27,35 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "705427aa88e7fae742d0c3ad451082b8"
+    "revision": "ea8b674bce7a51346e529ab8e07d8b84"
   },
   {
     "url": "assets/css/0.styles.df57f1a4.css",
     "revision": "b92b37aa697c4e03f01ac9da2796c4e5"
   },
   {
+    "url": "assets/img/additional-info.0c72bf29.jpg",
+    "revision": "0c72bf29abe8d664f4d0da31dab3a6a6"
+  },
+  {
+    "url": "assets/img/consequence.9a84cc4f.jpg",
+    "revision": "9a84cc4f3f769cd514582d5414e16f0f"
+  },
+  {
+    "url": "assets/img/describe-moon.b6799e2a.jpg",
+    "revision": "b6799e2a4c8cf3df065c8d23f85565f4"
+  },
+  {
     "url": "assets/img/describe-person.084f5b93.jpg",
     "revision": "084f5b93ee171ec232a279a6438ba98a"
+  },
+  {
+    "url": "assets/img/dong-vien.5170ad1d.jpg",
+    "revision": "5170ad1d85159764a86799d08703dfb5"
+  },
+  {
+    "url": "assets/img/example.9854374f.jpg",
+    "revision": "9854374f2ac0b7440905a0525cbdce15"
   },
   {
     "url": "assets/img/feelings.1381570d.jpg",
@@ -50,20 +70,8 @@ self.__precacheManifest = [
     "revision": "0f3a793364d3ccc1cc402964f88f6cda"
   },
   {
-    "url": "assets/img/no-very.827d0234.png",
-    "revision": "827d02347198d5b8d9f27b47c1f57e57"
-  },
-  {
-    "url": "assets/img/no-very.8a3ec19d.jpg",
-    "revision": "8a3ec19d524e2ace878f8fd1da778777"
-  },
-  {
-    "url": "assets/img/no-very2.9dee0691.jpg",
-    "revision": "9dee0691bd259a985bcd9f775f244d47"
-  },
-  {
-    "url": "assets/img/no-very3.6bf78840.jpg",
-    "revision": "6bf78840301f6c16231bf45f3ebbaf00"
+    "url": "assets/img/im-feelings.ebf0fe91.jpg",
+    "revision": "ebf0fe9116caf087081cc178eb812555"
   },
   {
     "url": "assets/img/positive.bd4c2e93.jpg",
@@ -74,68 +82,76 @@ self.__precacheManifest = [
     "revision": "83621669651b9a3d4bf64d1a670ad856"
   },
   {
-    "url": "assets/js/10.13c8d1e8.js",
-    "revision": "5351c0c184519c97753fd4cf53298de8"
+    "url": "assets/img/summary.113c4608.jpg",
+    "revision": "113c46086b55c55b3e323ca8bc207579"
+  },
+  {
+    "url": "assets/img/time.09d80789.jpg",
+    "revision": "09d80789b6d2cf391c537d9726b99fdd"
+  },
+  {
+    "url": "assets/js/10.54728167.js",
+    "revision": "b3bfe105da94ce9d3585a5569837620c"
   },
   {
     "url": "assets/js/11.39a53cbf.js",
     "revision": "f1b5155c23b15282174b8ffeb05618ca"
   },
   {
-    "url": "assets/js/2.06060d1e.js",
-    "revision": "e53b015195cdf0b31c0cd458121d9006"
+    "url": "assets/js/2.bf69435f.js",
+    "revision": "9cbf1cffa003d3c20ae60536a8276235"
   },
   {
-    "url": "assets/js/3.ba2c8116.js",
-    "revision": "02189cfdcca97492d3a6c10d1f8e4bb8"
+    "url": "assets/js/3.fe5d40be.js",
+    "revision": "454cce30ad2d5bb0b07f3b8d4685d3e9"
   },
   {
-    "url": "assets/js/4.4c3493bd.js",
-    "revision": "646bf92b75acf9f9857d07149d2e5892"
+    "url": "assets/js/4.56f1cc01.js",
+    "revision": "6f6a6b78f5e09b74075fdba2f2a17ccd"
   },
   {
-    "url": "assets/js/5.126ee033.js",
-    "revision": "9d92c71e2677021eab9ece0140967ee2"
+    "url": "assets/js/5.de3eb71c.js",
+    "revision": "6bbe64af170da6ae8ee627117b680920"
   },
   {
-    "url": "assets/js/6.9e829597.js",
-    "revision": "2b47d6e9344990b2dd96061fbf7a3fac"
+    "url": "assets/js/6.a45d07d5.js",
+    "revision": "4dfb5fa88814f189387d2a07bcbf0b25"
   },
   {
-    "url": "assets/js/7.ac4070aa.js",
-    "revision": "3758a29cdfe5a8f12cc241f220135520"
+    "url": "assets/js/7.19112731.js",
+    "revision": "143640d4ec09ff58e4657d79f4bbda11"
   },
   {
-    "url": "assets/js/8.f53d255f.js",
-    "revision": "950e5c9699303bae43c2f88f626beff5"
+    "url": "assets/js/8.7f839ae9.js",
+    "revision": "731b0e5697797ca8c90109d55659ce5e"
   },
   {
-    "url": "assets/js/9.2ac0813b.js",
-    "revision": "9651a9ae3a7d137d09a51caa4efc5ecb"
+    "url": "assets/js/9.1dd0e1e5.js",
+    "revision": "92cad789888cf4f5837e8979c6393580"
   },
   {
-    "url": "assets/js/app.3022d8f2.js",
-    "revision": "b8b6f8f47870503b57d84c8e3f829e04"
+    "url": "assets/js/app.28ff6029.js",
+    "revision": "65a8692f197f61e1ee223cd4e424882a"
   },
   {
     "url": "index.html",
-    "revision": "fe125ed2ee72338345b6ca4976e3e5be"
+    "revision": "8c4ab4531866433846c2afe8b227e7e3"
   },
   {
     "url": "voka/describe.html",
-    "revision": "3e34161f603fe7547a4d951237c8cd74"
+    "revision": "eec232181487051e6d3ac3251e167769"
   },
   {
     "url": "voka/feelings.html",
-    "revision": "348a5f545baa832e9c0f7d0a5347f219"
+    "revision": "c702e9d52724c90de1f92ac5553ed4b1"
   },
   {
     "url": "voka/positive.html",
-    "revision": "146d34152ce5d5966e54649e786ad612"
+    "revision": "d1a5f1c0dcd3a900b57d2a7a48605a5a"
   },
   {
     "url": "voka/very.html",
-    "revision": "ede4d465f6b42fdb331d034556b6dce1"
+    "revision": "004de9af113a5e71d0dbded67f97634d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
