@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+  
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid"  id="app">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Template</h2>
+
+                <eform-builder ref="template" v-model="templateData" ></eform-builder>
+
+                <!-- <div class="">
+                    <h2>Form values</h2>
+                    <pre key="formvalue">{{ templateData }}</pre>
+                </div> -->
+            </div><!-- End Template -->
+
+            <div class="col-lg-6">
+                <h2 style="margin-top: 50px">Preview UI</h2>
+
+                <eform :template-data="templateData" v-model="formValue" :errors.sync="formErrors" ></eform>
+
+
+                <h2>Form values</h2>
+                <pre key="formvalue">{{ formValue }}</pre>
+
+            </div><!-- End Gui -->
+        </div>
+    </div>
+
+<script src="../public/vue.js"></script>
+<!-- add built file -->
+<script src="index.js"></script>
+
+<script>
+Vue.config.devtools = true
+Vue.use(window.VueEform);
+
+var vm = new Vue({
+    el: "#app",
+    data() {
+        return {
+            templateData: {},
+            formValue: {},
+            formErrors: {}
+        }
+    },
+    methods: {
+        previewTemplate() {
+            this.templateData = this.$refs.template.getTemplateData('object');
+        },
+        saveTemplate() {
+            var val = this.$refs.template.getTemplateData('string');
+            localStorage.setItem('EFORM_TEMPLATE', val);
+            console.log('save di ne', val)
+        },
+    },
+});
+</script>
+</body>
+</html>
+
+

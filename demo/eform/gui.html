@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        html, body  {  font-size: 16px;}  
+        body { background-color: #f1f1f1}
+   
+        #app {
+            padding: 0 1%;
+            margin: auto;
+            background-color: #fff;
+            max-width: 1200px;
+            min-height: 800px;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+  
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h1>Render Eform 1</h1>
+            <eform v-model="formValue" :template-data="templateData"  :errors.sync="formErrors"  />
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Form Values</h2>
+                    <pre>{{ formValue }}</pre>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div>
+            <h1>Render Eform 2</h1>
+            <eform v-model="formValue2" :template-data="templateData"  />
+        </div>
+        
+  
+        <div>
+            <h2>Form Values</h2>
+            <pre>{{ formValue2 }}</pre>
+        </div>
+    </div>
+
+      
+
+
+    <script src="../public/vue.js"></script>
+    <!-- add built file -->
+    <script src="index.js"></script>
+
+    <script>
+        // info form
+        const templateData =  {
+            "children":[{"type":"section","children":[
+                {"type":"row","children":[
+                    {"type":"control","children":[],"rowId":"R1","index":0,"name":"first_name",
+                        "styles":{"span":{"responsive":true,"fixed":"7","xs":12,"sm":12,"md":12,"lg":12,"xl":12,"value":12}},
+                        "label":{"hide":false,"width":"120px","text":"First name","position":"top","bold":true,"underline":false,"italic":false},
+                        "extra":{"is_multiline":false,"input_type":"text"},
+                        "sub_type":"text","id":"C1","validate":{"required":true},"placeholder":"Enter your First name"},
+                    // end control 
+                    {"type":"control","children":[],"rowId":"R1","index":1,"name":"last_name","placeholder":"Enter your Last Name",
+                        "styles":{"span":{"responsive":false,"fixed":12,"xs":12,"sm":12,"md":12,"lg":12,"xl":12}},
+                        "label":{"hide":false,"width":4,"text":"Last Name","position":"top","bold":true,"underline":false,"italic":false},
+                        "validate":{"required":false},"extra":{"is_multiline":false,"input_type":"text"},"sub_type":"text","id":"C7"}
+                     // end control 
+                ],"sectionId":"S1","index":0,"id":"R1"}, // end row
+                
+                {"type":"row","children":[
+                    {"type":"control","children":[],"rowId":"R4","index":0,"name":"email","placeholder":"Enter your Email",
+                    "styles":{"span":{"responsive":false,"fixed":12,"xs":12,"sm":12,"md":12,"lg":12,"xl":12}},
+                    "label":{"hide":false,"width":4,"text":"Email","position":"top","bold":false,"underline":false,"italic":false},"validate":{"required":false},
+                    "extra":{"is_multiline":false,"input_type":"text"},"sub_type":"text","id":"C8"},
+                    // end control 
+                    {"type":"control","children":[],"rowId":"R4","index":1,"name":"birthday","placeholder":"Enter Birthday",
+                    "styles":{"span":{"responsive":false,"fixed":12,"xs":12,"sm":12,"md":12,"lg":12,"xl":12}},
+                    "label":{"hide":false,"width":4,"text":"Birthday","position":"top","bold":false,"underline":true,"italic":true},
+                    "validate":{"required":false},"extra":{"is_multiline":false,"input_type":"date"},"sub_type":"text","id":"C9"}
+                    // end control 
+                ],"sectionId":"S1","index":1,"id":"R4"}],"title":"Random title","id":"S1"} // end row
+            ]
+        };
+
+        Vue.config.devtools = true
+        Vue.use(window.VueEform);
+
+        var vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    templateData: templateData,
+                    formErrors: {},
+
+                    formValue: {
+                        last_name: "nguyen",
+                    },
+                    formValue2: {
+                        first_name: "khank",
+                    },
+                }
+            },
+        });
+    </script>
+</body>
+</html>
+
+

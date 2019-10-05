@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        html, body  {  font-size: 16px;}  
+        body { background-color: #f1f1f1}
+   
+        #app {
+            padding: 0 1%;
+            margin: auto;
+            background-color: #fff;
+            max-width: 1200px;
+            min-height: 800px;
+        }
+
+        .mb-20 {
+            margin-bottom: 20px;
+        }
+  
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>Welcome to EForm Template Builder</h1>
+        <p class="mb-20">This is a line to prove this component working!</p>
+
+        <div v-show="showTemplate">
+            <eform-builder ref="template" >
+                <template v-slot:toolbar>
+                    <el-button @click.native="saveTemplate" type="success" icon="el-icon-s-promotion" >
+                        Save Template
+                    </el-button>
+
+                    <el-button @click.native="loadTemplate" type="default" icon="el-icon-refresh-right" >
+                        Load Template
+                    </el-button>
+
+                    <el-button @click.native="previewTemplate" type="default" icon="el-icon-picture" >
+                        Preview
+                    </el-button>
+                </template>
+            </eform-builder>
+        </div><!-- TEMPLATE -->
+
+        <div v-show="showGUI">
+            <div class="toolbar mb-20">
+                <el-button @click.native="viewTemplate" type="default" icon="el-icon-picture" >
+                    Template
+                </el-button>
+            </div>
+
+            <eform :template-data="templateData" v-model="formValue" :errors.sync="formErrors" ></eform>
+
+            <div class="info">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Form values</h2>
+                        <pre key="formvalue">{{ formValue }}</pre>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3>Form errors</h3>
+                        <pre key="formerror">{{ formErrors }}</pre>
+                    </div>
+                </div>
+            </div>
+        </div><!-- GUI -->
+    </div>
+
+
+    <script src="../public/vue.js"></script>
+    <!-- add built file -->
+    <script src="index.js"></script>
+
+    <script>
+        Vue.config.devtools = true
+        Vue.use(window.VueEform);
+
+        var vm = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    mode: 'template', // gui
+                    templateData: null,
+                    formValue: { },
+                    formErrors: {}
+                }
+            },
+            computed: {
+                showTemplate() {
+                    return this.mode === 'template';
+                }, 
+                showGUI() {
+                    return this.mode === 'gui';
+                }
+            },
+            mounted() {
+                // auto load when lastest template available
+                this.loadTemplate();
+
+                // this.$nextTick( () => this.previewTemplate());
+                
+            },
+            methods: {
+                previewTemplate() {
+                    this.mode = 'gui';
+                    this.templateData = this.$refs.template.getTemplateData('object');
+                },
+                viewTemplate() {
+                    this.mode = 'template';
+                },
+                saveTemplate() {
+                    var val = this.$refs.template.getTemplateData('string');
+                    localStorage.setItem('EFORM_TEMPLATE', val);
+                    console.log('save di ne', val)
+                },
+                loadTemplate() {
+                    var val = localStorage.getItem('EFORM_TEMPLATE');
+                    if (!val) {
+                        return;
+                    }
+                    this.$refs.template.loadTemplateData(val);
+                }
+            },
+        });
+    </script>
+</body>
+</html>
+
+
