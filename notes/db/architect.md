@@ -71,14 +71,18 @@ Thường dùng trong ứng dụng dữ liệu người dùng ko liên quan đ�
 
 ---
 
-## Cluster
+## Clustering
 
-
-## Maria Galera Cluster
-
-::: tip
-một công cụ tạo ra nhiều bản sao giống hệt nhau trên nhiều máy chủ khác nhau, phục vụ cho mục đích backup dữ liệu
+::: tip 
+Clustering là một kiến trúc nhằm đảm bảo nâng cao khả năng sẵn sàng cho các hệ thống mạng. Clustering bao gồm nhiều server riêng lẻ được liên kết và hoạt động cùng với nhau trong một hệ thống.
 :::
+
+Các server này giao tiếp với nhau để trao đổi thông tin và giao tiếp với mạng bên ngoài để thực hiện các yêu cầu. Khi có lỗi xảy ra các dịch vụ trong cluster hoạt động tương tác với nhau để duy trì tính ổn định và độ sẵn sàng cao cho hệ thống.
+
+- **Cluster** : một hệ thống song song và được phân phối bởi một nhóm các server dành riêng để chạy những ứng dụng đặc biệt nào đó và kết nối với nhau để cung cấp khả năng chịu lỗi (`faul tolerance`) và `load balance`. Cluster dùng để cung cấp tính luôn sẵn sàng cho việc truy cập
+- **Node** : Là một server thuộc một Cluster nào đó mà trên đó các ứng dụng và Cluster service được cài đặt
+- **Failover** :  Quá trình failover có thể xảy ra một cách tự động. Khi một node trong Cluster bị hỏng, các resource group của nó sẽ được chuyển tới một hay nhiều node trong Cluster mà còn hoạt động được. Quá trình tự động failover tương tự như lập kế hoạch cho việc tái chỉ định quyền sở hữu các resource.
+
 
 ---
 
@@ -88,3 +92,4 @@ một công cụ tạo ra nhiều bản sao giống hệt nhau trên nhiều má
 - [Cấu hình Galera server cho MariaDB](https://kipalog.com/posts/Cau-hinh-Galera-server-cho-MariaDB)
 - [A Step-by-Step Guide to Create Partitions on MySQL table](http://acmeextension.com/mysql-table-partitioning/)
 - [What's the difference between sharding DB tables and partitioning them?](https://www.quora.com/Whats-the-difference-between-sharding-DB-tables-and-partitioning-them)
+- [Cluster là gì? Tổng quan về Server Clustering](https://topdev.vn/blog/cluster-la-gi/)

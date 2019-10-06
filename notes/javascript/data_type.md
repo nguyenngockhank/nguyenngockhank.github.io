@@ -36,7 +36,7 @@ All values are truthy unless they are defined as falsy
 
 ## Type Coertion
 
-![Type Coertion](@/images/js-coercion.png)
+![Type Coertion](@/images/js/js-coercion.png)
 
 ## References
 

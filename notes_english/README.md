@@ -3,10 +3,10 @@
 Ở đây note tiếng anh nha
 
 [[toc]]
-- [Không sử dụng `very`](/voka/very)
-- [Cảm xúc](/voka/feelings)
-- [Lạc quan nè](/voka/positive)
-- [Miêu tả](/voka/describe)
+- [Không sử dụng `very`](/voka/very.md)
+- [Cảm xúc](/voka/feelings.md)
+- [Lạc quan nè](/voka/positive.md)
+- [Miêu tả](/voka/describe.md)
 
 ## Time
 

@@ -22,12 +22,9 @@ module.exports = {
     ['meta', { name: "theme-color", content: "#ffffff"}],
   ],
   themeConfig: {
-    '/': {
-      nav: [
-        { text: 'Home', link: 'https://nguyenngockhank.github.io' },
-      ],
-      
-    },
+    nav: [
+      { text: 'Home', link: 'https://nguyenngockhank.github.io' },
+    ],
     sidebar: [
       {
         title: "Chuyện muôn thuở",
@@ -70,6 +67,15 @@ module.exports = {
           '/terms/oop', 
           '/terms/testing', 
           '/terms/ddd', 
+        ]
+      },
+      {
+        title: "Database",
+        children: [
+          '/db/architect',
+          '/db/mysql_snippets',
+          '/db/pinterest_shard',
+          '/db/sql_nosql',
         ]
       },
       {
