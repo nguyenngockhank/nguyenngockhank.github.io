@@ -24,6 +24,8 @@
     <meta name="msapplication-TileImage" content="/public/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="stylesheet" href="https://wowjs.uk/css/libs/animate.css">
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         .text-center {text-align: center;}
@@ -65,7 +67,9 @@
         </div>
         
         <div class="mb-20">
-            <img class="avatar circle-image" src="./public/images/avatar.jpg" alt="Khank's avatar">
+            <img class="avatar circle-image"  id="avatar"
+                onmouseover="hoverLogo(this)"
+                data-wow-duration="1s" src="./public/images/avatar.jpg" alt="Khank's avatar">
         </div>
 
         <div class="mb-20">
@@ -85,8 +89,16 @@
         </div>
     </div>
 
-
     <script>
+        function hoverLogo(el) {
+            avatar.classList.add('animated', 'rotateIn')
+        }
+        const avatar = document.getElementById('avatar');
+        // animated rotateIn delay-2s
+        avatar.addEventListener('animationend', function() { 
+            avatar.classList.remove("animated", 'rotateIn');
+        })
+
         var CIRLE_TEXT = "o, Khánk nè!                                     Hell";
 
         var RADIUS = 125;
