@@ -32,6 +32,17 @@ module.exports = {
           '/voka/describe',
         ]
       },
+      {
+        title: "Ngữ pháp",
+        children: [
+          '/grammar/also-too-aswell',
+          '/grammar/neither-either',
+          '/grammar/say',
+          '/grammar/maybe',
+          '/grammar/modal-verbs',
+          '/grammar/part-of-speech',
+        ]
+      },
     ],
     nav: [
       { text: 'Home', link: 'https://nguyenngockhank.github.io' },

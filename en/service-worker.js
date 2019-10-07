@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "d9b1ef5f1666bbcbafa66391270701e7"
+    "revision": "7913e6ec84333643f0cf1ec6544e3c59"
   },
   {
     "url": "assets/css/0.styles.df57f1a4.css",
@@ -36,6 +36,10 @@ self.__precacheManifest = [
   {
     "url": "assets/img/additional-info.0c72bf29.jpg",
     "revision": "0c72bf29abe8d664f4d0da31dab3a6a6"
+  },
+  {
+    "url": "assets/img/also-too-aswell.07ac68d1.jpg",
+    "revision": "07ac68d17fc4b9161baec9ebde6dbaeb"
   },
   {
     "url": "assets/img/consequence.9a84cc4f.jpg",
@@ -74,8 +78,28 @@ self.__precacheManifest = [
     "revision": "ebf0fe9116caf087081cc178eb812555"
   },
   {
+    "url": "assets/img/maybe.d4336193.jpg",
+    "revision": "d4336193597f183546ab312dbcd9a799"
+  },
+  {
+    "url": "assets/img/modal-verbs.1871cb3e.jpg",
+    "revision": "1871cb3e52a0919109a3cc7530f55b45"
+  },
+  {
+    "url": "assets/img/neither-either.1dfb7651.jpg",
+    "revision": "1dfb7651c568b61a9365e06178bd8d33"
+  },
+  {
+    "url": "assets/img/partofspeech.e9b7de61.jpg",
+    "revision": "e9b7de613769a7062688f139bbcf9c4a"
+  },
+  {
     "url": "assets/img/positive.bd4c2e93.jpg",
     "revision": "bd4c2e938d19c2441f2cd08e3019088b"
+  },
+  {
+    "url": "assets/img/say.32ea6f0e.jpg",
+    "revision": "32ea6f0e054126d8f47af6eff2328607"
   },
   {
     "url": "assets/img/search.83621669.svg",
@@ -90,68 +114,116 @@ self.__precacheManifest = [
     "revision": "09d80789b6d2cf391c537d9726b99fdd"
   },
   {
-    "url": "assets/js/10.54728167.js",
-    "revision": "b3bfe105da94ce9d3585a5569837620c"
+    "url": "assets/js/10.91fee16d.js",
+    "revision": "93603578b905585531618b56e34b34b2"
   },
   {
-    "url": "assets/js/11.39a53cbf.js",
-    "revision": "f1b5155c23b15282174b8ffeb05618ca"
+    "url": "assets/js/11.5854bbe6.js",
+    "revision": "72a90aae8ef111c6748d31d8970fc385"
   },
   {
-    "url": "assets/js/2.bf69435f.js",
-    "revision": "9cbf1cffa003d3c20ae60536a8276235"
+    "url": "assets/js/12.0f4dc723.js",
+    "revision": "389ba8b304f9c96d73940696ef2ee2fe"
   },
   {
-    "url": "assets/js/3.6818f9ed.js",
-    "revision": "a1d25a43242fce50ce342570e7e463b7"
+    "url": "assets/js/13.17748898.js",
+    "revision": "1a57c627e983795e1a5dc37fe00be327"
   },
   {
-    "url": "assets/js/4.24e518e5.js",
-    "revision": "fef928cf1db552e6c1386e0fe89f2b7b"
+    "url": "assets/js/14.0afdde75.js",
+    "revision": "d1481bcc6aff8dcb56c8b1c1e3c3b293"
   },
   {
-    "url": "assets/js/5.de3eb71c.js",
-    "revision": "6bbe64af170da6ae8ee627117b680920"
+    "url": "assets/js/15.f14c080b.js",
+    "revision": "06ce7b9b392ffe7f6977ee922374b629"
   },
   {
-    "url": "assets/js/6.a45d07d5.js",
-    "revision": "4dfb5fa88814f189387d2a07bcbf0b25"
+    "url": "assets/js/16.40069c93.js",
+    "revision": "3496db2d531f9d736851d96c9824ea48"
   },
   {
-    "url": "assets/js/7.7cc2537c.js",
-    "revision": "6a730fb10cbdeffa5adbe06617715ebc"
+    "url": "assets/js/17.cb350787.js",
+    "revision": "55811a816ff8472e1f2a6787593f9a99"
   },
   {
-    "url": "assets/js/8.7f839ae9.js",
-    "revision": "731b0e5697797ca8c90109d55659ce5e"
+    "url": "assets/js/2.e4ebc8c8.js",
+    "revision": "1483b985cb3642f2fc9a988bcd17646f"
   },
   {
-    "url": "assets/js/9.1dd0e1e5.js",
-    "revision": "92cad789888cf4f5837e8979c6393580"
+    "url": "assets/js/3.5499697b.js",
+    "revision": "9c78e6bc181f16e660f635812c3dd8ee"
   },
   {
-    "url": "assets/js/app.c5b9f61a.js",
-    "revision": "2e025637da77c0cfa872704c2c84b6a3"
+    "url": "assets/js/4.0574dd80.js",
+    "revision": "239e93e0b2335abfa217c687a005bda6"
+  },
+  {
+    "url": "assets/js/5.1b35d4d0.js",
+    "revision": "3233766f4dc41e61fb16e9be3a223c29"
+  },
+  {
+    "url": "assets/js/6.da3b5d17.js",
+    "revision": "56edee008ab539b9b970aec713733ddb"
+  },
+  {
+    "url": "assets/js/7.3a417c30.js",
+    "revision": "3238841e8e74599da61d00284e5f9a8e"
+  },
+  {
+    "url": "assets/js/8.cdc5af20.js",
+    "revision": "22890837fa9af2fab8daef4162c5f811"
+  },
+  {
+    "url": "assets/js/9.163fd518.js",
+    "revision": "ef9cac71817acfae8e2c05f80a1b4ea7"
+  },
+  {
+    "url": "assets/js/app.783cd51b.js",
+    "revision": "c2cb204c8d89b7c34d27d9d84ea4a186"
+  },
+  {
+    "url": "grammar/also-too-aswell.html",
+    "revision": "7343264c957ed020060bc0fecf691d7e"
+  },
+  {
+    "url": "grammar/maybe.html",
+    "revision": "00fe9a7c95c701edbe6c4ff556a35e3b"
+  },
+  {
+    "url": "grammar/modal-verbs.html",
+    "revision": "2032bb9e6d973c6de8cc9ff14a9c6791"
+  },
+  {
+    "url": "grammar/neither-either.html",
+    "revision": "e69ebf714611e3e6072dd7ea5480cd29"
+  },
+  {
+    "url": "grammar/part-of-speech.html",
+    "revision": "de6e46f7d0b5d24fdbfb5fa898bc69ed"
+  },
+  {
+    "url": "grammar/say.html",
+    "revision": "86b8e60111ed9e9484258bb7a48a62f3"
   },
   {
     "url": "index.html",
-    "revision": "32a4ed55631c15648e67ffa0e6eef679"
+    "revision": "c12aea394bc25d81ddbc33bd7c73d781"
   },
   {
     "url": "voka/describe.html",
-    "revision": "b20b16dd0188a7e3d0d1e2d4feff60a0"
+    "revision": "1ac65cc6e7ae4626b3560dd74ddee0ae"
   },
   {
     "url": "voka/feelings.html",
-    "revision": "af6da565ddb557072e091d12b52b18e8"
+    "revision": "c0610deb94c7d89c6f89a9d077b9cdba"
   },
   {
     "url": "voka/positive.html",
-    "revision": "02719b73b718e85d50093b753ff19cc5"
+    "revision": "88e9880603199549435aefc040f8c78c"
   },
   {
     "url": "voka/very.html",
-    "revision": "4e67d90756edbcf01de0a15015f3b5ac"
+    "revision": "e96753577c04c1b82be42508241e2ff3"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
