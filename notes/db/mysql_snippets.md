@@ -68,3 +68,31 @@ order by (
     END 
 ) 
 ```
+
+## Lock rows
+
+
+### FOR UPDATE
+
+```sql
+SELECT * FROM table_name WHERE id=10 FOR UPDATE;
+```
+
+- *will not allow other transactions to read, update or delete the row*
+
+### LOCK IN SHARE MODE
+
+```sql
+SELECT * FROM table_name WHERE id=10 LOCK IN SHARE MODE
+```
+
+- *will allow other transaction to read the locked row*
+- *but it will not allow other transaction to update or delete the row*
+
+## Joins
+
+![joins](@/images/sql/joins.jpg)
+
+
+## References 
+[Row Level Locking](https://riptutorial.com/mysql/example/24166/row-level-locking)

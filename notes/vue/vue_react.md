@@ -13,7 +13,7 @@
 
 - Vue uses HTML-based templates
 
-### HTML-Based 
+### Vue - HTML-Based 
 
 ***Any valid HTML is also a valid Vue template***
 
@@ -34,7 +34,7 @@ const element = <img src={user.avatarUrl} />;
 ```
 
 
-### Full programming language
+### React - Full programming language
 
 In React, You can ***leverage the power of a full programming language (JavaScript) to build your view***. This includes temporary variables, flow controls, and directly referencing JavaScript values in scope.
 
@@ -51,7 +51,7 @@ const element = (
 );
 ```
 
-But In Vue, no support! But you can define something like this: 
+But In Vue, no support! You can define something like this with Vue: 
 
 ```vue
 <template>
@@ -69,10 +69,12 @@ export default {
 </script>
 ```
 
-Yeah, full language. Look this 
+Vue has few concepts which React does not. There are `mixins`, `custom directives`, `filters`, these help much in reusability.
+
 
 ### Functions as Children
 
+Yeah, full language. Look this 
 
 ```jsx
 // Calls the children callback numTimes to produce a repeated component
@@ -95,14 +97,6 @@ function ListOfTenThings() {
 - `props.children` in Repeat is a function
 
 
-### Specifying Attributes
-
-Just different syntax
-
-| React         | Vue           | 
-| ------------- |:-------------:|
-| `<div tabIndex="0"></div>` | `<div tabIndex="0"></div>`|
-| `<img src={user.avatarUrl} />` | `<img :src="user.avatarUrl" >`|
 
 
 ## State Management 

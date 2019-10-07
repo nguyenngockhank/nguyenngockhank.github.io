@@ -22,12 +22,6 @@ module.exports = {
     ['meta', { name: "theme-color", content: "#ffffff"}],
   ],
   themeConfig: {
-    '/': {
-      nav: [
-        { text: 'Home', link: 'https://nguyenngockhank.github.io' },
-        { text: 'Tech Docs', link: 'https://nguyenngockhank.github.io/docs/' },
-      ],
-    },
     sidebar: [
       {
         title: "Từ vựng",
@@ -38,7 +32,11 @@ module.exports = {
           '/voka/describe',
         ]
       },
-    ]
+    ],
+    nav: [
+      { text: 'Home', link: 'https://nguyenngockhank.github.io' },
+      { text: 'Tech Docs', link: 'https://nguyenngockhank.github.io/docs/' },
+    ],
   },
   configureWebpack: {
     resolve: {

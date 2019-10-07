@@ -67,6 +67,10 @@ Bounded Context is a central pattern in Domain-Driven Design. It is the focus of
 
 ![Example](@/images/ddd-layers.jpg)
 
+More detail
+
+![Example](@/images/ddd-diagram.png)
+
 ### Example
 ![Example](@/images/ddd-example.png)
 
@@ -77,3 +81,6 @@ Bounded Context is a central pattern in Domain-Driven Design. It is the focus of
 - [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design)
 - [DDD - Introduction](https://archfirst.org/domain-driven-design/)
 - [DDD - Layered Architecture](https://archfirst.org/domain-driven-design-6-layered-architecture/)
+- [Domain-Driven-Design](https://khalilstemmler.com/articles/domain-driven-design-intro/)
+- [The 6 Most Common Types of Logic in Large Applications](https://khalilstemmler.com/articles/software-design-architecture/organizing-app-logic/)
+- [https://dddcommunity.org/](https://dddcommunity.org/)

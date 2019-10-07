@@ -56,6 +56,10 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
         * PWA
     * [Axios vs. Jquery Ajax](javascript/axios_jqueryajax.md)
     * VueJS
+        * [Giao tiếp](vue/communication.md)
+        * [Tricks](vue/tricks.md)
+        * [Viết tắt](vue/shorthands.md)
+        * [Vue vs. React](vue/vue_react.md)
     * ReactJS
     * React Native
     * Cordova
@@ -64,7 +68,9 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
 ---
 
 * Database
-    * MySQL
+    * [Architect](db/architect.md)
+    * [SQL vs. NoSQL](db/sql_nosql.md)
+    * [Mysql snippets](db/mysql_snippets.md)
     * PostgreSQL
     * MongoDB
     * Redis
@@ -77,6 +83,7 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
     * [Realtime](common/realtime.md)
     * [Crawling](common/crawl.md)
     * [SEO](common/seo.md)
+    * [Code Refactoring](common/refactor.md)
     * SPA
     * AAA
     * Bảo mật Website
@@ -94,11 +101,3 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
     * puppeteer
 
 ---
-
-* Thuật toán & Cấu trúc dữ liệu
-    * [Phân quyền bằng bit](algorithm/authority.md)
-    * [Rate limitting](algorithm/rate_limit.md)
-
---- 
-
-
