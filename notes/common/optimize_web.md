@@ -25,31 +25,7 @@ Câu hỏi muôn thuở đi phỏng vấn chắc gặp hoài lun :v kkkk nhưng 
 
 :ok_hand: Mình sẽ giới thiệu, từ trên xuống dưới, từ code ít tới code nhiều =))
 
-- [⚡️ Gzip](#zap-gzip)
-- [⚡️ HTTP Cache Header](#zap-http-cache-header)
-- [⚡️ Resource hints](#zap-resource-hints)
-- [⚡️ Script defer / async](#zap-script-defer--async)
-- [⚡️ CDN (Content Delivery Network)](#zap-cdn-content-delivery-network)
-- [⚡️ CSS Sprite](#zap-css-sprite)
-- [⚡️ Internal CSS](#zap-internal-css)
-- [⚡️ Fonts](#zap-fonts)
-- [⚡️ Hình ảnh](#zap-hình-ảnh)
-- [⚡️ Không load dư thừa ](#zap-không-load-dư-thừa)
-- [⚡️ Lazy load](#zap-lazy-load)
-- [⚡️ ADM (Asynchronous Module Definition)](#zap-adm-asynchronous-module-definition)
-- [⚡️ Bundle Assets](#zap-bundle-assets)
-- [⚡️ Minimize Assets](#zap-minimize-assets)
-- [⚡️ Cache ...](#zap-cache-)
-- [⚡️ Tối ưu Database](#zap-tối-ưu-database)
-- [⚡️ Service worker](#zap-service-worker)
-- [⚡️ CSS Rendering Performance](#zap-css-rendering-performance)
-- [⚡️ CSS BEM](#zap-css-bem)
-- [⚡️ Short polling, Long polling, WebSocket](#zap-short-polling-long-polling-websocket)
-- [⚡️ Sử dụng Tools](#sử-dụng-tools)
-- [☔️ BasketJS](#umbrella-basketjs)
-- [☔️ Deferred CSS](#umbrella-deferred-css)
-
-
+[[toc]]
 
 
 ## :zap: Gzip
@@ -271,43 +247,7 @@ Sau đó hệ thống chạy xì mút cho tới khi... có 1 thằng Admin cấp
 
 
 ## :zap: Tối ưu Database
-
-**:star: Thiết kế phá chuẩn**
-Đôi khi thiết kế chuẩn, không dư thừa dữ liệu lại gây ra câu query phức tạp như c, như b, như l... nên phá chuẩn, chấp nhận dư thừa là cách có thể xem xét =))
-
-**:star: Sử dụng có chọn lọc**
-- Chỉ SELECT những cột cần thiết, đừng `SELECT *` vô tội vạ
-- Chỉ JOIN với những bảng cần thiết, nghe cứ như đùa nhưng mà thế éo nào... =))
-- Ý thức sort: không chỉ là `ORDER BY` là diễn ra sort mà kể cả `DISTINCT` hay `GROUP BY` hoặc là `UNION` 
-    - Không sử dụng `HAVING` nếu có thể dùng `WHERE`. Đơn giản là `WHERE` sẽ giới hạn record trả về trước khi SORT rồi GROUP BY.
-    - Phân biệt giữa 2 cái này: `UNION ALL` hay `UNION`. Cái sau có sử dụng `DISTINCT` để loại bỏ record giống nhau. 
-
-**:star: Index column**
-Mặc dù đã index nhưng những câu điều kiện dưới đây sẽ bóp d*i đồng đội:
-- Dính tới NULL: `IS NULL`, `IS NOT NULL`
-- Phủ định:  `!=`, `<>`,  `NOT IN`, `NOT LIKE`
-- `OR` trong điều kiện 
-- LIKE 2 lần =)) `LIKE '%tha tim%'`, và ngay cả `LIKE '%tha-tim'` thì cũng chả được tí index nào đâu nha. Cái này thì nhiều khi bất khả kháng =)) chấp nhận thôi 
-
-Dưới đây là một số cách làm giảm hiệu năng index =))
-- Đặt sai thứ tự cột trên index nhiều cột. 
-- So sánh 2 lần =)) `WHERE score >= 2`. Cái này bằng với việc `WHERE score > 2 OR score = 2`. **NẾU** chỉ thao tác với số nguyên thì có thể sửa lại `WHERE score > 1`. 
-
-**:star: Vài note khác về index:**
-- Không nên sử dụng trên bảng nhỏ
-- Không nên sử dụng trên bảng thường update / insert 
-- không nên sử dụng trên cột thường update / insert 
-- Không nên sử dụng trên cột nhiều giá trị `NULL`
-- Không nên sử dụng trên cột có ít giá trị. Vd như `active` và `inactive` 
-
-**:star: EXPLAIN**
-Sử dụng `EXPLAIN {{query}}` để phân tích câu lệnh :D Xem được đang join cái gì, có index không, bao nhiêu rows,... [Sách ôn thi học sinh giỏi](https://dzone.com/articles/understanding-mysql-queries-with-explain)
-
-**:star: Chọn Engine**
-Chọn Engine với mục đích của Table..
-
-**:star: Sử dụng ORM hợp lý**
-Cân nhắc lúc nào cần sử dụng Lazy loading, lúc nào cần Eager Loading. Nhất là khi làm việc với Array. 
+[📕 Xem bài này](../db/optimize.md)
 
 ---
 Dưới đây một số cách khác 

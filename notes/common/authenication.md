@@ -82,5 +82,19 @@ Thường được sử dụng trong các hệ thống `Web API`, `các hệ th�
 - Thông tin dễ lộ => thông thường chỉ lưu 1 số thông tin thiết yếu như `user_id`, `username` mà không lưu thông tin nhạy cảm như `password` vào token
 - Dung lượng truyền tải lớn
 
+## OAuth
+**Viết tắt**: `Open Authentication`
+
+::: tip 
+`OAuth` ra đời nhằm giải quyết vấn đề trên và xa hơn nữa, đây là một phương thức chứng thực giúp các ứng dụng có thể chia sẻ tài nguyên với nhau mà không cần chia sẻ thông tin username và password.
+:::
+
+- **Ứng dụng**  (website hoặc mobile app)yêu cầu ủy quyền để truy cập vào **Resource Server** (Gmail,Facebook, Twitter hay Github…) thông qua User
+- Nếu **User** ủy quyền cho yêu cầu trên, **Ứng dụng** sẽ nhận được *`ủy quyền từ phía User`* (dưới dạng một token string)
+- **Ứng dụng** gửi thông tin *`định danh`* (ID) của mình kèm theo *`ủy quyền của User`* tới **Authorization Server**
+- Nếu *`thông tin định danh`* được xác thực và ủy quyền hợp lệ, **Authorization Server** sẽ trả về cho **Ứng dụng** *`access_token`*. Đến đây quá trình ủy quyền hoàn tất.
+- Nếu *`access_token`* hợp lệ, **Resource Server** sẽ trả về dữ liệu của tài nguyên đã được yêu cầu cho **Ứng dụng**.
+
+![Mô hình OAuth2](@/images/oauth.png)
 
 Tóm tắt [bài viết gốc](https://viblo.asia/p/authentication-story-part-1-authentication-la-lam-gi-63vKj2YMK2R)

@@ -93,6 +93,32 @@ SELECT * FROM table_name WHERE id=10 LOCK IN SHARE MODE
 
 ![joins](@/images/sql/joins.jpg)
 
+## Index 
+
+1. Primary key - **no duplication, has not `null`**
+```sql
+ALTER TABLE tbl_name ADD PRIMARY KEY (column 1, column 2,..)
+```
+
+2. Unique  - **no duplication, has `null`**
+```sql
+ALTER TABLE tbl_name ADD UNIQUE KEY (column 1, column 2,..)
+```
+
+3. Index - **has duplication, has `null`**
+```sql
+ALTER TABLE tbl_name ADD INDEX index_name (column 1, column 2,..)
+```
+
+4. Fulltext - **Use for searching document**
+```sql
+ALTER TABLE tbl_name ADD FULLTEXT index_name (column 1, column 2,..)
+```
+
+0. Drop index
+```sql
+DROP INDEX index_name;
+```
 
 ## References 
 [Row Level Locking](https://riptutorial.com/mysql/example/24166/row-level-locking)

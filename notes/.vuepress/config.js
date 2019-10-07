@@ -73,6 +73,7 @@ module.exports = {
         title: "Database",
         children: [
           '/db/architect',
+          '/db/optimize',
           '/db/mysql_snippets',
           '/db/pinterest_shard',
           '/db/sql_nosql',
