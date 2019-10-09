@@ -91,6 +91,16 @@ module.exports = {
           '/javascript/axios_jqueryajax',
         ]
       },
+      {
+        title: "PHP",
+        children: [
+          '/php/php7',
+          '/php/oop',
+          '/php/magic',
+          '/php/laravel',
+          '/php/wordpress',
+        ]
+      }
     ]
   },
   configureWebpack: {

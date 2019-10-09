@@ -1,6 +1,55 @@
 # Laravel
 Based on Laravel 4.2
 
+[[toc]]
+
+## Split the routes
+
+1) Create new files to store the routes: `app\routes\main.php`
+
+
+2) At file `routes.php`, include the seperated routes 
+
+```php
+require app_path() . '/routes/main.php';
+```
+
+## Register new Module 
+
+1) Add piece of codes at file `composer.json` 
+
+```php
+"autoload": {
+    "psr-4": {
+        "Khank\\": "app/modules/"
+    }
+}
+```
+
+2) Run the command: 
+```
+composer dump-autoload 
+```
+
+3) Define a class at `app/modules/Test.php`
+
+```php
+<?php
+namespace Khank;
+
+class Test {
+    static function info() {
+        echo 'hello';
+    }
+}
+```
+
+4) Usage: 
+```php 
+echo \Khank\Test::info(); // hello
+```
+
+
 ## Artisan to Develop
 
 ### List 
@@ -16,7 +65,7 @@ After creating new class `Controller / Model / Command, lang files ...` except `
 composer dump-autoload && ./artisan dump-autoload && ./artisan optimize && ./artisan cache:clear
 ```
 
-### Create new command
+## Create new command
 
 
 ### Migration and Db Seeding
@@ -26,14 +75,6 @@ composer dump-autoload && ./artisan dump-autoload && ./artisan optimize && ./art
 
 ./artisan db:seed --class=InitSeeder
 ```
-
-## Model 
-
-### SELECT 
-### INSERT 
-### UPDATE 
-### DELETE 
-
 
 ## Eloquent Tricks 
 
@@ -113,4 +154,15 @@ $user->push();
 
 ```php
 $user->forceDelete();
+```
+
+## Helpers
+
+### Path
+
+```php
+public_path(); // Path of public/
+base_path(); // Path of application root
+storage_path(); // Path of storage/
+app_path(); // Path of app/
 ```

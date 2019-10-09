@@ -15,13 +15,15 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
 
 * PHP
     * Composer 
+    * [PHP7](php/php7.md)
     * [PSR](https://www.php-fig.org/psr/)
         * Coding Style (PSR 2)
         * Autoload (PSR 4++)
-    * OOP trong PHP
+    * [OOP trong PHP](php/oop.md)
         * [Magic method](php/magic.md)
+        * [Autoload](php/oop.md#autoload)
         * trait 
-        * [static / self](php/self_static.md)
+        * [static / self](php/oop.md#self-vs-static)
     * DDD trong PHP
     * Framework / CMS 
         * [Wordpress](php/wordpress.md) (Snippets)
