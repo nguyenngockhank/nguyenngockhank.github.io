@@ -1,13 +1,3 @@
----
-heroText: Springfield Dim Sum
-actionText: See our Menu →
-actionLink: ./menu.md
-features:
-- title: Parking
-  details: Plenty of free parking at night and free validation during the busin
----
-
-
 # MochaJS
 
 ::: tip  
