@@ -56,6 +56,7 @@ module.exports = {
           '/tricks/linux',
           '/tricks/mac',
           '/snippets/selenium_ide',
+          '/snippets/gg_app_script',
           '/snippets/puppeteer',
           '/snippets/mocha',
         ]

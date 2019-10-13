@@ -1,5 +1,6 @@
+
+
 # Laravel
-Based on Laravel 4.2
 
 [[toc]]
 
@@ -65,15 +66,51 @@ After creating new class `Controller / Model / Command, lang files ...` except `
 composer dump-autoload && ./artisan dump-autoload && ./artisan optimize && ./artisan cache:clear
 ```
 
-## Create new command
-
-
 ### Migration and Db Seeding
 
 ```
 ./artisan migrate
 
 ./artisan db:seed --class=InitSeeder
+```
+
+## HMVC For Laravel 
+
+[A good article to build this thing](https://sethphat.com/sp-741/dung-mo-hinh-hmvc-cho-laravel-5)
+
+Focus on booting in `ServiceProvide`
+
+```php
+/**
+* Perform post-registration booting of services.
+*/
+public function boot()
+{
+    $directories = array_map('basename', File::directories(__DIR__));
+    foreach ($directories as $moduleName) {
+        $this->_registerModule($moduleName);
+    }
+}
+
+private function _registerModule($moduleName) {
+    $modulePath = __DIR__ . "/$moduleName/";
+    // boot route
+    if (File::exists($modulePath . "routes.php")) {
+        $this->loadRoutesFrom($modulePath . "routes.php");
+    }
+    // boot migration
+    if (File::exists($modulePath . "Migrations")) {
+        $this->loadMigrationsFrom($modulePath . "Migrations");
+    }
+    // boot languages
+    if (File::exists($modulePath . "Languages")) {
+        $this->loadTranslationsFrom($modulePath . "Languages", $moduleName);
+    }
+    // boot views
+    if (File::exists($modulePath . "Views")) {
+        $this->loadViewsFrom($modulePath . "Views", $moduleName);
+    }
+}
 ```
 
 ## Eloquent Tricks 
@@ -156,13 +193,36 @@ $user->push();
 $user->forceDelete();
 ```
 
+### Soft delete
+[A good article](https://sethphat.com/sp-765/laravel-eloquent-soft-delete)
+
+
 ## Helpers
 
-### Path
+### Laravell Path
 
 ```php
 public_path(); // Path of public/
 base_path(); // Path of application root
 storage_path(); // Path of storage/
 app_path(); // Path of app/
+```
+
+
+### Send data to view
+
+```php
+// normal way 
+return view('admin.article.edit', [
+	'article' => $article,
+	'categories' => $categories,
+	'editor' => $editor,
+]);
+
+// shorter way: use `compact` function
+return view('admin.article.edit', compact(
+	'article',
+	'categories',
+	'editor'
+));
 ```
