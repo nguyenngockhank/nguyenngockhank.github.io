@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "7913e6ec84333643f0cf1ec6544e3c59"
+    "revision": "ae12eedb8cfb900e183c25256834f19a"
   },
   {
     "url": "assets/css/0.styles.df57f1a4.css",
@@ -118,44 +118,52 @@ self.__precacheManifest = [
     "revision": "93603578b905585531618b56e34b34b2"
   },
   {
-    "url": "assets/js/11.5854bbe6.js",
-    "revision": "72a90aae8ef111c6748d31d8970fc385"
+    "url": "assets/js/11.fdd60184.js",
+    "revision": "db65e7c7ab624188dfd92450eb5c926a"
   },
   {
-    "url": "assets/js/12.0f4dc723.js",
-    "revision": "389ba8b304f9c96d73940696ef2ee2fe"
+    "url": "assets/js/12.19907037.js",
+    "revision": "ad2c9bf391f204e5c80c936037ab78de"
   },
   {
-    "url": "assets/js/13.17748898.js",
-    "revision": "1a57c627e983795e1a5dc37fe00be327"
+    "url": "assets/js/13.3575c370.js",
+    "revision": "f2ef549368e992866e7553443b4534e8"
   },
   {
-    "url": "assets/js/14.0afdde75.js",
-    "revision": "d1481bcc6aff8dcb56c8b1c1e3c3b293"
+    "url": "assets/js/14.06e0084e.js",
+    "revision": "6452bfe4add0e554d3c73b8927a67d77"
   },
   {
     "url": "assets/js/15.f14c080b.js",
     "revision": "06ce7b9b392ffe7f6977ee922374b629"
   },
   {
-    "url": "assets/js/16.40069c93.js",
-    "revision": "3496db2d531f9d736851d96c9824ea48"
+    "url": "assets/js/16.ad77fcbf.js",
+    "revision": "2d2338cc889fa39cd1e8d45eb47c4150"
   },
   {
-    "url": "assets/js/17.cb350787.js",
-    "revision": "55811a816ff8472e1f2a6787593f9a99"
+    "url": "assets/js/17.71ec9c9e.js",
+    "revision": "830faeaf293eb16f99bf0305e88dc82a"
+  },
+  {
+    "url": "assets/js/18.1a2c0ab1.js",
+    "revision": "49ee38d29b1cfb90e6b786c91aa7c4fd"
+  },
+  {
+    "url": "assets/js/19.5794f02e.js",
+    "revision": "47e0b17318b978c2a4a62edb2ab309ab"
   },
   {
     "url": "assets/js/2.e4ebc8c8.js",
     "revision": "1483b985cb3642f2fc9a988bcd17646f"
   },
   {
-    "url": "assets/js/3.5499697b.js",
-    "revision": "9c78e6bc181f16e660f635812c3dd8ee"
+    "url": "assets/js/3.4040077e.js",
+    "revision": "b6b72b55f082ef28e3977851cbf95e6e"
   },
   {
-    "url": "assets/js/4.0574dd80.js",
-    "revision": "239e93e0b2335abfa217c687a005bda6"
+    "url": "assets/js/4.92891769.js",
+    "revision": "744cf0ae5a9f966cac3dd4407a8d0121"
   },
   {
     "url": "assets/js/5.1b35d4d0.js",
@@ -166,64 +174,72 @@ self.__precacheManifest = [
     "revision": "56edee008ab539b9b970aec713733ddb"
   },
   {
-    "url": "assets/js/7.3a417c30.js",
-    "revision": "3238841e8e74599da61d00284e5f9a8e"
+    "url": "assets/js/7.b6bb3daa.js",
+    "revision": "3ff2a6339fdd8f591f0643009069c803"
   },
   {
-    "url": "assets/js/8.cdc5af20.js",
-    "revision": "22890837fa9af2fab8daef4162c5f811"
+    "url": "assets/js/8.761fa63b.js",
+    "revision": "fbbd1f6a1d88838cdf7e4ce153c1316d"
   },
   {
-    "url": "assets/js/9.163fd518.js",
-    "revision": "ef9cac71817acfae8e2c05f80a1b4ea7"
+    "url": "assets/js/9.27fae11a.js",
+    "revision": "838616f0e7acdd1e0e2f46b724872456"
   },
   {
-    "url": "assets/js/app.783cd51b.js",
-    "revision": "c2cb204c8d89b7c34d27d9d84ea4a186"
+    "url": "assets/js/app.f8d6d337.js",
+    "revision": "d30dd35b9463bd6dd7683cf85bf03384"
   },
   {
     "url": "grammar/also-too-aswell.html",
-    "revision": "7343264c957ed020060bc0fecf691d7e"
+    "revision": "df3d58542d81156bf2d623a9e6a0664e"
   },
   {
     "url": "grammar/maybe.html",
-    "revision": "00fe9a7c95c701edbe6c4ff556a35e3b"
+    "revision": "7bda144bc9087c3c71d644dcae216335"
   },
   {
     "url": "grammar/modal-verbs.html",
-    "revision": "2032bb9e6d973c6de8cc9ff14a9c6791"
+    "revision": "c050fce21c28b601ce14945bc749acb2"
   },
   {
     "url": "grammar/neither-either.html",
-    "revision": "e69ebf714611e3e6072dd7ea5480cd29"
+    "revision": "78414535a19cc4c69279783eac5b0429"
   },
   {
     "url": "grammar/part-of-speech.html",
-    "revision": "de6e46f7d0b5d24fdbfb5fa898bc69ed"
+    "revision": "43497138268d1d3691ff58813aad4309"
   },
   {
     "url": "grammar/say.html",
-    "revision": "86b8e60111ed9e9484258bb7a48a62f3"
+    "revision": "f966e847776a41332bf43ff1c4c6e9f3"
   },
   {
     "url": "index.html",
-    "revision": "c12aea394bc25d81ddbc33bd7c73d781"
+    "revision": "c408aeffa2c8ed338b74495feff8bc05"
+  },
+  {
+    "url": "me/synonym.html",
+    "revision": "71b2c71d98d4480bcf2913905a1ffc1f"
   },
   {
     "url": "voka/describe.html",
-    "revision": "1ac65cc6e7ae4626b3560dd74ddee0ae"
+    "revision": "7e167d33c59f8055183e6a08992749c2"
   },
   {
     "url": "voka/feelings.html",
-    "revision": "c0610deb94c7d89c6f89a9d077b9cdba"
+    "revision": "d29ad05c303f00f9766161932bb57c28"
+  },
+  {
+    "url": "voka/nha.html",
+    "revision": "65ed53fc2c61ece3e6ef5f3c69588fa6"
   },
   {
     "url": "voka/positive.html",
-    "revision": "88e9880603199549435aefc040f8c78c"
+    "revision": "9b1e3816af25b002bdf4fbb6337e0eee"
   },
   {
     "url": "voka/very.html",
-    "revision": "e96753577c04c1b82be42508241e2ff3"
+    "revision": "435203c6300ec782876a32c15bb8ea41"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});

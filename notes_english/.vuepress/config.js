@@ -30,6 +30,7 @@ module.exports = {
           '/voka/feelings',
           '/voka/positive',
           '/voka/describe',
+          '/voka/nha'
         ]
       },
       {
@@ -43,6 +44,12 @@ module.exports = {
           '/grammar/part-of-speech',
         ]
       },
+      // {
+      //     title: 'Quan hệ',
+      //     children: [
+      //       '/me/synonym',
+      //     ]
+      // }
     ],
     nav: [
       { text: 'Home', link: 'https://nguyenngockhank.github.io' },
