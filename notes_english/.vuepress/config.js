@@ -30,7 +30,10 @@ module.exports = {
           '/voka/feelings',
           '/voka/positive',
           '/voka/describe',
-          '/voka/nha'
+          '/voka/nha',
+          '/voka/marketing',
+          '/voka/trafic',
+          '/voka/sport',
         ]
       },
       {

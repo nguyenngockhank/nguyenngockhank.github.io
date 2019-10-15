@@ -34,6 +34,9 @@ spl_autoload_register(function ($class_name) {
 composer dump-autoload 
 ```
 
+**Optimization**
+Chạy `composer dump-autoload` với option `-o` / `--optimize` cho production 
+
 ## Magic methods 
 
 [See my note 📕 about this](./magic.md)
