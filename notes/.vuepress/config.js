@@ -91,6 +91,7 @@ module.exports = {
           '/snippets/custom_promise_all',
           '/snippets/event_storage',
           '/javascript/axios_jqueryajax',
+          '/javascript/bookmarklet',
         ]
       },
       {
