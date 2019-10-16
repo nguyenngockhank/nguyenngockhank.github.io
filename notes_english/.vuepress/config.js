@@ -34,6 +34,7 @@ module.exports = {
           '/voka/marketing',
           '/voka/trafic',
           '/voka/sport',
+          '/voka/animal',
         ]
       },
       {
