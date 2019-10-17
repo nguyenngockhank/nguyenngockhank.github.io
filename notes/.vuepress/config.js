@@ -103,6 +103,13 @@ module.exports = {
           '/php/laravel',
           '/php/wordpress',
         ]
+      }, 
+      {
+        title: 'CSS',
+        children: [
+          '/css/cheatsheet',
+          '/css/tricks',
+        ]
       }
     ]
   },

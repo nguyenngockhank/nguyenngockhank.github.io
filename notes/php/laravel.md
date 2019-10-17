@@ -74,6 +74,12 @@ composer dump-autoload && ./artisan dump-autoload && ./artisan optimize && ./art
 ./artisan db:seed --class=InitSeeder
 ```
 
+### Maintain website
+
+```
+php artisan down --message="Hello, 503"
+```
+
 ## HMVC For Laravel 
 
 [A good article to build this thing](https://sethphat.com/sp-741/dung-mo-hinh-hmvc-cho-laravel-5)
@@ -197,9 +203,33 @@ $user->forceDelete();
 [A good article](https://sethphat.com/sp-765/laravel-eloquent-soft-delete)
 
 
+### Define extra attribute 
+
+```php
+protected $appends = ['full_name'];
+
+public function getFullNameAttribute()
+{
+    return $this->first_name . ' ' . $this->last_name;
+}
+```
+
+### And Query
+
+```php
+// normal way 
+User::where('first_name', 'DepTrai')
+    ->where('age', 25)
+    ->get();
+
+// special way
+User::whereFirstNameAndAge('DepTrai', 25)->get();
+
+```
+
 ## Helpers
 
-### Laravell Path
+### Laravel Path
 
 ```php
 public_path(); // Path of public/
