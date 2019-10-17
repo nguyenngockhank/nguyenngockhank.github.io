@@ -1,16 +1,6 @@
 # Mac tricks
 
-* [Cài đặt Homebrew](#cài-đặt-homebrew)
-* [Toggle hidden files](#toggle-hidden-files)
-* [Edit file hosts](#edit-file-hosts)
-* [Xem version tool trên CLI](#xem-version-tool-trên-cli)
-* [Kill process trên port](#kill-process-trên-port)
-* [Custom Enviroment Variables](#custom-enviroment-variables)
-* [Get local IP](#get-local-ip)
-* [Lỗi Clipboard](#loi-clipboard)
-* [SSH](#ssh)
-    * [Tạo ssh key](#tạo-ssh-key)
-    * [Tạo shortcut](#tạo-shortcut)
+[[toc]]
     
 ---
 
@@ -74,13 +64,29 @@ ifconfig |grep inet
 
 ## SSH
 
-### Tạo ssh key
+### Tạo SSH key
+
+```
+ssh-keygen -t rsa -b 2048
+```
+
+Hỏi gì cũng Enter hết :v 
+- Để mặc định tạo ra folder `'/Users/apple/.ssh'`
+- Với lại khỏi SSH mà phải nhập lại Mật khẩu
+
+*Note*: `apple` là tên máy của mềnh
+
+### Tạo SSH key tại thư mục hiện tại 
+
 ```
 ssh-keygen -t rsa -b 4096 -C "khanh@construct.sg"
 ```
 Move tay file đó vào `~/.ssh`
 
 ### Tạo shortcut
+
+Sửa file `/Users/apple/.ssh/config`, nếu không có thì tạo 
+
 Để không phải nhớ tên IP + Account
 ```
 host staging
