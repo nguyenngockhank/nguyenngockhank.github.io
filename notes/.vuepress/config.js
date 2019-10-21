@@ -55,10 +55,10 @@ module.exports = {
           '/tricks/git',
           '/tricks/linux',
           '/tricks/mac',
-          '/snippets/selenium_ide',
-          '/snippets/gg_app_script',
-          '/snippets/puppeteer',
-          '/snippets/mocha',
+          '/tools/chrome',
+          '/tools/selenium_ide',
+          '/tools/gg_app_script',
+          '/tools/puppeteer',
         ]
       },
       {
@@ -92,6 +92,7 @@ module.exports = {
           '/snippets/event_storage',
           '/javascript/axios_jqueryajax',
           '/javascript/bookmarklet',
+          '/snippets/mocha',
         ]
       },
       {

@@ -120,5 +120,12 @@ ALTER TABLE tbl_name ADD FULLTEXT index_name (column 1, column 2,..)
 DROP INDEX index_name;
 ```
 
+## MySQL binlog
+
+1 thứ hay ho 
+
+[Ứng dụng MySql Binary Log để giải quyết vấn đề tích hợp — P1](https://techtalk.vn/blog/posts/ung-dung-mysql-binary-log-de-giai-quyet-van-de-tich-hop-p1)
+[Giải quyết các vấn đề tích hợp bằng MySql Binlog — P2](https://engineering.tiki.vn/gi%E1%BA%A3i-quy%E1%BA%BFt-c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81-t%C3%ADch-h%E1%BB%A3p-b%E1%BA%B1ng-mysql-binlog-part-2-77483a572798)
+
 ## References 
 [Row Level Locking](https://riptutorial.com/mysql/example/24166/row-level-locking)

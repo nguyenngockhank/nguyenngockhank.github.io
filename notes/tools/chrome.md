@@ -56,6 +56,21 @@ Bước 3:
 
 > Tại tab render `Emulate CSS media` chọn `print`.
 
+
+## Chặn 1 resource
+
+Bước 1: giống trên kia
+
+> Command+Shift+P (Mac) 
+> hoặc Control+Shift+P (Windows, Linux, Chrome OS)
+
+Bước 2: 
+Chọn `Request Blocking`
+
+Bước 3
+`+` Thêm pattern
+
+
 ## Extensions
 
 **Tiện ích**
