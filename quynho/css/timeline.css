@@ -228,41 +228,51 @@ h1 {
     display: block;
     width: 100%;
   }
-  #timeline .demo-card--step1 {
-    background-color: #46b8e9;
-  }
-  #timeline .demo-card--step1 .head::after {
-    border-color: #46b8e9;
-  }
-  #timeline .demo-card--step2 {
-    background-color: #3ee9d1;
-  }
-  #timeline .demo-card--step2 .head::after {
-    border-color: #3ee9d1;
-  }
-  #timeline .demo-card--step3 {
-    background-color: #ce43eb;
-  }
-  #timeline .demo-card--step3 .head::after {
-    border-color: #ce43eb;
-  }
-  #timeline .demo-card--step4 {
-    background-color: #4d92eb;
-  }
-  #timeline .demo-card--step4 .head::after {
-    border-color: #4d92eb;
-  }
-  #timeline .demo-card--step5 {
-    background-color: #46b8e9;
-  }
-  #timeline .demo-card--step5 .head::after {
-    border-color: #46b8e9;
-  }
-
-
-  #timeline .demo-card--step6 {
-    background-color: #e74c3c;
-  }
-  #timeline .demo-card--step6 .head::after {
-    border-color: #e74c3c;
-  }
+#timeline .demo-card--step1 {
+  background-color: #46b8e9;
+}
+#timeline .demo-card--step1 .head::after {
+  border-color: #46b8e9;
+}
+#timeline .demo-card--step2 {
+  background-color: #3ee9d1;
+}
+#timeline .demo-card--step2 .head::after {
+  border-color: #3ee9d1;
+}
+#timeline .demo-card--step3 {
+  background-color: #ce43eb;
+}
+#timeline .demo-card--step3 .head::after {
+  border-color: #ce43eb;
+}
+#timeline .demo-card--step4 {
+  background-color: #4d92eb;
+}
+#timeline .demo-card--step4 .head::after {
+  border-color: #4d92eb;
+}
+#timeline .demo-card--step5 {
+  background-color: #46b8e9;
+}
+#timeline .demo-card--step5 .head::after {
+  border-color: #46b8e9;
+}
+#timeline .demo-card--step6 {
+  background-color: #e74c3c;
+}
+#timeline .demo-card--step6 .head::after {
+  border-color: #e74c3c;
+}
+#timeline .demo-card--step7 {
+  background-color: #f6b93b;
+}
+#timeline .demo-card--step7 .head::after {
+  border-color: #f6b93b;
+}
+#timeline .demo-card--step8 {
+  background-color: #0c2461;
+}
+#timeline .demo-card--step8 .head::after {
+  border-color: #0c2461;
+}
