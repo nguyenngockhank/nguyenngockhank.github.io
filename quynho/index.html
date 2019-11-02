@@ -1,109 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Quỷ nhỏ Timeline</title>
-    <meta name="robots" content="noindex" /> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Quỷ nhỏ & Ngưu ma vương</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
 
-    <link rel="stylesheet" href="./css/timeline.css" />
+  <style>
+    #intro {
+      text-align: center;
+    }
+    #intro img{
+      max-width: 90%;
+    }
+    h1 {
+      font-family: var(--font-secondary);
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 200;
+      margin: 0 0 50px 0;
+    }
+    .cd-timeline__img .fas {
+      color: white;
+      font-size: 1.5em;
+    }
+    .cd-timeline__img--gift {
+      background-color: #e74c3c;
+    }
+    .cd-timeline__img--drink {
+      background-color: #3ee9d1;
+    }
+  </style>
 </head>
 <body>
 
-<section id="intro">
-    <img src="./images/kiss.jpg" alt="" />
-    <h1>Quỷ nhỏ <br /> & <br /> Ngưu ma vương</h1>
-</section>
+  <header id="intro">
+      <img src="./images/kiss.jpg" alt="" />
+      <h1>Quỷ nhỏ <br /> & <br /> Ngưu ma vương</h1>
+  </header>
 
-<section id=timeline>
-
-
-    <div class="demo-card-wrapper">
-        <div class="demo-card demo-card--step6">
-            <div class="head">
-                <div class="number-box">
-                    <span>H</span>
-                </div>
-                <h2><span class="small">Trần Quang Khải</span> 29/10/2019</h2>
-            </div>
-            <div class="body">
-                <p><q>Ui xinh thế honey :)))</q></p>
-                <img src="./images/timeline/2019-10-29 01.JPG" alt="Graphic">
-            </div>
-        </div><!-- END DAY -->
-
-
-        <div class="demo-card demo-card--step1">
-            <div class="head">
-                <div class="number-box">
-                    <span>P</span>
-                </div>
-                <h2><span class="small">Công viên Lê Văn Tám</span> 12/08/2019</h2>
-            </div>
-            <div class="body">
-                <p><q>Nhìn ngon nhỉ?</q></p>
-                <img src="./images/timeline/2019-08-12.JPG" alt="Em muốn làm chỗ dựa cho mọi người">
-            </div>
-        </div><!-- END DAY -->
-
-
-        <div class="demo-card demo-card--step3">
-            <div class="head">
-                <div class="number-box">
-                    <span>D</span>
-                </div>
-                <h2><span class="small">HOT & COLD</span> 03/07/2019</h2>
-            </div>
-            <div class="body">
-                <p>Sau khi kiếm mãi mới ra quán trà sữa ngay ngã tư...</p>
-                <img src="./images/timeline/2019-07-03 01.JPG" alt="Dụ chơi game">
-            </div>
-        </div><!-- END DAY -->
-
-        <div class="demo-card demo-card--step2">
-            <div class="head">
-                <div class="number-box">
-                    <span>G</span>
-                </div>
-                <h2><span class="small">Ốp lưng độc quyền</span> 23/05/2019</h2>
-            </div>
-            <div class="body">
-                <p>Đây là cái tấm hình được vẽ sau cái ốp lưng của Khánk ka đang xài, được ship vào ngày 23/05/2019 </p>
-                <img src="./images/logo.jpg" alt="" />
-            </div>
-        </div><!-- END DAY -->
-
-        
-
-        <div class="demo-card demo-card--step4">
-            <div class="head">
-                <div class="number-box">
-                    <span>D</span>
-                </div>
-                <h2><span class="small">YUM</span> 21/04/2019</h2>
-            </div>
-            <div class="body">
-                <p>Lưỡng lự mãi mới chạy vào gần nhà anh yêu, rũ uống trà sữa.</p>
-                <img src="./images/timeline/IMG_20190421_104224.jpg" alt="Graphic">
-            </div>
-        </div><!-- END DAY -->
-
-        <div class="demo-card demo-card--step5">
-            <div class="head">
-                <div class="number-box">
-                    <span>D</span>
-                </div>
-                <h2><span class="small">Đồng Nai</span> 13/04/2019</h2>
-            </div>
-            <div class="body">
-                <p>Nhân ngày vua Hùng, nên 2 cháu chỉ dám nắm tay thôi...</p>
-                <img src="./images/timeline/hold hands.JPEG" alt="Graphic">
-            </div>
-        </div><!-- END DAY -->
-
+  <section class="cd-timeline js-cd-timeline">
+    <div class="container max-width-lg cd-timeline__container" id="timeline-container">
     </div>
-</section>
+  </section> <!-- cd-timeline -->
 
+<script type="text/template" id="itemTemplate">
+<div class="cd-timeline__block">
+  <div class="cd-timeline__img cd-timeline__img--<%= type %>">
+    <i class="fas fa-<%= ICON_OPTIONS[type].icon %>"></i>
+    <!-- <img src="assets/img/cd-icon-picture.svg" alt="Picture"> -->
+  </div> <!-- cd-timeline__img -->
+
+  <div class="cd-timeline__content text-component">
+    <h2><%= title %></h2>
+    <p class="color-contrast-medium"><%= content %></p>
+
+    <img src="<%= img %>" alt="<%= title %>">
+
+    <div class="flex justify-between items-center">
+      <span class="cd-timeline__date"><%= date %></span>
+    </div>
+  </div> <!-- cd-timeline__content -->
+</div> <!-- cd-timeline__block -->
+</script>
+
+<script>
+var ICON_OPTIONS = {
+  location: {
+    icon: 'map-marker-alt',
+  },
+  gift: {
+    icon: 'gift',
+  },
+  drink: {
+    icon: 'cocktail',
+  }, 
+  picture: {
+    icon: 'image',
+  }
+} 
+var dataItems = [
+  {
+    type: 'location',
+    date: '2019-10-29',
+    title: 'Trần Quang Khải',
+    content: '<q>Ui xinh thế honey :)))</q>',
+    img: './images/timeline/2019-10-29 01.JPG',
+  },
+  {
+    type: 'gift',
+    date: '2019-09-01',
+    title: 'Quà sinh nhựt',
+    content: 'Thank you bae ❤️️',
+    img: './images/timeline/birthday.jpg',
+  },
+  {
+    type: 'picture',
+    date: '2019-08-12',
+    title: 'Công viên Lê Văn Tám',
+    content: 'Nhìn ngon nhỉ?',
+    img: './images/timeline/2019-08-12.JPG',
+  },
+  {
+    type: 'drink',
+    date: '2019-07-03',
+    title: 'HOT & COLD',
+    content: 'Sau khi kiếm mãi mới ra quán trà sữa ngay ngã tư...',
+    img: './images/timeline/2019-07-03 01.JPG',
+  },
+  {
+    type: 'gift',
+    date: '2019-05-23',
+    title: 'Ốp lưng độc quyền',
+    content: 'Đây là cái tấm hình được vẽ sau cái ốp lưng của Khánk ka đang xài, được ship vào ngày 23/05/2019',
+    img: './images/logo.jpg',
+  },
+  {
+    type: 'drink',
+    date: '2019-04-21',
+    title: 'YUM',
+    content: 'Lưỡng lự mãi mới chạy vào gần nhà anh yêu, rũ uống trà sữa.',
+    img: './images/timeline/IMG_20190421_104224.jpg',
+  },
+  {
+    type: 'location',
+    date: '2019-04-13',
+    title: 'Đồng Nai',
+    content: 'Nhân ngày vua Hùng, nên 2 cháu chỉ dám nắm tay thôi...',
+    img: './images/timeline/hold hands.JPEG',
+  },
+];
+
+
+// render contents
+(function() {
+
+  function format_date_ui(d){
+      var year = d.getFullYear(), 
+          month = d.getMonth() + 1, 
+          date = d.getDate();
+
+      if(month < 10)  month = '0' + month;
+      if(date < 10)  date = '0' + date;
+    
+      return  date + '/' + month + '/' + year;
+  }
+  var timelineCon = document.getElementById('timeline-container');
+  var compiledTemplate = _.template(document.getElementById('itemTemplate').innerHTML);
+
+  _.each(dataItems, function(dataItem) {
+    dataItem.date = format_date_ui( new Date(dataItem.date));
+
+    var html = compiledTemplate(dataItem);
+    timelineCon.innerHTML += html;
+  })
+})();
+
+
+</script>
+
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
