@@ -42,3 +42,7 @@ https://github.com/LinusBorg/portal-vue
 
 ### Replacing Template Features with Plain JavaScript
 https://vuejs.org/v2/guide/render-function.html#Replacing-Template-Features-with-Plain-JavaScript
+
+
+### Managing User Permissions in a VueJS App
+https://vuejsdevelopers.com/2018/01/08/vue-js-roles-permissions-casl/?utm_source=twitter-vjd&utm_medium=post&utm_campaign=vrp
