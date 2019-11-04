@@ -5,9 +5,12 @@
 - [The Clean Code Blog](https://blog.cleancoder.com/)
 
 - [C4 Model](http://www.codingthearchitecture.com/2014/08/24/c4_model_poster.html)
+- [Visualising and documenting software architecture cheat sheets](http://www.codingthearchitecture.com/2017/04/27/visualising_and_documenting_software_architecture_cheat_sheets.html)
 
 
 - [Documenting Software Architecture](https://herbertograca.com/2019/08/12/documenting-software-architecture/)
+
+- [Package by component and architecturally-aligned testing](http://www.codingthearchitecture.com/2015/03/08/package_by_component_and_architecturally_aligned_testing.html)
 
 ## Microservices
 

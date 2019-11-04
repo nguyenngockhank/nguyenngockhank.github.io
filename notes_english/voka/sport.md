@@ -159,7 +159,16 @@ words.forEach(( [ word, meaning, pron ]  = place) => {
 | take the lead |  | dẫn bàn |
 | offside | */ˌɔːfˈsaɪd/* | việt vị |
 
+
+## Chơi bài
+
+| Từ        | Phiên âm |  Nghĩa      |
+|:--------- |:-------- | :---------- |
+
+
 ### References 
+
+https://www.studytienganh.vn/news/126/tu-vung-cac-tro-choi-thong-dung-bang-tieng-anh
 
 [Link](https://leerit.com/tu-vung-tieng-anh-theo-chu-de/tu-vung-tieng-anh-ve-bong-da-football/?r=related)
 

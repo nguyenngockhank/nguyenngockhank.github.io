@@ -1,7 +1,7 @@
 # Clean Architecture
 **Robert C. Martin** (hay còn gọi là **Uncle Bob**) cho ra đời ý tưởng của mình về Clean Architecture vào năm 2012
 
-![Clearn Architecture](@/images/cleanarchitecture.jpg)
+![Clearn Architecture](@/images/architecture/cleanarchitecture.jpg)
 
 - **Independent of Frameworks**. The architecture does not depend on the existence of some library of feature laden software. This allows you to use such frameworks as tools, rather than having to cram your system into their limited constraints.
 - **Testable**. The business rules can be tested without the UI, Database, Web Server, or any other external element.

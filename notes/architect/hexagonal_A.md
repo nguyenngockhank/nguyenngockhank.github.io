@@ -19,3 +19,9 @@ Sử dụng port/adapter design, với ứng dụng của chúng ta nằm ở tr
 [Ports and Adapters implementation in PHP, with a little help from Symfony](https://medium.com/azimolabs/ports-and-adapters-implementation-in-php-with-a-little-symfony-help-6d4fdbe830ba)
 
 [Git](https://github.com/purplefan/song-vote-ppa)
+
+## Refs
+
+- [Ports & Adapters Architecture](https://herbertograca.com/2017/09/14/ports-adapters-architecture/)
+- [Ports & Adapters Architecture (Bản Việt)](https://edwardthienhoang.wordpress.com/2018/01/18/ports-adapters-architecture/)
+
