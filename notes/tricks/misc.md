@@ -10,3 +10,8 @@
 ## Xem tin nhắn theo ngày trên Messenger
 
 [Theo bài viết](https://cellphones.com.vn/sforum/thu-thuat-huong-dan-xem-lich-su-tin-nhan-facebook-messenger-theo-ngay-cu-the-cuc-ky-don-gian)
+
+
+## Front-end Developer Handbook 2019
+
+[Link 16'](https://frontendmasters.com/books/front-end-handbook/2019/)

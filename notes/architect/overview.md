@@ -1,5 +1,9 @@
 # Tổng quan Architecture
 
+## [Single Page Application (2002-2003)](./spa.md)
+![Example](@/images/architecture/spa/9c897-15aa2cnrij2fvo0rztjczhq.png)
+
+
 ## Domain-Driven Design – DDD (2003)
 ![Example](@/images/ddd-layers.jpg)
 
@@ -13,7 +17,7 @@
 ## Onion Architecture (2008)
 ![Onion Architecture](@/images/architecture/Onion1.png)
 
-## Clean Architecture (2012)
+## [Clean Architecture (2012)](./clean_A.md)
 ![Clearn Architecture](@/images/architecture/cleanarchitecture.jpg)
 
 
@@ -30,3 +34,5 @@
 **2014**
 - C4 Model
 
+**???**
+- [Service-oriented architecture](./soa.md)
