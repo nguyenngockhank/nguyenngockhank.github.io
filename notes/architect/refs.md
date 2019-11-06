@@ -4,13 +4,18 @@
 
 - [The Clean Code Blog](https://blog.cleancoder.com/)
 
-- [C4 Model](http://www.codingthearchitecture.com/2014/08/24/c4_model_poster.html)
-- [Visualising and documenting software architecture cheat sheets](http://www.codingthearchitecture.com/2017/04/27/visualising_and_documenting_software_architecture_cheat_sheets.html)
 
 
 - [Documenting Software Architecture](https://herbertograca.com/2019/08/12/documenting-software-architecture/)
 
 - [Package by component and architecturally-aligned testing](http://www.codingthearchitecture.com/2015/03/08/package_by_component_and_architecturally_aligned_testing.html)
+
+
+## C4
+
+- [C4 Model](http://www.codingthearchitecture.com/2014/08/24/c4_model_poster.html)
+
+- [Visualising and documenting software architecture cheat sheets](http://www.codingthearchitecture.com/2017/04/27/visualising_and_documenting_software_architecture_cheat_sheets.html)
 
 ## Microservices
 
@@ -18,9 +23,12 @@
 
 - [Microservices](https://edwardthienhoang.wordpress.com/microservices-tu-thiet-ke-den-trien-khai-phan-mo-dau/)
 
-
 - [Circuit Breaker](https://nghethuatcoding.com/2019/05/06/cac-ki-su-grab-da-thiet-ke-he-thong-dan-hoi-su-dung-circuit-breaker-nhu-the-nao/)
 
+
+### Database 
+
+- [Tìm hiểu về Microservices - Phần 3: Quản lý cơ sở dữ liệu trên Microservices](https://laptrinhx.com/tim-hieu-ve-microservices-phan-3-quan-ly-co-so-du-lieu-tren-microservices-1374429556/)
 
 
 ## DDD

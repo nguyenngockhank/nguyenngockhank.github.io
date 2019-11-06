@@ -39,4 +39,5 @@ Ngoài ra,
 
 ## Làm như thế nào 
 
-[SÁCH GIÁO KHOA](https://refactoring.com/catalog/) xịn sò do anh `Martin Fowler` đại hiệp chỉ giáo =)) 
+- [SÁCH GIÁO KHOA](https://refactoring.com/catalog/) xịn sò do anh `Martin Fowler` đại hiệp chỉ giáo =)) 
+- [web hay](https://refactoring.guru/refactoring/what-is-refactoring)

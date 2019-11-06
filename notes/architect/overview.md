@@ -1,14 +1,24 @@
 # Tổng quan Architecture
 
+> The goal of software architecture is to minimize the human resources required to build and
+maintain the required system.
+
+##  [Entity-Boundary-Interactor Architecture (1992)](./ebi.md)
+aka EBC aka EIC
+
+![fig_7_12_entity_interface_control](@/images/architecture/ebi/fig_7_12_entity_interface_control.jpg)
+
+
 ## [Single Page Application (2002-2003)](./spa.md)
 ![Example](@/images/architecture/spa/9c897-15aa2cnrij2fvo0rztjczhq.png)
 
 
-## Domain-Driven Design – DDD (2003)
+## [Domain-Driven Design – DDD (2003)](./ddd.md)
 ![Example](@/images/ddd-layers.jpg)
 
 
-## Hexagonal Architecture aka Ports & Adapters Architecture (2005)
+## Hexagonal Architecture (2005)
+aka Ports & Adapters Architecture
 ![hexagonal](@/images/architecture/hexagonal-arch-4-ports-adapters2.png)
 
 ## Model-View-ViewModel – MVVM (2005)
