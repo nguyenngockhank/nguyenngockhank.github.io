@@ -30,6 +30,7 @@ module.exports = {
         title: "Life",
         children: [
           '/life/fair.md',
+          '/life/critical_thinking.md',
         ]
       },
     ]
