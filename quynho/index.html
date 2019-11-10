@@ -34,6 +34,9 @@
     .cd-timeline__img--drink {
       background-color: #3ee9d1;
     }
+    .cd-timeline__img--film {
+      background-color: #3498DB;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +73,9 @@
 
 <script>
 var ICON_OPTIONS = {
+  film: {
+    icon: 'film',
+  }, 
   location: {
     icon: 'map-marker-alt',
   },
@@ -85,11 +91,25 @@ var ICON_OPTIONS = {
 } 
 var dataItems = [
   {
+    type: 'film',
+    date: '2019-10-29',
+    title: 'KẺ HỦY DIỆT',
+    content: '<q>22h10\' Cinestar Hai Bà Trưng</q>',
+    img: 'http://image.phimmoi.net/film/8858/poster.medium.jpg',
+  },
+  {
     type: 'location',
     date: '2019-10-29',
-    title: 'Trần Quang Khải',
+    title: 'Kim Dung / Trần Quang Khải',
     content: '<q>Ui xinh thế honey :)))</q>',
     img: './images/timeline/2019-10-29 01.JPG',
+  },
+  {
+    type: 'film',
+    date: '2019-10-21',
+    title: 'JOKER',
+    content: '<q>19h50\' CGV Sư Vạn Hạnh</q>',
+    img: 'http://image.phimmoi.net/film/8592/poster.medium.jpg',
   },
   {
     type: 'gift',
@@ -97,6 +117,13 @@ var dataItems = [
     title: 'Quà sinh nhựt',
     content: 'Thank you bae ❤️️',
     img: './images/timeline/birthday.jpg',
+  },
+  {
+    type: 'film',
+    date: '2019-08-26',
+    title: 'CONAN',
+    content: '<q>CGV Pearl Plaza</q>',
+    img: 'http://image.phimmoi.net/film/7957/poster.medium.jpg',
   },
   {
     type: 'picture',

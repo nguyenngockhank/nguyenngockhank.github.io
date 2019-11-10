@@ -1,8 +1,27 @@
 # Thú 
 
-## Thông minh
+## Bướm 
 
-### Quạ 
+### Không có cánh
+https://vi.wikipedia.org/wiki/Operophtera_brumata
+
+**Operophtera brumata**: Con cái ko có cánh
+
+### Bướm 89 98 
+Số 89 / 98 nằm trên 2 cánh 
+
+
+## Bánh dâm 
+
+https://www.youtube.com/watch?v=lbcXuwSUFLo
+
+- Chim cánh cụt: để đổi vài hòn sỏi từ con đực
+- Tinh tinh: đổi lấy thịt 
+
+## [Rắn](./snake.md)
+
+
+## Quạ 
 
 
 
