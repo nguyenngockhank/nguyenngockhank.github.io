@@ -115,3 +115,4 @@ Example Github
 
 [Thực hành implement Clean Architecture](https://edwardthienhoang.wordpress.com/2018/01/31/thuc-hanh-implement-clean-architecture/)
 
+[How to Organize CLEAN ARCHITECTURE to Modular Patterns](https://hackernoon.com/applying-clean-architecture-on-web-application-with-modular-pattern-7b11f1b89011)
