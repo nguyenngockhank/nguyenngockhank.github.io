@@ -1,4 +1,19 @@
-# Thú 
+# Động vật 
+
+
+## Cá hề 
+
+1 tổ chức gồm thường 1 con cái đứng đầu... 
+Nếu con cái ấy chết -> 1 con đực đẹp trai nhất sẽ tự chuyển giới và đứng đầu nhóm ấy
+
+
+## Hàu 
+
+Khi chào đời đều là dực -> sau 1 năm đều thành giống cái 
+
+Sở hữu 2 bộ phận sinh dục -> Tự thụ tinh được
+
+
 
 ## Bướm 
 
