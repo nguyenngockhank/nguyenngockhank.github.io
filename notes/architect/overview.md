@@ -1,11 +1,5 @@
 # Tổng quan Architecture
 
-> The goal of software architecture is to minimize the human resources required to build and
-maintain the required system.
-
-Software = soft + ware => ware == product 
-Hardware = hard + ware => hard to change 
-
 ##  [Entity-Boundary-Interactor Architecture (1992)](./ebi.md)
 aka EBC aka EIC
 
@@ -37,7 +31,6 @@ aka Ports & Adapters Architecture
 **2006**
 - Command Query Responsibility Segregation (CQRS)
 - Event Sourcing (ES)
-
 
 
 **2009**

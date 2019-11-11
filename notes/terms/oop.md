@@ -103,36 +103,48 @@ Cho tấm hình nghiền ngẫm chứ chả biết nói gì thêm :p
 SOLID là viết tắt của 5 chữ cái đầu trong 5 nguyên tắc thiết kế hướng đối tượng
 
 ### Single responsibility priciple (SRP)
+
+An active corollary to Conway’s law: 
+
 ::: tip
-Một class chỉ nên giữ 1 trách nhiệm duy nhất 
-(Chỉ có thể sửa đổi class với 1 lý do duy nhất)
+The best structure for a software system is heavily influenced by the social structure of the organization that uses it so that each software module has one, and only one, reason to change.
 :::
 
+
 ### Open/Closed principle (OCP)
+
+Bertrand Meyer made this principle famous in the 1980s. 
+
 ::: tip
-Có thể thoải mái mở rộng 1 class, nhưng không được sửa đổi bên trong class đó
+The gist is that for software systems to be easy to change, they must be designed to allow the behavior of those systems to be changed by adding new code, rather than changing existing code
 (open for extension but closed for modification).
 :::
 
 ### Liskov substitution principe (LSP)
+
+Barbara Liskov’s famous definition of subtypes, from 1988. 
+
 ::: tip
-Trong một chương trình, các object của class con có thể thay thế class cha mà không làm thay đổi tính đúng đắn của chương trình
+In short, this principle says that to build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another.
 :::
 
 ### Interface segregation principle (ISP)
+
 ::: tip
-Thay vì dùng 1 interface lớn, ta nên tách thành nhiều interface nhỏ, với nhiều mục đích cụ thể
+This principle advises software designers to avoid depending on things that they don’t use.
 :::
+
+Thay vì dùng 1 interface lớn, ta nên tách thành nhiều interface nhỏ, với nhiều mục đích cụ thể
+
+
 
 ### Dependency inversion principle (DIP)
 
 ::: tip
-1. Các module cấp cao không nên phụ thuộc vào các modules cấp thấp. Cả 2 nên phụ thuộc vào abstraction.
+The code that implements high-level policy should not depend on the code that implements low-level details. Rather, details should depend on policies.
 :::
 
-::: tip
-2. Interface (abstraction) không nên phụ thuộc vào chi tiết, mà ngược lại. ( Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation.)
-:::
+Interface (abstraction) không nên phụ thuộc vào chi tiết, mà ngược lại. ( Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation.)
 
 ---
 
