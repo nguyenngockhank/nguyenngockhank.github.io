@@ -4,7 +4,7 @@
 
 - [The Clean Code Blog](https://blog.cleancoder.com/)
 
-
+- [My journey in Clean Architecture and Domain Driven Design](https://marcduerst.com/2019/09/22/chapter-1-my-journey-in-clean-architecture-and-domain-driven-design/)
 
 - [Documenting Software Architecture](https://herbertograca.com/2019/08/12/documenting-software-architecture/)
 

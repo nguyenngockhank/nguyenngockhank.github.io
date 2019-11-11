@@ -15,7 +15,10 @@ It provides us with `strategic and tactical modeling tools` to aid designing hig
 The setting in which a word or statement appears that determines its meaning;
 
 ### Domain
-A sphere of knowledge (ontology), influence, or activity. The subject area to which the user applies a program is the domain of the software;
+> A sphere of knowledge (ontology), influence, or activity. The subject area to which the user applies a program is the domain of the software;
+
+### Core Domain
+> The distinctive part of the model, central to the user’s goals, that differentiates the application and makes it valuable.
 
 ### Model
 A system of abstractions that describes selected aspects of a domain and can be used to solve problems related to that domain;
@@ -23,19 +26,21 @@ A system of abstractions that describes selected aspects of a domain and can be 
 ### Ubiquitous Language
 A language structured around the domain model and used by all team members to connect all the activities of the team with the software.
 
+### Domain Expert
+> A member of a software project whose field is the domain of the application, rather than software development. Not just any user of the software, the domain expert has deep knowledge of the subject.
+
 ## Strategic domain-driven design
 
 ### Bounded Context
 
-::: tip 
-Bounded Context is a central pattern in Domain-Driven Design. It is the focus of DDD's strategic design section which is all about dealing with large models and teams. DDD deals with large models by dividing them into different Bounded Contexts and being explicit about their interrelationships.
-:::
+> Bounded Context is a central pattern in Domain-Driven Design. It is the focus of DDD's strategic design section which is all about dealing with large models and teams. DDD deals with large models by dividing them into different Bounded Contexts and being explicit about their interrelationships.
 
 ### Continuous integration
 ...
 
 ### Context map
-...
+
+> A representation of the [[Bounded Context]]s involved in a project and the actual relationships between them and their models.
 
 
 ## Building blocks
@@ -47,14 +52,15 @@ Bounded Context is a central pattern in Domain-Driven Design. It is the focus of
 > An object that contains attributes but has no conceptual identity. They should be treated as immutable.
 
 ### Aggregate
-> A collection of objects that are bound together by a root entity, otherwise known as an aggregate root. The aggregate root guarantees the consistency of changes being made within the aggregate by forbidding external objects from holding references to its members.
+
+>  A cluster of associated objects that are treated as a unit for the purpose of data changes. External references are restricted to one member of the AGGREGATE, designated as the root. A set of consistency rules applies within the AGGREGATE’S boundaries.
 
 
 ### Domain Event
 > A domain object that defines an event (something that happens). A domain event is an event that domain experts care about.
 
 ### Service
-> When an operation does not conceptually belong to any object. Following the natural contours of the problem, you can implement these operations in services. See also Service (systems architecture).
+> When an operation does not conceptually belong to any object. Following the natural contours of the problem, you can implement these operations in services. 
 
 ### Repository
 > Methods for retrieving domain objects should delegate to a specialized Repository object such that alternative storage implementations may be easily interchanged.
@@ -83,4 +89,4 @@ More detail
 - [DDD - Layered Architecture](https://archfirst.org/domain-driven-design-6-layered-architecture/)
 - [Domain-Driven-Design](https://khalilstemmler.com/articles/domain-driven-design-intro/)
 - [The 6 Most Common Types of Logic in Large Applications](https://khalilstemmler.com/articles/software-design-architecture/organizing-app-logic/)
-- [https://dddcommunity.org/](https://dddcommunity.org/)
+- [https://dddcommunity.org/](https://dddcommunity.org/resources/ddd_terms/)
