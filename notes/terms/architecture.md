@@ -61,7 +61,14 @@ for diferent reasons.
 :::
 
 ## CRP: The Common Reuse Principle
-
+php
 ::: tip
 Don’t force users of a component to depend on things they don’t need.
+:::
+
+
+## DTO
+
+::: tip
+One case where it is useful to use something like a DTO is **when you have a significant mismatch between the model in your presentation layer and the underlying domain model.** In this case it makes sense to make presentation specific facade/gateway that maps from the domain model and presents an interface that’s convenient for the presentation. It fits in nicely with Presentation Model. This is worth doing, but it’s only worth doing for screens that have this mismatch (in this case it isn’t extra work, since you’d have to do it in the screen anyway.) – Martin Fowler, PoEAA
 :::

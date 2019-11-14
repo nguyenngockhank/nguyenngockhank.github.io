@@ -1,23 +1,4 @@
-
-# Domain Driven Design (DDD)
-Nôm na nó là 1 `Design Pattern`, gồm 4 lớp (layer)
-
-```
-User Interface   |   Application   |   Domain   |    Infrastructure
-```
-
-**User Interface** : Giao diện / input control tạo ra những event bằng những command 
-
-**Application** : vai trò gần giống Controller trong MVC, nhiệm vụ match các `Activity`, không chứa `Bussiness Logic`, chỉ chứa `Application Task Progress`. 
-
-**Domain** : Chứa các `Bussiness Object`. Trái tim của toàn bộ doanh nghiệp, nghiệp vụ các kiểu ở đây nè.
-
-**Infrastructure** : cung cấp các cơ chế giao tiếp các layer với nhau, các common library (Log, Utility, ...), và `Data Access` lưu trữ `Business Object` (database).
-
-
 # Mirco Service
-
-
 
 ## API gateway
 - Vai trò làm trung gian, giữa người dùng cuối và các service phía sau hệ thống 

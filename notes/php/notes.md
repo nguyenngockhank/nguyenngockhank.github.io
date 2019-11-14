@@ -27,6 +27,15 @@ composer require php-di/php-di
 
 The dependency injection container for humans
 
+## SimpleBus
+
+https://packagist.org/packages/simple-bus/message-bus
+
+Full docs:
+
+http://docs.simplebus.io/en/latest/
+
+
 ## DDD
 
 https://packagist.org/packages/carlosbuenosvinos/ddd
