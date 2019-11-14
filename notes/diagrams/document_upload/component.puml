@@ -1,0 +1,55 @@
+@startuml  Component
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Component.puml
+
+LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+System_Ext(tdn_system, "TDN", "send formatted files to multi destination.")
+
+Container(single_page_app, "Single page App", "HTML / CSS / VueJS", "Provide all functionality to customer via their browser")
+
+Container(filesystem, "File System", "SSD")
+
+ContainerDb(web_db, "Database", "MySQL 5.4", "Store Everything :))")
+
+Container_Boundary(api_app, "API Application" ) {
+
+    Component(component_controller, "DocumentUpload Controller", "C in MVC", "Combine stuffs")
+
+    Component(component_tdn_communicator, "TDN Communicator", "-", "Create flat file")
+
+    Component(component_logger, "Logger Component", "through Event Bus", "Write updated info of docs")
+
+    Component(component_eform, "EForm Component", "-", "To grab EForm Template & save entity")
+
+    Component(component_fileprocess, "File Process \nComponent", "-", "Manipulate system files")
+
+    Component(component_sercurity, "Security Component", , "Authenicaiton + Authorization")
+}
+
+' define relationship 
+Rel_D(single_page_app, component_controller, "Make API calls")
+
+Rel_L(component_controller, component_sercurity, "uses")
+
+
+
+Rel_R(component_controller, component_tdn_communicator, "new IDs of docs")
+Rel_D(component_controller, component_eform, "read Template & write info of docs")
+Rel(component_controller, component_logger, "Send event creation of new doc")
+Rel(component_controller, component_fileprocess, "uses")
+
+Rel_R(component_tdn_communicator, tdn_system, "send files via shared mount disk")
+Rel(component_eform, component_controller, "new IDs of docs")
+
+
+Rel(component_logger, web_db, "uses")
+Rel_D(component_eform, web_db, "uses")
+
+Rel(component_fileprocess, filesystem, "writes")
+
+
+Lay_R(web_db, filesystem)
+Lay_R(component_logger, component_eform)
+Lay_R(component_eform, component_fileprocess)
+@enduml

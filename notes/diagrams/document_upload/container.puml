@@ -1,0 +1,51 @@
+@startuml  Container
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+
+LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+'LAYOUT_LEFT_RIGHT
+
+' define Users 
+Person(admin, "Admin User", "can configure the options \nof module")
+Person(user, "Regular User", "A regular business user")
+
+' define System
+
+System_Boundary(wp3, "Webportal") {
+
+    Container(web_app, "Web Application", "PHP - Codeigniter 3.1/HMVC", "Delivers the static content & the single page application")
+    
+    Container(api_app, "API Application", "?", "Provide all functionality via JSON/ https api")
+    
+    Container(single_page_app, "Single page App", "HTML / CSS / VueJS", "Provide all functionality to customer via their browser")
+    
+    ContainerDb(web_db, "Database", "MySQL 5.4", "Store Everything :))")
+
+    Container(filesystem, "File System", "SSD")
+}
+
+System_Ext(tdn_system, "TDN", "send formatted files to multi destination.")
+
+
+' define User 
+Rel(user, web_app, "Uses", "HTTP(S)")
+Rel(admin, web_app, "Uses", "HTTP(S)")
+
+
+Rel_R(web_app, single_page_app, "delivers by HTML")
+Rel(user, single_page_app, "Uses", "HTTP(S)")
+Rel(single_page_app, api_app, "Make API calls")
+Rel_R(api_app, tdn_system, "send files via shared mount disk")
+Rel(api_app, filesystem, "write files")
+
+' define relationship with DB
+Rel_L(api_app, web_db, "Read from \n& write to")
+Rel(web_app, web_db, "Read from \n& write to")
+
+' layout 
+'Lay_R(admin, user)
+'Lay_R(web_app, single_page_app)
+'Lay_R(web_db, api_app)
+
+@enduml
