@@ -66,3 +66,7 @@ git commit --amend -m "Message"
 ```
 git rebase -i HEAD~3
 ```
+
+## Refs 
+
+[Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)

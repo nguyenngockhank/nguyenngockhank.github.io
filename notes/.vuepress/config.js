@@ -59,6 +59,7 @@ module.exports = {
           '/tools/selenium_ide',
           '/tools/gg_app_script',
           '/tools/puppeteer',
+          '/tools/vscode',
         ]
       },
       {

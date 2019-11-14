@@ -96,6 +96,10 @@ host staging
 
 Từ nay có thể xài `ssh staging`
 
+## Install fonts
+
+[Full Here](https://mackeeper.com/blog/post/542-how-to-install-fonts-on-mac/)
+
 
 
 
