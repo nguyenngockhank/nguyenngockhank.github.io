@@ -43,12 +43,6 @@ brew install graphviz
 ### Project Manager
 https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager
 
-### Bracket Pair Colorizer
-Màu mè cho Các cặp brackets
-
-### Git History / GitLens
-Quản lý git cho files
-
 ### Polacode
 https://scotch.io/bar-talk/22-best-visual-studio-code-extensions-for-web-development
 
@@ -75,3 +69,11 @@ https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-ico
 
 ### Settings Sync
 https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+
+- filesize
+- SFTP
+- Vetur
+- PHP Namespace Resolver
+- Bracket Pair Colorizer: Màu mè cho Các cặp brackets
+- Git History / GitLens
+- Copy Relative Path
