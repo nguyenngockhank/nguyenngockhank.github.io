@@ -27,12 +27,13 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: "Life",
+        title: "Định nghĩa",
         children: [
-          '/life/fair.md',
-          '/life/critical_thinking.md',
-          '/life/reading_book.md',
-          '/life/leadership.md',
+          '/d/fair.md',
+          '/d/critical_thinking.md',
+          '/d/reading_book.md',
+          '/d/leadership.md',
+          '/d/5hanh.md',
         ]
       },
     ]
