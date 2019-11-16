@@ -69,3 +69,7 @@ So sánh với các bánh khác => nổi trội & hạn chế
 Tìm hiểu: Author / Publisher / Year  => đám bảo chính xác
 
 Tham khảo ý kiến người xung quanh => Tránh confirmation bias (bạo thủ)
+
+## Refs 
+
+https://www.youtube.com/watch?v=HxO5cLYe5Sw

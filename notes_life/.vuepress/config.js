@@ -31,6 +31,8 @@ module.exports = {
         children: [
           '/life/fair.md',
           '/life/critical_thinking.md',
+          '/life/reading_book.md',
+          '/life/leadership.md',
         ]
       },
     ]
