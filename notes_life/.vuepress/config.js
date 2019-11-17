@@ -36,6 +36,15 @@ module.exports = {
           '/d/5hanh.md',
         ]
       },
+      {
+        title: 'Quốc gia',
+        children: [
+          '/world/japan',
+          '/world/north_korea',
+          '/world/russia',
+          '/world/thai',
+        ]
+      }
     ]
   },
   configureWebpack: {

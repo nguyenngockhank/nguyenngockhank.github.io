@@ -44,3 +44,11 @@ Nếu cho tôi 6 tiếng để đốn hạ một cái cây. Tôi sẽ dành 4 ti
 Nuôi cái giận trong lòng thì khác nào uống thuốc độc mà trông chờ người khác chết.
 - Đức Phật Thích Ca
 ```
+
+**Tình yêu**
+
+```
+Khi chúng ta yêu 1 ai đó, chúng sẽ phải tìm ra 1 lý do mà sẽ ko bao giờ thấy hối tiếc. 
+Một người có 99 điểm xấu 1 điểm tốt. Chúng ta phải bám víu điểm tốt để chúng ta yêu suốt đời điểm tốt đó. 
+KHi chúng ta xảy ra việc gì, ta đừng nhớ 99 điểm xấu đó mà hay nhớ điểm tốt kia.
+```

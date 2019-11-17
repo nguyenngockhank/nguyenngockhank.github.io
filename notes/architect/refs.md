@@ -12,6 +12,11 @@
 
 - [How to Learn Software Design and Architecture | The Full-stack Software Design & Architecture Map](https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design/)
 
+- [Hướng dẫn thiết kế hệ thống (Phần 1)](https://viblo.asia/p/huong-dan-thiet-ke-he-thong-phan-1-gGJ59YAJ5X2)
+
+
+http://highscalability.com/
+
 ## C4
 
 - [C4 Model](http://www.codingthearchitecture.com/2014/08/24/c4_model_poster.html)
@@ -46,3 +51,4 @@
 - [The Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
 
 - [Architecture (Vietnamese)](https://edwardthienhoang.wordpress.com/software-architecture/)
+
