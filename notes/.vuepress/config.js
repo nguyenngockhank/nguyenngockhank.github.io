@@ -61,6 +61,7 @@ module.exports = {
             '/tools/gg_app_script',
             '/tools/puppeteer',
             '/tools/vscode',
+            '/quotes',
           ]
         },
         {
