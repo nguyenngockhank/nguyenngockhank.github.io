@@ -19,3 +19,12 @@
 ## Front-end Developer Handbook 2019
 
 [Link 16'](https://frontendmasters.com/books/front-end-handbook/2019/)
+
+## Icon / Ký tự
+
+- [Ký tự cảm xúc](https://www.jemoticons.com/vi/happy/)
+- [Biểu tượng cảm xúc](https://www.emojiengine.com/vi/)
+
+
+- [Chuyển đổi teencode](https://fususu.com/teencode/)
+- [Tiếq Việt](https://freetoolonline.com/cong-cu-chuyen-doi-chu-quoc-ngu-tieng-viet-thanh-tieq-viet-kieu-moi.html)
