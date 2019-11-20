@@ -28,6 +28,12 @@ Remove tất cả trừ cái hiện tại
 > n prune
 
 
+### nvmrc
+
+1 lựa chọn thay thế khác, có ưu điểm là nặng hơn `n`. Nhưng khuyết điểm là nó cô lập được các global package 
+
+[Node Version Manager](https://github.com/nvm-sh/nvm#nvmrc)
+
 
 
 

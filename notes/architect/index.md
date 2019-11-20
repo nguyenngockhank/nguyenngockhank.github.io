@@ -40,5 +40,6 @@ aka Ports & Adapters Architecture
 **2014**
 - C4 Model
 
-**???**
+## Others
 - [Service-oriented architecture](./soa.md)
+- [Event-driven architecture](./event_driven_A.md)
