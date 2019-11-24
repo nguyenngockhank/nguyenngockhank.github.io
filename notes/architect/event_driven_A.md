@@ -195,4 +195,5 @@ Tuy nhiên, nó cũng làm tăng sự phức tạp về khái niệm và kỹ th
 
 2017 • Martin Fowler • [The Many Meanings of Event-Driven Architecture](https://www.youtube.com/watch?v=STKCRSUsyP0)
 
-**Tổng hợp bởi edwardthienhoang**
+
+[YOUTUBE - GOTO 2017 • The Many Meanings of Event-Driven Architecture • Martin Fowler](https://www.youtube.com/watch?v=STKCRSUsyP0)

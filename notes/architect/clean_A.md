@@ -116,3 +116,8 @@ Example Github
 [Thực hành implement Clean Architecture](https://edwardthienhoang.wordpress.com/2018/01/31/thuc-hanh-implement-clean-architecture/)
 
 [How to Organize CLEAN ARCHITECTURE to Modular Patterns](https://hackernoon.com/applying-clean-architecture-on-web-application-with-modular-pattern-7b11f1b89011)
+
+
+[YOUTUBE - The Principles of Clean Architecture by Uncle Bob Martin](https://www.youtube.com/watch?v=o_TH-Y78tt4)
+
+[ITkonekt 2019 | Robert C. Martin (Uncle Bob), Clean Architecture and Design](https://www.youtube.com/watch?v=2dKZ-dWaCiU)
