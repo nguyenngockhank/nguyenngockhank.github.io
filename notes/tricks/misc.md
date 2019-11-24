@@ -1,10 +1,6 @@
 # Tổng hợp tricks tào lao
 
-## Youtube
 
-**Share link với thời điểm bắt đầu**
-
-*https://www.youtube.com/watch?v=1ecTrNKLIog&t=`1m2s`*
 
 
 ## Xem tin nhắn theo ngày trên Messenger
@@ -28,3 +24,27 @@
 
 - [Chuyển đổi teencode](https://fususu.com/teencode/)
 - [Tiếq Việt](https://freetoolonline.com/cong-cu-chuyen-doi-chu-quoc-ngu-tieng-viet-thanh-tieq-viet-kieu-moi.html)
+
+## Google
+
+## Share link Youtube
+
+**Share link với thời điểm bắt đầu**
+
+*https://www.youtube.com/watch?v=1ecTrNKLIog&t=`1m2s`*
+
+### Tải Dữ liệu
+https://takeout.google.com/
+
+
+
+## Build QR code
+- [JS package](https://davidshimjs.github.io/qrcodejs/)
+
+## Lazy to read
+
+https://ilazytoread.herokuapp.com/results/
+
+## Web hay ho 
+
+- [Sổ đỏ - động vật](https://www.iucnredlist.org/)

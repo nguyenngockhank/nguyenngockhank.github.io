@@ -21,6 +21,13 @@ aka Ports & Adapters Architecture
 ## Model-View-ViewModel – MVVM (2005)
 ![MVVM](@/images/architecture/mvvm.png)
 
+
+## [Command Query Responsibility Segregation - CQRS (2006)](./cqrs.md)
+![CQRS](@/images/architecture/cqrs/2006-1-cqrs.png)
+
+& Event Sourcing (ES) (2006)
+
+
 ## Onion Architecture (2008)
 ![Onion Architecture](@/images/architecture/Onion1.png)
 
@@ -28,9 +35,7 @@ aka Ports & Adapters Architecture
 ![Clearn Architecture](@/images/architecture/cleanarchitecture.jpg)
 
 
-**2006**
-- Command Query Responsibility Segregation (CQRS)
-- Event Sourcing (ES)
+
 
 
 **2009**
@@ -43,3 +48,11 @@ aka Ports & Adapters Architecture
 ## Others
 - [Service-oriented architecture](./soa.md)
 - [Event-driven architecture](./event_driven_A.md)
+
+## Web & Bài viết hay 
+
+- [https://microservices.io/](https://microservices.io/)
+- [Martin Fowler](https://martinfowler.com/)
+- [codingthearchitecture.com - Simon Brown](http://www.codingthearchitecture.com/)
+- [The Software Architecture Chronicles - Herberto Graça](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
+- [How to Learn Software Design and Architecture](https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design/)

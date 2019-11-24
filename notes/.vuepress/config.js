@@ -61,7 +61,6 @@ module.exports = {
             '/tools/gg_app_script',
             '/tools/puppeteer',
             '/tools/vscode',
-            '/quotes',
           ]
         },
         {
@@ -72,6 +71,7 @@ module.exports = {
             '/terms/oop',
             '/terms/testing',
             '/terms/ddd',
+            '/quotes',
           ]
         },
         {
@@ -80,7 +80,6 @@ module.exports = {
             '/db/architect',
             '/db/optimize',
             '/db/mysql_snippets',
-            '/db/pinterest_shard',
             '/db/sql_nosql',
           ]
         },
@@ -120,7 +119,7 @@ module.exports = {
   },
   extraWatchFiles: [
     '.vuepress/nav/index.js',
-    // '.vuepress/sidebar/architect.js',
+    '.vuepress/sidebar/architect.js',
   ],
   configureWebpack: {
     resolve: {

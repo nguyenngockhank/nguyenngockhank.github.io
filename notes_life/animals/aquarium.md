@@ -11,6 +11,9 @@ Cá Koi được chia ra làm hai loại: Koi chuẩn và Koi bướm.
 Koi chuẩn: Hình dáng giống như cá nguyên thủy, nhưng được pha trộn nhiều màu sắc rất đẹp (khi được nhìn từ trên xuống, dọc theo sống lưng), do đó cá Koi chỉ thật sự đẹp khi được nuôi ở ao.
 Koi bướm: Khác với cá nguyên thủy là vi, vây và đuôi dài, khi bơi nhìn uyển chuyển rất đẹp, nên có thể nuôi được ở cả ao và hồ kiếng. Koi bướm còn có những tên gọi khác như "cá chép vây dài" hoặc "cá chép Rồng".
 
+
+[50 tỷ - 42 tỷ](https://www.youtube.com/watch?v=yh78HU_ixOk)
+
 **Phân loại cá Koi**:
 https://rubykoifarm.com/phan-loai-ca-koi/
 
