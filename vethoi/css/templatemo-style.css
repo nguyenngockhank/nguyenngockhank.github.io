@@ -1063,6 +1063,9 @@ http://www.templatemo.com/tm-509-hydro
   border-radius: 50%;
 }
 
+#about .section-title {
+  text-align: center;
+}
 .artist-item .image-circle{
   margin: auto;
   max-width: 200px;
