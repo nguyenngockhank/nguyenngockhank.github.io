@@ -196,6 +196,9 @@ At `template-parts/feedback-admin`
 ```
 
 ## Enqueue assets
+
+### Frontend 
+
 ```php
 function sap_enqueue_assets () {
     $dsc_path = get_template_directory_uri() . '//assets-dsc/';
@@ -207,6 +210,17 @@ function sap_enqueue_assets () {
 }
 add_action('wp_enqueue_scripts', 'sap_enqueue_assets');
 ```
+
+### Backend
+
+```php
+add_action( 'admin_enqueue_scripts', function($hook) {
+    if($hook === 'theme-settings_page_frontend-users') {
+        wp_enqueue_script( 'my_custom_script', web_assets_url('js/admin.js'), array(), ASSETS_VERSION);
+    }
+});
+```
+
 
 ## Add footer hook
 ```php
@@ -261,6 +275,27 @@ Array
     [2] => 300
     [3] => 1
 )
+```
+
+## Roles & Capabilities
+
+Must Install Plugin: `Capability Manager Enhanced`
+
+```php
+define('VIEW_FEEDBACK_CAPABILITY', 'view_feedback');
+
+// add capability  
+function add_theme_caps() {
+    $role = get_role('author');
+    $role->add_cap( VIEW_FEEDBACK_CAPABILITY ); 
+}
+add_action( 'admin_init', 'add_theme_caps');
+
+// inject of capability
+function menu_feedback_submissions() {
+    add_menu_page( 'Submissions', 'Feedback', VIEW_FEEDBACK_CAPABILITY, 'submissions-page.php', 'feedback_admin_page', 'dashicons-cloud', 25 );
+}
+add_action( 'admin_menu', 'menu_feedback_submissions' );
 ```
 
 
@@ -324,6 +359,19 @@ web_url('login');
 </select><!-- end language switcher -->
 ```
 
+### Global Option
+
+```php
+function cl_acf_set_language() {
+    return acf_get_setting('default_language');
+}
+function get_global_option($name) {
+    add_filter('acf/settings/current_language', 'cl_acf_set_language', 100);
+    $option = get_field($name, 'option');
+    remove_filter('acf/settings/current_language', 'cl_acf_set_language', 100);
+    return $option;
+}
+```
 
 ## ACF
 
@@ -425,4 +473,4 @@ if (!empty($articles)) {
 - **Yoast SEO**: SEO in general
 - **Smush**: Reduce image file sizes, improve performance and boost your SEO using the free free WPMU DEV WordPress Smush API.
 - **WP Security Audit Log**: Wholesome auditlog
-
+- **Capability Manager Enhanced**: UI for enter Roles & Capabilities

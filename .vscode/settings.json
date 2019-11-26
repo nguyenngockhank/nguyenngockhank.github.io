@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.tabSize": 4,
+    "[markdown]": {
+        "editor.fontLigatures": true
+    },
+    "[javascript]": {
+    }
+}
