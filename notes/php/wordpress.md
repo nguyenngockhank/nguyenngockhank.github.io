@@ -298,6 +298,30 @@ function menu_feedback_submissions() {
 add_action( 'admin_menu', 'menu_feedback_submissions' );
 ```
 
+## Add Custom Menu 
+
+1/ Source code
+
+```php
+// define name 
+define('MENU_FOOTER', 'vethoi-footer-menu');
+
+// register to wordpress
+function vethoi_theme_menus()
+{
+    register_nav_menus(array( // Using array to specify more menus if needed
+        MENU_FOOTER => 'Footer Menu',
+    ));
+}
+add_action('init', 'vethoi_theme_menus'); 
+
+// usage
+wp_nav_menu( [
+    'theme_location' => MENU_FOOTER, 
+    'container_class' => 'footer-link' 
+]); 
+```
+
 
 ## WP CLI
 
