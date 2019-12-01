@@ -1,0 +1,25 @@
+@startuml
+
+(*) --> "Upload Document"
+
+if "Valid File" then
+    if "Valid Info" then
+        --> Store File & Info
+        --> ===Events===
+            --> Audit Log
+            ===Events=== --> "Notify TDN"
+            ===Events=== --> "Success Output"
+        "Success Output" -->[Ending process] (*)
+        "Notify TDN" --> (*)
+        "Audit Log" --> (*)
+    else
+        ->[false] "Error Output"
+    endif
+else
+  ->[false] "Error Output"
+  -->[Ending process] (*)
+endif
+
+
+
+@enduml

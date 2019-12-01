@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "Fira Code",
+    // "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.tabSize": 4,
     "[markdown]": {

@@ -1,0 +1,38 @@
+@startuml
+
+
+' Define Actor
+actor User
+User <|-- Admin
+actor TDN
+
+' Define UseCase
+usecase (Upload Document) as UpDocUC
+usecase (Create Document) as CreateDocUC
+usecase (Notify) as NotifyUC
+usecase (Log) as LogUC
+
+(UpDocUC) .> (CreateDocUC) : <<include>>
+(CreateDocUC) .> (NotifyUC) : <<include>>
+(CreateDocUC) .> (LogUC) : <<extend>>
+
+' Define Usecase of Admin
+usecase (Configure Module) as ConfigureUC
+usecase (Configure EForm) as ConfigureEFormUC
+usecase (Configure Doctype) as ConfigureDocTypeUC
+
+note right of ConfigureDocTypeUC : 3 things: Doc Type + Sender + Receiver
+
+(ConfigureUC) .> (ConfigureDocTypeUC) : <<include>>
+(ConfigureUC) .> (ConfigureEFormUC) : <<include>>
+
+
+
+
+
+' Define Retionship
+TDN -- NotifyUC
+User -right-> UpDocUC 
+Admin -right-> ConfigureUC 
+
+@enduml
