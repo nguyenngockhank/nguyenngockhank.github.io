@@ -75,6 +75,11 @@ cd phpRedisAdmin
 git clone https://github.com/nrk/predis.git vendor
 ```
 
+## Demo PHP with NodeJs through Pub/Sub
+
+Here are [my repository](https://github.com/nguyenngockhank/php-pulisher-node-subscriber-redis) Mini Demo for this feature
+
+
 ## References 
 
 [How to Install Redis Cache Server on CentOS 7/6](https://tecadmin.net/install-redis-centos/)
