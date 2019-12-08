@@ -56,7 +56,7 @@ module.exports = {
       'vuepress-plugin-container',
       {
         type: 'quote',
-        before: `<blockquote>`,
+        before: `<blockquote class="highlight-quote">`,
         after: '</blockquote>',
       },
     ],

@@ -21,9 +21,7 @@ First solve the problem, then, write the code.
 
 
 And, always remember 
-:::: quote
-Right tool for right Job 
-::::
+> Right tool for right Job 
 
 
 ## Clean Code
@@ -72,8 +70,6 @@ Talk is cheap. Show me the code.
 ― Linus Torvalds
 :::
 ::::
-
-
 
 :::: quote
 Truth can only be found in one place: the code.

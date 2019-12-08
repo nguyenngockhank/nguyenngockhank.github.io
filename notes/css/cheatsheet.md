@@ -1,7 +1,9 @@
 # CSS Cheat Sheet 
 
-
 ## Selectors
+
+[Demo for Selectors](https://www.w3schools.com/cssref/trysel.asp)
+
 Universal Selector `* {}`
 
 [*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors)
