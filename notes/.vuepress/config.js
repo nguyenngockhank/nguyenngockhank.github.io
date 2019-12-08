@@ -34,7 +34,6 @@ module.exports = {
     '.vuepress/nav/index.js',
     '.vuepress/sidebar/architect.js',
     '.vuepress/sidebar/main.js',
-    '.vuepress/markdown/collapse-render.js',
   ],
   configureWebpack: {
     resolve: {
@@ -44,16 +43,6 @@ module.exports = {
     }
   },
   plugins: [
-    ['@vuepress/back-to-top', true],
-    ['@vuepress/pwa', {
-      serviceWorker: true,
-      updatePopup: true
-    }],
-    'vuepress-plugin-element-tabs',
-    ['@vuepress/google-analytics', {
-      ga: 'UA-148742356-1'
-    }],
-
     // plugin container
     [
       'vuepress-plugin-container',
@@ -78,5 +67,17 @@ module.exports = {
         after: '</collapse>',
       },
     ],
+    // end containers
+    'vuepress-plugin-element-tabs',
+    ['@vuepress/back-to-top', true],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
+    }],
+    ['@vuepress/google-analytics', {
+      ga: 'UA-148742356-1'
+    }],
+
+   
   ],
 }

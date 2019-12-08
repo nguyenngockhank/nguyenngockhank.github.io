@@ -54,15 +54,12 @@ Everyone knows that debugging is **twice as hard as writing** a program in the f
 ::::
 
 
-
-
 :::: quote
 Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
 ::: right 
 ― Martin Fowler
 :::
 ::::
-
 
 
 
