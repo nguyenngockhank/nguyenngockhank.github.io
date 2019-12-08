@@ -25,7 +25,7 @@ export default {
     }, 
     'titleTag': {
         'type': String,
-        'default': 'h3'
+        'default': 'h4'
     },
     'contentTag': {
         'type': String,

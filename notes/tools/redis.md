@@ -1,72 +1,75 @@
 # Redis
 
-## Cài
+## Install
 
-**Mac**
-
-Install 
-
+:::: tabs
+::: tab Mac
 ```
 brew install redis
 ```
+:::
 
-Start
-
-```
-redis-server /usr/local/etc/redis.conf
-```
-
-Stop 
-
-```
-redis-cli shutdown
-```
-
-
-**Ubuntu**
-
-Install 
-
+::: tab Ubuntu
 ```
 $sudo apt-get update 
 $sudo apt-get install redis-server
 ```
+:::
+::::
 
-Start
+## Usage 
 
+### Start 
+
+:::: tabs
+::: tab Mac
+**Start**
 ```
-redis-server
+redis-server /usr/local/etc/redis.conf
 ```
-
-Stop 
-
+**Stop**
 ```
 redis-cli shutdown
 ```
+:::
+
+::: tab Ubuntu
+**Start**
+```
+redis-server
+```
+**Stop**
+```
+redis-cli shutdown
+```
+:::
+::::
 
 
-## Xài với Command Line
+### Command Line
 
+**Start**
 ```
 redis-cli 
 ```
 
-Test
+**Test**
 ```
 redis-cli ping
 ```
 
-See all keys 
+**See all keys**
 ```
 keys
 ```
 
-## Xài qua PHP
+## With Programming Language 
 
-- Package: [predis](https://github.com/nrk/predis)
+- PHP Package: [predis](https://github.com/nrk/predis)
+- NodeJS: [redis](https://www.npmjs.com/package/redis)
 
 
-## GUI Quản lý
+## Manage with GUI
 - Package: [phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)
 
 ```
@@ -75,10 +78,17 @@ cd phpRedisAdmin
 git clone https://github.com/nrk/predis.git vendor
 ```
 
-## Demo PHP with NodeJs through Pub/Sub
+## Pub/Sub 
+
+Demo PHP with NodeJs, PHP is Publisher & NodeJS is Subscriber
 
 Here are [my repository](https://github.com/nguyenngockhank/php-pulisher-node-subscriber-redis) Mini Demo for this feature
 
+## Lock
+
+Useful feature of Redis when you want to maintain the consistency. E.g: Generate Auto increment ID
+
+Package for node: [redis-lock](https://www.npmjs.com/package/redis-lock)
 
 ## References 
 

@@ -44,7 +44,7 @@ Tùy theo những mức độ này thì "cấu trúc bên trong" "hành vi bên 
 
 ## When to refactor
 
-<collapse title="💥 Rule of Three" title-tag="h3" :show="false">
+<collapse title="💥 Rule of Three"  :show="false">
 <ol>
     <li>When you’re doing something for the first time, just get it done.</li>
     <li>When you’re doing something similar for the second time, cringe at having to repeat but do the same thing anyway.</li>
@@ -52,20 +52,20 @@ Tùy theo những mức độ này thì "cấu trúc bên trong" "hành vi bên 
 </ol>
 </collapse>
 
-<collapse title="💥 When adding a feature" title-tag="h3" :show="false">
+<collapse title="💥 When adding a feature" :show="false">
 <ul>
     <li>Refactoring helps you understand other people’s code. If you have to deal with someone else’s dirty code, try to refactor it first. Clean code is much easier to grasp. You will improve it not only for yourself but also for those who use it after you.</li>
     <li>Refactoring makes it easier to add new features. It’s much easier to make changes in clean code.</li>
 </ul>
 </collapse>
 
-<collapse title="💥 When fixing a bug" title-tag="h3" :show="false">
+<collapse title="💥 When fixing a bug" :show="false">
 Bugs in code behave just like those in real life: they live in the darkest, dirtiest places in the code. Clean your code and the errors will practically discover themselves.
 <br/>
 Managers appreciate proactive refactoring as it eliminates the need for special refactoring tasks later. Happy bosses make happy programmers!
 </collapse>
 
-<collapse title="💥 During a code review" title-tag="h3" :show="false">
+<collapse title="💥 During a code review" :show="false">
 The code review may be the last chance to tidy up the code before it becomes available to the public.
 <br/>
 It’s best to perform such reviews in a pair with an author. This way you could fix simple problems quickly and gauge the time for fixing the more difficult ones.
@@ -89,28 +89,28 @@ là bất kỳ triệu chứng bất ổn nào bên trong mã nguồn của mộ
 
 ## Checklist of refactoring done right way
 
-<collapse title="✔️ The code should become cleaner." content-tag="div" :show="true">
-    <p>If the code remains just as unclean after refactoring... well, I’m sorry, but you’ve just wasted an hour of your life. Try to figure out why this happened.</p>
-    <p>It frequently happens when you move away from refactoring with small changes and mix a whole bunch of refactorings into one big change. So it’s very easy to lose your mind, especially if you have a time limit.</p>
-But it can also happen when working with extremely sloppy code. Whatever you improve, the code as a whole remains a disaster.</p>
-    <p>In this case, it’s worthwhile to think about completely rewriting parts of the code. But before that, you should have written tests and set aside a good chunk of time. Otherwise, you’ll end up with the kinds of results we talked about in the first paragraph.</p>
-</collapse>
+::: collapse ✔️ The code should become cleaner.
+If the code remains just as unclean after refactoring... well, I’m sorry, but you’ve just wasted an hour of your life. Try to figure out why this happened.
 
-<collapse title="✔️ New functionality shouldn’t be created during refactoring." :show="true">
+It frequently happens when you move away from refactoring with small changes and mix a whole bunch of refactorings into one big change. So it’s very easy to lose your mind, especially if you have a time limit.
+
+But it can also happen when working with extremely sloppy code. Whatever you improve, the code as a whole remains a disaster.
+
+In this case, it’s worthwhile to think about completely rewriting parts of the code. But before that, you should have written tests and set aside a good chunk of time. Otherwise, you’ll end up with the kinds of results we talked about in the first paragraph.
+:::
+
+
+::: collapse ✔️ New functionality shouldn’t be created during refactoring.
 Don’t mix refactoring and direct development of new features. Try to separate these processes at least within the confines of individual commits.
-</collapse>
+:::
 
-<collapse title="✔️ All existing tests must pass after refactoring." content-tag="div" :show="true">
-    <p>  There are two cases when tests can break down after refactoring:
-      <ul>
-          <li><strong>You made an error during refactoring.</strong> This one is a no-brainer: go ahead and fix the error.</li>
-          <li><strong>Your tests were too low-level</strong> . For example, you were testing private methods of classes.
-          <p>In this case, the tests are to blame. You can either refactor the tests themselves or write an entirely new set of higher-level tests. A great way to avoid this kind of a situation is to write BDD-style tests.</p>
-          </li>
-      </ul>
-    </p>
-</collapse>
-
+::: collapse ✔️ All existing tests must pass after refactoring.
+There are two cases when tests can break down after refactoring:
+- **You made an error during refactoring.** This one is a no-brainer: go ahead and fix the error.
+- **Your tests were too low-level**. For example, you were testing private methods of classes.
+    
+    In this case, the tests are to blame. You can either refactor the tests themselves or write an entirely new set of higher-level tests. A great way to avoid this kind of a situation is to write BDD-style tests.
+:::
  
 
 ## Refs
