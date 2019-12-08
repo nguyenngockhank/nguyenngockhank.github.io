@@ -45,10 +45,10 @@ module.exports = {
   },
   plugins: [
     ['@vuepress/back-to-top', true],
-    // ['@vuepress/pwa', {
-    //   serviceWorker: true,
-    //   updatePopup: true
-    // }],
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
+    }],
     'vuepress-plugin-element-tabs',
     ['@vuepress/google-analytics', {
       ga: 'UA-148742356-1'
@@ -62,10 +62,16 @@ module.exports = {
         before: `<blockquote>`,
         after: '</blockquote>',
       },
+    ],
+    [
+      'vuepress-plugin-container',
       {
         type: 'right',
         defaultTitle: '',
       },
+    ],
+    [
+      'vuepress-plugin-container',
       {
         type: 'collapse',
         before: info => `<collapse title="${info}">`,
