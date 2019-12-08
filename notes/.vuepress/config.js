@@ -47,6 +47,14 @@ module.exports = {
     [
       'vuepress-plugin-container',
       {
+        type: 'collapse',
+        before: info => `<Collapse title="${info}">`,
+        after: '</Collapse>',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      {
         type: 'quote',
         before: `<blockquote>`,
         after: '</blockquote>',
@@ -57,14 +65,6 @@ module.exports = {
       {
         type: 'right',
         defaultTitle: '',
-      },
-    ],
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'collapse',
-        before: info => `<collapse title="${info}">`,
-        after: '</collapse>',
       },
     ],
     // end containers
