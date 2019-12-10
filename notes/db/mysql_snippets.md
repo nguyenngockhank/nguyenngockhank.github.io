@@ -69,6 +69,9 @@ order by (
 ) 
 ```
 
+
+
+
 ## Lock rows
 
 
@@ -120,16 +123,49 @@ ALTER TABLE tbl_name ADD FULLTEXT index_name (column 1, column 2,..)
 DROP INDEX index_name;
 ```
 
-## MySQL binlog
 
-1 thứ hay ho 
+## Commands
 
-[Ứng dụng MySql Binary Log để giải quyết vấn đề tích hợp — P1](https://techtalk.vn/blog/posts/ung-dung-mysql-binary-log-de-giai-quyet-van-de-tich-hop-p1)
-[Giải quyết các vấn đề tích hợp bằng MySql Binlog — P2](https://engineering.tiki.vn/gi%E1%BA%A3i-quy%E1%BA%BFt-c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81-t%C3%ADch-h%E1%BB%A3p-b%E1%BA%B1ng-mysql-binlog-part-2-77483a572798)
+### Import Sql
+
+:::: tabs
+::: tab Mac
+```
+mysql -u [user] -p [database] < backup-file.sql
+```
+:::
+
+::: tab Windows
+```
+mysql -p -u [user] [database] < backup-file.sql
+```
+:::
+::::
+
+
+
+## Hot Fix
+
+Error: `Expression #1 of ORDER BY clause is not in SELECT list, references column 'test_wp3.dsm.Order'`
+
+**Solution:**
+```
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+```
+
+---
 
 ## String Function Cheatsheets 
 
 ![joins](@/images/sql/mysql-string-funcs.png)
+
+
+## MySQL binlog
+
+1 thứ hay ho 
+
+- [Ứng dụng MySql Binary Log để giải quyết vấn đề tích hợp — P1](https://techtalk.vn/blog/posts/ung-dung-mysql-binary-log-de-giai-quyet-van-de-tich-hop-p1)
+- [Giải quyết các vấn đề tích hợp bằng MySql Binlog — P2](https://engineering.tiki.vn/gi%E1%BA%A3i-quy%E1%BA%BFt-c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81-t%C3%ADch-h%E1%BB%A3p-b%E1%BA%B1ng-mysql-binlog-part-2-77483a572798)
 
 ## References 
 [Row Level Locking](https://riptutorial.com/mysql/example/24166/row-level-locking)
