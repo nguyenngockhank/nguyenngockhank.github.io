@@ -227,7 +227,7 @@ User::whereFirstNameAndAge('DepTrai', 25)->get();
 
 ```
 
-## Helpers
+## Tricks 
 
 ### Laravel Path
 
@@ -256,3 +256,11 @@ return view('admin.article.edit', compact(
 	'editor'
 ));
 ```
+
+
+
+### Remove `public` in URL 
+
+- 1/ Rename `/server.php` to `/index.php`
+- 2/ Copy `/public/.htaccess` to `/.htaccess`
+- 3/ Update config  `asset_url` at `/config/app.php`
