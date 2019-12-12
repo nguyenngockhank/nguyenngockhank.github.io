@@ -3,13 +3,30 @@
 
 
 ## Branch
-### Find current branch
+
+:::: tabs
+
+::: tab Current
 ```
 git branch
 ```
+:::
 
-### Delete branch
+::: tab Create new
+(same head current branch)
+```
+git checkout -b <<<new_branch_name>>>
+```
+:::
 
+
+::: tab Rename
+```
+git branch -m <<<new_branch_name>>>
+```
+:::
+
+::: tab Delete
 At local 
 ```
 git branch -D <<<branch_name>>>
@@ -19,53 +36,71 @@ At server
 ```
 git push <<<remote_name>>> <<<branch_name>>> --delete
 ```
+:::
 
-
-### Rename current branch name
-```
-git branch -m <<<new_branch_name>>>
-```
-
-### Create new branch 
-(same head current branch)
-```
-git checkout -b <<<new_branch_name>>>
-```
+::::
 
 
 ## Remote
-### List all
+
+
+:::: tabs
+
+::: tab "List All"
 ```
 git remote -v
 ```
+:::
 
-### Add remote 
-```
-git remote rm <<<remote_name>>>
-```
-
-### Delete remote 
+::: tab Add
 ```
 git remote add <<<remote_name>>> <<<remote_link>>>
 ```
+:::
+
+
+::: tab Update
+```
+git remote set-url <<<remote_name>>> <<<new_remote_link>>>
+# E.g: 
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+```
+:::
+
+
+::: tab Remove
+```
+git remote rm <<<remote_name>>>
+```
+:::
+
+::::
 
 
 ## Others
 
-### Cherry pick
+:::: tabs
+
+::: tab "Cherry pick"
 ```
 git cherry-pick <<<commit_hash>>>
 ```
+:::
 
-### Override last commit 
+::: tab "Override last"
 ```
 git commit --amend -m "Message"
 ```
+:::
 
-### Combine commits
+
+::: tab "Combine commits"
 ```
 git rebase -i HEAD~3
 ```
+:::
+::::
+
 
 ## Refs 
 
