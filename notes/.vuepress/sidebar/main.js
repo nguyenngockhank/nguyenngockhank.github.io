@@ -78,6 +78,7 @@ module.exports = [
         '/php/magic',
         '/php/laravel',
         '/php/wordpress',
+        '/php/crunz',
       ]
     },
     {
