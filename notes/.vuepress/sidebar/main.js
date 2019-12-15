@@ -68,6 +68,7 @@ module.exports = [
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
         '/snippets/mocha',
+        '/snippets/firebase',
       ]
     },
     {
