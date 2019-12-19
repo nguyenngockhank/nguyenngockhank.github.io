@@ -27,7 +27,7 @@ Example: [Glossary](https://docs.phpdoc.org/glossary.html#term-structural-elemen
  /**
   * This class acts as an example on where to position a DocBlock.
   */
- class Foo
+ class Foo extends FooParent
  {
      /** @var string|null Should contain a description if available */
      protected $description = null;
@@ -44,7 +44,44 @@ Example: [Glossary](https://docs.phpdoc.org/glossary.html#term-structural-elemen
          // there should be no docblock here
          $this->description = $description;
      }
+
+    /**
+     * {@inheritdoc}
+     */
+     public function overrideMethod() {
+         
+     }
 }
+```
+
+
+```php
+/**
+* @param int $userId
+*
+* @return int
+*
+* @throws UserDoesNotExistException
+*/
+public function execute($userId)
+{
+    $user = $this->userRepository->ofId(new UserId($userId));
+    if (null === $user) {
+        throw new UserDoesNotExistException();
+    }
+
+    return $user->grantWishes();
+}
+
+```
+
+
+```php
+/**
+* @var User[]
+*/
+private $users = array();
+
 ```
 
 ## Reference

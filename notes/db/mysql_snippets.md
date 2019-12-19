@@ -153,6 +153,13 @@ Error: `Expression #1 of ORDER BY clause is not in SELECT list, references colum
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 ```
 
+Error: `ERROR 1418 (HY000) at line 64: This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its declaration and binary logging is enabled (you *might* want to use the less safe log_bin_trust_function_creators variable)`
+
+**Solution:**
+```
+SET GLOBAL log_bin_trust_function_creators = 1;
+```
+
 ---
 
 ## String Function Cheatsheets 
