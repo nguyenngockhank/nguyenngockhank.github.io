@@ -23,6 +23,37 @@ vendor/bin/phpdoc -d ../stcg/codecualeo -t ./docs/api
 
 Example: [Glossary](https://docs.phpdoc.org/glossary.html#term-structural-elements)
 
+:::: tabs
+
+::: tab Types
+
+Mix
+
+```php
+/** @var mixed  */
+private $var;
+```
+
+String Or Null
+
+```php
+/** @var string|null  */
+private $var;
+```
+
+
+Array 
+
+```php
+/** @var int[] this is an array of int */
+private $var;
+```
+
+:::
+
+
+::: tab Class
+
 ```php
  /**
   * This class acts as an example on where to position a DocBlock.
@@ -38,51 +69,29 @@ Example: [Glossary](https://docs.phpdoc.org/glossary.html#term-structural-elemen
       * @param string $description A text with a maximum of 80 characters.
       *
       * @return void
+      *
+      * @throws NullDescriptionException
       */
      public function setDescription($description)
      {
-         // there should be no docblock here
-         $this->description = $description;
+         // implement ...
      }
 
     /**
      * {@inheritdoc}
      */
-     public function overrideMethod() {
-         
+     public function overrideMethod() 
+     {
+          // implement ...
      }
 }
 ```
+:::
+
+::::
 
 
-```php
-/**
-* @param int $userId
-*
-* @return int
-*
-* @throws UserDoesNotExistException
-*/
-public function execute($userId)
-{
-    $user = $this->userRepository->ofId(new UserId($userId));
-    if (null === $user) {
-        throw new UserDoesNotExistException();
-    }
 
-    return $user->grantWishes();
-}
-
-```
-
-
-```php
-/**
-* @var User[]
-*/
-private $users = array();
-
-```
 
 ## Reference
 
