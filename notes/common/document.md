@@ -67,3 +67,14 @@ Nhận xét thì mình thích Vuepress hơn =))) Vì răng?
     - Nhiều plugin hay ho tốt cho SEO, PWA
 
 Web này cũng là từ Vuepress đây :)) 
+
+## Document From Source Code 
+
+Những dạng tool kiểu này sẽ scan sorce code dựa theo các comment của bạn rồi build ra 1 trang API document, chủ yếu là input / output của function / class. Một vài tool có tính năng hay ho như build Class Diagram, ...
+
+- PHP thì ta có [phpDocumentor](https://www.phpdoc.org/)
+- Javascript thì ta có [jsdoc](https://jsdoc.app/index.html)
+
+
+
+

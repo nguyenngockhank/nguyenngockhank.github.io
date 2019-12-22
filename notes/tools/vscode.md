@@ -25,6 +25,19 @@ Local: `.vscode/settings.json`
 }
 ```
 
+## Search & Replace
+
+### New line
+
+`Shift + Enter` will be useful in this case 
+
+### Reg exp
+
+Use Regexp. [See this article](https://dev.to/rfornal/vs-code-search-and-replace-regex-mn2)
+
+![My exp](@/images/vscode-search-reg.png)
+
+
 ## Extenstions 
 
 ### PlantUML 

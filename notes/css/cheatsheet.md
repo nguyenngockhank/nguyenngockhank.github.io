@@ -1,428 +1,790 @@
+<style>
+.my-box {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.my-box p {
+    line-height: 1;
+}
+.my-row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+</style>
 # CSS Cheat Sheet 
 
 ## Selectors
-
 [Demo for Selectors](https://www.w3schools.com/cssref/trysel.asp)
 
-Universal Selector `* {}`
+:::: row
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors)
+::: box col-xs-12 col-sm-12 col-md-6
+[Universal Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors)
 
-ID Selector `#id {}`
+```css
+* {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors)
+::: box col-xs-12 col-sm-12 col-md-6
+[ID Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors)
+```css
+#id {}
+```
+:::
 
-Class Selector `.class {}`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors)
+::: box col-xs-12 col-sm-12 col-md-6
+[Class Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors)
+```css
+.class {}
+```
+:::
 
-Type Selector `h1, h2 ,h3 {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Type Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors)
+```css
+h1, h2 ,h3 {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors)
 
-Adjacent Sibling Selector `h1 + p {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Adjacent Sibling Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_selectors)
+```h1 + p {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_selectors)
+::: box col-xs-12 col-sm-12 col-md-6
+[Child Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors)
+```css
+ul > li {}
+```
+:::
 
-Child Selector `ul > li {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[General Sibling Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_selectors)
+```css
+h1 ~ p {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_selectors)
+::: box col-xs-12 col-sm-12 col-md-6
+[Descendant Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors)
+```css
+p a {}
+```
+:::
 
-General Sibling Selector `h1 ~ p {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Attribute Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+```css
+div[attribute="SomeValue"]{}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_selectors)
-
-Descendant Selector `p a {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors)
-
-Attribute Selector `div[attribute="SomeValue"] {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)
+::::
 
 
 ## Pseudo Selectors & Elements
-Mouse Over Selector `a:hover {}`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)
+:::: row
 
-Active Link Selector `a:active {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Mouse Over Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover)
+```css
+a:hover {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
+::: box col-xs-12 col-sm-12 col-md-6
+[Active Link Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
+```css
+a:active {}
+```
+:::
 
-Focus Selector `input:focus {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Focus Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
+```css
+input:focus {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus)
+::: box col-xs-12 col-sm-12 col-md-6
+[Visited Links Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited)
+```css
+a:visited {}
+```
+:::
 
-Visited Links Selector `a:visited {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Link Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:link)
+```css
+.class:link {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited)
+::: box col-xs-12 col-sm-12 col-md-6
+[Checked elements selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:checked)
+```css
+input:checked {}
+```
+:::
 
-Link Selector `.class:link {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Disabled elements selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled)
+```css
+input:disabled {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:link)
+::: box col-xs-12 col-sm-12 col-md-6
+[Enabled elements selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled)
+```css
+input:enabled {}
+```
+:::
 
-Checked elements selector `input:checked {}`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:checked)
+::: box col-xs-12 col-sm-12 col-md-6
+[Not a Specified Element Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
+```css
+:not(p) {}
+```
+:::
 
-Disabled elements selector `input:disabled {}`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:disabled)
+::: box col-xs-12 col-sm-12 col-md-6
+[First Line Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line)
+```css
+p::first-line {}
+```
+:::
 
-Enabled elements selector `input:enabled {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[First Letter Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter)
+```css
+p::first-letter {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:enabled)
+::: box col-xs-12 col-sm-12 col-md-6
+[First Child Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)
+```css
+p:first-child {}
+```
+:::
 
-Not a Specified Element Selector `:not(p) {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Last Child Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)
+```css
+p:last-child {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
 
-First Line Selector `p::first-line {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Only Child Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
+```css
+p:only-child {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line)
 
-First Letter Selector `p::first-letter {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[nth-child Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
+```css
+p:nth-child() {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter)
+::: box col-xs-12 col-sm-12 col-md-6
+[First Element of its Parent Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type)
+```css
+p:first-of-type {}
+```
+:::
 
-First Child Selector `p:first-child {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[Elements that have no Children Selector](https://developer.mozilla.org/en-US/docs/Web/CSS/:empty)
+```css
+p:empty {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)
+::: box col-xs-12 col-sm-12 col-md-6
+[Before Element](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)
+```css
+.class::before {}
+```
+:::
 
-Last Child Selector `p:last-child {}`
+::: box col-xs-12 col-sm-12 col-md-6
+[After Element](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
+```css
+.class::after {}
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)
-
-Only Child Selector `p:only-child {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:only-child)
-
-:nth-child Selector `p:nth-child() {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child)
-
-First Element of its Parent Selector `p:first-of-type {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-of-type)
-
-Elements that have no Children Selector `p:empty {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/:empty)
-
-Before Element `.class::before {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)
-
-After Element `.class::after {}`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
-
+::::
 
 ## Text Styling
-Font style `font-style: normal | italic | oblique`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
+:::: row
 
-Font Variant `font-variant: normal | small-caps`
+::: box col-xs-12 col-sm-12 col-md-6
+[Font style](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
+```css
+font-style: normal | italic | oblique
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
+::: box col-xs-12 col-sm-12 col-md-6
+[Font Variant](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
+```css
+font-variant: normal | small-caps
+```
+:::
 
-Font Weight `font-weight: normal | bold | bolder | lighter | 100 - 900`
+::: box col-xs-12 col-sm-12 col-md-6
+[Font Weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+```css
+font-weight: normal | bold | bolder | lighter | 100 - 900
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+::: box col-xs-12 col-sm-12 col-md-6
+[Vertical Alignment](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
+```css
+vertical-align: baseline | 10px | sub | super | top | text-top | middle | bottom | text-bottom | initial
+```
+:::
 
-Vertical Alignment `vertical-align: baseline | 10px | sub | super | top | text-top | middle | bottom | text-bottom | initial`
+::: box col-xs-12 col-sm-12 col-md-6
+[Text Transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+```css
+text-transform: capitalise | lowercase | uppercase
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align)
+::: box col-xs-12 col-sm-12 col-md-6
+[Font Size](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+```css
+font-size: 12px | 0.8em | 80%
+```
+:::
 
-Text Transform `text-transform: capitalise | lowercase | uppercase`
+::: box col-xs-12 col-sm-12 col-md-6
+[Space Between Characters](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+```css
+letter-spacing: normal | 4px
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+::: box col-xs-12 col-sm-12 col-md-6
+[Line Height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+```css
+line-height: normal | 3em | 34%
+```
+:::
 
-Font Size `font-size: 12px | 0.8em | 80%`
+::: box col-xs-12 col-sm-12 col-md-6
+[Horizontal Alignment](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+```css
+text-align: left | right | center | justify
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+::: box col-xs-12 col-sm-12 col-md-6
+[Text Align Last](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align-last)
+```css
+text-align-last: auto | left | right | center | justify | start | end | initial | inherit
+```
+:::
 
-Space Between Characters `letter-spacing: normal | 4px`
+::: box col-xs-12 col-sm-12 col-md-6
+[Text Decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+```css
+text-decoration: none | underline | overline | line-through
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+::: box col-xs-12 col-sm-12 col-md-6
+[Indent First Line](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+```css
+text-indent: 25px
+```
+:::
 
-Line Height `line-height: normal | 3em | 34%`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+::: box col-xs-12 col-sm-12 col-md-6
+[Font Family](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+```css
+font-family: 'Open Sans', sans-serif
+```
+:::
 
-Horizontal Alignment `text-align: left | right | center | justify`
+::: box col-xs-12 col-sm-12 col-md-6
+[Text Justify](https://developer.mozilla.org/en-US/docs/Web/CSS/text-justify)
+```css
+text-justify: auto | inter-word | inter-character | none | initial | inherit
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+::: box col-xs-12 col-sm-12 col-md-6
+[Text Overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+```css
+text-overflow: clip | ellipsis | string | initial | inherit
+```
+:::
 
-Text Align Last `text-align-last: auto | left | right | center | justify | start | end | initial | inherit`
+::: box col-xs-12 col-sm-12 col-md-6
+[Text Shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+```css
+text-shadow: h-shadow v-shadow blur-radius color | none | initial | inherit
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align-last)
-
-Text Decoration `text-decoration: none | underline | overline | line-through`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
-
-Indent First Line `text-indent: 25px`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
-
-Font Family `font-family: 'Open Sans', sans-serif`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
-
-Text Justify `text-justify: auto | inter-word | inter-character | none | initial | inherit`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-justify)
-
-Text Overflow `text-overflow: clip | ellipsis | string | initial | inherit`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
-
-Text Shadow `text-shadow: h-shadow v-shadow blur-radius color | none | initial | inherit`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
-
+::::
 
 ## Position
-Position `position: static | relative | absolute | fixed | sticky`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+:::: row
 
-Position Properties `top | right | bottom | left`
+::: box col-xs-12 col-sm-12 col-md-6
+[Position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+```css
+position: static | relative | absolute | fixed | sticky
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+::: box col-xs-12 col-sm-12 col-md-6
+[Position Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+```css
+top | right | bottom | left
+```
+:::
 
-Float Element `float: left | right | none`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
+::: box col-xs-12 col-sm-12 col-md-6
+[Float Element](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
+```css
+float: left | right | none
+```
+:::
 
-Clear Floating Elements `clear: none | left | right | both`
+::: box col-xs-12 col-sm-12 col-md-6
+[Clear Floating Elements](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
+```css
+clear: none | left | right | both
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/clear)
 
-Z Index `z-index: 3 | auto | inherit`
+::: box col-xs-12 col-sm-12 col-md-6
+[Z Index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
+```css
+z-index: 3 | auto | inherit
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
-
+::::
 
 ## Background
-Background Image `background-image: url()
-`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+:::: row
+::: box col-xs-12 col-sm-12 col-md-6
+[Background Image](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+```css
+background-image: url()
+```
+:::
 
-Background Repeat `background-repeat: repeat-x | repeat-y | repeat | space | round | no-repeat`
+::: box col-xs-12 col-sm-12 col-md-6
+[Background Repeat](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)
+```css
+background-repeat: repeat-x | repeat-y | repeat | space | round | no-repeat
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat)
+::: box col-xs-12 col-sm-12 col-md-6
+[Background Attachment](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)
+```css
+background-attachment: scroll | fixed | local | initial | inherit
+```
+:::
 
-Background Attachment `background-attachment: scroll | fixed | local | initial | inherit`
+::: box col-xs-12 col-sm-12 col-md-6
+[Background Color](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)
+```css
+background-color: #2AA9E0
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment)
+::: box col-xs-12 col-sm-12 col-md-6
+[Background Position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+```css
+background-position: top | right | bottom | left | center
+```
+:::
 
-Background Color `background-color: #2AA9E0`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)
-
-Background Position `background-position: top | right | bottom | left | center`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
-
+::::
 
 ## Box Properties
-Box Sizing `box-sizing: border-box | content-box`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+::::row
 
-Margin `margin: 2px 4px 6px 8px | 0 auto`
+::: box col-xs-12 col-sm-12 col-md-6
+[Box Sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
+```css
+box-sizing: border-box | content-box
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 
-Padding `padding: 2px 4px 6px 8px`
+::: box col-xs-12 col-sm-12 col-md-6
+[Margin](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+```css
+margin: 2px 4px 6px 8px | 0 auto
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
-Border Color `border-color: #2AA9E0`
+::: box col-xs-12 col-sm-12 col-md-6
+[Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+```css
+padding: 2px 4px 6px 8px
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/border-color)
+::: box col-xs-12 col-sm-12 col-md-6
+[Border Color](https://developer.mozilla.org/en-US/docs/Web/CSS/border-color)
+```css
+border-color: #2AA9E0
+```
+:::
 
-Border Style `border-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style)
+::: box col-xs-12 col-sm-12 col-md-6
+[Border Style](https://developer.mozilla.org/en-US/docs/Web/CSS/border-style)
+```css
+border-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset
+```
+:::
 
-Border Width `border-width: 10px`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/border-width)
+::: box col-xs-12 col-sm-12 col-md-6
+[Border Width](https://developer.mozilla.org/en-US/docs/Web/CSS/border-width)
+```css
+border-width: 10px
+```
+:::
 
+::::
 
 ## List Styling
-List Type `list-style-type: disc | circle | square | none`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type)
+:::: row
 
-List Position `list-style-position: inside | outside`
+::: box col-xs-12 col-sm-12 col-md-6
+[List Type](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type)
+```css
+list-style-type: disc | circle | square | none
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position)
+::: box col-xs-12 col-sm-12 col-md-6
+[List Position](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position)
+```css
+list-style-position: inside | outside
+```
+:::
 
-List Image `list-style-image: url()
-`
+::: box col-xs-12 col-sm-12 col-md-6
+[List Image](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image)
+```css
+list-style-image: url()
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image)
+::::
 
 
 ## Flexbox
-Flex Direction `flex-direction: row | row-reverse | column | column-reverse`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+:::: row
+::: box col-xs-12 col-sm-12 col-md-6
+[Flex Direction](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+```css
+flex-direction: row | row-reverse | column | column-reverse
+```
+:::
 
-Flex Wrap `flex-wrap: nowrap | wrap | wrap-reverse`
+::: box col-xs-12 col-sm-12 col-md-6
+[Flex Wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+```css
+flex-wrap: nowrap | wrap | wrap-reverse
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+::: box col-xs-12 col-sm-12 col-md-6
+[Justify Content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+```css
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+```
+:::
 
-Justify Content `justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly`
+::: box col-xs-12 col-sm-12 col-md-6
+[Align Items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+```css
+align-items: flex-start | flex-end | center | baseline | stretch
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+::: box col-xs-12 col-sm-12 col-md-6
+[Align Content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+```css
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+```
+:::
 
-Align Items `align-items: flex-start | flex-end | center | baseline | stretch`
+::: box col-xs-12 col-sm-12 col-md-6
+[Order](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
+```css
+order: 0
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+::: box col-xs-12 col-sm-12 col-md-6
+[Flex Grow](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
+```css
+flex-grow: 0
+```
+:::
 
-Align Content `align-content: flex-start | flex-end | center | space-between | space-around | stretch`
+::: box col-xs-12 col-sm-12 col-md-6
+[Flex Shrink](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
+```css
+flex-shrink: 1
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+::: box col-xs-12 col-sm-12 col-md-6
+[Flex Basis](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
+```css
+flex-basis: 3px | auto
+```
+:::
 
-Order `order: 0`
+::: box col-xs-12 col-sm-12 col-md-6
+[Align Self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
+```css
+align-self: auto | flex-start | flex-end | center | baseline | stretch
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
-
-Flex Grow `flex-grow: 0`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
-
-Flex Shrink `flex-shrink: 1`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
-
-Flex Basis `flex-basis: 3px | auto`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
-
-Align Self `align-self: auto | flex-start | flex-end | center | baseline | stretch`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
-
+::::
 
 ## CSS Grid
-Grid Template Columns `grid-template-columns: 40px 50px auto 50px 40px`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)
+:::: row
 
-Grid Template Rows `grid-template-rows: 25% 100px auto`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Template Columns](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)
+```css
+grid-template-columns: 40px 50px auto 50px 40px
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Template Rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)
+```css
+grid-template-rows: 25% 100px auto
+```
+:::
 
-Grid Template Areas `grid-template-areas: "a b c" | none`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Template Areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
+```css
+grid-template-areas: "a b c" | none
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Template](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template)
+```css
+grid-template: "a a a" 20% "b b b" auto | 100px 1fr / 50px 1fr
+```
+:::
 
-Grid Template `grid-template: "a a a" 20% "b b b" auto | 100px 1fr / 50px 1fr`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Column Gap](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap)
+```css
+grid-column-gap: 10px
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template)
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Row Gap](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap)
+```css
+grid-row-gap: 10px
+```
+:::
 
-Grid Column Gap `grid-column-gap: 10px`
+::: box col-xs-12 col-sm-12 col-md-6
+[Justify Items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)
+```css
+justify-items: start | end | center | stretch
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-gap)
+::: box col-xs-12 col-sm-12 col-md-6
+[Align Items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+```css
+align-items: start | end | center | stretch
+```
+:::
 
-Grid Row Gap `grid-row-gap: 10px`
+::: box col-xs-12 col-sm-12 col-md-6
+[Justify Content](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+```css
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-gap)
+::: box col-xs-12 col-sm-12 col-md-6
+[Align Content](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+```css
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+```
+:::
 
-Justify Items `justify-items: start | end | center | stretch`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Auto Columns](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns)
+```css
+grid-auto-columns: 100px | max-content | min-content
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Auto Rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows)
+```css
+grid-auto-rows: 100px | max-content | min-content
+```
+:::
 
-Align Items `align-items: start | end | center | stretch`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Auto Flow](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow)
+```css
+grid-auto-flow: row | column | row dense | column dense
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Column Start](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start)
+```css
+grid-column-start: 2 | areaname | span 2 | span areaname | auto
+```
+:::
 
-Justify Content `justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Column End](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end)
+```css
+grid-column-end: 2 | areaname | span 2 | span areaname | auto
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Row Start](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start)
+```css
+grid-row-start: 2 | areaname | span 2 | span areaname | auto
+```
+:::
 
-Align Content `align-content: flex-start | flex-end | center | space-between | space-around | stretch`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Row End](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end)
+```css
+grid-row-end: 2 | areaname | span 2 | span areaname | auto
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Column](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)
+```css
+grid-column: 3 / span 2
+```
+:::
 
-Grid Auto Columns `grid-auto-columns: 100px | max-content | min-content`
+::: box col-xs-12 col-sm-12 col-md-6
+[Grid Row](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row)
+```css
+grid-row: 3 / span 2
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns)
+::: box col-xs-12 col-sm-12 col-md-6
+[Justify Self](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self)
+```css
+justify-self: start | end | center | stretch
+```
+:::
 
-Grid Auto Rows `grid-auto-rows: 100px | max-content | min-content`
+::: box col-xs-12 col-sm-12 col-md-6
+[Align Self](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
+```css
+align-self: start | end | center | stretch
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows)
-
-Grid Auto Flow `grid-auto-flow: row | column | row dense | column dense`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-flow)
-
-Grid Column Start `grid-column-start: 2 | areaname | span 2 | span areaname | auto`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start)
-
-Grid Column End `grid-column-end: 2 | areaname | span 2 | span areaname | auto`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-end)
-
-Grid Row Start `grid-row-start: 2 | areaname | span 2 | span areaname | auto`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-start)
-
-Grid Row End `grid-row-end: 2 | areaname | span 2 | span areaname | auto`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end)
-
-Grid Column `grid-column: 3 / span 2`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)
-
-Grid Row `grid-row: 3 / span 2`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row)
-
-Justify Self `justify-self: start | end | center | stretch`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self)
-
-Align Self `align-self: start | end | center | stretch`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
-
+::::
 
 ## Dynamic Content
-CSS Variable `--variable-name: value`
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+:::: row
 
-Variable Usage `var(--variable-name)
-`
+::: box col-xs-12 col-sm-12 col-md-6
+[CSS Variable](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+```css
+--variable-name: value
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+::: box col-xs-12 col-sm-12 col-md-6
+[Variable Usage](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+```css
+var(--variable-name)
+```
+:::
 
-Counter Reset `counter-reset: name-of-counter`
+::: box col-xs-12 col-sm-12 col-md-6
+[Counter Reset](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset)
+```css
+counter-reset: name-of-counter
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset)
+::: box col-xs-12 col-sm-12 col-md-6
+[Counter Increment](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment)
+```css
+counter-increment: name-of-counter
+```
+:::
 
-Counter Increment `counter-increment: name-of-counter`
+::: box col-xs-12 col-sm-12 col-md-6
+[Counter Dynamic Value](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+```css
+content: counter(name-of-counter)
+```
+:::
 
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment)
-
-Counter Dynamic Value `content: counter(name-of-counter)`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
-
-Attribute Dynamic Value `content: attr(name-of-attribute)`
-
-[*Learn More*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
-
+::: box col-xs-12 col-sm-12 col-md-6
+[Attribute Dynamic Value](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+```css
+content: attr(name-of-attribute)
+```
+:::
+::::
 

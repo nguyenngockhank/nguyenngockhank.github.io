@@ -25,7 +25,6 @@ module.exports = {
     searchMaxSuggestions: 10,
     nav: require('./nav/index'),
     sidebar: {
-     
       '/architect/': require('./sidebar/architect'), 
       '/': require('./sidebar/main'), 
     }
@@ -44,6 +43,22 @@ module.exports = {
   },
   plugins: [
     // plugin container
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'row',
+        before: info => `<row row-class="${info}">`,
+        after: '</row>',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'box',
+        before: info => `<box box-class="${info}">`,
+        after: '</box>',
+      },
+    ],
     [
       'vuepress-plugin-container',
       {
