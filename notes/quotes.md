@@ -24,6 +24,16 @@ And, always remember
 > Right tool for right Job 
 
 
+:::: quote
+- **Object-Oriented Programming** is the tool best suited for defining how we cross architectural boundaries with polymorhpism and plugins
+- **Functional programming** is the tool we use to push data to the boundaries of our applications
+- and **Structured programming** is the tool we use to write algorithms
+::: right 
+― Uncle Bob (Clean Architecture)
+:::
+::::
+
+
 ## Clean Code
 
 Writing code for others
