@@ -77,6 +77,10 @@ More detail
 
 ![Example](@/images/ddd-diagram.png)
 
+## Typical Scenario
+
+![Typical Scenario](@/images/ddd-typical-scenario.png)
+
 ### Example
 ![Example](@/images/ddd-example.png)
 

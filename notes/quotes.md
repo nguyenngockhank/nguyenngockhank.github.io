@@ -101,4 +101,9 @@ The more code you refactor, the more senior you become
 ::::
 
 
- 
+##  Software architecture
+
+:::: quote
+The goal of software architecture is to minimize the human resources required to build and maintain the required system. 
+::::
+

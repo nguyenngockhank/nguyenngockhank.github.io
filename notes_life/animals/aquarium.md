@@ -32,6 +32,9 @@ https://www.youtube.com/watch?v=IaG4uaUIm70
 Bộ 3: 
 Cá rồng (nổi), Cá hổ (giữa), Cá sam (đáy)
 
+
+- [Ông chồng 'bay' ngay 20 triệu vì đi qua đêm không xin phép vợ](https://vnexpress.net/cuoi/ong-chong-bay-ngay-20-trieu-vi-di-qua-dem-khong-xin-phep-vo-4029117.html)
+
 ## Cá hổ
 
 Có vằn
