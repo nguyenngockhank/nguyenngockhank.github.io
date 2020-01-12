@@ -72,7 +72,7 @@ Số là vầy, webpack nó có cái trò `alias` resolver j đó ngầu lắm =
 * Cài thêm toy 
 
 ```
-npm i -D module-resolver
+npm i -D babel-plugin-module-resolver
 ```
 
 * Sửa lại `.babelrc`
