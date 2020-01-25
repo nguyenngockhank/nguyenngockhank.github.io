@@ -5,11 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+ul#tab-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+li.item-tab {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+li.item-tab:hover {
+  background-color: #7da9ea;
+}
+li.item-tab.active {
+  background-color: #3498DB;
+}
+
+@media screen and (max-width: 667px) {
+  li.item-tab {
+    margin-bottom: 5px;
+  }
+}
+  </style>
   <title>Quỷ nhỏ & Ngưu ma vương</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <style>
     #intro {
       text-align: center;
@@ -38,6 +65,22 @@
       background-color: #3498DB;
     }
   </style>
+  <script>
+    String.prototype.capitalize = function() {
+      return this.charAt(0).toUpperCase() + this.slice(1)
+    }
+
+    function format_date_ui(d){
+        var year = d.getFullYear(), 
+            month = d.getMonth() + 1, 
+            date = d.getDate();
+
+        if(month < 10)  month = '0' + month;
+        if(date < 10)  date = '0' + date;
+      
+        return  date + '/' + month + '/' + year;
+    }
+  </script>
 </head>
 <body>
 
@@ -45,6 +88,10 @@
       <img src="./images/kiss.jpg" alt="" />
       <h1>Quỷ nhỏ <br /> & <br /> Ngưu ma vương</h1>
   </header>
+
+  <nav>
+    <ul id="tab-nav"></ul>
+  </nav>
 
   <section class="cd-timeline js-cd-timeline">
     <div class="container max-width-lg cd-timeline__container" id="timeline-container">
@@ -65,11 +112,12 @@
     <img src="<%= img %>" alt="<%= title %>">
 
     <div class="flex justify-between items-center">
-      <span class="cd-timeline__date"><%= date %></span>
+      <span class="cd-timeline__date"><%= dateUI %></span>
     </div>
   </div> <!-- cd-timeline__content -->
 </div> <!-- cd-timeline__block -->
 </script>
+
 
 <script>
 var ICON_OPTIONS = {
@@ -85,34 +133,48 @@ var ICON_OPTIONS = {
   drink: {
     icon: 'cocktail',
   }, 
-  picture: {
-    icon: 'image',
-  }
+  // picture: {
+  //   icon: 'image',
+  // }
 } 
 var dataItems = [
   {
-    type: 'picture',
+    type: 'film',
+    date: '2020-01-15',
+    title: 'Mắt biếc',
+    content: 'After ăn bún đậu',
+    img: 'https://www.galaxycine.vn/media/2019/11/29/300x450-mat-biec_1575021183171.jpg',
+  },
+  {
+    type: 'location',
     date: '2020-01-12',
     title: 'Black mail',
     content: 'Oh yeah =)))',
     img: './images/timeline/2020-01-12.JPG',
   },
   {
-    type: 'picture',
+    type: 'film',
     date: '2020-01-12',
     title: 'Chị chị em em',
     content: 'Giường này là của 2 ta.',
     img: 'https://www.galaxycine.vn/media/2019/11/29/ccee---payoff-poster_1575021046527.jpg',
   },
   {
-    type: 'picture',
+    type: 'film',
+    date: '2019-12-23',
+    title: 'Jumanji 2',
+    content: 'CGV IMC Trần Quang Khải',
+    img: 'http://image.phimmoi.net/film/8594/poster.medium.jpg',
+  },
+  {
+    type: 'location',
     date: '2019-12-13',
     title: 'Pervert at Park',
     content: 'Oh yeah =)))',
-    img: './images/timeline/2019-12-13.JPG',
+    img: './images/timeline/2019-12-13 02.png',
   },
   {
-    type: 'picture',
+    type: 'location',
     date: '2019-12-05',
     title: 'Monk at Park',
     content: 'Sư cọ tu không nổi, hoàn lương ngay trong đêm =))',
@@ -175,7 +237,7 @@ var dataItems = [
     img: 'http://image.phimmoi.net/film/7957/poster.medium.jpg',
   },
   {
-    type: 'picture',
+    type: 'location',
     date: '2019-08-12',
     title: 'Công viên Lê Văn Tám',
     content: 'Nhìn ngon nhỉ?',
@@ -210,36 +272,188 @@ var dataItems = [
     img: './images/timeline/hold hands.JPEG',
   },
 ];
-
-
-// render contents
-(function() {
-
-  function format_date_ui(d){
-      var year = d.getFullYear(), 
-          month = d.getMonth() + 1, 
-          date = d.getDate();
-
-      if(month < 10)  month = '0' + month;
-      if(date < 10)  date = '0' + date;
-    
-      return  date + '/' + month + '/' + year;
-  }
-  var timelineCon = document.getElementById('timeline-container');
-  var compiledTemplate = _.template(document.getElementById('itemTemplate').innerHTML);
-
-  _.each(dataItems, function(dataItem) {
-    dataItem.date = format_date_ui( new Date(dataItem.date));
-
-    var html = compiledTemplate(dataItem);
-    timelineCon.innerHTML += html;
-  })
-})();
-
-
 </script>
 
 
-<script src="assets/js/main.js"></script>
+
+<script>
+
+var TabController = function(){
+	var instance = {};
+  
+	function refreshItem() {
+	  var type = $('.item-tab.active').data('type');
+	  // console.log('>>>> click here', type)
+	  ContentController.render(type);
+	}
+  
+	instance.init = function() {
+	  // build DOM
+	  var tabNavEl = document.getElementById('tab-nav');
+	  _.each(ICON_OPTIONS, function(iconOption, key) {
+		tabNavEl.innerHTML += '<li class="item-tab" data-type="' + key + '">' + key.capitalize()  + '</li>';
+	  });
+  
+	  // add events
+	  $('.item-tab').click(function(e) {
+		var hasActive = $('.item-tab.active').length > 0;
+  
+		if (!hasActive) {
+		  $(this).addClass('active');
+		} else {
+		  var currentActive = $(this).hasClass('active');
+  
+		  if (currentActive) {
+			$(this).removeClass('active');
+		  } else {
+			$('.item-tab.active').removeClass('active');
+			$(this).addClass('active');
+		  }
+		}
+		
+		refreshItem();
+	  });
+	}
+	return instance;
+  }();
+  
+  
+  var ContentController = function() {
+	var instance = {};
+  
+	var timelineCon = document.getElementById('timeline-container');
+	var itemTemplate = _.template(document.getElementById('itemTemplate').innerHTML);
+	
+	instance.init = function () {
+	  instance.render();
+	}
+  
+  
+	instance.render = function (type) {
+	  var renderItems = dataItems;
+  
+	  // filter items before render
+	  if (type) {
+		var renderItems = _.filter(dataItems, function(item) {
+		  return item.type === type;
+		});
+	  }
+  
+	  timelineCon.innerHTML = '';
+  
+	  // build content
+	  _.each(renderItems, function(item) {
+  
+		item.dateUI = format_date_ui( new Date(item.date));
+  
+		// add item 
+		var html = itemTemplate(item);
+		timelineCon.innerHTML += html;
+	  });
+  
+	  // VerticalTimeline.hideBlocks();
+  
+	  AnimationController.start();
+	}
+  
+	return instance;
+}();
+  
+
+function VerticalTimeline( element ) {
+	this.element = element;
+	this.blocks = this.element.getElementsByClassName("cd-timeline__block");
+	this.images = this.element.getElementsByClassName("cd-timeline__img");
+	this.contents = this.element.getElementsByClassName("cd-timeline__content");
+	this.offset = 0.8;
+	this.hideBlocks();
+};
+
+VerticalTimeline.prototype.hideBlocks = function() {
+	if ( !"classList" in document.documentElement ) {
+		return; // no animation on older browsers
+	}
+	//hide timeline blocks which are outside the viewport
+	var self = this;
+	for( var i = 0; i < this.blocks.length; i++) {
+		(function(i){
+			if( self.blocks[i].getBoundingClientRect().top > window.innerHeight*self.offset ) {
+				self.images[i].classList.add("cd-timeline__img--hidden"); 
+				self.contents[i].classList.add("cd-timeline__content--hidden"); 
+			}
+		})(i);
+	}
+};
+
+VerticalTimeline.prototype.showBlocks = function() {
+	if ( ! "classList" in document.documentElement ) {
+		return;
+	}
+	var self = this;
+	for( var i = 0; i < this.blocks.length; i++) {
+		(function(i){
+			if( self.contents[i].classList.contains("cd-timeline__content--hidden") && self.blocks[i].getBoundingClientRect().top <= window.innerHeight*self.offset ) {
+				// add bounce-in animation
+				self.images[i].classList.add("cd-timeline__img--bounce-in");
+				self.contents[i].classList.add("cd-timeline__content--bounce-in");
+				self.images[i].classList.remove("cd-timeline__img--hidden");
+				self.contents[i].classList.remove("cd-timeline__content--hidden");
+			}
+		})(i);
+	}
+};
+
+
+var AnimationController = function() {
+	var instance = {};
+
+	var verticalTimelines = document.getElementsByClassName("js-cd-timeline"),
+			verticalTimelinesArray = [],
+			scrolling = false;
+
+	function checkTimelineScroll() {
+		verticalTimelinesArray.forEach(function(timeline){
+			timeline.showBlocks();
+		});
+		scrolling = false;
+	};
+
+	function processScroll(event) {
+		if( !scrolling ) {
+			scrolling = true;
+			(!window.requestAnimationFrame) ? setTimeout(checkTimelineScroll, 250) : window.requestAnimationFrame(checkTimelineScroll);
+		}
+	}
+
+	instance.start = function() {
+		// reset
+		verticalTimelinesArray = [];
+
+		// add again
+		if( verticalTimelines.length > 0 ) {
+			for( var i = 0; i < verticalTimelines.length; i++) {
+				(function(i){
+					verticalTimelinesArray.push(new VerticalTimeline(verticalTimelines[i]));
+				})(i);
+			}
+
+			window.removeEventListener('scroll', processScroll);
+
+			//show timeline blocks on scrolling
+			window.addEventListener("scroll", processScroll);
+		}
+	}
+
+	return instance;
+}();
+
+(function(){
+  // Vertical Timeline - by CodyHouse.co
+  	TabController.init();
+  	ContentController.init();
+  	AnimationController.start();
+})();
+</script>
+
 </body>
 </html>
