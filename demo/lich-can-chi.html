@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tính lịch can chi</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h1>Tính lịch can chi</h1>
+    <p>Vừa mới du học Du tu be, thấy 1 clip khá hay về cách tính nên mình code ra cái ni. <a href="https://www.youtube.com/watch?v=nbWjWVV-570">Link clip đây</a></p>
+
+    <script type="text/x-template" id="wrapperTemplate">
+        <div >
+            Nhập năm nè:   <input type="number" v-model="year"> <br />
+            Năm con giáp: <span style="color: red">{{displayYear}}</span>
+        </div>
+    </script>
+
+    <div id="app"><div>
+
+    <script>
+
+    var CAN_DICTIONARY = [
+        'Canh',
+        'Tân',
+        'Nhâm',
+        'Quý',
+        'Giáp',
+        'Ất',
+        'Bính',
+        'Đinh',
+        'Mậu',
+        'Kỷ',
+    ];
+
+    var CHI_DICTIONARY = [
+        'Thân',
+        'Dậu',
+        'Tuất',
+        'Hợi',
+        'Tý',
+        'Sửu',
+        'Dần',
+        'Mão',
+        'Thìn',
+        'Tỵ',
+        'Ngọ',
+        'Mùi',
+    ];
+
+
+    var app = new Vue({
+        el: '#app',
+        template: '#wrapperTemplate',
+        data: {
+            year: 2000,
+        },
+        created() {
+            var dt = new Date();
+            this.year = dt.getFullYear();
+        },
+        computed: {
+            displayYear: function() {
+                var canIndex = this.year % 10; 
+                var chiIndex = this.year % 12;
+
+                if (isNaN(canIndex) || isNaN(chiIndex)) {
+                    return 'Nope';
+                }
+
+                var canText = CAN_DICTIONARY[canIndex];
+                var chiText = CHI_DICTIONARY[chiIndex];
+
+                return canText + ' ' + chiText;
+            }
+        }
+    })
+    </script>
+
+var 
+</body>
+</html>
+
