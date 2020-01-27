@@ -7,15 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tính lịch can chi</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>.wrapper div { margin-bottom: 7px; }</style>
 </head>
 <body>
     <h1>Tính lịch can chi</h1>
     <p>Vừa mới du học Du tu be, thấy 1 clip khá hay về cách tính nên mình code ra cái ni. <a href="https://www.youtube.com/watch?v=nbWjWVV-570">Link clip đây</a></p>
 
     <script type="text/x-template" id="wrapperTemplate">
-        <div >
-            Nhập năm nè:   <input type="number" v-model="year"> <br />
-            Năm con giáp: <span style="color: red">{{displayYear}}</span>
+        <div class="wrapper">
+            <div> Nhập năm nè:   <input type="number" v-model="year"></div>
+            <div>Năm con giáp: <span style="color: red">{{displayYear}}</span></div>
+            <div>Ngũ hành: <span style="color: green">{{displayNguhanh}}</span></div>
         </div>
     </script>
 
@@ -36,6 +38,7 @@
         'Kỷ',
     ];
 
+   
     var CHI_DICTIONARY = [
         'Thân',
         'Dậu',
@@ -51,6 +54,30 @@
         'Mùi',
     ];
 
+    var THIEN_CAN_SCORE = [
+        4,4, // canh, tan 
+        5,5, // nham, quy 
+        1,1,
+        2,2,
+        3,3,
+    ];
+
+    var DIA_CHI_SCORE = [
+        1,1, // than, dau
+        2,2, // 
+        0,0, // ti, suu
+        1,1, 
+        2,2,
+        0,0, // ngo mui
+    ];
+
+    var NGU_HANH_DICTIONARY = {
+        '1': 'Kim',
+        '2': 'Thủy',
+        '3': 'Hỏa',
+        '4': 'Thổ',
+        '5': 'Mộc',
+    };
 
     var app = new Vue({
         el: '#app',
@@ -63,16 +90,36 @@
             this.year = dt.getFullYear();
         },
         computed: {
-            displayYear: function() {
-                var canIndex = this.year % 10; 
-                var chiIndex = this.year % 12;
+            canIndex: function() {
+                return this.year % 10; 
+            },
+            chiIndex: function() {
+                return this.year % 12;
+            },
+            nguhanhIndex: function() {
+                var thiencan = THIEN_CAN_SCORE[this.canIndex];
+                var diachi = DIA_CHI_SCORE[this.chiIndex];
 
-                if (isNaN(canIndex) || isNaN(chiIndex)) {
+                console.log('thien can', thiencan, 'diachi', diachi)
+
+                var result = thiencan + diachi;
+
+                if (result > 5) {
+                    result = result - 5;
+                }
+
+                return result;
+            },
+            displayNguhanh: function() {
+                return NGU_HANH_DICTIONARY[this.nguhanhIndex];
+            },
+            displayYear: function() {
+                if (isNaN(this.canIndex) || isNaN(this.chiIndex)) {
                     return 'Nope';
                 }
 
-                var canText = CAN_DICTIONARY[canIndex];
-                var chiText = CHI_DICTIONARY[chiIndex];
+                var canText = CAN_DICTIONARY[this.canIndex];
+                var chiText = CHI_DICTIONARY[this.chiIndex];
 
                 return canText + ' ' + chiText;
             }
