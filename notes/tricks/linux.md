@@ -63,6 +63,21 @@ Tóm tắt:
 - Trên Server Linux (VPS):  dán cái public key vào file này `~/.ssh/authorized_keys`
 - Tạo config `IP`, `user` để khỏi phải nhập rồi xài thôi 
 
+
+## Datetime
+
+**Ubuntu** 
+```
+cat /etc/timezone
+```
+Output example: `Australia/Melbourne`
+
+**Another way**
+```
+date +%Z
+```
+**Output example**: `AEDT`. [Check list here](https://24timezones.com/time-zone/aedt)
+
 ## Sử dụng `Vi`
 
 [SGK](https://helpdesk.inet.vn/knowledgebase/huong-dan-co-ban-su-dung-vi-trong-linux)
