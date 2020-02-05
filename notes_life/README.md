@@ -10,6 +10,11 @@ Người đàn ông vĩ đại bởi những hành động, không phải là do
 Tiếp nhận và kế thừa ... chứ ko phải nóng giận và đổ thừa.
 ```
 
+```
+To get what you want, you have to deserve what you want. The world is not yet a crazy enough place to reward a whole bunch of undeserving people.
+― Charles T. Munger
+```
+
 **Suy nghĩ**
 ```
 Tôi nghĩ mỗi chúng ta ai cũng là một pho sử, vấn đề là chúng ta có muốn viết nó ra không thôi.
