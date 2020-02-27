@@ -1,7 +1,7 @@
 # Code Refactoring
 
 ::: tip Refactoring
-tái cấu trúc – là quá trình làm thay đổi mã hiện có bên trong mà không thay đổi hành vi bên ngoài của nó. Nói cách khác, tức là thay đổi cách nó thực hiện, nhưng không không thay đổi nó làm cái gì. Mục đích là để cải thiện cơ cấu nội bộ.
+Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code yet improves its internal structure. It is a disciplined way to clean up code that minimizes the chances of introducing bugs. In essence when you refactor you are **improving the design of the code after it has been written**.
 :::
 
 
@@ -81,11 +81,25 @@ là bất kỳ triệu chứng bất ổn nào bên trong mã nguồn của mộ
 - biểu hiện của sự yếu kém trong thiết kế và sẽ làm cho quá trình phát triển ứng dụng bị chậm lại hoặc tăng nguy cơ của bugs hoặc lỗi trong tương lai. 
 :::
 
+## Principles
+
+::: tip The Two Hats
+When you use refactoring to develop software, you divide your time between two distinct activities: adding function and refactoring. When you add function, you shouldn't be changing existing code; you are just adding
+new capabilities
+:::
+
 ## Điều gì ngăn cản code refactoring?
 
 - **Kiến thức**: ví dụ ko có hiểu biết sâu sắc về OOP thì code ban đầu viết ra sẽ rất “dở” nhưng quan trọng là họ hoàn toàn không biết rằng nó “dở”.
 - **Chấp nhận**: Sau một thời gian dài, nhóm nhận ra có rất nhiều đoạn code “dở” nhưng nhóm vẫn chấp nhận bởi số lượng code “dở” là quá nhiều và có tư tưởng chấp nhận “sống chung với lũ”, hoặc nghĩ tới việc viết lại toàn bộ hệ thống.
 - **Không có thời gian**:  Đây là lý do khá xác đáng; khách hàng hoàn toàn không nhận được lợi ích trực tiếp từ code refactoring, nên khó thuyết phục họ trả tiền cho nhóm phát triển thực hiện code refactoring.
+
+- One problem area for refactoring is **databases**. Most business applications are tightly coupled to
+the database schema that supports them. That's one reason that the database is difficult to
+change. Another reason is data migration. Even if you have carefully layered your system to
+minimize the dependencies between the database schema and the object model, changing the
+database schema forces you to migrate the data, which can be a long and fraught task.
+
 
 ## Checklist of refactoring done right way
 
@@ -111,7 +125,29 @@ There are two cases when tests can break down after refactoring:
     
     In this case, the tests are to blame. You can either refactor the tests themselves or write an entirely new set of higher-level tests. A great way to avoid this kind of a situation is to write BDD-style tests.
 ::::
+
+## Tips
+
+::: tip
+When you find you have to add a feature to a program, and the program's code is not
+structured in a convenient way to add the feature, first refactor the program to make it
+easy to add the feature, then add the feature.
+:::
  
+
+::: tip "The First Step in Refactoring"
+Before you start refactoring, check that you have a solid suite of tests. These tests
+must be self-checking.
+:::
+
+::: tip
+Refactoring changes the programs in small steps. If you make a mistake, it is easy to
+find the bug.
+:::
+
+::: tip 
+Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+:::
 
 ## Refs
 
