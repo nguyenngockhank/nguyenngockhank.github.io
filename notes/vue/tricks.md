@@ -2,22 +2,6 @@
 
 [[toc]]
 
-## Truyền props động
-
-```html
-<input v-bind="attrObj" :maxlength="maxlength" />
-```
-
-Thay vì truyền từng attribute một, ta đưa 1 object vào luôn. 
-
-## Component động 
-
-```html
-<component :is="componentDisplay" v-bind="$props" />
-```
-
-[Read docs 4 more Detail](https://vuejs.org/v2/api/#component)
-
 ## Watchers triggered khi khởi tạo
 
 ```js

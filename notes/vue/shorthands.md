@@ -1,4 +1,6 @@
-## VueJS - Tổng hợp bộ thư pháp viết tắt
+# Tổng hợp bộ thư pháp viết tắt
+
+[[toc]]
 
 ## v-bind
 

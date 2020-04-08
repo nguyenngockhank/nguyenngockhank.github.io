@@ -72,6 +72,15 @@ module.exports = [
       ]
     },
     {
+      title: "VueJS",
+      children: [
+        '/vue/communication',
+        '/vue/shorthands',
+        '/vue/dynamic',
+        '/vue/tricks',
+      ]
+    },
+    {
       title: "PHP",
       children: [
         '/php/php7',
