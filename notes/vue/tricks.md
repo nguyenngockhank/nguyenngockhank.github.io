@@ -1,26 +1,73 @@
-# VueJS - có thể bạn chưa biết 
+# Maybe you don't know these tricks 
 
 [[toc]]
 
-## Watchers triggered khi khởi tạo
+## Watchers 
 
-```js
+### Watch nested data
+
+Useful when data is `Arrays` or `Objects`
+
+```js{4}
 export default {
-    // ... 
-    watch: {
-        test: {
-            immediate: true,
-            handler(newVal, oldVal){
-                // your code
-            }
-        }
+  watch: {
+    test: {
+      deep: true, 
+      handler(newVal, oldVal){
+          // your code
+      }
     }
+  }
 }
 ```
 
-Thêm vào thuộc tính `immediate`.
+### Triggered on initilization
 
-## File Structure (Atomic)
+A watcher will only fire when the prop's value changes, but we often need it to fire once on startup as well.
+
+```js{4}
+export default {
+  watch: {
+    test: {
+      immediate: true, 
+      handler(newVal, oldVal){
+          // your code
+      }
+    }
+  }
+}
+```
+
+##  A Vue Template Have Multiple Root
+
+Got error when try to do this!
+
+```html
+<template>
+  <input type="text" v-model="message">
+  <span>{{ message }}</span>
+</template>
+```
+
+**Solution**: [Fragments In Vue](https://github.com/y-nk/vue-fragment)
+
+- Download package: `npm i -S vue-fragment`
+- Install Plugin
+
+```js
+import { Plugin } from 'vue-fragment';
+Vue.use(Plugin);
+```
+- Component
+
+```html
+<fragment>
+  <input type="text" v-model="message">
+  <span>{{ message }}</span>
+</fragment>
+```
+
+## Atom - File Structure
 
 ```
 atoms/
@@ -103,3 +150,7 @@ pages/
 - They have 2 folder levels.
 
 [Finding the perfect component file structure for our VueJS App.](https://medium.com/@vuefront/finding-the-perfect-component-file-structure-for-out-vuejs-app-b808a69dacac)
+
+## 26 time saving tips
+
+[Read this article](https://michaelnthiessen.com/26-time-saving-tips/)
