@@ -78,6 +78,7 @@ module.exports = [
         '/vue/shorthands',
         '/vue/dynamic',
         '/vue/tricks',
+        '/vue/vuepress',
       ]
     },
     {

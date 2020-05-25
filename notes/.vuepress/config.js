@@ -5,6 +5,7 @@ module.exports = {
   description: 'Wikipedia của tui',
   base: '/docs/',
   dest: '../docs',
+  port: 9876,
   locales: {
     '/': {
       lang: 'vi', // this will be set as the lang attribute on <html>

@@ -198,7 +198,7 @@ interface DomainEvent
 
 `/src/BlogEngine/DomainModel/PostTitleWasChanged.php`
 
-<<< @/snippets/ddd/PostTitleWasChanged.php
+<!-- <<< @/snippets/ddd/PostTitleWasChanged.php -->
 
 
 ## DomainEvents
