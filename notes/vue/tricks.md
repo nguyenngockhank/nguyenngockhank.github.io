@@ -2,6 +2,12 @@
 
 [[toc]]
 
+## Cheatsheet
+
+- [Vue cheatsheet](https://marozed.ma/vue-cheatsheet/#Global-Config)
+- [VueX cheatsheet](https://vuejs-tips.github.io/vuex-cheatsheet/)
+
+
 ## Watchers 
 
 ### Watch nested data
