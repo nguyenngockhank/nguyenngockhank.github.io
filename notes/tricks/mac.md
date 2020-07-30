@@ -10,11 +10,6 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Toggle hidden files
-```
-Command + shift + .
-```
-
 ## Edit file hosts
 Mở finder 
 ```
@@ -24,12 +19,57 @@ Command + Shift + G
 
 Mở & sửa file `hosts`
 
+## Sủ dụng Preview
+
+[Dùng Preview trong Mac để phóng to chi tiết, nhấn mạnh một vùng, ghi chú, chỉnh sửa ảnh...
+](https://tinhte.vn/thread/dung-preview-trong-mac-de-phong-to-chi-tiet-nhan-manh-mot-vung-ghi-chu-chinh-sua-anh.2661212/)
+
+## Shortcuts
+
+### Toggle hidden files
+```
+Command + shift + .
+```
+
+### Xóa tất cả ký tự
+
+```
+Option (alt) + Delete
+```
+
+### Bàn phím Emoji
+
+```
+Command + Control + Space
+```
+
+### Screen Capture
+
+```
+Command + Shift + 3 (chụp toàn bộ màn hình) 
+Command + Shift + 4 (chụp màn hình một khu vực được chọn)
+```
+
+### Zoom in / out
+
+```
+Command + Option (alt) +  `+(=)`
+Command + Option (alt) +  `-(_)`
+```
+
+### Workspace
+
+```
+Ctrl + Up
+Ctrl + Left / Right
+```
+
+
 ## Lỗi Clipboard ... 
 Reset lại thôi `killall pboard`
 ```
 killall pboard
 ```
-
 
 ## Xem version tool trên CLI  
 ```

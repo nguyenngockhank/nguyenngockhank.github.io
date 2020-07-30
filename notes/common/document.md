@@ -75,6 +75,109 @@ Những dạng tool kiểu này sẽ scan sorce code dựa theo các comment c�
 - PHP thì ta có [phpDocumentor](https://www.phpdoc.org/)
 - Javascript thì ta có [jsdoc](https://jsdoc.app/index.html)
 
+## API Document
 
+Dạo này được giao task tạo ra Document cho API, sau đây xin trích dẫn vài thứ ngon nghẻ :)))
 
+### [OpenAPI](https://swagger.io/docs/specification/about/)
 
+![Logo](https://static1.smartbear.co/swagger/media/assets/images/swagger_logo.svg) 
+- Là 1 bộ quy tắc viết document cho API, gồm nhiều tool hay ho giúp chuyên nghiệp hóa hẳn lên =)) 
+- Chỉ cần 1 file config (json / yaml) sẽ tạo ra trang document. [Demo UI](https://editor.swagger.io/)
+- [Swagger UI](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/) - tool build ra HTML cho riêng bạn. [Simple Repo](https://github.com/swagger-api/swagger-ui/tree/master/docs/samples/webpack-getting-started) 
+- Đọc thêm: [specification](https://swagger.io/docs/specification/about/)
+
+### [swagger-php](https://github.com/zircote/swagger-php)
+
+Đây là tool tạo ra OpenAPI config (json/yaml) từ các tag Annotation trong comment source code
+
+Ví dụ
+
+```php
+/**
+* @OA\Post(
+*      path="/core/api/token",
+*      tags={"Authentication"},
+*      summary="Fetch AccessToken by Credentials",
+*      description="Fetch AccessTokens by credentials (Email & Password)",
+*      @OA\RequestBody(
+*          @OA\MediaType(
+*              mediaType="application/json",
+*              @OA\Schema(
+*                  @OA\Property(
+*                      property="email",
+*                      type="string",
+*                      format="email",
+*                      example="abc@example.com",
+*                   ),
+*                   @OA\Property(
+*                      property="password",
+*                      type="string",
+*                      format="password",
+*                      example="password",
+*                  ),
+*              )
+*          ),
+*     ),  
+*     @OA\Response(
+*          response="200",
+*          description="Success",
+*          @OA\JsonContent(
+*              @OA\Property(property="status", type="string", enum={"success"}),
+*              @OA\Property(property="data", 
+*                  type="object",
+*                  @OA\Property( property="access_token", 
+*                      ref="#/components/schemas/JWT"
+*                  ),
+*                  @OA\Property( property="refresh_token",
+*                      ref="#/components/schemas/JWT",
+*                      description="refresh_token is used for receiving new access_token and can only be used once."
+*                  )
+*              ),
+*          )
+*      ),
+*      @OA\Response(response="403", description="Login Failed"),
+*      @OA\Response(response="400", description="Bad Request"),
+*      @OA\ExternalDocumentation(
+*          description="Find more info about JWT",
+*          url="https://jwt.io/"
+*      )
+*  )
+*/
+function token_post()
+{
+    $email = $this->input->post('email');
+    $password = $this->input->post('password');
+
+    try {
+        $result = $this->_authService->logIn($email, $password);
+        $response_data = [
+            "status" => SUCCESS,
+            "data" => $result ,
+        ];
+        $this->response($response_data);
+    } catch (\Exception $ex) {
+        $this->handleException($ex);
+    }
+}
+```
+
+Thấy ghê hong, comment dài hơn cả code =))) Để mà biết đường viết comment cho đúng thì nhớ đọc [OpenAPI specification](https://swagger.io/docs/specification/about/)
+
+Nếu dự án lớn quá, scan quá lâu thì có thể custom lại cái tool chỉ scan folder nào mình cần thôi
+
+```php
+require("./vendor/autoload.php");
+$outputPath = __DIR__ . '/swagger.json';
+
+// project path 
+$rootPath =  __DIR__ . '/path_to_project//';
+
+$scanPaths = [
+    $rootPath . 'controllers',
+    $rootPath . 'modules/core/controllers',
+];
+
+$swagger = \OpenApi\scan($scanPaths);
+$swagger->saveAs($outputPath);
+```

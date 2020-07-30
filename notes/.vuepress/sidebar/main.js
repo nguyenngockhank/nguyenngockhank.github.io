@@ -79,6 +79,7 @@ module.exports = [
         '/vue/dynamic',
         '/vue/tricks',
         '/vue/vuepress',
+        '/vue/test',
       ]
     },
     {

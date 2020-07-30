@@ -2,6 +2,12 @@
 
 [[toc]]
 
+## Cheatsheet
+
+- [Vue cheatsheet](https://marozed.ma/vue-cheatsheet/#Global-Config)
+- [VueX cheatsheet](https://vuejs-tips.github.io/vuex-cheatsheet/)
+
+
 ## Watchers 
 
 ### Watch nested data
@@ -66,6 +72,68 @@ Vue.use(Plugin);
   <span>{{ message }}</span>
 </fragment>
 ```
+
+## VueTypes
+
+A library that help you save time on writing code =))
+
+```sh
+npm i vue-types --save
+```
+
+:::: tabs
+
+::: tab Before
+```js
+{
+    props: {
+        value: {
+            type: [Number, String],
+        },
+        inputType: {
+            type: String,
+            default: 'number',
+            validator(v) {
+                return ['number', 'text'].includes(v);
+            }
+        },
+        defaultValue: {
+            type: [Number, String],
+            default: 0,
+        },
+        step: {
+            type: [ Number, String ],
+            default: 1,
+        },
+        precision: {
+            type: Number,
+            default: 0,
+        }
+    },
+}
+```
+:::
+
+::: tab After
+
+```js
+import VueTypes from 'vue-types';
+
+// ... other code
+{
+    props: {
+        value: VueTypes.oneOfType([Number, String]),
+        inputType: VueTypes.oneOf(['number', 'text']).def('number'),
+        defaultValue: VueTypes.oneOfType([Number, String]).def(0),
+        step: VueTypes.oneOfType([Number, String]).def(1),
+        precision: VueTypes.integer.def(0),
+    }
+}
+```
+:::
+
+::::
+
 
 ## Atom - File Structure
 

@@ -138,12 +138,68 @@ var ICON_OPTIONS = {
   // }
 } 
 var dataItems = [
-{
+  {
+    type: 'film',
+    date: '2020-06-30',
+    title: 'Biệt đội bất hảo',
+    content: 'The Bad Guys: Reign of Chaos (2019) at LotteMart DN',
+    img: 'http://image.phimmoiz.com/film/9487/poster.medium.jpg',
+  },
+  {
+    type: 'drink',
+    date: '2020-06-26',
+    title: 'Ấn Tượng TD',
+    content: '-- ❤️️ --',
+    img: './images/timeline/2020-06-26.JPG',
+  },
+  {
+    type: 'location',
+    date: '2020-06-19',
+    title: 'LV8 Park',
+    content: 'Quỷ nhỏ in a dress',
+    img: './images/timeline/IMG_20200619_225512_1.jpg',
+  },
+  {
+    type: 'location',
+    date: '2020-06-12',
+    title: 'Reddoor near HighTechPark',
+    content: '-- ❤️️ --',
+    img: './images/timeline/2020-06-12.JPG',
+  },
+  {
+    type: 'film',
+    date: '2020-06-11',
+    title: 'Tôi là não cá vàng',
+    content: 'thảm họa =))',
+    img: 'https://chieuphimquocgia.com.vn/Content/Images/0014668_0.png',
+  },
+  {
+    type: 'film',
+    date: '2020-05-30',
+    title: 'Quỷ lùn tinh nghịch: Chuyến lưu diễn thế giới',
+    content: 'Trolls World Tour (2020) at Vincom ThuDuc',
+    img: 'http://image.phimmoiz.com/film/10983/poster.medium.jpg',
+  },
+  {
+    type: 'film',
+    date: '2020-05-23',
+    title: 'Bà hoàng nói dối',
+    content: 'Honest Candidate (2020) at Vincom Q9',
+    img: 'http://image.phimmoiz.com/film/11049/poster.medium.jpg',
+  },
+  {
     type: 'drink',
     date: '2020-02-29',
     title: 'Lotte Đồng Nai',
     content: '-- ❤️️ --',
     img: './images/timeline/2020-02-29.jpg',
+  },
+  {
+    type: 'film',
+    date: '2020-02-29',
+    title: 'Nhím Sonic',
+    content: 'Sonic the Hedgehog (2020) at LotteMart DN',
+    img: 'http://image.phimmoiz.com/film/8940/poster.medium.jpg',
   },
   {
     type: 'location',
@@ -179,6 +235,13 @@ var dataItems = [
     title: 'Chị chị em em',
     content: 'Giường này là của 2 ta.',
     img: 'https://www.galaxycine.vn/media/2019/11/29/ccee---payoff-poster_1575021046527.jpg',
+  },
+  {
+    type: 'film',
+    date: '2020-01-06',
+    title: 'Điệp viên ẩn danh',
+    content: 'Spies in Disguise at CGV Liberty Centre Point Q1',
+    img: 'http://image.phimmoiz.com/film/8593/poster.medium.jpg',
   },
   {
     type: 'film',
@@ -232,7 +295,7 @@ var dataItems = [
   {
     type: 'location',
     date: '2019-10-29',
-    title: 'Kim Dung / Trần Quang Khải',
+    title: 'Kim Dung',
     content: '<q>Ui xinh thế honey :)))</q>',
     img: './images/timeline/2019-10-29 01.JPG',
   },
@@ -310,9 +373,13 @@ var TabController = function(){
 	var instance = {};
   
 	function refreshItem() {
-	  var type = $('.item-tab.active').data('type');
-	  // console.log('>>>> click here', type)
-	  ContentController.render(type);
+	  var types = [];
+    $('.item-tab.active').each(function(index, el) {
+      types.push(
+        $(el).data('type')
+      )
+    })
+	  ContentController.render(types);
 	}
   
 	instance.init = function() {
@@ -324,22 +391,8 @@ var TabController = function(){
   
 	  // add events
 	  $('.item-tab').click(function(e) {
-		var hasActive = $('.item-tab.active').length > 0;
-  
-		if (!hasActive) {
-		  $(this).addClass('active');
-		} else {
-		  var currentActive = $(this).hasClass('active');
-  
-		  if (currentActive) {
-			$(this).removeClass('active');
-		  } else {
-			$('.item-tab.active').removeClass('active');
-			$(this).addClass('active');
-		  }
-		}
-		
-		refreshItem();
+      $(this).toggleClass('active');
+		  refreshItem();
 	  });
 	}
 	return instance;
@@ -357,14 +410,14 @@ var TabController = function(){
 	}
   
   
-	instance.render = function (type) {
+	instance.render = function (types) {
 	  var renderItems = dataItems;
   
 	  // filter items before render
-	  if (type) {
-		var renderItems = _.filter(dataItems, function(item) {
-		  return item.type === type;
-		});
+	  if (types && types.length > 0) {
+      var renderItems = _.filter(dataItems, function(item) {
+        return types.indexOf(item.type) > -1;
+      });
 	  }
   
 	  timelineCon.innerHTML = '';
