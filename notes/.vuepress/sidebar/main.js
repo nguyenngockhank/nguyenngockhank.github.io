@@ -8,6 +8,7 @@ module.exports = [
         '/common/realtime',
         '/common/crawl',
         '/common/refactor',
+        '/common/restful',
         '/common/document',
       ],
     },
