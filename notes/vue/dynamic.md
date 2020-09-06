@@ -4,6 +4,8 @@
 
 ## Pass dynamic props
 
+### Vue 
+
 ```html
 <input v-bind="attrObj" :maxlength="maxlength" />
 ```
@@ -17,6 +19,12 @@ computed: {
         }
     }
 }
+```
+
+### React 
+
+```html
+<input {...dynamicProps} />
 ```
 
 ### Dynamic Classes

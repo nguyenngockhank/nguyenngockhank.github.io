@@ -24,9 +24,14 @@ module.exports = {
   ],
   themeConfig: {
     searchMaxSuggestions: 10,
-    nav: require('./nav/index'),
+    nav: [
+      { text: 'Architecture', link: '/architect/'}, 
+      { text: 'Kungfu', link: '/kungfu/basic/boolean'}, 
+      { text: 'Home', link: 'https://nguyenngockhank.github.io' },
+    ],
     sidebar: {
       '/architect/': require('./sidebar/architect'), 
+      '/kungfu/': require('./sidebar/kungfu'), 
       '/': require('./sidebar/main'), 
     }
   },

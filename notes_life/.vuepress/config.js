@@ -43,6 +43,7 @@ module.exports = {
           '/world/north_korea',
           '/world/russia',
           '/world/thai',
+          '/world/congo',
         ]
       }
     ]

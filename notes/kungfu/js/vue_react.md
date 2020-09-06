@@ -1,28 +1,54 @@
 # Vue vs. React
 
-[[toc]]
-
 ## Similar 
 - virtual DOM
 - provide reactive and composable view components
 - maintain focus in the core library, with concerns such as routing and global state management handled by companion libraries
 
+:::: tabs
+
+::: tab React
+
+**Styled Components**: [styled-components](https://github.com/styled-components/styled-components)
+
+**Prop validators**: [prop-types](https://github.com/facebook/prop-types)
+
+**Router**: [react-router](https://reactrouter.com/web/guides/quick-start)
+
+**State Management**: [redux](https://redux.js.org/)
+
+:::
+
+::: tab Vue
+**Styled Components**: [vue-styled-components](https://github.com/styled-components/vue-styled-components)
+
+**Prop validators**: [vue-types](https://github.com/facebook/prop-types) (v1 + v2)
+
+**Router**: [vue-router](https://router.vuejs.org/)
+
+**State Management**: [vuex](https://vuex.vuejs.org/guide/getters.html)
+:::
+::::
+
+
 ## Templates vs. JSX
 
-- React uses `JSX`, a declarative XML-like syntax that works within JavaScript. 
+:::: tabs
 
-- Vue uses HTML-based templates
-
-### Vue - HTML-Based 
+::: tab Vue
+Vue uses HTML-based templates
 
 ***Any valid HTML is also a valid Vue template***
+:::
 
-But React, 
+::: tab React
+React uses `JSX`, a declarative XML-like syntax that works within JavaScript. 
 
 ```jsx
 <label htmlFor="namedInput">Name:</label>
 <input className="form-control" id="namedInput" type="text" name="name"/>
 ```
+
 Things are customized: 
 - `htmlFor` where original attribute is `for`
 - `className` where orginal attribute is `class`
@@ -32,10 +58,15 @@ Things are customized:
 ```jsx
 const element = <img src={user.avatarUrl} />;
 ```
+:::
+::::
+
+## React - Full programming language
 
 
-### React - Full programming language
+:::: tabs
 
+::: tab React
 In React, You can ***leverage the power of a full programming language (JavaScript) to build your view***. This includes temporary variables, flow controls, and directly referencing JavaScript values in scope.
 
 
@@ -50,26 +81,6 @@ const element = (
   </h1>
 );
 ```
-
-But In Vue, no support! You can define something like this with Vue: 
-
-```vue
-<template>
-<h1> Hello, {{ formatName }}! </h1>
-</template>
-<script>
-export default {
-    props: ['user'],
-    computed: {
-        formatName() {
-            return this.user.firstName + ' ' + this.user.lastName;
-        }
-    }
-}
-</script>
-```
-
-Vue has few concepts which React does not. There are `mixins`, `custom directives`, `filters`, these help much in reusability.
 
 
 ### Functions as Children
@@ -95,27 +106,39 @@ function ListOfTenThings() {
 }
 ```
 - `props.children` in Repeat is a function
+:::
+
+::: tab Vue
+
+But In Vue, no support! You can define something like this with Vue: 
+
+```vue
+<template>
+<h1> Hello, {{ formatName }}! </h1>
+</template>
+<script>
+export default {
+    props: ['user'],
+    computed: {
+        formatName() {
+            return this.user.firstName + ' ' + this.user.lastName;
+        }
+    }
+}
+</script>
+```
+
+Vue has few concepts which React does not. There are `mixins`, `custom directives`, `filters`, these help much in reusability.
+:::
+
+::::
 
 
-
-
-## State Management 
-
-State Management is using a Global State that all components can be shared. 
-`Vuex` is get inspired from `Redux` so Core concepts is the same.
-
-To more detail, have a look at [Comparing Vuex and Redux by developing an application](https://medium.com/javascript-in-plain-english/similarities-and-differences-between-vuex-and-redux-by-developing-an-application-be3df0164b22)
-
-
-
-## To be continued
-
-...
 
 
 ---
 
 ## References 
-- [Comparison with Other Frameworks](https://vuejs.org/v2/guide/comparison.html)
+- [(Vue) Comparison with Other Frameworks](https://vuejs.org/v2/guide/comparison.html)
 - [Comparing Vuex and Redux by developing an application](https://medium.com/javascript-in-plain-english/similarities-and-differences-between-vuex-and-redux-by-developing-an-application-be3df0164b22)
 - [I created the exact same app in React and Vue. Here are the differences.](https://medium.com/javascript-in-plain-english/i-created-the-exact-same-app-in-react-and-vue-here-are-the-differences-e9a1ae8077fd)
