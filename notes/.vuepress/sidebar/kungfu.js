@@ -4,6 +4,7 @@ module.exports = [
         children: [
             '/kungfu/basic/boolean',
             '/kungfu/basic/comment',
+            '/kungfu/basic/loop',
         ]
     },
     {

@@ -33,4 +33,17 @@
 
 ```
 :::
+
+::: tab GO
+```go
+
+```
+:::
 ::::
+
+
+## Compararison
+
+| Js/Ts     | PHP       | Java | Python | GO |
+| :----     | :---      | :---| :---| :---|
+| break     | break  | break | break |  break |
