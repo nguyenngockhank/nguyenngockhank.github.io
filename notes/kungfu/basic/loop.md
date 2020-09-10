@@ -101,7 +101,7 @@ for (int i : numbers) {
 arr := []int{10, 20, 30, 40}
 
 for k, val := range arr {
-    fmt.Println(i, val)
+    fmt.Println(k, val)
 }
 ```
 :::
@@ -138,7 +138,7 @@ person = {
   "lname": "Doe",
   "age": 25
 }
-for k, v in thisdict.person():
+for k, v in person.items():
   print(k) # fname, lname, age
   print(v) # John, Doe, 25
 ```

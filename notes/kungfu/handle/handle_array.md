@@ -51,7 +51,6 @@ System.out.println(Partition.ofSize(input, 2));
 `Partition.java`
 
 ```java
-
 import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -95,6 +94,25 @@ public final class Partition<T> extends AbstractList<List<T>> {
 
 [another ways](https://e.printstacktrace.blog/divide-a-list-to-lists-of-n-size-in-Java-8/)
 :::
+
+::: tab GO
+
+```go
+var input = []int{1, 2, 3, 4, 5}
+fmt.Printf("%#v\n", chunkBy(input, 2))
+```
+
+`chunkBy` function detail
+```go
+func chunkBy(items []int, chunkSize int) (chunks [][]int) {
+	for chunkSize < len(items) {
+		items, chunks = items[chunkSize:], append(chunks, items[0:chunkSize:chunkSize])
+	}
+	return append(chunks, items)
+}
+```
+:::
+
 ::::
 
 ## Difference
