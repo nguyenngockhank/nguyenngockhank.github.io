@@ -26,7 +26,7 @@ module.exports = {
     searchMaxSuggestions: 10,
     nav: [
       { text: 'Architecture', link: '/architect/'}, 
-      { text: 'Kungfu', link: '/kungfu/basic/boolean'}, 
+      // { text: 'Kungfu', link: '/kungfu/basic/boolean'}, 
       { text: 'Home', link: 'https://nguyenngockhank.github.io' },
     ],
     sidebar: {
