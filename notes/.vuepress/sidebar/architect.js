@@ -21,6 +21,7 @@ module.exports = [
         children: [
             'authenication',
             'full_stack_software_design',
+            'terms',
         ]
     },
 ]
