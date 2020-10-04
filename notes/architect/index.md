@@ -1,58 +1,26 @@
-# Tổng quan Architecture
+# Architecture Overview
 
-##  [Entity-Boundary-Interactor Architecture (1992)](./ebi.md)
-aka EBC aka EIC
+:::: quote
+**The goal of software architecture** is to minimize the human resources required to build and maintain the required system. - *Uncle Bob*
+::::
 
-![fig_7_12_entity_interface_control](@/images/architecture/ebi/fig_7_12_entity_interface_control.jpg)
+**Function** or **Architecture**:
 
+> If you give me a program that works perfectly but impossible to change, then it won't work when the requirements change, and I won't be able to make it work. Therefore the program will becomme **useless**.
 
-## [Single Page Application (2002-2003)](./spa.md)
-![Example](@/images/architecture/spa/9c897-15aa2cnrij2fvo0rztjczhq.png)
+> If you give me a program that does not work but easy to change, then I can make it work, and keep it working as requirements change. Therefor the program will remain continually **useful**.
 
+The Architecture of a software system is the shape given to that system by those who build it. The form of that shape is in the division of that system into components, the arrangement of those components, and the ways in which those components communicate with each other.
 
-## [Domain-Driven Design – DDD (2003)](./ddd.md)
-![Example](@/images/ddd-layers.jpg)
+That purpose of that shape is to facilitate the development, deployment, operation, and maintenance of the software system contained within it.
 
-
-## Hexagonal Architecture (2005)
-aka Ports & Adapters Architecture
-![hexagonal](@/images/architecture/hexagonal-arch-4-ports-adapters2.png)
-
-## Model-View-ViewModel – MVVM (2005)
-![MVVM](@/images/architecture/mvvm.png)
+::: tip
+The strategy behind that facilitation is to leave as many options open as possible, for as long as possible.
+:::
 
 
-## [Command Query Responsibility Segregation - CQRS (2006)](./cqrs.md)
-![CQRS](@/images/architecture/cqrs/2006-1-cqrs.png)
+## Stack
 
-& Event Sourcing (ES) (2006)
-
-
-## Onion Architecture (2008)
-![Onion Architecture](@/images/architecture/Onion1.png)
-
-## [Clean Architecture (2012)](./clean_A.md)
-![Clearn Architecture](@/images/architecture/cleanarchitecture.jpg)
+![architecture-stack](./img/architecture-stack.png)
 
 
-
-
-
-**2009**
-- Microservices (at Netflix)
-
-
-**2014**
-- C4 Model
-
-## Others
-- [Service-oriented architecture](./soa.md)
-- [Event-driven architecture](./event_driven_A.md)
-
-## Web & Bài viết hay 
-
-- [https://microservices.io/](https://microservices.io/)
-- [Martin Fowler](https://martinfowler.com/)
-- [codingthearchitecture.com - Simon Brown](http://www.codingthearchitecture.com/)
-- [The Software Architecture Chronicles - Herberto Graça](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
-- [How to Learn Software Design and Architecture](https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design/)

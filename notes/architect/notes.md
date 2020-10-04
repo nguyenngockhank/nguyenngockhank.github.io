@@ -95,6 +95,5 @@ Giống giống **Prototype Model**
 
 [See here](./use-case.md)
 
-## Activity Diagram
 
 

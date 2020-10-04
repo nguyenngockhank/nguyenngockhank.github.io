@@ -24,14 +24,7 @@ And, always remember
 > Right tool for right Job 
 
 
-:::: quote
-- **Object-Oriented Programming** is the tool best suited for defining how we cross architectural boundaries with polymorhpism and plugins
-- **Functional programming** is the tool we use to push data to the boundaries of our applications
-- and **Structured programming** is the tool we use to write algorithms
-::: right 
-― Uncle Bob (Clean Architecture)
-:::
-::::
+
 
 
 ## Clean Code
@@ -98,12 +91,5 @@ The more code you refactor, the more senior you become
 ::: right 
 ― [TechLead](https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw)
 :::
-::::
-
-
-##  Software architecture
-
-:::: quote
-The goal of software architecture is to minimize the human resources required to build and maintain the required system. 
 ::::
 

@@ -137,6 +137,7 @@ function circumference(radius) { /** code... */}
 :::
 ::::
 
+A good name allows me to understand what function does.
 
 ### Encapsulate Variable
 
@@ -159,6 +160,8 @@ export function setDefaultOwner(arg) { defaultOwnerData = arg }
 ```
 :::
 ::::
+
+I want to move widely accessed data
 
 ### Rename Variable
 
@@ -201,8 +204,7 @@ function amountOverdue(aDateRange) { /** body */ }
 
 ::::
 
-Grouping data into a structure
-*Pros*:
+See a groups of data items that regularly travel together, appearing in function after function.
 - makes explicit the relationship between data items
 - reduces size of parameter lists
 - helps consistency since all functions that use the structure
@@ -230,6 +232,10 @@ class Reading {
 :::
 ::::
 
+See a group of functions that operate closely together on common body of data.
+- form functions => more explicit, simplify function calls inside the object by removing many of the args 
+- provides a reference to pass such an object to other pars of the system
+- allows client to mutate the core data of the object, and the derivations remain consistent.
 
 ### Combine Functions into Transform
 

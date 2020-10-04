@@ -37,8 +37,6 @@ All the data flows, flowcharts, data structures, etc. are in these docs, so that
 ## Monolithic vs. Microservices 
 ![mono-microservices](./img/mono-microservices.jpg)
 
-
-
 ## API Gateway 
 
 Think of an API gateway as a specific type **reverse proxy** implementation.
@@ -62,6 +60,22 @@ Think of an API gateway as a specific type **reverse proxy** implementation.
 - **Coupling**: Elements are coupled if a change in one forces a change in the other. *For example, if two classes inherit from a common parent, then a change in one class might require a change in the other.*
 - **Cohesion**: An element’s cohesion is a measure of whether its responsibilities form a meaningful unit. *For example, a class that parses both dates and URLs is not coherent, because they’re unrelated concepts.*
 
+## Event Sourcing
+
+![Event Sourcing](./img/es/evensourcing.png)
+
+**Stream**
+![Event Sourcing](./img/es/stream.png)
+
+**Event**
+![Event](./img/es/event.png)
+
+**Payload**
+![Payload](./img/es/payload.png)
+
+
+[EventStoreDB](https://eventstore.com/)
+
 
 ## Performance terms
 
@@ -74,6 +88,70 @@ Think of an API gateway as a specific type **reverse proxy** implementation.
 - **Efficiency**: is performance divided by resources. A system that gets 30 tps on 2 CPUs is more efficient than a system that gets 40tps on 4 CPUs.
 - **The Capacity**: is an indication of maximum effective throughput or load.
 - **Scalability**: is a measure of how adding resources (usally hardware) affects performance.
+
+
+
+##  [Entity-Boundary-Interactor Architecture (1992)](./ebi.md)
+aka EBC aka EIC
+
+![fig_7_12_entity_interface_control](@/images/architecture/ebi/fig_7_12_entity_interface_control.jpg)
+
+
+## [Single Page Application (2002-2003)](./spa.md)
+![Example](@/images/architecture/spa/9c897-15aa2cnrij2fvo0rztjczhq.png)
+
+
+## [Domain-Driven Design – DDD (2003)](./ddd.md)
+![Example](@/images/ddd-layers.jpg)
+
+
+## Hexagonal Architecture (2005)
+aka Ports & Adapters Architecture
+![hexagonal](@/images/architecture/hexagonal-arch-4-ports-adapters2.png)
+
+## Model-View-ViewModel – MVVM (2005)
+![MVVM](@/images/architecture/mvvm.png)
+
+
+## [Command Query Responsibility Segregation - CQRS (2006)](./cqrs.md)
+![CQRS](@/images/architecture/cqrs/2006-1-cqrs.png)
+
+& Event Sourcing (ES) (2006)
+
+
+## Onion Architecture (2008)
+![Onion Architecture](@/images/architecture/Onion1.png)
+
+## [Clean Architecture (2012)](./clean_A.md)
+![Clearn Architecture](@/images/architecture/cleanarchitecture.jpg)
+
+
+**2009**
+- Microservices (at Netflix)
+
+**2014**
+- C4 Model
+
+
+## Right tool for right job
+- **Object-Oriented Programming** is the tool best suited for defining how we cross architectural boundaries with polymorhpism and plugins
+- **Functional programming** is the tool we use to push data to the boundaries of our applications
+- and **Structured programming** is the tool we use to write algorithms
+
+
+## Others
+- [Service-oriented architecture](./soa.md)
+- [Event-driven architecture](./event_driven_A.md)
+
+## Web & Bài viết hay 
+
+- [https://microservices.io/](https://microservices.io/)
+- [Martin Fowler](https://martinfowler.com/)
+- [codingthearchitecture.com - Simon Brown](http://www.codingthearchitecture.com/)
+- [The Software Architecture Chronicles - Herberto Graça](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
+- [How to Learn Software Design and Architecture](https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design/)
+
+
 
 ## Others
 ### problems:
