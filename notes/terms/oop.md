@@ -27,8 +27,6 @@ Vietsub: Lập trình hướng đối tượng
 - Một tiến trình ẩn các chi tiết trình triển khai và chỉ hiển thị tính năng tới người dùng
 - Được thể hiện qua **abstract class** và các **interface**`
 
----
-
 ## ✅ Mối quan hệ
 
 Dưới đây là 1 số mối quan hệ giữa các class với nhau
@@ -39,6 +37,7 @@ Dưới đây là 1 số mối quan hệ giữa các class với nhau
 ### Aggregation 
 - là mối quan hệ **has-a**. 
 - Class A có quan hệ `Aggregation` với class B khi class A có method dùng B như parameter
+- **Vòng đời độc lập với nhau**
 
 ```java
 class A {
@@ -48,7 +47,8 @@ class A {
 
 ### Composition
 - Đây là 1 dạng quan hệ **Aggregation** nhưng ở dạng **strong type**
-- Class A có quan hệ `Compostion` với class B khi constructor của class A dùng B như parameter. Khi Instance A được khởi tạo thì instance B cũng được khởi tạo, chúng tồn tại và bị hủy đồng thời
+- Class A có quan hệ `Compostion` với class B khi constructor của class A dùng B như parameter. 
+- Khi Instance A được khởi tạo thì instance B cũng được khởi tạo, **chúng tồn tại và bị hủy đồng** thời
 
 ```java
 class A {
@@ -57,7 +57,6 @@ class A {
     }
 };
 ```
-
 
 ### Association
 - Cũng thể hiện quan hệ giữa hai đối tượng. Mỗi đối tượng đểu có **life cycle riêng** và  **không có mối quan hệ kiểu owner**
@@ -69,6 +68,42 @@ class A {
     private B b;
 };
 ```
+
+## OOAD
+
+### Phases 
+- Object–Oriented Analysis
+- Object–Oriented Design
+    - System Design
+    - Object Design
+- Object–Oriented Implementation and Testing
+
+### OO Analysis
+
+#### Object Modelling
+Object modelling develops the static structure of the software system in terms of objects.
+- Identify objects and group into classes
+- Identify the relationships among classes
+- Create user object model diagram
+- Define user object attributes
+- Define the operations that should be performed on the classes
+- Review glossary
+
+#### Dynamic Modelling
+After the static behavior of the system is analyzed, its behavior with respect to time and external changes needs to be examined. 
+- Identify states of each object
+- Identify events and analyze the applicability of actions
+- Construct dynamic model diagram, comprising of state transition diagrams
+- Express each state in terms of object attributes
+- Validate the state–transition diagrams drawn
+
+#### Functional Modelling
+The functional model shows the processes that are performed within an object and how the data changes as it moves between methods.
+- Identify all the inputs and outputs
+- Construct data flow diagrams showing functional dependencies
+- State the purpose of each function
+- Identify constraints
+- Specify optimization criteria
 
 
 ## ✅ Design Pattern
@@ -84,8 +119,6 @@ Dưới đây là 2 trang web mình hay dùng để tham khảo :)) Có phải t
 
 Sau khi xem qua sơ 2 web trên đó, bạn có thể nhận thấy họ vẽ các cơ số hình học, ký hiệu lạ lùng để miêu tả quan hệ cũng như phương thức của các class. Yup, đó là UML. 
 
----
-
 ## ✅ Unified Modeling Language (UML)
 Vietsub: (Theo wiki) Ngôn ngữ mô hình hóa thống nhất =)) 
 
@@ -95,7 +128,6 @@ Cho tấm hình nghiền ngẫm chứ chả biết nói gì thêm :p
 
 ![UML Example with Explaination](@/images/uml-example.png)
 
----
 
 
 ## ✅ SOLID Principles
@@ -137,7 +169,6 @@ This principle advises software designers to avoid depending on things that they
 Thay vì dùng 1 interface lớn, ta nên tách thành nhiều interface nhỏ, với nhiều mục đích cụ thể
 
 
-
 ### Dependency inversion principle (DIP)
 
 ::: tip
@@ -146,7 +177,7 @@ The code that implements high-level policy should not depend on the code that im
 
 Interface (abstraction) không nên phụ thuộc vào chi tiết, mà ngược lại. ( Các class giao tiếp với nhau thông qua interface, không phải thông qua implementation.)
 
----
+
 
 ## note nhẹ
 
@@ -164,3 +195,4 @@ Bên cạnh `Abstract class` là class ko thể khởi tạo trực tiếp thì 
 - [Design Bí kíp – Hồi 2: UML truyền thuyết](http://www.giaosucan.com/2016/11/design-bi-kip-hoi-2-uml-truyen-thuyet.html)
 - [SOLID LÀ GÌ?](https://toidicodedao.com/2015/03/24/solid-la-gi-ap-dung-cac-nguyen-ly-solid-de-tro-thanh-lap-trinh-vien-code-cung/)
 - [Quan Hệ Giữa SOLID, GoF và Coding Guideline, Tại Sao Bạn Phải Quan Tâm?](https://medium.com/eway/quan-h%E1%BB%87-gi%E1%BB%AFa-solid-gof-v%C3%A0-coding-guideline-t%E1%BA%A1i-sao-b%E1%BA%A1n-ph%E1%BA%A3i-quan-t%C3%A2m-ca755e6c3ad5)
+- [OOAD - Object Oriented System](https://www.tutorialspoint.com/object_oriented_analysis_design/ooad_object_oriented_system.htm)

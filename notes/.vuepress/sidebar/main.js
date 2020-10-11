@@ -65,12 +65,19 @@ module.exports = [
         '/javascript/stories/weird',
         '/javascript/stories/es6',
         '/snippets/regex',
-        '/snippets/custom_promise_all',
         '/snippets/event_storage',
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
+        '/javascript/functor',
         '/snippets/mocha',
         '/snippets/firebase',
+        {
+          title: 'Snippets',
+          children: [
+            '/snippets/custom_promise_all',
+            '/snippets/access_object',
+          ]
+        }
       ]
     },
     {
