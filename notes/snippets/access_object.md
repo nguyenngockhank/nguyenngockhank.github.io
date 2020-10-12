@@ -41,17 +41,13 @@ function accessTo(o, s) {
     var a = s.split('.');
     for (var i = 0, n = a.length; i < n; ++i) {
         var k = a[i];
-        if(_.isNull(o) || _.isUndefined(o)) {
+        if(null === o || undefined === o) {
             return;
         }
-        if (k in o) {
-            if(!_.has(o,k)){
-                return;
-            }
-            o = o[k];
-        } else {
+        if (typeof o !== 'object' || !(k in o)) {
             return;
         }
+        o = o[k];
     }
     return o;
 }
