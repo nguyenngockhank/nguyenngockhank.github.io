@@ -46,6 +46,7 @@ module.exports = [
         '/terms/oop',
         '/terms/testing',
         '/terms/ddd',
+        '/terms/concurrent',
         '/quotes',
       ]
     },
@@ -55,6 +56,7 @@ module.exports = [
         '/db/architect',
         '/db/optimize',
         '/db/mysql_snippets',
+        '/db/postgre',
         '/db/sql_nosql',
       ]
     },
