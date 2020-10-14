@@ -22,7 +22,7 @@ INSERT INTO monthly_savings
 VALUES (
     'Manisha', 
     '{20000, 14600, 23500, 13250}', 
-    '{{“FD”, “MF”}, {“FD”, “Property”}}'
+    '{ {“FD”, “MF”}, {“FD”, “Property”} }'
 ); 
 ```
 :::
