@@ -38,6 +38,20 @@ là hàng đợi thực hiện theo tuần tự.
  là hàng đợi thực hiện đồng thời.
 :::
 
+
+## Locking
+
+::: tip
+**Pessimistic approaches** lock data records to prevent conflicts. 
+**Optimistic approaches** detect conflicts and fix them.
+:::
+
+Optimistic Locking sử dụng phù hợp trong các trường hợp có nghiệp vụ xác suất conflict giữa 2 transaction là thấp. Nhược điểm của Optimistic Offline Locking là chỉ verify trên các câu lệnh UPDATE và DELETE, vẫn có thể gây ra inconsistent khi read dữ liệu.
+
+
+Pessimistic Locking sử dụng phù hợp trong các nghiệp vụ có khả năng xảy ra conflict cao. Nếu bạn sử dụng Pessimistic Lock, bạn nên cân nhắc đến việc xử lý timeout cho các long transaction để tránh deadlock.
+
+
 ## Critical section
 
 ::: tip Critical section
@@ -68,6 +82,7 @@ một code được gọi là thread safe code khi trong môi trường multi-th
 ::: tip Atomicity
 một tác vụ hoặc một công việc cụ thể được cho là atomic khi nó không thể bị gián đoạn. Có nghĩa là nó được đảm bảo sẽ được hoàn thành, không có trường hợp trả ra một trạng thái không hợp lệ nào đó (lỗi). Đây cũng là một ví dụ của thread safe.
 :::
+
 
 
 ## References

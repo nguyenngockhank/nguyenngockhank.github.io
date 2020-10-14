@@ -1,8 +1,52 @@
-# SQL vs. NoSQL
+# NoSQL
 
-![SQL vs NoSQL](@/images/compare/sql-nosql.png)
+## Definition
 
-<!-- ![SQL vs NoSQL](@/images/compare/sql-nosql-compare.png) -->
+*There's no strong definition of the concept out there, no trademarks, no standard group, not even a manifesto.*
+
+Some characteristics are common amongst these databases, but none are definitional.
+- Not using the relational model (nor the SQL language)
+- Open source
+- Designed to run on large clusters
+- Based on the needs of 21st century web properties
+- No schema, allowing fields to be added to any record without controls
+
+## Data Models
+
+![Data Model](./img/nosql-data-model.png)
+
+- Document
+- Column-family
+- Key-value
+- Graph
+
+### Aggregate Data Model
+
+An aggregate is a collection of data that we interact with as a unit. Aggregates form the boundaries for ACID operations with the database.
+
+Key-value, document, and column-family databases can all be seen as forms of aggregate-oriented database.
+
+Aggregates make it easier for the database to manage data storage over clusters.
+
+Aggregate-oriented databases **work best when most data interaction is done with the same aggregate**; aggregate-ignorant databases are better when interactions use data organized in many different formations.
+
+## Polygot Persistence
+
+![Polygot Database](./img/polyglot.png)
+
+Polyglot persistence is about using different data storage technologies to handle varying data storage needs.
+
+Polyglot persistence can apply across an enterprise or within a single application.
+
+Encapsulating data access into services reduces the impact of data storage choices on other parts of a system.
+
+Adding more data storage technologies increases complexity in programming and operations, so the advantages of a good data storage fit need to be weighed against this complexity.
+
+
+## Sql vs. NoSql
+![SQL vs NoSQL](./img/sql-nosql.png)
+
+<!-- ![SQL vs NoSQL](./img/sql-nosql-compare.png) -->
 
 |  | NoSQL | SQL
 | -- | -------|--------|
@@ -26,3 +70,14 @@
 - **UnQL**: Unstructured Query Language
 - **ACID**: Atomicity, Consistency, Isolation and Durability
 - **CAP**: Consistency, Availability and Partition tolerance 
+
+
+
+
+## References 
+
+- [Key Points from NoSQL Distilled](https://martinfowler.com/articles/nosqlKeyPoints.html)
+
+
+### Introduction to NoSQL - Martin Fowler
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qI_g07C_Q5I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

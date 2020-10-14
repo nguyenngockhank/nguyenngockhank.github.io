@@ -8,6 +8,17 @@
 CREATE TABLE foo SELECT * FROM bar LIMIT 0
 ```
 
+## Move row from 1 table to another
+
+Archived purpose - an an alternative way to soft delete. Avoid inserting duplication by unique key case.
+
+```sql
+INSERT INTO archived_posts 
+    SELECT * FROM posts WHERE id = 1;
+
+DELETE FROM posts WHERE id = 1;
+```
+
 ## Sort by relevant (Fulltext search)
 
 ```sql{2,3,5}
@@ -68,7 +79,6 @@ order by (
     END 
 ) 
 ```
-
 
 
 

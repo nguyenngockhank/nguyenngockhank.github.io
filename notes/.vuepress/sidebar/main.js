@@ -57,7 +57,7 @@ module.exports = [
         '/db/optimize',
         '/db/mysql_snippets',
         '/db/postgre',
-        '/db/sql_nosql',
+        '/db/nosql',
       ]
     },
     {
