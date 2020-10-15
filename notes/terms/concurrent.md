@@ -83,7 +83,11 @@ một code được gọi là thread safe code khi trong môi trường multi-th
 một tác vụ hoặc một công việc cụ thể được cho là atomic khi nó không thể bị gián đoạn. Có nghĩa là nó được đảm bảo sẽ được hoàn thành, không có trường hợp trả ra một trạng thái không hợp lệ nào đó (lỗi). Đây cũng là một ví dụ của thread safe.
 :::
 
+## Lamport's bakery algorithm
 
+::: tip Lamport's bakery algorithm 
+Lamport's bakery algorithm is a computer algorithm devised by computer scientist Leslie Lamport, as part of his long study of the formal correctness of concurrent systems, which is intended to improve the safety in the usage of shared resources among multiple threads by means of mutual exclusion.
+:::
 
 ## References
 

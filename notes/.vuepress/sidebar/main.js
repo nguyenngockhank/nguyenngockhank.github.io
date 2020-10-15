@@ -21,6 +21,7 @@ module.exports = [
         '/algorithm/authority',
         '/algorithm/sort',
         '/algorithm/no_if_loop',
+        '/algorithm/bakery', 
       ]
     },
     {
