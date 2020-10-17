@@ -1,0 +1,1 @@
+const abc = new Abc();
