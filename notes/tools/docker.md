@@ -1,9 +1,19 @@
 # Docker
 [[toc]]
 
-## Commands
 
-### Image
+## Terms
+
+- **Docker Hub**: store Docker Image
+- **Docker Engine**: create **Docker Image** & run **Docker Container**
+- **Docker Machine**: create **Docker Engine** on Server
+- **Docker Compose**: run application by defining Docker Container configuration in file
+- **Docker Image**: (immutable)
+- **Docker Container**: … 
+
+## Image
+
+![Image with container](./img/docker-image-container.png)
 
 :::: tabs
 ::: tab "List All"
@@ -18,6 +28,7 @@ docker pull <image:tag>
 # E.g: 
 docker pull centos:6.10 
 ```
+Default tag: `latest`
 :::
 
 ::: tab Inspect
@@ -28,17 +39,36 @@ docker inspect  <ID or NAME>
 
 ::: tab Remove
 ```
-docker rmi <ID or NAME>
+docker rm <ID or NAME>
+
+docker rm -f <ID or NAME>
 ```
 :::
 
+::: tab Save/Load
 
+Save
+```
+docker save --output <filename> <ID or NAME>
+# e.g:
+docker save --output myimage.tar khank-ubuntu
+```
 
+Load
+```
+docker load -i <filename>
+```
+
+Rename
+```
+docker tag f <image-name:tag>
+```
+:::
 ::::
 
---- 
 
-### Container
+
+## Container
 
 :::: tabs
 ::: tab "List All"
@@ -55,19 +85,28 @@ docker ps -a
 ```
 :::
 
-::: tab Start
+::: tab Start/Stop
+
 ```
 docker start <ID or NAME>
-docker exec -it <ID or NAME> /bin/bash
 ```
-:::
 
-::: tab Stop
 ```
 docker stop  <ID or NAME>
 ```
 :::
 
+::: tab Attach/Detach
+
+Attach
+```
+docker attach <ID>
+```
+Detach
+```
+Ctrl + P, Ctrl + Q
+```
+:::
 
 ::: tab Remove
 ```
@@ -75,14 +114,19 @@ docker rm -f <ID or NAME>
 ```
 :::
 
-
 ::: tab "IP Address"
 ```
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <ID or NAME>
 ```
 :::
-
 ::::
+
+### Save as Image
+
+Container must be stoped before committing.
+```
+docker commit <container-name> <new-image-name:tag>
+```
 
 ### Run
 
@@ -100,10 +144,84 @@ multi ports
 docker run -d -p 5801:5801 -p 5802:5802 .....
 ```
 :::
+
+::: tab Volume
+
+```
+docker run -it -v <path-host>:<container-path> <ID or NAME>
+# E.g:
+docker run -it -v /Users/nguyenkhank/Desktop/jav:/home/dulieu ubuntu
+```
+
+Use the same data:
+
+```
+docker run -it --name C2 --volumes-from C1 ubuntu:latest
+```
+:::
+
+::::
+
+### With Volume
+
+```
+docker run -it --name <container-name> --mount source=<volume-name>,target=<container-path> <image-name:tag>
+# E.g:
+docker run -it --name C1 --mount source=D1,target=/home/dulieu ubuntu:16.0.4
+```
+
+Case volume mounted with device
+
+```
+docker run -it --name <container-name> --mount source=<volume-name>,target=<container-path> <image-name:tag>
+# E.g:
+docker run -it --name C1 -v DISK1:/home/dulieu ubuntu:16.0.4
+```
+
+## Volume
+
+:::: tabs
+
+::: tab List
+```
+docker volume ls
+```
+:::
+
+::: tab Create
+```
+docker volume create <Volume-name>
+# E.g:
+docker volume create D1
+```
+
+Mount to device path
+```
+docker create --opt device=<path-host> --opt type=none --opt o=bind <volume-name>
+# E.g
+docker create --opt device=/Users/nguyenkhank/Desktop/jav --opt type=none --opt o=bind DISK1
+```
+:::
+
+::: tab Info
+```
+docker volume inspect <Volume-name>
+# E.g
+docker volume inspect D1
+```
+:::
+
+::: tab Remove
+```
+docker volume rm <Volume-name>
+# E.g
+docker volume rm D1
+```
+:::
 ::::
 
 
-### Network
+## Network
 
 [Detail](https://www.tutorialspoint.com/docker/docker_networking.htm)
 
@@ -114,8 +232,6 @@ docker run -d -p 5801:5801 -p 5802:5802 .....
 docker network ls 
 ```
 :::
-
-
 
 ::: tab "Create New"
 
@@ -140,7 +256,18 @@ docker network inspect <NetworkName>
 
 ### Other
 
-Check Version
+**Info** 
 ```
+docker info
 docker -v
+```
+
+**Help**
+```
+docker image --help
+```
+
+**Search**
+```
+docker search <keyword>
 ```

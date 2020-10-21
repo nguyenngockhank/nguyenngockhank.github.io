@@ -1,6 +1,6 @@
 # phpDocumentor
 
-[phpDocumentor in packagist](https://packagist.org/packages/phpDocumentor/phpDocumentor#v2.9.0)
+[phpDocumentor](https://packagist.org/packages/phpDocumentor/phpDocumentor#v2.9.0)
 
 ## Install 
 
@@ -41,56 +41,47 @@ String Or Null
 private $var;
 ```
 
-
 Array 
 
 ```php
 /** @var int[] this is an array of int */
 private $var;
 ```
-
 :::
-
 
 ::: tab Class
 
 ```php
- /**
-  * This class acts as an example on where to position a DocBlock.
-  */
- class Foo extends FooParent
- {
-     /** @var string|null Should contain a description if available */
-     protected $description = null;
+/**
+* This class acts as an example on where to position a DocBlock.
+*/
+class Foo extends FooParent
+{
+    /** @var string|null Should contain a description if available */
+    protected $description = null;
 
-     /**
-      * This method sets a description.
-      *
-      * @param string $description A text with a maximum of 80 characters.
-      *
-      * @return void
-      *
-      * @throws NullDescriptionException
-      */
-     public function setDescription($description)
-     {
-         // implement ...
-     }
+    /**
+    * This method sets a description.
+    * @param string $description A text with a maximum of 80 characters.
+    * @return void
+    * @throws NullDescriptionException
+    */
+    public function setDescription($description)
+    {
+        // implement ...
+    }
 
     /**
      * {@inheritdoc}
      */
-     public function overrideMethod() 
-     {
-          // implement ...
-     }
+    public function overrideMethod() 
+    {
+        // implement ...
+    }
 }
 ```
 :::
-
 ::::
-
-
 
 
 ## Reference

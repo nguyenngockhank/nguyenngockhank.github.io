@@ -69,7 +69,6 @@ module.exports = [
         '/javascript/stories/weird',
         '/javascript/stories/es6',
         '/snippets/regex',
-        '/snippets/event_storage',
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
         '/javascript/functor',
@@ -78,6 +77,7 @@ module.exports = [
         {
           title: 'Snippets',
           children: [
+            '/snippets/event_storage',
             '/snippets/custom_promise_all',
             '/snippets/access_object',
           ]
@@ -104,6 +104,7 @@ module.exports = [
         '/php/laravel',
         '/php/wordpress',
         '/php/crunz',
+        '/php/phpdoc',
       ]
     },
     {
