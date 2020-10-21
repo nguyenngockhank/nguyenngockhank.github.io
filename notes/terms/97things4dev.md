@@ -4,7 +4,7 @@
 
 [[toc]]
 
-## 1. Hành động một cách thận trọng (Act with Prudence)
+## 1. ✅ Hành động một cách thận trọng (Act with Prudence)
 
 ::: quote
 *Nếu bạn đảm nhận bất cứ việc gì, hãy làm một cách thận trọng và cân nhắc những ảnh hưởng sau này. — Anon*
@@ -19,7 +19,7 @@ Nếu bạn lên kế hoạch trả nợ trong tuần làm việc tới, giá ph
 
 Trả nợ tech càng sớm càng tốt. Còn không thì đồng nghĩa với việc bạn thiếu thận trọng.
 
-## 2. Ứng dụng các nguyên tắc của Functional Programming
+## 2. ✅ Ứng dụng các nguyên tắc của Functional Programming
 
 Functional Programming gần đây lấy lại được sự yêu thích ❤️️ từ cộng đồng lập trình. Một phần là bởi vì những tính chất mới của functional programming được đưa ra để giải quyết các khó khăn gặp phải trong ngành của chúng ta. Tuy nhiên, dù đấy là một ứng dụng quan trọng, nhưng nó cũng không phải là lý do buộc bạn phải biết functional programming.
 
@@ -45,7 +45,7 @@ Bài viết này hơi trừu tượng với người mới học nên mình sẽ
 - Các thuật ngữ cần nắm: functional programming, mutability/immutability, pure function/impure function, referential transparency, imperative programming, object-oriented programming, side effect, function composition, first-class function, high order function
 - [Master the JavaScript Interview: What is Functional Programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
 
-## 3. Hãy hỏi “Người dùng họ sẽ làm gì?” (Bạn không phải là người dùng)
+## 3. ✅ Hãy hỏi “Người dùng họ sẽ làm gì?” (Bạn không phải là người dùng)
 
 ::: warning
 CHÚNG TA THƯỜNG CÓ XU HƯỚNG CHO RẰNG NGƯỜI KHÁC CŨNG NGHĨ NHƯ MÌNH.
@@ -71,7 +71,7 @@ Bạn cũng sẽ thấy là có một khoảng cách giữa cái người dùng 
 Từ khoá: user tracking, user behavior, user analytics, user interface, user experience, user testing, A/B test
 
 
-## 4. Tự động hoá tiêu chuẩn code
+## 4. ✅ Tự động hoá tiêu chuẩn code
 
 ![Image for post](./img/97-4.png)
 
@@ -96,7 +96,8 @@ Bài viết này có tính bao quát, áp dụng cho mọi dự án. Đối vớ
 Tham khảo:
 [Javascript Linting and Formatting with ESLint, Prettier, and Airbnb](https://medium.com/@joshuacrass/javascript-linting-and-formatting-with-eslint-prettier-and-airbnb-30eb746db862)​ (đọc kỹ và làm theo nhé)
 
-## 5. Vẻ đẹp nằm trong sự đơn giản
+
+## 5. ✅ Vẻ đẹp nằm trong sự đơn giản
 
 Có câu nói của Plato mà tôi nghĩ khá tốt cho mọi dev nếu họ nắm được và giữ lấy cho mình:
 
@@ -120,7 +121,8 @@ Bạn quay lại rồi à? Tốt. Chúng ta đang nói đến đâu nhỉ? À �
 Cái mà tôi muốn nói là code đẹp là code đơn giản. Mỗi phần nhỏ được làm đơn giản, đảm nhiệm công việc đơn giản, có các mỗi quan hệ đơn giản với các phần khác trong hệ thống. Đây là cách mà chúng ta giữ cho hệ thống có thể bảo trì được trong thời gian dài, cùng với code test được, đơn giản, sạch sẽ, đảm bảo tốc độ phát triển trong toàn bộ thời gian hoạt động của hệ thống.
 Vẻ đẹp được sinh ra và tìm thấy trong sự đơn giản.
 
-## 6. Trước khi bạn refactor
+
+## 6. ✅ Trước khi bạn refactor
 
 Một lúc nào đó, mỗi lập trình viên sẽ cần phải refactor code hiện tại. Nhưng trước khi làm việc này, hãy cân nhắc những việc dưới đây, bởi nó có thể giảm bớt thời gian và công sức cho bạn và người khác
 - Phương pháp tốt nhất cho việc tái cấu trúc bắt đầu từ việc xem xét kỹ lưỡng code hiện tại và các đoạn test liên quan đến code đó. Việc này sẽ làm cho bạn hiểu về ưu nhược điểm của code hiện tại, sau đó bạn có thể chắc rằng sẽ giữ lại những điểm mạnh trong khi tránh được các lỗi. Chúng ta đều tưởng là mình có thể làm tốt hơn hệ thống hiện tại… cho đến cuối cùng chúng ta lại làm ra một cái mới không những không tốt hơn mà có khi còn tệ hơn cái cũ vì chúng ta không học được từ những sai sót của hệ thống hiện tại.
@@ -135,7 +137,8 @@ Qua bài viết này chúng ta có thể thấy việc “đập đi làm lại�
 
 Một cái bẫy khác mà nhiều dev hay rơi vào là chạy theo công nghệ. Khi một công nghệ mới ra mắt, thường thì nó sẽ có nhiều bug mà chúng ta chưa lường tới. Hãy bình tĩnh và đưa ra quyết định sáng suốt: liệu việc chuyển sang công nghệ mới có thực sự giúp được không, và giúp được bao nhiêu?
 
-## 7. Cẩn thận với việc dùng chung code
+
+## 7. ✅ Cẩn thận với việc dùng chung code
 
 ![Image for post](./img/97-7.png)
 
@@ -156,7 +159,8 @@ Cẩn thận với việc xài chung. Hãy kiểm tra ngữ cảnh. Sau đó m�
 
 Khi bạn thấy 2 đoạn code giống nhau, ngay lập tức bạn sẽ nghĩ tới việc tách chúng ra thành một function để có thể dùng chung. Hãy cân nhắc xem ngữ cảnh của chúng có giống nhau không. Liệu trong tương lai khi business của 1 trong 2 bên thay đổi thì phần dùng chung đó có còn được dùng chung nữa không, nếu không thì bạn nên xem lại.
 
-## 8. The Boy Scout Rule
+
+## 8. ✅ The Boy Scout Rule
 
 ![The Boy Scout](./img/97-8.png)
 
@@ -172,7 +176,8 @@ Thật ra mà nói, nghe có vẻ như là một phép tắc — giống như vi
 
 Nhưng còn hơn thế nữa. Quan tâm đến code của bạn là một việc. Quan tâm tới code của cả team là việc khác nữa. Team giúp lẫn nhau và cùng nhau dọn dẹp. Chúng ta tuân theo The Boy Scout Rule bởi nó tốt cho tất cả mọi người, không chỉ riêng ai.
 
-## 9. Nhìn lại code của mình trước khi định đổ lỗi cho người khác
+
+## 9. ✅ Nhìn lại code của mình trước khi định đổ lỗi cho người khác
 
 Tất cả developer chúng ta! — thường khó tin vào việc code của mình bị lỗi. Còn chuyện compiler bị lỗi thì khó có thể xảy ra, dù chỉ một lần.
 
@@ -192,7 +197,8 @@ Những lỗi liên quan đến đa luồng là những kiểu bug làm cho chú
 
 Do vậy, trước khi vội đổ lỗi cho compiler, hãy nhớ lời khuyên của Sherlocklock Holme: “*Khi bạn đã loại bỏ những điều không thể xảy ra thì điều cuối cùng, dù khó tin đến đâu, chắc chắn là sự thật.*”, và của Dirk Gently “*Khi bạn đã loại bỏ những điều khó tin thì điều cuối cùng, dù có vẻ bất khả thi, cũng phải là sự thật.*”
 
-## 10. Chọn tool một cách cẩn thận
+
+## 10. ✅ Chọn tool một cách cẩn thận
 
 **CÁC ỨNG DỤNG HIỆN NAY THƯỜNG HIẾM KHI ĐƯỢC BUILD TỪ CON SỐ 0.** Chúng được ráp lại từ những công cụ sẵn có — các component, các thư viện, framework — vì một số các lý do:
 - Ứng dụng lớn lên theo kích thước, độ phức tạp, tinh xảo, trong khi thời gian phát triển chúng không tăng nhiều. Nếu người ta có thể tập trung vào viết nhiều hơn code phục vụ business, ít code hệ thống hơn thì sẽ tận dụng được trí não và thời gian của dev.
@@ -209,7 +215,8 @@ Tuy nhiên, chọn các công cụ phù hợp cho ứng dụng của bạn có t
 
 Cách mà tôi tránh các vấn đề trên là bắt đầu từ nhỏ bằng việc sử dụng các công cụ thực sự cần thiết. Thường thì mục tiêu ban đầu sẽ là loại bỏ việc phải động đến các đoạn code hạ tầng low-level. Sau đó thêm vào sau nếu cần. Tôi cũng có xu hướng tách riêng những công cụ bên ngoài với các object của business domain bằng việc sử dụng interface, chia lớp, để mà sau này tôi có thể ít tốn công thay thế các tool này nhất. Một tác dụng phụ tích cực của việc này là tôi thường có ứng dụng gọn hơn và ít dùng các tool bên ngoài hơn dự đoán ban đầu.
 
-## 11: Thông thạo lĩnh vực của bạn
+
+## 11: ✅ Thông thạo lĩnh vực của bạn
 
 Hãy xem qua đoạn code này:
 ```java
@@ -244,7 +251,8 @@ Khiến cho những khái niệm trong ngành trở nên dễ hiểu trong code 
 Cùng với những gì tốt đẹp nhất, thay đổi là cần thiết nhưng những luật lệ chỉ xuất hiện ở một nơi duy nhất, và bạn có thể thay đổi nó không cần sự phụ thuộc chính là khôn ngoan.
 Một lập trình viên mà chỉ đến làm việc cùng bạn trong vài tháng sẽ cảm ơn bạn. Và người đó có thể là chính bạn.
 
-## 12: Code is design
+
+## 12: ✅ Code is design
 
 Thử tưởng tượng rằng ngày mai bạn thức dậy và nhận ra mình đang theo học ngành xây dựng, một ngành đã làm nên bước đột phá của thế kỷ. Hàng triệu con robot giá rẻ, cực kì nhanh có thể chế tạo vật liệu từ không khí, chi phí gần như bằng không và có thể tự sửa chữa. Hơn thế nữa, chúng có thể đưa ra một kế hoạch chi tiết cho dự án cũng như tự xây dựng mà không cần sự can thiệp của con người, với chi phí là không đáng kể.
 
@@ -260,7 +268,8 @@ Chúng ta không nên ngạc nhiên vì câu chuyện này trước đó đã di
 
 May thay, mô hình này cũng có những thứ giúp cho chúng ta có thể trở nên tốt hơn. Mô phỏng vật lý giống như những thử nghiệm tự động; thiết kế phần mềm sẽ không thể hoàn hảo cho đến khi nó vượt qua được các thử nghiệm. Để khiến cho các thử nghiệm hiệu quả hơn, chúng ta đang tìm cách để kiềm chế trong không gian trạng thái khổng lồ của các hệ thống lớn. Cải thiện ngôn ngữ và thực hành thiết kế cho chúng ta niềm hy vọng. Cuối cùng, có một thực tế không thể chối cãi là: những thiết kế tuyệt vời được tạo ra bởi những nhà thiết kế vĩ đại làm chủ được công việc của họ. Với code cũng vậy.
 
-## 13: Các vấn đề về cấu trúc code
+
+## 13: ✅ Các vấn đề về cấu trúc code
 
 Rất lâu trước đây, tôi đã làm việc trên một hệ thống Cobol nơi nhân viên không được phép thay đổi thụt đầu dòng trừ khi họ có lý do để thay đổi code, bởi vì ai đó đã từng phá vỡ một vài thứ bằng cách để một dòng trượt vào một trong những cột đặc biệt ở
 đầu dòng. Điều này bị áp dụng ngay khi bố cục sai lệch, đôi khi nó là như vậy, vì vậy chúng tôi phải đọc code rất cẩn thận vì chúng tôi không thể tin tưởng được. Các chính sách phải có chi phí rất lớn trong việc lôi kéo lập trình viên.
@@ -274,7 +283,8 @@ Việc cắt giảm đầu tiên là để nhóm đồng ý về một trình đ
 
 Một người bạn không phải lập trình viên đã từng nhận xét rằng code trông giống như thơ vậy. Tôi có được cảm giác đó từ code thực sự tốt, rằng mọi thứ trong văn bản đều có mục đích và nó ở đó để giúp tôi hiểu ý tưởng. Thật không may, viết code không có hình ảnh lãng mạn giống như viết thơ.
 
-## 14: Review code
+
+## 14: ✅ Review code
 
 Vì sao bạn nên làm điều này? Review code giúp code sạch và đẹp hơn. Tuy nhiên các lập trình viên thường bỏ qua việc này vì cho rằng nó không quá cần thiết.
 
@@ -284,13 +294,14 @@ Ngoài đơn giản chỉ là sửa lỗi code, mục đích của một buổi 
 
 Đừng chỉ tìm lỗi trong code của họ, bạn nên đánh giá bằng cách cố gắng học và hiểu nó.
 
-Giữ tâm thế nhẹ nhàng trong một buổi review, đảm bảo rằng những đóng góp của bạn có tính chất xây dựng và thân thiện chứ không phải chê bai một cách tiêu cực. Nên có những vai trò khác nhau trong buổi review, tránh việc kinh nghiệm làm việc khác nhau giữa các thành viên trong nhóm ảnh hưởng tới buổi review. Chẳng hạn chúng ta có thể chia ra những vai trò như sau: Một người đảm nhiệm việc tập trung review vào document, một người tập trung vào những ngoại lệ có thể xảy ra, một người khác thì tập trung vào các chức năng của dự án,… Điều này giúp ích cho mọi người trong nhóm đều có thể tham gia đánh giá cũng như chia đều gánh nặng cho cả nhóm chứ không phải chỉ một người làm hết mọi thứ.
+Giữ tâm thế nhẹ nhàng trong một buổi review, đảm bảo rằng những đóng góp của bạn có tính chất xây dựng và thân thiện chứ không phải chê bai một cách tiêu cực. Nên có những vai trò khác nhau trong buổi review, tránh việc kinh nghiệm làm việc khác nhau giữa các thành viên trong nhóm ảnh hưởng tới buổi review. Chẳng hạn chúng ta có thể chia ra những vai trò như sau: Một người đảm nhiệm việc tập trung review vào document, một người tập trung vào những ngoại lệ ⚠ có thể xảy ra, một người khác thì tập trung vào các chức năng của dự án,… Điều này giúp ích cho mọi người trong nhóm đều có thể tham gia đánh giá cũng như chia đều gánh nặng cho cả nhóm chứ không phải chỉ một người làm hết mọi thứ.
 
 Đều đặn mỗi tuần nên có một ngày hoặc có thể là vài giờ trong những buổi họp để review code. Luân phiên người được review code trong các buổi họp và đừng quên chuyển đổi vai trò của những người review cho nhau. Hãy khuyến khích những người mới trong những buổi review, họ có thể chưa có nhiều kinh nghiệm, tuy nhiên những kiến thức ở đại học có thể mang đến một góc nhìn khác. Mời các chuyên gia có kinh nghiệm để họ có thể giúp xác định những dòng code dễ gây ra lỗi nhanh và chính xác hơn. Kiểm tra coding conventions bằng các công cụ kiểm thử cũng sẽ giúp buổi review trở nên suôn sẻ và dễ dàng hơn, vì những dòng code sau khi được format bằng các công cụ này sẽ không cần phải đem ra thảo luận nữa.
 
 Việc tạo một không khí vui vẻ trong những buổi review cũng rất quan trọng vì dù sao những người review cũng không phải những cỗ máy. Chắc chắn là sẽ chẳng ai thấy hào hứng nếu tham gia một buổi review nặng nề và buồn tẻ cả. Chia sẻ kinh nghiệm với nhau giữa các thành viên trong những buổi review không chính thức, thay vì mỉa mai code của nhau hãy mang theo hoa quả bánh kẹo và thân thiện với mọi người.
 
-## 15: Coding với lý luận
+
+## 15: ✅ Coding với lý luận
 
 Cố gắng lý luận về tính chính xác của phần mềm bằng tay dẫn đến một bằng chứng chính thức còn dài hơn cả code và có khả năng chứa nhiều lỗi hơn. Công cụ tự động thích hợp, nhưng không phải lúc nào cũng khả thi. Những điều sau đây mô tả một vấn đề: lý luận bán chính thức về tính đúng đắn.
 
@@ -313,7 +324,7 @@ Nhiều thực hành coding nổi tiếng (mặc dù có lẽ ít được theo 
 
 Cũng như lý luận về tính đúng đắn, tranh luận về code giúp bạn hiểu thêm về nó. Truyền đạt những hiểu biết bạn có vì lợi ích của mọi người.
 
-## 16: Bàn về việc comment code
+## 16: ✅ Bàn về việc comment code
 
 Trong lớp học lập trình đầu tiên của tôi ở đại học, giáo viên đã phát cho mỗi người hai tờ giấy lập trình (coding sheet) sau đó ông ấy viết bài tập lên bảng rồi rời khỏi phòng, bài tập như sau :
 “*Viết một chương trình nhập vào 10 điểm của trò chơi bowling và tính điểm trung bình cộng*”. Bài toán này có thể khó tới mức nào? Tôi không nhớ cách giải là gì, nhưng tôi chắc nó có sử dụng vòng lặp FOR/NEXT và tổng cộng không quá 15 dòng. Mỗi tờ Coding Sheet chỉ có thể chứa khoảng 70 dòng — Dành cho những ai đang đọc cái này, đúng vậy, chúng tôi đã từng viết code trên giấy rất lâu trước khi thực sự đưa chúng vào máy tính. Tôi đã rất bối rối tại sao giáo viên lại đưa cho chúng tôi 2 tờ trong khi thuật toán chưa tới 15 dòng code. Vì chữ viết của tôi không được đẹp nên tôi đã sử dụng tờ coding sheet còn lại để copy bài code ra một cách rõ ràng hơn với hy vọng có thêm một vài điểm cộng về phong cách.
@@ -328,7 +339,8 @@ Mặt khác, bạn không nên lạm dụng comment. Đảm bảo rằng comment
 
 Trong một lần bàn bạc về công việc, tôi đã không đồng tình với một quyết định về bản thiết kế của cấp trên. Cũng như cách mà các lập trình viên nghiệp dư thường làm, tôi đã copy đoạn văn bản từ email 📮 hướng dẫn sử dụng bản thiết kế của họ vào phần header comment của file project của mình mặc dù trước đó đã tỏ ra sự bất đồng với cấp trên, điều đó khá là xấu hổ. Hóa ra ngay sau khi tôi bàn giao lại sản phẩm, thì các quản lý của shop đã review lại code, tôi nhận ra việc thêm các hướng dẫn đó vào phần header comment đã thực sự cứu tôi. Và đó cũng là lần đầu tiên tôi biết đến thuật ngữ *career-limiting move* (Hành động hoặc lỗi lầm gây trở ngại trong việc thăng tiến sự nghiệp).
 
-## 17: Chỉ nên comment khi nào mà code không thể giải thích
+
+## 17: ✅ Chỉ nên comment khi nào mà code không thể giải thích
 
 Sự khác biệt giữa lý thuyết và thực tiễn trong thực tế lớn hơn rất nhiều so với trên lý thuyết — theo như quan sát thì điều này chắc chắn áp dụng với mọi comments. Trên lý thuyết, ý tưởng cơ bản của comment code nghe có vẻ hữu ích, như: cung cấp chi tiết hơn cho người đọc, giải thích về cái gì đang diễn ra. Còn điều gì có thể hữu ích hơn những điều này cơ chứ? Tuy nhiên, trong thực tế comment đôi khi lại trở thành một điều không tốt. Cũng như với bất kì hình thức viết nào khác, có một loại kỹ năng để viết tốt comments. ## lớn của kỹ năng đó là biết khi nào không nên viết chúng.
 
@@ -341,7 +353,7 @@ Sự xuất hiện ngày càng nhiều của những comment mang tính dư th�
 Nói tóm lại, khi comment cần hạn chế những điều gì? Comments nên nói những điều mà code không nói ra được hoặc không thể nói. Một comment giải thích ý nghĩa của một đoạn code để sẵn sàng cho việc thay đổi cấu trúc đoạn code hoặc lập trình theo những quy ước chung để code có thể tự giải thích nghĩa cho chính nó. Thay vì dùng để giải thích cho những method hay class đặt tên dở, thì hãy đổi tên của chúng đi. Và thay vì comment từng phần từng phần trong những function dài ơi là dài thì hãy tách chúng ra thành những function nhỏ hơn sao cho tên của chúng vẫn giữ được những mục đích cũ. Hãy cố gắng diễn đạt càng nhiều càng tốt thông qua các đoạn code. Nếu có bất kỳ sự thiếu sót nào giữa việc diễn tả code hay diễn tả những nội dung mang tính bao quát tổng thể thì đây là lúc chúng ta nên comment. Comment những gì mà code không thể nói ra, nó không đơn giản là những gì code không nói được.
 
 
-## 18: Học hỏi không ngừng
+## 18: ✅ Học hỏi không ngừng
 
 Chúng ta đang sống trong những khoảng thời gian thú vị. Khi sự phát triển được phân phối trên toàn cầu, bạn học được rằng có rất nhiều người có khả năng làm công việc của bạn. Bạn cần tiếp tục học hỏi để ở lại với thị trường. Nếu không bạn sẽ trở thành một con khủng long bị mắc kẹt. Cho đến một ngày, trong cùng một công việc, bạn sẽ không còn cần thiết nữa hay công việc của bạn sẽ được chuyển giao cho một số nguồn rẻ hơn.
 Vậy bạn nên làm gì với nó? Một số nhà tuyển dụng đủ hào phóng để cung cấp, đào tạo để mở rộng bộ kỹ năng của bạn. Những người khác có thể không có thời gian rảnh rỗi hay tiền bạc cho bất kì đào tạo nào cả. Vậy để thận trọng, bạn nên có trách nhiệm hơn với việc học tập của mình.
@@ -366,7 +378,7 @@ Sẽ thật tuyệt khi có khả năng mà Neo có trong The Matrix, chúng ta 
 
 Công nghệ thay đổi nhanh chóng. Đừng để bị tụt lại phía sau.
 
-## 19: Convenience Is not an -ility
+## 19: ✅ Convenience Is not an -ility
 
 Nhiều điều đã được đề cập khi nói về tầm quan trọng và thách thức của việc thiết kế API tốt. Thật khó để thành công ngay từ lần đầu và thậm chí còn khó khăn hơn để thay đổi sau này. Đại khái nó giống như việc nuôi dạy một đứa trẻ. Hầu hết các lập trình viên có kinh nghiệm đã học được rằng một API tốt tuân theo mức độ trừu tượng nhất định, thể hiện tính nhất quán, tính đối xứng và hình thành từ vựng cho một ngôn ngữ. Than ôi, nhận thức được các nguyên tắc hướng dẫn không tự động chuyển thành hành vi thích hợp. Ăn nhiều đồ ngọt không tốt cho bạn.
 
@@ -381,7 +393,8 @@ Phép ẩn dụ coi API như một ngôn ngữ có thể hướng chúng ta tớ
 
 Lần tới khi bạn muốn gộp một vài thứ lại với nhau thành một phương thức API, hãy nhớ rằng tiếng Anh không có một từ mang nghĩa *MakeUpYourRoomBeQuietAndDoYourHomeWork*, mặc dù nghe có vẻ thuận tiện cho hoạt động thường xuyên được yêu cầu như vậy.
 
-## 20: Deploy sớm và thường xuyên
+
+## 20: ✅ Deploy sớm và thường xuyên
 
 Việc debug các quá trình sử dụng thực tế và cài đặt thường bị trì hoãn cho đến khi gần kết thúc dự án. Trong một số dự án, việc viết một công cụ cài đặt được giao cho `Released Engineer` (*) người dù không muốn nhưng vẫn phải đảm nhận công việc này. Sự đánh giá và minh họa phải được làm thủ công để đảm bảo rằng mọi thứ đều hoạt động. Kết quả là nhóm không có kinh nghiệm về việc triển khai sử dụng thực tế lại làm nó cho đến khi quá muộn để thay đổi tình hình.
 
@@ -398,7 +411,7 @@ Quá trình cài đặt hay triển khai sử dụng là điều cần thiết c
 **Giải nghĩa:** (*) — ​Kỹ sư chịu trách nhiệm việc compile, kết hợp và đưa vào sản phẩm cuối cùng.
 
 
-## 21: Phân biệt Business exception và Technical exception
+## 21: ✅ Phân biệt Business exception và Technical exception
 
 (*Exception không phải là lỗi, nó là những vấn đề xảy ra một cách ngẫu nhiên không được trông đợi trước, ví dụ như khách hàng cố gắng chuyển tiền trong khi không còn đồng nào trong tài khoản ngân hàng*)
 
@@ -417,7 +430,7 @@ Ngược lại, chúng ta có tình huống không thể hoàn thành một call
 Trộn cả hai technical exception và business exception một cách không rõ ràng và lộn xộn là cách mà method contract hoạt động. Có những điều kiện phải được đáp ứng để đảm bảo trước khi gọi (caller), và lường trước những tình huống exception mà có thể sẽ gặp. Phân chia ra những trường hợp như vậy sẽ khiến cho mọi thứ rõ ràng và tăng cơ hội những technical exception được xử lý bởi application framework, trong khi đó business exception sẽ được xử lý bên phía client.
 
 
-## 22. Luyện tập có chủ đích
+## 22. ✅ Luyện tập có chủ đích
 
 Luyện tập có chủ đích không phải chỉ đơn giản là thực hiện một tác vụ. Nếu bạn tự hỏi, *“Tại sao tôi lại thực hiện tác vụ này?”* và câu trả lời của bạn là, “*Để hoàn thành tác vụ*”, thì bạn đang không luyện tập có chủ đích. Bạn luyện tập có chủ đích để cải thiện khả năng thực hiện một tác vụ. Luyện tập có chủ đích bao gồm về mặt kỹ năng lẫn kỹ thuật. Luyện tập có chủ đích có nghĩa là sự lặp lại. Nó có nghĩa là thực hiện tác vụ với mục đích tăng khả năng làm chủ của bạn về một hoặc nhiều khía cạnh của tác vụ. Nó có nghĩa là lặp lại sự lặp lại. Dần dần, lặp đi lặp lại, cho đến khi bạn đạt được mức độ thành thạo mong muốn. Bạn luyện tập có chủ đích để làm chủ tác vụ, không phải để hoàn thành tác vụ. Mục đích chính của phát triển có trả tiền là hoàn thành một sản phẩm, trong khi mục đích chính của luyện tập có chủ đích là cải thiện hiệu suất của bạn. Chúng không giống nhau. Hãy tự hỏi, bạn dành bao nhiêu thời gian để phát triển sản phẩm của người khác? Làm thế nào nhiều phát triển bản thân? Cần bao nhiêu luyện tập có chủ đích để có được chuyên môn?
 
@@ -438,7 +451,7 @@ Luyện tập có chủ đích có nghĩa là luyện tập một cái gì đó 
 Thực hành có chủ ý là học tập. Về việc học cách thay đổi bạn; học cách thay đổi hành vi của bạn. Chúc bạn may mắn.
 
 
-## 23: Domain-Specific Languages
+## 23: ✅ Domain-Specific Languages
 
 Bất cứ khi nào bạn nghe được một cuộc thảo luận của những chuyên gia trong nghề, có thể là những cờ thủ, giáo viên mẫu giáo, hoặc đại lý bảo hiểm, bạn sẽ thấy rằng họ dùng những từ khá khác so với ngôn ngữ hằng ngày. Đó là một phần của câu trả lời cho câu hỏi ngôn ngữ miền chuyên biệt (DSLs) là gì: Một tên miền cụ thể có từ vựng chuyên ngành để mô tả những thứ có trong tên miền đó.
 
@@ -450,7 +463,7 @@ DSLs thường được phân thành hai loại là internal hoặc external:
 Bạn phải luôn đưa đối tượng mục tiêu của DSL của bạn vào một tài khoản. Họ là nhà phát triển, nhà quản lý, khách hàng doanh nghiệp hay người dùng cuối? Bạn phải điều chỉnh trình độ kỹ thuật của ngôn ngữ, các công cụ có sẵn, trợ giúp cú pháp (ví dụ: intellisense), xác thực sớm, trực quan hóa và đại diện cho đối tượng dự định. Bằng cách ẩn đi chi tiết kỹ thuật, DSLs có thể trao quyền cho người dùng bằng cách cung cấp cho họ khả năng thích ứng các hệ thống theo nhu cầu của họ mà không cần sự trợ giúp của các nhà phát triển. Nó cũng có thể tăng tốc độ phát triển vì phân phối công việc tiềm năng sau khi khung ngôn ngữ ban đầu được đưa ra. Ngôn ngữ có thể được phát triển dần dần. Ngoài ra còn có các đường di chuyển khác nhau cho các biểu thức hiện và ngữ pháp hiện có.
 
 
-## 24: Đừng sợ đột phá
+## 24: ✅ Đừng sợ đột phá
 
 Những người có kinh nghiệm trong nghề chắc hẳn đã từng làm ở những project mà chất lượng codebase kém. Dự án được thiết kế một cách tồi tệ, và chỉnh sửa một vấn đề luôn luôn làm ảnh hưởng ít hay nhiều đến những tính năng hoàn toàn không liên quan khác. Bất cứ khi nào một module mới được thêm vào, mục đích của người lập trình viên là làm thay đổi ít nhất có thể, và “*nín thở*” mỗi khi phát hành phiên bản mới. Điều này khiến chương trình tương tự việc chơi trò rút gỗ với những thanh sắt I trong những tòa nhà chọc trời và chính nó là cội nguồn của tai hoạ.
 
@@ -463,7 +476,7 @@ Hãy tái định nghĩa về giao diện, tái cấu trúc những khối lện
 Hãy trở thành vị bác sĩ không sợ việc phải giải phẫu sáu bộ phận để tạo tiền giúp bệnh nhân hồi phục. Thái độ của bạn sẽ truyền cho mọi người và tạo cho họ cảm hứng bắt đầu làm việc trở lại cải tiến những dự án mà họ đã dẹp sang một bên. Hãy giữ một danh sách những công việc “dọn dẹp” mà nhóm của bạn cảm thấy những công việc ấy giúp ích cho lợi ích chung của dự án của team bạn. Hãy thuyết phục mọi người rằng mặc dù chúng ta không thể thấy kết quả của những việc ấy nhưng chính chúng sẽ góp phần làm giảm chi phí và đẩy nhanh việc phát hành tính năng mới. Hãy luôn quan tâm đến tình trạng code của bạn như sức khoẻ của chính bản thân ta.
 
 
-## 25: Don’t Be Cute with Your Test Data
+## 25: ✅ Don’t Be Cute with Your Test Data
 
 Trời đã khuya. Tôi đã đưa vào một số dữ liệu giữ chỗ để kiểm tra bố cục trang tôi đang làm việc.
 
@@ -493,7 +506,7 @@ Ngay cả mã nguồn của bạn cũng không nhất thiết phải xem xét k�
 Tóm lại, khi viết bất kỳ văn bản nào trong mã của bạn — cho dù bình luận, ghi nhật ký, hộp thoại hoặc dữ liệu thử nghiệm — luôn tự hỏi bản thân nó sẽ trông như thế nào nếu nó trở nên công khai. Nó sẽ lưu một số khuôn mặt đỏ tròn đấy.
 
 
-## 26: Đừng bỏ qua những cảnh báo lỗi
+## 26: ✅ Đừng bỏ qua những cảnh báo lỗi
 
 Một đêm, tôi đang đi bộ đến quán bar để gặp vài người bạn. Chúng tôi đã không uống bia cùng nhau một thời gian và tôi đang rất mong gặp lại họ. Trong lúc hối hả, tôi không để ý những thứ tôi lướt qua. Tôi vấp vào một mô đất và ngã dập mặt. Vâng, tôi đã bất cẩn và lãnh hậu quả ngay tức khắc.
 
@@ -508,7 +521,7 @@ Chúng ta kiểm tra lỗi trong code theo nhiều cách, bao gồm:
 
 Mã trả về được sử dụng như là kết quả cuối cùng của một hàm (function) với hàm ý rằng “*nó không chạy được*”. Lỗi này rất dễ bị bỏ qua. Bởi vì nó chẳng hề được thông báo gì cả. Trên thực tế, đối với các functions trong ngôn ngữ C, việc bỏ qua những mã trả về kiểu này đã trở thành một thói quen chung mất rồi. Bạn có mấy khi sử dụng hàm printf để kiểm tra mã trả về đâu, đúng không?
 
-**Errno** (error number — mã số lỗi) đây là một biến số đặc trưng của C, một biến global riêng biệt được thiết lập để thông báo lỗi. Nó cũng hay bị bỏ qua, cũng rất khó xài, và thường mang tới một mớ vấn đề gây nhức óc. Ví dụ, sẽ thế nào nếu bạn gọi đa luồng trong một hàm? Một số môi trường có thể ngăn bạn phạm vào những lỗi thế này. Nhưng hầu hết thì không **Exception** (ngoại lệ ❗️) là một phương án được thiết kế để hỗ trợ cho việc thông báo và xử lý lỗi trong ngôn ngữ lập trình. Và nó không thể bị bỏ qua. Mà thực ra vẫn có thể!! Tôi đã chứng kiến nhiều đoạn code như thế này.
+**Errno** (error number — mã số lỗi) đây là một biến số đặc trưng của C, một biến global riêng biệt được thiết lập để thông báo lỗi. Nó cũng hay bị bỏ qua, cũng rất khó xài, và thường mang tới một mớ vấn đề gây nhức óc. Ví dụ, sẽ thế nào nếu bạn gọi đa luồng trong một hàm? Một số môi trường có thể ngăn bạn phạm vào những lỗi thế này. Nhưng hầu hết thì không **Exception** (ngoại lệ ⚠) là một phương án được thiết kế để hỗ trợ cho việc thông báo và xử lý lỗi trong ngôn ngữ lập trình. Và nó không thể bị bỏ qua. Mà thực ra vẫn có thể!! Tôi đã chứng kiến nhiều đoạn code như thế này.
 
 ```java
 try {
@@ -535,28 +548,45 @@ Tại sao chúng ta không kiểm tra những cảnh báo lỗi? Có nhiều lý
 - Tôi biết hàm này sẽ không bao giờ trả về lỗi (hàm printf luôn hoạt động trôi chảy, hàm malloc luôn trả về vùng nhớ mới -– mà giả sử nó không hoạt động thì chúng ta sẽ gặp một vấn đề khác còn nghiêm trọng hơn…)
 - Đây chỉ là một chương trình làm giải trí thôi, Không cần phải nâng level nó lên như thế.
 
-## 27: Đừng chỉ học ngôn ngữ, hãy hiểu văn hóa của nó
-Ở trường trung học, tôi phải học ngoại ngữ.Vào thời điểm đó, tôi đã nghĩ rằng mình đã giỏi tiếng Anh nên tôi đã chọn (ngủ) quên trong suốt ba năm học tiếng Pháp.Vài năm sau tôi đến Tunisia vào kỳ nghỉ.Ở đây tiếng Ả Rập là ngôn ngữ chính thức , ngoài ra thì tiếng pháp cũng được sử dụng phổ biến do nơi đây trước kia từng là một thuộc địa cũ của Pháp .Tiếng Anh chỉ được nói ở các khu vực du lịch.Vì sự thiếu hiểu biết về ngôn ngữ của mình, tôi thấy mình bị giam cầm tại bể bơi khi đang đọc cuốn Finnegans Wake — một kiệt tác thành công của James Joyce về hình thức lẫn ngôn ngữ.Sự pha trộn vui tươi của hơn bốn mươi ngôn ngữ của Joyce là một trải nghiệm mệt mỏi đáng ngạc nhiên.Nhận ra cách mà các từ và cụm từ nước ngoài đan xen đã tạo cho tác giả những cách thể hiện mới về bản thân là điều mà tôi đã giữ trong sự nghiệp lập trình của mình.
-Trong cuốn sách SEMINAL của họ,The Pragmatic Programmer ,Andy Hunt and Dave Thomas khuyến khích chúng ta học một ngôn ngữ lập trình mới mỗi năm.Tôi đã cố gắng sống theo lời khuyên của họ và trong suốt những năm qua tôi đã có kinh nghiệm lập trình bằng nhiều ngôn ngữ. Bài học quan trọng nhất của tôi từ những cuộc phiêu lưu đấy là cần nhiều hơn( so với việc ) là chỉ học cú pháp hay công thức để học một ngôn ngữ: Bạn cần hiểu văn hóa của nó.Bạn có thể viết Fortran bằng bất kỳ ngôn ngữ nào, nhưng để thực sự học một ngôn ngữ, bạn phải (Thực sự hiểu ) ngôn ngữ đó. Đừng viện cớ nếu mã nguồn C# là một phương thức
-Main với các phương thức trợ giúp tĩnh chủ yếu, nhưng tìm hiểu lý do tại sao các lớp có ý nghĩa. Đừng né tránh nếu bạn gặp khó khăn trong việc hiểu các biểu thức lambda được sử dụng trong các ngôn ngữ chức năng, hãy ép mình sử dụng chúng.
-Khi bạn đã học được các ngôn ngữ mới, bạn sẽ ngạc nhiên về cách bạn sẽ bắt đầu sử dụng các ngôn ngữ bạn đã biết theo những cách mới.Tôi đã học cách sử dụng delegate một cách hiệu quả trong C # từ lập trình Ruby, release toàn bộ tiềm năng ( full of potential) của .NET generics đã cho tôi ý tưởng về cách tôi có thể làm cho Java generics trở nên hữu ích hơn và LINQ đã tự mình dạy Scala.
-Bạn cũng sẽ hiểu rõ hơn về design patterns bằng cách di chuyển giữa các ngôn ngữ khác nhau. Các lập trình viên C thấy rằng C # và Java đã thương mại hóa mẫu lặp.
-Trong Ruby và các ngôn ngữ động khác, bạn vẫn có thể sử dụng một khách truy cập, nhưng việc triển khai của bạn sẽ không giống như ví dụ từ cuốn sách Gang of Four.
-Một số người có thể lập luận rằng cuốn Finnegans Wake là không thể đọc được, trong khi những người khác hoan nghênh nó vì vẻ đẹp phong cách của nó. Để làm cho cuốn sách trở nên ít khó đọc hơn thì cuốn sách đã có sẵn các bản dịch ngôn ngữ. Trớ trêu thay , đầu tiên trong số này là bằng tiếng Pháp. Code theo nhiều cách tương tự nhau. Nếu bạn viết code Wakese bằng một ít Python, một số Java và một gợi ý về Erlang, các dự án của bạn sẽ là một mớ hỗn độn.Thay vào đó, nếu bạn khám phá các ngôn ngữ mới để mở rộng tâm trí và có được những ý tưởng mới về cách bạn có thể giải quyết mọi thứ theo nhiều cách khác nhau, bạn sẽ thấy rằng code bạn viết bằng ngôn ngữ cũ đáng tin cậy của bạn trở nên đẹp hơn cho mọi ngôn ngữ mới bạn đã học.
 
-## 28: Đừng cố gắng rập khuôn chương trình của bạn.
-Tôi đã từng viết một bài kiểm tra C++, trong bài kiểm tra đó tôi đề xuất một cách để xử lý ngoại lệ❗️:
-Đó là thêm rất nhiều cấu trúc try…catch ở trong toàn bộ codebase. Thi thoảng chúng tôi đã ngăn chặn lỗi trong ứng dụng của chúng tôi. Do đó chúng tôi đã nghĩ về trạng thái kết quả là “rập khuôn”
+## 27: ✅ Đừng chỉ học ngôn ngữ, hãy hiểu văn hóa của nó
+
+Ở trường trung học, tôi phải học ngoại ngữ.Vào thời điểm đó, tôi đã nghĩ rằng mình đã giỏi tiếng Anh nên tôi đã chọn (ngủ) quên trong suốt ba năm học tiếng Pháp. Vài năm sau tôi đến Tunisia vào kỳ nghỉ. Ở đây tiếng Ả Rập là ngôn ngữ chính thức, ngoài ra thì tiếng pháp cũng được sử dụng phổ biến do nơi đây trước kia từng là một thuộc địa cũ của Pháp. Tiếng Anh chỉ được nói ở các khu vực du lịch. Vì sự thiếu hiểu biết về ngôn ngữ của mình, tôi thấy mình bị giam cầm tại bể bơi khi đang đọc cuốn *Finnegans Wake* — một kiệt tác thành công của James Joyce về hình thức lẫn ngôn ngữ. Sự pha trộn vui tươi của hơn bốn mươi ngôn ngữ của Joyce là một trải nghiệm mệt mỏi đáng ngạc nhiên. Nhận ra cách mà các từ và cụm từ nước ngoài đan xen đã tạo cho tác giả những cách thể hiện mới về bản thân là điều mà tôi đã giữ trong sự nghiệp lập trình của mình.
+
+Trong cuốn sách SEMINAL của họ, The Pragmatic Programmer, Andy Hunt and Dave Thomas khuyến khích **chúng ta học một ngôn ngữ lập trình mới mỗi năm**. Tôi đã cố gắng sống theo lời khuyên của họ và trong suốt những năm qua tôi đã có kinh nghiệm lập trình bằng nhiều ngôn ngữ. Bài học quan trọng nhất của tôi từ những cuộc phiêu lưu đấy là cần nhiều hơn (so với việc) là chỉ học cú pháp hay công thức để học một ngôn ngữ: **Bạn cần hiểu văn hóa của nó.** Bạn có thể viết **Fortran** bằng bất kỳ ngôn ngữ nào, nhưng để thực sự học một ngôn ngữ, bạn phải (Thực sự hiểu) ngôn ngữ đó. Đừng viện cớ nếu mã nguồn **C#** là một phương thức
+
+Main với các phương thức trợ giúp tĩnh chủ yếu, nhưng tìm hiểu lý do tại sao các lớp có ý nghĩa. Đừng né tránh nếu bạn gặp khó khăn trong việc hiểu các biểu thức **lambda** được sử dụng trong các ngôn ngữ chức năng, hãy ép mình sử dụng chúng.
+
+Khi bạn đã học được các ngôn ngữ mới, bạn sẽ ngạc nhiên về cách bạn sẽ bắt đầu sử dụng các ngôn ngữ bạn đã biết theo những cách mới. Tôi đã học cách sử dụng `delegate` một cách hiệu quả trong **C#** từ lập trình **Ruby**, release toàn bộ tiềm năng (full of potential) của **.NET generics** đã cho tôi ý tưởng về cách tôi có thể làm cho **Java generics** trở nên hữu ích hơn và **LINQ** đã tự mình dạy **Scala**.
+
+Bạn cũng sẽ hiểu rõ hơn về **design patterns** bằng cách di chuyển giữa các ngôn ngữ khác nhau. Các lập trình viên **C** thấy rằng **C#** và **Java** đã thương mại hóa mẫu lặp.
+
+Trong Ruby và các ngôn ngữ động khác, bạn vẫn có thể sử dụng một khách truy cập, nhưng việc triển khai của bạn sẽ không giống như ví dụ từ cuốn sách **Gang of Four**.
+
+Một số người có thể lập luận rằng cuốn *Finnegans Wake* là không thể đọc được, trong khi những người khác hoan nghênh nó vì vẻ đẹp phong cách của nó. Để làm cho cuốn sách trở nên ít khó đọc hơn thì cuốn sách đã có sẵn các bản dịch ngôn ngữ. Trớ trêu thay, đầu tiên trong số này là bằng tiếng Pháp. Code theo nhiều cách tương tự nhau. Nếu bạn viết code **Wakese** bằng một ít **Python**, một số **Java** và một gợi ý về **Erlang**, các dự án của bạn sẽ là một mớ hỗn độn. Thay vào đó, nếu bạn khám phá các ngôn ngữ mới để mở rộng tâm trí và có được những ý tưởng mới về cách bạn có thể giải quyết mọi thứ theo nhiều cách khác nhau, bạn sẽ thấy rằng code bạn viết bằng ngôn ngữ cũ đáng tin cậy của bạn trở nên đẹp hơn cho mọi ngôn ngữ mới bạn đã học.
+
+
+## 28: ✅ Đừng cố gắng rập khuôn chương trình của bạn.
+
+Tôi đã từng viết một bài kiểm tra C++, trong bài kiểm tra đó tôi đề xuất một cách để xử lý ngoại lệ ⚠:
+Đó là thêm rất nhiều cấu trúc `try…catch` ở trong toàn bộ codebase. Thi thoảng chúng tôi đã ngăn chặn lỗi trong ứng dụng của chúng tôi. Do đó chúng tôi đã nghĩ về trạng thái kết quả là “rập khuôn”
 đã nhận được từ những kinh nghiệm rất cay đắng.
-Đó là 1 ứng dụng hết sức cơ bản trong thư viện mà chúng tôi tự làm nên, … Nó chứa các đoạn mã để có thể đối phó với tất cả các ngoại lệ❗️. Và dẫn đầu từ Yossian trong cuốn tiểu thuyết Catch-22 (Catch-22 là một cụm từ chỉ một hoàn cảnh, tình huống khó xử mà người ta không thể thoát ra được vì bị mắc kẹt bởi những logic và ràng buộc mâu thuẫn nội tại.
-Từ này bắt nguồn từ tên cuốn tiểu thuyết Catch-22 (1961) của Joseph Heller kể về một anh chàng phi công tên là Yossarian. Yossarian là phi công lái máy bay chiến đấu cho quân đội Ý trong Thế Chiến II. Do lo sợ, Yossarian đã cố tìm cách không phải bay bằng cách tuyên bố mình bị điên. Tuy nhiên, người ta lại bảo anh ta rằng, chỉ có người điên mới muốn bay lúc đó, vì anh ta không muốn bay nên điều đó chứng tỏ anh ta không bị điên, và vì anh ta không bị điên nên anh ta phải tiếp tục bay!). Vì thế chúng tôi quyết định rằng, hay đúng hơn là cảm thấy chúng tôi nên tiếp tục phát triển thư viện này hoặc để nó chết dần chết mòn trong sự cố gắng. và nỗ lực.
-Đến cuối cùng, chúng tôi đan xen nhiều trình xử lý ngoại lệ❗️. Chúng tôi đã trộn cấu trúc xử lý ngoại lệ của Windows với loại ngôn ngữ khác. (Bạn nhớ cấu trúc try … except trong C++ chứ? , tôi nhớ đấy) . Khi xảy ra ngoại lệ một cách không mong muốn, chúng tôi đã cố gắng gọi lại chúng một lần nữa, và cho chúng nhận các tham số khó hơn. Và nhìn lại, chúng tôi thấy khi viết một chuỗi xử lý try … catch trong khối catch của một chuỗi try…catch khác. Một loại nhận thức nào đó len lỏi vào tôi rằng tôi có thể đã vô tình đi từ con đường cao tốc trơn của sự thực hành tốt vào một con đường vô cảm của sự mất trí. Tuy nhiên, đây có lẽ là hồi tưởng khôn ngoan.
+
+Đó là 1 ứng dụng hết sức cơ bản trong thư viện mà chúng tôi tự làm nên, … Nó chứa các đoạn mã để có thể đối phó với tất cả các ngoại lệ ⚠. Và dẫn đầu từ Yossian trong cuốn tiểu thuyết `Catch-22`. Vì thế chúng tôi quyết định rằng, hay đúng hơn là cảm thấy chúng tôi nên tiếp tục phát triển thư viện này hoặc để nó chết dần chết mòn trong sự cố gắng và nỗ lực.
+
+Đến cuối cùng, chúng tôi đan xen nhiều trình xử lý ngoại lệ ⚠. Chúng tôi đã trộn cấu trúc xử lý ngoại lệ ⚠ của Windows với loại ngôn ngữ khác. (Bạn nhớ cấu trúc try … except trong C++ chứ? , tôi nhớ đấy) . Khi xảy ra ngoại lệ ⚠ một cách không mong muốn, chúng tôi đã cố gắng gọi lại chúng một lần nữa, và cho chúng nhận các tham số khó hơn. Và nhìn lại, chúng tôi thấy khi viết một chuỗi xử lý try … catch trong khối catch của một chuỗi try…catch khác. Một loại nhận thức nào đó len lỏi vào tôi rằng tôi có thể đã vô tình đi từ con đường cao tốc trơn của sự thực hành tốt vào một con đường vô cảm của sự mất trí. Tuy nhiên, đây có lẽ là hồi tưởng khôn ngoan.
+
 Không cần phải nói, bất cứ khi nào có sự cố xảy ra trong ứng dụng mà có sử dụng thư viện của chúng tôi. Những sự cố đó sẽ biến mất như các nạn nhân của mafia ở bến cảng. Không để lại bất cứ một dấu vết nào để dẫn đến những sự kinh khủng kế tiếp xảy ra. Bất chấp các thói quen được cho là thảm họa. Cuối cùng chúng tôi đã lưu lại những gì chúng tôi đã làm, một sự đáng hổ thẹn. Chúng tôi đã thay thế toàn bộ mỡ hỗn độn ở trong thư viện đó bằng một cơ chế thông báo lỗi tốt và mạnh mẽ. Nhưng có rất nhiều tai nạn có thể xảy ra.
-Tôi sẽ không làm phiền bạn về điều này — bởi vì tôi biết không ai có thể ngu ngốc như chúng tôi. Nhưng trong một cuộc tranh luận trực tuyến gần đây với một người có chức danh học thuật nên hiển nhiên anh ta biết rõ hơn. Chúng tôi đã thảo luận về đoạn mã Java khi giao dịch từ xa. Và nếu không thành công, anh ta đã lập luận, nên bắt và chặn ngoại lệ ngay tại chỗ. (Và sau đó làm gì với nó? Tôi hỏi: “Nấu cho nó bữa tối?”
-Anh ta đã trích nguyên văn nguyên tắc thiết kế giao diện người dùng. KHÔNG BAO GIỜ CHO NGƯỜI DÙNG NHÌN THẤY THÔNG BÁO NGOẠI LỆ. Thay vì giải quyết vấn đề, liệu chuyện gì sẽ xảy ra khi làm phức tạp mọi thứ. Tôi tự hỏi liệu anh ta có chịu trách nhiệm về mã ở một trong những máy ATM bị màn hình xanh ở trong những bức ảnh được đăng trên blog không, và có thể chúng đã bị hỏng vĩnh viễn. Dù sao thì khi gặp anh ta bạn nên cúi đầu cười, giống như đi về phía cửa.
+
+Tôi sẽ không làm phiền bạn về điều này — bởi vì tôi biết không ai có thể ngu ngốc như chúng tôi. Nhưng trong một cuộc tranh luận trực tuyến gần đây với một người có chức danh học thuật nên hiển nhiên anh ta biết rõ hơn. Chúng tôi đã thảo luận về đoạn mã Java khi giao dịch từ xa. Và nếu không thành công, anh ta đã lập luận, nên bắt và chặn ngoại lệ ngay tại chỗ. (Và sau đó làm gì với nó? Tôi hỏi: *“Nấu cho nó bữa tối?*”
+
+Anh ta đã trích nguyên văn nguyên tắc thiết kế giao diện người dùng. **KHÔNG BAO GIỜ CHO NGƯỜI DÙNG NHÌN THẤY THÔNG BÁO NGOẠI LỆ ⚠**. Thay vì giải quyết vấn đề, liệu chuyện gì sẽ xảy ra khi làm phức tạp mọi thứ. Tôi tự hỏi liệu anh ta có chịu trách nhiệm về mã ở một trong những máy ATM bị màn hình xanh ở trong những bức ảnh được đăng trên blog không, và có thể chúng đã bị hỏng vĩnh viễn. Dù sao thì khi gặp anh ta bạn nên cúi đầu cười, giống như đi về phía cửa.
+
+**Chú thích:**<br/>
+`Catch-22` là một cụm từ chỉ một hoàn cảnh, tình huống khó xử mà người ta không thể thoát ra được vì bị `mắc kẹt bởi những logic và ràng buộc mâu thuẫn nội tại`. Từ này bắt nguồn từ tên cuốn tiểu thuyết Catch-22 (1961) của Joseph Heller kể về một anh chàng phi công tên là Yossarian. Yossarian là phi công lái máy bay chiến đấu cho quân đội Ý trong Thế Chiến II. Do lo sợ, Yossarian đã cố tìm cách không phải bay bằng cách tuyên bố mình bị điên. Tuy nhiên, người ta lại bảo anh ta rằng, chỉ có người điên mới muốn bay lúc đó, vì anh ta không muốn bay nên điều đó chứng tỏ anh ta không bị điên, và vì anh ta không bị điên nên anh ta phải tiếp tục bay!
 
 
-## 29: Đừng dựa vào *Phép màu*
+## 29: ✅ Đừng dựa vào *Phép màu*
 
 Nếu bạn nhìn vào bất cứ hoạt động, quá trình hay sự rèn luyện nào đó một cách mơ hồ thì trông chúng có vẻ đơn giản. Những tên quản lý không có kinh nghiệm về lập trình nghĩ rằng mọi việc mà lập trình viên làm thì đều thật đơn giản, và những lập trình viên không có kinh nghiệm về quản lý cũng nghĩ theo cách tương tự như vậy.
 
@@ -575,7 +605,7 @@ Bạn không phải hiểu hết các phép màu mà giúp cho project của ho�
 Quan trọng nhất, hãy chắc chắn rằng khi phép màu dừng lại, nó vẫn có thể được bắt đầu trở lại.
 
 
-## 30: Nguyên tắc DRY: Don’t repeat yourself
+## 30: ✅ Nguyên tắc DRY: Don’t repeat yourself
 
 Trong tất cả các nguyên tắc lập trình , [Don’t Repeat Yourself (DRY)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) có lẽ là một trong những điều cơ bản nhất. Nguyên tắc này được nhắc tới lần đầu trong cuốn sách The Pragmatic Programmer​ viết bởi Andy Hunt và Dave Thomas , và cũng là nền tảng cho việc phát triển các software development và design pattern khác. Những developer nào nhận ra được các sự trùng lặp, và biết cách để loại bỏ nó thông qua thực tiễn và trừu tượng hóa một cách phù hợp thì những người đó có thể có thể viết code sạch sẽ và gọn (clean code ) hơn nhiều so với những người viết code lặp đi lặp lại một cách thừa thãi.
 
@@ -604,7 +634,7 @@ Nguyên tắc được biết đến khá nhiều đó là nguyên tắc **Singl
 Khi tuân theo cấu trúc, logic, quy trình và chức năng, nguyên tắc DRY cung cấp sự hướng dẫn cơ bản cho các software developer và hỗ trợ tạo ra các phần mềm đơn giản, dễ bảo trì và có chất lượng cao hơn. Mặc dù có những trường hợp việc lặp lại có thể cần thiết để đáp ứng hiệu suất hoặc các yêu cầu khác (ví dụ : không chuẩn hóa dữ liệu trong database), nhưng nó chỉ nên được sử dụng khi trực tiếp giải quyết một vấn đề thực tế chứ không phải là một vấn đề tưởng tượng.
 
 
-## 31: Đừng sửa đoạn code đó
+## 31: ✅ Đừng sửa đoạn code đó
 
 Điều này sẽ diễn ra với bất cứ ai tại một thời điểm nào đó. Code của bạn đã được chuyển đến
 Server cho hệ thống kiểm tra và quản lí trả lời lại rằng nó có lỗi. Phản ứng đầu tiên của bạn là “*Nhanh lên, để tôi fix nó, tôi biết sai ở đâu mà!*”.
@@ -628,7 +658,7 @@ Người quản lí phát hành chỉ là một người mà làm cả hai việ
 Trong mọi trường hợp, đôi khi là tất cả, một developer nên có quyền truy cập vào máy chủ của ứng dụng. Nếu có vấn đề gì đó, nhân viên hỗ trợ nên khắc phục hoặc yêu cầu bạn khắc phục nó. Sau khi được đăng ký vào SCC, họ sẽ gửi bản vá đi. Một số thảm họa lập trình tồi tệ nhất mà tôi từng gặp phải là khi ai đó *ho ho các kiểu* đã vi phạm quy tắc cuối cùng này. Nếu quy tắc này bị bỏ qua, sản phẩm sẽ không còn có thể sửa chữa được.
 
 
-## 32: Đóng gói phương thức, không chỉ là trạng thái
+## 32: ✅ Đóng gói phương thức, không chỉ là trạng thái
 
 Trong lý thuyết hệ thống, kiểm soát là một trong những cách xử lý tối ưu nhất khi xử lý các hệ thống có cấu trúc lớn và phức tạp. Trong ngành công nghiệp phần mềm, việc kiểm soát là cực kỳ cần thiết. Việc kiểm soát được hỗ trợ bởi các cấu trúc của ngôn ngữ lập trình như `subroutines` (các chương trình con) và `functions`, `modules` và `packages`, `classes`,...
 
@@ -638,14 +668,14 @@ Những ví dụ này chứng minh rằng các nhà phát triển đã không hi
 
 Một đối tượng gói gọn cả trạng thái và phương thức, trong đó phương thức được xác định bởi thuộc tính thực tế. Ví dụ như một object **cửa** 🚪. Nó sẽ có **4 trạng thái**: *đóng*, *mở*, *đang đóng*, *đang mở*. Nó sử dụng **2 quá trình**: *mở* và *đóng*. Phụ thuộc vào trạng thái, các quá trình mở và đóng sẽ khác nhau. Thuộc tính vốn có của 1 đối tượng làm cho quá trình thiết kế đơn giản hơn về mặt khái niệm. Nó nắm 2 nhiệm vụ đơn giản: phân bổ và giao trách nhiệm cho các đối tượng khác nhau bao gồm các giao thức tương tác xen kẽ.
 
-Cách nó hoạt động trong thực tế là một ví dụ minh hoạ rõ ràng nhất. Ví dụ chúng ta có 3 class: **Customer**, **Order** và **Item**. **Customer** là đối tượng yêu cầu xác thực thông tin tốt nhất cho việc giới hạn tín dụng và các quy tắc xác thực tín dụng. **Order** là đối tượng xác định mối liên kết giữa khách hàng và quá trình *addItems* của nó bằng cách gọi đến hàm *customer.validateCredit(item.price())*, để kiểm tra tín dụng thực tế của đối tượng **Customer**. Nếu như hàm đó không thành công, nó sẽ tạo ra 1 ngoại lệ ❗ và huỷ bỏ ❌ quá trình mua.
+Cách nó hoạt động trong thực tế là một ví dụ minh hoạ rõ ràng nhất. Ví dụ chúng ta có 3 class: **Customer**, **Order** và **Item**. **Customer** là đối tượng yêu cầu xác thực thông tin tốt nhất cho việc giới hạn tín dụng và các quy tắc xác thực tín dụng. **Order** là đối tượng xác định mối liên kết giữa khách hàng và quá trình *addItems* của nó bằng cách gọi đến hàm *customer.validateCredit(item.price())*, để kiểm tra tín dụng thực tế của đối tượng **Customer**. Nếu như hàm đó không thành công, nó sẽ tạo ra 1 ngoại lệ ⚠ và huỷ bỏ ❌ quá trình mua.
 
 Các nhà phát triển hướng đối tượng ít kinh nghiệm hơn có thể quyết định gói tất cả các quy tắc kinh doanh vào một đối tượng như **OrderManager** hoặc **OrderService**. Trong các thiết kế này, **Order**, **Customer** và **Item** sẽ ghi ít bản ghi hơn. Tất cả các xử lý logic sẽ bao gồm các class và các liên kết của chúng trong một phương thức với nhiều cấu trúc *if-then-else*. Các method gần như không thể duy trì và dễ dàng bị phá vỡ. Còn lý do? Do kiểm soát không trọn vẹn.
 
 Do vậy, đừng phá vỡ sự đóng gói và sử dụng sức mạnh của ngôn ngữ lập trình mà bạn sử dụng để duy trì nó.
 
 
-## 33: CÁC SỐ DẤU PHẨY ĐỘNG KHÔNG PHẢI LÀ SỐ THỰC
+## 33: ✅ Các số dấu phẩy động không phải số thực
 
 Số dấu phẩy động (**Floating-point numbers**) không phải là một dạng “*số thực*” như trong cách nói của Toán học, cho dù chúng vẫn được gọi là “thực” trong một số ngôn ngữ lập trình, như là **Pascal** hay **Fortran**. Các số thực có độ chính xác tuyệt đối, và do đó chúng luôn liên tục và không bị sai số; nhưng những số dấu phẩy động có tính chính xác nhất định, vì vậy chúng khá hạn chế, và được coi như là những số nguyên “*kém cỏi*”.
 
@@ -663,16 +693,23 @@ kết quả cuối cùng. Câu trả lời là sẽ tiến tới dương vô c�
 
 Rõ ràng là bạn không nên sử dụng số dấu phẩy động cho các ứng dụng tài chính, đó là những gì mà các lớp học ngôn ngữ thuật toán như Python và C# làm việc. Số dấu phẩy động được sử dụng để việc tính toán khoa học được hiệu quả. Nhưng hiệu quả sẽ vô nghĩa nếu không có sự chính xác, vì vậy hãy ghi nhớ nguồn gốc phát sinh các lỗi và code một cách hợp lí!
 
-## 34: Hiện thực hoá tham vọng của bạn với Open Source
+
+## 34: ✅ Hiện thực hoá tham vọng của bạn với Open Source
+
 Có lẽ bạn đang phát triển phần mềm ở nơi mà không thỏa mãn được giấc mơ đầy tham vọng của mình. Có thể bạn đang phát triển phần mềm cho một công ty bảo hiểm nào đó trong khi nơi bạn thực sự muốn làm việc là Google, Apple, Microsoft hay công ty khởi nghiệp của riêng bạn để làm nên điều vĩ đại hơn. Mọi thứ sẽ chẳng đi đến đâu cả khi bạn phải phát triển phần mềm cho các hệ thống mà bạn không mấy hứng thú.
-May mắn thay, có một câu trả lời cho vấn đề của bạn: Open Source. Có hàng nghìn dự án Open Source ngoài kia- rất nhiều trong số đó khá thiết thực, cung cấp bất kỳ loại trải nghiệm phát triển phần mềm nào bạn muốn. Nếu bạn có ý tưởng phát triển một hệ điều hành mới, hãy thử sức với một trong hàng tá dự án hệ điều hành. Nếu bạn muốn làm việc với phần mềm âm nhạc, hoạt hình, mật mã, robot, trò chơi PC, trò chơi trực tuyến, điện thoại di động hay bất cứ điều gì, chắc chắn bạn sẽ tìm thấy ít nhất một dự án Open Source dành riêng cho sở thích đó.
+
+May mắn thay, có một câu trả lời cho vấn đề của bạn: **Open Source**. Có hàng nghìn dự án Open Source ngoài kia- rất nhiều trong số đó khá thiết thực, cung cấp bất kỳ loại trải nghiệm phát triển phần mềm nào bạn muốn. Nếu bạn có ý tưởng phát triển một hệ điều hành mới, hãy thử sức với một trong hàng tá dự án hệ điều hành. Nếu bạn muốn làm việc với phần mềm âm nhạc, hoạt hình, mật mã, robot, trò chơi PC, trò chơi trực tuyến, điện thoại di động hay bất cứ điều gì, chắc chắn bạn sẽ tìm thấy ít nhất một dự án Open Source dành riêng cho sở thích đó.
+
 Và tất nhiên, chẳng có gì là miễn phí cả. Bạn sẽ phải từ bỏ thời giờ nghỉ ngơi của mình, vì bạn không thể làm việc với dự án Open Source về một trò chơi nào đó trong giờ làm việc- bạn vẫn phải có trách nhiệm với ông chủ của mình. Ngoài ra, rất ít người thực sự kiếm được tiền nhờ việc đóng góp cho các dự án Open Source. Cũng có một số người kiếm chác được chút đỉnh nhưng chỉ chiếm một phần rất nhỏ. Bạn nên xác định sẵn rằng sẽ phải từ bỏ thời gian rảnh của mình (tất nhiên, cắt giảm chút thời gian chơi game và xem TV thì bạn vẫn sống tốt thôi). Với tư cách là một lập trình viên, bạn càng làm việc năng suất với các dự án Open Source, bạn càng sớm nhận ra tham vọng thực sự của mình. Điều quan trọng là phải xem xét kĩ hợp đồng của bạn- một số nhà tuyển dụng có thể hạn chế những gì bạn có thể đóng góp, thậm chí cả thời gian của bạn. Ngoài ra, bạn cũng nên cẩn thận với việc vi phạm luật sở hữu trí tuệ liên quan đến vấn đề bản quyền, bằng sáng chế, nhãn hiệu và bí mật thương mại.
+
 Open Source cung cấp nhiều cơ hội cho các lập trình viên năng nổ. Trước tiên, bạn có thể xem người khác triển khai vấn đề mà bạn quan tâm như thế nào- bạn có thể học được nhiều điều thông qua việc đọc code của người khác. Thứ hai, bạn có thể đóng góp code và ý tưởng của riêng mình cho dự án. Đương nhiên không phải mọi ý tưởng của bạn đều được chấp nhận mà chỉ có một số có thể. Và bạn sẽ học được nhiều điều mới mẻ thông qua việc xử lý các vấn đề và đóng góp code. Thứ ba, bạn sẽ gặp những người tuyệt vời có chung niềm đam mê với bạn- những tình bạn có thể tồn tại suốt đời. Thứ tư, nếu bạn là người đóng góp nhiều cho project, bạn có thể thêm kinh nghiệm thực tế vào công nghệ thực sự khiến bạn quan tâm.
+
 Bắt tay vào làm việc với Open Source khá dễ dàng. Có sẵn rất nhiều tài liệu về các công cụ bạn cần (ví dụ: quản lý mã nguồn, biên tập viên, ngôn ngữ lập trình, xây dựng hệ thống, v.v.).
-Bắt đầu với việc tìm kiếm dự án bạn muốn làm và tìm hiểu các công cụ mà dự án sử dụng. Những tài liệu về các dự án sẽ khá nhẹ nhàng trong phần lớn trường hợp, nhưng điều này có lẽ ít quan trọng hơn vì cách tốt nhất để học là tự điều tra code. Nếu bạn muốn tham gia, bạn có thể đưa ra lời đề nghị giúp đỡ. Hoặc bạn có thể bắt đầu bằng cách tình nguyện viết test code. Mặc dù điều đó nghe có vẻ không mấy thú vị, sự thật là bạn học nhanh hơn thông qua việc viết test code cho phần mềm của người khác so với hầu hết các hoạt động khác. Hãy biết test code thật tốt. Tìm bugs, đề xuất sửa lỗi, kết bạn, làm việc với phần mềm bạn yêu thích và thực hiện tham vọng phát triển phần mềm của bạn!
+
+Bắt đầu với việc tìm kiếm dự án bạn muốn làm và tìm hiểu các công cụ mà dự án sử dụng. Những tài liệu về các dự án sẽ khá nhẹ nhàng trong phần lớn trường hợp, nhưng điều này có lẽ ít quan trọng hơn vì cách tốt nhất để học là tự điều tra code. Nếu bạn muốn tham gia, bạn có thể đưa ra lời đề nghị giúp đỡ. Hoặc bạn có thể bắt đầu bằng cách *tình nguyện viết test code*. Mặc dù điều đó nghe có vẻ không mấy thú vị, sự thật là bạn học nhanh hơn thông qua việc viết test code cho phần mềm của người khác so với hầu hết các hoạt động khác. Hãy biết test code thật tốt. Tìm bugs, đề xuất sửa lỗi, kết bạn, làm việc với phần mềm bạn yêu thích và thực hiện tham vọng phát triển phần mềm của bạn!
 
 
-## 35: Nguyên tắc vàng trong thiết kế API
+## 35: ✅ Nguyên tắc vàng trong thiết kế API
 
 Thiết kế API không bao giờ dễ dàng, đặc biệt là những API lớn. Nếu bạn đang thiết kế một API mà có hàng trăm ngàn người dùng, bạn phải nghĩ về vấn đề làm thế nào để bạn có thể thay đổi nó trong tương lai và liệu việc đó có thể làm hỏng đến phần nào của client hay không? Hơn nữa, bạn phải nghĩ về sự ảnh hưởng đến từ người dùng của bạn lên bản thân. Nếu một trong những lớp của API bạn tạo ra dùng chính phương thức nội bộ, bạn phải nhớ rằng một người dùng có thể tạo lớp con từ lớp của bạn và ghi đè nó, và điều đó chính là một thảm hoạ. Bạn sẽ không còn có thể thay đổi phương thức đó nữa bởi vì một vài người dùng của bạn đã thay đổi bản chất của nó, khiến nó mang một ý nghĩa khác. Sự lựa chọn cài đặt tính năng của bạn phụ thuộc vào người dùng.
 
@@ -689,7 +726,7 @@ Theo thời gian, việc này sẽ ngày càng phát triển hơn, nhưng chỉ 
 
 Không có cách nào có thể giúp những nhà phát triển có thể kiểm tra đoạn code mà chúng sử dụng API của họ. “*static*”, “*final*”, và “*sealed*” đều không phải là cấu trúc xấu. Chúng có thể hữu dụng trong thời gian nào đó. Nhưng điều quan trọng là chúng ta phải luôn cẩn trọng đối với những vấn đề đối với testing, và để làm điều đó, bạn phải tự trải nghiệm lấy. Một khi bạn đã trải nghiệm, bạn có thể tiếp cận nó bằng cách mà bạn muốn với bất kỳ thử thách thiết kế nào khác.
 
-## 36: Thần Thoại Guru
+## 36: ✅ Thần Thoại Guru
 
 Bất kì ai đã làm việc đủ lâu trong phần mềm đều từng nghe những câu hỏi như thế này:
 
@@ -708,49 +745,66 @@ Tất nhiên, nó vẫn còn một sự khác biệt lớn về khả năng bẩ
 Cuối cùng, một trong những chướng ngại vật lớn nhất của phần mềm chính là những người thông minh cố tình tuyên truyền vị thần thoại guru. Việc này có thể được thực hiện từ cái tôi, hoặc là chiến thuật để nâng cao giá trị của một người theo cảm nhận của khách hàng hay nhà tuyển dụng. Trớ trêu thay, thái độ này có thể giảm giá trị của những người thông minh, bởi vì họ không đóng góp cho sự phát triển của đồng nghiệp họ. Chúng ta không cần gurus. Chúng ta cần những người chuyên nghiệp sẵn lòng giúp đỡ những người chuyên nghiệp khác phát triển trong lĩnh vực của họ. Đó là nơi cho tất cả chúng ta.
 
 
-## 37: Chăm chỉ chưa chắc thành công
+## 37: ✅ Chăm chỉ chưa chắc thành công
 
-Là một lập trình viên, làm việc chăm chỉ thường không được đền đáp. Bạn có thể tự lừa dối bản thân và đồng nghiệp rằng bạn đang đóng góp rất nhiều cho một dự án bằng cách dành nhiều giờ ở văn phòng. Nhưng sự thật là chỉ cần làm ít, bạn có thể đạt được nhiều- thậm chí nhiều hơn nữa. Nếu bạn đang cố gắng tập trung và “làm việc hiệu quả” hơn 30 giờ một tuần thì có lẽ bạn đang làm việc quá sức. Bạn nên xem xét giảm khối lượng công việc để làm việc được hiệu quả hơn và hoàn thành nhiều việc hơn.
+Là một lập trình viên, làm việc chăm chỉ thường không được đền đáp. Bạn có thể tự lừa dối bản thân và đồng nghiệp rằng bạn đang đóng góp rất nhiều cho một dự án bằng cách dành nhiều giờ ở văn phòng. Nhưng sự thật là chỉ cần làm ít, bạn có thể đạt được nhiều- thậm chí nhiều hơn nữa. Nếu bạn đang cố gắng tập trung và “*làm việc hiệu quả*” hơn 30 giờ một tuần thì có lẽ bạn đang làm việc quá sức. Bạn nên xem xét giảm khối lượng công việc để làm việc được hiệu quả hơn và hoàn thành nhiều việc hơn.
+
 Kết luận này nghe có vẻ trái nghịch và thậm chí còn gây tranh cãi, nhưng nó là hệ quả trực tiếp của thực tế là việc lập trình và phát triển phần mềm nói chung là cả một quá trình học tập không ngừng nghỉ. Khi bạn triển khai một dự án, bạn sẽ hiểu vấn đề hơn và tìm ra những cách hiệu quả hơn để đạt được mục tiêu. Để tránh những việc thừa thãi, bạn phải dành thời gian quan sát ảnh hưởng của những gì bạn đang làm- phản ánh qua những gì bạn nhìn thấy và thay đổi hành vi của bạn cho phù hợp.
+
 Lập trình chuyên nghiệp thường không giống như chạy vài km, với mục tiêu nằm ở ngay cuối con đường. Hầu hết các dự án phần mềm giống như một cuộc đua marathon trong- bóng- tối, với chỉ một tấm bản đồ sơ sài. Nếu bạn chỉ hướng về một hướng và chạy nhanh nhất có thể, bạn có thể gây ấn tượng với một số người, nhưng bạn không có khả năng thành công. Bạn cần duy trì một tốc độ bền vững và bạn cần điều chỉnh ít nhiều khi tìm hiểu về vị trí của bản thân cũng như vạch đích mà bạn đang hướng tới.
+
 Ngoài ra, bạn luôn cần tìm hiểu thêm về phát triển phần mềm nói chung và kỹ thuật lập trình nói riêng. Bạn có thể đọc sách, tham dự hội nghị, giao tiếp với các chuyên gia, thử nghiệm các kỹ thuật mới và tìm hiểu về các công cụ giúp đơn giản hóa công việc của bạn. Là một lập trình viên chuyên nghiệp, bạn phải luôn tự cập nhật lĩnh vực chuyên môn của mình — giống như các bác sĩ phẫu thuật và phi công luôn phải cập nhật lĩnh vực chuyên môn riêng của họ. Bạn cần dành buổi tối, cuối tuần và ngày lễ để tự học, do đó khoảng thời gian này không thể dành để làm thêm giờ cho dự án hiện tại của bạn. Liệu bạn có mong các bác sĩ phẫu thuật dành 60 giờ một tuần trong phòng mổ, hay phi công bay đến 60 giờ một tuần? Tất nhiên là không, vì sự chuẩn bị và giáo dục là một phần thiết yếu trong nghề nghiệp của họ.
+
 Hãy tập trung vào dự án, đóng góp nhiều nhất có thể bằng cách tìm những giải pháp thông minh, cải thiện kỹ năng của bạn, thể hiện những gì bạn làm và điều chỉnh hành vi của bạn. Tránh tự bôi xấu bản thân bằng cách cư xử như một con chuột đồng trong một cái lồng quay.
-Là một lập trình viên chuyên nghiệp, bạn nên biết rằng cố gắng tập trung và “làm việc hiệu quả” 60 giờ một tuần không phải điều hợp lý. Hãy hành động như một chuyên gia: chuẩn bị, thực hiện, quan sát, phản ánh và thay đổi.
+
+Là một lập trình viên chuyên nghiệp, bạn nên biết rằng cố gắng tập trung và “**làm việc hiệu quả**” 60 giờ một tuần không phải điều hợp lý. Hãy hành động như một chuyên gia: chuẩn bị, thực hiện, quan sát, phản ánh và thay đổi.
 
 
-## 38: Làm thế nào để săn bug?
+## 38: ✅ Làm thế nào để săn bug?
 
 Dù cho bạn có gọi là lỗi, dị tật, hay kể cả tác dụng phụ thiết kế, thì bạn chả có một cách nào thoát khỏi chúng. Hiểu cách để nộp một bản báo lỗi tốt và biết nên tìm kiếm gì trong đó, là một trong những kỹ năng then chốt giúp project của bạn phát triển một cách trơn tru.
+
 Một bản báo cáo lỗi tốt gồm có ba điều:
-● Nguyên nhân gây ra lỗi, càng chi tiết càng tốt, và tần suất xuất hiện của chúng.
-● Chúng ta nên thực hiện điều gì, ít nhất là ý kiến của bạn.
-● Điều gì đã xảy ra trong thực tế, hoặc ít nhất là những thông tin mà bạn đã ghi nhận được.
+- **Nguyên nhân gây ra lỗi**, càng chi tiết càng tốt, và tần suất xuất hiện của chúng.
+- **Chúng ta nên thực hiện điều gì**, ít nhất là ý kiến của bạn.
+- **Điều gì đã xảy ra trong thực tế**, hoặc ít nhất là những thông tin mà bạn đã ghi nhận được.
+
 Số lượng và chất lượng của toàn bộ thông tin được báo cáo về lỗi đấy không chỉ giúp ta hiểu về bug mà còn giúp ta hiểu hơn về người phát triển. Sự tức giận, chửi bugs(“hàm này như hạch”) cho những nhà phát triển rằng bạn đang có một khoảng thời gian tồi tệ, và đó là tất cả. Một bug với phạm vi rộng khiến nó dễ dàng nhân lên và rồi nhận được sự dè chừng của mọi người ngay cả khi chúng dừng hoạt động.
+
 Các lỗi ấy giống như những cuộc hội thoại, với tất lịch sử ngay đó trước mặt mọi người. Đừng đổ lỗi cho người khác và phủ định sự tồn tại của nó. Thay vào đó hãy hỏi để có thêm thông tin hay tiểu hiểu xem mình đã bỏ lỡ điều gì.
+
 Đầu tiên, hãy thay đổi trạng thái của bugs, v.v… chuyển chúng từ hoạt động sang kết thúc, đó là mệnh đề bạn đặt ra khi nghĩ về bug. Hãy dành thời gian để giải thích lý do để ngăn chặn nó sẽ giúp bạn tiết kiệm hàng giờ tẻ nhạt ngồi chỉnh sửa để rồi làm cho khách hàng và quản lý thất vọng. Thay đổi sự ưu tiên của một bug cũng chính là câu hỏi chung, và chỉ vì nó tầm thường với bạn không có nghĩa là nó không ngăn cản người khác sử dụng sản phẩm.
-Thứ hai, đừng khiến việc tìm hiểu về mảng trục trặc bị quá tải bởi lý do cá nhân của bạn. Thay vào đó bạn hãy thử thêm từ “quan trọng” vào trước một chủ đề về một mảng của lỗi có thể giúp bạn dễ dàng thực hiện việc sắp xếp kết quả đến từ một vài bản báo cáo, nhưng đột nhiên chính việc ấy lại trở thành bản copy của các bản báo cáo khác và chắc chắn rằng đó không phải là điều mà bạn mong muốn, hoặc là bạn có thể xoá bớt 1 số mảng ấy để nó phù hợp hơn với mục đích sử dụng ở các bản báo cáo khác. Thay vào đó chúng ta hãy sử dụng một giá trị khác hay
-một mảng khác để đánh giá lỗi, và tìm hiểu về mục đích của mảng đó để những người khác không phải tự thực hiện lại công việc này.
+
+Thứ hai, đừng khiến việc tìm hiểu về mảng trục trặc bị quá tải bởi lý do cá nhân của bạn. Thay vào đó bạn hãy thử thêm từ “quan trọng” vào trước một chủ đề về một mảng của lỗi có thể giúp bạn dễ dàng thực hiện việc sắp xếp kết quả đến từ một vài bản báo cáo, nhưng đột nhiên chính việc ấy lại trở thành bản copy của các bản báo cáo khác và chắc chắn rằng đó không phải là điều mà bạn mong muốn, hoặc là bạn có thể xoá bớt 1 số mảng ấy để nó phù hợp hơn với mục đích sử dụng ở các bản báo cáo khác. Thay vào đó chúng ta hãy sử dụng một giá trị khác hay một mảng khác để đánh giá lỗi, và tìm hiểu về mục đích của mảng đó để những người khác không phải tự thực hiện lại công việc này.
+
 Chúng ta phải chắc chắn rằng bất kỳ ai cũng có thể dễ dàng phát hiện được lỗi mà cả team chúng ta đang làm việc với nó. Việc này thường có thể được hoàn thành nhờ vào sử dụng một query cụ thể chung. Đồng thời, việc đảm bảo mọi người dùng chung query vô cùng quan trọng và không được cập nhật nó nếu chưa có sự đồng ý đến từ tất cả mọi người trong nhóm.
+
 Cuối cùng hãy luôn ghi nhớ rằng bugs không phải là đơn vị chuẩn của công việc hay của từng dòng code mà chính bugs là đơn vị đo lường chính xác sự nỗ lực tuyệt vời của bạn.
 
 
-## 39: Cải Thiện Code Bằng Cách Loại Bỏ Chúng
+## 39: ✅ Cải Thiện Code Bằng Cách Loại Bỏ Chúng
 
 Sống tối giản để tận hưởng nhiều hơn. Đó là một câu châm ngôn nhỏ,nhưng nó thật sự đúng trong một số trường hợp.
+
 Một trong những cách cải thiện codebase mà tôi đã làm trong vài tuần qua đó là loại bỏ một số phần của nó.
-Chúng tôi đã viết phần mềm dựa trên những nguyên lí XP, bao gồm YAGNI (có nghĩa là, You Aren’t Gonna Need It). Bản chất của con người là như vậy, chúng ta chắc chắn đã không đạt được mục tiêu được yêu cầu trong vài nhiệm vụ.
+
+Chúng tôi đã viết phần mềm dựa trên những nguyên lí XP, bao gồm **YAGNI** (*You Aren’t Gonna Need It*). Bản chất của con người là như vậy, chúng ta chắc chắn đã không đạt được mục tiêu được yêu cầu trong vài nhiệm vụ.
+
 Tôi đã quan sát và nhận ra rằng sản phẩm đã mất quá nhiều thời gian trong việc hoàn thành các nhiệm vụ nhất định — những công việc đơn giản đáng lẽ phải được thực hiện một cách gần như tức thời. Điều này là do chúng đã được thực hiện quá mức; được trang hoàng thêm những chiếc chuông và còi không cần thiết, những thứ mà tại thời điểm đó có vẻ như là một ý tưởng hay.
+
 Thế nên tôi đã đơn giản hóa mã code, cải thiện sự thi hành của sản phẩm, và giảm bớt mức độ phức tạp của toàn bộ code một cách đơn giản hơn bằng cách loại bỏ những tính chất khó chịu từ codebase. Nó thực sự hữu ích, các đơn vị kiểm tra đã nói với tôi rằng tôi chẳng làm hỏng bất cứ thứ gì trong suốt quá trình hoạt động.
+
 Một trải nghiệm đơn giản và hoàn toàn hài lòng.
-Vậy thì tại sao những dòng code không cần thiết đó lại xuất hiện ngay từ đầu? Tại sao một người lập trình nào đó lại cảm thấy những dòng code viết thêm ấy hữu dụng, và làm thế nào nó
-vượt qua được sự đánh giá trước đó hoặc quá trình kết nối? Chắc chắn có một cái gì đó như là:
-● Những thứ được thêm có một chút thú vị, và người lập trình muốn viết nó. (Nhắc nhở:
-Viết code bởi vì nó làm tăng giá trị, chứ không phải vì chúng giải trí).
-● Có người nghĩ rằng mã code đó sẽ có ích cho sau này, nên tốt hơn hết là viết chúng ngay bây giờ. (Nhắc nhở: Đó không phải là YAGNI. Đừng viết chúng nếu bạn không sử dụng ngay lập tức).
-● Chúng không xuất hiện để đoạn code trở nên “đặc biệt”, vì vậy sẽ dễ dàng thực hiện nó hơn là đến gặp khách hàng để xem liệu chúng có thực sự hữu dụng hay không. (Nhắc nhở: Sẽ luôn luôn mất nhiều thời gian để viết và duy trì những dòng code phụ. Và khách hàng thì khá dễ để tiếp cận. Một vài dòng code phụ theo thời gian sẽ làm quá trình hoạt động tăng trưởng nhanh và trở thành một mảng công việc cần được bảo trì.)
-● Những lập trình viên đặt ra những yêu cầu không được ghi chép hay thảo luận để bào chữa cho tính năng bổ sung. Thực ra những nhu cầu đó không hề có thật. (Nhắc nhở:
-Những lập trình viên không đặt ra những yêu cầu hệ thống mà là khách hàng.)
+
+Vậy thì tại sao những dòng code không cần thiết đó lại xuất hiện ngay từ đầu? Tại sao một người lập trình nào đó lại cảm thấy những dòng code viết thêm ấy hữu dụng, và làm thế nào nó vượt qua được sự đánh giá trước đó hoặc quá trình kết nối? Chắc chắn có một cái gì đó như là:
+
+- Những thứ được thêm có một chút thú vị, và người lập trình muốn viết nó. (*Nhắc nhở: Viết code bởi vì nó làm tăng giá trị, chứ không phải vì chúng giải trí*).
+- Có người nghĩ rằng mã code đó sẽ có ích cho sau này, nên tốt hơn hết là viết chúng ngay bây giờ. (*Nhắc nhở: Đó không phải là YAGNI. Đừng viết chúng nếu bạn không sử dụng ngay lập tức*).
+- Chúng không xuất hiện để đoạn code trở nên “đặc biệt”, vì vậy sẽ dễ dàng thực hiện nó hơn là đến gặp khách hàng để xem liệu chúng có thực sự hữu dụng hay không. (*Nhắc nhở: Sẽ luôn luôn mất nhiều thời gian để viết và duy trì những dòng code phụ. Và khách hàng thì khá dễ để tiếp cận. Một vài dòng code phụ theo thời gian sẽ làm quá trình hoạt động tăng trưởng nhanh và trở thành một mảng công việc cần được bảo trì.*)
+- Những lập trình viên đặt ra những yêu cầu không được ghi chép hay thảo luận để bào chữa cho tính năng bổ sung. Thực ra những nhu cầu đó không hề có thật. (*Nhắc nhở: Những lập trình viên không đặt ra những yêu cầu hệ thống mà là khách hàng.*)
+
 Ngay bây giờ bạn đang làm việc gì vậy? Có phải tất cả chúng đều cần thiết không?
+
 
 ## 40: Hãy cài đặt phần mềm này
 Tôi không phải là không có hứng thú về chương trình của bạn
@@ -777,61 +831,80 @@ Khi bạn đang thiết kế một ứng dụng, hãy chú ý đến số lượ
 (*) Inter-Process Communication (IPC)
 
 
-## 42: Hãy giữ cho thiết kế thật sạch sẽ
+## 42: ✅ Hãy giữ cho thiết kế thật sạch sẽ
 
-Bạn đã từng bao giờ nhìn vào một bản danh sách của người biên soạn về việc cảnh báo độ dài của một đoạn code không tốt và nghĩ rằng: “Mình thật sự nên làm gì đó cho việc này… Nhưng mà bây giờ mình lại không có thời gian?” Mặt khác, bạn đã bao giờ nhìn thấy một cảnh báo xuất hiện trong trình biên dịch và sẵn sàng sửa nó?
+Bạn đã từng bao giờ nhìn vào một bản danh sách của người biên soạn về việc cảnh báo độ dài của một đoạn code không tốt và nghĩ rằng: “*Mình thật sự nên làm gì đó cho việc này… Nhưng mà bây giờ mình lại không có thời gian?*” Mặt khác, bạn đã bao giờ nhìn thấy một cảnh báo xuất hiện trong trình biên dịch và sẵn sàng sửa nó?
+
 Khi tôi bắt đầu một project mới lại từ đầu, sẽ không có bất kì cảnh báo, cản trở, vấn đề nào xuất hiện. Nhưng với tư cách là một người phát triển code base, nếu không để ý, những cản trở, cảnh báo, và những vấn đề có thể sẽ xuất hiện và dễ mất kiểm soát. Khi mà có quá nhiều vấn đề cần giải quyết, thì để tìm được cảnh báo cần thiết trong hàng trăm cảnh báo khác nhau mà thậm chí mình không quan tâm là một điều thực sự khó khăn với chúng ta.
-Để làm cho những cảnh báo hữu dụng trở lại, tôi đã thử một chính sách “không khoan nhượng” cho các cảnh báo trong thiết kế. Kể cả cảnh báo đó không quá nghiêm trọng, tôi vẫn thực hiện cách làm đó. Nếu cảnh báo đó không quan trọng, nhưng có sức ảnh hưởng thì tôi sẽ sửa nó. Khi người biên soạn cảnh báo về khả năng bị phản đối, tôi sẽ khắc phục nguyên nhân, thậm chí tôi biết rằng vấn đề sẽ chẳng bao giờ xuất hiện trong sản phẩm cả. Nếu như tài liệu đã được nhúng (Javadoc hoặc Similar) đề cập đến các thông số đã bị xóa hoặc đổi tên, thì tôi sẽ xóa bỏ những tài liệu đó.
+
+Để làm cho những cảnh báo hữu dụng trở lại, tôi đã thử một chính sách “*không khoan nhượng*” cho các cảnh báo trong thiết kế. Kể cả cảnh báo đó không quá nghiêm trọng, tôi vẫn thực hiện cách làm đó. Nếu cảnh báo đó không quan trọng, nhưng có sức ảnh hưởng thì tôi sẽ sửa nó. Khi người biên soạn cảnh báo về khả năng bị phản đối, tôi sẽ khắc phục nguyên nhân, thậm chí tôi biết rằng vấn đề sẽ chẳng bao giờ xuất hiện trong sản phẩm cả. Nếu như tài liệu đã được nhúng (Javadoc hoặc Similar) đề cập đến các thông số đã bị xóa hoặc đổi tên, thì tôi sẽ xóa bỏ những tài liệu đó.
+
 Nếu như có thứ gì đó tôi không thật sự quan tâm và nó cũng không quan trọng lắm với mình, tôi sẽ yêu cầu team của mình thay đổi chính sách cảnh báo của chúng tôi. Ví dụ, đưa ra tài liệu về các thông số và đưa giá trị của hệ thống trở lại, trong nhiều trường hợp, không làm tăng thêm bất cứ giá trị nào cả. Vì vậy nó không thể là cảnh báo nếu nó đang khiếm khuyết. Hoặc là nâng cấp lên một phiên bản mới của ngôn ngữ lập trình có thể sẽ làm cảnh báo được đưa ra một cách tốt hơn. Ví dụ như khi Java 5 giới thiệu các chủng loại, tất cả loại code đã cũ không ghi rõ các loại thông số sẽ bị cảnh báo. Đây là một phương thức cảnh báo mà tôi không hề muốn đối diện. Một loạt các cảnh báo không phù hợp với thực tế sẽ không giúp được bất cứ ai.
+
 Bằng cách hãy chắc chắn rằng thiết kế luôn được sạch sẽ, tôi sẽ không phải quyết định rằng một cảnh báo là không thích hợp mỗi lúc gặp phải nó. Phớt lờ đi mọi chuyện là một công việc cần phải suy nghĩ nhiều, và tôi cần thoát khỏi tất cả những công việc không cần thiết đó. Một thiết kế sạch sẽ cũng giúp cho những người đảm nhận công việc của tôi làm việc một cách dễ dàng hơn. Nếu tôi để mặc những cảnh báo, người khác sẽ phải vất vả để biết cái gì thích hợp và cái gì không. Hoặc nhiều khả năng, họ sẽ phớt lờ tất cả cảnh báo, kể cả những cái quan trọng.
+
 Các cảnh báo từ thiết kế của bạn thực sự rất hữu ích, bạn chỉ cần đừng quan tâm đến những thứ không cần thiết để chú ý đến chúng. Đừng chờ đợi một lần đại trùng tu. Khi một thứ gì đó mà bạn không muốn thấy xuất hiện, hãy đối phó với nó lập tức. Hoặc hãy sửa lại từ nguồn gốc của các cảnh báo, chặn các cảnh báo, sửa lại cách cảnh báo từ công cụ của bạn. Đảm bảo thiết kế được sạch sẽ không chỉ là giữ nó không bị ràng buộc bởi các lỗi biên dịch hay lỗi kiểm tra, các cảnh báo cũng rất quan trọng và các phần code quyết định cũng thế.
 
 
-## 43: Biết cách sử dụng các công cụ dòng lệnh
+## 43: ✅ Biết cách sử dụng các công cụ dòng lệnh
 
-Ngày nay, nhiều công cụ phát triển phần mềm được đóng gói dưới dạng Môi trường phát triển tích hợp (IDE).Visual Studio của Microsoft và phần mềm mã nguồn mở Eclipse là hai ví dụ phổ biến mặc dù bên cạnh đó có rất nhiều phần mềm khác.Có rất nhiều điều để thích về IDE. Không chỉ dễ sử dụng, chúng còn giúp lập trình viên suy nghĩ về rất nhiều chi tiết nhỏ liên quan đến quá trình xây dựng.
+Ngày nay, nhiều công cụ phát triển phần mềm được đóng gói dưới dạng Môi trường phát triển tích hợp (IDE). **Visual Studio** của Microsoft và phần mềm mã nguồn mở **Eclipse** là hai ví dụ phổ biến mặc dù bên cạnh đó có rất nhiều phần mềm khác.Có rất nhiều điều để thích về IDE. Không chỉ dễ sử dụng, chúng còn giúp lập trình viên suy nghĩ về rất nhiều chi tiết nhỏ liên quan đến quá trình xây dựng.
+
 Dễ sử dụng, tuy nhiên, có nhược điểm của nó. Thông thường, khi một công cụ dễ sử dụng, đó là vì công cụ đang đưa ra quyết định cho bạn và tự động thực hiện nhiều việc, đằng sau hậu trường. Do đó, nếu IDE là môi trường lập trình duy nhất mà bạn từng sử dụng, bạn có thể không bao giờ hiểu đầy đủ những gì công cụ của bạn đang thực sự làm. Bạn bấm vào một nút, một số điều kì diệu xảy ra và một tệp thực thi xuất hiện trong thư mục dự án.
+
 Bằng cách làm việc với các công cụ xây dựng dòng lệnh, bạn sẽ học được thêm rất nhiều về những gì các công cụ đang làm khi dự án của bạn đang được xây dựng. Viết các tập tin của riêng bạn sẽ giúp bạn hiểu tất cả các bước (biên dịch, lắp ráp, liên kết, v.v.) mà đi vào việc xây dựng một tập tin thực thi.Thử nghiệm với nhiều tùy chọn dòng lệnh cho các công cụ này cũng là một kinh nghiệm giáo dục có giá trị. Để bắt đầu với việc sử dụng các công cụ xây dựng dòng lệnh, bạn có thể sử dụng các công cụ dòng lệnh nguồn mở như GCC hoặc bạn có thể sử dụng các công cụ được cung cấp với IDE bản quyền của bạn. Xét cho cùng, một IDE được thiết kế tốt chỉ là một giao diện đồ họa cho một bộ công cụ dòng lệnh.
-Ngoài việc cải thiện hiểu biết của bạn về quá trình xây dựng, có một số tác vụ có thể được thực hiện dễ dàng hoặc hiệu quả hơn với các công cụ dòng lệnh so với IDE.Ví dụ, các khả năng tìm kiếm và thay thế được cung cấp bởi các tiện ích grep và sed thường mạnh hơn các khả năng tìm thấy trong IDE. Các công cụ dòng lệnh vốn đã hỗ trợ kịch bản, cho phép tự động hóa các tác vụ như sản xuất các bản dựng hàng ngày theo lịch trình, tạo nhiều phiên bản của dự án và chạy các bộ thử nghiệm. Trong IDE, loại tự động hóa này có thể khó thực hiện hơn (nếu không thể thực hiện được) vì các tùy chọn xây dựng thường được chỉ định bằng hộp thoại GUI và quá trình xây dựng được gọi bằng một cú click chuột. Nếu bạn không bao giờ rời khỏi IDE, bạn thậm chí có thể không nhận ra rằng các loại tác vụ tự động này có thể thực hiện được. Nhưng chờ đã. IDE không tồn tại để làm cho việc phát triển dễ dàng hơn và để cải thiện năng suất của lập trình viên ư? Vâng, chuẩn luôn. Gợi ý được trình bày ở đây không phải là bạn nên ngừng sử dụng IDE. Gợi ý là bạn nên “nhìn dưới mui xe” và hiểu IDE của bạn đang làm gì cho bạn. Cách tốt nhất để làm điều đó là học cách sử dụng các công cụ dòng lệnh. Sau đó, khi bạn
-quay lại sử dụng IDE của mình, bạn sẽ hiểu rõ hơn nhiều về những gì nó đang làm cho bạn và cách bạn có thể kiểm soát quá trình xây dựng. Mặt khác, khi bạn thành thạo việc sử dụng các công cụ dòng lệnh và trải nghiệm sức mạnh và tính linh hoạt mà chúng cung cấp, bạn có thể thấy rằng bạn thích dòng lệnh hơn IDE.
+
+Ngoài việc cải thiện hiểu biết của bạn về quá trình xây dựng, có một số tác vụ có thể được thực hiện dễ dàng hoặc hiệu quả hơn với các công cụ dòng lệnh so với IDE. Ví dụ, các khả năng tìm kiếm và thay thế được cung cấp bởi các tiện ích `grep` và `sed` thường mạnh hơn các khả năng tìm thấy trong IDE. Các công cụ dòng lệnh vốn đã hỗ trợ kịch bản, cho phép tự động hóa các tác vụ như sản xuất các bản dựng hàng ngày theo lịch trình, tạo nhiều phiên bản của dự án và chạy các bộ thử nghiệm. Trong IDE, loại tự động hóa này có thể khó thực hiện hơn (nếu không thể thực hiện được) vì các tùy chọn xây dựng thường được chỉ định bằng hộp thoại GUI và quá trình xây dựng được gọi bằng một cú click chuột. Nếu bạn không bao giờ rời khỏi IDE, bạn thậm chí có thể không nhận ra rằng các loại tác vụ tự động này có thể thực hiện được. 
+
+Nhưng chờ đã. IDE không tồn tại để làm cho việc phát triển dễ dàng hơn và để cải thiện năng suất của lập trình viên ư? Vâng, chuẩn luôn. Gợi ý được trình bày ở đây không phải là bạn nên ngừng sử dụng IDE. Gợi ý là bạn nên “nhìn dưới mui xe” và hiểu IDE của bạn đang làm gì cho bạn. Cách tốt nhất để làm điều đó là học cách sử dụng các công cụ dòng lệnh. Sau đó, khi bạn quay lại sử dụng IDE của mình, bạn sẽ hiểu rõ hơn nhiều về những gì nó đang làm cho bạn và cách bạn có thể kiểm soát quá trình xây dựng. Mặt khác, khi bạn thành thạo việc sử dụng các công cụ dòng lệnh và trải nghiệm sức mạnh và tính linh hoạt mà chúng cung cấp, bạn có thể thấy rằng bạn thích dòng lệnh hơn IDE.
 
 
-## 44: Biết rõ nhiều hơn hai ngôn ngữ lập trình
+## 44: ✅ Biết rõ nhiều hơn hai ngôn ngữ lập trình
 
 Suy nghĩ của những người lập trình lâu năm rằng từ lâu họ đã biết chuyên môn lập trình có liên quan trực tiếp đến số lượng các cơ chế lập trình khác nhau mà họ cảm thấy thỏa mái khi làm việc với nó. Nó không chỉ là biết hay chỉ là biết một ít mà thực sự có thể làm việc với nó.
+
 Mỗi lập trình viên đều bắt đầu với một ngôn ngữ lập trình. Nó có ảnh hưởng lớn đến cách mà lập trình viên tư duy về làm phần mềm. Bất kể có bao nhiêu năm kinh nghiệm lập trình với ngôn ngữ lập trình đấy, nếu như họ chỉ dừng lại ở việc học mỗi một ngôn ngữ họ sẽ chỉ biết có mỗi mình nó. Một lập trình viên mà chỉ biết một ngôn ngữ lập trình duy nhất họ sẽ bị giới hạn bởi tư duy của ngôn ngữ lập trình đấy.
-Một lập trình viên mà học hai ngôn ngữ lập trình sẽ thách thức hơn, đặc biệt là nếu nó có cơ chế khác so với ngôn ngữ đã học. C, Pascal, Fortran, tất cả đều là ngôn ngữ lập trình cơ bản. Chuyển từ Fortran sang C thì giới thiệu được một ít căn bản và không nhiều thử thách. Ta từ C hay Fortan chuyển qua học C++ thì sẽ có những thách thức căn bản hơn trong cách xử lí với các chương trình. Chuyển từ C++ sang Haskell là một bước thay đổi đáng kể do đó nó có một thách thức thấy rõ hơn. Chuyển từ C sang Prolog là một thử thách rất khó khăn.
-Chúng ta có thể liệt kê một số cơ chế lập trình: procedural, object-oriented, functional, logic, dataflow,..
+
+Một lập trình viên mà học hai ngôn ngữ lập trình sẽ thách thức hơn, đặc biệt là nếu nó có cơ chế khác so với ngôn ngữ đã học. `C`, `Pascal`, `Fortran`, tất cả đều là ngôn ngữ lập trình cơ bản. Chuyển từ `Fortran` sang `C` thì giới thiệu được một ít căn bản và không nhiều thử thách. Ta từ `C` hay `Fortan` chuyển qua học `C++` thì sẽ có những thách thức căn bản hơn trong cách xử lí với các chương trình. Chuyển từ `C++` sang `Haskell` là một bước thay đổi đáng kể do đó nó có một thách thức thấy rõ hơn. Chuyển từ `C` sang `Prolog` là một thử thách rất khó khăn.
+
+Chúng ta có thể liệt kê một số cơ chế lập trình: `procedural`, `object-oriented`, `functional`, `logic`, `dataflow`,..
+
 Chuyển từ mô hình này sang mô hình khác tạo nên một thử thách lớn nhất.
+
 Tại sao những thử thách này lại tốt? Nó là cách để làm chúng ta suy nghĩ về việc triển khai các thuật toán và các cách thức và chuẩn của mô hình mà chúng ta áp dụng. Đặc biệt, Trộn lẫn các kiến thức học được với nhau là cốt lõi của thành công. Cách thức tìm ra giải pháp cho một vấn đề trong một ngôn ngữ có thể không thể thực hiện trong một ngôn ngữ khác. Cố gắng giải quyết vấn để bằng cách thức của ngôn ngữ này chuyển sang giải quyết với ngôn ngữ khác dạy cho chúng ta về một vấn đề mà cả hai ngôn ngữ đang giải quyết.
-ngữ lập trình với nhau có tác dụng rất lớn. Có lẽ rõ ràng nhất là việc sử dụng ngày càng nhiều các phương thức biểu đạt khai báo ttrong các hệ thống bằng các ngôn ngữ mệnh lệnh. Bất kì ai thành thạo lập trình hướng thủ tục đều có thể dễ dàng áp dụng phương pháp khai báo ngay cả khi sử dụng ngôn ngữ như C. Sử dụng phương pháp khai báo thường dẫn đến các chương trình ngắn hơn và dễ hiểu hơn. C++ là một ví dụ cho sự hỗ trợ hết mình cho lập trình tổng quát, cái mà hầu như luôn cần một phương thức khai báo.
+
+Ngữ lập trình với nhau có tác dụng rất lớn. Có lẽ rõ ràng nhất là việc sử dụng ngày càng nhiều các phương thức biểu đạt khai báo trong các hệ thống bằng các ngôn ngữ mệnh lệnh. Bất kì ai thành thạo lập trình hướng thủ tục đều có thể dễ dàng áp dụng phương pháp khai báo ngay cả khi sử dụng ngôn ngữ như `C`. Sử dụng phương pháp khai báo thường dẫn đến các chương trình ngắn hơn và dễ hiểu hơn. `C++` là một ví dụ cho sự hỗ trợ hết mình cho lập trình tổng quát, cái mà hầu như luôn cần một phương thức khai báo.
+
 Hậu quả của tất cả những điều này là nó khiến mọi lập trình viên phải có kỹ năng lập trình tốt trong ít nhất hai mô hình cơ chế khác nhau, và hợp lí nhất là thực hiện ít nhất năm đề cập ở trên. Lập trình viên nên luôn luôn hứng thú với việc học ngôn ngữ lập trình mới, tốt nhất là từ một mô hình xa lạ. Ngay cả khi công việc thường ngày luôn sử dụng một ngôn ngữ, sự thành thạo của việc sử dụng một ngôn ngữ đó là khi một người có thể áp dụng các cơ chế của ngôn ngữ lập trình khác và không đánh giá thấp nó. Nhà tuyển dụng nên chú ý và cho phép sử dụng ngân sách đào tạo nhân viên của họ học các ngôn ngữ lập trình hiện không sử dụng làm chính trong công việc mục đích để tăng độ tư duy trong công việc và sử dụng các ngôn ngữ lập trình.
+
 Mặc dù đó là một sự khởi đầu, Khóa đào tạo một tuần không đủ để học một ngôn ngữ mới: nó thường mất tầm một vài tháng để sử dụng được tốt, ngay cả khi ngoài giờ, để có được kiến thức làm việc được với một ngôn ngữ. Nó là cách thức sử dụng, không chỉ là cú pháp và các cơ chế mô hình tính toán, đó là những yếu tố quan trọng.
 
 
-## 45: THÀNH THẠO IDE CỦA BẠN
+## 45: ✅ Thành thạo IDE của bạn
 
 Vào thập niên 80, khi mà những môi trường lập trình thường không có gì sánh bằng những trình biên soạn text. Làm nổi bật lên các cú pháp, là việc mà chúng ta công nhận bấy giờ là một điều xa xỉ mà không phải ai cũng có thể làm được. Những chiếc máy in để định dạng code một cách đẹp đẽ thường là công cụ bên ngoài được sử dụng để sửa khoảng cách. Debuggers cũng là những chương trình rời rạc được chạy để bỏ qua code của chúng ta, nhưng lại với một loạt các thao tác phím bí mật.
 
-Trong suốt những năm thuộc thập niên 90, các công ty bắt đầu nhận ra được tiềm năng kinh tế mà họ có thể chuyển hóa từ việc trang bị thêm các lập trình viên có công cụ tốt hơn và hữu ích hơn. Môi Trường Thiết Kế Hợp Nhất (IDE) đã tập hợp các tính năng được chỉnh sửa trước đó với một bộ biên dịch, một debugger, một máy in tốt và các công cụ khác. Trong khoảng thời
-gian đó, các menu và chuột máy tính cũng trở nên nổi tiếng, điều đó có nghĩa rằng sẽ chẳng bao lâu nữa các nhà phát triển sẽ cần nghiên cứu về các chìa khóa bí mật để sử dụng chương trình biên soạn của họ. Họ có thể dễ dàng lựa chọn lệnh từ menu.
+Trong suốt những năm thuộc thập niên 90, các công ty bắt đầu nhận ra được tiềm năng kinh tế mà họ có thể chuyển hóa từ việc trang bị thêm các lập trình viên có công cụ tốt hơn và hữu ích hơn. Môi Trường Thiết Kế Hợp Nhất (IDE) đã tập hợp các tính năng được chỉnh sửa trước đó với một bộ biên dịch, một debugger, một máy in tốt và các công cụ khác. Trong khoảng thời gian đó, các menu và chuột máy tính cũng trở nên nổi tiếng, điều đó có nghĩa rằng sẽ chẳng bao lâu nữa các nhà phát triển sẽ cần nghiên cứu về các chìa khóa bí mật để sử dụng chương trình biên soạn của họ. Họ có thể dễ dàng lựa chọn lệnh từ menu.
 
-Đến thế kỉ 21, các IDE đã thực sự trở nên phổ biến đến mức chúng được tặng miễn phí bởi các công ty muốn giành lấy thị phần trong các lĩnh vực khác. IDE hiện đại đã được trang bị một hệ thống các tính năng tuyệt vời. Tính năng mà tôi rất yêu thích là tự động tái cấu trúc, đặc biệt là Extract Method, đó là nơi mà tôi có thể lựa chọn và biến đổi một mảng code theo một thứ tự nhất định. Công cụ tái cấu trúc sẽ biến tất cả thông số cần được duyệt thành một hệ thống thứ tự, là thứ sẽ làm cho hoạt động sửa đổi code trở nên cực kì dễ dàng. IDE của tôi còn phát hiện các mảng code khác có thể được thay thể bởi hệ thống này và cũng đưa ra câu hỏi liệu rằng tôi có muốn thay thế chúng hay không.
+Đến thế kỉ 21, các IDE đã thực sự trở nên phổ biến đến mức chúng được tặng miễn phí bởi các công ty muốn giành lấy thị phần trong các lĩnh vực khác. IDE hiện đại đã được trang bị một hệ thống các tính năng tuyệt vời. Tính năng mà tôi rất yêu thích là tự động tái cấu trúc, đặc biệt là *Extract Method*, đó là nơi mà tôi có thể lựa chọn và biến đổi một mảng code theo một thứ tự nhất định. Công cụ tái cấu trúc sẽ biến tất cả thông số cần được duyệt thành một hệ thống thứ tự, là thứ sẽ làm cho hoạt động sửa đổi code trở nên cực kì dễ dàng. IDE của tôi còn phát hiện các mảng code khác có thể được thay thể bởi hệ thống này và cũng đưa ra câu hỏi liệu rằng tôi có muốn thay thế chúng hay không.
 
 Một tính năng ngạc nhiên nữa của những IDE hiện đại đó chính là khả năng ép buộc các kiểu quy tắc trong phạm vi một công ty. Ví dụ, trong ngôn ngữ Java, một vài lập trình viên đã làm tất cả các tham số cuối cùng (đó là việc mà tôi cho là khá tốn thời gian). Tuy nhiên, kể từ khi họ có một kiểu quy tắc riêng, tất cả tôi cần để theo dõi nó đó chính là cài nó vào IDE của tôi: Tôi sẽ nhận được một cảnh báo cho bất cứ tham số nào chưa đến cuối cùng. Các kiểu quy tắc này cũng được sử dụng để tìm kiếm các bugs có khả năng xảy ra, ví dụ như là so sánh đối tượng được autoboxed để lấy đẳng thức tham chiếu, ví dụ như sử dụng == trên các giá trị gốc đã được autoboxed vào các đối tượng tham chiếu.
 
 Không may là các IDE hiện đại không đòi hỏi chúng ta nỗ lực đầu tư để học hỏi cách sử dụng chúng. Khi tôi lập trình C lần đầu tiên trên hệ điều hành Unix, tôi đã phải dành khá nhiều thời gian để học về cách thức chương trình vi hoạt động, vì “đường cong học tập” của nó khá dốc. Khoảng thời gian này đã được trả lại hết sau nhiều năm. Tôi thậm chí vẫn đang gõ bản nháp của chủ đề này với vi. IDE hiện đại có một “ đường cong học tập” rất chậm rãi, là thứ có tác động chúng rằng ta sẽ không bao giờ tiến bộ vượt quá mức sử dụng cơ bản của các công cụ.
+
 Bước đầu tiên của tôi trong việc nghiên cứu về IDE là học thuộc lòng các phím tắt. Khi đặt tay lên bàn phím để gõ code, tôi sẽ nhấn tổ hợp phím Ctrl+Shift+I để inline các bản lưu có thể thay đổi khỏi việc ngắt dòng, trong khi chuyển sang điều khiển menu thông qua chuột để ngắt dòng. Những sự gián đoạn dòng đó dẫn đến các sự chuyển đổi ngữ cảnh không cần thiết và sẽ làm giảm bớt năng suất của tôi nếu tôi cố gắng để làm mọi thứ theo cách chậm chạp. Quy định giống nhau cũng áp dụng cho các kĩ thuật gõ phím. Hãy học hỏi để đạt đến sự mẫu mực, bạn sẽ không phải hối tiếc về khoảng thời gian đã bỏ ra cho việc đó.
+
 Cuối cùng, với tư cách là một lập trình viên, chúng ta có thời gian chứng tỏ rằng công cụ phát trực tuyến của Unix có thể giúp ta vận dụng cho code. Ví dụ trong lúc xem xét lại các đoạn code, tôi đã để ý rằng các lập trình viên đã đặt tên rất nhiều class giống nhau, và ta có thể tìm được chúng một cách dễ dàng thông qua các công cụ như find, sed, sort, uniq và grep, giống như mô tả dưới đây:
 
 ```bash
 find . -name "*.java" | sed 's/.*\///' | sort | uniq -c | grep -v "^ *1 " | sort –r
 ```
+
 Chúng ta đều biết rằng một người thợ sửa ống nước đến nhà có thể sử dụng thành thạo đèn hàn của anh ấy. Hãy dành ra một ít thời gian để học cách trở nên thành thạo với IDE của mỗi chúng ta.
 
 
 
-## 46: Nhận thức giới hạn của bản thân
+## 46: ✅ Nhận thức giới hạn của bản thân
 
 ::: quote
 *Làm người phải biết giới hạn của bản thân - Dirty Harry*
@@ -843,6 +916,8 @@ Vậy chúng ta thực hiện nó bằng cách nào? Đó là hiểu bản thân
 
 Sự phức tạp về không gian và thời gian thực hiện của một thuật toán được xác định bởi hàm `O(f(n))` (với n là kích thước đầu vào của chương trình) là sự dự đoán về thời gian hay không gian lưu trữ của thuật toán khi n tiến đến vô cực. Một số lớp quan trọng của hàm `f(n)` bao gồm:
 ln(n), n, n ln(n), n​e​ và cuối cùng là en​. Khi tổng hợp kết quả từ việc thử nghiệm hàm này và biểu diễn bằng đồ thị chúng ta sẽ nhận thấy sự khác biết rõ ràng, khi n ngày càng lớn, `O(ln(n))` sẽ cho kết quả vô cùng nhỏ khi so sánh với `O(n)` hay `O(n ln(n))`, và còn nhỏ hơn rất nhiều lần so với `O(ne​)` và `O(e​n​)`. Khi Sean Parent thử với mọi n lớn nhất có thể đạt được thì tất cả các lớp trả về một kết quả gần như hằng số hay gần tuyến tính hay gần như vô cùng lớn.
+
+```
 Access time Capacity
 Register <1ns 64b
 Cache line 64B
@@ -851,6 +926,7 @@ L2 cache 4ns 8MB
 RAM 20ns 32GB Disk 10ms 10TB
 LAN 20ms >1PB
 Internet 100ms >1ZB
+```
 
 Phân tích độ phức tạp chính là một trong những phần của máy tính trừu tượng, nhưng phần mềm lại chạy trên những cỗ máy thật. Những hệ thống máy tính hiện đại được chế tạo dựa trên lý thuyết vật lý cùng với những hệ thống trừu tượng, bao gồm cả thời gian xử lý ngôn ngữ, CPUs, bộ nhớ cache, RAM, ổ cứng, và mạng máy tính. Bảng trên cho thấy giới hạn của thời gian truy cập nhiên và khả năng lưu trữ của một server máy tính tiêu biểu.
 
@@ -862,10 +938,12 @@ Và thuật toán và cấu trúc dữ liệu cho thấy chúng hiệu quả nh�
 - Cây van Emde Boas tìm kiếm và thuật toán Cache-Oblivious chỉ cần O(log(log(n))).
 
 Số phần tử Thời gian tìm kiếm (ns) tuyến tính nhị phân vEB
+```
 8 50 90 40
 64 180 150 70
 512 1200 230 100
 4096 17000 320 160
+```
 
 Vậy chúng ta nên sử dụng thuật toán nào? Dựa trên số liệu thống kê và đo đạc được bảng trên thể hiện thời gian cần thiết tìm kiếm trong một mảng số nguyên 64 bit bằng ba phương pháp kể trên. Cá nhân tôi cho rằng:
 - Tìm kiếm tuyến tính có thể áp dụng cho mảng nhỏ, nhưng nó dần trở nên rất lâu với những mảng lớn hơn.
@@ -875,18 +953,15 @@ Vậy chúng ta nên sử dụng thuật toán nào? Dựa trên số liệu th�
 *Bạn phải trả giá cho lựa chọn của bản thân mình - Punch*
 :::
 
-## 47: Nắm rõ cam kết tiếp theo của bản thân
+## 47: ✅ Nắm rõ cam kết tiếp theo của bản thân
 
-Tôi đã từng thử hỏi các lập trình viên rằng họ đang làm gì vào lúc đó để xem họ trả lời như thế nào. Người đầu tiên nói: “ Tôi đang tái cấu trúc lại những phương thức ”. “ Tôi đang thêm vào một vài thông số cho hoạt động của trang web ”, người tiếp theo trả lời. Người thứ ba bộc bạch:
-
-“*Tôi đang làm việc trên lịch sử người dùng*”.
+Tôi đã từng thử hỏi các lập trình viên rằng họ đang làm gì vào lúc đó để xem họ trả lời như thế nào. Người đầu tiên nói: “*Tôi đang tái cấu trúc lại những phương thức*”. “*Tôi đang thêm vào một vài thông số cho hoạt động của trang web*”, người tiếp theo trả lời. Người thứ ba bộc bạch: “*Tôi đang làm việc trên lịch sử người dùng*”.
 
 Trông có vẻ như hai người đầu tiên đã quá tập trung vào các chi tiết trong công việc của họ, trong khi người thứ ba đã nhìn ra được vấn đề lớn hơn, hắn đã để ý rất tốt. Tuy nhiên, khi tôi đặt ra câu hỏi họ sẽ cam kết khi nào và những gì, mọi chuyện thay đổi một cách đột ngột. Hai người đầu tiên đã “clear” những files liên quan và hoàn thành chúng trong vòng hơn một tiếng đồng hồ. Nhưng lập trình viên thứ ba đã nói như sau: “*Ồ, tôi đoán là tôi sẽ sẵn sàng trong vòng vài ngày, có thể tôi sẽ thêm một vài class và thay đổi các dịch vụ theo cách nào đó.*”
 
-Rõ ràng là hai người đầu tiên có tầm nhìn mục tiêu tổng quát, họ đã lựa chọn những nhiệm vụ mà họ nghĩ rằng nó sẽ hiệu quả hơn, và hoàn toàn có thể hoàn thành trong vòng chưa đến hai tiếng đồng hồ. Một khi họ đã hoàn tất những công việc đó, họ sẽ có thể lựa chọn một tính năng mới mẻ hoặc tái cấu trúc để công việc được tiếp tục. Tất cả code được viết đã được hoàn
-thành như thế bởi một một mục đích rất rõ ràng và một mục tiêu có giới hạn, khả thi trong tâm trí người lập trình.
+Rõ ràng là hai người đầu tiên có tầm nhìn mục tiêu tổng quát, họ đã lựa chọn những nhiệm vụ mà họ nghĩ rằng nó sẽ hiệu quả hơn, và hoàn toàn có thể hoàn thành trong vòng chưa đến hai tiếng đồng hồ. Một khi họ đã hoàn tất những công việc đó, họ sẽ có thể lựa chọn một tính năng mới mẻ hoặc tái cấu trúc để công việc được tiếp tục. Tất cả code được viết đã được hoàn thành như thế bởi một một mục đích rất rõ ràng và một mục tiêu có giới hạn, khả thi trong tâm trí người lập trình.
 
-Còn lập trình viên thứ ba không thể phân tích được vấn đề và đã làm việc trên mọi khía cạnh cùng một lúc. Anh ấy không hề biết rằng mình sẽ làm gì, cơ bản như thực hiện lập trình speculative hay hy vọng rằng đến một lúc nào đó anh ta có thể thực hiện cam kết. Gần như chắc chắn rằng những đoạn code được viết vào thời điểm bắt đầu của đợt lâu dài này sẽ không phù hợp với solution được xuất ra cuối cùng.
+Còn lập trình viên thứ ba không thể phân tích được vấn đề và đã làm việc trên mọi khía cạnh cùng một lúc. Anh ấy không hề biết rằng mình sẽ làm gì, cơ bản như thực hiện lập trình `speculative` hay hy vọng rằng đến một lúc nào đó anh ta có thể thực hiện cam kết. Gần như chắc chắn rằng những đoạn code được viết vào thời điểm bắt đầu của đợt lâu dài này sẽ không phù hợp với solution được xuất ra cuối cùng.
 
 Liệu hai lập trình viên đầu tiên sẽ làm như thế nào nếu những nhiệm vụ của họ tiêu tốn nhiều hơn hai tiếng đồng hồ? Sau khi nhận ra mình đã dành ra quá nhiều, có lẽ họ sẽ vứt bỏ đi những thay đổi, xác định rõ những nhiệm vụ nhỏ hơn, và bắt đầu lại. Thay vì tiếp tục làm việc một cách thiếu tập trung và dẫn đến việc những đoạn code đầu cơ xâm nhập vào kho lưu trữ, thì những thay đổi sẽ bị loại bỏ, nhưng những hiểu biết sâu sắc vẫn sẽ được giữ lại và phát huy.
 
@@ -897,19 +972,24 @@ Tại một vài thời điểm, kể cả những lập trình viên “*cam k�
 Phải biết rõ được cam kết tiếp theo của bạn là gì, nếu không làm được, hãy vứt bỏ hết những thay đổi, sau đó xác định một nhiệm vụ mới mà các bạn tin tưởng. Hãy thực hiện thực nghiệm speculative bất cứ khi nào cần, nhưng đừng để bị rơi vào mode đó một cách thiếu nhận biết và đừng để các cam kết “phỏng đoán” “rơi” vào kho lưu trữ của mình!
 
 
-## 48: Dữ liệu liên kết lớn thuộc về cơ sở dữ liệu
+## 48: ✅ Dữ liệu liên kết lớn thuộc về cơ sở dữ liệu
 
-Nếu chương trình ứng dụng của bạn chuẩn bị xử lý một loạt các tài nguyên dữ liệu rộng lớn và liên kết, đừng chần chừ mà hãy đặt nó vào trong cơ sở dữ liệu quan hệ. Trong quá khứ RDBMS(1) ( Hệ Quản trị Cơ Sở Dữ Liệu Quan Hệ ) từng được coi như một con “linh thú” vừa đắt tiền, khan hiếm, phức tạp và rất khó sử dụng. Nhưng rồi điều đó cũng không còn quan trọng nữa. Hiện nay rất dễ dàng để tìm kiếm các hệ thống RDBMS, giống như là mọi hệ thống bạn đang sử dụng luôn sẵn có một hoặc hai RDBMS đã được cài đặt trong đó vậy. Một vài RDBMS có tiềm năng, như MySQL(2) và PostgreSQL(3) là các phần mềm mã nguồn mở, vì thế nên vấn đề về bản quyền không thành vấn đề. Hơn cả vậy, cái được gọi là Hệ Thống Nhúng Cơ Sở Dữ Liệu có thể được liên kết bằng các library trực tiếp vào chương trình ứng dụng của bạn và hầu như không đòi hỏi phải thiết lập hay quản lý — hai hệ thống nguồn mở đáng chú ý là SQLite(4) và HSQLDB(5), những hệ thống đó thực sự rất có hiệu quả.
+Nếu chương trình ứng dụng của bạn chuẩn bị xử lý một loạt các tài nguyên dữ liệu rộng lớn và liên kết, đừng chần chừ mà hãy đặt nó vào trong cơ sở dữ liệu quan hệ. Trong quá khứ RDBMS (**Hệ Quản trị Cơ Sở Dữ Liệu Quan Hệ**) từng được coi như một con “linh thú” vừa đắt tiền, khan hiếm, phức tạp và rất khó sử dụng. Nhưng rồi điều đó cũng không còn quan trọng nữa. Hiện nay rất dễ dàng để tìm kiếm các hệ thống RDBMS, giống như là mọi hệ thống bạn đang sử dụng luôn sẵn có một hoặc hai RDBMS đã được cài đặt trong đó vậy.
+
+Một vài RDBMS có tiềm năng, như *MySQL* và *PostgreSQL* là các phần mềm mã nguồn mở, vì thế nên vấn đề về bản quyền không thành vấn đề. Hơn cả vậy, cái được gọi là **Hệ Thống Nhúng Cơ Sở Dữ Liệu** có thể được liên kết bằng các library trực tiếp vào chương trình ứng dụng của bạn và hầu như không đòi hỏi phải thiết lập hay quản lý — hai hệ thống nguồn mở đáng chú ý là *SQLite* và *HSQLDB*, những hệ thống đó thực sự rất có hiệu quả.
+
 Nếu dữ liệu các ứng dụng của bạn lớn hơn dung lượng RAM của hệ thống, một bảng mục của RDBMS sẽ đưa ra các mệnh lệnh quan trọng nhanh hơn tập hợp library map của bạn, đồng thời giải phóng bộ nhớ ảo. Dịch vụ cơ sở dữ liệu hiện đại có thể dễ dàng phát triển với nhiều nhu cầu. Với sự chăm sóc chu đáo, bạn có thể phát triển quy mô một Hệ Thống Nhúng Cơ Sở Dữ Liệu thành một Hệ Thống Cơ Sở Dữ Liệu lớn hơn khi cần. Sau này bạn có thể chuyển đổi từ một nguồn mở miễn phí sang hệ thống độc quyền được hỗ trợ tốt và mạnh mẽ hơn.
-Một khi bạn hiểu rõ về SQL, viết ứng dụng cơ sở dữ liệu trung tâm sẽ là một việc rất thú vị. Sau khi đã đặt dữ liệu được chuẩn hóa chính xác của mình và cơ sở dữ liệu, thật dễ dàng để trích xuất thông tin một cách hiệu quả với truy vấn SQL mà không cần viết bất cứ đoạn code phức tạp nào. Tương tự vậy, một lệnh đơn SQL có thể đưa ra các thay đổi dữ liệu phức tạp. Với những sự sửa đổi một lần, nó thay đổi cách bạn sắp xếp dữ liệu liên tục, thậm chí bạn không cần phải viết code, chỉ cần kích hoạt trực tiếp giao diện SQL của cơ sở dữ liệu. Sự giống nhau về giao diện cũng cho phép bạn thực hiện với các truy vấn và vượt qua trình chỉnh sửa biên dịch ngôn ngữ lập trình thông thường.
-Một lợi ích khác của việc dựa vào code trong một RDBMS sẽ liên quan đến việc xử lý các mối quan hệ giữa các thành phần dữ liệu của bạn. Có thể miêu tả các ràng buộc nhất quán trên dữ liệu của mình bằng cách khai báo, tránh hiện tượng Dangling Pointers (6) trong trường hợp lỡ
-quên cập nhật dữ liệu của mình. Ví dụ, ta hiểu rằng khi một người dùng bị “ban”, các tin nhắn được gửi bởi người dùng đó cũng sẽ bị loại bỏ.
-Bạn cũng có thể tạo các đường dẫn hiệu quả giữa các đối tượng được lưu trữ trong cơ sở dữ liệu bất cứ khi nào mình muốn bằng cách tạo một bản mục lục. Việc đưa ra các lần tái cấu trúc đắt đỏ và mông lung cho vùng “class fields” là thật sự không cần thiết. Ngoài ra, viết code cho cơ sở dữ liệu giúp kết nối rất nhiều các ứng dụng đến dữ liệu của bạn một cách an toàn, điều này làm cho việc nâng cấp ứng dụng để sử dụng cùng lúc và đồng thời cũng để việc viết code mỗi phần cho hầu hết các ứng dụng sử dụng ngôn ngữ và nền tảng thích hợp được dễ dàng hơn. Giả sử bạn có thể viết back — end(7) cho một ứng dụng chạy trên nền web bằng Java(8), một vài bản kiểm tra bằng ngôn ngữ Ruby(9) và một giao diện đẹp mắt bằng Processing(10). Cuối cùng, hãy nhớ rằng RDBMS sẽ hoạt động tốt để tối ưu hóa các lệnh SQL của bạn, cho phép bạn tập trung vào chức năng của các ứng dụng hơn là vào điều chỉnh thuật toán. Các hệ thống cơ sở dữ liệu cao cấp sẽ tận dụng lợi thế của bộ xử lý đa lõõi, và khi công nghệ được cải thiện, hiệu suất ứng dụng của bạn cũng vậy.
-Chú thích:
-(1): Relational Database Management System.
-(2) (3): Là các hệ thống quản trị cơ sở dữ liệu quan hệ.
 
-## 49: Học Ngoại Ngữ
+Một khi bạn hiểu rõ về SQL, viết ứng dụng cơ sở dữ liệu trung tâm sẽ là một việc rất thú vị. Sau khi đã đặt dữ liệu được chuẩn hóa chính xác của mình và cơ sở dữ liệu, thật dễ dàng để trích xuất thông tin một cách hiệu quả với truy vấn SQL mà không cần viết bất cứ đoạn code phức tạp nào. Tương tự vậy, một lệnh đơn SQL có thể đưa ra các thay đổi dữ liệu phức tạp. Với những sự sửa đổi một lần, nó thay đổi cách bạn sắp xếp dữ liệu liên tục, thậm chí bạn không cần phải viết code, chỉ cần kích hoạt trực tiếp giao diện SQL của cơ sở dữ liệu. Sự giống nhau về giao diện cũng cho phép bạn thực hiện với các truy vấn và vượt qua trình chỉnh sửa biên dịch ngôn ngữ lập trình thông thường.
+
+Một lợi ích khác của việc dựa vào code trong một RDBMS sẽ liên quan đến việc xử lý các mối quan hệ giữa các thành phần dữ liệu của bạn. Có thể miêu tả các ràng buộc nhất quán trên dữ liệu của mình bằng cách khai báo, tránh hiện tượng **Dangling Pointers**  trong trường hợp lỡ quên cập nhật dữ liệu của mình. Ví dụ, ta hiểu rằng khi một người dùng bị “ban”, các tin nhắn được gửi bởi người dùng đó cũng sẽ bị loại bỏ.
+
+Bạn cũng có thể tạo các đường dẫn hiệu quả giữa các đối tượng được lưu trữ trong cơ sở dữ liệu bất cứ khi nào mình muốn bằng cách tạo một bản mục lục. Việc đưa ra các lần tái cấu trúc đắt đỏ và mông lung cho vùng **class fields** là thật sự không cần thiết.
+
+Ngoài ra, viết code cho cơ sở dữ liệu giúp kết nối rất nhiều các ứng dụng đến dữ liệu của bạn một cách an toàn, điều này làm cho việc nâng cấp ứng dụng để sử dụng cùng lúc và đồng thời cũng để việc viết code mỗi phần cho hầu hết các ứng dụng sử dụng ngôn ngữ và nền tảng thích hợp được dễ dàng hơn. Giả sử bạn có thể viết *back — end* cho một ứng dụng chạy trên nền web bằng Java, một vài bản kiểm tra bằng ngôn ngữ *Ruby* và một giao diện đẹp mắt bằng *Processing*. Cuối cùng, hãy nhớ rằng RDBMS sẽ hoạt động tốt để tối ưu hóa các lệnh SQL của bạn, cho phép bạn tập trung vào chức năng của các ứng dụng hơn là vào điều chỉnh thuật toán. Các hệ thống cơ sở dữ liệu cao cấp sẽ tận dụng lợi thế của bộ xử lý đa lõõi, và khi công nghệ được cải thiện, hiệu suất ứng dụng của bạn cũng vậy.
+
+
+## 49: ✅ Học Ngoại Ngữ
 
 Lập trình viên cũng cần phải giao tiếp nhiều.
 
@@ -931,7 +1011,7 @@ Và, tất nhiên, cuộc sống là những gì nhiều hơn máy tính phần 
 *(Cái gì người ta không thể nói về, người ta phải im lặng về nó.)*
 
 
-## 50: Học Cách Ước Tính
+## 50: ✅ Học Cách Ước Tính
 
 Là một lập trình viên, bạn phải có khả năng đưa ra các ước tính cho quản lí, đồng nghiệp, và người dùng về các công việc được giao cho bạn, như thế họ sẽ có cách kế hoạch cụ thể, hợp lí về thời gian, giá cả, công nghệ, và các nguồn cung cấp khác cần cho công việc của họ.
 
@@ -957,7 +1037,7 @@ Do đó, mục đích của việc ước tính là làm cho sự quản lí d�
 Những gì mà nhà quản lí thực sự yêu cầu lập trình viên trong cuộc đối thoại phía trên là đưa ra lời cam kết dựa trên mục tiêu bất thành văn của nhà quản lí, chứ không phải là để được cung cấp sự ước tính. Sau này khi bạn được yêu cầu để đưa ra ước tính, hãy chắc chắn rằng những người có liên quan họ biết mình đang nói về vấn đề gì, và dự án của bạn sẽ có cơ hội thành công cao hơn. Nào, đã đến lúc để học một vài kĩ thuật…
 
 
-## 51: Học cách nói “hello, world”
+## 51: ✅ Học cách nói “hello, world”
 
 Paul Lee, biệt danh, hay được biết đến với cái tên Hoppy, nổi tiếng là một chuyên gia về các vấn đề lập trình. Tôi thật sự cần sự giúp đỡ. Chính vì thế tôi đã tìm đến nơi làm việc của Hoppy để nhờ vả, liệu anh ta có thể kiểm tra một số đoạn code của tôi không?
 
@@ -992,7 +1072,7 @@ int main()
 }
 ```
 
-## 52: Hãy để dự án của bạn tự lên tiếng
+## 52: ✅ Hãy để dự án của bạn tự lên tiếng
 
 Dự án của bạn có thể có một hệ thống kiểm soát thích hợp. Có thể nó được kết nối với một máy chủ tích hợp liên tục xác minh tính chính xác bằng hàng loạt các kiểm tra tự động. Đó là một điều tốt.
 
@@ -1009,7 +1089,7 @@ Hãy để óc sáng tạo dẫn dắt trong việc lựa chọn một thiết b
 Thiết bị phản hồi cực độ hoạt động như hộp thoại trong dự án của bạn. Dự án ấy hiện đang được các nhà phát triển phàn nàn hoặc khen ngợi theo các tiêu chuẩn mà họ đã đề ra. Bạn có thể thúc đẩy việc nhân cách hóa này bằng cách áp dụng phần mềm tổng hợp giọng nói và một cặp loa 🔊. Bây giờ thì dự án của bạn đã thực sự lên tiếng.
 
 
-## 53: Linker (Trình liên kết) không phải là một chương trình ma thuật gì cả đâu
+## 53: ✅ Linker (Trình liên kết) không phải là một chương trình ma thuật gì cả đâu
 
 Thường xuyên chán nản (nó lại xảy ra với tôi ngay trước khi tôi viết bài này), quan điểm của nhiều lập trình viên về quá trình chuyển từ mã nguồn sang thực thi được liên kết tĩnh trong một ngôn ngữ được biên dịch là:
 
@@ -1049,7 +1129,7 @@ Không chỉ có thể có một, mà phải có một. Nếu iii chỉ xuất h
 
 Mặc dù không phải lúc nào cũng rõ ràng ngay lập tức tại sao bạn nhận được một thông điệp liên kết cụ thể, nhưng không có gì kỳ diệu về các trình liên kết. Các cơ chế là đơn giản; đó là chi tiết bạn phải tìm ra trong từng trường hợp.
 
-## 54: “Tuổi thọ” của các giải pháp tạm thời
+## 54: ✅ “Tuổi thọ” của các giải pháp tạm thời
 
 Tại sao chúng ta tạo ra các giải pháp tạm thời?
 
@@ -1082,7 +1162,7 @@ Tính năng động sẽ được áp dụng nếu tùy chọn trước đó kh�
 
 Bạn sẽ tạo ra nhiều giải pháp, một trong số chúng sẽ chỉ là tạm thời nhưng hầu hết lại hữu ích. Cách tốt nhất để bảo qua các giải pháp tạm thời là làm cho chúng trở nên thừa thãi, qua đó cung cấp một giải pháp hiệu quả hơn. Tôi mong rằng bạn có được sự thoải mái để chấp nhận những điều bạn không thể thay đổi, can đảm thay đổi những điều bạn có thể và có khả năng để biết được sự khác biệt.
 
-## 55: Làm cho giao diện dễ sử dụng hơn
+## 55: ✅ Làm cho giao diện dễ sử dụng hơn
 
 Một trong hầu hết các nhiệm vụ phổ biến trong việc phát triển phần mềm đó là kỹ thuật làm giao diện. Các giao diện đạt mức độ cao nhất của sự trừu tượng (những người sử dụng giao diện), ở cấp độ thấp nhất (chức năng các giao diện) và ở tầm trung ( các lớp giao diện, thư viện các giao diện, vân vân,…). Bất kể việc bạn có làm việc với những người dùng cuối cùng hay không để chỉ rõ cách thức họ tương tác bằng một một hệ thống, hay kết hợp với các nhà phát triển để chỉ ra một API, hoặc là trình bày các chức năng riêng biệt cho một class, thiết kế giao diện vẫn là một phần cực kì quan trọng trong công việc của bạn. Nếu hoàn thành tốt, các giao diện của bạn sẽ được đưa vào sử dụng và đồng thời thúc đẩy năng suất các công việc. Nếu làm không tốt, có thể giao diện sẽ gây thất vọng hoặc tệ hơn là nguồn gốc phát sinh các lỗi.
 
@@ -1096,11 +1176,12 @@ Một cách hiệu quả để thiết kế các giao diện sao cho dễ sử d
 
 Trên tất cả, hãy nhớ rằng giao diện được tạo ra để phục vụ cho nhu cầu tiện nghi của các người dùng, không phải cho người thực hiện.
 
-*Chú thích:*
+**💬 Chú thích:**
 - *API* (Application Programming Interface) (giao diện lập trình ứng dụng) phương thức kết nối với các thư viện và ứng dụng khác.
 - *GUI* (Graphical User Interface) (giao diện đồ họa người dùng), nơi mà bạn tương tác với máy tính bằng hình ảnh chứ không phải là văn bản.
 - *Whiteboard*: là một khung vẽ kỹ thuật số miễn phí, là một ứng dụng cho phép người dùng phác thảo, lập kế hoạch và cộng tác với nội dung và ý tưởng của họ.
 - *Index card*: (Thẻ chỉ mục) Bao gồm kho thẻ được cắt theo kích thước tiêu chuẩn, được sử dụng để ghi và lưu trữ một lượng nhỏ dữ liệu rời rạc.
+
 
 ## 56: Khiến những điều vô hình trở nên rõ ràng!
 Những khía cạnh của vấn đề “vô hình” được đề cập nhiều là việc duy trì các nguyên tắc của phần mềm. Thuật ngữ của chúng tôi rất giàu tính ẩn dụ vô hình — tính minh bạch của cơ chế và ẩn đi thông tin, tôi chỉ liệt kê ra hai trong số các thuật ngữ này. ## mềm và quá trình phát triển nó được giải thích bởi Douglas Adams, hầu hết là không được để ý tới.
@@ -1138,7 +1219,7 @@ Hãy giả vờ bạn đang giải thích cho người ấy cách để giải q
 Joe nhận lại đoạn code của anh ấy và nhìn tôi với một nụ cười thấp thoáng trên môi.
 “Tôi hiểu rồi, thưa giáo sư, tôi sẽ khiến thế giới tốt đẹp hơn cho Phil. Cảm ơn.”
 
-## 59: Thiếu cơ hội cho Polymorphism
+## 59: ✅ Thiếu cơ hội cho Polymorphism
 
 Polymorphism là một trong những ý tưởng lớn làm nền tảng cho OO. Từ này được lấy từ tiếng Hy Lạp, có nghĩa là nhiều (poly) dạng (morph). 
 
@@ -1197,7 +1278,7 @@ Trong ví dụ này, chúng tôi đã ủy thác trách nhiệm làm việc vớ
 
 Mặc dù có những trường hợp sẽ hiệu quả hơn nhiều khi sử dụng *if-then-else* thay vì Polymorphism, nhưng thông thường, Polymorphism coding sẽ mang lại một cơ sở code nhỏ hơn, dễ đọc hơn và ít mong manh hơn. Số cơ hội bị bỏ lỡ là số lượng các câu lệnh *if-then-else* trong code.
 
-## 60: Tester là bạn của bạn
+## 60: ✅ Tester là bạn của bạn
 
 Mặc dù họ tự gọi mình là “*Người đảm bảo chất lượng*” hay “*Kẻ kiểm soát chất lượng*”, nhiều lập trình viên coi họ là “*Đồ rắc rối*”. Dựa trên quan sát của bản thân, các lập trình viên thường có mối quan hệ không mấy tốt đẹp với những người phụ trách khâu kiểm tra phần mềm của họ. “*Họ quá kén chọn*” hay “*Họ muốn mọi thứ phải hoàn hảo*” là những lời phàn nàn phổ biến. Nghe quen đúng không?
 
@@ -1218,29 +1299,44 @@ Tôi đã từng xem qua một vài project mà đội ngũ thiết kế phải 
 Tôi từng làm việc chung với team mà mỗi sự thay đổi tính năng đều phải được kiểm tra thật kỹ lưỡng trước khi bước vào chu kỳ xây dựng chính. Chính vì thế mà tester được giữ lại chờ đợi bất cứ khi nào họ cần chỉnh sửa một vài thay đổi nhỏ( Tôi đã từng nhắc đến việc xây dựng toàn bộ sẽ mất thời gian quá lâu chưa?). Tôi cũng làm việc với team sẵn sàng xây dựng lại mọi thứ từ đầu cho quá trình sản xuất(sử dụng cách thức cũ như chúng tôi đã làm). Điều này có nghĩa là chúng ta chả có bằng chứng nào về việc phiên bản trong quá trình sản xuất đã được kiểm tra kỹ lưỡng. Và nhiều thứ nữa.
 Quy tắc rất đơn giản: hãy xây dựng một chương trình duy nhất mà bạn có thể xác định và thúc đẩy chúng thông qua tất cả các giai đoạn của quá trình phát hành. Hãy giữ chi tiết tối ưu cho từng môi trường trong môi trường của chúng. Ví dụ như là giữ chúng trong nơi chứa thành phần nhất định trong một file đã biết hoặc đường dẫn nào đó.
 Nếu team bạn có một bản code chứa tất cả mọi thứ hoặc lưu trữ nhưng cài đặt quan trọng trong code điều này cho thấy không một ai đã suy nghĩ kĩ càng về việc thiết kế để chia các tính năng mà quan trọng đối với ứng dụng, cái nào dành cho các môi trường nhất định. Hoặc tệ hơn, team đó biết phải làm gì nhưng lại không thể quan trọng hóa nó để thực hiện các thay đổi.
-Tất nhiên là sẽ có những trường hợp ngoại lệ ❗️. Bạn có thể phát triển cho đối tượng mà có sự khác biệt rõ rệt trong ràng buộc tài nguyên, nhưng nó không ảnh hưởng lớn đến những người mà viết ứng dụng truy xuất database liên tục. Hoặc là bạn đang ăn nằm với một vài mốt rắc rối đã cũ mà chúng quá khó để sửa chữa ngay bây giờ. Trong những trường hợp như thế này, bạn phải từng bước tiến dần giải quyết chúng nhưng hãy bắt đầu càng sớm càng tốt.
+Tất nhiên là sẽ có những trường hợp ngoại lệ ⚠. Bạn có thể phát triển cho đối tượng mà có sự khác biệt rõ rệt trong ràng buộc tài nguyên, nhưng nó không ảnh hưởng lớn đến những người mà viết ứng dụng truy xuất database liên tục. Hoặc là bạn đang ăn nằm với một vài mốt rắc rối đã cũ mà chúng quá khó để sửa chữa ngay bây giờ. Trong những trường hợp như thế này, bạn phải từng bước tiến dần giải quyết chúng nhưng hãy bắt đầu càng sớm càng tốt.
 Và một điều nữa: hãy giữ cho những thông tin về môi trường bạn cần luôn được cập nhật.
 Không việc gì có thể tệ hơn việc phá huỷ các thiết lập của môi trường và không thể biết được rằng chúng đã thay đổi những gì. Những thông tin về chúng luôn phải được cập nhật tách biệt khỏi code, bởi chính thay đổi ở những khoản khác nhau và thay đổi bởi nhiều lý do khác nhau. Chính vì thế các team nên dùng những hệ thống version control
 như là bazzar hay Git, bởi chúng khiến cho việc thay đổi môi trường sản phẩm trở nên dễ dàng hơn rất nhiều, và cũng đừng quên lưu lại chúng.
-## 62: Chỉ Có Code Mới Nói Lên Sự Thật
+
+
+## 62: ✅ Chỉ Có Code Mới Nói Lên Sự Thật
+
 Các dòng code hoạt động chính là ý nghĩa cuối cùng của một chương trình. Sẽ rất khó đọc khi chúng chỉ ở dạng nhị phân. Nếu đây là chương trình của bạn, của bất kì nhà phát triển phần mềm thương mại điển hình hay dự án nguồn mở, hoặc là viết code bằng ngôn ngữ thông dịch linh hoạt thì nên cần có mã nguồn. Khi nhìn vào mã nguồn,ý nghĩa của chương trình sẽ được thể hiện rõ ràng. Nội dung trong mã nguồn là toàn bộ những gì bạn có thể chắc chắn về công dụng của chương trình. Thậm chí hầu hết các tài liệu yêu cầu tính chính xác cũng không nói lên tất cả: nó không chứa nội dung chi tiết về những gì mà chương trình thật sự làm, nó chỉ thể hiện những ý định tổng quát của nhà phân tích requirements. Tài liệu thiết kế có thể thu nạp bản thiết kế theo kế hoạch, nhưng sẽ thiếu sót các chi tiết thực hiện cần thiết. Những tài liệu ấy có thể sẽ không đồng bộ hóa được với công việc hiện tại… hoặc có thể bị mất, hoặc không thể được tìm thấy ở nguồn đầu tiên. Khi đó, mã nguồn chính là nơi lưu trữ cuối cùng.
+
 Với ý tưởng này, hãy tự hỏi rằng mã code của bạn có thể thể hiện cụ thể với bạn hay những lập trình viên khác vai trò của nó hay không ?
-Có thể bạn sẽ nói rằng, “Oh, những chú thích của tôi sẽ cho bạn biết tất cả những thứ cần thiết.” Nhưng hãy nhớ rằng những chú thích ấy chẳng làm cho code của bạn hoạt động. Chúng có thể mắc phải sai lầm như các dạng tài liệu khác. Có một truyền thống cho rằng việc có thêm các chú thích đó sẽ tốt hơn, vì thế không ngạc nhiên lắm khi các lập trình viên viết chúng ngày càng nhiều, thậm chí họ còn trình bày và giải thích lại những thứ hiển nhiên trong mã code. Điều này thật không đúng để làm rõ code của bạn. Nếu code của bạn cần những chú thích đó, thì hãy tái cấu trúc để nó không cần nữa. Những chú thích dài dòng sẽ làm cho không gian màn hình bị xáo trộn và có thể IDE của bạn sẽ tự động ẩn chúng đi. Nếu bạn muốn giải thích về một sự thay đổi nào
-đó, hãy làm điều này trong thông báo đăng kí hệ thống kiểm soát phiên bản thay vì trong code.
+
+Có thể bạn sẽ nói rằng, *“Oh, những chú thích của tôi sẽ cho bạn biết tất cả những thứ cần thiết.*” Nhưng hãy nhớ rằng những chú thích ấy chẳng làm cho code của bạn hoạt động. Chúng có thể mắc phải sai lầm như các dạng tài liệu khác. Có một truyền thống cho rằng việc có thêm các chú thích đó sẽ tốt hơn, vì thế không ngạc nhiên lắm khi các lập trình viên viết chúng ngày càng nhiều, thậm chí họ còn trình bày và giải thích lại những thứ hiển nhiên trong mã code. Điều này thật không đúng để làm rõ code của bạn. Nếu code của bạn cần những chú thích đó, thì hãy tái cấu trúc để nó không cần nữa. Những chú thích dài dòng sẽ làm cho không gian màn hình bị xáo trộn và có thể IDE của bạn sẽ tự động ẩn chúng đi. Nếu bạn muốn giải thích về một sự thay đổi nào đó, hãy làm điều này trong thông báo đăng kí hệ thống kiểm soát phiên bản thay vì trong code.
+
 Bạn làm gì để có thể khiến cho code của bạn tự nói lên sự thật càng cụ thể càng tốt? Hãy đặt tên đơn giản, dễ nhớ và sắp xếp cấu trúc code của bạn để chúng thể hiện được chức năng của mình. Hãy tách rời các đoạn code để được giao diện rõ ràng. Viết những bài kiểm tra tự động để giải thích các hành vi dự định và kiểm tra các giao diện. Hãy mạnh dạn sửa lại cấu trúc khi bạn học cách viết code đơn giản với những phương pháp tốt hơn. Hãy làm cho code của bạn càng đơn giản càng tốt để dễ đọc và dễ hiểu.
-Hãy chăm chút cho code của bạn như thể đang biên soạn một bài thơ, bài diễn văn, một bài blog, hoặc là một tin email 📮 quan trọng. Hãy thể hiện sự khéo léo của bạn, nó sẽ thể hiện công dụng của nó và nói lên chính xác những gì nó đang làm, như thế nó vẫn biểu hiện được mục didschm dự định của bạn ngay cả khi bạn không ở bên cạnh. Hãy nhớ rằng những mã code hữu dụng đều được sử dụng lâu dài hơn dự định. Những lập trình viên bảo trì sẽ cảm ơn bạn. Và, nếu bạn là một lập trình viên bảo trì và code của bạn không dễ dàng thể hiện những gì bạn muốn, hãy chủ động áp dụng những hướng dẫn ở phía trên. Hãy giữ sự tỉnh táo trong khi thiết lập code của bạn.
-## 63: Làm chủ và tái cấu trúc trình biên dịch
+
+Hãy chăm chút cho code của bạn như thể đang biên soạn một bài thơ, bài diễn văn, một bài blog, hoặc là một tin email 📮 quan trọng. Hãy thể hiện sự khéo léo của bạn, nó sẽ thể hiện công dụng của nó và nói lên chính xác những gì nó đang làm, như thế nó vẫn biểu hiện được mục đích dự định của bạn ngay cả khi bạn không ở bên cạnh. Hãy nhớ rằng những mã code hữu dụng đều được sử dụng lâu dài hơn dự định. Những lập trình viên bảo trì sẽ cảm ơn bạn. Và, nếu bạn là một lập trình viên bảo trì và code của bạn không dễ dàng thể hiện những gì bạn muốn, hãy chủ động áp dụng những hướng dẫn ở phía trên. Hãy giữ sự tỉnh táo trong khi thiết lập code của bạn.
+
+
+## 63: ✅ Làm chủ và tái cấu trúc trình biên dịch
+
 Không có gì là lạ khi các team có kỉ luật tốt trong việc viết code lại ít chú ý đến việc biên dịch các scripts(1), do họ nghĩ rằng chúng chỉ là một chi tiết không quan trọng hoặc do sợ rằng chúng phức tạp và đòi hỏi các kĩ thuật cao trong quá trình hoạt động. Mặt khác việc biên dịch scripts không thể duy trì cùng với sự trùng lặp và các lỗi gây ra những vấn đề tương tự như các dòng code không đủ mạnh.
-Lý do về việc tại sao những nhà phát triển có tính kỉ luật và có kĩ năng xem biên dịch như là một công việc phụ của họ, đó khi biên dịch scripts ta thường viết bằng một ngôn
-ngữ khác với mã nguồn. Một lí do nữa đó là build không hẳn là “code”. Những lập luận này xuất hiện trước một thực tế rằng hầu hết các nhà phát triển phần mềm đều ưa thích học các ngôn ngữ mới, và trình biên dịch là thứ tạo ra các sản phẩm để các nhà phát triển và người dùng chạy thử nghiệm. Code sẽ trở nên vô dụng nếu không được xây dựng, và trình biên dịch là thứ sẽ xác định thành phần cấu trúc của một ứng dụng. Nó cũng là một phần không thể thiếu trong quá trình phát triển, ra quyết định cho quá trình xây dựng có thể làm cho code và quá trình viết code đơn giản hơn nhiều.
+
+Lý do về việc tại sao những nhà phát triển có tính kỉ luật và có kĩ năng xem biên dịch như là một công việc phụ của họ, đó khi biên dịch scripts ta thường viết bằng một ngôn ngữ khác với mã nguồn. Một lí do nữa đó là build không hẳn là “code”. Những lập luận này xuất hiện trước một thực tế rằng hầu hết các nhà phát triển phần mềm đều ưa thích học các ngôn ngữ mới, và trình biên dịch là thứ tạo ra các sản phẩm để các nhà phát triển và người dùng chạy thử nghiệm. Code sẽ trở nên vô dụng nếu không được xây dựng, và trình biên dịch là thứ sẽ xác định thành phần cấu trúc của một ứng dụng. Nó cũng là một phần không thể thiếu trong quá trình phát triển, ra quyết định cho quá trình xây dựng có thể làm cho code và quá trình viết code đơn giản hơn nhiều.
+
 Sử dụng các đặc ngữ trong quá trình viết scripts sẽ làm cho việc duy trì và quan trọng hơn là cải thiện chúng trở nên khó khăn hơn. Sẽ thật hợp lí nếu ta dành chút thời gian để hiểu đúng cách và tạo ra sự thay đổi. Các lỗi có thể xuất hiện khi ứng dụng được xây dựng sai cách hoặc khi cấu hình biên dịch không đúng.
-Hoạt động kiểm thử truyền thống đã luôn được giao cho đội QA (Quality Asurance)(2). Đến bây giờ ta mới nhận ra được nhìn nhận việc kiểm thử như là viết code là điều thực sự cần thiết để có thể mang lại các giá trị theo một cách dễ hiểu hơn. Gần giống như vậy, quá trình biên dịch cần được sở hữu bởi các nhóm có sự phát triển.
+
+Hoạt động kiểm thử truyền thống đã luôn được giao cho đội QA (**Quality Asurance**)(2). Đến bây giờ ta mới nhận ra được nhìn nhận việc kiểm thử như là viết code là điều thực sự cần thiết để có thể mang lại các giá trị theo một cách dễ hiểu hơn. Gần giống như vậy, quá trình biên dịch cần được sở hữu bởi các nhóm có sự phát triển.
+
 Hiểu rõ được quá trình biên dịch có thể đơn giản hóa việc kéo dài tuổi thọ và giảm giá thành cho nó. Trình biên dịch đơn giản cho phép một một nhà phát triển mới bắt đầu một cách nhanh chóng và dễ dàng. Cấu hình tự động hóa trong biên dịch sẽ giúp bạn làm việc một cách hợp lí khi mà rất nhiều người làm việc trên cùng một project, tránh việc xung đột trong công việc. Nhiều công cụ biên dịch có khả năng hỗ trợ bạn chạy các báo cáo trên các dòng code chất lượng tốt và cho phép bạn cảm nhận các vấn đề tiềm năng một cách sớm nhất. Bằng cách dành ra thời gian nghiên cứu về cách biến trình biên dịch thành của mình, bạn có thể giúp đỡ cho mọi người trong nhóm và chính cả bản thân bạn nữa. Từ đó ta có thể tập trung vào việc viêt code và lợi ích hóa cho các bên liên quan, đồng thời làm cho công việc này thêm phần thú vị.
-Hãy am hiểu quá trình biên dịch của bạn để biết được khi nào và làm thế nào để thực hiện những sự thay đổi hợp lí. Biên dịch scripts chính là viết code. Chúng thật sự quá quan trọng để giao phó cho một người khác, nếu không vì lí do nào khác ngoài việc ứng dụng chưa được hoàn thành cho đến khi nó được biên dịch. Công việc của
-chương trình sẽ chưa được hoàn thiện cho đến khi ta cung cấp phần mềm làm việc chính xác cho nó.
-(*) Chú thích:
-(1) Scripts: Script hay Scripting Language (hay Ngôn ngữ Script) chính là Ngôn ngữ kịch bản. Một ngôn ngữ kịch bản là một ngôn ngữ mà không đòi hỏi một bước biên dịch. Ngôn ngữ kịch bản thường thông dịch (Interpreted) thay vì biên dịch.
-(2) Quality Asurance: QA (Quality Assurance) có nhiệm vụ giám sát, quản lý và đảm bảo chất lượng của việc xây dựng hệ thống, quy trình sản xuất của công ty theo một chuẩn mực chất lượng. Quản lý chặt chẽ các tiêu chuẩn chất lượng trong tất cả các giai đoạn từ khâu nghiên cứu thị trường, thiết kế … cho đến khâu sản xuất ra sản phẩm cuối cùng và bán hàng, tiêu thụ trên thị trường, chăm sóc khách hàng.
+
+Hãy am hiểu quá trình biên dịch của bạn để biết được khi nào và làm thế nào để thực hiện những sự thay đổi hợp lí. Biên dịch scripts chính là viết code. Chúng thật sự quá quan trọng để giao phó cho một người khác, nếu không vì lí do nào khác ngoài việc ứng dụng chưa được hoàn thành cho đến khi nó được biên dịch. Công việc của chương trình sẽ chưa được hoàn thiện cho đến khi ta cung cấp phần mềm làm việc chính xác cho nó.
+
+**💬 Chú thích:**
+- (1) Scripts: Script hay Scripting Language (hay Ngôn ngữ Script) chính là Ngôn ngữ kịch bản. Một ngôn ngữ kịch bản là một ngôn ngữ mà không đòi hỏi một bước biên dịch. Ngôn ngữ kịch bản thường thông dịch (Interpreted) thay vì biên dịch.
+- (2) Quality Asurance: QA (Quality Assurance) có nhiệm vụ giám sát, quản lý và đảm bảo chất lượng của việc xây dựng hệ thống, quy trình sản xuất của công ty theo một chuẩn mực chất lượng. Quản lý chặt chẽ các tiêu chuẩn chất lượng trong tất cả các giai đoạn từ khâu nghiên cứu thị trường, thiết kế … cho đến khâu sản xuất ra sản phẩm cuối cùng và bán hàng, tiêu thụ trên thị trường, chăm sóc khách hàng.
+
+
 ## 64: Ghép chương trình và cảm nhận dòng chảy
 Hãy tưởng tượng bạn đang hoàn toàn chìm đắm trong công việc của bản thân- tập trung, tận lực và đặt hết tâm trí vào đó. Bạn không để ý thời gian trôi qua. Bạn cảm thấy hạnh phúc. Bạn đang cảm nhận dòng chảy. Thật khó để vừa đạt được vừa duy trì dòng chảy cho cả nhóm vì có quá nhiều sự gián đoạn, tương tác và phiền nhiễu khác có thể dễ dàng phá vỡ nó.
 Nếu bạn từng thực hành lập trình cặp, có lẽ bạn đã quen với việc ghép đôi đóng góp như nào vào dòng chảy. Còn nếu bạn chưa thử, chúng tôi muốn sử dụng kinh nghiệm của mình để thúc đẩy bạn bắt đầu ngay bây giờ! Để thành công với lập trình cặp, từng thành viên và cả nhóm đều phải nỗ lực.
@@ -1285,28 +1381,44 @@ trước khi tôi sử dụng biểu mẫu này. Tùy thuộc vào ngữ cảnh,
 Dù nguyên nhân là gì, các hệ thống nên tiếp nhận được lỗi. Bạn có thể làm điều này bằng cách cung cấp nhiều cấp độ hoàn tác cho tất cả hành động, đặc biệt với những hành động có khả năng phá hủy hoặc sửa đổi dữ liệu của người dùng.
 Ghi chép và phân tích các hành động hoàn tác cũng có thể làm nổi bật giao diện đang khiến người dùng mắc lỗi trong vô thức, chẳng hạn như nhấp liên tục vào nút sai. Những lỗi này thường được gây ra bởi tín hiệu sai lệch hoặc do trình tự tương tác mà bạn hoàn toàn có thể thiết kế lại để tránh những lỗi về sau.
 Bất kể cách tiếp cận nào bạn thực hiện, hầu hết các lỗi đều theo một hệ thống nhất định. Đó là hệ quả của sự hiểu lầm giữa người dùng và phần mềm. Thấu hiểu suy nghĩ của người dùng, giải thích thông tin, đưa ra quyết định và dữ liệu đầu vào sẽ giúp bạn sửa các lỗi tương tác giữa phần mềm và người dùng.
-## 67: Một Lập Trình Viên Chuyên
-Nghiệp
+
+
+## 67: ✅ Một Lập Trình Viên Chuyên Nghiệp
+
 Như thế nào là một lập trình viên chuyên nghiệp?
+
 Đặc điểm quan trọng nhất của một người lập trình viên chuyên nghiệp là có trách nhiệm cá nhân. Họ chịu trách nhiệm cho sự nghiệp, các ước tính, các lời cam kết, những sai lầm và tay nghề của họ. Một người lập trình viên chuyên nghiệp sẽ không bao giờ đùn đẩy trách nhiệm của họ cho người khác.
-● Nếu bạn là một người chuyên nghiệp, bạn sẽ chịu trách nhiệm cho sự nghiệp của mình. Bạn có trách nhiệm học và đọc. Bạn phải luôn giữ mình cập nhật những thứ về công nghiệp và công nghệ. Đã có quá nhiều người lập trình nghĩ
-rằng cấp trên phải làm những việc đó để đào tạo họ. Đáng tiếc, đây là một sai lầm chết người. Bạn có nghĩ rằng bác sĩ, luật sư sẽ nghĩ như vậy không? Không, họ tự đào tạo bản thân bằng thời gian và sức lực của mình. Họ dành ra nhiều thời gian ngoài giờ để đọc biên bản và các quyết định. Họ giữ cho mình luôn ở trạng thái cập nhật mọi thứ. Chúng ta cũng nên như vậy. Mối qua hệ giữa bạn và cấp trên đã được nêu ra rõ ràng trong hợp đồng của công ty. Nói một cách ngắn gọn: Họ cam kết sẽ trả lương cho bạn, và bạn cam kết hoàn thành tốt công việc.
-● Những người chuyên nghiệp chịu trách nhiệm cho các mã code họ viết. Họ không phát hành các mã code trừ khi họ chắc rằng nó hoạt động. Hãy nghĩ về điều đó một chút. Làm sao bạn có thể tự cho rằng mình là một người chuyên nghiệp khi bạn thực sự muốn đưa ra mã code mà bạn không tự tin về nó ? Lập trình viên chuyên nghiệp mong đợi QA (Quality Assurance) sẽ không tìm thấy bất kì lỗi nào bởi vì họ không ra mắt mã code không được thử nghiệm kỹ lưỡng. Tất nhiên QA vẫn tìm được một vài lỗi, bởi vì không có gì là tuyệt hảo. Nhưng là một người chuyên nghiệp, ta phải có thái độ làm việc như vậy thì QA sẽ chẳng tìm được lỗi nào của ta.
-● Những người chuyên nghiệp là một đội người chơi. Họ sẽ chịu trách nhiệm cho kết quả của cả đội, chứ không riêng gì công việc của họ. Họ giúp đỡ, học hỏi, truyền đạt kinh nghiệm lẫn nhau, và thậm chí bảo vệ, an ủi lẫn nhau khi cần thiết. Mỗi khi một người gặp khó khăn, những người khác sẽ giúp đỡ vì họ biết rằng sẽ có một lúc nào đó họ sẽ là người cần được che chở.
-● Người chuyên nghiệp sẽ không chấp nhận có một danh sách bug lớn. Có được danh sách bug lớn như vậy thể hiện tính cẩu thả. Những hệ thống chứa hàng ngàn các vấn đề trong cơ sỡ dữ liệu theo dõi vấn đề là một chuỗi bi kịch của sự bất cẩn. Sự thật là, ở đa số các dự án, nhu cầu hệ thống theo dõi các vấn đề (issue tracking system) là một dấu hiệu cho sự bất cẩn. Chỉ có những hệ thống lớn nhất mới có những danh sách lỗi dài đến mức cần tự động hóa để có thể xử lí chúng.
-● Những người chuyên nghiệp không tạo ra mớ hỗn độn. Họ tự hào về tay nghề của họ. Họ xây dựng mã code của họ theo cách tốt nhất, gọn gàng và dễ đọc. Họ tuân theo những tiêu chuẩn và sự luyện tập tốt nhất. Họ không bao giờ vội vàng. Hãy tưởng tượng rằng bạn có một trải nghiệm được ra khỏi cơ thể của mình và một xem bác sĩ thực hiện phẩu thuật tim ngay trên người bạn. Vị bác sĩ này đang có thời hạn phẫu thuật (deadline). Anh ta phải hoàn thành trước khi máy tim phổi nhân tạo tổn hại quá nhiều tế bào máu của bạn. Bạn muốn anh ta phải thực hiện như thế nào? Bạn có muốn anh ta hành động như các nhà phát triển phần mềm điển hình, vội vàng và tạo nên mớ hỗn độn? Bạn có muốn anh ta sẽ nói rằng: “Tôi sẽ quay lại và sửa nó sau?” Hay bạn muốn anh ta sẽ theo khuôn phép, bình tĩnh, tự tin rằng cách làm của anh ấy là cách tốt nhất có thể thực hiện. Bạn muốn sự bừa bộn, hay là tính chuyên nghiệp?
+
+Nếu bạn là một người chuyên nghiệp, bạn sẽ **chịu trách nhiệm cho sự nghiệp của mình**. Bạn có trách nhiệm học và đọc. Bạn phải luôn giữ mình cập nhật những thứ về công nghiệp và công nghệ. Đã có quá nhiều người lập trình nghĩ rằng cấp trên phải làm những việc đó để đào tạo họ. Đáng tiếc, đây là một sai lầm chết người. Bạn có nghĩ rằng bác sĩ, luật sư sẽ nghĩ như vậy không? Không, họ tự đào tạo bản thân bằng thời gian và sức lực của mình. Họ dành ra nhiều thời gian ngoài giờ để đọc biên bản và các quyết định. Họ giữ cho mình luôn ở trạng thái cập nhật mọi thứ. Chúng ta cũng nên như vậy. Mối qua hệ giữa bạn và cấp trên đã được nêu ra rõ ràng trong hợp đồng của công ty. Nói một cách ngắn gọn: Họ cam kết sẽ trả lương cho bạn, và bạn cam kết hoàn thành tốt công việc.
+
+Những người chuyên nghiệp **chịu trách nhiệm cho các mã code họ viết**. Họ không phát hành các mã code trừ khi họ chắc rằng nó hoạt động. Hãy nghĩ về điều đó một chút. Làm sao bạn có thể tự cho rằng mình là một người chuyên nghiệp khi bạn thực sự muốn đưa ra mã code mà bạn không tự tin về nó ? Lập trình viên chuyên nghiệp mong đợi QA (**Quality Assurance**) sẽ không tìm thấy bất kì lỗi nào bởi vì họ không ra mắt mã code không được thử nghiệm kỹ lưỡng. Tất nhiên QA vẫn tìm được một vài lỗi, bởi vì không có gì là tuyệt hảo. Nhưng là một người chuyên nghiệp, ta phải có thái độ làm việc như vậy thì QA sẽ chẳng tìm được lỗi nào của ta.
+
+**Những người chuyên nghiệp là một đội người chơi**. Họ sẽ chịu trách nhiệm cho kết quả của cả đội, chứ không riêng gì công việc của họ. Họ giúp đỡ, học hỏi, truyền đạt kinh nghiệm lẫn nhau, và thậm chí bảo vệ, an ủi lẫn nhau khi cần thiết. Mỗi khi một người gặp khó khăn, những người khác sẽ giúp đỡ vì họ biết rằng sẽ có một lúc nào đó họ sẽ là người cần được che chở.
+
+Người chuyên nghiệp sẽ **không chấp nhận có một danh sách bug lớn**. Có được danh sách bug lớn như vậy thể hiện tính cẩu thả. Những hệ thống chứa hàng ngàn các vấn đề trong cơ sỡ dữ liệu theo dõi vấn đề là một chuỗi bi kịch của sự bất cẩn. Sự thật là, ở đa số các dự án, nhu cầu hệ thống theo dõi các vấn đề (**issue tracking system**) là một dấu hiệu cho sự bất cẩn. Chỉ có những hệ thống lớn nhất mới có những danh sách lỗi dài đến mức cần tự động hóa để có thể xử lí chúng.
+
+Những người chuyên nghiệp **không tạo ra mớ hỗn độn**. Họ tự hào về tay nghề của họ. Họ xây dựng mã code của họ theo cách tốt nhất, gọn gàng và dễ đọc. Họ tuân theo những tiêu chuẩn và sự luyện tập tốt nhất. Họ không bao giờ vội vàng. Hãy tưởng tượng rằng bạn có một trải nghiệm được ra khỏi cơ thể của mình và một xem bác sĩ thực hiện phẩu thuật tim ngay trên người bạn. Vị bác sĩ này đang có thời hạn phẫu thuật (deadline). Anh ta phải hoàn thành trước khi máy tim phổi nhân tạo tổn hại quá nhiều tế bào máu của bạn. Bạn muốn anh ta phải thực hiện như thế nào? Bạn có muốn anh ta hành động như các nhà phát triển phần mềm điển hình, vội vàng và tạo nên mớ hỗn độn? Bạn có muốn anh ta sẽ nói rằng: “*Tôi sẽ quay lại và sửa nó sau?*” Hay bạn muốn anh ta sẽ theo khuôn phép, bình tĩnh, tự tin rằng cách làm của anh ấy là cách tốt nhất có thể thực hiện. Bạn muốn sự bừa bộn, hay là tính chuyên nghiệp?
+
 Những người trách nhiệm luôn đáng tin cậy. Họ chịu trách nhiệm cho sự nghiệp của mình. Họ chịu trách nhiệm về việc bảo đảm các mã code của họ chắc chắn sẽ hoạt động tốt. Họ chịu trách nhiệm cho chất lượng tay nghề của họ. Họ sẽ không bỏ qua các nguyên tắc dù các kì hạn (deadlines) đang đến gần. Trên thực tế, khi áp lực dần xuất hiện, người chuyên nghiệp sẽ bám sát vào các nguyên tắc mà họ cho là đúng.
-## 68: Lưu giữ mọi thứ bằng version control
+
+
+## 68: ✅ Lưu giữ mọi thứ bằng version control
+
 Hãy lưu tất cả các dự án của bạn bằng version control. Mọi tài nguyên của bạn đều đã có sẵn, như là Subversion, Git, Mercurial, và CVS; không gian lưu trữ lớn, server mạnh mẽ và hoàn toàn miễn phí, mạng lưới toàn cầu, và gồm cả dịch vụ project-hosting. Sau khi bạn đã hoàn tất cài đặt version control, tất cả mọi thứ bạn cần làm để lưu trữ công việc vào kho riêng là thực hiện một vài dòng lệnh cơ bản tại nơi chứa code của bạn. Và chúng chỉ có hai thao tác cơ bản bạn cần phải học là: xác nhận những sự tinh chỉnh trong code với kho lưu trữ và bạn phải cập nhật phiên bản cũ của dự án của bạn trong kho.
+
 Một khi bạn đã lưu trữ dự án bằng version control, bạn có thể xem lịch sử của nó một cách trực quan, xem rằng ai đã viết đoạn code đó, và tham khảo các phiên bản của tệp tin hoặc dự án bằng một định danh duy nhất. Quang trọng hơn nữa, bạn có thể mạnh dạn thực hiện những thay đổi mà không cần comment trừ khi bạn thực sự cần nó trong tương lai, bởi vì mọi phiên bản chỉnh sửa sẽ được lưu trữ một cách vô cùng an toàn. Bạn còn có thể( nên) gán một bản chương trình hoàn thiện bằng một cái tên gợi nhớ để trong tương lai bạn có thể truy xuất chính xác phiên bản mà khách hàng của bạn sử dụng. Hơn nữa bạn còn có thể tạo ra thêm các nhánh chương trình song song để phát triển. Hầu hết các project đều có một nhánh phát triển chính cùng với nhiều nhánh là các phiên bản được phát hành và hỗ trợ.
+
 Version control giảm thiểu tối đa sự thiếu tương tác giữa những nhà phát triển. Khi các lập trình viên làm việc trên các mảng độc lập với nhau và tất cả những mảng ấy được kết hợp lại như được thực hiện bởi “ma thuật”. Khi họ thực hiện thao tác cùng một lúc, hệ thống sẽ nhận ra và cho phép họ sắp xếp những sự mâu thuẫn ấy. Đồng thời khi chúng ta thực hiện thêm một vài thiết lập đặc biệt, hệ thống sẽ có thể nhận biết tất cả nhà phát triển với từng sự thay đổi, giúp ta thiết lập sự theo dõi chung về tiến độ của dự án.
+
 Khi chuẩn bị cho dự án của bạn, đừng trở nên keo kiệt: hãy đặt tất cả chúng dưới sự bảo quản của version control. Tách biệt khỏi source code, kể cả tài liệu, dụng cụ, bản kế hoạch, test case, nghệ thuật, và cả thư viện. Cùng với sự bảo mật chặt chẽ, do thường xuyên backup, kho lưu trữ của bạn khiến cho khả năng bị mất dữ liệu trở nên không đáng kể. Chính vì thế mà việc thiết lập một môi trường phát triển mới trên một thiết bị mới vô cùng tiện lợi và đơn giản như kiểm tra dự án từ kho lưu trữ. Điều này giúp tối giản sự phân phối, xây dựng, và kiểm tra code trên các nền tảng khác nhau. Và trên mỗi thiết bị chỉ với một lệnh cập nhật đơn giản sẽ đảm bảo cho dự án luôn ở phiên bản mới nhất.
+
 Một khi bạn đã thấy được sự tiện khi làm việc với version control, chỉ cần thực hiện theo một số quy tắc cơ bản sau đây sẽ giúp cho bạn và team làm việc hiệu quả hơn:
-● Xác nhận mọi sự thay đổi hợp lý trong một hoạt động riêng biệt. Kết hợp nhiều sự thay đổi cùng lúc chỉ với một lệnh xác nhận sẽ khiến chúng trở nên khó để
-tách rời khi cần thiết trong tương lai. Điều này cực kỳ quan trọng khi bạn tiến hành tải bản hay thay đổi kiểu cách của toàn bộ code, điều mà rất dễ gặp khó khăn trong quá trình thay đổi.
-● Kèm theo mọi sự xác nhận thay đổi là một tin nhắn giải thích lý do. Chí ít là nội chính của sự thay đổi ấy nhưng nếu bạn muốn ghi chép lý do của sự thay đổi ấy thì đây chính là nơi hoàn hảo.
-● Cuối cùng, tránh xác nhận sự thay đổi code mà khiến cho cả dự án của bạn sụp đổ, hoặc bạn sẽ bị xa lánh bởi các nhà phát triển khác.
+- Xác nhận mọi sự thay đổi hợp lý trong một hoạt động riêng biệt. Kết hợp nhiều sự thay đổi cùng lúc chỉ với một lệnh xác nhận sẽ khiến chúng trở nên khó để tách rời khi cần thiết trong tương lai. Điều này cực kỳ quan trọng khi bạn tiến hành tải bản hay thay đổi kiểu cách của toàn bộ code, điều mà rất dễ gặp khó khăn trong quá trình thay đổi.
+- Kèm theo mọi sự xác nhận thay đổi là một tin nhắn giải thích lý do. Chí ít là nội chính của sự thay đổi ấy nhưng nếu bạn muốn ghi chép lý do của sự thay đổi ấy thì đây chính là nơi hoàn hảo.
+- Cuối cùng, tránh xác nhận sự thay đổi code mà khiến cho cả dự án của bạn sụp đổ, hoặc bạn sẽ bị xa lánh bởi các nhà phát triển khác.
+
 Cuộc sống khi có version control là quá tốt để bị phá huỷ bởi các lỗi có thể tránh được.
+
 
 ## 69: Chia tay chuột và bàn phím
 Đã bao giờ bạn dành hàng giờ tập trung giải quyết một vấn đề khó khăn tuy nhiên bạn lại trở nên cạn kiệt ý tưởng. Vì lý do ấy, bạn hãy đứng dậy duỗi thẳng gân cốt và tìm đến một máy bán nước tự động, và khi bạn trở về câu trả lời đột nhiên xuất hiện trong đầu của bạn.
@@ -1337,7 +1449,7 @@ Mấu chốt của câu chuyện không phải là việc tôi thay thế tất 
 Chốt lại vấn đề, lần sau nếu bạn gặp phải một vấn đề khó khăn, hãy cho bản thân mình một ân huệ. Một khi bạn đã thật sự hiểu vấn đề hãy đi làm gì đó kích thích phần sáng tạo ở não của bạn. Hãy mô tả vấn đề của bạn vào giấy, thêm vào một chút nhạc, và đưa bản thân dạo một vòng. Đôi khi điều tốt nhất bạn có thể làm để giải quyết một vấn đề đó chính là tạm chia tay chú chuột và cái bàn phím thân thương của các bạn.
 
 
-## 70: Đọc Code
+## 70: ✅ Đọc Code
 
 Lập trình viên chúng ta là những con người kì lạ. Chúng ta yêu thích ❤️️ viết code. Nhưng chúng ta thường e ngại khi phải đọc chúng. Sau cùng thì, việc viết code lúc nào cũng mang lại sự hứng thú hơn so với đọc code, và rất khó để đọc được chúng — đôi lúc việc này là không thể, đặc biệt là đọc code của một người nào đó. Không nhất thiết là do code của họ tệ, có thể họ có tư duy và cách giải quyết vấn đề khác hoàn toàn so với bạn thôi. Nhưng bạn có bao giờ tự nghĩ rằng việc đọc code của người khác sẽ giúp bạn hoàn thiện khả năng của mình hơn không?
 
@@ -1350,87 +1462,162 @@ Nếu bạn nghĩ rằng việc đọc code là dễ dàng, hãy dừng lại đ
 Vậy là giờ bạn đã biết bạn cần gì để phát triển kĩ năng lập trình của mình, đừng đọc quyển sách khác. Hãy đọc code.
 
 
-## 71: Đọc vị nhân loại
+## 71: ✅ Đọc vị nhân loại
+
 Trong tất cả những dự án từ nhỏ nhất con người làm việc với con người. Trong cả những lĩnh vực nghiên cứu trừu tượng nhất, con người viết phần mềm để hỗ trợ con người hoàn thành mục tiêu. Con người viết phần mềm với người khác dành cho con người. Đó là chuyện giữa người với người. Nhưng thật không may, những gì các lập trình viên được dạy trang bị cho họ rất ít cách để đối phó với những người họ làm việc cùng. May mắn thay, có hẳn một lĩnh vực nghiên cứu hỗ trợ điều này.
-Ludwig Wittgenstein đã đưa ra một giả thuyết rất hay trong “Điều tra triết học” rằng bất kỳ ngôn ngữ nào chúng ta sử dụng đều không thể chuyển tiếp ý nghĩ, ý tưởng hay hình ảnh từ người này sang người khác. Chúng ta cần cẩn thận tránh hiểu lầm khi chúng ta “thu thập yêu cầu”. Wittgenstein cũng cho thấy rằng sự am hiểu lẫn nhau không xuất phát từ các định nghĩa được chia sẻ, mà từ nền tảng kinh nghiệm chung. Đây có thể là
-một lý do tại sao các lập trình viên thành thạo lĩnh vực của bản thân thường làm tốt hơn những người không thuộc lĩnh vực đó.
-Lakoff và Johnson cho chúng tôi xem một danh mục các phép ẩn dụ mà chúng ta thường sử dụng, cho thấy rằng ngôn ngữ chủ yếu là các phép ẩn dụ và những ẩn dụ này cung cấp một cái nhìn sâu sắc về việc chúng ta hiểu thế giới như nào. Ngay cả những thuật ngữ cụ thể như “dòng tiền” mà chúng ta sử dụng khi nói về một hệ thống tài chính, cũng được coi là một phép ẩn dụ “tiền là một dạng chất lỏng”. Phép ẩn dụ đó có ảnh hưởng đến cách chúng ta nghĩ về hệ thống xử lý tiền như thế nào? Hoặc chúng ta có thể nói về các lớp trong một chồng biên bản, với một số mức cao và một số mức thấp. Điều này mang tính ẩn dụ mạnh mẽ: người dùng “lên” và công nghệ “xuống”.
+
+Ludwig Wittgenstein đã đưa ra một giả thuyết rất hay trong “*Điều tra triết học*” rằng bất kỳ ngôn ngữ nào chúng ta sử dụng đều không thể chuyển tiếp ý nghĩ, ý tưởng hay hình ảnh từ người này sang người khác. Chúng ta cần cẩn thận tránh hiểu lầm khi chúng ta “*thu thập yêu cầu*”. Wittgenstein cũng cho thấy rằng sự am hiểu lẫn nhau không xuất phát từ các định nghĩa được chia sẻ, mà từ nền tảng kinh nghiệm chung. Đây có thể là một lý do tại sao các lập trình viên thành thạo lĩnh vực của bản thân thường làm tốt hơn những người không thuộc lĩnh vực đó.
+
+Lakoff và Johnson cho chúng tôi xem một danh mục các phép ẩn dụ mà chúng ta thường sử dụng, cho thấy rằng ngôn ngữ chủ yếu là các phép ẩn dụ và những ẩn dụ này cung cấp một cái nhìn sâu sắc về việc chúng ta hiểu thế giới như nào. Ngay cả những thuật ngữ cụ thể như “dòng tiền” mà chúng ta sử dụng khi nói về một hệ thống tài chính, cũng được coi là một phép ẩn dụ “*tiền là một dạng chất lỏng*”. Phép ẩn dụ đó có ảnh hưởng đến cách chúng ta nghĩ về hệ thống xử lý tiền như thế nào? Hoặc chúng ta có thể nói về các lớp trong một chồng biên bản, với một số mức cao và một số mức thấp. Điều này mang tính ẩn dụ mạnh mẽ: người dùng “lên” và công nghệ “xuống”.
+
 Điều này phơi bày suy nghĩ của chúng tôi về cấu trúc các hệ thống chúng tôi xây dựng. Nó cũng có thể đánh dấu một thói quen lười biếng rằng đôi khi chúng ta có thể hưởng lợi từ việc phá luật.
-Martin Heidegger đã nghiên cứu kỹ cách mọi người trải nghiệm các công cụ. Các lập trình viên xây dựng và sử dụng công cụ, chúng tôi nghĩ, tạo nên, sửa đổi và tái tạo công cụ. Công cụ là đối tượng chúng tôi quan tâm. Nhưng đối với người dùng, như Heidegger thể hiện trong “Bản thể và Thời gian”, một công cụ là một thứ vô hình chỉ được tìm hiểu khi sử dụng. Đối với người dùng, công cụ chỉ được quan tâm khi chúng không hoạt động. Sự khác biệt này đáng được nhấn mạnh bất cứ khi nào khả năng sử dụng được bàn luận đến.
-Eleanor Rosch đã đảo ngược mô hình Aristoteles mà chúng tôi dùng để sắp xếp sự hiểu biết của chúng tôi về thế giới. Khi lập trình viên hỏi người dùng về hệ thống mà họ mong muốn, chúng ta có xu hướng yêu cầu các định nghĩa được xây dựng từ các vị từ. Điều này rất thuận tiện cho chúng tôi. Các thuật ngữ trong vị từ có thể dễ dàng trở thành các thuộc tính trong class hoặc các cột trong bảng. Thật không may, như Rosch đã thể hiện trong “Thể loại tự nhiên” và những nghiên cứu sau đó, đó không phải là cách nhân loại nói chung hiểu về thế giới. Họ hiểu nó dựa trên các ví dụ. Một số ví dụ (được gọi là nguyên mẫu) tốt hơn so với các nguyên mẫu khác, cho ra kết quả chồng chéo với cấu trúc phức tạp. Chừng nào chúng tôi còn nhấn mạnh vào câu trả lời của
-Aristoteles, thì chúng tôi không thể hỏi người dùng đúng câu hỏi về thế giới của họ và sẽ rất khó khăn để đạt được sự thấu hiểu chung mà chúng tôi cần.
-## 72: Đôi khi hãy tái phát minh bánh xe
-“Hãy dùng thứ gì đó có sẵn — tái phát minh bánh xe là một điều ngớ ngẩn”
+Martin Heidegger đã nghiên cứu kỹ cách mọi người trải nghiệm các công cụ. Các lập trình viên xây dựng và sử dụng công cụ, chúng tôi nghĩ, tạo nên, sửa đổi và tái tạo công cụ. Công cụ là đối tượng chúng tôi quan tâm. Nhưng đối với người dùng, như Heidegger thể hiện trong “*Bản thể và Thời gian*”, một công cụ là một thứ vô hình chỉ được tìm hiểu khi sử dụng. Đối với người dùng, công cụ chỉ được quan tâm khi chúng không hoạt động. Sự khác biệt này đáng được nhấn mạnh bất cứ khi nào khả năng sử dụng được bàn luận đến.
+
+Eleanor Rosch đã đảo ngược mô hình Aristoteles mà chúng tôi dùng để sắp xếp sự hiểu biết của chúng tôi về thế giới. Khi lập trình viên hỏi người dùng về hệ thống mà họ mong muốn, chúng ta có xu hướng yêu cầu các định nghĩa được xây dựng từ các vị từ. Điều này rất thuận tiện cho chúng tôi. Các thuật ngữ trong vị từ có thể dễ dàng trở thành các thuộc tính trong class hoặc các cột trong bảng. Thật không may, như Rosch đã thể hiện trong “*Thể loại tự nhiên*” và những nghiên cứu sau đó, đó không phải là cách nhân loại nói chung hiểu về thế giới. Họ hiểu nó dựa trên các ví dụ. Một số ví dụ (được gọi là nguyên mẫu) tốt hơn so với các nguyên mẫu khác, cho ra kết quả chồng chéo với cấu trúc phức tạp. Chừng nào chúng tôi còn nhấn mạnh vào câu trả lời của Aristoteles, thì chúng tôi không thể hỏi người dùng đúng câu hỏi về thế giới của họ và sẽ rất khó khăn để đạt được sự thấu hiểu chung mà chúng tôi cần.
+
+
+## 72: ✅ Đôi khi hãy tái phát minh bánh xe
+
+“*Hãy dùng thứ gì đó có sẵn — tái phát minh bánh xe là một điều ngớ ngẩn*”
+
 Bạn có bao giờ nghe điều này hay những câu đại loại như thế? Chắc chắn bạn đã từng nghe qua. Tại sao lại như thế? Tại sao việc tái phát minh bánh xe lại khiến người ta trở nên khó chịu? Nguyên nhận là thông thường các đoạn code có sẵn là những đoạn code hoạt động được. Nó chắc chắn đã trải qua một vài phương thức kiểm định chất lượng nghiêm ngặt, và hoạt động cùng thành công. Hơn nữa đầu tư thời gian vào việc tái phát minh bánh xe hầu như không thể sánh với việc sử dụng sản phẩm hoặc codebase có sẵn. Bạn có nên tái phát minh bánh xe không? Lý do và nguyên nhân của việc này?
+
 Có lẽ bạn đã từng xem qua những mô hình chung trong phát triển ứng dụng, hay trong những cuốn sách nói về thiết kế ứng dụng. Những cuốn sách là những kẻ ru ngủ bất kể nội dung của chúng có tuyệt vời thế nào đi chăn nữa. Điều này cũng giống như việc coi một bộ phim về chèo thuyền hoàn toàn khác so với đi thuyền ngoài thực tế. Chính vì thế đừng bao giờ so sánh những đoạn code có sẵn với đoạn code mà chính tay bạn xây dựng nên từ ban đầu, kiểm tra nó, làm hỏng nó, sửa chữa nó, và phát triển nó trên đường phát triển sản phẩm.
-Tái phát minh bánh xe không chỉ là bài tập giúp bạn nâng cao khả năng xây dựng cấu trúc của code mà chúng còn giúp cho bạn có được những kiến thức quý giá về cách hoạt động của nhiều thành phần khác nhau đã tồn tại. Bạn có biết làm cách nào để bộ quản lý bộ nhớ hoạt động? phân trang ảo? Bạn có thể tự mình cài đặt chúng không? Hay là danh sách liên kết đôi? Những đối tượng mảng động? ODCD client? Bạn có thể viết một giao diện đồ hoạ hoạt động như cái mà bạn đang sử dụng? Bạn có thể tự
-mình tạo ra những tiện ứng cho trình duyệt web của bạn? Bạn có biết khi nào nên viết hệ thống multiplex hay đa luồng? Làm sao để quyết định database sử dụng file hay bộ nhớ? Hầu hết các lập trình viên chưa bao giờ tự tạo ra các thiết lập cốt lõi của phần mềm này do đó họ không có một lượng kiến thức nhất định về cách thức hoạt động của chúng. Hậu quả dẫn đến những phần mềm được tạo ra theo cách này trông giống như những hộp đen bí ẩn đang hoạt động. Chỉ hiểu phần nổi của tảng băng trôi là không đủ để biết được những gì thực sự nguy hiểm bên dưới nó. Không thực sự thấu hiểu cặn kẽ vấn đề trong phát triển phần mềm sẽ giới hạn khả năng tạo ra những sản phẩm tuyệt vời nhất.
+
+Tái phát minh bánh xe không chỉ là bài tập giúp bạn nâng cao khả năng xây dựng cấu trúc của code mà chúng còn giúp cho bạn có được những kiến thức quý giá về cách hoạt động của nhiều thành phần khác nhau đã tồn tại. Bạn có biết làm cách nào để bộ quản lý bộ nhớ hoạt động? phân trang ảo? Bạn có thể tự mình cài đặt chúng không? Hay là danh sách liên kết đôi? Những đối tượng mảng động? ODCD client? Bạn có thể viết một giao diện đồ hoạ hoạt động như cái mà bạn đang sử dụng? Bạn có thể tự mình tạo ra những tiện ứng cho trình duyệt web của bạn? Bạn có biết khi nào nên viết hệ thống multiplex hay đa luồng? Làm sao để quyết định database sử dụng file hay bộ nhớ? 
+
+Hầu hết các lập trình viên chưa bao giờ tự tạo ra các thiết lập cốt lõi của phần mềm này do đó họ không có một lượng kiến thức nhất định về cách thức hoạt động của chúng. Hậu quả dẫn đến những phần mềm được tạo ra theo cách này trông giống như những hộp đen bí ẩn đang hoạt động. Chỉ hiểu phần nổi của tảng băng trôi là không đủ để biết được những gì thực sự nguy hiểm bên dưới nó. Không thực sự thấu hiểu cặn kẽ vấn đề trong phát triển phần mềm sẽ giới hạn khả năng tạo ra những sản phẩm tuyệt vời nhất.
+
 Tái phát minh bánh xe và đối với những sai lầm giá trị hơn việc sử dụng cái có sẵn ngay từ đầu. Chúng sẽ cho bạn những bài học từ những lần thử nghiệm, lỗi, và những cảm xúc nhất định đối với thành phần đó, đây chính là điều mà đọc một quyển sách không thể cho bạn được.
+
 Những sự thật và kiến thức từ trong sách thật sự rất quan trọng, nhưng để trở thành một lập trình viên vĩ đại yêu cầu thật nhiều kinh nghiệm như việc sưu tầm những sự thật. Tái phát minh bánh xe đóng vai trò vô cùng quan trọng trong quá trình học tập của lập trình viên như việc cử tạ đối với vận động viên thể hình.
-## 73: Chống lại sự cám dỗ của
-Singleton Pattern(*)
-Singleton Pattern giải quyết được rất nhiều vấn đề. Bạn biết bạn chỉ cần một instance(**) duy nhất. Bạn có thể đảm bảo rằng instance này được khởi tạo trước khi nó được sử dụng. Nó giữ cho thiết kế của bạn đơn giản bằng một điểm truy cập toàn cầu. Tất cả đều tốt. Vậy điều gì khiến thiết kế pattern cổ điển này trở nên không được yêu thích?
-Nhiều trường hợp, một kết quả bất ngờ sẽ đến. Nó có thể rất hấp dẫn, nhưng kinh nghiệm chỉ ra rằng, hầu hết các Singleton Pattern này hại nhiều hơn lợi.Chúng cản trở
-khả năng kiểm tra và bảo trì. Thật không may, sự bổ sung khôn ngoan không được sử dụng phổ biến và các lập trình viên không thể bỏ qua việc sử dụng các Singleton.
+
+
+## 73: ✅ Chống lại sự cám dỗ của Singleton Pattern
+
+**Singleton Pattern** giải quyết được rất nhiều vấn đề. Bạn biết bạn chỉ cần một instance(**) duy nhất. Bạn có thể đảm bảo rằng instance này được khởi tạo trước khi nó được sử dụng. Nó giữ cho thiết kế của bạn đơn giản bằng một điểm truy cập toàn cầu. Tất cả đều tốt. Vậy điều gì khiến thiết kế pattern cổ điển này trở nên không được yêu thích?
+
+Nhiều trường hợp, một kết quả bất ngờ sẽ đến. Nó có thể rất hấp dẫn, nhưng kinh nghiệm chỉ ra rằng, hầu hết các **Singleton Pattern** này hại nhiều hơn lợi. **Chúng cản trở khả năng kiểm tra và bảo trì.** Thật không may, sự bổ sung khôn ngoan không được sử dụng phổ biến và các lập trình viên không thể bỏ qua việc sử dụng các Singleton.
+
 Nhưng điều này rất đáng để dừng lại:
+
 Các yêu cầu single-instance thường được tính đến. Trong nhiều trường hợp, các suy đoán đơn giản rằng những instance sẽ cần thêm vào trong tương lai. Nêu ra các tính năng trên lý thuyết về thiết kế của một ứng dụng sẽ ảnh hưởng tiêu cực tại một số vị trí. Yêu cầu sẽ cần thay đổi. Thiết kế tốt bao gồm điều này nhưng các Singleton thì không.
+
 Singleton cũng âm thầm gây ra sự phụ thuộc giữa các đơn vị code riêng lẻ. Đây là vấn đề cả bởi vì chúng bị ẩn đi và vì chúng liên kết các các đơn vị không cần thiết. Code của bạn sẽ trở nên “khó nuốt” khi bạn cố gắng viết cái đơn vị kiểm tra, điều này phụ thuộc vào các kết nối lỏng lẻo và khả năng thay thế có chọn lọc các đối tượng mô phỏng trên môi trường thực tế.
+
 Singleton ngăn chặn các đối tượng mô phỏng này.
+
 Singleton cũng kéo dài ngầm trong hệ thống, điều này một lần nữa cản trở các đơn vị kiểm tra, thứ phụ thuộc vào thành phần độc lập, do đó việc kiểm tra có thể được thực hiện theo bất kỳ thứ tự nào và chương trình có thể được đặt vào trạng thái đã biết trước khi thực hiện kiểm thử. Một khi bạn thêm Singleton với trạng thái có thể biến đổi, điều này khó có thể thực hiện. Ngoài ra, trạng thái lâu dài của khả năng truy cập toàn cầu làm cho việc suy luận về code trở nên khó khăn hơn đặc biệt là trong môi trường đa luồng.
+
 Môi trường đa luồng đưa ra những sự “cám dỗ” với Singleton Pattern. Các lớp bảo mật đơn giản khi truy cập không thực sự hiệu quả, do đó bảo mật hai lớp trở (DCLP) nên phổ biến. Thật không may, đây có thể là một hình thức gây thiệt hại lớn. Nó chỉ ra rằng, trong nhiều ngôn ngữ, DCLP không an toàn, ngay cả khi được thiết lập thì vẫn có khả năng vượt qua.
+
 Việc dọn dẹp Singleton cũng có thêm một thách thức nữa:
+
 Việc loại bỏ các Singleton không được hỗ trợ, đây có thể là một vấn đề nghiêm trọng trong một vài trường hợp. Ví dụ, trong cấu trúc của một plug-in, plug-in chỉ được tải lên an toàn sau khi tất cả đối tượng đã được loại bỏ sạch sẽ.
+
 Không có thứ tự nào trong việc loại bỏ các Singleton khi thoát khỏi chương trình. Điều này có thể gây rắc rối với các ứng dụng có chứa các Singleton có sự phụ thuộc lẫn nhau. Khi tắt các ứng dụng như vậy, một Singleton có thể truy cập một ứng dụng khác.
 Một số thiếu sót có thể được khắc phục bằng cách đưa ra cơ chế bổ sung. Tuy vậy, điều này phải trả giá bằng việc sự phức tạp sẽ tăng cao trong code tránh việc thay đổi cấu trúc.
+
 Do đó, bạn nên hạn chế sử dụng các Singleton Pattern cho các class không được khởi tạo nhiều lần. Không sử dụng việc truy cập toàn cầu của một Singleton từ code tùy ý. Thay vào đó, truy cập trực tiếp vào Singleton phải từ một vị trí xác định, từ đó có thể chuyển giao diện của nó qua một đoạn code khác. Đoạn code khác này không được sử dụng trước đó cho nên nó không phụ thuộc vào Singleton hay class nào tạo ra giao diện. Điều này phá vỡ các phụ thuộc ngăn cản việc kiểm tra và cải thiện khả năng bảo trì. Vì vậy, trong lần tới, khi bạn nghĩ về việc sử dụng hay triển khai một Singleton, hy vọng bạn sẽ tạm dừng và suy nghĩ lại.
-Chú thích:
+
+
+**💬 Chú thích:**
 (*) Một design pattern mà đảm bảo rằng một class chỉ có một instance và cung cấp truy cập vào instance đó toàn cầu
 (**) Thực thể, giữ địa chỉ bộ nhớ
-## 74: Con đường cải tiến hiệu năng đầy bom do code bẩn
+
+
+## 74: ✅ Con đường cải tiến hiệu năng đầy bom do code bẩn
+
 Thông thường việc cải tiến hiệu năng của hệ thống bao giờ cũng yêu cầu bạn phải thay thế code cũ. Mỗi khi chúng ta muốn code, từng đoạn code mà chúng quá phức tạp hoặc rối rắm sẽ giống như những quả code bom bẩn nằm đó chờ đợi để ngăn cản mọi sự nỗ lực của bạn. Và điều đầu tiên mà bạn gặp đó chính là rắc rối với code bẩn. Nếu mục đích của bạn chính là khiến nó trở nên mượt mà hơn thì chúng ta có thể dễ dàng dự đoán được thời gian kết thúc. Tuy nhiên, khi chúng ta phải đối diện với những đoạn code bẩn không ngoài dự đoán sẽ khiến cho công việc ấy trở nên khó khăn hơn trong việc dự đoán chính xác thời gian kết thúc công việc.
-Xét trường hợp bạn tìm thấy một thực thi nóng. Hành động bình thường chính là làm giảm sức mạnh của thuật toán của nó. Giả sử bạn bảo với quản lý của bạn là bạn cần khoảng 3–4 giờ để làm điều đó. Và khi bạn thực hiện điều đó, bạn nhanh chóng nhận ra bạn đã làm hỏng phần bị phụ thuộc. Và những thứ liên quan với nhau được phải được gắn kết với nhau, sự hỏng hóc này là điều có thể dự đoán và lo liệu được. Nhưng chuyện gì sẽ xảy ra nếu như sửa chữa kết quả phụ thuộc ấy trong những thành phần bị phụ thuộc khác đang bị hỏng? Hơn nữa, vấn đề trên cần phải khắc phục từ nguồn, bạn càng không tìm được nguồn gốc của nó thì sự dự đoán của bạn ngày càng trở nên không chính xác. Và rồi tất cả dự đoán của bạn từ 3–4 giờ bỗng tăng lên thành 3–4 tuần. Thông thường sự tăng trưởng không dự đoán trước về thời gian trong kế hoạch của bạn là 2–3 ngày tại một thời điểm. Thật dễ dàng để thấy sự sửa chữa “nhanh” này đột nhiên tốn đến vài tháng để hoàn thành. Những trường hợp như thế này gây thiệt hại nặng nề đến sự tín nhiệm cũng như là thể diện chung của team chịu trách nhiệm. Phải chi chúng ta có một công cụ giúp chúng ta xác định và đo lường khả năng này.
-Thật ra chúng ta có nhiều cách để xác định, điều khiển mức độ cũng như chiều sâu của các liên kết và độ phức tạp code. Software metrics có thể được dùng để đến sự xuất hiện của các tính năng đặc biệt. Giá trị của các phép đo này tương tự với chất lượng
-của code. Hai giá trị trong metrics đếm sự liên kết là fan-in và fan-out. Xét giá trị fan-out cho các class: nó được định nghĩa là số lượng các class là tham chiếu trực tiếp hoặc gián tiếp từ một class mà chúng ta xét. Bạn có thể xem nó như số lượng của tất cả các class cần phải được compile trước khi class bạn đang xét compile. Fan-in, mặt khác, là số lượng các lớp phụ thuộc vào lớp đang xét. Dựa vào giá trị fan-in, fan-out ta có thể tính toán được nhân tố bất ổn bằng công thức: I= f
-o​/(f​i​+f​o​). Khi mà I tiến đến 0 thì gói
-chức năng ta đang xét càng ổn định và càng bất ổn khi I tiến đến 1. Theo dữ kiện điều tra, các gói tính năng ổn định hầu như không chứa code bẩn và ngược lại. Mục đích trong việc sửa chữa chúng chính là khiến cho trị số I càng gần 0 càng tốt.
-Khi sử dụng metrics chúng ta phải luôn nhớ rằng chúng chỉ là những quy tắc của ngón
-tay. Về mặt thuần toán học chúng ta có thể thấy gia tăng f
-i ​mà không thay đổi f
-o​ sẽ
-khiến cho I gần 0 hơn. Tuy nhiên, mặt trái của việc giá trị fan-in quá lớn sẽ khiến cho những lớp đó trở nên khó để thay đổi mà không làm hỏng sự phụ thuộc của chúng. Đồng thời việc không tác động đến fan-out, bạn thật sự không làm giảm nguy cơ ấy cho nên hay cố gắng cân bằng chúng.
-Một mặt tối của việc sử dụng metrics chính là một mảng số khổng lồ do công cụ metrics sinh ra có thể là trở ngại đối với người mới. Họ nói, software metrics có thể là một công cụ mạnh mẽ trong công cuộc đấu tranh vì code sạch(clean code). Chúng có thể giúp ta xác định mà dự đoán bom code bẩn trước khi chúng trở thành mối nguy hại nghiêm trọng trong việc luyện tập hiệu chỉnh hiệu suất.
-## 75: Điều đơn giản đến từ sự tối giản
-“Làm lại lần nữa…” Ông chủ của tôi vừa nói vừa ấn mạnh phím xóa. Tôi nhìn màn hình máy tính với một cảm giác quá quen thuộc, khi đoạn code của tôi biến mất từng dòng một.
+
+Xét trường hợp bạn tìm thấy một thực thi nóng. Hành động bình thường chính là làm giảm sức mạnh của thuật toán của nó. Giả sử bạn bảo với quản lý của bạn là bạn cần khoảng *3–4 giờ* để làm điều đó. Và khi bạn thực hiện điều đó, bạn nhanh chóng nhận ra bạn đã làm hỏng phần **bị phụ thuộc**. Và những thứ liên quan với nhau được phải được gắn kết với nhau, sự hỏng hóc này là điều có thể dự đoán và lo liệu được. Nhưng chuyện gì sẽ xảy ra nếu như sửa chữa kết quả phụ thuộc ấy trong những thành phần bị phụ thuộc khác đang bị hỏng? Hơn nữa, vấn đề trên cần phải khắc phục từ nguồn, bạn càng không tìm được nguồn gốc của nó thì sự dự đoán của bạn ngày càng trở nên không chính xác. Và rồi tất cả dự đoán của bạn từ *3–4 giờ* bỗng tăng lên thành *3–4 tuần*. Thông thường sự tăng trưởng không dự đoán trước về thời gian trong kế hoạch của bạn là *2–3 ngày* tại một thời điểm. Thật dễ dàng để thấy sự sửa chữa “nhanh” này đột nhiên tốn đến vài tháng để hoàn thành. Những trường hợp như thế này gây thiệt hại nặng nề đến sự tín nhiệm cũng như là thể diện chung của team chịu trách nhiệm. Phải chi chúng ta có một công cụ giúp chúng ta xác định và đo lường khả năng này.
+
+Thật ra chúng ta có nhiều cách để xác định, điều khiển mức độ cũng như chiều sâu của các liên kết và độ phức tạp code. **Software metrics** có thể được dùng để đến sự xuất hiện của các tính năng đặc biệt. Giá trị của các phép đo này tương tự với chất lượng của code. Hai giá trị trong metrics đếm sự liên kết là **fan-in** và **fan-out**.
+
+Xét giá trị **fan-out** cho các class: *nó được định nghĩa là số lượng các class là tham chiếu trực tiếp hoặc gián tiếp từ một class mà chúng ta xét*. Bạn có thể xem nó như số lượng của tất cả các class cần phải được compile trước khi class bạn đang xét compile. **Fan-in**, mặt khác, *là số lượng các lớp phụ thuộc vào lớp đang xét.* 
+
+Dựa vào giá trị **fan-in**, **fan-out** ta có thể tính toán được nhân tố bất ổn bằng công thức: 
+
+```
+I = fo ​/ (f​i​+f​o​) 
+```
+
+Khi mà **I** tiến đến `0` thì gói chức năng ta đang xét càng ổn định (stable) và càng bất ổn(instable) khi **I** tiến đến `1`. Theo dữ kiện điều tra, các gói tính năng ổn định hầu như không chứa code bẩn và ngược lại. Mục đích trong việc sửa chữa chúng chính là khiến cho trị số I càng gần 0 càng tốt.
+
+Khi sử dụng metrics chúng ta phải luôn nhớ rằng chúng chỉ là những quy tắc của ngón tay. Về mặt thuần toán học chúng ta có thể thấy gia tăng **fi** ​mà không thay đổi fo​ sẽ khiến cho **I** gần `0` hơn. Tuy nhiên, mặt trái của việc giá trị **fan-in** quá lớn sẽ khiến cho những lớp đó trở nên khó để thay đổi mà không làm hỏng sự phụ thuộc của chúng. Đồng thời việc không tác động đến **fan-out**, bạn thật sự không làm giảm nguy cơ ấy cho nên hay cố gắng cân bằng chúng.
+
+Một mặt tối của việc sử dụng metrics chính là một mảng số khổng lồ do công cụ metrics sinh ra có thể là trở ngại đối với người mới. Họ nói, **software metrics** có thể là một công cụ mạnh mẽ trong công cuộc đấu tranh vì code sạch (clean code). Chúng có thể giúp ta xác định mà dự đoán bom code bẩn trước khi chúng trở thành mối nguy hại nghiêm trọng trong việc luyện tập hiệu chỉnh hiệu suất.
+
+
+## 75: ✅ Điều đơn giản đến từ sự tối giản
+
+“*Làm lại lần nữa…*” Ông chủ của tôi vừa nói vừa ấn mạnh phím xóa. Tôi nhìn màn hình máy tính với một cảm giác quá quen thuộc, khi đoạn code của tôi biến mất từng dòng một.
+
 Ông chủ của tôi, Stefan, không phải lúc nào cũng là người có tiếng nói nhất, nhưng ông ấy biết code này ổn hay không chỉ qua quan sát. Và ông ấy biết chính xác phải làm gì với nó.
+
 Tôi đến với vị trí hiện tại là một lập trình viên sinh viên tràn đầy năng lượng, nhiệt huyết nhưng hoàn toàn không biết viết code. Tôi có suy nghĩ kì quái rằng giải pháp cho mọi vấn đề là thêm vào một chút gì đó. Hoặc bổ sung thêm một dòng code nữa. Vào một ngày tồi tệ, thay vì trở nên tốt hơn sau mỗi lần sửa đổi, code của tôi trở nên phức tạp hơn và ngày càng hoạt động không ổn định.
+
 Đó là điều hoàn toàn dễ hiểu, nhất khi bạn đương vội và chỉ muốn thực hiện những thay đổi tối thiểu nhất đối với đoạn code hiện có, ngay cả khi điều đó không ổn cho lắm. Hầu hết các lập trình viên sẽ giữ lại đoạn code lỗi, vì e sợ việc viết một đoạn code mới sẽ đòi hỏi nhiều nỗ lực hơn so với việc quay lại đoạn đầu. Điều đó có thể đúng với code sắp đi vào hoạt động, nhưng chỉ có một số code thực sự thành công.
+
 Nhiều thời gian sẽ bị lãng phí vào việc cố gắng cứu vãn code hỏng hơn cần thiết. Khi cái gì đó dần mất đi giá trị, nó cần nhanh chóng bị loại bỏ.
+
 Không phải ai cũng dễ dàng loại bỏ tất cả các kiểu gõ, đặt tên hay định dạng. Phản ứng của sếp tôi có hơi quá khích, nhưng nó buộc tôi phải suy nghĩ lại trong lần thử thứ hai (hoặc đôi khi là thứ ba). Tuy nhiên, cách tốt nhất để sửa code lỗi là chuyển sang chế độ code được tái cấu trúc, dịch chuyển hoặc xoá bỏ.
+
 Code cần phải đơn giản. Cần có một số lượng tối thiểu các biến, hàm, khai báo và các yêu cầu cú pháp khác. Thêm dòng, biến phụ… hay bất cứ điều gì, nên bị loại trừ ngay lập tức. Chỉ nên có vừa đủ để hoàn thành công việc, hoàn thành thuật toán hay thực hiện các tính toán. Bất cứ điều gì khác chỉ là thứ không cần thiết, vô tình xuất hiện và che khuất những thứ quan trọng.
+
 Tất nhiên, nếu không thành công thì bạn chỉ cần xóa đi và làm lại. Suy nghĩ theo cách đó thường giúp bỏ qua nhiều sự lộn xộn không cần thiết.
-## 76: The Single Responsibility
-Principle — SRP
+
+
+## 76: ✅ The Single Responsibility Principle — SRP
+
 Một trong những nguyên tắc nền tảng của một thiết kế tốt là:
-“Tập hợp tất cả những điều mà thay đổi bởi một lý do, và tách chúng thành những điều mà bị thay đổi bởi những lý do khác nhau.”
-Nguyên tắc trên thường được biết đến với cái tên Nguyên tắc trách nhiệm duy nhất hay SRP (Single Responsibility Principle). Một cách dễ hiểu chính là một hệ thống con, module, class, hay kể cả function không nên có nhiều hơn một lý do để thay đổi. Một ví dụ điển chính là một class gồm có những phương thức làm việc với những nguyên tắc kinh doanh, báo cáo, và database:
-public class Employee { public Money calculatePay()… public String reportHours()… public void save()…
+
+::: quote
+*Tập hợp tất cả những điều mà thay đổi bởi một lý do, và tách chúng thành những điều mà bị thay đổi bởi những lý do khác nhau.* - Single Responsibility Principle
+:::
+
+Một cách dễ hiểu chính là một `hệ thống con`, `module`, `class`, hay kể cả `function` không nên có nhiều hơn một lý do để thay đổi. Một ví dụ điển chính là một class gồm có những phương thức làm việc với những nguyên tắc kinh doanh, báo cáo, và database:
+
+```java
+public class Employee { 
+    public Money calculatePay()… 
+    public String reportHours()… 
+    public void save()…
 }
-Một vài lập trình viên nghĩa rằng việc kết hợp ba hàm này lại với nhau vào chung một class là một điều vô cùng đúng đắn. Suy cho cùng, Class là nơi tập hợp các hàm tính toán trên những biến chung. Tuy nhiên, vấn đề chính là ba hàm này thay đổi hoàn toàn dựa trên những lý do khác nhau. Hàm calculatePay sẽ thay đổi bất cứ khi nào nguyên tắc kinh doanh của việc tính toán chi phí tăng. Hàm reportHours sẽ thay đổi bất cứ khi nào có người nào đó muốn dùng một định dạng báo cáo khác. Tuy nhiên, nếu lớp Employee bị lạm dụng bởi các bộ phận khác dẫn đến mọi sự thay đổi của Employee sẽ khiến cho những bộ phận khác phải triển khai lại và phủ định toàn bộ những lợi ích của mô hình thiết kế các thành phần(hoặc là SOA nếu bạn thích một cái tên hoa mỹ hơn).
-public class Employee {
-public Money calculatePay()…
+```
+
+Một vài lập trình viên nghĩa rằng việc kết hợp ba hàm này lại với nhau vào chung một class là một điều vô cùng đúng đắn. Suy cho cùng, Class là nơi tập hợp các hàm tính toán trên những biến chung. Tuy nhiên, vấn đề chính là ba hàm này thay đổi hoàn toàn dựa trên những lý do khác nhau. 
+- Hàm *calculatePay* sẽ thay đổi bất cứ khi nào nguyên tắc kinh doanh của việc tính toán chi phí tăng. 
+- Hàm *reportHours* sẽ thay đổi bất cứ khi nào có người nào đó muốn dùng một định dạng báo cáo khác. 
+
+Tuy nhiên, nếu lớp **Employee** bị lạm dụng bởi các bộ phận khác dẫn đến mọi sự thay đổi của Employee sẽ khiến cho những bộ phận khác phải triển khai lại và phủ định toàn bộ những lợi ích của mô hình thiết kế các thành phần(hoặc là SOA nếu bạn thích một cái tên hoa mỹ hơn).
+
+```java
+public class Employee{
+    public Money calculatePay()…
 }
-public class EmployeeReporter{ public string reportHours(Employee e)…
+
+public class EmployeeReporter{ 
+    public string reportHours(Employee e)…
 }
-public class EmployeeRepository{ public void save(Employee e)…
+
+public class EmployeeRepository{ 
+    public void save(Employee e)…
 }
+```
+
 Bằng một sự tách rời đơn giản của class ban đầu ở bảng trên đã giải quyết tất cả các vấn đề mà ta gặp phải. Mỗi class này có thể được đặt trong từng phần riêng của nó.
+
 Hoặc là, mọi class phụ trách công việc báo cáo có thể được xếp vào bộ phận báo cáo. Tất cả mọi class liên quan đến việc trao đổi thông tin từ database có thể được xếp vào bộ phận lưu trữ. Và tất cả những class liên quan đến các quy luật kinh doanh thì có thể xếp vào bộ phận kinh doanh.
+
 Nếu bạn nhanh trí bạn có thể nhận ra code ở trên vẫn còn sự phụ thuộc vào nhau.
-Chính là kiểu Employee vẫn còn bị phụ thuộc vào những lớp khác. Vì vậy nếu
-Employee bị chỉnh sửa, hầu hết các những class khác đều phải compile lại hoặc tái sản xuất. Chính vì thế, kiểu Employee không thể bị thay đổi và phải được cài đặt một cách độc lập. Tuy nhiên những lớp khác đều có thể làm việc với nó được đồng thời phải được cài đặt độc lập. Không một sự thay đổi nào của một trong những lớp đó có thể khiến cho các lớp khác phải compile lại hoặc tái sản xuất. Kể cả kiểu Employee cũng có thể được cài đặt độc lập bằng cách sử dụng Đảo ngược phần tử độc lập (Dependency Inversion Principle -DIP), nhưng đó là một chủ đề khác cho một cuốn sách khác.
+
+Chính là kiểu Employee vẫn còn bị phụ thuộc vào những lớp khác. Vì vậy nếu **Employee** bị chỉnh sửa, hầu hết các những class khác đều phải compile lại hoặc tái sản xuất. Chính vì thế, kiểu Employee không thể bị thay đổi và phải được cài đặt một cách độc lập. Tuy nhiên những lớp khác đều có thể làm việc với nó được đồng thời phải được cài đặt độc lập. Không một sự thay đổi nào của một trong những lớp đó có thể khiến cho các lớp khác phải compile lại hoặc tái sản xuất. Kể cả kiểu Employee cũng có thể được cài đặt độc lập bằng cách sử dụng Đảo ngược phần tử độc lập (**Dependency Inversion Principle - DIP**), nhưng đó là một chủ đề khác cho một cuốn sách khác.
+
 Hãy cẩn thận áp dụng SRP, phân biệt những điều mà bị thay đổi bởi các lý do khác nhau, là một trong những chiếc chìa khoá để tạo ra các thiết kế có cấu trúc các thành phần được triển khai một cách độc lập.
 
-## 77: Bắt đầu từ “CÓ”
+
+## 77: ✅ Bắt đầu từ “CÓ”
 
 Có một lần, tôi đến một cửa hàng tạp hoá để tìm “*edamame*” (mà tôi chỉ biết mơ hồ là một loại rau). Tôi không chắc liệu thứ tôi cần tìm nằm ở khu rau củ, khu đông lạnh hay khu đồ hộp. Tôi đã từ bỏ và tìm một nhân viên để nhờ trợ giúp. Nhưng cô ấy cũng không biết!
 
@@ -1453,7 +1640,7 @@ Nếu bạn có thể đưa ra lời giải thích thuyết phục cho lý do t�
 Bắt đầu từ có nghĩa là phối hợp với đồng nghiệp của bạn, không phải là chống lại họ.
 
 
-## 78: Lùi lại và để tự động hóa làm việc
+## 78: ✅ Lùi lại và để tự động hóa làm việc
 
 Tôi đã làm việc với các lập trình viên mà khi được yêu cầu tạo một số dòng code trong một module đã dán các tệp vào một trình xử lý văn bản và sử dụng tính năng “*đếm dòng*” của nó. Và lần sau, lần sau nữa, họ lặp lại những hành động đó. Cách làm này quả thực không được khôn ngoan cho lắm.
 
@@ -1482,7 +1669,7 @@ Nếu một phần trong quy trình yêu cầu tài liệu Word, bảng tính ha
 Bạn không cần phải học tất cả `bash` hay `Ant` để bắt đầu. Hãy học dần dần. Khi bạn có một nhiệm vụ mà bạn nghĩ có thể và nên được tự động hóa, hãy tìm hiểu vừa đủ về các công cụ mà bạn cần để thực hiện điều đó. Và hãy làm điều đó sớm ngay khi thời gian cho phép. Một khi bạn thành công, bạn (và sếp của bạn) sẽ nhận thấy việc đầu tư vào tự động hóa là hoàn toàn hợp lý.
 
 
-## 79: Thông thạo dụng cụ analysis code
+## 79: ✅ Thông thạo dụng cụ analysis code
 
 Giá trị của testing đã bước vào đời của các nhà phát triển từ những giai đoạn đầu tiên. Trong một vài năm gần đây sự phát triển mạnh mẽ của **unit testing**, **test-driven** và những phương thức nhanh chóng đã cho thấy sự quan tâm đáng kinh ngạc đến việc kiểm tra qua tất cả các giai đoạn của chu trình phát triển sản phẩm. Tuy nhiên, testing là một trong những công cụ để bạn có thể nâng cao chất lượng code.
 
@@ -1490,14 +1677,13 @@ Trở lại dòng chảy của thời gian, khi mà C vẫn còn là một hiệ
 
 Mặt bằng chung hiện nay của các ngôn ngữ, compilers, và công cụ analysis phức tạp. Thời gian đọc ghi của CPU và bộ cũng trở nên nhanh hơn, chính vì thế compiler có thể cố gắng kiểm tra thêm một số lỗi. Hầu hết các ngôn ngữ đều tự hào khi có ít nhất một công cụ mà có thể kiểm tra các lỗi do sai cú pháp, lỗi gotchas, và đôi khi khéo léo chặn các lỗi thường rất khó để bắt gặp, như là **pointer null dereferences**. Những công cụ tinh vi hơn, như là Splint của C hoặc là **Pylint** của Python, có thể được tuỳ chỉnh, điều này giúp bạn có thể chọn những lỗi hoặc cảnh báo nào mà Compiler phát hiện bằng một file thiết lập, hay bằng dòng lệnh, hoặc điều chỉnh trong IDE của bạn. Splint còn có thể để bạn ghi chú code của bạn bằng comment giúp bạn có gợi ý về cách hoạt động của chương trình.
 
-Nếu tất cả những điều trên sai, bạn nên tìm những lỗi đơn giản hay những xung đột các chuẩn mực mà chúng không thể bị phát hiện bởi compiler, IDE, hoặc công cụ lints, vậy thì bạn phải tự kiểm tra lấy thôi. Việc này không quá khó như bạn nghĩ đâu. Hầu hết các ngôn ngữ, đặc biệt là những ngôn ngữ mang danh dynamic, thường sở hữu hệ thống ngôn ngữ và công cụ của compiler như một phần của thư viện tiêu chuẩn. Đó là một điều đáng giá khi bạn có thể biết những góc khuất của bộ thư viện tiêu chuẩn được dùng bởi các nhóm nhà phát triển của ngôn ngữ mà bạn đang dùng, thường thì những điều này chứa những “viên ngọc quý” cho static analysis và dynamic testing. Ví dụ, thư viện chuẩn của Python có một disassembler cái mà sẽ cho bạn biết bytecode dùng để compile code hoặc đối tượng code. Chức năng này dường bị quên lãng bởi những nhà thiết kế compiler trong đội ngũ phát triển Python, tuy nhiên đây lại là một chức năng cực kỳ hữu ích không thể thiếu trong những tình huống hằng ngày. Một điều nữa mà thư viện này có thể tách rời là sự truy stack của bạn, giúp bạn theo dõi một cách chính xác bytecode nào là nguyên nhân của các ngoại lệ cuối cùng không bị phát hiện.
+Nếu tất cả những điều trên sai, bạn nên tìm những lỗi đơn giản hay những xung đột các chuẩn mực mà chúng không thể bị phát hiện bởi compiler, IDE, hoặc công cụ lints, vậy thì bạn phải tự kiểm tra lấy thôi. Việc này không quá khó như bạn nghĩ đâu. Hầu hết các ngôn ngữ, đặc biệt là những ngôn ngữ mang danh dynamic, thường sở hữu hệ thống ngôn ngữ và công cụ của compiler như một phần của thư viện tiêu chuẩn. Đó là một điều đáng giá khi bạn có thể biết những góc khuất của bộ thư viện tiêu chuẩn được dùng bởi các nhóm nhà phát triển của ngôn ngữ mà bạn đang dùng, thường thì những điều này chứa những “viên ngọc quý” cho static analysis và dynamic testing. Ví dụ, thư viện chuẩn của Python có một disassembler cái mà sẽ cho bạn biết bytecode dùng để compile code hoặc đối tượng code. Chức năng này dường bị quên lãng bởi những nhà thiết kế compiler trong đội ngũ phát triển Python, tuy nhiên đây lại là một chức năng cực kỳ hữu ích không thể thiếu trong những tình huống hằng ngày. Một điều nữa mà thư viện này có thể tách rời là sự truy stack của bạn, giúp bạn theo dõi một cách chính xác bytecode nào là nguyên nhân của các ngoại lệ ⚠ cuối cùng không bị phát hiện.
 
 Chính vì vậy đừng để testing là việc cuối cùng của việc bảo quản chất lượng của sản phẩm của bạn — hãy thông thạo các công cụ analysis và đừng sợ khi thực hiện điều đó một mình.
 
 
-## 80: Test for Required Behavior, not
+## 80: Test for Required Behavior, not Incidental Behavior
 
-Incidental Behavior
 Một điều đáng tiết thường xảy ra trong việc kiểm thử chính là dự đoán tất cả những gì mà mà một chương trình làm một cách chính xác với bộ thử của bạn. Nhìn sơ qua thì nó chả giống như một điều gì đáng tiếc cả. Tuy nhiên, ở một góc độ khác, vấn đề trở nên rõ ràng hơn: một điều đáng tiết trong testing thường xảy ra chính là kiểm tra một cách cứng nhắc đến một điều đặc biệt của chương trình mà chúng lại không quan trọng cũng như không thể hiện được tính năng mong muốn của chương trình.
 Khi bài test được viết tràn lan, tự động, những thay đổi tác động đến chúng để thích hợp với những trường hợp chính khiến chúng không chính xác hoặc phát sinh những cảnh báo giả. Để đáp lại chúng, lập trình viên sẽ sửa lại code hoặc bộ test ấy. Tuy nhiên nếu như báo động ấy là thật thì nó chính là hậu quả của nỗi sợ hãi, không chắc chắn, hoặc nghi ngờ. Điều này khiến cho những trường hợp phát sinh xảy ra nhiều hơn. Khi viết lại một test mới, lập trình viên chúng ta hoặc tập trung vào những trường hợp chính, thông dụng( tốt) hoặc đơn giản ràng buộc nó bằng cài đặt mới(không tốt).
 Những bộ test không chỉ phải đúng mà còn phải thật chính xác.
@@ -1543,7 +1729,7 @@ Thử nghiệm những thứ “cứng nhắc” là khó khăn vì bạn phải
 Kiểm tra sẽ mất một thời gian, giống như phân tích cấu trúc. Cả hai hoạt động đều sẽ đảm bảo cho chất lượng của sản phẩm cuối cùng. Đã đến lúc các nhà phát triển phần mềm phải chịu trách nhiệm về những gì họ làm ra. Từng cá nhân kiểm tra là không đủ nhưng nó cần thiết. Kiểm tra là kỹ thuật nghiêm ngặt trong phát triển phần mềm.
 
 
-## 84: Suy nghĩ trong từng States
+## 84: ✅ Suy nghĩ trong từng States
 
 Mọi người thường có một mối quan hệ kì lạ với các **states**(1). Sáng nay tôi đã thưởng chút cafe tại một cửa hàng gần nhà để chuẩn bị cho công việc. Thức uống yêu thích ❤️️ nhất của tôi là latte, nhưng nhân viên bán hàng lại không cho vào ly bất kì giọt sữa nào, và họ đã nói với tôi thế này:
 
@@ -1580,7 +1766,7 @@ Nhưng bằng cách nào để bắt đầu thực hiện “*suy nghĩ trong c�
 
 Nếu state của các bạn không chính xác, chắc hẳn đó là một bug, và nếu bạn không ngưng nó lại, nguy cơ bị mất dữ liệu là rất cao. Một điều nữa, khi nhận thấy các state checks bị nhiễu, hãy học cách sử dụng một công cụ, tạo code, **weaving**(5), các khía cạnh để giải quyết vấn đề đó. Bất kể các bạn chọn cách tiếp cận nào, “suy nghĩ ở trong mỗi state” sẽ làm cho các đoạn code được đơn giản và mạnh mẽ hơn.
 
-*Chú thích:*
+**💬 Chú thích:**
 1. **State**: State là một đối tượng Javascript lưu trữ dữ liệu động của một component. State là dữ liệu động, nó cho phép một component theo dõi thông tin thay đổi ở giữa các kết xuất (render) và làm cho nó có thể tương tác. State chỉ có thể được sử dung ở trong một component sinh ra nó.
 2. **State machines**: State machine là một mô hình quản lý quá trình chuyển trạng thái. Nó được ứng dụng rộng rãi trong nhiều ứng dụng. Một trong đó là về cài đặt các workflow.
 3. **CS class**: C# class.
@@ -1588,7 +1774,7 @@ Nếu state của các bạn không chính xác, chắc hẳn đó là một bug
 5. **Weaving**: Quá trình kết nối các thành phần Aspect và Non-aspect(chẳng hạn như Object, Types) của một chương trình để tạo nên Advised Object gọi là Weaving.
 
 
-## 85: Một cây làm chẳng nên non
+## 85: ✅ Một cây làm chẳng nên non
 
 Lập trình đòi hỏi suy nghĩ sâu sắc, và suy nghĩ sâu sắc đòi hỏi sự cô độc. Vì vậy, nhiều lập trình viên lựa chọn hướng đi này.
 
@@ -1611,7 +1797,7 @@ Ai nên ghép cặp với ai? Nếu bạn là người mới trong nhóm, điề
 Nếu bạn cảm thấy chưa thuyết phục, hãy thử hợp tác với đồng nghiệp của bạn. Ghép cặp để giải quyết một vấn đề thú vị. Hãy thử một vài lần xem cảm giác thế nào.
 
 
-## 86: Hai cái sai tạo thành một cái đúng (và rất khó để fix)
+## 86: ✅ Hai cái sai tạo thành một cái đúng (và rất khó để fix)
 
 Code không bao giờ nói dối nhưng chúng có thể liên hệ bản thân. contradict nghĩa là “mâu thuẫn”=> dịch là mẫu thuẫn với chính mình Và chúng dẫn đến những khoảnh khắc “*Làm sao mà chúng có thể hoạt động được?*”
 
@@ -1634,7 +1820,7 @@ Một lỗi sai đơn lẻ có thể dễ dàng phát hiện và khắc phục. 
 Chúng tôi không có một lời khuyên nào giúp bạn xác định các lỗi mà nguyên nhân đến từ những sai lầm đáng tiếc trên. Hãy giữ cho mình một cái đầu lạnh và sẵn sàng kiểm tra tất cả các khả năng có thể xảy ra nếu cần thiết.
 
 
-## 87: Ubuntu coding cho bạn bè
+## 87: ✅ Ubuntu coding cho bạn bè
 
 Chúng ta thường viết code riêng rẽ và code ấy phản ánh cách giải quyết của riêng chúng ta cho một vấn đề, cũng như một giải pháp mang tính cá nhân. Chúng ta có thể là một phần của nhóm, nhưng chúng ta vẫn làm việc độc lập. Chúng ta quên mất rằng code này- được tạo ra một cách độc lập, sẽ được thực thi, sử dụng, mở rộng và dựa vào bởi người khác. Thật dễ dàng để bỏ qua khía cạnh xã hội của việc tạo ra phần mềm. Lập trình phần mềm là một bài tập kỹ thuật kết hợp với một bài tập xã hội. Chúng ta cần ngẩng đầu khỏi màn hình máy tính thường xuyên hơn để nhận ra chúng ta không làm việc một mình và mọi người cùng chia sẻ trách nhiệm đối với việc tăng xác suất thành công cho tất cả, không chỉ riêng nhóm phát triển phần mềm.
 
@@ -1649,7 +1835,7 @@ Tôi có thể coi code của mình là tốt, nhưng tôi vẫn có thể làm 
 Zen là cá nhân. Ubuntu là Zen cho một nhóm người. Rất hiếm khi chúng ta tạo code chỉ để cho cá nhân mình.
 
 
-## 88: Unix tool là bạn
+## 88: ✅ Unix tool là bạn
 
 Nếu sắp bị đi đày đến một hoang đảo và buộc phải chọn giữa IDE và Unix tool, tôi sẽ ngay lập tức chọn Unix tool. Dưới đây là những lý do vì sao bạn nên thành thạo Unix tool.
 
@@ -1670,7 +1856,7 @@ Các triển khai open source và trình giả lập của Unix tool làm cho n�
 
 Cuối cùng, nếu không có công cụ nào phù hợp với nhu cầu của bạn, thì bạn có thể dễ dàng để mở rộng thế giới của Unix tool. Chỉ cần viết một chương trình (bằng bất kỳ ngôn ngữ nào bạn thích) theo một vài quy tắc đơn giản: Chương trình của bạn chỉ thực hiện một nhiệm vụ duy nhất; nó nên đọc dữ liệu dưới dạng văn bản từ input tiêu chuẩn của nó; và nó sẽ hiển thị kết quả- không được đánh dấu bởi các tiêu đề hay nhiễu loạn khác ở output tiêu chuẩn. Các tham số ảnh hưởng đến hoạt động của công cụ được đưa vào dòng lệnh. Thực hiện các quy tắc này và “Trái đất và mọi thứ trong đó là của bạn”.
 
-## 89: Sử dụng đúng thuật toán và cấu trúc dữ liệu
+## 89: ✅ Sử dụng đúng thuật toán và cấu trúc dữ liệu
 
 Một ngân hàng lớn với nhiều chi nhánh phàn nàn rằng các máy tính mới mà họ mua cho các giao dịch viên chạy quá chậm. Vào thời điểm đó ngân hàng điện tử và cây ATM không phổ biến như bây giờ. Mọi người đến ngân hàng thường xuyên hơn, và những chiếc máy tính chậm chạp đang khiến mọi người phải chờ đợi. Do đó, ngân hàng đe dọa sẽ phá vỡ hợp đồng với nhà cung cấp.
 
@@ -1695,7 +1881,7 @@ Ví dụ: nếu miền ra lệnh không bao giờ có nhiều hơn năm vật ph
 Vì vậy, hãy đọc những cuốn sách hay- và chắc chắn rằng bạn hiểu chúng. Nếu bạn thực sự đọc hiểu “*Nghệ thuật lập trình máy tính*” của Donald Knuth, bạn có thể gặp may mắn: Tìm một lỗi sai của tác giả và nhận được tờ séc trị giá 2,56 $ của Don Knuth.
 
 
-## 90: Verbose Logging sẽ làm gián đoạn giấc ngủ của bạn
+## 90: ✅ Verbose Logging sẽ làm gián đoạn giấc ngủ của bạn
 
 Khi tôi gặp một hệ thống đã được phát triển hay sản xuất trong một khoảng thời gian, dấu hiệu đầu tiên của sự cố luôn là một bản log rối rắm. Bạn hiểu ý tôi mà. Khi nhấp vào một liên kết trên một trang web sẽ dẫn đến một loạt các thông báo trong log hệ thống cung cấp. Quá nhiều logging sẽ trở nên vô ích như không có.
 
@@ -1712,7 +1898,7 @@ Nói chung, dấu hiệu tốt nhất cho thấy mọi thứ đều ổn là nh�
 Bản log lộn xộn là dấu hiệu cho thấy hệ thống sẽ trở nên khó kiểm soát khi đi vào sản xuất. Nếu bạn không mong đợi bất cứ điều gì xuất hiện trong error log, sẽ dễ dàng hơn nếu biết phải làm gì khi có gì đó thực sự xuất hiện.
 
 
-## 91: Nguyên tắc WET làm giảm nghẽn cổ chai
+## 91: ✅ Nguyên tắc WET làm giảm nghẽn cổ chai
 
 Điều quan trọng của nguyên tắc [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) là thực hiện hoá ý tưởng mỗi kiến thức nhất định trong chương trình chỉ nên được thể hiện bởi một thứ. Nói cách khác, kiến thức ấy chỉ nên được cài đặt một lần duy nhất. Từ trái nghĩa của nó chính là **WET**. Code của chúng ta WET khi chúng ta thực hiện hoá một kiến thức bằng nhiều sự cài đặt khác nhau. DRY và WET có sự ảnh hưởng vô cùng lớn đến hiệu năng được thể hiện bằng các số liệu cụ thể.
 
@@ -1772,7 +1958,7 @@ public class UsageExample {
 Trong ví dụ này, bằng việc bám chặt **DRY** đã cho phép chúng ta giới thiệu một chương trình lập chỉ mục thay thế với danh sách đã được sắp xếp gắn với giá trị phụ thuộc vào mức độ chi của khách hàng. Quan trọng hơn những chi tiết của chương trình trên, làm theo nguyên tắc **DRY** giúp chúng ta tìm và sửa chữa sự nghẽn cổ chai dễ dàng hơn so với việc thực hiện điều đó với code được viết theo nguyên tắc *WET*.
 
 
-## 92: Khi coder và tester hợp tác lại với nhau
+## 92: ✅ Khi coder và tester hợp tác lại với nhau
 
 Điều kỳ diệu nào đó sẽ xảy ra khi người lập trình và kiểm thử phần mềm bắt đầu hợp tác với nhau.Ta sẽ dành ít thời gian để gửi lỗi qua lại thông qua hệ thống quản lí lỗi. Ta cũng không cần phải tốn nhiều thời gian cố gắng tìm ra đây là lỗi hay tính năng mới, và ta sẽ có nhiều thời gian phát triển phần mềm tốt hơn để đáp ứng nhu cầu của khách hàng. Bạn sẽ có nhiều cơ hội để hợp tác, thậm chí trước khi việc viết code bắt đầu.
 
@@ -1785,7 +1971,7 @@ Lập trình viên cũng có thể hợp tác với người kiểm thử phầm
 Chừng nào người kiểm thử phần mềm ngừng nghĩ rằng công việc duy nhất của họ là phá vỡ phần mềm và tìm lỗi trong mã code của người lập trình, lập trình viên ngừng nghĩ rằng không nên làm phiền những người kiểm thử, việc hợp tác sẽ cởi mở hơn. Khi lập trình viên nhận ra rằng họ cần có trách nhiệm nâng cao chất lượng code của họ, khả năng kiểm tra của code là tự nhiên, cả nhóm có thể cùng nhau tự động hóa các bộ tests quy hồi. Sự kỳ diệu khi làm việc nhóm sẽ bắt đầu.
 
 
-## 93: Viết code như thể bạn phải hỗ trợ nó đến hết đời
+## 93: ✅ Viết code như thể bạn phải hỗ trợ nó đến hết đời
 
 Bạn có thể hỏi 97 người liệu lập trình viên nên biết gì và làm gì, và bạn sẽ nhận được 97 câu trả lời khác nhau. Điều này có thể vừa áp đảo vừa đáng sợ. Mọi lời khuyên đều tốt, mọi nguyên tắc đều hợp lý, và mọi câu chuyện đều hấp dẫn, nhưng bạn nên bắt đầu từ đâu? Quan trọng hơn, một khi bạn bắt đầu, làm thế nào để theo kịp những thực tiễn tốt nhất bạn đã học được và biến chúng thành một phần không thể thiếu trong quá trình thực hành lập trình của bạn?
 
@@ -1797,25 +1983,32 @@ Nếu bạn chấp nhận khái niệm này, những điều tuyệt vời sẽ 
 
 Những code bạn viết nhiều năm trước vẫn ảnh hưởng đến sự nghiệp của bạn, dù bạn có thích hay không. Bạn để lại dấu vết về kiến thức, thái độ, sự kiên trì, tính chuyên nghiệp, mức độ cam kết và mức độ thích thú trên mọi phương pháp, class hay module bạn thiết kế và viết. Mọi người sẽ hình thành ý kiến về bạn dựa trên những code mà họ thấy. Nếu những ý kiến đó tiêu cực, bạn sẽ nhận được ít hơn từ sự nghiệp của bạn hơn bạn mong muốn. Hãy chăm chút sự nghiệp của bạn, của khách hàng và của người dùng với mọi dòng code- viết code như thể bạn phải hỗ trợ nó cho đến giây phút cuối cùng của cuộc đời mình.
 
-## 94: Xây dựng những hàm nhỏ bằng ví dụ
 
-Chúng ta bao giờ cũng muốn code được viết một cách chính xác, đồng thời có những bằng chứng cho tính đúng đắn của code. Nó có thể giúp ta nghĩ về vấn đề “kích thước” của hàm đấy. Không phải về mặt số lượng code mà chúng ta viết trong hàm — mặc dù chúng rất thú vị — mà là về kích thước của các phép tính toán của chúng ta sử dụng trong hàm.
+## 94: ✅ Xây dựng những hàm nhỏ bằng ví dụ
+
+Chúng ta bao giờ cũng muốn code được viết một cách chính xác, đồng thời có những bằng chứng cho tính đúng đắn của code. Nó có thể giúp ta nghĩ về vấn đề “*kích thước*” của hàm đấy. Không phải về mặt số lượng code mà chúng ta viết trong hàm — mặc dù chúng rất thú vị — mà là về kích thước của các phép tính toán của chúng ta sử dụng trong hàm.
+
 Ví dụ trong trong một trò chơi của Go có một điều kiện gọi lại atari thể hiện các viên đá của người chơi có thể bị cướp bởi đối thủ của họ: Một viên đó mà có 2 hoặc nhiều hơn những khoảng trống kề cạnh (gọi là liberties) không phải là atari. Việc đếm các liberties của một viên đá có thể gặp khó khăn tuy nhiên nó sẽ giúp việc xác định atari một cách dễ dàng. Chúng ta có thể bắt đầu viên hàm như thế này:
 
-```java
+```go
 boolean atari(int libertyCount) libertyCount < 2
-````
+```
 
-Đây chỉ là một phần nhỏ của cả đoạn code. Một hàm số toán học có thể được hiểu là một tập hợp, vài tập con của tích đề các của nó là miền giá trị (ở đây là, int) và phạm vi(ở đây, boolean). Nếu tập hợp các giá trị trên có kích thước tương tự trong Java thì chúng ta sẽ có *2L * (integer.MAX_VALUE +(-1L * Integer.MIN_VALUE) +1L)* hoặc là 8,589,934,592 phần tử của tập int*boolean*. Một nửa trong số chúng chính là những phần tử của tập con của hàm chúng ta đang viết. Chính vì thế để cung cấp những chứng minh hàm mà chúng ta viết chính xác chúng ta cần phải thử khoảng 4.3*10⁹ ví dụ.
+Đây chỉ là một phần nhỏ của cả đoạn code. Một hàm số toán học có thể được hiểu là một tập hợp, vài tập con của tích đề các của nó là miền giá trị (ở đây là, int) và phạm vi(ở đây, boolean). Nếu tập hợp các giá trị trên có kích thước tương tự trong Java thì chúng ta sẽ có *2L * (integer.MAX_VALUE +(-1L * Integer.MIN_VALUE) +1L)* hoặc là *8,589,934,592* phần tử của tập int *boolean*. Một nửa trong số chúng chính là những phần tử của tập con của hàm chúng ta đang viết. Chính vì thế để cung cấp những chứng minh hàm mà chúng ta viết chính xác chúng ta cần phải thử khoảng 4.3*10⁹ ví dụ.
+
 Điều này xác nhận rằng test không chứng minh được bugs không có khả năng xuất hiện trong code của chúng ta mà chúng chỉ có thể thể các tính năng của code. Nhưng chúng ta vẫn gặp phải vấn đề về kích thước.
-Chính miền xác định của vấn đề sẽ giúp chúng ta hiểu ra. Bản chất của Go chính là số lượng Liberties của một viên đó không phải là một giá trị bất kì mà chúng chỉ nằm trong tập {1,2,3,4}. Chính vì thế chúng ta có thể thay thế đoạn code trên bằng:
-```java
+
+Chính miền xác định của vấn đề sẽ giúp chúng ta hiểu ra. Bản chất của Go chính là số lượng Liberties của một viên đó không phải là một giá trị bất kì mà chúng chỉ nằm trong tập `{1,2,3,4}`. Chính vì thế chúng ta có thể thay thế đoạn code trên bằng:
+
+```go
 libertyCount = {1,2,3,4}
 boolean atari(LibertyCount libertyCount) libertyCount == 1
 ```
+
 Bằng đoạn code này chúng ta có thể dễ dàng để làm việc cùng hơn: những tính toán của hàm giờ đây đã trở thành một tập hợp với nhiều nhất 8 phần tử. Bằng bốn ví dụ trên chúng ta đã nắm chắc được bằng chứng chứng minh cho tính đúng đắn của chương trình. Đó chính là lý do vì sao chúng ta nên sử dụng những kiểu có sự tương đồng gần nhất với miền xác định của vấn đề để viết code thay vì dùng những kiểu nguyên sơ. Hơn nữa việc sử dụng các dữ liệu càng giống với miền xác định của của vấn đề có thể khiến cho hàm xử lý của chúng ta trở nên gọn gàng hơn. Chỉ có một cách để tìm ra những vấn đề đó chính là tìm những ví dụ để kiểm tra vấn đề nhằm tính toán miền xác định của vấn đề trước khi bắt tay vào việc viết hàm.
 
-## 95: Viết Tests Cho Mọi Người
+
+## 95: ✅ Viết Tests Cho Mọi Người
 
 Bạn đang viết các bài kiểm tra tự động cho các bài code của bạn. Xin chúc mừng! Bạn viết các bài kiểm tra đó trước khi viết code? Điều này thậm chí còn tốt hơn! Việc này sẽ giúp bạn trở thành một trong những người chấp nhận công nghệ tiến gần hơn với thực hành kỹ thuật phần mềm. Nhưng bạn đã viết tests tốt chưa? Bạn có thể thể hiện như thế nào? Cách duy nhất là hãy tự hỏi “*Mình đang viết tests cho ai?*” Nếu câu trả lời là “*Cho chính mình, để giảm bớt việc sửa lỗi ấy mà*” hay *“Cho trình biên dịch, để chúng có thể hoàn thiện hơn*” và điều kỳ quái là bạn chẳng viết tests tốt nhất có thể. Vậy bạn nên viết tests cho ai? Cho những người cố gắng hiểu code của bạn.
 
@@ -1832,7 +2025,7 @@ Kiểm tra tests của bạn là một ý tưởng hay. Bạn có thể xác nh�
 (Được rồi, hãy đổi vị trí — bạn sẽ đọc các tests của họ!)
 
 
-## 96: Để tâm đến code
+## 96: ✅ Để tâm đến code
 
 Không cần đến Sherlock Holmes để biết rằng các lập trình viên giỏi sẽ viết code tốt.
 
@@ -1859,7 +2052,8 @@ May mắn thay, bạn đang đọc tập hợp lời khuyên này vì bạn th�
 
 Và nó cũng chú ý đến bạn. Đó là đam mê của bạn. Chúc các bạn lập trình vui vẻ. Thưởng thức việc phân tích code để giải quyết những vấn đề khó khăn. Sản xuất những phần mềm khiến bạn tự hào.
 
-## 97: Khách Hàng Không Chắc Chắn
+
+## 97: ✅ Khách Hàng Không Chắc Chắn
 
 Những Gì Họ Nói - Tôi vẫn chưa gặp được người khách hàng nào có thể thoải mái nói tôi nghe những gì họ muốn, hay cung cấp nhiều thông tin. Vấn đề là khách hàng sẽ ít khi nói toàn bộ sự thật. Thường thì họ không nói dối, nhưng họ trò chuyện với vị trí khách hàng chứ không phải là một nhà phát triển. Họ sử dụng từ ngữ và bối cảnh của họ và bỏ qua những chi tiết cần thiết. Họ tự cho rằng bạn đã làm việc ở công ty được 20 năm, giống như họ vậy. Điều này cũng có nghĩa là họ không thực sự biết rằng mình muốn gì! Một vài người có thể hiểu “tình hình” rõ hơn, nhưng họ hiếm khi có khả năng nói lại chi tiết những gì họ nhận thấy. Có thể những người khác sẽ không có cái nhìn hoàn thiện, nhưng họ biết họ cần gì. Như vậy, sao bạn có thể chắc chắn giao một dự án phần mềm cho người thậm chí còn không nói với bạn toàn bộ những gì họ muốn? Đơn giản thôi.
 
