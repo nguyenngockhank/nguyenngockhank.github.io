@@ -14,7 +14,8 @@ const PATH_DIVIDER = '/';
 
 (async function() {
     const filePaths = (await scanFilesFolder(SOURCE_DIR))
-                    .map(filePath => filePath.replace(SOURCE_DIR + PATH_DIVIDER, ""));
+                        .map(filePath => filePath.replace(/\\/g, PATH_DIVIDER)) // windows path replacement
+                        .map(filePath => filePath.replace(SOURCE_DIR + PATH_DIVIDER, ""));
     
     const pathTree = toTree(filePaths);
 
