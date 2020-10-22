@@ -177,12 +177,11 @@ SET GLOBAL log_bin_trust_function_creators = 1;
 ![joins](@/images/sql/mysql-string-funcs.png)
 
 
-## MySQL binlog
-
-1 thứ hay ho 
+## MySQL hay ho 
 
 - [Ứng dụng MySql Binary Log để giải quyết vấn đề tích hợp — P1](https://techtalk.vn/blog/posts/ung-dung-mysql-binary-log-de-giai-quyet-van-de-tich-hop-p1)
 - [Giải quyết các vấn đề tích hợp bằng MySql Binlog — P2](https://engineering.tiki.vn/gi%E1%BA%A3i-quy%E1%BA%BFt-c%C3%A1c-v%E1%BA%A5n-%C4%91%E1%BB%81-t%C3%ADch-h%E1%BB%A3p-b%E1%BA%B1ng-mysql-binlog-part-2-77483a572798)
+- [Ảnh hưởng to lớn của AUTO_INCREMENT](https://nghethuatcoding.com/2020/05/02/dao-sau-ve-mysql#2-%E1%BA%A3nh-h%C6%B0%E1%BB%9Fng-to-l%E1%BB%9Bn-c%E1%BB%A7a-auto_increment)
 
 ## References 
 [Row Level Locking](https://riptutorial.com/mysql/example/24166/row-level-locking)
