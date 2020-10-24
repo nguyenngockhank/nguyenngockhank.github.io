@@ -21,7 +21,6 @@ module.exports = [
         children: [
             '/kungfu/js/vue_react',
             '/javascript/axios_jqueryajax',
-            '/db/sql_nosql',
         ]
     },
     // {

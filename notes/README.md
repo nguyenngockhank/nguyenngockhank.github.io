@@ -71,7 +71,6 @@ Nơi đây mình sẽ tổng hợp để ghi chép lại các chiêu thức võ 
 
 * Database
     * [Architect](db/architect.md)
-    * [SQL vs. NoSQL](db/sql_nosql.md)
     * [Mysql snippets](db/mysql_snippets.md)
     * PostgreSQL
     * MongoDB
