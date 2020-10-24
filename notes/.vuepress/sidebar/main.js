@@ -48,7 +48,7 @@ module.exports = [
         '/terms/testing',
         '/terms/ddd',
         '/terms/concurrent',
-        '/terms/concurrent',
+        '/terms/principles',
         '/terms/97things4dev',
       ]
     },
