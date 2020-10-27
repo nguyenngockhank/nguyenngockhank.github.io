@@ -18,9 +18,16 @@ Vietsub: Lập trình hướng đối tượng
 
 
 ### Polymorphism - Tính đa hình
-- Một tác vụ được thực hiện theo nhiều cách khác nhau được gọi là tính đa hình. Thể hiện qua `Overloading` và `Overriding`:
-    - **Overloading**: các method có cùng tên nhưng khác tham số
-    - **Overriding**: ghi đè lại các method của một lớp cha 
+
+Một tác vụ được thực hiện theo nhiều cách khác nhau được gọi là tính đa hình. Thể hiện qua `Overloading` và `Overriding`:
+- **Overloading**: các method có cùng tên nhưng khác tham số
+- **Overriding**: ghi đè lại các method của một lớp cha 
+
+Polymorphic is typically implemented as either of following:
+- Tables for all method calls prepared statically (as in C++ & Java)
+- A method lookup at each call (Javascript & Python)
+
+*Note*:
 - PHP không có `Overloading`... 
 
 ### Abstraction - Tính trừu tượng

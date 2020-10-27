@@ -11,6 +11,15 @@ Some characteristics are common amongst these databases, but none are definition
 - Based on the needs of 21st century web properties
 - No schema, allowing fields to be added to any record without controls
 
+## Why NoSql?
+
+- Relational databases have been a successful technology for twenty years, providing persistence, concurrency control, and an integration mechanism.
+- Application developers have been frustrated with the impedance mismatch between the relational model and the in-memory data structures.
+- There is a movement away from using databases as integration points towards encapsulating databases within applications and integrating through services.
+- The vital factor for a change in data storage was the need to support large volumes of data by running on clusters. Relational databases are not designed to run efficiently on clusters.
+- NoSQL is an accidental neologism. There is no prescriptive definition—all you can make is an observation of common characteristics.
+- The most important result of the rise of NoSQL is Polyglot Persistence.
+
 ## Data Models
 
 ![Data Model](./img/nosql-data-model.png)

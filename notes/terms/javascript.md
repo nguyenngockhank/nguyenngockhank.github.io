@@ -41,6 +41,12 @@ A curried function is a function of several arguments `rewritten` such that it `
 ⭐️ [Khank's note](/javascript/closure.md)
 
 
+## Duck typing
+
+::: tip
+If it looks like a duck and quacks like a duck, it's a duck
+:::
+
 ## Event Loop
  🇱 🇴 🇦 🇩 🇮 🇳 🇬  
 
