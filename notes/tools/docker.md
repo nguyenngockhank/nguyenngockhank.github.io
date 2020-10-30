@@ -224,6 +224,7 @@ docker volume rm D1
 ## Network
 
 [Detail](https://www.tutorialspoint.com/docker/docker_networking.htm)
+[Detail](https://docs.docker.com/engine/reference/commandline/network_connect/#:~:text=Connect%20a%20container%20to%20a%20network%20when%20it%20starts,connect%20it%20to%20a%20network.)
 
 :::: tabs
 
@@ -236,13 +237,21 @@ docker network ls
 ::: tab "Create New"
 
 ```
-docker network create –-driver drivername name 
+docker network create –-driver DRIVER_NAME name 
 # E.g
 docker network create –-driver bridge new_nw 
 ```
 
 - **drivername** − This is the name used for the network driver.
 - **name** − This is the name given to the network.
+:::
+
+::: tab Connect
+```
+docker network connect <NetworkName>  <container-name>
+# E.g
+docker network connect my_network my_container
+```
 :::
 
 ::: tab Inspect
