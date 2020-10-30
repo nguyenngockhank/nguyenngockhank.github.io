@@ -37,6 +37,7 @@ module.exports = [
         '/tools/puppeteer',
         '/tools/vscode',
         '/tools/redis',
+        '/tools/docker',
       ]
     },
     {
@@ -74,6 +75,7 @@ module.exports = [
         '/javascript/functor',
         '/snippets/mocha',
         '/snippets/firebase',
+        '/javascript/clean-code',
         {
           title: 'Snippets',
           children: [
