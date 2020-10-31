@@ -17,13 +17,13 @@
 
 :::: tabs
 ::: tab "List All"
-```
+```sh
 docker images
 ```
 :::
 
 ::: tab Pull
-```
+```sh
 docker pull <image:tag>
 # E.g: 
 docker pull centos:6.10 
@@ -32,13 +32,13 @@ Default tag: `latest`
 :::
 
 ::: tab Inspect
-```
+```sh
 docker inspect  <ID or NAME>
 ``` 
 :::
 
 ::: tab Remove
-```
+```sh
 docker rm <ID or NAME>
 
 docker rm -f <ID or NAME>
@@ -48,19 +48,19 @@ docker rm -f <ID or NAME>
 ::: tab Save/Load
 
 Save
-```
+```sh
 docker save --output <filename> <ID or NAME>
 # e.g:
 docker save --output myimage.tar khank-ubuntu
 ```
 
 Load
-```
+```sh
 docker load -i <filename>
 ```
 
 Rename
-```
+```sh
 docker tag f <image-name:tag>
 ```
 :::
@@ -74,24 +74,24 @@ docker tag f <image-name:tag>
 ::: tab "List All"
 
 List running container only 
-```
+```sh
 docker ps 
 ```
 
 All of list, includes hidden ones
 
-```
+```sh
 docker ps -a 
 ```
 :::
 
 ::: tab Start/Stop
 
-```
+```sh
 docker start <ID or NAME>
 ```
 
-```
+```sh
 docker stop  <ID or NAME>
 ```
 :::
@@ -99,23 +99,23 @@ docker stop  <ID or NAME>
 ::: tab Attach/Detach
 
 Attach
-```
+```sh
 docker attach <ID>
 ```
 Detach
-```
+```sh
 Ctrl + P, Ctrl + Q
 ```
 :::
 
 ::: tab Remove
-```
+```sh
 docker rm -f <ID or NAME>
 ```
 :::
 
 ::: tab "IP Address"
-```
+```sh
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <ID or NAME>
 ```
 :::
@@ -124,30 +124,28 @@ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <ID
 ### Save as Image
 
 Container must be stoped before committing.
-```
+```sh
 docker commit <container-name> <new-image-name:tag>
 ```
 
-### Run
-
-:::: tabs
+## Run
 
 
-::: tab "Expose Port"
-```
+
+### Expose Port
+```sh
 docker run -d -p 5801:5800 --name vnc1 myvnc 
 ```
 
 multi ports
 
-```
+```sh
 docker run -d -p 5801:5801 -p 5802:5802 .....
 ```
-:::
 
-::: tab Volume
+### Volume
 
-```
+```sh
 docker run -it -v <path-host>:<container-path> <ID or NAME>
 # E.g:
 docker run -it -v /Users/nguyenkhank/Desktop/jav:/home/dulieu ubuntu
@@ -155,16 +153,14 @@ docker run -it -v /Users/nguyenkhank/Desktop/jav:/home/dulieu ubuntu
 
 Use the same data:
 
-```
+```sh
 docker run -it --name C2 --volumes-from C1 ubuntu:latest
 ```
-:::
 
-::::
 
 ### With Volume
 
-```
+```sh
 docker run -it --name <container-name> --mount source=<volume-name>,target=<container-path> <image-name:tag>
 # E.g:
 docker run -it --name C1 --mount source=D1,target=/home/dulieu ubuntu:16.0.4
@@ -172,7 +168,7 @@ docker run -it --name C1 --mount source=D1,target=/home/dulieu ubuntu:16.0.4
 
 Case volume mounted with device
 
-```
+```sh
 docker run -it --name <container-name> --mount source=<volume-name>,target=<container-path> <image-name:tag>
 # E.g:
 docker run -it --name C1 -v DISK1:/home/dulieu ubuntu:16.0.4
@@ -183,20 +179,20 @@ docker run -it --name C1 -v DISK1:/home/dulieu ubuntu:16.0.4
 :::: tabs
 
 ::: tab List
-```
+```sh
 docker volume ls
 ```
 :::
 
 ::: tab Create
-```
+```sh
 docker volume create <Volume-name>
 # E.g:
 docker volume create D1
 ```
 
 Mount to device path
-```
+```sh
 docker create --opt device=<path-host> --opt type=none --opt o=bind <volume-name>
 # E.g
 docker create --opt device=/Users/nguyenkhank/Desktop/jav --opt type=none --opt o=bind DISK1
@@ -204,7 +200,7 @@ docker create --opt device=/Users/nguyenkhank/Desktop/jav --opt type=none --opt 
 :::
 
 ::: tab Info
-```
+```sh
 docker volume inspect <Volume-name>
 # E.g
 docker volume inspect D1
@@ -212,7 +208,7 @@ docker volume inspect D1
 :::
 
 ::: tab Remove
-```
+```sh
 docker volume rm <Volume-name>
 # E.g
 docker volume rm D1
@@ -229,14 +225,14 @@ docker volume rm D1
 :::: tabs
 
 ::: tab "List All"
-```
+```sh
 docker network ls 
 ```
 :::
 
 ::: tab "Create New"
 
-```
+```sh
 docker network create –-driver DRIVER_NAME name 
 # E.g
 docker network create –-driver bridge new_nw 
@@ -247,7 +243,7 @@ docker network create –-driver bridge new_nw
 :::
 
 ::: tab Connect
-```
+```sh
 docker network connect <NetworkName>  <container-name>
 # E.g
 docker network connect my_network my_container
@@ -255,7 +251,7 @@ docker network connect my_network my_container
 :::
 
 ::: tab Inspect
-```
+```sh
 docker network inspect <NetworkName> 
 ```
 :::
@@ -266,17 +262,17 @@ docker network inspect <NetworkName>
 ### Other
 
 **Info** 
-```
+```sh
 docker info
 docker -v
 ```
 
 **Help**
-```
+```sh
 docker image --help
 ```
 
 **Search**
-```
+```sh
 docker search <keyword>
 ```

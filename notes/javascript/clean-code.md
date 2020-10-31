@@ -1,6 +1,6 @@
 # Clean Code
 
-[Original resource]()
+[Original Resource](https://github.com/ryanmcdermott/clean-code-javascript)
 
 [[toc]]
 
@@ -132,8 +132,9 @@ saveCityZipCode(city, zipCode);
 
 Explicit is better than implicit.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
 locations.forEach(l => {
@@ -146,9 +147,9 @@ locations.forEach(l => {
   dispatch(l);
 });
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 const locations = ["Austin", "New York", "San Francisco"];
 locations.forEach(location => {
@@ -160,16 +161,18 @@ locations.forEach(location => {
   dispatch(location);
 });
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Don't add unneeded context
 
 If your class/object name tells you something, don't repeat that in your
 variable name.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const Car = {
   carMake: "Honda",
@@ -181,9 +184,9 @@ function paintCar(car) {
   car.carColor = "Red";
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 const Car = {
   make: "Honda",
@@ -195,8 +198,8 @@ function paintCar(car) {
   car.color = "Red";
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Use default arguments instead of short circuiting or conditionals
 
@@ -205,24 +208,25 @@ use them, your function will only provide default values for `undefined`
 arguments. Other "falsy" values such as `''`, `""`, `false`, `null`, `0`, and
 `NaN`, will not be replaced by a default value.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function createMicrobrewery(name) {
   const breweryName = name || "Hipster Brew Co.";
   // ...
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function createMicrobrewery(name = "Hipster Brew Co.") {
   // ...
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ## **Functions**
 
@@ -256,19 +260,19 @@ destructuring syntax. This has a few advantages:
 4. Linters can warn you about unused properties, which would be impossible
    without destructuring.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function createMenu(title, body, buttonText, cancellable) {
   // ...
 }
 
 createMenu("Foo", "Bar", "Baz", true);
-
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function createMenu({ title, body, buttonText, cancellable }) {
   // ...
@@ -281,8 +285,9 @@ createMenu({
   cancellable: true
 });
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Functions should do one thing
 
@@ -292,8 +297,9 @@ When you can isolate a function to just one action, it can be refactored
 easily and your code will read much cleaner. If you take nothing else away from
 this guide other than this, you'll be ahead of many developers.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function emailClients(clients) {
   clients.forEach(client => {
@@ -304,9 +310,9 @@ function emailClients(clients) {
   });
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function emailActiveClients(clients) {
   clients.filter(isActiveClient).forEach(email);
@@ -317,13 +323,14 @@ function isActiveClient(client) {
   return clientRecord.isActive();
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Function names should say what they do
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function addToDate(date, month) {
   // ...
@@ -334,9 +341,9 @@ const date = new Date();
 // It's hard to tell from the function name what is added
 addToDate(date, 1);
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function addMonthToDate(month, date) {
   // ...
@@ -345,8 +352,8 @@ function addMonthToDate(month, date) {
 const date = new Date();
 addMonthToDate(1, date);
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Functions should only be one level of abstraction
 
@@ -354,8 +361,9 @@ When you have more than one level of abstraction your function is usually
 doing too much. Splitting up functions leads to reusability and easier
 testing.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function parseBetterJSAlternative(code) {
   const REGEXES = [
@@ -380,9 +388,9 @@ function parseBetterJSAlternative(code) {
   });
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function parseBetterJSAlternative(code) {
   const tokens = tokenize(code);
@@ -417,8 +425,8 @@ function parse(tokens) {
   return syntaxTree;
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Remove duplicate code
 
@@ -443,8 +451,9 @@ worse than duplicate code, so be careful! Having said this, if you can make
 a good abstraction, do it! Don't repeat yourself, otherwise you'll find yourself
 updating multiple places anytime you want to change one thing.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function showDeveloperList(developers) {
   developers.forEach(developer => {
@@ -476,9 +485,9 @@ function showManagerList(managers) {
   });
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function showEmployeeList(employees) {
   employees.forEach(employee => {
@@ -503,13 +512,14 @@ function showEmployeeList(employees) {
   });
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Set default objects with Object.assign
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const menuConfig = {
   title: null,
@@ -522,15 +532,16 @@ function createMenu(config) {
   config.title = config.title || "Foo";
   config.body = config.body || "Bar";
   config.buttonText = config.buttonText || "Baz";
-  config.cancellable =
-    config.cancellable !== undefined ? config.cancellable : true;
+  config.cancellable = config.cancellable !== undefined 
+                        ? config.cancellable 
+                        : true;
 }
 
 createMenu(menuConfig);
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 const menuConfig = {
   title: "Order",
@@ -556,15 +567,17 @@ function createMenu(config) {
 
 createMenu(menuConfig);
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Don't use flags as function parameters
 
 Flags tell your user that this function does more than one thing. Functions should do one thing. Split out your functions if they are following different code paths based on a boolean.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function createFile(name, temp) {
   if (temp) {
@@ -574,9 +587,9 @@ function createFile(name, temp) {
   }
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function createFile(name) {
   fs.create(name);
@@ -586,8 +599,8 @@ function createTempFile(name) {
   createFile(`./temp/${name}`);
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Avoid Side Effects (part 1)
 
@@ -606,8 +619,9 @@ without any structure, using mutable data types that can be written to by anythi
 and not centralizing where your side effects occur. If you can do this, you will
 be happier than the vast majority of other programmers.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 // Global variable referenced by following function.
 // If we had another function that used this name, now it'd be an array and it could break it.
@@ -621,9 +635,9 @@ splitIntoFirstAndLastName();
 
 console.log(name); // ['Ryan', 'McDermott'];
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function splitIntoFirstAndLastName(name) {
   return name.split(" ");
@@ -635,8 +649,8 @@ const newName = splitIntoFirstAndLastName(name);
 console.log(name); // 'Ryan McDermott';
 console.log(newName); // ['Ryan', 'McDermott'];
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Avoid Side Effects (part 2)
 
@@ -676,23 +690,24 @@ Two caveats to mention to this approach:
    this kind of programming approach to be fast and not as memory intensive as
    it would be for you to manually clone objects and arrays.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const addItemToCart = (cart, item) => {
   cart.push({ item, date: Date.now() });
 };
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 const addItemToCart = (cart, item) => {
   return [...cart, { item, date: Date.now() }];
 };
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Don't write to global functions
 
@@ -706,17 +721,18 @@ to do the same thing. What if that other library was just using `diff` to find
 the difference between the first and last elements of an array? This is why it
 would be much better to just use ES2015/ES6 classes and simply extend the `Array` global.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 Array.prototype.diff = function diff(comparisonArray) {
   const hash = new Set(comparisonArray);
   return this.filter(elem => !hash.has(elem));
 };
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class SuperArray extends Array {
   diff(comparisonArray) {
@@ -725,8 +741,8 @@ class SuperArray extends Array {
   }
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Favor functional programming over imperative programming
 
@@ -734,8 +750,9 @@ JavaScript isn't a functional language in the way that Haskell is, but it has
 a functional flavor to it. Functional languages can be cleaner and easier to test.
 Favor this style of programming when you can.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const programmerOutput = [
   {
@@ -762,9 +779,9 @@ for (let i = 0; i < programmerOutput.length; i++) {
   totalOutput += programmerOutput[i].linesOfCode;
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 const programmerOutput = [
   {
@@ -790,21 +807,22 @@ const totalOutput = programmerOutput.reduce(
   0
 );
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Encapsulate conditionals
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 if (fsm.state === "fetching" && isEmpty(listNode)) {
   // ...
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function shouldShowSpinner(fsm, listNode) {
   return fsm.state === "fetching" && isEmpty(listNode);
@@ -814,13 +832,14 @@ if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
   // ...
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Avoid negative conditionals
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function isDOMNodeNotPresent(node) {
   // ...
@@ -830,9 +849,9 @@ if (!isDOMNodeNotPresent(node)) {
   // ...
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function isDOMNodePresent(node) {
   // ...
@@ -842,8 +861,9 @@ if (isDOMNodePresent(node)) {
   // ...
 }
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Avoid conditionals
 
@@ -856,8 +876,9 @@ one thing. When you have classes and functions that have `if` statements, you
 are telling your user that your function does more than one thing. Remember,
 just do one thing.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class Airplane {
   // ...
@@ -873,9 +894,9 @@ class Airplane {
   }
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class Airplane {
   // ...
@@ -902,8 +923,8 @@ class Cessna extends Airplane {
   }
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Avoid type-checking (part 1)
 
@@ -912,8 +933,9 @@ Sometimes you are bitten by this freedom and it becomes tempting to do
 type-checking in your functions. There are many ways to avoid having to do this.
 The first thing to consider is consistent APIs.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function travelToTexas(vehicle) {
   if (vehicle instanceof Bicycle) {
@@ -923,16 +945,16 @@ function travelToTexas(vehicle) {
   }
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function travelToTexas(vehicle) {
   vehicle.move(this.currentLocation, new Location("texas"));
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Avoid type-checking (part 2)
 
@@ -946,8 +968,9 @@ doesn't make up for the lost readability. Keep your JavaScript clean, write
 good tests, and have good code reviews. Otherwise, do all of that but with
 TypeScript (which, like I said, is a great alternative!).
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function combine(val1, val2) {
   if (
@@ -960,16 +983,16 @@ function combine(val1, val2) {
   throw new Error("Must be of type String or Number");
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function combine(val1, val2) {
   return val1 + val2;
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Don't over-optimize
 
@@ -979,8 +1002,9 @@ resources](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers)
 for seeing where optimization is lacking. Target those in the meantime, until
 they are fixed if they can be.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 // On old browsers, each iteration with uncached `list.length` would be costly
 // because of `list.length` recomputation. In modern browsers, this is optimized.
@@ -988,16 +1012,17 @@ for (let i = 0, len = list.length; i < len; i++) {
   // ...
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 for (let i = 0; i < list.length; i++) {
   // ...
 }
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Remove dead code
 
@@ -1005,8 +1030,9 @@ Dead code is just as bad as duplicate code. There's no reason to keep it in
 your codebase. If it's not being called, get rid of it! It will still be safe
 in your version history if you still need it.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function oldRequestModule(url) {
   // ...
@@ -1019,9 +1045,9 @@ function newRequestModule(url) {
 const req = newRequestModule;
 inventoryTracker("apples", req, "www.inventory-awesome.io");
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function newRequestModule(url) {
   // ...
@@ -1030,8 +1056,8 @@ function newRequestModule(url) {
 const req = newRequestModule;
 inventoryTracker("apples", req, "www.inventory-awesome.io");
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ## **Objects and Data Structures**
 
@@ -1049,8 +1075,9 @@ unorganized list of reasons why:
 - You can lazy load your object's properties, let's say getting it from a
   server.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function makeBankAccount() {
   // ...
@@ -1064,8 +1091,9 @@ function makeBankAccount() {
 const account = makeBankAccount();
 account.balance = 100;
 ```
+:::
 
-**Good:**
+::: tab Good
 
 ```javascript
 function makeBankAccount() {
@@ -1093,15 +1121,16 @@ function makeBankAccount() {
 const account = makeBankAccount();
 account.setBalance(100);
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Make objects have private members
 
 This can be accomplished through closures (for ES5 and below).
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const Employee = function(name) {
   this.name = name;
@@ -1116,9 +1145,9 @@ console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 delete employee.name;
 console.log(`Employee name: ${employee.getName()}`); // Employee name: undefined
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function makeEmployee(name) {
   return {
@@ -1133,8 +1162,8 @@ console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 delete employee.name;
 console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ## **Classes**
 
@@ -1145,8 +1174,9 @@ definitions for classical ES5 classes. If you need inheritance (and be aware
 that you might not), then prefer ES2015/ES6 classes. However, prefer small functions over
 classes until you find yourself needing larger and more complex objects.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const Animal = function(age) {
   if (!(this instanceof Animal)) {
@@ -1184,9 +1214,9 @@ Human.prototype = Object.create(Mammal.prototype);
 Human.prototype.constructor = Human;
 Human.prototype.speak = function speak() {};
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class Animal {
   constructor(age) {
@@ -1220,8 +1250,8 @@ class Human extends Mammal {
   }
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Use method chaining
 
@@ -1231,8 +1261,9 @@ For that reason, I say, use method chaining and take a look at how clean your co
 will be. In your class functions, simply return `this` at the end of every function,
 and you can chain further class methods onto it.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class Car {
   constructor(make, model, color) {
@@ -1262,9 +1293,9 @@ const car = new Car("Ford", "F-150", "red");
 car.setColor("pink");
 car.save();
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class Car {
   constructor(make, model, color) {
@@ -1300,8 +1331,8 @@ class Car {
 
 const car = new Car("Ford", "F-150", "red").setColor("pink").save();
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Prefer composition over inheritance
 
@@ -1322,8 +1353,9 @@ makes more sense than composition:
 3. You want to make global changes to derived classes by changing a base class.
    (Change the caloric expenditure of all animals when they move).
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class Employee {
   constructor(name, email) {
@@ -1345,9 +1377,9 @@ class EmployeeTaxData extends Employee {
   // ...
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class EmployeeTaxData {
   constructor(ssn, salary) {
@@ -1370,8 +1402,8 @@ class Employee {
   // ...
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ## **SOLID**
 
@@ -1386,8 +1418,9 @@ It's important because if too much functionality is in one class and you modify
 a piece of it, it can be difficult to understand how that will affect other
 dependent modules in your codebase.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class UserSettings {
   constructor(user) {
@@ -1405,9 +1438,9 @@ class UserSettings {
   }
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class UserAuth {
   constructor(user) {
@@ -1432,8 +1465,8 @@ class UserSettings {
   }
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Open/Closed Principle (OCP)
 
@@ -1442,8 +1475,9 @@ etc.) should be open for extension, but closed for modification." What does that
 mean though? This principle basically states that you should allow users to
 add new functionalities without changing existing code.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class AjaxAdapter extends Adapter {
   constructor() {
@@ -1485,9 +1519,9 @@ function makeHttpCall(url) {
   // request and return promise
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class AjaxAdapter extends Adapter {
   constructor() {
@@ -1523,8 +1557,8 @@ class HttpRequester {
   }
 }
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Liskov Substitution Principle (LSP)
 
@@ -1541,8 +1575,9 @@ classic Square-Rectangle example. Mathematically, a square is a rectangle, but
 if you model it using the "is-a" relationship via inheritance, you quickly
 get into trouble.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class Rectangle {
   constructor() {
@@ -1595,9 +1630,9 @@ function renderLargeRectangles(rectangles) {
 const rectangles = [new Rectangle(), new Rectangle(), new Square()];
 renderLargeRectangles(rectangles);
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class Shape {
   setColor(color) {
@@ -1642,8 +1677,9 @@ function renderLargeShapes(shapes) {
 const shapes = [new Rectangle(4, 5), new Rectangle(4, 5), new Square(5)];
 renderLargeShapes(shapes);
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Interface Segregation Principle (ISP)
 
@@ -1661,8 +1697,9 @@ huge amounts of options is beneficial, because most of the time they won't need
 all of the settings. Making them optional helps prevent having a
 "fat interface".
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class DOMTraverser {
   constructor(settings) {
@@ -1686,9 +1723,9 @@ const $ = new DOMTraverser({
   // ...
 });
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class DOMTraverser {
   constructor(settings) {
@@ -1720,8 +1757,8 @@ const $ = new DOMTraverser({
   }
 });
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Dependency Inversion Principle (DIP)
 
@@ -1746,8 +1783,9 @@ and properties that an object/class exposes to another object/class. In the
 example below, the implicit contract is that any Request module for an
 `InventoryTracker` will have a `requestItems` method.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 class InventoryRequester {
   constructor() {
@@ -1778,9 +1816,9 @@ class InventoryTracker {
 const inventoryTracker = new InventoryTracker(["apples", "bananas"]);
 inventoryTracker.requestItems();
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class InventoryTracker {
   constructor(items, requester) {
@@ -1823,8 +1861,8 @@ const inventoryTracker = new InventoryTracker(
 );
 inventoryTracker.requestItems();
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ## **Testing**
 
@@ -1845,8 +1883,9 @@ or refactoring an existing one.
 
 ### Single concept per test
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 import assert from "assert";
 
@@ -1868,9 +1907,9 @@ describe("MomentJS", () => {
   });
 });
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 import assert from "assert";
 
@@ -1894,8 +1933,8 @@ describe("MomentJS", () => {
   });
 });
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ## **Concurrency**
 
@@ -1904,8 +1943,9 @@ describe("MomentJS", () => {
 Callbacks aren't clean, and they cause excessive amounts of nesting. With ES2015/ES6,
 Promises are a built-in global type. Use them!
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 import { get } from "request";
 import { writeFile } from "fs";
@@ -1927,9 +1967,9 @@ get(
   }
 );
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 import { get } from "request-promise";
 import { writeFile } from "fs-extra";
@@ -1945,8 +1985,8 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
     console.error(err);
   });
 ```
-
-**[⬆ back to top](#table-of-contents)**
+:::
+::::
 
 ### Async/Await are even cleaner than Promises
 
@@ -1956,8 +1996,9 @@ in an `async` keyword, and then you can write your logic imperatively without
 a `then` chain of functions. Use this if you can take advantage of ES2017/ES8 features
 today!
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 import { get } from "request-promise";
 import { writeFile } from "fs-extra";
@@ -1973,9 +2014,9 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
     console.error(err);
   });
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 import { get } from "request-promise";
 import { writeFile } from "fs-extra";
@@ -1994,8 +2035,9 @@ async function getCleanCodeArticle() {
 
 getCleanCodeArticle()
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ## **Error Handling**
 
@@ -2013,8 +2055,9 @@ to the console. If you wrap any bit of code in a `try/catch` it means you
 think an error may occur there and therefore you should have a plan,
 or create a code path, for when it occurs.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 try {
   functionThatMightThrow();
@@ -2022,9 +2065,9 @@ try {
   console.log(error);
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 try {
   functionThatMightThrow();
@@ -2038,14 +2081,18 @@ try {
   // OR do all three!
 }
 ```
+:::
+::::
+
 
 ### Don't ignore rejected promises
 
 For the same reason you shouldn't ignore caught errors
 from `try/catch`.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 getdata()
   .then(data => {
@@ -2055,9 +2102,9 @@ getdata()
     console.log(error);
   });
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 getdata()
   .then(data => {
@@ -2073,8 +2120,9 @@ getdata()
     // OR do all three!
   });
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ## **Formatting**
 
@@ -2093,8 +2141,9 @@ JavaScript is untyped, so capitalization tells you a lot about your variables,
 functions, etc. These rules are subjective, so your team can choose whatever
 they want. The point is, no matter what you all choose, just be consistent.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 const DAYS_IN_WEEK = 7;
 const daysInMonth = 30;
@@ -2108,9 +2157,9 @@ function restore_database() {}
 class animal {}
 class Alpaca {}
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 const DAYS_IN_WEEK = 7;
 const DAYS_IN_MONTH = 30;
@@ -2124,8 +2173,9 @@ function restoreDatabase() {}
 class Animal {}
 class Alpaca {}
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Function callers and callees should be close
 
@@ -2133,8 +2183,10 @@ If a function calls another, keep those functions vertically close in the source
 file. Ideally, keep the caller right above the callee. We tend to read code from
 top-to-bottom, like a newspaper. Because of this, make your code read that way.
 
-**Bad:**
 
+:::: tabs
+
+::: tab Bad
 ```javascript
 class PerformanceReview {
   constructor(employee) {
@@ -2172,9 +2224,9 @@ class PerformanceReview {
 const review = new PerformanceReview(employee);
 review.perfReview();
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 class PerformanceReview {
   constructor(employee) {
@@ -2212,8 +2264,9 @@ class PerformanceReview {
 const review = new PerformanceReview(employee);
 review.perfReview();
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ## **Comments**
 
@@ -2221,8 +2274,9 @@ review.perfReview();
 
 Comments are an apology, not a requirement. Good code _mostly_ documents itself.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 function hashIt(data) {
   // The hash
@@ -2242,9 +2296,9 @@ function hashIt(data) {
   }
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function hashIt(data) {
   let hash = 0;
@@ -2259,37 +2313,41 @@ function hashIt(data) {
   }
 }
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Don't leave commented out code in your codebase
 
 Version control exists for a reason. Leave old code in your history.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 doStuff();
 // doOtherStuff();
 // doSomeMoreStuff();
 // doSoMuchStuff();
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 doStuff();
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Don't have journal comments
 
 Remember, use version control! There's no need for dead code, commented code,
 and especially journal comments. Use `git log` to get history!
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 /**
  * 2016-12-20: Removed monads, didn't understand them (RM)
@@ -2301,24 +2359,26 @@ function combine(a, b) {
   return a + b;
 }
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 function combine(a, b) {
   return a + b;
 }
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
 
 ### Avoid positional markers
 
 They usually just add noise. Let the functions and variable names along with the
 proper indentation and formatting give the visual structure to your code.
 
-**Bad:**
+:::: tabs
 
+::: tab Bad
 ```javascript
 ////////////////////////////////////////////////////////////////////////////////
 // Scope Model Instantiation
@@ -2335,9 +2395,9 @@ const actions = function() {
   // ...
 };
 ```
+:::
 
-**Good:**
-
+::: tab Good
 ```javascript
 $scope.model = {
   menu: "foo",
@@ -2348,34 +2408,6 @@ const actions = function() {
   // ...
 };
 ```
+:::
+::::
 
-**[⬆ back to top](#table-of-contents)**
-
-## Translation
-
-This is also available in other languages:
-
-- ![am](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Armenia.png) **Armenian**: [hanumanum/clean-code-javascript/](https://github.com/hanumanum/clean-code-javascript)
-- ![bd](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Bangladesh.png) **Bangla(বাংলা)**: [InsomniacSabbir/clean-code-javascript/](https://github.com/InsomniacSabbir/clean-code-javascript/)
-- ![br](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Brazil.png) **Brazilian Portuguese**: [fesnt/clean-code-javascript](https://github.com/fesnt/clean-code-javascript)
-- ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Simplified Chinese**:
-  - [alivebao/clean-code-js](https://github.com/alivebao/clean-code-js)
-  - [beginor/clean-code-javascript](https://github.com/beginor/clean-code-javascript)
-- ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **Traditional Chinese**: [AllJointTW/clean-code-javascript](https://github.com/AllJointTW/clean-code-javascript)
-- ![fr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/France.png) **French**: [GavBaros/clean-code-javascript-fr](https://github.com/GavBaros/clean-code-javascript-fr)
-- ![de](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Germany.png) **German**: [marcbruederlin/clean-code-javascript](https://github.com/marcbruederlin/clean-code-javascript)
-- ![id](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Indonesia.png) **Indonesia**: [andirkh/clean-code-javascript/](https://github.com/andirkh/clean-code-javascript/)
-- ![it](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Italy.png) **Italian**: [frappacchio/clean-code-javascript/](https://github.com/frappacchio/clean-code-javascript/)
-- ![ja](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Japan.png) **Japanese**: [mitsuruog/clean-code-javascript/](https://github.com/mitsuruog/clean-code-javascript/)
-- ![kr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/South-Korea.png) **Korean**: [qkraudghgh/clean-code-javascript-ko](https://github.com/qkraudghgh/clean-code-javascript-ko)
-- ![pl](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Poland.png) **Polish**: [greg-dev/clean-code-javascript-pl](https://github.com/greg-dev/clean-code-javascript-pl)
-- ![ru](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Russia.png) **Russian**:
-  - [BoryaMogila/clean-code-javascript-ru/](https://github.com/BoryaMogila/clean-code-javascript-ru/)
-  - [maksugr/clean-code-javascript](https://github.com/maksugr/clean-code-javascript)
-- ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Spain.png) **Spanish**: [tureey/clean-code-javascript](https://github.com/tureey/clean-code-javascript)
-- ![es](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Uruguay.png) **Spanish**: [andersontr15/clean-code-javascript](https://github.com/andersontr15/clean-code-javascript-es)
-- ![tr](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Turkey.png) **Turkish**: [bsonmez/clean-code-javascript](https://github.com/bsonmez/clean-code-javascript/tree/turkish-translation)
-- ![ua](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Ukraine.png) **Ukrainian**: [mindfr1k/clean-code-javascript-ua](https://github.com/mindfr1k/clean-code-javascript-ua)
-- ![vi](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Vietnam.png) **Vietnamese**: [hienvd/clean-code-javascript/](https://github.com/hienvd/clean-code-javascript/)
-
-**[⬆ back to top](#table-of-contents)**
