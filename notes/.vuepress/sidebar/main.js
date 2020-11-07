@@ -38,6 +38,7 @@ module.exports = [
         '/tools/vscode',
         '/tools/redis',
         '/tools/docker',
+        '/tools/go',
       ]
     },
     {

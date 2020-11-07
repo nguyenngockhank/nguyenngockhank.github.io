@@ -131,3 +131,11 @@ Sau khi chạy xong câu lệnh trên đó thì, ở bất cứ folder nào cũn
 
 
 ## CÓ GÌ MỚI THÌ UPDATE SAU ... AHIHI
+
+### Upgrade Package
+
+```sh
+npm install package@next
+# E.g:
+npm install webpack@next --dev
+```
