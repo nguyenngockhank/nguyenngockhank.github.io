@@ -1,3 +1,8 @@
+const everyprogrammers = [];
+for(let i = 0; i <= 97; ++i) {
+  everyprogrammers.push(`/common/97things4dev/${i}`)
+}
+
 module.exports = [
     {
       title: 'Chuyện muôn thuở',
@@ -11,6 +16,10 @@ module.exports = [
         '/common/refactor-catalog',
         '/common/restful',
         '/common/document',
+        {
+          title: '97 Things Every Programmer Should Know',
+          children: everyprogrammers
+        }
       ],
     },
     {
@@ -50,7 +59,6 @@ module.exports = [
         '/terms/ddd',
         '/terms/concurrent',
         '/terms/principles',
-        '/terms/97things4dev',
       ]
     },
     {
