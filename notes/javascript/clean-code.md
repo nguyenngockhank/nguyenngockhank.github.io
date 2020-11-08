@@ -2,8 +2,6 @@
 
 [Original Resource](https://github.com/ryanmcdermott/clean-code-javascript)
 
-[[toc]]
-
 ## Introduction
 
 ![Humorous image of software quality estimation as a count of how many expletives

@@ -1,39 +1,37 @@
 # Git
-[[toc]]
-
 
 ## Branch
 
 :::: tabs
 
 ::: tab Current
-```
+```sh
 git branch
 ```
 :::
 
 ::: tab Create new
 (same head current branch)
-```
+```sh
 git checkout -b <<<new_branch_name>>>
 ```
 :::
 
 
 ::: tab Rename
-```
+```sh
 git branch -m <<<new_branch_name>>>
 ```
 :::
 
 ::: tab Delete
 At local 
-```
+```sh
 git branch -D <<<branch_name>>>
 ```
 
 At server
-```
+```sh
 git push <<<remote_name>>> <<<branch_name>>> --delete
 ```
 :::
@@ -47,29 +45,28 @@ git push <<<remote_name>>> <<<branch_name>>> --delete
 :::: tabs
 
 ::: tab "List All"
-```
+```sh
 git remote -v
 ```
 :::
 
 ::: tab Add
-```
+```sh
 git remote add <<<remote_name>>> <<<remote_link>>>
 ```
 :::
 
 
 ::: tab Update
-```
+```sh
 git remote set-url <<<remote_name>>> <<<new_remote_link>>>
 # E.g: 
 git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 ```
 :::
 
-
 ::: tab Remove
-```
+```sh
 git remote rm <<<remote_name>>>
 ```
 :::
@@ -82,26 +79,26 @@ git remote rm <<<remote_name>>>
 :::: tabs
 
 ::: tab "Cherry pick"
-```
+```sh
 git cherry-pick <<<commit_hash>>>
 ```
 :::
 
 ::: tab "Override last"
-```
+```sh
 git commit --amend -m "Message"
 ```
 :::
 
 
 ::: tab "Combine commits"
-```
+```sh
 git rebase -i HEAD~3
 ```
 :::
 
-::: tab "Get last updated timestamp"
-```
+::: tab "Last-Updated timestamp"
+```sh
 git log -1 --format=%at README.md
 ```
 

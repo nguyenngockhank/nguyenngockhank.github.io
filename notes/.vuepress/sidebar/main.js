@@ -38,12 +38,11 @@ module.exports = [
         '/tools/vscode',
         '/tools/redis',
         '/tools/docker',
-        '/tools/go',
       ]
     },
     {
       title: "Thuật ngữ",
-      sidebarDepth: 2,
+      sidebarDepth: 1,
       children: [
         '/terms/javascript',
         '/terms/oop',
@@ -108,6 +107,25 @@ module.exports = [
         '/php/wordpress',
         '/php/crunz',
         '/php/phpdoc',
+      ]
+    },
+    {
+      title: 'Go',
+      children: [
+        {
+          title: 'The little Go Book',
+          children: [
+            '/go/the-little-go/intro',
+            '/go/the-little-go/c1',
+            '/go/the-little-go/c2',
+            '/go/the-little-go/c3',
+            '/go/the-little-go/c4',
+            '/go/the-little-go/c5',
+            '/go/the-little-go/c6',
+            '/go/the-little-go/end',
+          ]
+        }
+        
       ]
     },
     {

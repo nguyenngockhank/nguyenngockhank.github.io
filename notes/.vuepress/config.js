@@ -98,7 +98,21 @@ module.exports = {
     ['@vuepress/google-analytics', {
       ga: 'UA-148742356-1'
     }],
-
-   
+    [
+      'vuepress-plugin-right-anchor',
+      {
+        showDepth: 1,
+        ignore: [
+          '/',
+          // more...
+        ],
+        expand: {
+          default: true,
+          trigger: 'hover'
+        },
+        customClass: 'right-anchor-wrapper',
+        disableGlobalUI: false,
+      }
+    ],
   ],
 }

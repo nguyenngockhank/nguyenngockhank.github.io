@@ -22,3 +22,21 @@ blockquote
 blockquote.highlight-quote
   &>p
     color black
+
+.theme-default-content 
+  code
+    color #429cfb;
+
+.theme-default-content:not(.custom) 
+  margin-left: 0;
+  padding: 2rem 2.5rem;
+
+.right-anchor-wrapper
+  max-height 85vh!important
+  .ra-menu-item
+    max-width 250px!important
+    
+
+@media (max-width: 769px)
+  .right-anchor-wrapper
+    display none!important

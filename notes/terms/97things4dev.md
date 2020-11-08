@@ -2,8 +2,6 @@
 
 Được dịch bởi [CoderX](https://coders-x.com/97-dieu-moi-lap-trinh-vien-nen-biet-phan-1/)
 
-[[toc]]
-
 ## 1. ✅ Hành động một cách thận trọng (Act with Prudence)
 
 ::: quote
