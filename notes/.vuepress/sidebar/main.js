@@ -59,6 +59,7 @@ module.exports = [
         '/terms/ddd',
         '/terms/concurrent',
         '/terms/principles',
+        '/terms/12factors',
       ]
     },
     {
