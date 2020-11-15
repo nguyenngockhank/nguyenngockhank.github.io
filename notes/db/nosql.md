@@ -29,7 +29,7 @@ Some characteristics are common amongst these databases, but none are definition
 - Key-value
 - Graph
 
-### Aggregate Data Model
+## Aggregate Data Model
 
 An aggregate is a collection of data that we interact with as a unit. Aggregates form the boundaries for ACID operations with the database.
 
@@ -38,6 +38,21 @@ Key-value, document, and column-family databases can all be seen as forms of agg
 Aggregates make it easier for the database to manage data storage over clusters.
 
 Aggregate-oriented databases **work best when most data interaction is done with the same aggregate**; aggregate-ignorant databases are better when interactions use data organized in many different formations.
+
+## Distribution Models
+
+There are two styles of distributing data:
+- **Sharding distributes** different data across multiple servers, so each server acts as the single source for a subset of data.
+- **Replication** copies data across multiple servers, so each bit of data can be found in multiple places.
+
+A system may use either or both techniques.
+
+Replication comes in two forms:
+- **Master-slave replication** makes one node the authoritative copy that handles writes while slaves synchronize with the master and may handle reads.
+- **Peer-to-peer replication** allows writes to any node; the nodes coordinate to synchronize their copies of the data.
+
+Master-slave replication reduces the chance of update conflicts but peer-to-peer replication avoids loading all writes onto a single point of failure.
+
 
 ## Polygot Persistence
 
@@ -50,6 +65,19 @@ Polyglot persistence can apply across an enterprise or within a single applicati
 Encapsulating data access into services reduces the impact of data storage choices on other parts of a system.
 
 Adding more data storage technologies increases complexity in programming and operations, so the advantages of a good data storage fit need to be weighed against this complexity.
+
+
+
+## Row oriented vs. Column oriented
+
+| Row oriented DB | Column oriented DB |
+| :-------------- | :----------------- |
+| stored and retrieved one row at a time and hence could read unnecessary data if some of the data in a row are required. | stored and retrieve in columns and hence it can only able to read only the relevant data if required. |
+| Records are easy to read and write. | Read and write operations are slower as compared to row-oriented. |
+| best suited for **online transaction system**. | best suited for **online analytical processing**. |
+| These are not efficient in performing operations applicable to the entire datasets and hence aggregation in row-oriented is an expensive job or operations. | These are efficient in performing operations applicable to the entire dataset and hence enables aggregation over many rows and columns. |
+| Typical compression mechanisms which provide less efficient result than what we achieve from column-oriented data stores. | These type of data stores basically permits high compression rates due to little distinct or unique values in columns. | 
+
 
 
 ## Sql vs. NoSql
