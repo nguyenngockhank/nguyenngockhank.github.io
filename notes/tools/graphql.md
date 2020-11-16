@@ -105,6 +105,17 @@ fragment peopleFields on Person {
 
 Note: could use *@skip* instead of *@include*
 
+## Mutations
+
+```graphql
+mutation {
+   updateUser( id: "1", data: {name: "Ban Admin"}) {
+    id
+    name
+  }
+}
+```
+
 ## References 
 
 - [GraphQL Tutorial](https://www.tutorialspoint.com/graphql/index.htm)
