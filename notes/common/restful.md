@@ -28,6 +28,51 @@ REST is easier to archive than SOAP.
 
 `HEAD`, `GET`, `OPTIONS` and `TRACE` have no side effects on server
 
+## Richardson Maturity Model
+
+Richardson Maturity Model is a measure of how RESTful an API definition is. It defines 4 levels
+
+### **Level 0 😱 - swamp of BOX**: 
+- has 1 entry point (URI) and 1 method (POST)
+- all APIs would be POST to an URL.
+
+### **Level 1 😜 - resources**:
+- uses differents URLs to distinguish API resources 
+- be still typically only one me method (POST) of interaction
+
+### **Level 2 😍 - HTTP Verbs**:
+- uses proptocol properties (HTTP verbs) to define nature of the API
+- uses GET for a read, POST for a write, PUT for updating, DELETE ...
+- uses standard responses code (`200 OK`, `202 ACCEPTED`) to describe the result
+- most REST API implementations are at this level
+
+### **Level 3 🤘 - hypermedia controls**:
+- the most RESTful API - uses **Hypertext As The Engine Of Application State** (HATEOAS) to allow clients to deal with discovering the resources and the identifiers.
+
+*Example*: we have a request  `GET /hotels/xyz` and the response looks like:
+
+```json
+{
+    "city": "Saigon",
+    "display_name": "New World",
+    "star_rating": 4,
+    "links": [
+        {
+            "href": "xyz/book",
+            "rel": "book",
+            "type": "POST"
+        },
+        {
+            "href": "xyz/rooms",
+            "rel": "rooms",
+            "type": "GET"
+        }
+    ]
+}
+```
+
+Thus, the client can discover the related API and do the operations.
+
 ## Quick Tips
 
 ### Wrapped Response
