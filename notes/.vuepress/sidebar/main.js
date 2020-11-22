@@ -86,6 +86,13 @@ module.exports = [
         '/snippets/firebase',
         '/javascript/clean-code',
         {
+          title: 'Typescript',
+          children: [
+            'javascript/typescript/syntax',
+            'javascript/typescript/types'
+          ],
+        },
+        {
           title: 'Snippets',
           children: [
             '/snippets/event_storage',
