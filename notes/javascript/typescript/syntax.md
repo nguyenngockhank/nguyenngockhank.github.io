@@ -291,3 +291,14 @@ function enumerable(value) {
     };
 }
 ```
+
+### with Json
+
+```ts
+interface MyObj {
+    myString: string;
+    myNumber: number;
+}
+
+let obj: MyObj = JSON.parse('{ "myString": "string", "myNumber": 4 }');
+```
