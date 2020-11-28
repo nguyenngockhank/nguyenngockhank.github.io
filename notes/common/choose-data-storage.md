@@ -35,3 +35,9 @@ Here are few use cases when we should use Redis:
 - **Distributed lists**: some things could be *top 100 newest list*, *top 100 hottest list*,... 
 - **Keep stats**: works with counters
 - **Queues and Pub/Sub**: Redis queues and pub/sub channels can use to exchange massages, enabling features such as background workers.
+
+## Cassandra
+Cassandra is a distributed database designed to provide extremely **high levels of availability** and **virtually unlimited scalability**.
+- Messaging - many companies use Cassandra for Messaging. More: [Why Discord Moved from MongoDB to Apache Cassandra](https://www.youtube.com/watch?v=86olupkuLlU&ab_channel=HusseinNasser)
+- Internet of things
+- Social Media Analytics and Recommendation Engine

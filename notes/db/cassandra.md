@@ -12,3 +12,8 @@ Có thể thực hiện được 1 số câu query như select, update, insert, 
 - Tính chịu lỗi khá cao, cho dù node bị chết đi chăng nữa thì khi truy vấn sẽ được chuyển hướng đến node khác.
 - Backup, restore dữ liệu 1 cách đơn giản.
 - Tốc độ truy vấn cao
+
+
+## Refs
+
+- [Distributed Database Things to Know: Cassandra Datacenter & Racks](https://www.datastax.com/blog/distributed-database-things-know-cassandra-datacenter-racks)
