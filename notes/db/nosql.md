@@ -53,21 +53,6 @@ Replication comes in two forms:
 
 Master-slave replication reduces the chance of update conflicts but peer-to-peer replication avoids loading all writes onto a single point of failure.
 
-
-## Polygot Persistence
-
-![Polygot Database](./img/polyglot.png)
-
-Polyglot persistence is about using different data storage technologies to handle varying data storage needs.
-
-Polyglot persistence can apply across an enterprise or within a single application.
-
-Encapsulating data access into services reduces the impact of data storage choices on other parts of a system.
-
-Adding more data storage technologies increases complexity in programming and operations, so the advantages of a good data storage fit need to be weighed against this complexity.
-
-
-
 ## Row oriented vs. Column oriented
 
 | Row oriented DB | Column oriented DB |

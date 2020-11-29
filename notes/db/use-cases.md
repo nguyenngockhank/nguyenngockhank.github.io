@@ -2,6 +2,20 @@
 
 There is no super storage for all cases. Here is a few of my notes about it:
 
+## Polygot Persistence
+
+![Polygot Database](./img/polyglot.png)
+
+Polyglot persistence is about using different data storage technologies to handle varying data storage needs.
+
+Polyglot persistence can apply across an enterprise or within a single application.
+
+Encapsulating data access into services reduces the impact of data storage choices on other parts of a system.
+
+Adding more data storage technologies increases complexity in programming and operations, so the advantages of a good data storage fit need to be weighed against this complexity.
+
+
+
 ## MySql
 A unique design characteristic of MySQL is the seperation of query processing and other server tasks from storage engine. This seperation of concerns let you to trade of various features without changing your data model
 
@@ -31,6 +45,8 @@ A unique design characteristic of MySQL is the seperation of query processing an
 ## Redis
 Here are few use cases when we should use Redis:
 - **Session cache**: stores as hashes. Because user sessions generally have a lot of I/O.
+- **User Profiles, Preferences**
+- **Shopping Cart Data**
 - **Application cache**: few data applications store/access frequently or rarely change.
 - **Distributed lists**: some things could be *top 100 newest list*, *top 100 hottest list*,... 
 - **Keep stats**: works with counters
@@ -41,3 +57,11 @@ Cassandra is a distributed database designed to provide extremely **high levels 
 - Messaging - many companies use Cassandra for Messaging. More: [Why Discord Moved from MongoDB to Apache Cassandra](https://www.youtube.com/watch?v=86olupkuLlU&ab_channel=HusseinNasser)
 - Internet of things
 - Social Media Analytics and Recommendation Engine
+
+## Neo4j
+
+- Connected Data
+- Routing, Dispatch, and location-based services
+- Recommendation Engines
+
+
