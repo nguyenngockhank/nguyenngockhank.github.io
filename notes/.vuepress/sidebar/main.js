@@ -66,6 +66,7 @@ module.exports = [
       title: "Database",
       children: [
         '/db/architect',
+        '/db/use-cases',
         '/db/optimize',
         '/db/mysql_snippets',
         '/db/postgre',
