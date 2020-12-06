@@ -28,28 +28,6 @@ module.exports = [
                     '/db/pinterest_shard',
                 ]
             },
-            {
-                title: 'NoSql Distilled',
-                children: [
-                    'nosql-distilled/00',
-                    'nosql-distilled/c0',
-                    'nosql-distilled/c1',
-                    'nosql-distilled/c2',
-                    'nosql-distilled/c3',
-                    'nosql-distilled/c4',
-                    'nosql-distilled/c5',
-                    'nosql-distilled/c6',
-                    'nosql-distilled/c7',
-                    'nosql-distilled/c8',
-                    'nosql-distilled/c9',
-                    'nosql-distilled/c10',
-                    'nosql-distilled/c11',
-                    'nosql-distilled/c12',
-                    'nosql-distilled/c13',
-                    'nosql-distilled/c14',
-                    'nosql-distilled/c15',
-                ]
-            }
         ]
     },
 ]
