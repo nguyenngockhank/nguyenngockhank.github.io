@@ -63,9 +63,9 @@ Master-slave replication reduces the chance of update conflicts but peer-to-peer
 | These are not efficient in performing operations applicable to the entire datasets and hence aggregation in row-oriented is an expensive job or operations. | These are efficient in performing operations applicable to the entire dataset and hence enables aggregation over many rows and columns. |
 | Typical compression mechanisms which provide less efficient result than what we achieve from column-oriented data stores. | These type of data stores basically permits high compression rates due to little distinct or unique values in columns. | 
 
+## Comparison
 
-
-## Sql vs. NoSql
+### Sql vs. NoSql
 ![SQL vs NoSQL](./img/sql-nosql.png)
 
 <!-- ![SQL vs NoSQL](./img/sql-nosql-compare.png) -->
@@ -93,8 +93,17 @@ Master-slave replication reduces the chance of update conflicts but peer-to-peer
 - **ACID**: Atomicity, Consistency, Isolation and Durability
 - **CAP**: Consistency, Availability and Partition tolerance 
 
+### Oracle vs. Riak DB
 
+![Oracle vs. Key-Value Database](../kungfu/nosql-distilled/img/image--033.jpg)
 
+### Oracle vs. MongoDB
+
+![Oracle vs. MongoDB](../kungfu/nosql-distilled/img/image--036.jpg)
+
+### RDBMS vs. Cassandra
+
+![RDBMS vs. Cassandra](../kungfu/nosql-distilled/img/image--040.jpg)
 
 ## References 
 
