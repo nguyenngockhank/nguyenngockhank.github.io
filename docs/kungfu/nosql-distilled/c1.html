@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chapter 1. Why NoSQL? | Nguyễn Khánk&#39;s Wiki</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../public/favicons/manifest.json">
+    <link rel="mask-icon" href="../public/favicons/safari-pinned-tab.svg" color="#3a0839">
+    <link rel="shortcut icon" href="../public/favicons/favicon.ico">
+    <meta name="description" content="Wikipedia của tui">
+    <meta name="msapplication-TileColor" content="#3a0839">
+    <meta name="msapplication-config" content="../public/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.5d974432.css" as="style"><link rel="preload" href="/docs/assets/js/app.cfeb973c.js" as="script"><link rel="preload" href="/docs/assets/js/2.f326a5a1.js" as="script"><link rel="preload" href="/docs/assets/js/47.f67d726f.js" as="script"><link rel="preload" href="/docs/assets/js/24.55a1e86e.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.26061223.js"><link rel="prefetch" href="/docs/assets/js/100.98d61af1.js"><link rel="prefetch" href="/docs/assets/js/101.467adbe0.js"><link rel="prefetch" href="/docs/assets/js/102.e3c324e4.js"><link rel="prefetch" href="/docs/assets/js/103.ef60821d.js"><link rel="prefetch" href="/docs/assets/js/104.6430587c.js"><link rel="prefetch" href="/docs/assets/js/105.5ba00055.js"><link rel="prefetch" href="/docs/assets/js/106.3b8fac3d.js"><link rel="prefetch" href="/docs/assets/js/107.0fc73763.js"><link rel="prefetch" href="/docs/assets/js/108.967d0626.js"><link rel="prefetch" href="/docs/assets/js/109.1971c566.js"><link rel="prefetch" href="/docs/assets/js/11.77deee8b.js"><link rel="prefetch" href="/docs/assets/js/110.f9e049ca.js"><link rel="prefetch" href="/docs/assets/js/111.12d96319.js"><link rel="prefetch" href="/docs/assets/js/112.2d3c24f9.js"><link rel="prefetch" href="/docs/assets/js/113.dbc6a613.js"><link rel="prefetch" href="/docs/assets/js/114.170655a9.js"><link rel="prefetch" href="/docs/assets/js/115.1dba6e94.js"><link rel="prefetch" href="/docs/assets/js/116.094c1d9e.js"><link rel="prefetch" href="/docs/assets/js/117.1ee610d9.js"><link rel="prefetch" href="/docs/assets/js/118.d01e1925.js"><link rel="prefetch" href="/docs/assets/js/119.72bf1e29.js"><link rel="prefetch" href="/docs/assets/js/12.906e451b.js"><link rel="prefetch" href="/docs/assets/js/120.e9401329.js"><link rel="prefetch" href="/docs/assets/js/121.c85e95b3.js"><link rel="prefetch" href="/docs/assets/js/122.34027061.js"><link rel="prefetch" href="/docs/assets/js/123.61000a76.js"><link rel="prefetch" href="/docs/assets/js/124.0baa56ec.js"><link rel="prefetch" href="/docs/assets/js/125.d2585c2b.js"><link rel="prefetch" href="/docs/assets/js/126.79304cb4.js"><link rel="prefetch" href="/docs/assets/js/127.39737726.js"><link rel="prefetch" href="/docs/assets/js/128.b3aad8ba.js"><link rel="prefetch" href="/docs/assets/js/129.d4d1448c.js"><link rel="prefetch" href="/docs/assets/js/13.bbcdea6e.js"><link rel="prefetch" href="/docs/assets/js/130.fb2979fa.js"><link rel="prefetch" href="/docs/assets/js/131.e370221b.js"><link rel="prefetch" href="/docs/assets/js/132.4951e028.js"><link rel="prefetch" href="/docs/assets/js/133.d2f7c10f.js"><link rel="prefetch" href="/docs/assets/js/134.d9cfc686.js"><link rel="prefetch" href="/docs/assets/js/135.d057acbe.js"><link rel="prefetch" href="/docs/assets/js/136.c687767e.js"><link rel="prefetch" href="/docs/assets/js/137.be30c396.js"><link rel="prefetch" href="/docs/assets/js/138.56ba7065.js"><link rel="prefetch" href="/docs/assets/js/139.cf3424f8.js"><link rel="prefetch" href="/docs/assets/js/14.ec0c9f2a.js"><link rel="prefetch" href="/docs/assets/js/140.76b03d38.js"><link rel="prefetch" href="/docs/assets/js/141.0e1f735c.js"><link rel="prefetch" href="/docs/assets/js/142.941468d7.js"><link rel="prefetch" href="/docs/assets/js/143.5575c3e7.js"><link rel="prefetch" href="/docs/assets/js/144.2237340a.js"><link rel="prefetch" href="/docs/assets/js/145.ec1cd31e.js"><link rel="prefetch" href="/docs/assets/js/146.f5dbce22.js"><link rel="prefetch" href="/docs/assets/js/147.db512707.js"><link rel="prefetch" href="/docs/assets/js/148.707767ea.js"><link rel="prefetch" href="/docs/assets/js/149.ba85aa70.js"><link rel="prefetch" href="/docs/assets/js/15.ca6c1ecb.js"><link rel="prefetch" href="/docs/assets/js/150.43631c19.js"><link rel="prefetch" href="/docs/assets/js/151.6259affc.js"><link rel="prefetch" href="/docs/assets/js/152.8f6292a4.js"><link rel="prefetch" href="/docs/assets/js/153.b542378b.js"><link rel="prefetch" href="/docs/assets/js/154.b97b2dfa.js"><link rel="prefetch" href="/docs/assets/js/155.c5453c61.js"><link rel="prefetch" href="/docs/assets/js/156.6b6bd56a.js"><link rel="prefetch" href="/docs/assets/js/157.57c0c50f.js"><link rel="prefetch" href="/docs/assets/js/158.7f5c32db.js"><link rel="prefetch" href="/docs/assets/js/159.de7feef8.js"><link rel="prefetch" href="/docs/assets/js/16.6b251b34.js"><link rel="prefetch" href="/docs/assets/js/160.cfd09325.js"><link rel="prefetch" href="/docs/assets/js/161.5829d639.js"><link rel="prefetch" href="/docs/assets/js/162.290e613e.js"><link rel="prefetch" href="/docs/assets/js/163.265b73c4.js"><link rel="prefetch" href="/docs/assets/js/164.eecaf782.js"><link rel="prefetch" href="/docs/assets/js/165.14241fa5.js"><link rel="prefetch" href="/docs/assets/js/166.7f41b2c2.js"><link rel="prefetch" href="/docs/assets/js/167.ee6c9131.js"><link rel="prefetch" href="/docs/assets/js/168.27d6e1bf.js"><link rel="prefetch" href="/docs/assets/js/169.37251ea9.js"><link rel="prefetch" href="/docs/assets/js/17.ea44095a.js"><link rel="prefetch" href="/docs/assets/js/170.7e36e65b.js"><link rel="prefetch" href="/docs/assets/js/171.cc3567ec.js"><link rel="prefetch" href="/docs/assets/js/172.a5437497.js"><link rel="prefetch" href="/docs/assets/js/173.66192cff.js"><link rel="prefetch" href="/docs/assets/js/174.811c99f5.js"><link rel="prefetch" href="/docs/assets/js/175.50ffea8f.js"><link rel="prefetch" href="/docs/assets/js/176.426932b3.js"><link rel="prefetch" href="/docs/assets/js/177.15081840.js"><link rel="prefetch" href="/docs/assets/js/178.b1f8feef.js"><link rel="prefetch" href="/docs/assets/js/179.7d4b31ad.js"><link rel="prefetch" href="/docs/assets/js/18.acc5d9c2.js"><link rel="prefetch" href="/docs/assets/js/180.84e0d185.js"><link rel="prefetch" href="/docs/assets/js/181.4732cba6.js"><link rel="prefetch" href="/docs/assets/js/182.f702b2c2.js"><link rel="prefetch" href="/docs/assets/js/183.76a90979.js"><link rel="prefetch" href="/docs/assets/js/184.e1e608b8.js"><link rel="prefetch" href="/docs/assets/js/185.d0fe3154.js"><link rel="prefetch" href="/docs/assets/js/186.91a411ac.js"><link rel="prefetch" href="/docs/assets/js/187.533be626.js"><link rel="prefetch" href="/docs/assets/js/188.e1fca7ef.js"><link rel="prefetch" href="/docs/assets/js/189.ae3a302e.js"><link rel="prefetch" href="/docs/assets/js/19.ba7d6376.js"><link rel="prefetch" href="/docs/assets/js/190.5e7002db.js"><link rel="prefetch" href="/docs/assets/js/191.df357bf8.js"><link rel="prefetch" href="/docs/assets/js/192.0b97ee31.js"><link rel="prefetch" href="/docs/assets/js/193.50ba3277.js"><link rel="prefetch" href="/docs/assets/js/194.32612f6c.js"><link rel="prefetch" href="/docs/assets/js/195.8c781f71.js"><link rel="prefetch" href="/docs/assets/js/196.3a2160dd.js"><link rel="prefetch" href="/docs/assets/js/197.eb541326.js"><link rel="prefetch" href="/docs/assets/js/198.c9fecc0f.js"><link rel="prefetch" href="/docs/assets/js/199.65d541c8.js"><link rel="prefetch" href="/docs/assets/js/20.c92f6c88.js"><link rel="prefetch" href="/docs/assets/js/200.0b09fedf.js"><link rel="prefetch" href="/docs/assets/js/201.fda0c313.js"><link rel="prefetch" href="/docs/assets/js/202.80dee678.js"><link rel="prefetch" href="/docs/assets/js/203.2339cfe8.js"><link rel="prefetch" href="/docs/assets/js/204.d5a3133a.js"><link rel="prefetch" href="/docs/assets/js/205.69d4c87d.js"><link rel="prefetch" href="/docs/assets/js/206.113ee0fb.js"><link rel="prefetch" href="/docs/assets/js/207.2c798380.js"><link rel="prefetch" href="/docs/assets/js/208.4adc67f1.js"><link rel="prefetch" href="/docs/assets/js/209.d954284a.js"><link rel="prefetch" href="/docs/assets/js/21.b711ed39.js"><link rel="prefetch" href="/docs/assets/js/210.50539f5f.js"><link rel="prefetch" href="/docs/assets/js/211.c306544f.js"><link rel="prefetch" href="/docs/assets/js/212.3f274ff8.js"><link rel="prefetch" href="/docs/assets/js/213.d42486d0.js"><link rel="prefetch" href="/docs/assets/js/214.bf3d27d9.js"><link rel="prefetch" href="/docs/assets/js/215.ef9618f4.js"><link rel="prefetch" href="/docs/assets/js/216.fa821f34.js"><link rel="prefetch" href="/docs/assets/js/217.c1e19a4f.js"><link rel="prefetch" href="/docs/assets/js/218.2a8015d5.js"><link rel="prefetch" href="/docs/assets/js/219.085798af.js"><link rel="prefetch" href="/docs/assets/js/22.181d85f8.js"><link rel="prefetch" href="/docs/assets/js/220.3d0cafbf.js"><link rel="prefetch" href="/docs/assets/js/221.baa327fa.js"><link rel="prefetch" href="/docs/assets/js/222.3997462a.js"><link rel="prefetch" href="/docs/assets/js/223.96b1a33e.js"><link rel="prefetch" href="/docs/assets/js/224.6c9f07ed.js"><link rel="prefetch" href="/docs/assets/js/225.1d0bb56b.js"><link rel="prefetch" href="/docs/assets/js/226.b4fa6400.js"><link rel="prefetch" href="/docs/assets/js/227.7bf0ff4e.js"><link rel="prefetch" href="/docs/assets/js/228.15460699.js"><link rel="prefetch" href="/docs/assets/js/229.8f751a33.js"><link rel="prefetch" href="/docs/assets/js/23.f7b31a47.js"><link rel="prefetch" href="/docs/assets/js/230.cb64f83c.js"><link rel="prefetch" href="/docs/assets/js/231.0278c4a1.js"><link rel="prefetch" href="/docs/assets/js/232.96ae6247.js"><link rel="prefetch" href="/docs/assets/js/233.38d9f352.js"><link rel="prefetch" href="/docs/assets/js/234.ebdd297b.js"><link rel="prefetch" href="/docs/assets/js/235.3a932006.js"><link rel="prefetch" href="/docs/assets/js/236.c79c76c4.js"><link rel="prefetch" href="/docs/assets/js/237.88760d4c.js"><link rel="prefetch" href="/docs/assets/js/238.788a3c42.js"><link rel="prefetch" href="/docs/assets/js/239.7dd70067.js"><link rel="prefetch" href="/docs/assets/js/240.24df5553.js"><link rel="prefetch" href="/docs/assets/js/241.abc3e36f.js"><link rel="prefetch" href="/docs/assets/js/242.41ab2a8f.js"><link rel="prefetch" href="/docs/assets/js/243.d22b009a.js"><link rel="prefetch" href="/docs/assets/js/244.ae592bf1.js"><link rel="prefetch" href="/docs/assets/js/245.2cf65af7.js"><link rel="prefetch" href="/docs/assets/js/246.696c0de7.js"><link rel="prefetch" href="/docs/assets/js/247.3fca7ab2.js"><link rel="prefetch" href="/docs/assets/js/248.c4841e40.js"><link rel="prefetch" href="/docs/assets/js/249.d414bbe7.js"><link rel="prefetch" href="/docs/assets/js/25.e76c3cbf.js"><link rel="prefetch" href="/docs/assets/js/250.2b5d345d.js"><link rel="prefetch" href="/docs/assets/js/251.d8d1573b.js"><link rel="prefetch" href="/docs/assets/js/252.8c86c98d.js"><link rel="prefetch" href="/docs/assets/js/253.fc5bf589.js"><link rel="prefetch" href="/docs/assets/js/254.bedfc26a.js"><link rel="prefetch" href="/docs/assets/js/255.b341b73b.js"><link rel="prefetch" href="/docs/assets/js/256.b92fe8fb.js"><link rel="prefetch" href="/docs/assets/js/257.39da1358.js"><link rel="prefetch" href="/docs/assets/js/258.8ed616c4.js"><link rel="prefetch" href="/docs/assets/js/259.f1670e18.js"><link rel="prefetch" href="/docs/assets/js/26.7bedb575.js"><link rel="prefetch" href="/docs/assets/js/260.062c9633.js"><link rel="prefetch" href="/docs/assets/js/261.840ab9d5.js"><link rel="prefetch" href="/docs/assets/js/262.79cc5b41.js"><link rel="prefetch" href="/docs/assets/js/263.ae7ae1d8.js"><link rel="prefetch" href="/docs/assets/js/264.afa7c2ed.js"><link rel="prefetch" href="/docs/assets/js/265.213997e6.js"><link rel="prefetch" href="/docs/assets/js/266.82e7551c.js"><link rel="prefetch" href="/docs/assets/js/267.0d7ff0b7.js"><link rel="prefetch" href="/docs/assets/js/268.afa0cac4.js"><link rel="prefetch" href="/docs/assets/js/269.f6337830.js"><link rel="prefetch" href="/docs/assets/js/27.5a7c3b47.js"><link rel="prefetch" href="/docs/assets/js/270.1e1d8938.js"><link rel="prefetch" href="/docs/assets/js/271.1c93a73a.js"><link rel="prefetch" href="/docs/assets/js/272.2475faaa.js"><link rel="prefetch" href="/docs/assets/js/273.9470e5eb.js"><link rel="prefetch" href="/docs/assets/js/274.72916804.js"><link rel="prefetch" href="/docs/assets/js/275.73ab1b26.js"><link rel="prefetch" href="/docs/assets/js/276.aae33db9.js"><link rel="prefetch" href="/docs/assets/js/277.dd364cad.js"><link rel="prefetch" href="/docs/assets/js/278.4284d05b.js"><link rel="prefetch" href="/docs/assets/js/279.ca84182c.js"><link rel="prefetch" href="/docs/assets/js/28.374a14f9.js"><link rel="prefetch" href="/docs/assets/js/280.1991a29d.js"><link rel="prefetch" href="/docs/assets/js/281.1b987a11.js"><link rel="prefetch" href="/docs/assets/js/282.9decbc7a.js"><link rel="prefetch" href="/docs/assets/js/283.3dd972c1.js"><link rel="prefetch" href="/docs/assets/js/284.ef21f511.js"><link rel="prefetch" href="/docs/assets/js/285.dd78caf2.js"><link rel="prefetch" href="/docs/assets/js/286.2ec6dec2.js"><link rel="prefetch" href="/docs/assets/js/287.cd370e07.js"><link rel="prefetch" href="/docs/assets/js/288.c233ca38.js"><link rel="prefetch" href="/docs/assets/js/289.0965d4a2.js"><link rel="prefetch" href="/docs/assets/js/29.e0e875ac.js"><link rel="prefetch" href="/docs/assets/js/290.1baac16e.js"><link rel="prefetch" href="/docs/assets/js/291.43780d4c.js"><link rel="prefetch" href="/docs/assets/js/292.c4614f33.js"><link rel="prefetch" href="/docs/assets/js/293.4c0e14a0.js"><link rel="prefetch" href="/docs/assets/js/294.fff197b0.js"><link rel="prefetch" href="/docs/assets/js/295.38d46d8a.js"><link rel="prefetch" href="/docs/assets/js/296.4510efc8.js"><link rel="prefetch" href="/docs/assets/js/297.15012f13.js"><link rel="prefetch" href="/docs/assets/js/298.12827341.js"><link rel="prefetch" href="/docs/assets/js/299.102e6787.js"><link rel="prefetch" href="/docs/assets/js/3.80e7fbda.js"><link rel="prefetch" href="/docs/assets/js/30.b05f78f6.js"><link rel="prefetch" href="/docs/assets/js/300.910d11b8.js"><link rel="prefetch" href="/docs/assets/js/301.2500a83a.js"><link rel="prefetch" href="/docs/assets/js/302.c95d18c5.js"><link rel="prefetch" href="/docs/assets/js/303.a4e076e6.js"><link rel="prefetch" href="/docs/assets/js/304.59df7e30.js"><link rel="prefetch" href="/docs/assets/js/305.44586a68.js"><link rel="prefetch" href="/docs/assets/js/31.a8cddb1d.js"><link rel="prefetch" href="/docs/assets/js/32.e11d08d4.js"><link rel="prefetch" href="/docs/assets/js/33.30631df4.js"><link rel="prefetch" href="/docs/assets/js/34.17d1eef9.js"><link rel="prefetch" href="/docs/assets/js/35.d03bc804.js"><link rel="prefetch" href="/docs/assets/js/36.e407a3f9.js"><link rel="prefetch" href="/docs/assets/js/37.0138deec.js"><link rel="prefetch" href="/docs/assets/js/38.79c85dc4.js"><link rel="prefetch" href="/docs/assets/js/39.c3671a78.js"><link rel="prefetch" href="/docs/assets/js/4.11f7c27c.js"><link rel="prefetch" href="/docs/assets/js/40.bbe9cc67.js"><link rel="prefetch" href="/docs/assets/js/41.e4514ebe.js"><link rel="prefetch" href="/docs/assets/js/42.acca95db.js"><link rel="prefetch" href="/docs/assets/js/43.eaf692c8.js"><link rel="prefetch" href="/docs/assets/js/44.b2d50082.js"><link rel="prefetch" href="/docs/assets/js/45.c3e5eba0.js"><link rel="prefetch" href="/docs/assets/js/46.a049d85b.js"><link rel="prefetch" href="/docs/assets/js/48.ed4fc310.js"><link rel="prefetch" href="/docs/assets/js/49.112da9d1.js"><link rel="prefetch" href="/docs/assets/js/5.d6345207.js"><link rel="prefetch" href="/docs/assets/js/50.829c211c.js"><link rel="prefetch" href="/docs/assets/js/51.53f5171b.js"><link rel="prefetch" href="/docs/assets/js/52.48f9164d.js"><link rel="prefetch" href="/docs/assets/js/53.f11a069c.js"><link rel="prefetch" href="/docs/assets/js/54.1e86b7a3.js"><link rel="prefetch" href="/docs/assets/js/55.9b97a2a7.js"><link rel="prefetch" href="/docs/assets/js/56.49042f5d.js"><link rel="prefetch" href="/docs/assets/js/57.fd3564b6.js"><link rel="prefetch" href="/docs/assets/js/58.bf82d3b7.js"><link rel="prefetch" href="/docs/assets/js/59.233a4681.js"><link rel="prefetch" href="/docs/assets/js/6.a0c01dea.js"><link rel="prefetch" href="/docs/assets/js/60.712f07a1.js"><link rel="prefetch" href="/docs/assets/js/61.60360262.js"><link rel="prefetch" href="/docs/assets/js/62.5975afbd.js"><link rel="prefetch" href="/docs/assets/js/63.fa2cbe4d.js"><link rel="prefetch" href="/docs/assets/js/64.48d02cd4.js"><link rel="prefetch" href="/docs/assets/js/65.deef4b99.js"><link rel="prefetch" href="/docs/assets/js/66.1b9a9ab3.js"><link rel="prefetch" href="/docs/assets/js/67.d5c80293.js"><link rel="prefetch" href="/docs/assets/js/68.95d020a0.js"><link rel="prefetch" href="/docs/assets/js/69.46226238.js"><link rel="prefetch" href="/docs/assets/js/7.6990d186.js"><link rel="prefetch" href="/docs/assets/js/70.83d2a4b3.js"><link rel="prefetch" href="/docs/assets/js/71.26c89b11.js"><link rel="prefetch" href="/docs/assets/js/72.3d70acda.js"><link rel="prefetch" href="/docs/assets/js/73.be21fa76.js"><link rel="prefetch" href="/docs/assets/js/74.4da89d30.js"><link rel="prefetch" href="/docs/assets/js/75.8ef62711.js"><link rel="prefetch" href="/docs/assets/js/76.1eaa5d35.js"><link rel="prefetch" href="/docs/assets/js/77.9f8f19ed.js"><link rel="prefetch" href="/docs/assets/js/78.6bf7ee7d.js"><link rel="prefetch" href="/docs/assets/js/79.607e0fcd.js"><link rel="prefetch" href="/docs/assets/js/8.de8128a3.js"><link rel="prefetch" href="/docs/assets/js/80.97e1d0d7.js"><link rel="prefetch" href="/docs/assets/js/81.7518d250.js"><link rel="prefetch" href="/docs/assets/js/82.f13d1ead.js"><link rel="prefetch" href="/docs/assets/js/83.a626643a.js"><link rel="prefetch" href="/docs/assets/js/84.8a852da7.js"><link rel="prefetch" href="/docs/assets/js/85.b7a999d1.js"><link rel="prefetch" href="/docs/assets/js/86.628e88af.js"><link rel="prefetch" href="/docs/assets/js/87.3fd8f634.js"><link rel="prefetch" href="/docs/assets/js/88.de00a005.js"><link rel="prefetch" href="/docs/assets/js/89.ed3fde5d.js"><link rel="prefetch" href="/docs/assets/js/9.051f6c42.js"><link rel="prefetch" href="/docs/assets/js/90.84b6d855.js"><link rel="prefetch" href="/docs/assets/js/91.44cea406.js"><link rel="prefetch" href="/docs/assets/js/92.81cc9fb4.js"><link rel="prefetch" href="/docs/assets/js/93.946980f6.js"><link rel="prefetch" href="/docs/assets/js/94.d9029cc8.js"><link rel="prefetch" href="/docs/assets/js/95.b90fb9a0.js"><link rel="prefetch" href="/docs/assets/js/96.8febe93d.js"><link rel="prefetch" href="/docs/assets/js/97.002963f9.js"><link rel="prefetch" href="/docs/assets/js/98.91580ef9.js"><link rel="prefetch" href="/docs/assets/js/99.edcb198a.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.5d974432.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Nguyễn Khánk's Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>NoSql Distilled</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/kungfu/nosql-distilled/00.html" class="sidebar-link">NoSQL Distilled</a></li><li><a href="/docs/kungfu/nosql-distilled/c0.html" class="sidebar-link">Preface</a></li><li><a href="/docs/kungfu/nosql-distilled/c1.html" aria-current="page" class="active sidebar-link">Chapter 1. Why NoSQL?</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/kungfu/nosql-distilled/c1.html#_1-1-the-value-of-relational-databases" class="sidebar-link">1.1. The Value of Relational Databases</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/nosql-distilled/c1.html#_1-2-impedance-mismatch" class="sidebar-link">1.2. Impedance Mismatch</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/nosql-distilled/c1.html#_1-3-application-and-integration-databases" class="sidebar-link">1.3. Application and Integration Databases</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/nosql-distilled/c1.html#_1-4-attack-of-the-clusters" class="sidebar-link">1.4. Attack of the Clusters</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/nosql-distilled/c1.html#_1-5-the-emergence-of-nosql" class="sidebar-link">1.5. The Emergence of NoSQL</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/nosql-distilled/c1.html#_1-6-key-points" class="sidebar-link">1.6. Key Points</a></li></ul></li><li><a href="/docs/kungfu/nosql-distilled/c2.html" class="sidebar-link">Chapter 2. Aggregate Data Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c3.html" class="sidebar-link">Chapter 3. More Details on Data Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c4.html" class="sidebar-link">Chapter 4. Distribution Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c5.html" class="sidebar-link">Chapter 5. Consistency</a></li><li><a href="/docs/kungfu/nosql-distilled/c6.html" class="sidebar-link">Chapter 6. Version Stamps</a></li><li><a href="/docs/kungfu/nosql-distilled/c7.html" class="sidebar-link">Chapter 7. Map-Reduce</a></li><li><a href="/docs/kungfu/nosql-distilled/c8.html" class="sidebar-link">Chapter 8. Key-Value Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c9.html" class="sidebar-link">Chapter 9. Document Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c10.html" class="sidebar-link">Chapter 10. Column-Family Stores</a></li><li><a href="/docs/kungfu/nosql-distilled/c11.html" class="sidebar-link">Chapter 11. Graph Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c12.html" class="sidebar-link">Chapter 12. Schema Migrations</a></li><li><a href="/docs/kungfu/nosql-distilled/c13.html" class="sidebar-link">Chapter 13. Polyglot Persistence</a></li><li><a href="/docs/kungfu/nosql-distilled/c14.html" class="sidebar-link">Chapter 14. Beyond NoSQL</a></li><li><a href="/docs/kungfu/nosql-distilled/c15.html" class="sidebar-link">Chapter 15. Choosing Your Database</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>97 Things Every Programmer Should Know</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>The Art of Readable Code</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="chapter-1-why-nosql"><a href="#chapter-1-why-nosql" class="header-anchor">#</a> Chapter 1. Why NoSQL?</h1> <p>For almost as long as we’ve been in the software profession, relational databases have been the
+default choice for serious data storage, especially in the world of enterprise applications. If you’re an
+architect starting a new project, your only choice is likely to be which relational database to use.
+(And often not even that, if your company has a dominant vendor.) There have been times when a
+database technology threatened to take a piece of the action, such as object databases in the 1990’s,
+but these alternatives never got anywhere.</p> <p>After such a long period of dominance, the current excitement about NoSQL databases comes as a
+surprise. In this chapter we’ll explore why relational databases became so dominant, and why we
+think the current rise of NoSQL databases isn’t a flash in the pan.</p> <h2 id="_1-1-the-value-of-relational-databases"><a href="#_1-1-the-value-of-relational-databases" class="header-anchor">#</a> 1.1. The Value of Relational Databases</h2> <p>Relational databases have become such an embedded part of our computing culture that it’s easy to
+take them for granted. It’s therefore useful to revisit the benefits they provide.</p> <p><strong>1.1.1. Getting at Persistent Data</strong></p> <p>Probably the most obvious value of a database is keeping large amounts of persistent data. Most
+computer architectures have the notion of two areas of memory: a fast volatile “main memory” and a
+larger but slower “backing store.” Main memory is both limited in space and loses all data when you
+lose power or something bad happens to the operating system. Therefore, to keep data around, we
+write it to a backing store, commonly seen a disk (although these days that disk can be persistent
+memory).</p> <p>The backing store can be organized in all sorts of ways. For many productivity applications (such
+as word processors), it’s a file in the file system of the operating system. For most enterprise
+applications, however, the backing store is a database. The database allows more flexibility than a
+file system in storing large amounts of data in a way that allows an application program to get at
+small bits of that information quickly and easily.</p> <p><strong>1.1.2. Concurrency</strong></p> <p>Enterprise applications tend to have many people looking at the same body of data at once, possibly
+modifying that data. Most of the time they are working on different areas of that data, but occasionally
+they operate on the same bit of data. As a result, we have to worry about coordinating these
+interactions to avoid such things as double booking of hotel rooms.</p> <p>Concurrency is notoriously difficult to get right, with all sorts of errors that can trap even the most
+careful programmers. Since enterprise applications can have lots of users and other systems all
+working concurrently, there’s a lot of room for bad things to happen. Relational databases help handle
+this by controlling all access to their data through transactions. While this isn’t a cure-all (you still
+have to handle a transactional error when you try to book a room that’s just gone), the transactional
+mechanism has worked well to contain the complexity of concurrency.</p> <p>Transactions also play a role in error handling. With transactions, you can make a change, and if an
+error occurs during the processing of the change you can roll back the transaction to clean things up.</p> <p><strong>1.1.3. Integration</strong></p> <p>Enterprise applications live in a rich ecosystem that requires multiple applications, written by
+different teams, to collaborate in order to get things done. This kind of inter-application collaboration
+is awkward because it means pushing the human organizational boundaries. Applications often need
+to use the same data and updates made through one application have to be visible to others.</p> <p>A common way to do this is <strong>shared database integration</strong> [Hohpe and Woolf] where multiple
+applications store their data in a single database. Using a single database allows all the applications
+to use each others’ data easily, while the database’s concurrency control handles multiple
+applications in the same way as it handles multiple users in a single application.</p> <p><strong>1.1.4. A (Mostly) Standard Model</strong></p> <p>Relational databases have succeeded because they provide the core benefits we outlined earlier in a
+(mostly) standard way. As a result, developers and database professionals can learn the basic
+relational model and apply it in many projects. Although there are differences between different
+relational databases, the core mechanisms remain the same: Different vendors’ SQL dialects are
+similar, transactions operate in mostly the same way.</p> <h2 id="_1-2-impedance-mismatch"><a href="#_1-2-impedance-mismatch" class="header-anchor">#</a> 1.2. Impedance Mismatch</h2> <p>Relational databases provide many advantages, but they are by no means perfect. Even from their
+early days, there have been lots of frustrations with them.</p> <p>For application developers, the biggest frustration has been what’s commonly called the
+<strong>impedance mismatch</strong> : the difference between the relational model and the in-memory data structures.
+The relational data model organizes data into a structure of tables and rows, or more properly,
+relations and tuples. In the relational model, a <strong>tuple</strong> is a set of name-value pairs and a <strong>relation</strong> is a
+set of tuples. (The relational definition of a tuple is slightly different from that in mathematics and
+many programming languages with a tuple data type, where a tuple is a sequence of values.) All
+operations in SQL consume and return relations, which leads to the mathematically elegant relational
+algebra.</p> <p>This foundation on relations provides a certain elegance and simplicity, but it also introduces
+limitations. In particular, the values in a relational tuple have to be simple—they cannot contain any
+structure, such as a nested record or a list. This limitation isn’t true for in-memory data structures,
+which can take on much richer structures than relations. As a result, if you want to use a richer in-
+memory data structure, you have to translate it to a relational representation to store it on disk. Hence
+the impedance mismatch—two different representations that require translation (see Figure 1.1).</p> <p><img src="/docs/assets/img/image--003.f050157c.jpg" alt="Img"> <strong>Figure 1.1. An order, which looks like a single aggregate structure in the UI, is split into many
+rows from many tables in a relational database</strong></p> <p>The impedance mismatch is a major source of frustration to application developers, and in the
+1990s many people believed that it would lead to relational databases being replaced with databases
+that replicate the in-memory data structures to disk. That decade was marked with the growth of
+object-oriented programming languages, and with them came object-oriented databases—both
+looking to be the dominant environment for software development in the new millennium.</p> <p>However, while object-oriented languages succeeded in becoming the major force in
+programming, object-oriented databases faded into obscurity. Relational databases saw off the
+challenge by stressing their role as an integration mechanism, supported by a mostly standard
+language of data manipulation (SQL) and a growing professional divide between application
+developers and database administrators.</p> <p>Impedance mismatch has been made much easier to deal with by the wide availability of object-
+relational mapping frameworks, such as Hibernate and iBATIS that implement well-known mapping
+patterns [Fowler PoEAA], but the mapping problem is still an issue. Object-relational mapping
+frameworks remove a lot of grunt work, but can become a problem of their own when people try too
+hard to ignore the database and query performance suffers.</p> <p>Relational databases continued to dominate the enterprise computing world in the 2000s, but during
+that decade cracks began to open in their dominance.</p> <h2 id="_1-3-application-and-integration-databases"><a href="#_1-3-application-and-integration-databases" class="header-anchor">#</a> 1.3. Application and Integration Databases</h2> <p>The exact reasons why relational databases triumphed over OO databases are still the subject of an
+occasional pub debate for developers of a certain age. But in our view, the primary factor was the
+role of SQL as an integration mechanism between applications. In this scenario, the database acts as</p> <p>an <strong>integration database</strong> —with multiple applications, usually developed by separate teams, storing
+their data in a common database. This improves communication because all the applications are
+operating on a consistent set of persistent data.</p> <p>There are downsides to shared database integration. A structure that’s designed to integrate many
+applications ends up being more complex—indeed, often dramatically more complex—than any
+single application needs. Furthermore, should an application want to make changes to its data storage,
+it needs to coordinate with all the other applications using the database. Different applications have
+different structural and performance needs, so an index required by one application may cause a
+problematic hit on inserts for another. The fact that each application is usually a separate team also
+means that the database usually cannot trust applications to update the data in a way that preserves
+database integrity and thus needs to take responsibility for that within the database itself.</p> <p>A different approach is to treat your database as an <strong>application database</strong> —which is only directly
+accessed by a single application codebase that’s looked after by a single team. With an application
+database, only the team using the application needs to know about the database structure, which
+makes it much easier to maintain and evolve the schema. Since the application team controls both the
+database and the application code, the responsibility for database integrity can be put in the
+application code.</p> <p>Interoperability concerns can now shift to the interfaces of the application, allowing for better
+interaction protocols and providing support for changing them. During the 2000s we saw a distinct
+shift to web services [Daigneau], where applications would communicate over HTTP. Web services
+enabled a new form of a widely used communication mechanism—a challenger to using the SQL with
+shared databases. (Much of this work was done under the banner of “Service-Oriented
+Architecture”—a term most notable for its lack of a consistent meaning.)</p> <p>An interesting aspect of this shift to web services as an integration mechanism was that it resulted
+in more flexibility for the structure of the data that was being exchanged. If you communicate with
+SQL, the data must be structured as relations. However, with a service, you are able to use richer
+data structures with nested records and lists. These are usually represented as documents in XML or,
+more recently, JSON. In general, with remote communication you want to reduce the number of round
+trips involved in the interaction, so it’s useful to be able to put a rich structure of information into a
+single request or response.</p> <p>If you are going to use services for integration, most of the time web services—using text over
+HTTP—is the way to go. However, if you are dealing with highly performance-sensitive interactions,
+you may need a binary protocol. Only do this if you are sure you have the need, as text protocols are
+easier to work with—consider the example of the Internet.</p> <p>Once you have made the decision to use an application database, you get more freedom of choosing
+a database. Since there is a decoupling between your internal database and the services with which
+you talk to the outside world, the outside world doesn’t have to care how you store your data,
+allowing you to consider nonrelational options. Furthermore, there are many features of relational
+databases, such as security, that are less useful to an application database because they can be done
+by the enclosing application instead.</p> <p>Despite this freedom, however, it wasn’t apparent that application databases led to a big rush to
+alternative data stores. Most teams that embraced the application database approach stuck with
+relational databases. After all, using an application database yields many advantages even ignoring</p> <p>the database flexibility (which is why we generally recommend it). Relational databases are familiar
+and usually work very well or, at least, well enough. Perhaps, given time, we might have seen the
+shift to application databases to open a real crack in the relational hegemony—but such cracks came
+from another source.</p> <h2 id="_1-4-attack-of-the-clusters"><a href="#_1-4-attack-of-the-clusters" class="header-anchor">#</a> 1.4. Attack of the Clusters</h2> <p>At the beginning of the new millennium the technology world was hit by the busting of the 1990s dot-
+com bubble. While this saw many people questioning the economic future of the Internet, the 2000s
+did see several large web properties dramatically increase in scale.</p> <p>This increase in scale was happening along many dimensions. Websites started tracking activity
+and structure in a very detailed way. Large sets of data appeared: links, social networks, activity in
+logs, mapping data. With this growth in data came a growth in users—as the biggest websites grew to
+be vast estates regularly serving huge numbers of visitors.</p> <p>Coping with the increase in data and traffic required more computing resources. To handle this
+kind of increase, you have two choices: up or out. Scaling up implies bigger machines, more
+processors, disk storage, and memory. But bigger machines get more and more expensive, not to
+mention that there are real limits as your size increases. The alternative is to use lots of small
+machines in a cluster. A cluster of small machines can use commodity hardware and ends up being
+cheaper at these kinds of scales. It can also be more resilient—while individual machine failures are
+common, the overall cluster can be built to keep going despite such failures, providing high
+reliability.</p> <p>As large properties moved towards clusters, that revealed a new problem—relational databases
+are not designed to be run on clusters. Clustered relational databases, such as the Oracle RAC or
+Microsoft SQL Server, work on the concept of a shared disk subsystem. They use a cluster-aware file
+system that writes to a highly available disk subsystem—but this means the cluster still has the disk
+subsystem as a single point of failure. Relational databases could also be run as separate servers for
+different sets of data, effectively sharding (“Sharding,” p. 38 ) the database. While this separates the
+load, all the sharding has to be controlled by the application which has to keep track of which
+database server to talk to for each bit of data. Also, we lose any querying, referential integrity,
+transactions, or consistency controls that cross shards. A phrase we often hear in this context from
+people who’ve done this is “unnatural acts.”</p> <p>These technical issues are exacerbated by licensing costs. Commercial relational databases are
+usually priced on a single-server assumption, so running on a cluster raised prices and led to
+frustrating negotiations with purchasing departments.</p> <p>This mismatch between relational databases and clusters led some organization to consider an
+alternative route to data storage. Two companies in particular—Google and Amazon—have been
+very influential. Both were on the forefront of running large clusters of this kind; furthermore, they
+were capturing huge amounts of data. These things gave them the motive. Both were successful and
+growing companies with strong technical components, which gave them the means and opportunity. It
+was no wonder they had murder in mind for their relational databases. As the 2000s drew on, both
+companies produced brief but highly influential papers about their efforts: BigTable from Google and
+Dynamo from Amazon.</p> <p>It’s often said that Amazon and Google operate at scales far removed from most organizations, so
+the solutions they needed may not be relevant to an average organization. While it’s true that most</p> <p>software projects don’t need that level of scale, it’s also true that more and more organizations are
+beginning to explore what they can do by capturing and processing more data—and to run into the
+same problems. So, as more information leaked out about what Google and Amazon had done, people
+began to explore making databases along similar lines—explicitly designed to live in a world of
+clusters. While the earlier menaces to relational dominance turned out to be phantoms, the threat from
+clusters was serious.</p> <h2 id="_1-5-the-emergence-of-nosql"><a href="#_1-5-the-emergence-of-nosql" class="header-anchor">#</a> 1.5. The Emergence of NoSQL</h2> <p>It’s a wonderful irony that the term “NoSQL” first made its appearance in the late 90s as the name of
+an open-source relational database [Strozzi NoSQL]. Led by Carlo Strozzi, this database stores its
+tables as ASCII files, each tuple represented by a line with fields separated by tabs. The name comes
+from the fact that the database doesn’t use SQL as a query language. Instead, the database is
+manipulated through shell scripts that can be combined into the usual UNIX pipelines. Other than the
+terminological coincidence, Strozzi’s NoSQL had no influence on the databases we describe in this
+book.</p> <p>The usage of “NoSQL” that we recognize today traces back to a meetup on June 11, 2009 in San
+Francisco organized by Johan Oskarsson, a software developer based in London. The example of
+BigTable and Dynamo had inspired a bunch of projects experimenting with alternative data storage,
+and discussions of these had become a feature of the better software conferences around that time.
+Johan was interested in finding out more about some of these new databases while he was in San
+Francisco for a Hadoop summit. Since he had little time there, he felt that it wouldn’t be feasible to
+visit them all, so he decided to host a meetup where they could all come together and present their
+work to whoever was interested.</p> <p>Johan wanted a name for the meetup—something that would make a good Twitter hashtag: short,
+memorable, and without too many Google hits so that a search on the name would quickly find the
+meetup. He asked for suggestions on the #cassandra IRC channel and got a few, selecting the
+suggestion of “NoSQL” from Eric Evans (a developer at Rackspace, no connection to the DDD Eric
+Evans). While it had the disadvantage of being negative and not really describing these systems, it did
+fit the hashtag criteria. At the time they were thinking of only naming a single meeting and were not
+expecting it to catch on to name this entire technology trend [Oskarsson].</p> <p>The term “NoSQL” caught on like wildfire, but it’s never been a term that’s had much in the way of
+a strong definition. The original call [NoSQL Meetup] for the meetup asked for “open-source,
+distributed, nonrelational databases.” The talks there [NoSQL Debrief] were from Voldemort,
+Cassandra, Dynomite, HBase, Hypertable, CouchDB, and MongoDB—but the term has never been
+confined to that original septet. There’s no generally accepted definition, nor an authority to provide
+one, so all we can do is discuss some common characteristics of the databases that tend to be called
+“NoSQL.”</p> <p>To begin with, there is the obvious point that NoSQL databases don’t use SQL. Some of them do
+have query languages, and it makes sense for them to be similar to SQL in order to make them easier
+to learn. Cassandra’s CQL is like this—“exactly like SQL (except where it’s not)” [CQL]. But so far
+none have implemented anything that would fit even the rather flexible notion of standard SQL. It will
+be interesting to see what happens if an established NoSQL database decides to implement a
+reasonably standard SQL; the only predictable outcome for such an eventuality is plenty of argument.</p> <p>Another important characteristic of these databases is that they are generally open-source projects.</p> <p>Although the term NoSQL is frequently applied to closed-source systems, there’s a notion that
+NoSQL is an open-source phenomenon.</p> <p>Most NoSQL databases are driven by the need to run on clusters, and this is certainly true of those
+that were talked about during the initial meetup. This has an effect on their data model as well as their
+approach to consistency. Relational databases use ACID transactions (p. 19 ) to handle consistency
+across the whole database. This inherently clashes with a cluster environment, so NoSQL databases
+offer a range of options for consistency and distribution.</p> <p>However, not all NoSQL databases are strongly oriented towards running on clusters. Graph
+databases are one style of NoSQL databases that uses a distribution model similar to relational
+databases but offers a different data model that makes it better at handling data with complex
+relationships.</p> <p>NoSQL databases are generally based on the needs of the early 21st century web estates, so usually
+only systems developed during that time frame are called NoSQL—thus ruling out hoards of
+databases created before the new millennium, let alone BC (Before Codd).</p> <p>NoSQL databases operate without a schema, allowing you to freely add fields to database records
+without having to define any changes in structure first. This is particularly useful when dealing with
+nonuniform data and custom fields which forced relational databases to use names like
+customField6 or custom field tables that are awkward to process and understand.</p> <p>All of the above are common characteristics of things that we see described as NoSQL databases.
+None of these are definitional, and indeed it’s likely that there will never be a coherent definition of
+“NoSQL” (sigh). However, this crude set of characteristics has been our guide in writing this book.
+Our chief enthusiasm with this subject is that the rise of NoSQL has opened up the range of options
+for data storage. Consequently, this opening up shouldn’t be confined to what’s usually classed as a
+NoSQL store. We hope that other data storage options will become more acceptable, including many
+that predate the NoSQL movement. There is a limit, however, to what we can usefully discuss in this
+book, so we’ve decided to concentrate on this noDefinition.</p> <p>When you first hear “NoSQL,” an immediate question is what does it stand for—a “no” to SQL?
+Most people who talk about NoSQL say that it really means “Not Only SQL,” but this interpretation
+has a couple of problems. Most people write “NoSQL” whereas “Not Only SQL” would be written
+“NOSQL.” Also, there wouldn’t be much point in calling something a NoSQL database under the “not
+only” meaning—because then, Oracle or Postgres would fit that definition, we would prove that black
+equals white and would all get run over on crosswalks.</p> <p>To resolve this, we suggest that you don’t worry about what the term stands for, but rather about
+what it means (which is recommended with most acronyms). Thus, when “NoSQL” is applied to a
+database, it refers to an ill-defined set of mostly open-source databases, mostly developed in the
+early 21st century, and mostly not using SQL.</p> <p>The “not-only” interpretation does have its value, as it describes the ecosystem that many people
+think is the future of databases. This is in fact what we consider to be the most important contribution
+of this way of thinking—it’s better to think of NoSQL as a movement rather than a technology. We
+don’t think that relational databases are going away—they are still going to be the most common form
+of database in use. Even though we’ve written this book, we still recommend relational databases.
+Their familiarity, stability, feature set, and available support are compelling arguments for most
+projects.</p> <p>The change is that now we see relational databases as one option for data storage. This point of
+view is often referred to as <strong>polyglot persistence</strong> —using different data stores in different
+circumstances. Instead of just picking a relational database because everyone does, we need to
+understand the nature of the data we’re storing and how we want to manipulate it. The result is that
+most organizations will have a mix of data storage technologies for different circumstances.</p> <p>In order to make this polyglot world work, our view is that organizations also need to shift from
+integration databases to application databases. Indeed, we assume in this book that you’ll be using a
+NoSQL database as an application database; we don’t generally consider NoSQL databases a good
+choice for integration databases. We don’t see this as a disadvantage as we think that even if you
+don’t use NoSQL, shifting to encapsulating data in services is a good direction to take.</p> <p>In our account of the history of NoSQL development, we’ve concentrated on big data running on
+clusters. While we think this is the key thing that drove the opening up of the database world, it isn’t
+the only reason we see project teams considering NoSQL databases. An equally important reason is
+the old frustration with the impedance mismatch problem. The big data concerns have created an
+opportunity for people to think freshly about their data storage needs, and some development teams
+see that using a NoSQL database can help their productivity by simplifying their database access even
+if they have no need to scale beyond a single machine.</p> <p>So, as you read the rest of this book, remember there are two primary reasons for considering
+NoSQL. One is to handle data access with sizes and performance that demand a cluster; the other is to
+improve the productivity of application development by using a more convenient data interaction
+style.</p> <h2 id="_1-6-key-points"><a href="#_1-6-key-points" class="header-anchor">#</a> 1.6. Key Points</h2> <ul><li>Relational databases have been a successful technology for twenty years, providing persistence,
+concurrency control, and an integration mechanism.</li> <li>Application developers have been frustrated with the impedance mismatch between the
+relational model and the in-memory data structures.</li> <li>There is a movement away from using databases as integration points towards encapsulating
+databases within applications and integrating through services.</li> <li>The vital factor for a change in data storage was the need to support large volumes of data by
+running on clusters. Relational databases are not designed to run efficiently on clusters.</li> <li>NoSQL is an accidental neologism. There is no prescriptive definition—all you can make is an
+observation of common characteristics.</li> <li>The common characteristics of NoSQL databases are
+<ul><li>Not using the relational model</li> <li>Running well on clusters</li> <li>Open-source</li> <li>Built for the 21st century web estates</li> <li>Schemaless</li></ul></li> <li>The most important result of the rise of NoSQL is Polyglot Persistence.</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/kungfu/nosql-distilled/c0.html" class="prev">
+        Preface
+      </a></span> <span class="next"><a href="/docs/kungfu/nosql-distilled/c2.html">
+        Chapter 2. Aggregate Data Models
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/docs/assets/js/app.cfeb973c.js" defer></script><script src="/docs/assets/js/2.f326a5a1.js" defer></script><script src="/docs/assets/js/47.f67d726f.js" defer></script><script src="/docs/assets/js/24.55a1e86e.js" defer></script>
+  </body>
+</html>
