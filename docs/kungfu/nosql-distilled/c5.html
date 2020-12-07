@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Chapter 5. Consistency | Nguyễn Khánk&#39;s Wiki</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../public/favicons/manifest.json">
+    <link rel="mask-icon" href="../public/favicons/safari-pinned-tab.svg" color="#3a0839">
+    <link rel="shortcut icon" href="../public/favicons/favicon.ico">
+    <meta name="description" content="Wikipedia của tui">
+    <meta name="msapplication-TileColor" content="#3a0839">
+    <meta name="msapplication-config" content="../public/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.49740982.css" as="style"><link rel="preload" href="/docs/assets/js/app.5e1c19b2.js" as="script"><link rel="preload" href="/docs/assets/js/2.623726ed.js" as="script"><link rel="preload" href="/docs/assets/js/20.f7e648af.js" as="script"><link rel="preload" href="/docs/assets/js/25.81ef2d7d.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.252b8a2a.js"><link rel="prefetch" href="/docs/assets/js/100.98d61af1.js"><link rel="prefetch" href="/docs/assets/js/101.467adbe0.js"><link rel="prefetch" href="/docs/assets/js/102.e3c324e4.js"><link rel="prefetch" href="/docs/assets/js/103.ef60821d.js"><link rel="prefetch" href="/docs/assets/js/104.e48a88dd.js"><link rel="prefetch" href="/docs/assets/js/105.5ba00055.js"><link rel="prefetch" href="/docs/assets/js/106.d83ccc21.js"><link rel="prefetch" href="/docs/assets/js/107.e39c073d.js"><link rel="prefetch" href="/docs/assets/js/108.ee0758e5.js"><link rel="prefetch" href="/docs/assets/js/109.5dffc3aa.js"><link rel="prefetch" href="/docs/assets/js/11.b397fc06.js"><link rel="prefetch" href="/docs/assets/js/110.f9e049ca.js"><link rel="prefetch" href="/docs/assets/js/111.12d96319.js"><link rel="prefetch" href="/docs/assets/js/112.2d3c24f9.js"><link rel="prefetch" href="/docs/assets/js/113.dbc6a613.js"><link rel="prefetch" href="/docs/assets/js/114.170655a9.js"><link rel="prefetch" href="/docs/assets/js/115.df2de4db.js"><link rel="prefetch" href="/docs/assets/js/116.5935c713.js"><link rel="prefetch" href="/docs/assets/js/117.4a8bdc13.js"><link rel="prefetch" href="/docs/assets/js/118.d01e1925.js"><link rel="prefetch" href="/docs/assets/js/119.72bf1e29.js"><link rel="prefetch" href="/docs/assets/js/12.486fa73e.js"><link rel="prefetch" href="/docs/assets/js/120.e9401329.js"><link rel="prefetch" href="/docs/assets/js/121.c85e95b3.js"><link rel="prefetch" href="/docs/assets/js/122.34027061.js"><link rel="prefetch" href="/docs/assets/js/123.61000a76.js"><link rel="prefetch" href="/docs/assets/js/124.0baa56ec.js"><link rel="prefetch" href="/docs/assets/js/125.d2585c2b.js"><link rel="prefetch" href="/docs/assets/js/126.79304cb4.js"><link rel="prefetch" href="/docs/assets/js/127.373b5799.js"><link rel="prefetch" href="/docs/assets/js/128.ef27bc82.js"><link rel="prefetch" href="/docs/assets/js/129.d4d1448c.js"><link rel="prefetch" href="/docs/assets/js/13.0042df14.js"><link rel="prefetch" href="/docs/assets/js/130.fb2979fa.js"><link rel="prefetch" href="/docs/assets/js/131.e370221b.js"><link rel="prefetch" href="/docs/assets/js/132.4951e028.js"><link rel="prefetch" href="/docs/assets/js/133.d2f7c10f.js"><link rel="prefetch" href="/docs/assets/js/134.d9cfc686.js"><link rel="prefetch" href="/docs/assets/js/135.d057acbe.js"><link rel="prefetch" href="/docs/assets/js/136.c687767e.js"><link rel="prefetch" href="/docs/assets/js/137.be30c396.js"><link rel="prefetch" href="/docs/assets/js/138.56ba7065.js"><link rel="prefetch" href="/docs/assets/js/139.cf3424f8.js"><link rel="prefetch" href="/docs/assets/js/14.0cc45a55.js"><link rel="prefetch" href="/docs/assets/js/140.76b03d38.js"><link rel="prefetch" href="/docs/assets/js/141.0e1f735c.js"><link rel="prefetch" href="/docs/assets/js/142.941468d7.js"><link rel="prefetch" href="/docs/assets/js/143.5575c3e7.js"><link rel="prefetch" href="/docs/assets/js/144.2237340a.js"><link rel="prefetch" href="/docs/assets/js/145.ec1cd31e.js"><link rel="prefetch" href="/docs/assets/js/146.f5dbce22.js"><link rel="prefetch" href="/docs/assets/js/147.db512707.js"><link rel="prefetch" href="/docs/assets/js/148.2802424e.js"><link rel="prefetch" href="/docs/assets/js/149.1d514ad2.js"><link rel="prefetch" href="/docs/assets/js/15.d73817d3.js"><link rel="prefetch" href="/docs/assets/js/150.43631c19.js"><link rel="prefetch" href="/docs/assets/js/151.6259affc.js"><link rel="prefetch" href="/docs/assets/js/152.34641c71.js"><link rel="prefetch" href="/docs/assets/js/153.dad460ab.js"><link rel="prefetch" href="/docs/assets/js/154.b97b2dfa.js"><link rel="prefetch" href="/docs/assets/js/155.c5453c61.js"><link rel="prefetch" href="/docs/assets/js/156.6b6bd56a.js"><link rel="prefetch" href="/docs/assets/js/157.c369ed3c.js"><link rel="prefetch" href="/docs/assets/js/158.f8540c1a.js"><link rel="prefetch" href="/docs/assets/js/159.de7feef8.js"><link rel="prefetch" href="/docs/assets/js/16.acdde0a4.js"><link rel="prefetch" href="/docs/assets/js/160.cfd09325.js"><link rel="prefetch" href="/docs/assets/js/161.5829d639.js"><link rel="prefetch" href="/docs/assets/js/162.290e613e.js"><link rel="prefetch" href="/docs/assets/js/163.265b73c4.js"><link rel="prefetch" href="/docs/assets/js/164.dc637f78.js"><link rel="prefetch" href="/docs/assets/js/165.069beb16.js"><link rel="prefetch" href="/docs/assets/js/166.efebda3d.js"><link rel="prefetch" href="/docs/assets/js/167.94f1aa91.js"><link rel="prefetch" href="/docs/assets/js/168.c1483dcf.js"><link rel="prefetch" href="/docs/assets/js/169.37251ea9.js"><link rel="prefetch" href="/docs/assets/js/17.dfbbc8e4.js"><link rel="prefetch" href="/docs/assets/js/170.7e36e65b.js"><link rel="prefetch" href="/docs/assets/js/171.cc3567ec.js"><link rel="prefetch" href="/docs/assets/js/172.a5437497.js"><link rel="prefetch" href="/docs/assets/js/173.abacb22f.js"><link rel="prefetch" href="/docs/assets/js/174.3648514b.js"><link rel="prefetch" href="/docs/assets/js/175.3ca1fc4b.js"><link rel="prefetch" href="/docs/assets/js/176.426932b3.js"><link rel="prefetch" href="/docs/assets/js/177.15081840.js"><link rel="prefetch" href="/docs/assets/js/178.b1f8feef.js"><link rel="prefetch" href="/docs/assets/js/179.7d4b31ad.js"><link rel="prefetch" href="/docs/assets/js/18.29379bbe.js"><link rel="prefetch" href="/docs/assets/js/180.84e0d185.js"><link rel="prefetch" href="/docs/assets/js/181.4732cba6.js"><link rel="prefetch" href="/docs/assets/js/182.f702b2c2.js"><link rel="prefetch" href="/docs/assets/js/183.76a90979.js"><link rel="prefetch" href="/docs/assets/js/184.e1e608b8.js"><link rel="prefetch" href="/docs/assets/js/185.d0fe3154.js"><link rel="prefetch" href="/docs/assets/js/186.611633fb.js"><link rel="prefetch" href="/docs/assets/js/187.9e8b60e7.js"><link rel="prefetch" href="/docs/assets/js/188.e1fca7ef.js"><link rel="prefetch" href="/docs/assets/js/189.ae3a302e.js"><link rel="prefetch" href="/docs/assets/js/19.11dfe47b.js"><link rel="prefetch" href="/docs/assets/js/190.7f579751.js"><link rel="prefetch" href="/docs/assets/js/191.167d9aa8.js"><link rel="prefetch" href="/docs/assets/js/192.0b97ee31.js"><link rel="prefetch" href="/docs/assets/js/193.50ba3277.js"><link rel="prefetch" href="/docs/assets/js/194.32612f6c.js"><link rel="prefetch" href="/docs/assets/js/195.8c781f71.js"><link rel="prefetch" href="/docs/assets/js/196.3a2160dd.js"><link rel="prefetch" href="/docs/assets/js/197.eb541326.js"><link rel="prefetch" href="/docs/assets/js/198.c9fecc0f.js"><link rel="prefetch" href="/docs/assets/js/199.65d541c8.js"><link rel="prefetch" href="/docs/assets/js/200.0b09fedf.js"><link rel="prefetch" href="/docs/assets/js/201.fda0c313.js"><link rel="prefetch" href="/docs/assets/js/202.80dee678.js"><link rel="prefetch" href="/docs/assets/js/203.68743888.js"><link rel="prefetch" href="/docs/assets/js/204.144e75c8.js"><link rel="prefetch" href="/docs/assets/js/205.79e5fae2.js"><link rel="prefetch" href="/docs/assets/js/206.8a52fc7c.js"><link rel="prefetch" href="/docs/assets/js/207.f03b6630.js"><link rel="prefetch" href="/docs/assets/js/208.4adc67f1.js"><link rel="prefetch" href="/docs/assets/js/209.d954284a.js"><link rel="prefetch" href="/docs/assets/js/21.66cad62f.js"><link rel="prefetch" href="/docs/assets/js/210.e229b39e.js"><link rel="prefetch" href="/docs/assets/js/211.8dd91165.js"><link rel="prefetch" href="/docs/assets/js/212.3f274ff8.js"><link rel="prefetch" href="/docs/assets/js/213.d42486d0.js"><link rel="prefetch" href="/docs/assets/js/214.bf3d27d9.js"><link rel="prefetch" href="/docs/assets/js/215.ef9618f4.js"><link rel="prefetch" href="/docs/assets/js/216.130026b6.js"><link rel="prefetch" href="/docs/assets/js/217.b9121be5.js"><link rel="prefetch" href="/docs/assets/js/218.c6c282ae.js"><link rel="prefetch" href="/docs/assets/js/219.50f585ce.js"><link rel="prefetch" href="/docs/assets/js/22.eaa2a72e.js"><link rel="prefetch" href="/docs/assets/js/220.3d0cafbf.js"><link rel="prefetch" href="/docs/assets/js/221.baa327fa.js"><link rel="prefetch" href="/docs/assets/js/222.3997462a.js"><link rel="prefetch" href="/docs/assets/js/223.96b1a33e.js"><link rel="prefetch" href="/docs/assets/js/224.6c9f07ed.js"><link rel="prefetch" href="/docs/assets/js/225.1d0bb56b.js"><link rel="prefetch" href="/docs/assets/js/226.b4fa6400.js"><link rel="prefetch" href="/docs/assets/js/227.a0982245.js"><link rel="prefetch" href="/docs/assets/js/228.c22af3a4.js"><link rel="prefetch" href="/docs/assets/js/229.8d24b865.js"><link rel="prefetch" href="/docs/assets/js/23.7f9a219d.js"><link rel="prefetch" href="/docs/assets/js/230.cb64f83c.js"><link rel="prefetch" href="/docs/assets/js/231.abb5ae54.js"><link rel="prefetch" href="/docs/assets/js/232.36d27b89.js"><link rel="prefetch" href="/docs/assets/js/233.38d9f352.js"><link rel="prefetch" href="/docs/assets/js/234.ebdd297b.js"><link rel="prefetch" href="/docs/assets/js/235.466e7add.js"><link rel="prefetch" href="/docs/assets/js/236.876cd32b.js"><link rel="prefetch" href="/docs/assets/js/237.3a54a6e4.js"><link rel="prefetch" href="/docs/assets/js/238.8d0d13a1.js"><link rel="prefetch" href="/docs/assets/js/239.7dd70067.js"><link rel="prefetch" href="/docs/assets/js/24.dca6b24c.js"><link rel="prefetch" href="/docs/assets/js/240.24df5553.js"><link rel="prefetch" href="/docs/assets/js/241.abc3e36f.js"><link rel="prefetch" href="/docs/assets/js/242.41ab2a8f.js"><link rel="prefetch" href="/docs/assets/js/243.f1eba953.js"><link rel="prefetch" href="/docs/assets/js/244.45b1e97b.js"><link rel="prefetch" href="/docs/assets/js/245.2cf65af7.js"><link rel="prefetch" href="/docs/assets/js/246.696c0de7.js"><link rel="prefetch" href="/docs/assets/js/247.3fca7ab2.js"><link rel="prefetch" href="/docs/assets/js/248.c4841e40.js"><link rel="prefetch" href="/docs/assets/js/249.d414bbe7.js"><link rel="prefetch" href="/docs/assets/js/250.2b5d345d.js"><link rel="prefetch" href="/docs/assets/js/251.d8d1573b.js"><link rel="prefetch" href="/docs/assets/js/252.8c86c98d.js"><link rel="prefetch" href="/docs/assets/js/253.641c32e2.js"><link rel="prefetch" href="/docs/assets/js/254.bedfc26a.js"><link rel="prefetch" href="/docs/assets/js/255.b341b73b.js"><link rel="prefetch" href="/docs/assets/js/256.b92fe8fb.js"><link rel="prefetch" href="/docs/assets/js/257.39da1358.js"><link rel="prefetch" href="/docs/assets/js/258.8ed616c4.js"><link rel="prefetch" href="/docs/assets/js/259.f1670e18.js"><link rel="prefetch" href="/docs/assets/js/26.93f69461.js"><link rel="prefetch" href="/docs/assets/js/260.062c9633.js"><link rel="prefetch" href="/docs/assets/js/261.840ab9d5.js"><link rel="prefetch" href="/docs/assets/js/262.79cc5b41.js"><link rel="prefetch" href="/docs/assets/js/263.ae7ae1d8.js"><link rel="prefetch" href="/docs/assets/js/264.c17fca55.js"><link rel="prefetch" href="/docs/assets/js/265.465b4fdd.js"><link rel="prefetch" href="/docs/assets/js/266.82e7551c.js"><link rel="prefetch" href="/docs/assets/js/267.0d7ff0b7.js"><link rel="prefetch" href="/docs/assets/js/268.72d75794.js"><link rel="prefetch" href="/docs/assets/js/269.8b5d28e1.js"><link rel="prefetch" href="/docs/assets/js/27.101a5431.js"><link rel="prefetch" href="/docs/assets/js/270.dd26717a.js"><link rel="prefetch" href="/docs/assets/js/271.1c93a73a.js"><link rel="prefetch" href="/docs/assets/js/272.2475faaa.js"><link rel="prefetch" href="/docs/assets/js/273.9470e5eb.js"><link rel="prefetch" href="/docs/assets/js/274.72916804.js"><link rel="prefetch" href="/docs/assets/js/275.73ab1b26.js"><link rel="prefetch" href="/docs/assets/js/276.b2e466e4.js"><link rel="prefetch" href="/docs/assets/js/277.dd364cad.js"><link rel="prefetch" href="/docs/assets/js/278.6f986f64.js"><link rel="prefetch" href="/docs/assets/js/279.e925be9d.js"><link rel="prefetch" href="/docs/assets/js/28.5482134c.js"><link rel="prefetch" href="/docs/assets/js/280.1991a29d.js"><link rel="prefetch" href="/docs/assets/js/281.1b987a11.js"><link rel="prefetch" href="/docs/assets/js/282.9decbc7a.js"><link rel="prefetch" href="/docs/assets/js/283.3dd972c1.js"><link rel="prefetch" href="/docs/assets/js/284.ef21f511.js"><link rel="prefetch" href="/docs/assets/js/285.3fdaae0f.js"><link rel="prefetch" href="/docs/assets/js/286.2a9ae31e.js"><link rel="prefetch" href="/docs/assets/js/287.cd370e07.js"><link rel="prefetch" href="/docs/assets/js/288.c233ca38.js"><link rel="prefetch" href="/docs/assets/js/289.0965d4a2.js"><link rel="prefetch" href="/docs/assets/js/29.e571e224.js"><link rel="prefetch" href="/docs/assets/js/290.1baac16e.js"><link rel="prefetch" href="/docs/assets/js/291.10ad4eb0.js"><link rel="prefetch" href="/docs/assets/js/292.3061dbf3.js"><link rel="prefetch" href="/docs/assets/js/293.4c0e14a0.js"><link rel="prefetch" href="/docs/assets/js/294.fff197b0.js"><link rel="prefetch" href="/docs/assets/js/295.9827df13.js"><link rel="prefetch" href="/docs/assets/js/296.4510efc8.js"><link rel="prefetch" href="/docs/assets/js/297.8c6d5944.js"><link rel="prefetch" href="/docs/assets/js/298.0962830a.js"><link rel="prefetch" href="/docs/assets/js/299.828c8c34.js"><link rel="prefetch" href="/docs/assets/js/3.5156e8b0.js"><link rel="prefetch" href="/docs/assets/js/30.ec4bf9cc.js"><link rel="prefetch" href="/docs/assets/js/300.ae82c2e4.js"><link rel="prefetch" href="/docs/assets/js/301.2500a83a.js"><link rel="prefetch" href="/docs/assets/js/302.c95d18c5.js"><link rel="prefetch" href="/docs/assets/js/303.a4e076e6.js"><link rel="prefetch" href="/docs/assets/js/304.59df7e30.js"><link rel="prefetch" href="/docs/assets/js/305.44586a68.js"><link rel="prefetch" href="/docs/assets/js/31.47cf62ad.js"><link rel="prefetch" href="/docs/assets/js/32.e83860c5.js"><link rel="prefetch" href="/docs/assets/js/33.30631df4.js"><link rel="prefetch" href="/docs/assets/js/34.9542d8c9.js"><link rel="prefetch" href="/docs/assets/js/35.c73233f0.js"><link rel="prefetch" href="/docs/assets/js/36.f40f2aee.js"><link rel="prefetch" href="/docs/assets/js/37.8f4c6651.js"><link rel="prefetch" href="/docs/assets/js/38.db3fc1fa.js"><link rel="prefetch" href="/docs/assets/js/39.2e4fbed1.js"><link rel="prefetch" href="/docs/assets/js/4.5d67f627.js"><link rel="prefetch" href="/docs/assets/js/40.776e7649.js"><link rel="prefetch" href="/docs/assets/js/41.2b13c0bf.js"><link rel="prefetch" href="/docs/assets/js/42.5c65eb07.js"><link rel="prefetch" href="/docs/assets/js/43.26b04f0d.js"><link rel="prefetch" href="/docs/assets/js/44.150218aa.js"><link rel="prefetch" href="/docs/assets/js/45.41db0539.js"><link rel="prefetch" href="/docs/assets/js/46.b78f0c05.js"><link rel="prefetch" href="/docs/assets/js/47.c9fe169d.js"><link rel="prefetch" href="/docs/assets/js/48.ed4fc310.js"><link rel="prefetch" href="/docs/assets/js/49.4441b367.js"><link rel="prefetch" href="/docs/assets/js/5.e68a97ae.js"><link rel="prefetch" href="/docs/assets/js/50.829c211c.js"><link rel="prefetch" href="/docs/assets/js/51.ce296027.js"><link rel="prefetch" href="/docs/assets/js/52.48f9164d.js"><link rel="prefetch" href="/docs/assets/js/53.f11a069c.js"><link rel="prefetch" href="/docs/assets/js/54.1e86b7a3.js"><link rel="prefetch" href="/docs/assets/js/55.9b97a2a7.js"><link rel="prefetch" href="/docs/assets/js/56.49e3f9cf.js"><link rel="prefetch" href="/docs/assets/js/57.7242644a.js"><link rel="prefetch" href="/docs/assets/js/58.d8f588d2.js"><link rel="prefetch" href="/docs/assets/js/59.233a4681.js"><link rel="prefetch" href="/docs/assets/js/6.553af9aa.js"><link rel="prefetch" href="/docs/assets/js/60.712f07a1.js"><link rel="prefetch" href="/docs/assets/js/61.60360262.js"><link rel="prefetch" href="/docs/assets/js/62.5975afbd.js"><link rel="prefetch" href="/docs/assets/js/63.fa2cbe4d.js"><link rel="prefetch" href="/docs/assets/js/64.48d02cd4.js"><link rel="prefetch" href="/docs/assets/js/65.ed934de3.js"><link rel="prefetch" href="/docs/assets/js/66.a2f7c304.js"><link rel="prefetch" href="/docs/assets/js/67.d5c80293.js"><link rel="prefetch" href="/docs/assets/js/68.ffe740f8.js"><link rel="prefetch" href="/docs/assets/js/69.46226238.js"><link rel="prefetch" href="/docs/assets/js/7.6c4ba6e1.js"><link rel="prefetch" href="/docs/assets/js/70.83d2a4b3.js"><link rel="prefetch" href="/docs/assets/js/71.931a4db4.js"><link rel="prefetch" href="/docs/assets/js/72.9b7f1862.js"><link rel="prefetch" href="/docs/assets/js/73.7bc7b4a6.js"><link rel="prefetch" href="/docs/assets/js/74.4da89d30.js"><link rel="prefetch" href="/docs/assets/js/75.1727a3da.js"><link rel="prefetch" href="/docs/assets/js/76.1eaa5d35.js"><link rel="prefetch" href="/docs/assets/js/77.9f8f19ed.js"><link rel="prefetch" href="/docs/assets/js/78.6bf7ee7d.js"><link rel="prefetch" href="/docs/assets/js/79.607e0fcd.js"><link rel="prefetch" href="/docs/assets/js/8.9da6af94.js"><link rel="prefetch" href="/docs/assets/js/80.97e1d0d7.js"><link rel="prefetch" href="/docs/assets/js/81.f576d61e.js"><link rel="prefetch" href="/docs/assets/js/82.6daf4506.js"><link rel="prefetch" href="/docs/assets/js/83.a626643a.js"><link rel="prefetch" href="/docs/assets/js/84.8a852da7.js"><link rel="prefetch" href="/docs/assets/js/85.b7a999d1.js"><link rel="prefetch" href="/docs/assets/js/86.64ab326c.js"><link rel="prefetch" href="/docs/assets/js/87.3fd8f634.js"><link rel="prefetch" href="/docs/assets/js/88.de00a005.js"><link rel="prefetch" href="/docs/assets/js/89.ed3fde5d.js"><link rel="prefetch" href="/docs/assets/js/9.ffd39152.js"><link rel="prefetch" href="/docs/assets/js/90.84b6d855.js"><link rel="prefetch" href="/docs/assets/js/91.44cea406.js"><link rel="prefetch" href="/docs/assets/js/92.81cc9fb4.js"><link rel="prefetch" href="/docs/assets/js/93.99b5658e.js"><link rel="prefetch" href="/docs/assets/js/94.f640c7eb.js"><link rel="prefetch" href="/docs/assets/js/95.b90fb9a0.js"><link rel="prefetch" href="/docs/assets/js/96.8febe93d.js"><link rel="prefetch" href="/docs/assets/js/97.002963f9.js"><link rel="prefetch" href="/docs/assets/js/98.91580ef9.js"><link rel="prefetch" href="/docs/assets/js/99.edcb198a.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.49740982.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Nguyễn Khánk's Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>NoSql Distilled</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/kungfu/nosql-distilled/00.html" class="sidebar-link">NoSQL Distilled</a></li><li><a href="/docs/kungfu/nosql-distilled/c0.html" class="sidebar-link">Preface</a></li><li><a href="/docs/kungfu/nosql-distilled/c1.html" class="sidebar-link">Chapter 1. Why NoSQL?</a></li><li><a href="/docs/kungfu/nosql-distilled/c2.html" class="sidebar-link">Chapter 2. Aggregate Data Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c3.html" class="sidebar-link">Chapter 3. More Details on Data Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c4.html" class="sidebar-link">Chapter 4. Distribution Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c5.html" aria-current="page" class="active sidebar-link">Chapter 5. Consistency</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docs/kungfu/nosql-distilled/c6.html" class="sidebar-link">Chapter 6. Version Stamps</a></li><li><a href="/docs/kungfu/nosql-distilled/c7.html" class="sidebar-link">Chapter 7. Map-Reduce</a></li><li><a href="/docs/kungfu/nosql-distilled/c8.html" class="sidebar-link">Chapter 8. Key-Value Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c9.html" class="sidebar-link">Chapter 9. Document Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c10.html" class="sidebar-link">Chapter 10. Column-Family Stores</a></li><li><a href="/docs/kungfu/nosql-distilled/c11.html" class="sidebar-link">Chapter 11. Graph Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c12.html" class="sidebar-link">Chapter 12. Schema Migrations</a></li><li><a href="/docs/kungfu/nosql-distilled/c13.html" class="sidebar-link">Chapter 13. Polyglot Persistence</a></li><li><a href="/docs/kungfu/nosql-distilled/c14.html" class="sidebar-link">Chapter 14. Beyond NoSQL</a></li><li><a href="/docs/kungfu/nosql-distilled/c15.html" class="sidebar-link">Chapter 15. Choosing Your Database</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>97 Things Every Programmer Should Know</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>The Art of Readable Code</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="chapter-5-consistency"><a href="#chapter-5-consistency" class="header-anchor">#</a> Chapter 5. Consistency</h1> <p>One of the biggest changes from a centralized relational database to a cluster-oriented NoSQL
+database is in how you think about consistency. Relational databases try to exhibit <strong>strong
+consistency</strong> by avoiding all the various inconsistencies that we’ll shortly be discussing. Once you
+start looking at the NoSQL world, phrases such as “CAP theorem” and “eventual consistency”
+appear, and as soon as you start building something you have to think about what sort of consistency
+you need for your system.</p> <p>Consistency comes in various forms, and that one word covers a myriad of ways errors can creep
+into your life. So we’re going to begin by talking about the various shapes consistency can take. After
+that we’ll discuss why you may want to relax consistency (and its big sister, durability).</p> <h3 id="_5-1-update-consistency"><a href="#_5-1-update-consistency" class="header-anchor">#</a> 5.1. Update Consistency</h3> <p>We’ll begin by considering updating a telephone number. Coincidentally, Martin and Pramod are
+looking at the company website and notice that the phone number is out of date. Implausibly, they both
+have update access, so they both go in at the same time to update the number. To make the example
+interesting, we’ll assume they update it slightly differently, because each uses a slightly different
+format. This issue is called a <strong>write-write conflict</strong> : two people updating the same data item at the
+same time.</p> <p>When the writes reach the server, the server will <strong>serialize</strong> them—decide to apply one, then the
+other. Let’s assume it uses alphabetical order and picks Martin’s update first, then Pramod’s. Without
+any concurrency control, Martin’s update would be applied and immediately overwritten by
+Pramod’s. In this case Martin’s is a <strong>lost update</strong>. Here the lost update is not a big problem, but often it is. We see this as a failure of consistency because Pramod’s update was based on the state before Martin’s update, yet was applied after it.</p> <p>Approaches for maintaining consistency in the face of concurrency are often described as
+pessimistic or optimistic. A <strong>pessimistic</strong> approach works by preventing conflicts from occurring; an
+<strong>optimistic</strong> approach lets conflicts occur, but detects them and takes action to sort them out. For update conflicts, the most common pessimistic approach is to have write locks, so that in order to change a value you need to acquire a lock, and the system ensures that only one client can get a lock at a time.</p> <p>So Martin and Pramod would both attempt to acquire the write lock, but only Martin (the first one)
+would succeed. Pramod would then see the result of Martin’s write before deciding whether to make
+his own update.</p> <p>A common optimistic approach is a <strong>conditional update</strong> where any client that does an update tests
+the value just before updating it to see if it’s changed since his last read. In this case, Martin’s update would succeed but Pramod’s would fail. The error would let Pramod know that he should look at the
+value again and decide whether to attempt a further update.</p> <p>Both the pessimistic and optimistic approaches that we’ve just described rely on a consistent
+serialization of the updates. With a single server, this is obvious—it has to choose one, then the other.</p> <p>But if there’s more than one server, such as with peer-to-peer replication, then two nodes might apply
+the updates in a different order, resulting in a different value for the telephone number on each peer.
+Often, when people talk about concurrency in distributed systems, they talk about sequential
+consistency—ensuring that all nodes apply operations in the same order.</p> <p>There is another optimistic way to handle a write-write conflict—save both updates and record
+that they are in conflict. This approach is familiar to many programmers from version control systems,
+particularly distributed version control systems that by their nature will often have conflicting
+commits. The next step again follows from version control: You have to merge the two updates
+somehow. Maybe you show both values to the user and ask them to sort it out—this is what happens if
+you update the same contact on your phone and your computer. Alternatively, the computer may be
+able to perform the merge itself; if it was a phone formatting issue, it may be able to realize that and
+apply the new number with the standard format. Any automated merge of write-write conflicts is
+highly domain-specific and needs to be programmed for each particular case.</p> <p>Often, when people first encounter these issues, their reaction is to prefer pessimistic concurrency
+because they are determined to avoid conflicts. While in some cases this is the right answer, there is
+always a tradeoff. Concurrent programming involves a fundamental tradeoff between safety (avoiding
+errors such as update conflicts) and liveness (responding quickly to clients). Pessimistic approaches
+often severely degrade the responsiveness of a system to the degree that it becomes unfit for its
+purpose. This problem is made worse by the danger of errors—pessimistic concurrency often leads
+to deadlocks, which are hard to prevent and debug.</p> <p>Replication makes it much more likely to run into write-write conflicts. If different nodes have
+different copies of some data which can be independently updated, then you’ll get conflicts unless you
+take specific measures to avoid them. Using a single node as the target for all writes for some data
+makes it much easier to maintain update consistency. Of the distribution models we discussed earlier,
+all but peer-to-peer replication do this.</p> <h3 id="_5-2-read-consistency"><a href="#_5-2-read-consistency" class="header-anchor">#</a> 5.2. Read Consistency</h3> <p>Having a data store that maintains update consistency is one thing, but it doesn’t guarantee that
+readers of that data store will always get consistent responses to their requests. Let’s imagine we
+have an order with line items and a shipping charge. The shipping charge is calculated based on the
+line items in the order. If we add a line item, we thus also need to recalculate and update the shipping
+charge. In a relational database, the shipping charge and line items will be in separate tables. The
+danger of inconsistency is that Martin adds a line item to his order, Pramod then reads the line items
+and shipping charge, and then Martin updates the shipping charge. This is an <strong>inconsistent read</strong> or
+<strong>read-write conflict</strong> : In Figure 5.1 Pramod has done a read in the middle of Martin’s write.</p> <p><img src="/docs/assets/img/image--019.d18fd686.jpg" alt="img"></p> <p><strong>Figure 5.1. A read-write conflict in logical consistency</strong></p> <p>We refer to this type of consistency as <strong>logical consistency</strong> : ensuring that different data items make sense together. To avoid a logically inconsistent read-write conflict, relational databases support the notion of transactions. Providing Martin wraps his two writes in a transaction, the system guarantees that Pramod will either read both data items before the update or both after the update.</p> <p>A common claim we hear is that NoSQL databases don’t support transactions and thus can’t be
+consistent. Such claim is mostly wrong because it glosses over lots of important details. Our first
+clarification is that any statement about lack of transactions usually only applies to some NoSQL
+databases, in particular the aggregate-oriented ones. In contrast, graph databases tend to support
+ACID transactions just the same as relational databases.</p> <p>Secondly, aggregate-oriented databases do support atomic updates, but only within a single
+aggregate. This means that you will have logical consistency within an aggregate but not between
+aggregates. So in the example, you could avoid running into that inconsistency if the order, the
+delivery charge, and the line items are all part of a single order aggregate.</p> <p>Of course not all data can be put in the same aggregate, so any update that affects multiple
+aggregates leaves open a time when clients could perform an inconsistent read. The length of time an
+inconsistency is present is called the <strong>inconsistency window</strong>. A NoSQL system may have a quite short
+inconsistency window: As one data point, Amazon’s documentation says that the inconsistency
+window for its SimpleDB service is usually less than a second.</p> <p>This example of a logically inconsistent read is the classic example that you’ll see in any book that
+touches database programming. Once you introduce replication, however, you get a whole new kind
+of inconsistency. Let’s imagine there’s one last hotel room for a desirable event. The hotel
+reservation system runs on many nodes. Martin and Cindy are a couple considering this room, but they
+are discussing this on the phone because Martin is in London and Cindy is in Boston. Meanwhile
+Pramod, who is in Mumbai, goes and books that last room. That updates the replicated room
+availability, but the update gets to Boston quicker than it gets to London. When Martin and Cindy fire
+up their browsers to see if the room is available, Cindy sees it booked and Martin sees it free. This is
+another inconsistent read—but it’s a breach of a different form of consistency we call <strong>replication
+consistency</strong> : ensuring that the same data item has the same value when read from different replicas
+(see Figure 5.2).</p> <p><img src="/docs/assets/img/image--020.6f6d6ce9.jpg" alt="img"></p> <p><strong>Figure 5.2. An example of replication inconsistency</strong></p> <p>Eventually, of course, the updates will propagate fully, and Martin will see the room is fully
+booked. Therefore this situation is generally referred to as <strong>eventually consistent</strong> , meaning that at any time nodes may have replication inconsistencies but, if there are no further updates, eventually all nodes will be updated to the same value. Data that is out of date is generally referred to as <strong>stale</strong> , which reminds us that a cache is another form of replication—essentially following the master-slave distribution model.</p> <p>Although replication consistency is independent from logical consistency, replication can
+exacerbate a logical inconsistency by lengthening its inconsistency window. Two different updates on
+the master may be performed in rapid succession, leaving an inconsistency window of milliseconds.
+But delays in networking could mean that the same inconsistency window lasts for much longer on a
+slave.</p> <p>Consistency guarantees aren’t something that’s global to an application. You can usually specify the level of consistency you want with individual requests. This allows you to use weak consistency
+most of the time when it isn’t an issue, but request strong consistency when it is.</p> <p>The presence of an inconsistency window means that different people will see different things at
+the same time. If Martin and Cindy are looking at rooms while on a transatlantic call, it can cause
+confusion. It’s more common for users to act independently, and then this is not a problem. But
+inconsistency windows can be particularly problematic when you get inconsistencies with yourself.
+Consider the example of posting comments on a blog entry. Few people are going to worry about
+inconsistency windows of even a few minutes while people are typing in their latest thoughts. Often,
+systems handle the load of such sites by running on a cluster and load-balancing incoming requests to
+different nodes. Therein lies a danger: You may post a message using one node, then refresh your
+browser, but the refresh goes to a different node which hasn’t received your post yet—and it looks
+like your post was lost.</p> <p>In situations like this, you can tolerate reasonably long inconsistency windows, but you need <strong>read-
+your-writes consistency</strong> which means that, once you’ve made an update, you’re guaranteed to
+continue seeing that update. One way to get this in an otherwise eventually consistent system is to
+provide <strong>session consistency</strong> : Within a user’s session there is read-your-writes consistency. This
+does mean that the user may lose that consistency should their session end for some reason or should
+the user access the same system simultaneously from different computers, but these cases are
+relatively rare.</p> <p>There are a couple of techniques to provide session consistency. A common way, and often the
+easiest way, is to have a <strong>sticky session</strong> : a session that’s tied to one node (this is also called <strong>session affinity</strong> ). A sticky session allows you to ensure that as long as you keep read-your-writes consistency on a node, you’ll get it for sessions too. The downside is that sticky sessions reduce the ability of the load balancer to do its job.</p> <p>Another approach for session consistency is to use version stamps (“Version Stamps,” p. 61 ) and
+ensure every interaction with the data store includes the latest version stamp seen by a session. The
+server node must then ensure that it has the updates that include that version stamp before responding
+to a request.</p> <p>Maintaining session consistency with sticky sessions and master-slave replication can be awkward
+if you want to read from the slaves to improve read performance but still need to write to the master.
+One way of handling this is for writes to be sent the slave, who then takes responsibility for
+forwarding them to the master while maintaining session consistency for its client. Another approach
+is to switch the session to the master temporarily when doing a write, just long enough that reads are
+done from the master until the slaves have caught up with the update.</p> <p>We’re talking about replication consistency in the context of a data store, but it’s also an important
+factor in overall application design. Even a simple database system will have lots of occasions
+where data is presented to a user, the user cogitates, and then updates that data. It’s usually a bad idea
+to keep a transaction open during user interaction because there’s a real danger of conflicts when the
+user tries to make her update, which leads to such approaches as offline locks [Fowler PoEAA].</p> <h3 id="_5-3-relaxing-consistency"><a href="#_5-3-relaxing-consistency" class="header-anchor">#</a> 5.3. Relaxing Consistency</h3> <p>Consistency is a Good Thing—but, sadly, sometimes we have to sacrifice it. It is always possible to
+design a system to avoid inconsistencies, but often impossible to do so without making unbearable sacrifices in other characteristics of the system. As a result, we often have to tradeoff consistency for something else. While some architects see this as a disaster, we see it as part of the inevitable
+tradeoffs involved in system design. Furthermore, different domains have different tolerances for
+inconsistency, and we need to take this tolerance into account as we make our decisions.</p> <p>Trading off consistency is a familiar concept even in single-server relational database systems.
+Here, our principal tool to enforce consistency is the transaction, and transactions can provide strong
+consistency guarantees. However, transaction systems usually come with the ability to relax isolation
+levels, allowing queries to read data that hasn’t been committed yet, and in practice we see most
+applications relax consistency down from the highest isolation level (serialized) in order to get
+effective performance. We most commonly see people using the read-committed transaction level,
+which eliminates some read-write conflicts but allows others.</p> <p>Many systems forgo transactions entirely because the performance impact of transactions is too
+high. We’ve seen this in a couple different ways. On a small scale, we saw the popularity of MySQL
+during the days when it didn’t support transactions. Many websites liked the high speed of MySQL
+and were prepared to live without transactions. At the other end of the scale, some very large
+websites, such as eBay [Pritchett], have had to forgo transactions in order to perform acceptably—
+this is particularly true when you need to introduce sharding. Even without these constraints, many
+application builders need to interact with remote systems that can’t be properly included within a
+transaction boundary, so updating outside of transactions is a quite common occurrence for enterprise
+applications.</p> <h3 id="_5-3-1-the-cap-theorem"><a href="#_5-3-1-the-cap-theorem" class="header-anchor">#</a> <strong>5.3.1. The CAP Theorem</strong></h3> <p>In the NoSQL world it’s common to refer to the CAP theorem as the reason why you may need to
+relax consistency. It was originally proposed by Eric Brewer in 2000 [Brewer] and given a formal
+proof by Seth Gilbert and Nancy Lynch [Lynch and Gilbert] a couple of years later. (You may also
+hear this referred to as Brewer’s Conjecture.)</p> <p>The basic statement of the CAP theorem is that, given the three properties of Consistency,
+Availability, and Partition tolerance, you can only get two. Obviously this depends very much on how
+you define these three properties, and differing opinions have led to several debates on what the real
+consequences of the CAP theorem are.</p> <p>Consistency is pretty much as we’ve defined it so far. <strong>Availability</strong> has a particular meaning in the
+context of CAP—it means that if you can talk to a node in the cluster, it can read and write data.
+That’s subtly different from the usual meaning, which we’ll explore later. <strong>Partition tolerance</strong> means
+that the cluster can survive communication breakages in the cluster that separate the cluster into
+multiple partitions unable to communicate with each other (situation known as a <strong>split brain</strong> , see
+Figure 5.3).</p> <p><img src="/docs/assets/img/image--021.e99ad9d0.jpg" alt="img"></p> <p><strong>Figure 5.3. With two breaks in the communication lines, the network partitions into two groups.</strong></p> <p>A single-server system is the obvious example of a CA system—a system that has Consistency and Availability but not Partition tolerance. A single machine can’t partition, so it does not have to worry
+about partition tolerance. There’s only one node—so if it’s up, it’s available. Being up and keeping
+consistency is reasonable. This is the world that most relational database systems live in.</p> <p>It is theoretically possible to have a CA cluster. However, this would mean that if a partition ever
+occurs in the cluster, all the nodes in the cluster would go down so that no client can talk to a node.
+By the usual definition of “available,” this would mean a lack of availability, but this is where CAP’s
+special usage of “availability” gets confusing. CAP defines “availability” to mean “every request
+received by a nonfailing node in the system must result in a response” [Lynch and Gilbert]. So a
+failed, unresponsive node doesn’t infer a lack of CAP availability.</p> <p>This does imply that you can build a CA cluster, but you have to ensure it will only partition rarely
+and completely. This can be done, at least within a data center, but it’s usually prohibitively
+expensive. Remember that in order to bring down all the nodes in a cluster on a partition, you also
+have to detect the partition in a timely manner—which itself is no small feat.</p> <p>So clusters have to be tolerant of network partitions. And here is the real point of the CAP theorem.
+Although the CAP theorem is often stated as “you can only get two out of three,” in practice what it’s
+saying is that in a system that may suffer partitions, as distributed system do, you have to trade off
+consistency versus availability. This isn’t a binary decision; often, you can trade off a little
+consistency to get some availability. The resulting system would be neither perfectly consistent nor
+perfectly available—but would have a combination that is reasonable for your particular needs.</p> <p>An example should help illustrate this. Martin and Pramod are both trying to book the last hotel
+room on a system that uses peer-to-peer distribution with two nodes (London for Martin and Mumbai
+for Pramod). If we want to ensure consistency, then when Martin tries to book his room on the London
+node, that node must communicate with the Mumbai node before confirming the booking. Essentially,
+both nodes must agree on the serialization of their requests. This gives us consistency—but should the
+network link break, then neither system can book any hotel room, sacrificing availability.</p> <p>One way to improve availability is to designate one node as the master for a particular hotel and
+ensure all bookings are processed by that master. Should that master be Mumbai, then Mumbai can
+still process hotel bookings for that hotel and Pramod will get the last room. If we use master-slave
+replication, London users can see the inconsistent room information but cannot make a booking and
+thus cause an update inconsistency. However, users expect that it could happen in this situation—so,
+again, the compromise works for this particular use case.</p> <p>This improves the situation, but we still can’t book a room on the London node for the hotel whose
+master is in Mumbai if the connection goes down. In CAP terminology, this is a failure of availability
+in that Martin can talk to the London node but the London node cannot update the data. To gain more
+availability, we might allow both systems to keep accepting hotel reservations even if the network
+link breaks down. The danger here is that Martin and Pramod book the last hotel room. However,
+depending on how this hotel operates, that may be fine. Often, travel companies tolerate a certain
+amount of overbooking in order to cope with no-shows. Conversely, some hotels always keep a few
+rooms clear even when they are fully booked, in order to be able to swap a guest out of a room with
+problems or to accommodate a high-status late booking. Some might even cancel the booking with an
+apology once they detected the conflict—reasoning that the cost of that is less than the cost of losing
+bookings on network failures.</p> <p>The classic example of allowing inconsistent writes is the shopping cart, as discussed in Dynamo
+[Amazon’s Dynamo]. In this case you are always allowed to write to your shopping cart, even if
+network failures mean you end up with multiple shopping carts. The checkout process can merge the
+two shopping carts by putting the union of the items from the carts into a single cart and returning that.
+Almost always that’s the correct answer—but if not, the user gets the opportunity to look at the cart
+before completing the order.</p> <p>The lesson here is that although most software developers treat update consistency as The Way
+Things Must Be, there are cases where you can deal gracefully with inconsistent answers to requests.
+These situations are closely tied to the domain and require domain knowledge to know how to
+resolve. Thus you can’t usually look to solve them purely within the development team—you have to
+talk to domain experts. If you can find a way to handle inconsistent updates, this gives you more
+options to increase availability and performance. For a shopping cart, it means that shoppers can
+always shop, and do so quickly. And as Patriotic Americans, we know how vital it is to support Our
+Retail Destiny.</p> <p>A similar logic applies to read consistency. If you are trading financial instruments over a
+computerized exchange, you may not be able to tolerate any data that isn’t right up to date. However,
+if you are posting a news item to a media website, you may be able to tolerate old pages for minutes.</p> <p>In these cases you need to know how tolerant you are of stale reads, and how long the
+inconsistency window can be—often in terms of the average length, worst case, and some measure of
+the distribution for the lengths. Different data items may have different tolerances for staleness, and
+thus may need different settings in your replication configuration.</p> <p>Advocates of NoSQL often say that instead of following the ACID properties of relational
+transactions, NoSQL systems follow the BASE properties (Basically Available, Soft state, Eventual
+consistency) [Brewer]. Although we feel we ought to mention the BASE acronym here, we don’t think
+it’s very useful. The acronym is even more contrived than ACID, and neither “basically available”
+nor “soft state” have been well defined. We should also stress that when Brewer introduced the
+notion of BASE, he saw the tradeoff between ACID and BASE as a spectrum, not a binary choice.</p> <p>We’ve included this discussion of the CAP theorem because it’s often used (and abused) when
+talking about the tradeoffs involving consistency in distributed databases. However, it’s usually better
+to think not about the tradeoff between consistency and availability but rather between consistency
+and <em>latency</em>. We can summarize much of the discussion about consistency in distribution by saying
+that we can improve consistency by getting more nodes involved in the interaction, but each node we
+add increases the response time of that interaction. We can then think of availability as the limit of
+latency that we’re prepared to tolerate; once latency gets too high, we give up and treat the data as
+unavailable—which neatly fits its definition in the context of CAP.</p> <h3 id="_5-4-relaxing-durability"><a href="#_5-4-relaxing-durability" class="header-anchor">#</a> 5.4. Relaxing Durability</h3> <p>So far we’ve talked about consistency, which is most of what people mean when they talk about the
+ACID properties of database transactions. The key to Consistency is serializing requests by forming
+Atomic, Isolated work units. But most people would scoff at relaxing durability—after all, what is the
+point of a data store if it can lose updates?</p> <p>As it turns out, there are cases where you may want to trade off some durability for higher
+performance. If a database can run mostly in memory, apply updates to its in-memory representation,
+and periodically flush changes to disk, then it may be able to provide substantially higher
+responsiveness to requests. The cost is that, should the server crash, any updates since the last flush
+will be lost.</p> <p>One example of where this tradeoff may be worthwhile is storing user-session state. A big website
+may have many users and keep temporary information about what each user is doing in some kind of
+session state. There’s a lot of activity on this state, creating lots of demand, which affects the
+responsiveness of the website. The vital point is that losing the session data isn’t too much of a
+tragedy—it will create some annoyance, but maybe less than a slower website would cause. This
+makes it a good candidate for nondurable writes. Often, you can specify the durability needs on a
+call-by-call basis, so that more important updates can force a flush to disk.</p> <p>Another example of relaxing durability is capturing telemetric data from physical devices. It may
+be that you’d rather capture data at a faster rate, at the cost of missing the last updates should the
+server go down.</p> <p>Another class of durability tradeoffs comes up with replicated data. A failure of <strong>replication durability</strong> occurs when a node processes an update but fails before that update is replicated to the
+other nodes. A simple case of this may happen if you have a master-slave distribution model where
+the slaves appoint a new master automatically should the existing master fail. If a master does fail,
+any writes not passed onto the replicas will effectively become lost. Should the master come back
+online, those updates will conflict with updates that have happened since. We think of this as a
+durability problem because you think your update has succeeded since the master acknowledged it,
+but a master node failure caused it to be lost.</p> <p>If you’re sufficiently confident in bringing the master back online rapidly, this is a reason not to
+auto-failover to a slave. Otherwise, you can improve replication durability by ensuring that the master
+waits for some replicas to acknowledge the update before the master acknowledges it to the client.
+Obviously, however, that will slow down updates and make the cluster unavailable if slaves fail—
+so, again, we have a tradeoff, depending upon how vital durability is. As with basic durability, it’s
+useful for individual calls to indicate what level of durability they need.</p> <h3 id="_5-5-quorums"><a href="#_5-5-quorums" class="header-anchor">#</a> 5.5. Quorums</h3> <p>When you’re trading off consistency or durability, it’s not an all or nothing proposition. The more
+nodes you involve in a request, the higher is the chance of avoiding an inconsistency. This naturally
+leads to the question: How many nodes need to be involved to get strong consistency?</p> <p>Imagine some data replicated over three nodes. You don’t need all nodes to acknowledge a write
+to ensure strong consistency; all you need is two of them—a majority. If you have conflicting writes,
+only one can get a majority. This is referred to as a <strong>write quorum</strong> and expressed in a slightly
+pretentious inequality of W &gt; N/2, meaning the number of nodes participating in the write (W) must be
+more than the half the number of nodes involved in replication (N). The number of replicas is often
+called the <strong>replication factor</strong>.</p> <p>Similarly to the write quorum, there is the notion of read quorum: How many nodes you need to
+contact to be sure you have the most up-to-date change. The read quorum is a bit more complicated
+because it depends on how many nodes need to confirm a write.</p> <p>Let’s consider a replication factor of 3. If all writes need two nodes to confirm (W = 2) then we
+need to contact at least two nodes to be sure we’ll get the latest data. If, however, writes are only
+confirmed by a single node (W = 1) we need to talk to all three nodes to be sure we have the latest
+updates. In this case, since we don’t have a write quorum, we may have an update conflict, but by
+contacting enough readers we can be sure to detect it. Thus we can get strongly consistent reads even
+if we don’t have strong consistency on our writes.</p> <p>This relationship between the number of nodes you need to contact for a read (<code>R</code>), those confirming
+a write (<code>W</code>), and the replication factor (<code>N</code>) can be captured in an inequality: You can have a strongly
+consistent read if <code>R + W &gt; N.</code></p> <p>These inequalities are written with a peer-to-peer distribution model in mind. If you have a master-
+slave distribution, you only have to write to the master to avoid write-write conflicts, and similarly
+only read from the master to avoid read-write conflicts. With this notation, it is common to confuse
+the number of nodes in the cluster with the replication factor, but these are often different. I may have
+100 nodes in my cluster, but only have a replication factor of 3, with most of the distribution
+occurring due to sharding.</p> <p>Indeed most authorities suggest that a replication factor of 3 is enough to have good resilience. This
+allows a single node to fail while still maintaining quora for reads and writes. If you have automatic
+rebalancing, it won’t take too long for the cluster to create a third replica, so the chances of losing a second replica before a replacement comes up are slight.</p> <p>The number of nodes participating in an operation can vary with the operation. When writing, we
+might require quorum for some types of updates but not others, depending on how much we value
+consistency and availability. Similarly, a read that needs speed but can tolerate staleness should
+contact less nodes.</p> <p>Often you may need to take both into account. If you need fast, strongly consistent reads, you could
+require writes to be acknowledged by all the nodes, thus allowing reads to contact only one (N = 3, W
+= 3, R = 1). That would mean that your writes are slow, since they have to contact all three nodes,
+and you would not be able to tolerate losing a node. But in some circumstances that may be the
+tradeoff to make.</p> <p>The point to all of this is that you have a range of options to work with and can choose which
+combination of problems and advantages to prefer. Some writers on NoSQL talk about a simple
+tradeoff between consistency and availability; we hope you now realize that it’s more flexible—and
+more complicated—than that.</p> <h3 id="_5-6-further-reading"><a href="#_5-6-further-reading" class="header-anchor">#</a> 5.6. Further Reading</h3> <p>There are all sorts of interesting blog posts and papers on the Internet about consistency in distributed
+systems, but the most helpful source for us was [Tanenbaum and Van Steen]. It does an excellent job
+of organizing much of the fundamentals of distributed systems and is the best place to go if you’d like
+to delve deeper than we have in this chapter.</p> <p>As we were finishing this book, <em>IEEE Computer</em> had a special issue [IEEE Computer Feb 2012]
+on the growing influence of the CAP theorem, which is a helpful source of further clarification for this
+topic.</p> <h3 id="_5-7-key-points"><a href="#_5-7-key-points" class="header-anchor">#</a> 5.7. Key Points</h3> <ul><li>Write-write conflicts occur when two clients try to write the same data at the same time. Read-    write conflicts occur when one client reads inconsistent data in the middle of another client’s     write.</li> <li>Pessimistic approaches lock data records to prevent conflicts. Optimistic approaches detect     conflicts and fix them.</li> <li>Distributed systems see read-write conflicts due to some nodes having received updates while     other nodes have not. Eventual consistency means that at some point the system will become    consistent once all the writes have propagated to all the nodes.</li> <li>Clients usually want read-your-writes consistency, which means a client can write and then     immediately read the new value. This can be difficult if the read and the write happen on different nodes.</li> <li>To get good consistency, you need to involve many nodes in data operations, but this increases     latency. So you often have to trade off consistency versus latency.</li> <li>The CAP theorem states that if you get a network partition, you have to trade off availability of     data versus consistency.</li> <li>Durability can also be traded off against latency, particularly if you want to survive failures with replicated data.</li> <li>You do not need to contact all replicants to preserve strong consistency with replication; you just need a large enough quorum.</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/kungfu/nosql-distilled/c4.html" class="prev">
+        Chapter 4. Distribution Models
+      </a></span> <span class="next"><a href="/docs/kungfu/nosql-distilled/c6.html">
+        Chapter 6. Version Stamps
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/docs/assets/js/app.5e1c19b2.js" defer></script><script src="/docs/assets/js/2.623726ed.js" defer></script><script src="/docs/assets/js/20.f7e648af.js" defer></script><script src="/docs/assets/js/25.81ef2d7d.js" defer></script>
+  </body>
+</html>
