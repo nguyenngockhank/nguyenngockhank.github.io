@@ -135,8 +135,8 @@ module.exports = [
             '/go/the-little-go/c6',
             '/go/the-little-go/end',
           ]
-        }
-        
+        },
+        '/go/clean'
       ]
     },
     {
