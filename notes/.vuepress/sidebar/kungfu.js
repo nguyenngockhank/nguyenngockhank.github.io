@@ -8,6 +8,12 @@ module.exports = [
         ]
     },
     {
+        title: 'A Philosophy of Software Design',
+        children: [
+            ...Array(21).fill(0).map((v, index) => `philosophy/c${index + 1}`)
+        ]
+    },
+    {
         title: '97 Things Every Programmer Should Know',
         children: [
             ...Array(98).fill(0).map((v, index) => `97things4dev/${index}`)
@@ -19,6 +25,7 @@ module.exports = [
             ...Array(16).fill(0).map((v, index) => `artofcode/c${index}`)
         ]
     },
+
 
     // {
     //     title: 'Basic',
