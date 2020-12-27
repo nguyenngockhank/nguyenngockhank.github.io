@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>A Philosophy of Software Design | Nguyễn Khánk&#39;s Wiki</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../public/favicons/manifest.json">
+    <link rel="mask-icon" href="../public/favicons/safari-pinned-tab.svg" color="#3a0839">
+    <link rel="shortcut icon" href="../public/favicons/favicon.ico">
+    <meta name="description" content="Wikipedia của tui">
+    <meta name="msapplication-TileColor" content="#3a0839">
+    <meta name="msapplication-config" content="../public/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.5d974432.css" as="style"><link rel="preload" href="/docs/assets/js/app.feff3dbb.js" as="script"><link rel="preload" href="/docs/assets/js/2.aca46d71.js" as="script"><link rel="preload" href="/docs/assets/js/247.c0a84943.js" as="script"><link rel="preload" href="/docs/assets/js/27.5ed2ce18.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.e2dac1de.js"><link rel="prefetch" href="/docs/assets/js/100.072f86f4.js"><link rel="prefetch" href="/docs/assets/js/101.fc0bc918.js"><link rel="prefetch" href="/docs/assets/js/102.ddeddef2.js"><link rel="prefetch" href="/docs/assets/js/103.a299e414.js"><link rel="prefetch" href="/docs/assets/js/104.29aa9c20.js"><link rel="prefetch" href="/docs/assets/js/105.5211965b.js"><link rel="prefetch" href="/docs/assets/js/106.f091e57b.js"><link rel="prefetch" href="/docs/assets/js/107.80acce0d.js"><link rel="prefetch" href="/docs/assets/js/108.b0108b40.js"><link rel="prefetch" href="/docs/assets/js/109.7953f94a.js"><link rel="prefetch" href="/docs/assets/js/11.34f9e1bc.js"><link rel="prefetch" href="/docs/assets/js/110.59b888f8.js"><link rel="prefetch" href="/docs/assets/js/111.5b11b553.js"><link rel="prefetch" href="/docs/assets/js/112.8a857b53.js"><link rel="prefetch" href="/docs/assets/js/113.5aab77e8.js"><link rel="prefetch" href="/docs/assets/js/114.aef8a2f2.js"><link rel="prefetch" href="/docs/assets/js/115.777be1e9.js"><link rel="prefetch" href="/docs/assets/js/116.3092451f.js"><link rel="prefetch" href="/docs/assets/js/117.3345c37e.js"><link rel="prefetch" href="/docs/assets/js/118.be055f62.js"><link rel="prefetch" href="/docs/assets/js/119.77b121e6.js"><link rel="prefetch" href="/docs/assets/js/12.a704c651.js"><link rel="prefetch" href="/docs/assets/js/120.2d64d4ae.js"><link rel="prefetch" href="/docs/assets/js/121.954a3ba9.js"><link rel="prefetch" href="/docs/assets/js/122.f8032cd6.js"><link rel="prefetch" href="/docs/assets/js/123.96d7858b.js"><link rel="prefetch" href="/docs/assets/js/124.f12d4c00.js"><link rel="prefetch" href="/docs/assets/js/125.47b679a8.js"><link rel="prefetch" href="/docs/assets/js/126.725c596d.js"><link rel="prefetch" href="/docs/assets/js/127.75f3139f.js"><link rel="prefetch" href="/docs/assets/js/128.9862473f.js"><link rel="prefetch" href="/docs/assets/js/129.0f09cf34.js"><link rel="prefetch" href="/docs/assets/js/13.66fe2f7e.js"><link rel="prefetch" href="/docs/assets/js/130.d20c4272.js"><link rel="prefetch" href="/docs/assets/js/131.771cb92a.js"><link rel="prefetch" href="/docs/assets/js/132.308ce22e.js"><link rel="prefetch" href="/docs/assets/js/133.99780c7f.js"><link rel="prefetch" href="/docs/assets/js/134.c8bb3739.js"><link rel="prefetch" href="/docs/assets/js/135.d22b8cd4.js"><link rel="prefetch" href="/docs/assets/js/136.0f7f2732.js"><link rel="prefetch" href="/docs/assets/js/137.66315d8b.js"><link rel="prefetch" href="/docs/assets/js/138.bc1e4151.js"><link rel="prefetch" href="/docs/assets/js/139.4bf7c284.js"><link rel="prefetch" href="/docs/assets/js/14.57825f78.js"><link rel="prefetch" href="/docs/assets/js/140.023cb781.js"><link rel="prefetch" href="/docs/assets/js/141.3ed2d77a.js"><link rel="prefetch" href="/docs/assets/js/142.97feece5.js"><link rel="prefetch" href="/docs/assets/js/143.22b3a1b2.js"><link rel="prefetch" href="/docs/assets/js/144.3b8c0d53.js"><link rel="prefetch" href="/docs/assets/js/145.c187e405.js"><link rel="prefetch" href="/docs/assets/js/146.02e7dc46.js"><link rel="prefetch" href="/docs/assets/js/147.1ea04230.js"><link rel="prefetch" href="/docs/assets/js/148.eceb141f.js"><link rel="prefetch" href="/docs/assets/js/149.7bc98406.js"><link rel="prefetch" href="/docs/assets/js/15.cbcf56bd.js"><link rel="prefetch" href="/docs/assets/js/150.345f53e1.js"><link rel="prefetch" href="/docs/assets/js/151.97fd5643.js"><link rel="prefetch" href="/docs/assets/js/152.0f0ace62.js"><link rel="prefetch" href="/docs/assets/js/153.5ae906c9.js"><link rel="prefetch" href="/docs/assets/js/154.4524d48f.js"><link rel="prefetch" href="/docs/assets/js/155.d7cbb04b.js"><link rel="prefetch" href="/docs/assets/js/156.51743cf0.js"><link rel="prefetch" href="/docs/assets/js/157.12aa1a8a.js"><link rel="prefetch" href="/docs/assets/js/158.04757c69.js"><link rel="prefetch" href="/docs/assets/js/159.7a8588a6.js"><link rel="prefetch" href="/docs/assets/js/16.b9864c9c.js"><link rel="prefetch" href="/docs/assets/js/160.79ec6015.js"><link rel="prefetch" href="/docs/assets/js/161.4f0b5cd9.js"><link rel="prefetch" href="/docs/assets/js/162.6cc1f3af.js"><link rel="prefetch" href="/docs/assets/js/163.187c5335.js"><link rel="prefetch" href="/docs/assets/js/164.556dc6d8.js"><link rel="prefetch" href="/docs/assets/js/165.6c6e1f75.js"><link rel="prefetch" href="/docs/assets/js/166.afe12552.js"><link rel="prefetch" href="/docs/assets/js/167.bd3dd81a.js"><link rel="prefetch" href="/docs/assets/js/168.b5e90a8d.js"><link rel="prefetch" href="/docs/assets/js/169.80b477b3.js"><link rel="prefetch" href="/docs/assets/js/17.8983ce9d.js"><link rel="prefetch" href="/docs/assets/js/170.4fcbc9a3.js"><link rel="prefetch" href="/docs/assets/js/171.6c7ccd83.js"><link rel="prefetch" href="/docs/assets/js/172.e02d80ea.js"><link rel="prefetch" href="/docs/assets/js/173.66fb904a.js"><link rel="prefetch" href="/docs/assets/js/174.4f18cc78.js"><link rel="prefetch" href="/docs/assets/js/175.b1c5644a.js"><link rel="prefetch" href="/docs/assets/js/176.bd684253.js"><link rel="prefetch" href="/docs/assets/js/177.c62f362d.js"><link rel="prefetch" href="/docs/assets/js/178.f953855f.js"><link rel="prefetch" href="/docs/assets/js/179.10404ee2.js"><link rel="prefetch" href="/docs/assets/js/18.5efe21b3.js"><link rel="prefetch" href="/docs/assets/js/180.c4330ec2.js"><link rel="prefetch" href="/docs/assets/js/181.02c26c33.js"><link rel="prefetch" href="/docs/assets/js/182.773ba280.js"><link rel="prefetch" href="/docs/assets/js/183.064d5ae1.js"><link rel="prefetch" href="/docs/assets/js/184.2c64e798.js"><link rel="prefetch" href="/docs/assets/js/185.38c7b6e9.js"><link rel="prefetch" href="/docs/assets/js/186.d95e2e7a.js"><link rel="prefetch" href="/docs/assets/js/187.8aad3033.js"><link rel="prefetch" href="/docs/assets/js/188.7f201e8d.js"><link rel="prefetch" href="/docs/assets/js/189.6cefdb59.js"><link rel="prefetch" href="/docs/assets/js/19.58823304.js"><link rel="prefetch" href="/docs/assets/js/190.90e5aa35.js"><link rel="prefetch" href="/docs/assets/js/191.3e1cf065.js"><link rel="prefetch" href="/docs/assets/js/192.a2c49267.js"><link rel="prefetch" href="/docs/assets/js/193.cd7650f2.js"><link rel="prefetch" href="/docs/assets/js/194.1d2ca753.js"><link rel="prefetch" href="/docs/assets/js/195.e29ca5e1.js"><link rel="prefetch" href="/docs/assets/js/196.ff519f9d.js"><link rel="prefetch" href="/docs/assets/js/197.d7c7a2c2.js"><link rel="prefetch" href="/docs/assets/js/198.77259c6a.js"><link rel="prefetch" href="/docs/assets/js/199.7983bd3b.js"><link rel="prefetch" href="/docs/assets/js/20.3b486daa.js"><link rel="prefetch" href="/docs/assets/js/200.e9a796d0.js"><link rel="prefetch" href="/docs/assets/js/201.b4449da8.js"><link rel="prefetch" href="/docs/assets/js/202.ab520617.js"><link rel="prefetch" href="/docs/assets/js/203.1944c871.js"><link rel="prefetch" href="/docs/assets/js/204.2ddfe4db.js"><link rel="prefetch" href="/docs/assets/js/205.3a4a5484.js"><link rel="prefetch" href="/docs/assets/js/206.9eaec970.js"><link rel="prefetch" href="/docs/assets/js/207.ca2acd17.js"><link rel="prefetch" href="/docs/assets/js/208.bc4e3070.js"><link rel="prefetch" href="/docs/assets/js/209.8194c212.js"><link rel="prefetch" href="/docs/assets/js/21.1e77a313.js"><link rel="prefetch" href="/docs/assets/js/210.473ccc45.js"><link rel="prefetch" href="/docs/assets/js/211.623b4033.js"><link rel="prefetch" href="/docs/assets/js/212.0f85a611.js"><link rel="prefetch" href="/docs/assets/js/213.191977aa.js"><link rel="prefetch" href="/docs/assets/js/214.a23c6dcc.js"><link rel="prefetch" href="/docs/assets/js/215.25321a42.js"><link rel="prefetch" href="/docs/assets/js/216.e450a05c.js"><link rel="prefetch" href="/docs/assets/js/217.abab04ca.js"><link rel="prefetch" href="/docs/assets/js/218.66e0082a.js"><link rel="prefetch" href="/docs/assets/js/219.5f4ee9fd.js"><link rel="prefetch" href="/docs/assets/js/22.1c51f113.js"><link rel="prefetch" href="/docs/assets/js/220.bbb5df8d.js"><link rel="prefetch" href="/docs/assets/js/221.0d3dfd46.js"><link rel="prefetch" href="/docs/assets/js/222.8e68bdb2.js"><link rel="prefetch" href="/docs/assets/js/223.6c582cd9.js"><link rel="prefetch" href="/docs/assets/js/224.f570e175.js"><link rel="prefetch" href="/docs/assets/js/225.b249063b.js"><link rel="prefetch" href="/docs/assets/js/226.48576d77.js"><link rel="prefetch" href="/docs/assets/js/227.8346e855.js"><link rel="prefetch" href="/docs/assets/js/228.8e3e6ca7.js"><link rel="prefetch" href="/docs/assets/js/229.faed0af8.js"><link rel="prefetch" href="/docs/assets/js/23.dc13f196.js"><link rel="prefetch" href="/docs/assets/js/230.dcc8e04d.js"><link rel="prefetch" href="/docs/assets/js/231.611372c2.js"><link rel="prefetch" href="/docs/assets/js/232.aaaeb300.js"><link rel="prefetch" href="/docs/assets/js/233.819d8911.js"><link rel="prefetch" href="/docs/assets/js/234.41eb70ca.js"><link rel="prefetch" href="/docs/assets/js/235.acedc064.js"><link rel="prefetch" href="/docs/assets/js/236.fbc4b8f7.js"><link rel="prefetch" href="/docs/assets/js/237.7b217482.js"><link rel="prefetch" href="/docs/assets/js/238.6b2400f7.js"><link rel="prefetch" href="/docs/assets/js/239.570754bf.js"><link rel="prefetch" href="/docs/assets/js/24.d1deb976.js"><link rel="prefetch" href="/docs/assets/js/240.30c365e9.js"><link rel="prefetch" href="/docs/assets/js/241.aebbd7aa.js"><link rel="prefetch" href="/docs/assets/js/242.5df1a85a.js"><link rel="prefetch" href="/docs/assets/js/243.704fb61f.js"><link rel="prefetch" href="/docs/assets/js/244.9bc98748.js"><link rel="prefetch" href="/docs/assets/js/245.38e733b7.js"><link rel="prefetch" href="/docs/assets/js/246.b81c0b24.js"><link rel="prefetch" href="/docs/assets/js/248.47e7f09b.js"><link rel="prefetch" href="/docs/assets/js/249.29294a64.js"><link rel="prefetch" href="/docs/assets/js/25.ddba0ef8.js"><link rel="prefetch" href="/docs/assets/js/250.7b97771f.js"><link rel="prefetch" href="/docs/assets/js/251.af134ede.js"><link rel="prefetch" href="/docs/assets/js/252.996a9add.js"><link rel="prefetch" href="/docs/assets/js/253.6b08af88.js"><link rel="prefetch" href="/docs/assets/js/254.a14372bd.js"><link rel="prefetch" href="/docs/assets/js/255.868fb43f.js"><link rel="prefetch" href="/docs/assets/js/256.606c2f81.js"><link rel="prefetch" href="/docs/assets/js/257.9c34c318.js"><link rel="prefetch" href="/docs/assets/js/258.236c65be.js"><link rel="prefetch" href="/docs/assets/js/259.dc9c78fd.js"><link rel="prefetch" href="/docs/assets/js/26.23be3024.js"><link rel="prefetch" href="/docs/assets/js/260.228e0898.js"><link rel="prefetch" href="/docs/assets/js/261.7dd0cc1f.js"><link rel="prefetch" href="/docs/assets/js/262.7c674375.js"><link rel="prefetch" href="/docs/assets/js/263.0d61e50b.js"><link rel="prefetch" href="/docs/assets/js/264.0595e5d9.js"><link rel="prefetch" href="/docs/assets/js/265.4f8cb07b.js"><link rel="prefetch" href="/docs/assets/js/266.fe3edb0f.js"><link rel="prefetch" href="/docs/assets/js/267.8942e793.js"><link rel="prefetch" href="/docs/assets/js/268.86eb0eb9.js"><link rel="prefetch" href="/docs/assets/js/269.03f58dca.js"><link rel="prefetch" href="/docs/assets/js/270.90b7be1d.js"><link rel="prefetch" href="/docs/assets/js/271.b556bf53.js"><link rel="prefetch" href="/docs/assets/js/272.0b7f4823.js"><link rel="prefetch" href="/docs/assets/js/273.d311f5f5.js"><link rel="prefetch" href="/docs/assets/js/274.06fb099b.js"><link rel="prefetch" href="/docs/assets/js/275.e40667a2.js"><link rel="prefetch" href="/docs/assets/js/276.d3ab71c4.js"><link rel="prefetch" href="/docs/assets/js/277.5feda584.js"><link rel="prefetch" href="/docs/assets/js/278.beaf14c2.js"><link rel="prefetch" href="/docs/assets/js/279.f7073aaf.js"><link rel="prefetch" href="/docs/assets/js/28.f7b1175c.js"><link rel="prefetch" href="/docs/assets/js/280.72c464b5.js"><link rel="prefetch" href="/docs/assets/js/281.1fc9c7ce.js"><link rel="prefetch" href="/docs/assets/js/282.4e16e559.js"><link rel="prefetch" href="/docs/assets/js/283.4fb4b1a6.js"><link rel="prefetch" href="/docs/assets/js/284.c3baaf64.js"><link rel="prefetch" href="/docs/assets/js/285.a7a948cc.js"><link rel="prefetch" href="/docs/assets/js/286.73a344a9.js"><link rel="prefetch" href="/docs/assets/js/287.6035b91a.js"><link rel="prefetch" href="/docs/assets/js/288.bb0dbdf9.js"><link rel="prefetch" href="/docs/assets/js/289.10918ad5.js"><link rel="prefetch" href="/docs/assets/js/29.d0e3b179.js"><link rel="prefetch" href="/docs/assets/js/290.20c7bcd8.js"><link rel="prefetch" href="/docs/assets/js/291.ee116400.js"><link rel="prefetch" href="/docs/assets/js/292.dfc2e949.js"><link rel="prefetch" href="/docs/assets/js/293.8a851721.js"><link rel="prefetch" href="/docs/assets/js/294.1f4a08e0.js"><link rel="prefetch" href="/docs/assets/js/295.7ba75a19.js"><link rel="prefetch" href="/docs/assets/js/296.b251d4cf.js"><link rel="prefetch" href="/docs/assets/js/297.d56d6d59.js"><link rel="prefetch" href="/docs/assets/js/298.2e259f4b.js"><link rel="prefetch" href="/docs/assets/js/299.7fed62ba.js"><link rel="prefetch" href="/docs/assets/js/3.054cc2ec.js"><link rel="prefetch" href="/docs/assets/js/30.b554c761.js"><link rel="prefetch" href="/docs/assets/js/300.1f947cef.js"><link rel="prefetch" href="/docs/assets/js/301.f708dd5e.js"><link rel="prefetch" href="/docs/assets/js/302.161104b1.js"><link rel="prefetch" href="/docs/assets/js/303.e23692dd.js"><link rel="prefetch" href="/docs/assets/js/304.05659027.js"><link rel="prefetch" href="/docs/assets/js/305.9bf971c9.js"><link rel="prefetch" href="/docs/assets/js/306.ca8deeea.js"><link rel="prefetch" href="/docs/assets/js/307.97a6667e.js"><link rel="prefetch" href="/docs/assets/js/308.693ca743.js"><link rel="prefetch" href="/docs/assets/js/309.fffb02db.js"><link rel="prefetch" href="/docs/assets/js/31.370bb99a.js"><link rel="prefetch" href="/docs/assets/js/310.2bc665a7.js"><link rel="prefetch" href="/docs/assets/js/311.7953e1c2.js"><link rel="prefetch" href="/docs/assets/js/312.fa9bc367.js"><link rel="prefetch" href="/docs/assets/js/313.ac895eeb.js"><link rel="prefetch" href="/docs/assets/js/314.3631b719.js"><link rel="prefetch" href="/docs/assets/js/315.74ff42ab.js"><link rel="prefetch" href="/docs/assets/js/316.3e76797f.js"><link rel="prefetch" href="/docs/assets/js/317.6fb15d7c.js"><link rel="prefetch" href="/docs/assets/js/318.79e44dca.js"><link rel="prefetch" href="/docs/assets/js/319.bc94de5a.js"><link rel="prefetch" href="/docs/assets/js/32.78d1f1eb.js"><link rel="prefetch" href="/docs/assets/js/320.50cf4d33.js"><link rel="prefetch" href="/docs/assets/js/321.92c73aef.js"><link rel="prefetch" href="/docs/assets/js/322.4b083d48.js"><link rel="prefetch" href="/docs/assets/js/323.26c3a0ab.js"><link rel="prefetch" href="/docs/assets/js/324.fcb79d62.js"><link rel="prefetch" href="/docs/assets/js/325.45cede6b.js"><link rel="prefetch" href="/docs/assets/js/326.199b7195.js"><link rel="prefetch" href="/docs/assets/js/327.c396bfb7.js"><link rel="prefetch" href="/docs/assets/js/328.988a3de9.js"><link rel="prefetch" href="/docs/assets/js/329.fe8358a3.js"><link rel="prefetch" href="/docs/assets/js/33.6b9b4e96.js"><link rel="prefetch" href="/docs/assets/js/34.76d3700c.js"><link rel="prefetch" href="/docs/assets/js/35.b61bf772.js"><link rel="prefetch" href="/docs/assets/js/36.7f32760f.js"><link rel="prefetch" href="/docs/assets/js/37.4079c117.js"><link rel="prefetch" href="/docs/assets/js/38.1ac45a99.js"><link rel="prefetch" href="/docs/assets/js/39.0b98297f.js"><link rel="prefetch" href="/docs/assets/js/4.98818668.js"><link rel="prefetch" href="/docs/assets/js/40.bc044ad5.js"><link rel="prefetch" href="/docs/assets/js/41.de0fe499.js"><link rel="prefetch" href="/docs/assets/js/42.e225df72.js"><link rel="prefetch" href="/docs/assets/js/43.5e38f722.js"><link rel="prefetch" href="/docs/assets/js/44.c7251ae2.js"><link rel="prefetch" href="/docs/assets/js/45.47147150.js"><link rel="prefetch" href="/docs/assets/js/46.b91db25b.js"><link rel="prefetch" href="/docs/assets/js/47.40a11e04.js"><link rel="prefetch" href="/docs/assets/js/48.02effbc8.js"><link rel="prefetch" href="/docs/assets/js/49.0daadd89.js"><link rel="prefetch" href="/docs/assets/js/5.c3703f1d.js"><link rel="prefetch" href="/docs/assets/js/50.821b5322.js"><link rel="prefetch" href="/docs/assets/js/51.907927f0.js"><link rel="prefetch" href="/docs/assets/js/52.fbd6f4cb.js"><link rel="prefetch" href="/docs/assets/js/53.f1a0dc32.js"><link rel="prefetch" href="/docs/assets/js/54.8b66e487.js"><link rel="prefetch" href="/docs/assets/js/55.07cf4188.js"><link rel="prefetch" href="/docs/assets/js/56.ba320d44.js"><link rel="prefetch" href="/docs/assets/js/57.13a27667.js"><link rel="prefetch" href="/docs/assets/js/58.ef5d7e10.js"><link rel="prefetch" href="/docs/assets/js/59.dd726a42.js"><link rel="prefetch" href="/docs/assets/js/6.a764175d.js"><link rel="prefetch" href="/docs/assets/js/60.77ab395a.js"><link rel="prefetch" href="/docs/assets/js/61.3634b93f.js"><link rel="prefetch" href="/docs/assets/js/62.4c2d18ec.js"><link rel="prefetch" href="/docs/assets/js/63.57de2c82.js"><link rel="prefetch" href="/docs/assets/js/64.7b6639a9.js"><link rel="prefetch" href="/docs/assets/js/65.563fdeff.js"><link rel="prefetch" href="/docs/assets/js/66.81bd4cf2.js"><link rel="prefetch" href="/docs/assets/js/67.7fa4933d.js"><link rel="prefetch" href="/docs/assets/js/68.beebaf3f.js"><link rel="prefetch" href="/docs/assets/js/69.64313c8f.js"><link rel="prefetch" href="/docs/assets/js/7.2960bb58.js"><link rel="prefetch" href="/docs/assets/js/70.96160c4a.js"><link rel="prefetch" href="/docs/assets/js/71.ddaef725.js"><link rel="prefetch" href="/docs/assets/js/72.96fd17ad.js"><link rel="prefetch" href="/docs/assets/js/73.7ccc2f65.js"><link rel="prefetch" href="/docs/assets/js/74.3198ebf4.js"><link rel="prefetch" href="/docs/assets/js/75.4886a68c.js"><link rel="prefetch" href="/docs/assets/js/76.8d13e16c.js"><link rel="prefetch" href="/docs/assets/js/77.adc7359e.js"><link rel="prefetch" href="/docs/assets/js/78.2e03c285.js"><link rel="prefetch" href="/docs/assets/js/79.7d0ac9a1.js"><link rel="prefetch" href="/docs/assets/js/8.4c0568fd.js"><link rel="prefetch" href="/docs/assets/js/80.0e2710e5.js"><link rel="prefetch" href="/docs/assets/js/81.cdf404cc.js"><link rel="prefetch" href="/docs/assets/js/82.01e97e1f.js"><link rel="prefetch" href="/docs/assets/js/83.90c08f77.js"><link rel="prefetch" href="/docs/assets/js/84.2225a6dc.js"><link rel="prefetch" href="/docs/assets/js/85.49171e3b.js"><link rel="prefetch" href="/docs/assets/js/86.b18603ac.js"><link rel="prefetch" href="/docs/assets/js/87.772b6e3a.js"><link rel="prefetch" href="/docs/assets/js/88.82fdaa52.js"><link rel="prefetch" href="/docs/assets/js/89.bfcd0e62.js"><link rel="prefetch" href="/docs/assets/js/9.c7f05dcb.js"><link rel="prefetch" href="/docs/assets/js/90.ebe887ad.js"><link rel="prefetch" href="/docs/assets/js/91.7006ce28.js"><link rel="prefetch" href="/docs/assets/js/92.e662a7e6.js"><link rel="prefetch" href="/docs/assets/js/93.b97b9d2a.js"><link rel="prefetch" href="/docs/assets/js/94.36f8f62e.js"><link rel="prefetch" href="/docs/assets/js/95.b7192aed.js"><link rel="prefetch" href="/docs/assets/js/96.f0bc5b58.js"><link rel="prefetch" href="/docs/assets/js/97.59dcee0b.js"><link rel="prefetch" href="/docs/assets/js/98.e16eec31.js"><link rel="prefetch" href="/docs/assets/js/99.26ea8045.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.5d974432.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Nguyễn Khánk's Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>NoSql Distilled</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/kungfu/nosql-distilled/00.html" class="sidebar-link">NoSQL Distilled</a></li><li><a href="/docs/kungfu/nosql-distilled/c0.html" class="sidebar-link">Preface</a></li><li><a href="/docs/kungfu/nosql-distilled/c1.html" class="sidebar-link">Chapter 1. Why NoSQL?</a></li><li><a href="/docs/kungfu/nosql-distilled/c2.html" class="sidebar-link">Chapter 2. Aggregate Data Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c3.html" class="sidebar-link">Chapter 3. More Details on Data Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c4.html" class="sidebar-link">Chapter 4. Distribution Models</a></li><li><a href="/docs/kungfu/nosql-distilled/c5.html" class="sidebar-link">Chapter 5. Consistency</a></li><li><a href="/docs/kungfu/nosql-distilled/c6.html" class="sidebar-link">Chapter 6. Version Stamps</a></li><li><a href="/docs/kungfu/nosql-distilled/c7.html" class="sidebar-link">Chapter 7. Map-Reduce</a></li><li><a href="/docs/kungfu/nosql-distilled/c8.html" class="sidebar-link">Chapter 8. Key-Value Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c9.html" class="sidebar-link">Chapter 9. Document Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c10.html" class="sidebar-link">Chapter 10. Column-Family Stores</a></li><li><a href="/docs/kungfu/nosql-distilled/c11.html" class="sidebar-link">Chapter 11. Graph Databases</a></li><li><a href="/docs/kungfu/nosql-distilled/c12.html" class="sidebar-link">Chapter 12. Schema Migrations</a></li><li><a href="/docs/kungfu/nosql-distilled/c13.html" class="sidebar-link">Chapter 13. Polyglot Persistence</a></li><li><a href="/docs/kungfu/nosql-distilled/c14.html" class="sidebar-link">Chapter 14. Beyond NoSQL</a></li><li><a href="/docs/kungfu/nosql-distilled/c15.html" class="sidebar-link">Chapter 15. Choosing Your Database</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>A Philosophy of Software Design</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>97 Things Every Programmer Should Know</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>The Art of Readable Code</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="a-philosophy-of-software-design"><a href="#a-philosophy-of-software-design" class="header-anchor">#</a> A Philosophy of Software Design</h1> <h1 id="john-ousterhout"><a href="#john-ousterhout" class="header-anchor">#</a> John Ousterhout</h1> <h1 id="stanford-university"><a href="#stanford-university" class="header-anchor">#</a> Stanford University</h1> <p>A Philosophy of Software Design
+by John Ousterhout</p> <p>Copyright © 2018 John K. Ousterhout.
+All rights reserved. No part of this book may be reproduced, in any form or by any means,
+without permission in writing from the author.
+Published by Yaknyam Press, Palo Alto, CA.</p> <p>Cover design by Pete Nguyen and Shirin Oreizy (www.hellonextstep.com).</p> <p>Printing History:
+April 2018:                First Edition (v1.0)
+November 2018:        First Edition (v1.01)</p> <p>ISBN 978-1-7321022-0-</p> <p>Digital book(s) (epub and mobi) produced by Booknook.biz.</p> <h1 id="contents"><a href="#contents" class="header-anchor">#</a> Contents</h1> <p>Preface</p> <p>1     Introduction</p> <div class="language- extra-class"><pre class="language-text"><code>1.1 How to use this book
+</code></pre></div><p>2     The Nature of Complexity</p> <div class="language- extra-class"><pre class="language-text"><code>2.1 Complexity defined
+2.2 Symptoms of complexity
+2.3 Causes of complexity
+2.4 Complexity is incremental
+2.5 Conclusion
+</code></pre></div><p>3     Working Code Isn’t Enough</p> <div class="language- extra-class"><pre class="language-text"><code>3.1 Tactical programming
+3.2 Strategic programming
+3.3 How much to invest?
+3.4 Startups and investment
+3.5 Conclusion
+</code></pre></div><p>4     Modules Should Be Deep</p> <div class="language- extra-class"><pre class="language-text"><code>4.1 Modular design
+4.2 What’s in an interface?
+4.3 Abstractions
+4.4 Deep modules
+4.5 Shallow modules
+4.6 Classitis
+4.7 Examples: Java and Unix I/O
+4.8 Conclusion
+</code></pre></div><p>5     Information Hiding (and Leakage)</p> <div class="language- extra-class"><pre class="language-text"><code>5.1 Information hiding
+5.2 Information leakage
+5.3 Temporal decomposition
+5.4 Example: HTTP server
+5.5 Example: too many classes
+5.6 Example: HTTP parameter handling
+5.7 Example: defaults in HTTP responses
+5.8 Information hiding within a class
+5.9 Taking it too far
+5.10 Conclusion
+</code></pre></div><p>6     General-Purpose Modules are Deeper</p> <div class="language- extra-class"><pre class="language-text"><code>6.1 Make classes somewhat general-purpose
+6.2 Example: storing text for an editor
+6.3 A more general-purpose API
+6.4 Generality leads to better information hiding
+6.5 Questions to ask yourself
+6.6 Conclusion
+</code></pre></div><p>7     Different Layer, Different Abstraction</p> <div class="language- extra-class"><pre class="language-text"><code>7.1 Pass-through methods
+7.2 When is interface duplication OK?
+7.3 Decorators
+7.4 Interface versus implementation
+7.5 Pass-through variables
+7.6 Conclusion
+</code></pre></div><p>8     Pull Complexity Downwards</p> <div class="language- extra-class"><pre class="language-text"><code>8.1 Example: editor text class
+8.2 Example: configuration parameters
+8.3 Taking it too far
+8.4 Conclusion
+</code></pre></div><p>9     Better Together Or Better Apart?</p> <div class="language- extra-class"><pre class="language-text"><code>9.1 Bring together if information is shared
+9.2 Bring together if it will simplify the interface
+9.3 Bring together to eliminate duplication
+9.4 Separate general-purpose and special-purpose code
+9.5 Example: insertion cursor and selection
+9.6 Example: separate class for logging
+9.7 Example: editor undo mechanism
+9.8 Splitting and joining methods
+9.9 Conclusion
+</code></pre></div><p>10   Define Errors Out Of Existence</p> <div class="language- extra-class"><pre class="language-text"><code>10.1 Why exceptions add complexity
+10.2 Too many exceptions
+10.3 Define errors out of existence
+10.4 Example: file deletion in Windows
+10.5 Example: Java substring method
+10.6 Mask exceptions
+10.7 Exception aggregation
+10.8 Just crash?
+10.9 Design special cases out of existence
+10.10 Taking it too far
+10.11 Conclusion
+</code></pre></div><p>11   Design it Twice</p> <p>12   Why Write Comments? The Four Excuses</p> <div class="language- extra-class"><pre class="language-text"><code>12.1 Good code is self-documenting
+12.2 I don’t have time to write comments
+12.3 Comments get out of date and become misleading
+12.4 All the comments I have seen are worthless
+12.5 Benefits of well-written comments
+</code></pre></div><p>13   Comments Should Describe Things that Aren’t Obvious from the Code</p> <div class="language- extra-class"><pre class="language-text"><code>13.1 Pick conventions
+13.2 Don’t repeat the code
+13.3 Lower-level comments add precision
+13.4 Higher-level comments enhance intuition
+13.5 Interface documentation
+13.6 Implementation comments: what and why, not how
+13.7 Cross-module design decisions
+13.8 Conclusion
+13.9 Answers to questions from Section 13.
+</code></pre></div><p>14   Choosing Names</p> <div class="language- extra-class"><pre class="language-text"><code>14.1 Example: bad names cause bugs
+14.2 Create an image
+14.3 Names should be precise
+14.4 Use names consistently
+14.5 A different opinion: Go style guide
+14.6 Conclusion
+</code></pre></div><p>15   Write The Comments First</p> <div class="language- extra-class"><pre class="language-text"><code>15.1 Delayed comments are bad comments
+15.2 Write the comments first
+15.3 Comments are a design tool
+15.4 Early comments are fun comments
+15.5 Are early comments expensive?
+15.6 Conclusion
+</code></pre></div><p>16   Modifying Existing Code</p> <div class="language- extra-class"><pre class="language-text"><code>16.1 Stay strategic
+16.2 Maintaining comments: keep the comments near the code
+16.3 Comments belong in the code, not the commit log
+16.4 Maintaining comments: avoid duplication
+16.5 Maintaining comments: check the diffs
+16.6 Higher-level comments are easier to maintain
+</code></pre></div><p>17   Consistency</p> <div class="language- extra-class"><pre class="language-text"><code>17.1 Examples of consistency
+17.2 Ensuring consistency
+17.3 Taking it too far
+17.4 Conclusion
+</code></pre></div><p>18   Code Should be Obvious</p> <div class="language- extra-class"><pre class="language-text"><code>18.1 Things that make code more obvious
+18.2 Things that make code less obvious
+18.3 Conclusion
+</code></pre></div><p>19   Software Trends</p> <div class="language- extra-class"><pre class="language-text"><code>19.1 Object-oriented programming and inheritance
+19.2 Agile development
+19.3 Unit tests
+19.4 Test-driven development
+19.5 Design patterns
+19.6 Getters and setters
+19.7 Conclusion
+</code></pre></div><p>20   Designing for Performance</p> <div class="language- extra-class"><pre class="language-text"><code>20.1 How to think about performance
+20.2 Measure before modifying
+20.3 Design around the critical path
+20.4 An example: RAMCloud Buffers
+20.5 Conclusion
+</code></pre></div><p>21   Conclusion</p> <p>Index</p> <p>Summary of Design Principles</p> <p>Summary of Red Flags</p> <h1 id="preface"><a href="#preface" class="header-anchor">#</a> Preface</h1> <p>People have been writing programs for electronic computers for more than
+80 years, but there has been surprisingly little conversation about how to
+design those programs or what good programs should look like. There has
+been considerable discussion about software development processes such
+as agile development and about development tools such as debuggers,
+version control systems, and test coverage tools. There has also been
+extensive analysis of programming techniques such as object-oriented
+programming and functional programming, and of design patterns and
+algorithms. All of these discussions have been valuable, but the core
+problem of software design is still largely untouched. David Parnas’
+classic paper “On the Criteria to be used in Decomposing Systems into
+Modules” appeared in 1971, but the state of the art in software design has
+not progressed much beyond that paper in the ensuing 45 years.</p> <p>The most fundamental problem in computer science is problem
+decomposition: how to take a complex problem and divide it up into pieces
+that can be solved independently. Problem decomposition is the central
+design task that programmers face every day, and yet, other than the work
+described here, I have not been able to identify a single class in any
+university where problem decomposition is a central topic. We teach for</p> <p>loops and object-oriented programming, but not software design.</p> <p>In addition, there is a huge variation in quality and productivity among
+programmers, but we have made little attempt to understand what makes
+the best programmers so much better or to teach those skills in our classes.
+I have talked with several people I consider to be great programmers, but
+most of them had difficulty articulating specific techniques that give them
+their advantage. Many people assume that software design skill is an
+innate talent that cannot be taught. However, there is quite a bit of
+scientific evidence that outstanding performance in many fields is related
+more to high-quality practice than innate ability (see, for example, Talent
+is Overrated by Geoff Colvin).</p> <p>For many years these issues have perplexed and frustrated me. I have
+wondered whether software design can be taught, and I have hypothesized
+that design skill is what separates great programmers from average ones. I
+finally decided that the only way to answer these questions was to attempt
+to teach a course on software design. The result is CS 190 at Stanford
+University. In this class I put forth a set of principles of software design.
+Students then work through a series of projects to assimilate and practice
+the principles. The class is taught in a fashion similar to a traditional
+English writing class. In an English class, students use an iterative process
+where they write a draft, get feedback, and then rewrite to make
+improvements. In CS 190, students develop a substantial piece of software
+from scratch. We then go through extensive code reviews to identify
+design problems, and students revise their projects to fix the problems.
+This allows students to see how their code can be improved by applying
+design principles.</p> <p>I have now taught the software design class three times, and this book
+is based on the design principles that emerged from the class. The
+principles are fairly high level and border on the philosophical (“Define
+errors out of existence”), so it is hard for students to understand the ideas
+in the abstract. Students learn best by writing code, making mistakes, and
+then seeing how their mistakes and the subsequent fixes relate to the
+principles.</p> <p>At this point you may well be wondering: what makes me think I know
+all the answers about software design? To be honest, I don’t. There were no
+classes on software design when I learned to program, and I never had a
+mentor to teach me design principles. At the time I learned to program,
+code reviews were virtually nonexistent. My ideas about software design
+come from personal experience writing and reading code. Over my career
+I have written about 250,000 lines of code in a variety of languages. I’ve
+worked on teams that created three operating systems from scratch,
+multiple file and storage systems, infrastructure tools such as debuggers,
+build systems, and GUI toolkits, a scripting language, and interactive
+editors for text, drawings, presentations, and integrated circuits. Along the
+way I’ve experienced firsthand the problems of large systems and
+experimented with various design techniques. In addition, I’ve read a</p> <p>considerable amount of code written by other people, which has exposed
+me to a variety of approaches, both good and bad.</p> <p>Out of all of this experience, I’ve tried to extract common threads,
+both about mistakes to avoid and techniques to use. This book is a
+reflection of my experiences: every problem described here is one that I
+have experienced personally, and every suggested technique is one that I
+have used successfully in my own coding.</p> <p>I don’t expect this book to be the final word on software design; I’m
+sure there are valuable techniques that I’ve missed, and some of my
+suggestions may turn out to be bad ideas in the long run. However, I hope
+that the book will start a conversation about software design. Compare the
+ideas in this book with your own experiences and decide for yourself
+whether the approaches described here really do reduce software
+complexity. This book is an opinion piece, so some readers will disagree
+with some of my suggestions. If you do disagree, try to understand why.
+I’m interested in hearing about things that work for you, things that don’t
+work, and any other ideas you may have about software design. I hope that
+the ensuing conversations will improve our collective understanding of
+software design. I will incorporate what I learn in future editions of this
+book.</p> <p>The best way to communicate with me about the book is to send email
+to the following address:</p> <div class="language- extra-class"><pre class="language-text"><code>software-design-book@googlegroups.com
+</code></pre></div><p>I’m interested in hearing specific feedback about the book, such as bugs or
+suggestions for improvement, as well as general thoughts and experiences
+related to software design. I’m particularly interested in compelling
+examples that I can use in future editions of the book. The best examples
+illustrate an important design principle and are simple enough to explain
+in a paragraph or two. If you would like to see what other people are
+saying on the email address and participate in discussions, you can join the
+Google Group software-design-book.</p> <p>If for some reason the software-design-book Google Group should
+disappear in the future, search on the Web for my home page; it will</p> <p>contain updated instructions for how to communicate about the book.
+Please don’t send book-related email to my personal email address.</p> <p>I recommend that you take the suggestions in this book with a grain of
+salt. The overall goal is to reduce complexity; this is more important than
+any particular principle or idea you read here. If you try an idea from this
+book and find that it doesn’t actually reduce complexity, then don’t feel
+obligated to keep using it (but, do let me know about your experience; I’d
+like to get feedback on what works and what doesn’t).</p> <p>Many people have offered criticisms or made suggestions that
+improved the quality of the book. The following people offered helpful
+comments on various drafts of the book: Jeff Dean, Sanjay Ghemawat,
+John Hartman, Brian Kernighan, James Koppel, Amy Ousterhout, Kay
+Ousterhout, Rob Pike, Partha Ranganathan, Keith Schwartz, and Alex
+Snaps. Christos Kozyrakis suggested the terms “deep” and “shallow” for
+classes and interfaces, replacing previous terms “thick” and “thin”, which
+were somewhat ambiguous. I am indebted to the students in CS 190; the
+process of reading their code and discussing it with them has helped to
+crystallize my thoughts about design.</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/docs/assets/js/app.feff3dbb.js" defer></script><script src="/docs/assets/js/2.aca46d71.js" defer></script><script src="/docs/assets/js/247.c0a84943.js" defer></script><script src="/docs/assets/js/27.5ed2ce18.js" defer></script>
+  </body>
+</html>
