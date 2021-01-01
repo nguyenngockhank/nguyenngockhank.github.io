@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>16. Refactoring SerialDate | Nguyễn Khánk&#39;s Wiki</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../public/favicons/manifest.json">
+    <link rel="mask-icon" href="../public/favicons/safari-pinned-tab.svg" color="#3a0839">
+    <link rel="shortcut icon" href="../public/favicons/favicon.ico">
+    <meta name="description" content="Wikipedia của tui">
+    <meta name="msapplication-TileColor" content="#3a0839">
+    <meta name="msapplication-config" content="../public/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.de900540.css" as="style"><link rel="preload" href="/docs/assets/js/app.e6f4376b.js" as="script"><link rel="preload" href="/docs/assets/js/2.c567e596.js" as="script"><link rel="preload" href="/docs/assets/js/244.3a3a15ec.js" as="script"><link rel="preload" href="/docs/assets/js/27.2fe5f85e.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.e2dac1de.js"><link rel="prefetch" href="/docs/assets/js/100.1019c9aa.js"><link rel="prefetch" href="/docs/assets/js/101.47043ee7.js"><link rel="prefetch" href="/docs/assets/js/102.32e07b16.js"><link rel="prefetch" href="/docs/assets/js/103.b2be11d8.js"><link rel="prefetch" href="/docs/assets/js/104.530f44ee.js"><link rel="prefetch" href="/docs/assets/js/105.76e1e949.js"><link rel="prefetch" href="/docs/assets/js/106.09a8d8a3.js"><link rel="prefetch" href="/docs/assets/js/107.168e44fc.js"><link rel="prefetch" href="/docs/assets/js/108.01423084.js"><link rel="prefetch" href="/docs/assets/js/109.8990dd5a.js"><link rel="prefetch" href="/docs/assets/js/11.35e42eac.js"><link rel="prefetch" href="/docs/assets/js/110.82bba41b.js"><link rel="prefetch" href="/docs/assets/js/111.1125b628.js"><link rel="prefetch" href="/docs/assets/js/112.115f4593.js"><link rel="prefetch" href="/docs/assets/js/113.2fa3519c.js"><link rel="prefetch" href="/docs/assets/js/114.253d8cf7.js"><link rel="prefetch" href="/docs/assets/js/115.54bc1063.js"><link rel="prefetch" href="/docs/assets/js/116.f82b2df1.js"><link rel="prefetch" href="/docs/assets/js/117.d836bab6.js"><link rel="prefetch" href="/docs/assets/js/118.4cedf3cb.js"><link rel="prefetch" href="/docs/assets/js/119.03d1ba74.js"><link rel="prefetch" href="/docs/assets/js/12.77552012.js"><link rel="prefetch" href="/docs/assets/js/120.7ab1d0b2.js"><link rel="prefetch" href="/docs/assets/js/121.33129b96.js"><link rel="prefetch" href="/docs/assets/js/122.f84d349b.js"><link rel="prefetch" href="/docs/assets/js/123.23978418.js"><link rel="prefetch" href="/docs/assets/js/124.6153593b.js"><link rel="prefetch" href="/docs/assets/js/125.63b16fde.js"><link rel="prefetch" href="/docs/assets/js/126.874d667b.js"><link rel="prefetch" href="/docs/assets/js/127.a7bf043b.js"><link rel="prefetch" href="/docs/assets/js/128.b185e1cb.js"><link rel="prefetch" href="/docs/assets/js/129.7f66c467.js"><link rel="prefetch" href="/docs/assets/js/13.26895487.js"><link rel="prefetch" href="/docs/assets/js/130.1ebf00e6.js"><link rel="prefetch" href="/docs/assets/js/131.d38c7ac3.js"><link rel="prefetch" href="/docs/assets/js/132.ad677805.js"><link rel="prefetch" href="/docs/assets/js/133.7b777d9e.js"><link rel="prefetch" href="/docs/assets/js/134.54951f20.js"><link rel="prefetch" href="/docs/assets/js/135.53b7cfb9.js"><link rel="prefetch" href="/docs/assets/js/136.137895aa.js"><link rel="prefetch" href="/docs/assets/js/137.15a4b031.js"><link rel="prefetch" href="/docs/assets/js/138.a2312d73.js"><link rel="prefetch" href="/docs/assets/js/139.a57c61a5.js"><link rel="prefetch" href="/docs/assets/js/14.2edfcc03.js"><link rel="prefetch" href="/docs/assets/js/140.e9baf5b1.js"><link rel="prefetch" href="/docs/assets/js/141.11cc8c14.js"><link rel="prefetch" href="/docs/assets/js/142.bb0d37fd.js"><link rel="prefetch" href="/docs/assets/js/143.14196c06.js"><link rel="prefetch" href="/docs/assets/js/144.15932f50.js"><link rel="prefetch" href="/docs/assets/js/145.584774ba.js"><link rel="prefetch" href="/docs/assets/js/146.84d95b56.js"><link rel="prefetch" href="/docs/assets/js/147.be95fa3f.js"><link rel="prefetch" href="/docs/assets/js/148.c3701230.js"><link rel="prefetch" href="/docs/assets/js/149.98df8ee3.js"><link rel="prefetch" href="/docs/assets/js/15.35c82508.js"><link rel="prefetch" href="/docs/assets/js/150.2d40812e.js"><link rel="prefetch" href="/docs/assets/js/151.99e6c188.js"><link rel="prefetch" href="/docs/assets/js/152.eaa332f9.js"><link rel="prefetch" href="/docs/assets/js/153.270118b4.js"><link rel="prefetch" href="/docs/assets/js/154.7c030e9f.js"><link rel="prefetch" href="/docs/assets/js/155.b580d56a.js"><link rel="prefetch" href="/docs/assets/js/156.15bfb38b.js"><link rel="prefetch" href="/docs/assets/js/157.31ba83c8.js"><link rel="prefetch" href="/docs/assets/js/158.46c033c2.js"><link rel="prefetch" href="/docs/assets/js/159.cce2e6f4.js"><link rel="prefetch" href="/docs/assets/js/16.a02a3b6d.js"><link rel="prefetch" href="/docs/assets/js/160.49b5df32.js"><link rel="prefetch" href="/docs/assets/js/161.1d8cec93.js"><link rel="prefetch" href="/docs/assets/js/162.3f911dd3.js"><link rel="prefetch" href="/docs/assets/js/163.85e29973.js"><link rel="prefetch" href="/docs/assets/js/164.99cff7ee.js"><link rel="prefetch" href="/docs/assets/js/165.929c8a70.js"><link rel="prefetch" href="/docs/assets/js/166.dfedef39.js"><link rel="prefetch" href="/docs/assets/js/167.00aa19b1.js"><link rel="prefetch" href="/docs/assets/js/168.266fd220.js"><link rel="prefetch" href="/docs/assets/js/169.4cf018a7.js"><link rel="prefetch" href="/docs/assets/js/17.e91576e7.js"><link rel="prefetch" href="/docs/assets/js/170.13c9a11b.js"><link rel="prefetch" href="/docs/assets/js/171.b2917bd7.js"><link rel="prefetch" href="/docs/assets/js/172.e830f996.js"><link rel="prefetch" href="/docs/assets/js/173.cdaf83bd.js"><link rel="prefetch" href="/docs/assets/js/174.c44b53cd.js"><link rel="prefetch" href="/docs/assets/js/175.2c4b88dd.js"><link rel="prefetch" href="/docs/assets/js/176.5ec45030.js"><link rel="prefetch" href="/docs/assets/js/177.83c40c28.js"><link rel="prefetch" href="/docs/assets/js/178.e86d2522.js"><link rel="prefetch" href="/docs/assets/js/179.309921d8.js"><link rel="prefetch" href="/docs/assets/js/18.a01baf67.js"><link rel="prefetch" href="/docs/assets/js/180.7fd0d476.js"><link rel="prefetch" href="/docs/assets/js/181.8ad6c099.js"><link rel="prefetch" href="/docs/assets/js/182.258a6344.js"><link rel="prefetch" href="/docs/assets/js/183.9ad566ea.js"><link rel="prefetch" href="/docs/assets/js/184.e0b67032.js"><link rel="prefetch" href="/docs/assets/js/185.dbdd5484.js"><link rel="prefetch" href="/docs/assets/js/186.3b995a6b.js"><link rel="prefetch" href="/docs/assets/js/187.0a868cb3.js"><link rel="prefetch" href="/docs/assets/js/188.0e16793f.js"><link rel="prefetch" href="/docs/assets/js/189.878ad619.js"><link rel="prefetch" href="/docs/assets/js/19.8db2032b.js"><link rel="prefetch" href="/docs/assets/js/190.e75345de.js"><link rel="prefetch" href="/docs/assets/js/191.a1599633.js"><link rel="prefetch" href="/docs/assets/js/192.a58e056b.js"><link rel="prefetch" href="/docs/assets/js/193.0f5d4d83.js"><link rel="prefetch" href="/docs/assets/js/194.06ad7f97.js"><link rel="prefetch" href="/docs/assets/js/195.029fbf94.js"><link rel="prefetch" href="/docs/assets/js/196.b31f6821.js"><link rel="prefetch" href="/docs/assets/js/197.355b2253.js"><link rel="prefetch" href="/docs/assets/js/198.d0003627.js"><link rel="prefetch" href="/docs/assets/js/199.8e78e8ae.js"><link rel="prefetch" href="/docs/assets/js/20.42bff4eb.js"><link rel="prefetch" href="/docs/assets/js/200.fe435c8c.js"><link rel="prefetch" href="/docs/assets/js/201.918c2ec6.js"><link rel="prefetch" href="/docs/assets/js/202.e30c28f5.js"><link rel="prefetch" href="/docs/assets/js/203.f356d62f.js"><link rel="prefetch" href="/docs/assets/js/204.8c7c27ff.js"><link rel="prefetch" href="/docs/assets/js/205.eaed665e.js"><link rel="prefetch" href="/docs/assets/js/206.2ee34ac6.js"><link rel="prefetch" href="/docs/assets/js/207.a9872dbd.js"><link rel="prefetch" href="/docs/assets/js/208.c5e83026.js"><link rel="prefetch" href="/docs/assets/js/209.ebf4b5e2.js"><link rel="prefetch" href="/docs/assets/js/21.46ae6025.js"><link rel="prefetch" href="/docs/assets/js/210.cde9c61c.js"><link rel="prefetch" href="/docs/assets/js/211.b6e04985.js"><link rel="prefetch" href="/docs/assets/js/212.e9172623.js"><link rel="prefetch" href="/docs/assets/js/213.8798e458.js"><link rel="prefetch" href="/docs/assets/js/214.a6af472b.js"><link rel="prefetch" href="/docs/assets/js/215.bddab8fd.js"><link rel="prefetch" href="/docs/assets/js/216.8dc1d6f8.js"><link rel="prefetch" href="/docs/assets/js/217.eeefde38.js"><link rel="prefetch" href="/docs/assets/js/218.f7bef36c.js"><link rel="prefetch" href="/docs/assets/js/219.3a0a009c.js"><link rel="prefetch" href="/docs/assets/js/22.11947baf.js"><link rel="prefetch" href="/docs/assets/js/220.2cd82f28.js"><link rel="prefetch" href="/docs/assets/js/221.9b13b2f1.js"><link rel="prefetch" href="/docs/assets/js/222.41ee572e.js"><link rel="prefetch" href="/docs/assets/js/223.81251b78.js"><link rel="prefetch" href="/docs/assets/js/224.dd442ce1.js"><link rel="prefetch" href="/docs/assets/js/225.aa8d680a.js"><link rel="prefetch" href="/docs/assets/js/226.c00cf6fc.js"><link rel="prefetch" href="/docs/assets/js/227.9b84ce39.js"><link rel="prefetch" href="/docs/assets/js/228.82c38259.js"><link rel="prefetch" href="/docs/assets/js/229.9ef24570.js"><link rel="prefetch" href="/docs/assets/js/23.d16e46b2.js"><link rel="prefetch" href="/docs/assets/js/230.a3600074.js"><link rel="prefetch" href="/docs/assets/js/231.72f67ced.js"><link rel="prefetch" href="/docs/assets/js/232.39d541ac.js"><link rel="prefetch" href="/docs/assets/js/233.a6d5747c.js"><link rel="prefetch" href="/docs/assets/js/234.9ebc59e0.js"><link rel="prefetch" href="/docs/assets/js/235.fa876107.js"><link rel="prefetch" href="/docs/assets/js/236.48069f51.js"><link rel="prefetch" href="/docs/assets/js/237.efffb3b7.js"><link rel="prefetch" href="/docs/assets/js/238.26c3f5ba.js"><link rel="prefetch" href="/docs/assets/js/239.15aa141b.js"><link rel="prefetch" href="/docs/assets/js/24.33d7caa6.js"><link rel="prefetch" href="/docs/assets/js/240.a7287e74.js"><link rel="prefetch" href="/docs/assets/js/241.a342559e.js"><link rel="prefetch" href="/docs/assets/js/242.15c0b307.js"><link rel="prefetch" href="/docs/assets/js/243.7e2571ee.js"><link rel="prefetch" href="/docs/assets/js/245.da27fbfe.js"><link rel="prefetch" href="/docs/assets/js/246.ce6c7a0e.js"><link rel="prefetch" href="/docs/assets/js/247.59d77890.js"><link rel="prefetch" href="/docs/assets/js/248.e1ce2d39.js"><link rel="prefetch" href="/docs/assets/js/249.a5b9105e.js"><link rel="prefetch" href="/docs/assets/js/25.b32d948e.js"><link rel="prefetch" href="/docs/assets/js/250.4b2838f5.js"><link rel="prefetch" href="/docs/assets/js/251.80b6e869.js"><link rel="prefetch" href="/docs/assets/js/252.a065684d.js"><link rel="prefetch" href="/docs/assets/js/253.58bdeef4.js"><link rel="prefetch" href="/docs/assets/js/254.002268e9.js"><link rel="prefetch" href="/docs/assets/js/255.565bb127.js"><link rel="prefetch" href="/docs/assets/js/256.7cadb9fb.js"><link rel="prefetch" href="/docs/assets/js/257.066db541.js"><link rel="prefetch" href="/docs/assets/js/258.21d9e4e1.js"><link rel="prefetch" href="/docs/assets/js/259.c7baf7c8.js"><link rel="prefetch" href="/docs/assets/js/26.16f7e1d9.js"><link rel="prefetch" href="/docs/assets/js/260.3f712e13.js"><link rel="prefetch" href="/docs/assets/js/261.6223d197.js"><link rel="prefetch" href="/docs/assets/js/262.20e5d820.js"><link rel="prefetch" href="/docs/assets/js/263.c2730e46.js"><link rel="prefetch" href="/docs/assets/js/264.fc5d9812.js"><link rel="prefetch" href="/docs/assets/js/265.ec2d1171.js"><link rel="prefetch" href="/docs/assets/js/266.d6e7b50d.js"><link rel="prefetch" href="/docs/assets/js/267.4e99b865.js"><link rel="prefetch" href="/docs/assets/js/268.aa9b8065.js"><link rel="prefetch" href="/docs/assets/js/269.dec0bb9e.js"><link rel="prefetch" href="/docs/assets/js/270.aed7b827.js"><link rel="prefetch" href="/docs/assets/js/271.9740fee8.js"><link rel="prefetch" href="/docs/assets/js/272.675fbf64.js"><link rel="prefetch" href="/docs/assets/js/273.d36c9c44.js"><link rel="prefetch" href="/docs/assets/js/274.4bb99079.js"><link rel="prefetch" href="/docs/assets/js/275.bd3c07a1.js"><link rel="prefetch" href="/docs/assets/js/276.a9419d5a.js"><link rel="prefetch" href="/docs/assets/js/277.b83b344f.js"><link rel="prefetch" href="/docs/assets/js/278.8d4996af.js"><link rel="prefetch" href="/docs/assets/js/279.a20d027e.js"><link rel="prefetch" href="/docs/assets/js/28.0c8cb4fc.js"><link rel="prefetch" href="/docs/assets/js/280.a178c440.js"><link rel="prefetch" href="/docs/assets/js/281.f095cd12.js"><link rel="prefetch" href="/docs/assets/js/282.3715e8b6.js"><link rel="prefetch" href="/docs/assets/js/283.9b9cebb7.js"><link rel="prefetch" href="/docs/assets/js/284.643270d2.js"><link rel="prefetch" href="/docs/assets/js/285.1108fddd.js"><link rel="prefetch" href="/docs/assets/js/286.905bd69c.js"><link rel="prefetch" href="/docs/assets/js/287.85973a71.js"><link rel="prefetch" href="/docs/assets/js/288.e784223a.js"><link rel="prefetch" href="/docs/assets/js/289.07dbef61.js"><link rel="prefetch" href="/docs/assets/js/29.245e1d18.js"><link rel="prefetch" href="/docs/assets/js/290.96e40344.js"><link rel="prefetch" href="/docs/assets/js/291.4ccedd4c.js"><link rel="prefetch" href="/docs/assets/js/292.dba173c6.js"><link rel="prefetch" href="/docs/assets/js/293.0d0f6849.js"><link rel="prefetch" href="/docs/assets/js/294.38521e8b.js"><link rel="prefetch" href="/docs/assets/js/295.fdcf3da4.js"><link rel="prefetch" href="/docs/assets/js/296.3e72bd72.js"><link rel="prefetch" href="/docs/assets/js/297.73a63c2e.js"><link rel="prefetch" href="/docs/assets/js/298.ddded5e7.js"><link rel="prefetch" href="/docs/assets/js/299.0a232d2d.js"><link rel="prefetch" href="/docs/assets/js/3.92cd7dc5.js"><link rel="prefetch" href="/docs/assets/js/30.8cfef6f2.js"><link rel="prefetch" href="/docs/assets/js/300.b57f7b7a.js"><link rel="prefetch" href="/docs/assets/js/301.9c733755.js"><link rel="prefetch" href="/docs/assets/js/302.9298ee48.js"><link rel="prefetch" href="/docs/assets/js/303.5d0a72f5.js"><link rel="prefetch" href="/docs/assets/js/304.72de365a.js"><link rel="prefetch" href="/docs/assets/js/305.bcd3028e.js"><link rel="prefetch" href="/docs/assets/js/306.57bf06c4.js"><link rel="prefetch" href="/docs/assets/js/307.6daa1741.js"><link rel="prefetch" href="/docs/assets/js/308.20017fc1.js"><link rel="prefetch" href="/docs/assets/js/309.3de02318.js"><link rel="prefetch" href="/docs/assets/js/31.e0497e17.js"><link rel="prefetch" href="/docs/assets/js/310.6cd5c12b.js"><link rel="prefetch" href="/docs/assets/js/311.6091a077.js"><link rel="prefetch" href="/docs/assets/js/312.00650623.js"><link rel="prefetch" href="/docs/assets/js/313.e366c3f3.js"><link rel="prefetch" href="/docs/assets/js/314.a123e472.js"><link rel="prefetch" href="/docs/assets/js/315.2209b379.js"><link rel="prefetch" href="/docs/assets/js/316.b7279580.js"><link rel="prefetch" href="/docs/assets/js/317.5f238fa1.js"><link rel="prefetch" href="/docs/assets/js/318.f421b7c7.js"><link rel="prefetch" href="/docs/assets/js/319.e6c79f12.js"><link rel="prefetch" href="/docs/assets/js/32.9505938f.js"><link rel="prefetch" href="/docs/assets/js/320.69026087.js"><link rel="prefetch" href="/docs/assets/js/321.d210e900.js"><link rel="prefetch" href="/docs/assets/js/322.445e187f.js"><link rel="prefetch" href="/docs/assets/js/323.d89fe500.js"><link rel="prefetch" href="/docs/assets/js/324.95675577.js"><link rel="prefetch" href="/docs/assets/js/325.55022001.js"><link rel="prefetch" href="/docs/assets/js/326.b9bbdf0a.js"><link rel="prefetch" href="/docs/assets/js/327.ca13cacf.js"><link rel="prefetch" href="/docs/assets/js/328.a26e3d2d.js"><link rel="prefetch" href="/docs/assets/js/329.442d1bc4.js"><link rel="prefetch" href="/docs/assets/js/33.0814aba0.js"><link rel="prefetch" href="/docs/assets/js/330.3edc4ce9.js"><link rel="prefetch" href="/docs/assets/js/331.5f9873cb.js"><link rel="prefetch" href="/docs/assets/js/332.c545ec60.js"><link rel="prefetch" href="/docs/assets/js/333.cee0ed0e.js"><link rel="prefetch" href="/docs/assets/js/334.1d41d54d.js"><link rel="prefetch" href="/docs/assets/js/335.30c765fb.js"><link rel="prefetch" href="/docs/assets/js/336.ec4a2a93.js"><link rel="prefetch" href="/docs/assets/js/337.3e7fe1c2.js"><link rel="prefetch" href="/docs/assets/js/338.1bcd25d1.js"><link rel="prefetch" href="/docs/assets/js/339.6dea15ab.js"><link rel="prefetch" href="/docs/assets/js/34.6443a99d.js"><link rel="prefetch" href="/docs/assets/js/340.2c40997d.js"><link rel="prefetch" href="/docs/assets/js/341.ab57a35d.js"><link rel="prefetch" href="/docs/assets/js/342.98a52991.js"><link rel="prefetch" href="/docs/assets/js/343.5b53d2b6.js"><link rel="prefetch" href="/docs/assets/js/344.9371fb5c.js"><link rel="prefetch" href="/docs/assets/js/345.9a8d8598.js"><link rel="prefetch" href="/docs/assets/js/346.eddaff9c.js"><link rel="prefetch" href="/docs/assets/js/347.8a3cf057.js"><link rel="prefetch" href="/docs/assets/js/348.c84f5dd0.js"><link rel="prefetch" href="/docs/assets/js/349.35fa8a22.js"><link rel="prefetch" href="/docs/assets/js/35.c8556e22.js"><link rel="prefetch" href="/docs/assets/js/36.61195c58.js"><link rel="prefetch" href="/docs/assets/js/37.0d45ea01.js"><link rel="prefetch" href="/docs/assets/js/38.38bdcade.js"><link rel="prefetch" href="/docs/assets/js/39.925af8d0.js"><link rel="prefetch" href="/docs/assets/js/4.3504f0f8.js"><link rel="prefetch" href="/docs/assets/js/40.3af3fc6e.js"><link rel="prefetch" href="/docs/assets/js/41.cdea6c63.js"><link rel="prefetch" href="/docs/assets/js/42.60b8cfa2.js"><link rel="prefetch" href="/docs/assets/js/43.da1dd629.js"><link rel="prefetch" href="/docs/assets/js/44.c849b66e.js"><link rel="prefetch" href="/docs/assets/js/45.433ad275.js"><link rel="prefetch" href="/docs/assets/js/46.92b1f70a.js"><link rel="prefetch" href="/docs/assets/js/47.3af9e1f3.js"><link rel="prefetch" href="/docs/assets/js/48.997bbc96.js"><link rel="prefetch" href="/docs/assets/js/49.0daadd89.js"><link rel="prefetch" href="/docs/assets/js/5.13d03ba2.js"><link rel="prefetch" href="/docs/assets/js/50.44eda61d.js"><link rel="prefetch" href="/docs/assets/js/51.607c4f4c.js"><link rel="prefetch" href="/docs/assets/js/52.e4d41961.js"><link rel="prefetch" href="/docs/assets/js/53.4bea1c1d.js"><link rel="prefetch" href="/docs/assets/js/54.7d2f0df8.js"><link rel="prefetch" href="/docs/assets/js/55.18290a6e.js"><link rel="prefetch" href="/docs/assets/js/56.64b22fa0.js"><link rel="prefetch" href="/docs/assets/js/57.73d473ab.js"><link rel="prefetch" href="/docs/assets/js/58.d83e0b8c.js"><link rel="prefetch" href="/docs/assets/js/59.8838744d.js"><link rel="prefetch" href="/docs/assets/js/6.f2cec5bc.js"><link rel="prefetch" href="/docs/assets/js/60.c2e4e4bd.js"><link rel="prefetch" href="/docs/assets/js/61.5d179331.js"><link rel="prefetch" href="/docs/assets/js/62.d9245d7d.js"><link rel="prefetch" href="/docs/assets/js/63.5f56d4df.js"><link rel="prefetch" href="/docs/assets/js/64.d8a046be.js"><link rel="prefetch" href="/docs/assets/js/65.d46d4429.js"><link rel="prefetch" href="/docs/assets/js/66.9c03315d.js"><link rel="prefetch" href="/docs/assets/js/67.aff12540.js"><link rel="prefetch" href="/docs/assets/js/68.b8076318.js"><link rel="prefetch" href="/docs/assets/js/69.e5a74f3a.js"><link rel="prefetch" href="/docs/assets/js/7.166309ba.js"><link rel="prefetch" href="/docs/assets/js/70.ef9cf664.js"><link rel="prefetch" href="/docs/assets/js/71.7ddcf23b.js"><link rel="prefetch" href="/docs/assets/js/72.9196e6de.js"><link rel="prefetch" href="/docs/assets/js/73.64a3adde.js"><link rel="prefetch" href="/docs/assets/js/74.4cefa041.js"><link rel="prefetch" href="/docs/assets/js/75.cf06ccaa.js"><link rel="prefetch" href="/docs/assets/js/76.ef05c0e1.js"><link rel="prefetch" href="/docs/assets/js/77.c9b7b08f.js"><link rel="prefetch" href="/docs/assets/js/78.33462563.js"><link rel="prefetch" href="/docs/assets/js/79.7f145459.js"><link rel="prefetch" href="/docs/assets/js/8.981df812.js"><link rel="prefetch" href="/docs/assets/js/80.6b39121a.js"><link rel="prefetch" href="/docs/assets/js/81.d9661906.js"><link rel="prefetch" href="/docs/assets/js/82.68d2358d.js"><link rel="prefetch" href="/docs/assets/js/83.83569bfc.js"><link rel="prefetch" href="/docs/assets/js/84.6217d48d.js"><link rel="prefetch" href="/docs/assets/js/85.b7e99308.js"><link rel="prefetch" href="/docs/assets/js/86.f308da1b.js"><link rel="prefetch" href="/docs/assets/js/87.84a0eb05.js"><link rel="prefetch" href="/docs/assets/js/88.34c0ff40.js"><link rel="prefetch" href="/docs/assets/js/89.b68b605f.js"><link rel="prefetch" href="/docs/assets/js/9.e6eb567e.js"><link rel="prefetch" href="/docs/assets/js/90.074bcbcb.js"><link rel="prefetch" href="/docs/assets/js/91.456a2ebe.js"><link rel="prefetch" href="/docs/assets/js/92.67ddc76c.js"><link rel="prefetch" href="/docs/assets/js/93.1a41f1e2.js"><link rel="prefetch" href="/docs/assets/js/94.7a5d7b40.js"><link rel="prefetch" href="/docs/assets/js/95.c002ced0.js"><link rel="prefetch" href="/docs/assets/js/96.025bbcc3.js"><link rel="prefetch" href="/docs/assets/js/97.20814bac.js"><link rel="prefetch" href="/docs/assets/js/98.9ea75561.js"><link rel="prefetch" href="/docs/assets/js/99.08af2fe6.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.de900540.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">Nguyễn Khánk's Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/architect/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/docs/kungfu/letsgo.html" class="nav-link">
+  Kungfu
+</a></div><div class="nav-item"><a href="https://nguyenngockhank.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Home
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>The Art of Readable Code</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Clean Code</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/kungfu/cleancode/c1.html" class="sidebar-link">1. Clean Code</a></li><li><a href="/docs/kungfu/cleancode/c2.html" class="sidebar-link">2. Meaningful Names</a></li><li><a href="/docs/kungfu/cleancode/c3.html" class="sidebar-link">3. Functions</a></li><li><a href="/docs/kungfu/cleancode/c4.html" class="sidebar-link">4. Comments</a></li><li><a href="/docs/kungfu/cleancode/c5.html" class="sidebar-link">5. Formatting</a></li><li><a href="/docs/kungfu/cleancode/c6.html" class="sidebar-link">6. Objects and Data Structures</a></li><li><a href="/docs/kungfu/cleancode/c7.html" class="sidebar-link">7. Error Handling</a></li><li><a href="/docs/kungfu/cleancode/c8.html" class="sidebar-link">8. Boundaries</a></li><li><a href="/docs/kungfu/cleancode/c9.html" class="sidebar-link">9. Unit Tests</a></li><li><a href="/docs/kungfu/cleancode/c10.html" class="sidebar-link">10. Classes</a></li><li><a href="/docs/kungfu/cleancode/c11.html" class="sidebar-link">11. Systems</a></li><li><a href="/docs/kungfu/cleancode/c12.html" class="sidebar-link">12. Emergence</a></li><li><a href="/docs/kungfu/cleancode/c13.html" class="sidebar-link">13. Concurrency</a></li><li><a href="/docs/kungfu/cleancode/c14.html" class="sidebar-link">14. Successive Refinement</a></li><li><a href="/docs/kungfu/cleancode/c15.html" class="sidebar-link">15. JUnit Internals</a></li><li><a href="/docs/kungfu/cleancode/c16.html" aria-current="page" class="active sidebar-link">16. Refactoring SerialDate</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/kungfu/cleancode/c16.html#first-make-it-work" class="sidebar-link">First, Make It Work ...</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/cleancode/c16.html#then-make-it-right" class="sidebar-link">Then Make It Right ...</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/cleancode/c16.html#conclusion" class="sidebar-link">Conclusion ..</a></li><li class="sidebar-sub-header"><a href="/docs/kungfu/cleancode/c16.html#bibliography" class="sidebar-link">Bibliography ...</a></li></ul></li><li><a href="/docs/kungfu/cleancode/c17.html" class="sidebar-link">17. Smells and Heuristics</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>A Philosophy of Software Design</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>97 Things Every Programmer Should Know</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NoSql Distilled</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Others</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_16-refactoring-serialdate"><a href="#_16-refactoring-serialdate" class="header-anchor">#</a> 16. Refactoring SerialDate</h1> <p>If you go to <a href="http://www.jfree.org/jcommon/index.php," target="_blank" rel="noopener noreferrer">http://www.jfree.org/jcommon/index.php,<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> you will find the JCommon library.
+Deep within that library there is a package named org.jfree.date. Within that package
+there is a class named SerialDate. We are going to explore that class.</p> <p>The author of SerialDateis David Gilbert. David is clearly an experienced and com-
+petent programmer. As we shall see, he shows a significant degree of professionalism and
+discipline within his code. For all intents and purposes, this is “good code.” And I am
+going to rip it to pieces.</p> <p>268 <strong>Chapter 16: Refactoring SerialDate</strong></p> <p>This is not an activity of malice. Nor do I think that I am so much better than David
+that I somehow have a right to pass judgment on his code. Indeed, if you were to find some
+of my code, I’m sure you could find plenty of things to complain about.</p> <p>No, this is not an activity of nastiness or arrogance. What I am about to do is nothing
+more and nothing less than a professional review. It is something that we should all be
+comfortable doing. And it is something we should welcome when it is done for us. It is
+only through critiques like these that we will learn. Doctors do it. Pilots do it. Lawyers do
+it. And we programmers need to learn how to do it too.</p> <p>One more thing about David Gilbert: David is more than just a good programmer.
+David had the courage and good will to offer his code to the community at large for free.
+He placed it out in the open for all to see and invited public usage and public scrutiny. This
+was well done!</p> <p>SerialDate(Listing B-1, page 349) is a class that represents a date in Java. Why have
+a class that represents a date, when Java already has java.util.Date and
+java.util.Calendar, and others? The author wrote this class in response to a pain that I
+have often felt myself. The comment in his opening Javadoc (line 67) explains it well. We
+could quibble about his intention, but I have certainly had to deal with this issue, and I
+welcome a class that is about dates instead of times.</p> <h2 id="first-make-it-work"><a href="#first-make-it-work" class="header-anchor">#</a> First, Make It Work ...</h2> <p>There are some unit tests in a class named SerialDateTests(Listing B-2, page 366). The
+tests all pass. Unfortunately a quick inspection of the tests shows that they don’t test every-
+thing [T1]. For example, doing a “Find Usages” search on the method MonthCodeToQuarter
+(line 334) indicates that it is not used [F4]. Therefore, the unit tests don’t test it.</p> <p>So I fired up Clover to see what the unit tests covered and what they didn’t. Clover
+reported that the unit tests executed only 91 of the 185 executable statements in SerialDate
+(~50 percent) [T2]. The coverage map looks like a patchwork quilt, with big gobs of unex-
+ecuted code littered all through the class.</p> <p>It was my goal to completely understand and also refactor this class. I couldn’t do that
+without much greater test coverage. So I wrote my own suite of completely independent
+unit tests (Listing B-4, page 374).</p> <p>As you look through these tests, you will note that many of them are commented out.
+These tests didn’t pass. They represent behavior that I think SerialDate should have. So as
+I refactor SerialDate, I’ll be working to make these tests pass too.</p> <p>Even with some of the tests commented out, Clover reports that the new unit tests are
+executing 170 (92 percent) out of the 185 executable statements. This is pretty good, and I
+think we’ll be able to get this number higher.</p> <p>The first few commented-out tests (lines 23-63) were a bit of conceit on my part. The
+program was not designed to pass these tests, but the behavior seemed obvious [G2] to me.</p> <p><strong>First, Make It Work</strong> 269</p> <p>I’m not sure why the testWeekdayCodeToStringmethod was written in the first place, but
+because it is there, it seems obvious that it should not be case sensitive. Writing these tests
+was trivial [T3]. Making them pass was even easier; I just changed lines 259 and 263 to
+useequalsIgnoreCase.</p> <p>I left the tests at line 32 and line 45 commented out because it’s not clear to me that
+the “tues” and “thurs” abbreviations ought to be supported.</p> <p>The tests on line 153 and line 154 don’t pass. Clearly, they should [G2]. We can easily
+fix this, and the tests on line 163 through line 213, by making the following changes to the
+stringToMonthCode function.</p> <p>The commented test on line 318 exposes a bug in the getFollowingDayOfWeekmethod
+(line 672). December 25th, 2004, was a Saturday. The following Saturday was January 1st,</p> <ol start="2005"><li>However, when we run the test, we see that getFollowingDayOfWeekreturns Decem-
+ber 25th as the Saturday that follows December 25th. Clearly, this is wrong [G3],[T1]. We
+see the problem in line 685. It is a typical boundary condition error [T5]. It should read as
+follows:</li></ol> <p>It is interesting to note that this function was the target of an earlier repair. The change
+history (line 43) shows that “bugs” were fixed in getPreviousDayOfWeek,getFollowing-
+DayOfWeek, and getNearestDayOfWeek [T6].</p> <p>ThetestGetNearestDayOfWeek unit test (line 329), which tests the getNearestDayOfWeek
+method (line 705), did not start out as long and exhaustive as it currently is. I added a lot
+of test cases to it because my initial test cases did not all pass [T6]. You can see the pattern
+of failure by looking at which test cases are commented out. That pattern is revealing [T7].
+It shows that the algorithm fails if the nearest day is in the future. Clearly there is some
+kind of boundary condition error [T5].</p> <p>The pattern of test coverage reported by Clover is also interesting [T8]. Line 719
+never gets executed! This means that the ifstatement in line 718 is always false. Sure
+enough, a look at the code shows that this must be true. The adjust variable is always neg-
+ative and so cannot be greater or equal to 4. So this algorithm is just wrong.</p> <div class="language- extra-class"><pre class="language-text"><code>457 if ((result &lt; 1) || (result &gt; 12)) {
+result = -1;
+458 for (int i = 0; i &lt; monthNames.length; i++) {
+459 if (s.equalsIgnoreCase(shortMonthNames[i])) {
+460 result = i + 1;
+461 break;
+462 }
+463 if (s.equalsIgnoreCase(monthNames[i])) {
+464 result = i + 1;
+465 break;
+466 }
+467 }
+468 }
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>685 if (baseDOW &gt;= targetWeekday) {
+</code></pre></div><p>270 <strong>Chapter 16: Refactoring SerialDate</strong></p> <div class="language- extra-class"><pre class="language-text"><code>The right algorithm is shown below:
+</code></pre></div><p>Finally, the tests at line 417 and line 429 can be made to pass simply by throwing an
+IllegalArgumentExceptioninstead of returning an error string from weekInMonthToString
+andrelativeToString.</p> <p>With these changes all the unit tests pass, and I believe SerialDatenow works. So now
+it’s time to make it “right.”</p> <h2 id="then-make-it-right"><a href="#then-make-it-right" class="header-anchor">#</a> Then Make It Right ...</h2> <p>We are going to walk from the top to the bottom of SerialDate, improving it as we go
+along. Although you won’t see this in the discussion, I will be running all of the JCommon
+unit tests, including my improved unit test for SerialDate, after every change I make. So
+rest assured that every change you see here works for all of JCommon.</p> <p>Starting at line 1, we see a ream of comments with license information, copyrights,
+authors, and change history. I acknowledge that there are certain legalities that need to be
+addressed, and so the copyrights and licenses must stay. On the other hand, the change his-
+tory is a leftover from the 1960s. We have source code control tools that do this for us now.
+This history should be deleted [C1].</p> <p>The import list starting at line 61 could be shortened by using java.text.<em>and
+java.util.</em>. [J1]</p> <p>I wince at the HTML formatting in the Javadoc (line 67). Having a source file with
+more than one language in it troubles me. This comment has <em>four</em> languages in it: Java,
+English, Javadoc, and html [G1]. With that many languages in use, it’s hard to keep things
+straight. For example, the nice positioning of line 71 and line 72 are lost when the Javadoc
+is generated, and yet who wants to see <ul>and<li>in the source code? A better strategy
+might be to just surround the whole comment with <pre>so that the formatting that is
+apparent in the source code is preserved within the Javadoc.^1</pre></li></ul></p> <p>Line 86 is the class declaration. Why is this class named SerialDate? What is the sig-
+nificance of the world “serial”? Is it because the class is derived from Serializable? That
+doesn’t seem likely.</p> <div class="language- extra-class"><pre class="language-text"><code>int delta = targetDOW - base.getDayOfWeek();
+int positiveDelta = delta + 7;
+int adjust = positiveDelta % 7;
+if (adjust &gt; 3)
+adjust -= 7;
+return SerialDate.addDays(adjust, base);
+</code></pre></div><ol><li>An even better solution would have been for Javadoc to present all comments as preformatted, so that comments appear the
+same in both code and document.</li></ol> <p><strong>Then Make It Right</strong> 271</p> <p>I won’t keep you guessing. I know why (or at least I think I know why) the word
+“serial” was used. The clue is in the constants SERIAL_LOWER_BOUND and
+SERIAL_UPPER_BOUND on line 98 and line 101. An even better clue is in the comment
+that begins on line 830. This class is named SerialDatebecause it is implemented using a
+“serial number,” which happens to be the number of days since December 30th, 1899.</p> <p>I have two problems with this. First, the term “serial number” is not really correct.
+This may be a quibble, but the representation is more of a relative offset than a serial num-
+ber. The term “serial number” has more to do with product identification markers than
+dates. So I don’t find this name particularly descriptive [N1]. A more descriptive term
+might be “ordinal.”</p> <p>The second problem is more significant. The name SerialDateimplies an implementa-
+tion. This class is an abstract class. There is no need to imply anything at all about the
+implementation. Indeed, there is good reason to hide the implementation! So I find this
+name to be at the wrong level of abstraction [N2]. In my opinion, the name of this class
+should simply be Date.</p> <p>Unfortunately, there are already too many classes in the Java library named Date, so
+this is probably not the best name to choose. Because this class is all about days, instead of
+time, I considered naming it Day, but this name is also heavily used in other places. In the
+end, I chose DayDate as the best compromise.</p> <p>From now on in this discussion I will use the term DayDate. I leave it to you to remem-
+ber that the listings you are looking at still use SerialDate.</p> <p>I understand why DayDateinherits from ComparableandSerializable. But why does it
+inherit from MonthConstants? The class MonthConstants(Listing B-3, page 372) is just a
+bunch of static final constants that define the months. Inheriting from classes with con-
+stants is an old trick that Java programmers used so that they could avoid using expres-
+sions like MonthConstants.January, but it’s a bad idea [J2]. MonthConstants should really be
+an enum.</p> <div class="language- extra-class"><pre class="language-text"><code>public abstract class DayDate implements Comparable,
+Serializable {
+public static enum Month {
+JANUARY(1),
+FEBRUARY(2),
+MARCH(3),
+APRIL(4),
+MAY(5),
+JUNE(6),
+JULY(7),
+AUGUST(8),
+SEPTEMBER(9),
+OCTOBER(10),
+NOVEMBER(11),
+DECEMBER(12);
+Month(int index) {
+this.index = index;
+}
+</code></pre></div><p>272 <strong>Chapter 16: Refactoring SerialDate</strong></p> <p>ChangingMonthConstantsto this enumforces quite a few changes to the DayDateclass
+and all it’s users. It took me an hour to make all the changes. However, any function that
+used to take an intfor a month, now takes a Monthenumerator. This means we can get rid
+of the isValidMonthCodemethod (line 326), and all the month code error checking such as
+that in monthCodeToQuarter (line 356) [G5].</p> <p>Next, we have line 91, serialVersionUID. This variable is used to control the serializer.
+If we change it, then any DayDatewritten with an older version of the software won’t be
+readable anymore and will result in an InvalidClassException. If you don’t declare the
+serialVersionUIDvariable, then the compiler automatically generates one for you, and it
+will be different every time you make a change to the module. I know that all the docu-
+ments recommend manual control of this variable, but it seems to me that automatic con-
+trol of serialization is a lot safer [G4]. After all, I’d much rather debug an
+InvalidClassExceptionthan the odd behavior that would ensue if I forgot to change the
+serialVersionUID. So I’m going to delete the variable—at least for the time being.^2</p> <p>I find the comment on line 93 redundant. Redundant comments are just places to col-
+lect lies and misinformation [C2]. So I’m going to get rid of it and its ilk.</p> <p>The comments at line 97 and line 100 talk about serial numbers, which I discussed
+earlier [C1]. The variables they describe are the earliest and latest possible dates that
+DayDate can describe. This can be made a bit clearer [N1].</p> <p>It’s not clear to me why EARLIEST_DATE_ORDINALis 2 instead of 0. There is a hint in the
+comment on line 829 that suggests that this has something to do with the way dates are
+represented in Microsoft Excel. There is a much deeper insight provided in a derivative of
+DayDatecalledSpreadsheetDate(Listing B-5, page 382). The comment on line 71 describes
+the issue nicely.</p> <p>The problem I have with this is that the issue seems to be related to the implementa-
+tion of SpreadsheetDateand has nothing to do with DayDate. I conclude from this that</p> <div class="language- extra-class"><pre class="language-text"><code>public static Month make(int monthIndex) {
+for (Month m : Month.values()) {
+if (m.index == monthIndex)
+return m;
+}
+throw new IllegalArgumentException(&quot;Invalid month index &quot; + monthIndex);
+}
+public final int index;
+}
+</code></pre></div><ol start="2"><li>Several of the reviewers of this text have taken exception to this decision. They contend that in an open source framework itis
+better to assert manual control over the serial ID so that minor changes to the software don’t cause old serialized dates to be
+invalid. This is a fair point. However, at least the failure, inconvenient though it might be, has a clear-cut cause. On the other
+hand, if the author of the class forgets to update the ID, then the failure mode is undefined and might very well be silent. I
+think the real moral of this story is that you should not expect to deserialize across versions.</li></ol> <div class="language- extra-class"><pre class="language-text"><code>public static final int EARLIEST_DATE_ORDINAL = 2; // 1/1/1900
+public static final int LATEST_DATE_ORDINAL = 2958465; // 12/31/9999
+</code></pre></div><p><strong>Then Make It Right</strong> 273</p> <p>EARLIEST_DATE_ORDINALand LATEST_DATE_ORDINALdo not really belong in DayDateand
+should be moved to SpreadsheetDate[G6].</p> <p>Indeed, a search of the code shows that these variables are used only within
+SpreadsheetDate. Nothing in DayDate, nor in any other class in the JCommonframework, uses
+them. Therefore, I’ll move them down into SpreadsheetDate.</p> <p>The next variables, MINIMUM_YEAR_SUPPORTED, and MAXIMUM_YEAR_SUPPORTED(line 104
+and line 107), provide something of a dilemma. It seems clear that if DayDate is an abstract
+class that provides no foreshadowing of implementation, then it should not inform us
+about a minimum or maximum year. Again, I am tempted to move these variables down
+intoSpreadsheetDate[G6]. However, a quick search of the users of these variables shows
+that one other class uses them: RelativeDayOfWeekRule(Listing B-6, page 390). We see that
+usage at line 177 and line 178 in the getDatefunction, where they are used to check that
+the argument to getDateis a valid year. The dilemma is that a user of an abstract class
+needs information about its implementation.</p> <p>What we need to do is provide this information without polluting DayDateitself.
+Usually, we would get implementation information from an instance of a derivative.
+However, the getDatefunction is not passed an instance of a DayDate. It does, however,
+return such an instance, which means that somewhere it must be creating it. Line 187
+through line 205 provide the hint. The DayDateinstance is being created by one of the
+three functions, getPreviousDayOfWeek,getNearestDayOfWeek, or getFollowingDayOfWeek.
+Looking back at the DayDatelisting, we see that these functions (lines 638–724) all return
+a date created by addDays(line 571), which calls createInstance(line 808), which creates
+aSpreadsheetDate! [G7].</p> <p>It’s generally a bad idea for base classes to know about their derivatives. To fix this, we
+should use the ABSTRACT FACTORY^3 pattern and create a DayDateFactory. This factory will
+create the instances of DayDatethat we need and can also answer questions about the
+implementation, such as the maximum and minimum dates.</p> <ol start="3"><li>[GOF].</li></ol> <div class="language- extra-class"><pre class="language-text"><code>public abstract class DayDateFactory {
+private static DayDateFactory factory = new SpreadsheetDateFactory();
+public static void setInstance(DayDateFactory factory) {
+DayDateFactory.factory = factory;
+}
+protected abstract DayDate _makeDate(int ordinal);
+protected abstract DayDate _makeDate(int day, DayDate.Month month, int year);
+protected abstract DayDate _makeDate(int day, int month, int year);
+protected abstract DayDate _makeDate(java.util.Date date);
+protected abstract int _getMinimumYear();
+protected abstract int _getMaximumYear();
+public static DayDate makeDate(int ordinal) {
+return factory._makeDate(ordinal);
+}
+</code></pre></div><p>274 <strong>Chapter 16: Refactoring SerialDate</strong></p> <p>This factory class replaces the createInstancemethods with makeDatemethods, which
+improves the names quite a bit [N1]. It defaults to a SpreadsheetDateFactorybut can be
+changed at any time to use a different factory. The static methods that delegate to abstract
+methods use a combination of the SINGLETON,^4 DECORATOR,^5 and ABSTRACT FACTORY
+patterns that I have found to be useful.</p> <div class="language- extra-class"><pre class="language-text"><code>TheSpreadsheetDateFactory looks like this.
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public static DayDate makeDate(int day, DayDate.Month month, int year) {
+return factory._makeDate(day, month, year);
+}
+public static DayDate makeDate(int day, int month, int year) {
+return factory._makeDate(day, month, year);
+}
+public static DayDate makeDate(java.util.Date date) {
+return factory._makeDate(date);
+}
+public static int getMinimumYear() {
+return factory._getMinimumYear();
+}
+public static int getMaximumYear() {
+return factory._getMaximumYear();
+}
+}
+</code></pre></div><ol start="4"><li>Ibid.</li> <li>Ibid.</li></ol> <div class="language- extra-class"><pre class="language-text"><code>public class SpreadsheetDateFactory extends DayDateFactory {
+public DayDate _makeDate(int ordinal) {
+return new SpreadsheetDate(ordinal);
+}
+public DayDate _makeDate(int day, DayDate.Month month, int year) {
+return new SpreadsheetDate(day, month, year);
+}
+public DayDate _makeDate(int day, int month, int year) {
+return new SpreadsheetDate(day, month, year);
+}
+public DayDate _makeDate(Date date) {
+final GregorianCalendar calendar = new GregorianCalendar();
+calendar.setTime(date);
+return new SpreadsheetDate(
+calendar.get(Calendar.DATE),
+DayDate.Month.make(calendar.get(Calendar.MONTH) + 1),
+calendar.get(Calendar.YEAR));
+}
+</code></pre></div><p><strong>Then Make It Right</strong> 275</p> <p>As you can see, I have already moved the MINIMUM_YEAR_SUPPORTED and
+MAXIMUM_YEAR_SUPPORTED variables into SpreadsheetDate, where they belong [G6].</p> <p>The next issue in DayDateare the day constants beginning at line 109. These should
+really be another enum [J3]. We’ve seen this pattern before, so I won’t repeat it here. You’ll
+see it in the final listings.</p> <p>Next, we see a series of tables starting with LAST_DAY_OF_MONTHat line 140. My first
+issue with these tables is that the comments that describe them are redundant [C3]. Their
+names are sufficient. So I’m going to delete the comments.</p> <p>There seems to be no good reason that this table isn’t private [G8], because there is a
+static function lastDayOfMonth that provides the same data.</p> <p>The next table, AGGREGATE_DAYS_TO_END_OF_MONTH, is a bit more mysterious because it is
+not used anywhere in the JCommon framework [G9]. So I deleted it.</p> <p>The same goes for LEAP_YEAR_AGGREGATE_DAYS_TO_END_OF_MONTH.
+The next table, AGGREGATE_DAYS_TO_END_OF_PRECEDING_MONTH, is used only in Spread-
+sheetDate(line 434 and line 473). This begs the question of whether it should be moved
+toSpreadsheetDate. The argument for not moving it is that the table is not specific to any
+particular implementation [G6]. On the other hand, no implementation other than
+SpreadsheetDateactually exists, and so the table should be moved close to where it is
+used [G10].</p> <p>What settles the argument for me is that to be consistent [G11], we should make the
+table private and expose it through a function like julianDateOfLastDayOfMonth. Nobody
+seems to need a function like that. Moreover, the table can be moved back to DayDateeasily
+if any new implementation of DayDate needs it. So I moved it.</p> <p>The same goes for the table, LEAP_YEAR_AGGREGATE_DAYS_TO_END_OF_MONTH.
+Next, we see three sets of constants that can be turned into enums (lines 162–205).
+The first of the three selects a week within a month. I changed it into an enum named
+WeekInMonth.</p> <div class="language- extra-class"><pre class="language-text"><code>protected int _getMinimumYear() {
+return SpreadsheetDate.MINIMUM_YEAR_SUPPORTED;
+}
+protected int _getMaximumYear() {
+return SpreadsheetDate.MAXIMUM_YEAR_SUPPORTED;
+}
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public enum WeekInMonth {
+FIRST(1), SECOND(2), THIRD(3), FOURTH(4), LAST(0);
+public final int index;
+WeekInMonth(int index) {
+this.index = index;
+}
+}
+</code></pre></div><p>276 <strong>Chapter 16: Refactoring SerialDate</strong></p> <p>The second set of constants (lines 177–187) is a bit more obscure. The INCLUDE_NONE,
+INCLUDE_FIRST,INCLUDE_SECOND, and INCLUDE_BOTHconstants are used to describe whether
+the defining end-point dates of a range should be included in that range. Mathematically,
+this is described using the terms “open interval,” “half-open interval,” and “closed inter-
+val.” I think it is clearer using the mathematical nomenclature [N3], so I changed it to an
+enum named DateInterval with CLOSED,CLOSED_LEFT,CLOSED_RIGHT, and OPEN enumerators.</p> <p>The third set of constants (lines 18–205) describe whether a search for a particular
+day of the week should result in the last, next, or nearest instance. Deciding what to call
+this is difficult at best. In the end, I settled for WeekdayRangewithLAST,NEXT, and NEAREST
+enumerators.</p> <p>You might not agree with the names I’ve chosen. They make sense to me, but they
+may not make sense to you. The point is that they are now in a form that makes them easy
+to change [J3]. They aren’t passed as integers anymore; they are passed as symbols. I can
+use the “change name” function of my IDE to change the names, or the types, without
+worrying that I missed some -1or 2 somewhere in the code or that some intargument dec-
+laration is left poorly described.</p> <p>The description field at line 208 does not seem to be used by anyone. I deleted it along
+with its accessor and mutator [G9].</p> <p>I also deleted the degenerate default constructor at line 213 [G12]. The compiler will
+generate it for us.</p> <p>We can skip over the isValidWeekdayCodemethod (lines 216–238) because we deleted
+it when we created the Day enumeration.</p> <p>This brings us to the stringToWeekdayCodemethod (lines 242–270). Javadocs that
+don’t add much to the method signature are just clutter [C3],[G12]. The only value this
+Javadoc adds is the description of the -1return value. However, because we changed to the
+Dayenumeration, the comment is actually wrong [C2]. The method now throws an
+IllegalArgumentException. So I deleted the Javadoc.</p> <p>I also deleted all the final keywords in arguments and variable declarations. As far as
+I could tell, they added no real value but did add to the clutter [G12]. Eliminating final
+flies in the face of some conventional wisdom. For example, Robert Simmons^6 strongly
+recommends us to “... spread finalall over your code.” Clearly I disagree. I think that
+there are a few good uses for final, such as the occasional finalconstant, but otherwise
+the keyword adds little value and creates a lot of clutter. Perhaps I feel this way because the
+kinds of errors that final might catch are already caught by the unit tests I write.</p> <p>I didn’t care for the duplicate ifstatements [G5] inside the forloop (line 259 and
+line 263), so I connected them into a single ifstatement using the ||operator. I also used
+theDay enumeration to direct the for loop and made a few other cosmetic changes.</p> <p>It occurred to me that this method does not really belong in DayDate. It’s really the
+parse function of Day. So I moved it into the Dayenumeration. However, that made the Day</p> <ol start="6"><li>[Simmons04], p. 73.</li></ol> <p><strong>Then Make It Right</strong> 277</p> <p>enumeration pretty large. Because the concept of Daydoes not depend on DayDate, I moved
+theDay enumeration outside of the DayDate class into its own source file [G13].</p> <p>I also moved the next function, weekdayCodeToString(lines 272–286) into the Day
+enumeration and called it toString.</p> <p>There are two getMonthsfunctions (lines 288–316). The first calls the second. The
+second is never called by anyone but the first. Therefore, I collapsed the two into one and
+vastly simplified them [G9],[G12],[F4]. Finally, I changed the name to be a bit more self-
+descriptive [N1].</p> <div class="language- extra-class"><pre class="language-text"><code>public enum Day {
+MONDAY(Calendar.MONDAY),
+TUESDAY(Calendar.TUESDAY),
+WEDNESDAY(Calendar.WEDNESDAY),s
+THURSDAY(Calendar.THURSDAY),
+FRIDAY(Calendar.FRIDAY),
+SATURDAY(Calendar.SATURDAY),
+SUNDAY(Calendar.SUNDAY);
+public final int index;
+private static DateFormatSymbols dateSymbols = new DateFormatSymbols();
+Day(int day) {
+index = day;
+}
+public static Day make(int index) throws IllegalArgumentException {
+for (Day d : Day.values())
+if (d.index == index)
+return d;
+throw new IllegalArgumentException(
+String.format(&quot;Illegal day index: %d.&quot;, index));
+}
+public static Day parse(String s) throws IllegalArgumentException {
+String[] shortWeekdayNames =
+dateSymbols.getShortWeekdays();
+String[] weekDayNames =
+dateSymbols.getWeekdays();
+s = s.trim();
+for (Day day : Day.values()) {
+if (s.equalsIgnoreCase(shortWeekdayNames[day.index]) ||
+s.equalsIgnoreCase(weekDayNames[day.index])) {
+return day;
+}
+}
+throw new IllegalArgumentException(
+String.format(&quot;%s is not a valid weekday string&quot;, s));
+}
+public String toString() {
+return dateSymbols.getWeekdays()[index];
+}
+}
+</code></pre></div><p>278 <strong>Chapter 16: Refactoring SerialDate</strong></p> <p>TheisValidMonthCodefunction (lines 326–346) was made irrelevant by the Month
+enum, so I deleted it [G9].</p> <p>ThemonthCodeToQuarterfunction (lines 356–375) smells of FEATURE ENVY^7 [G14]
+and probably belongs in the Month enum as a method named quarter. So I replaced it.</p> <p>This made the Monthenum big enough to be in its own class. So I moved it out of
+DayDate to be consistent with the Day enum [G11],[G13].</p> <p>The next two methods are named monthCodeToString(lines 377–426). Again, we see
+the pattern of one method calling its twin with a flag. It is usually a bad idea to pass a flag
+as an argument to a function, especially when that flag simply selects the format of the out-
+put[G15]. I renamed, simplified, and restructured these functions and moved them into the
+Month enum [N1],[N3],[C3],[G14].</p> <p>The next method is stringToMonthCode(lines 428–472). I renamed it, moved it into the
+Month enum, and simplified it [N1],[N3],[C3],[G14],[G12].</p> <div class="language- extra-class"><pre class="language-text"><code>public static String[] getMonthNames() {
+return dateFormatSymbols.getMonths();
+}
+</code></pre></div><ol start="7"><li>[Refactoring].</li></ol> <div class="language- extra-class"><pre class="language-text"><code>public int quarter() {
+return 1 + (index-1)/3;
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public String toString() {
+return dateFormatSymbols.getMonths()[index - 1];
+}
+public String toShortString() {
+return dateFormatSymbols.getShortMonths()[index - 1];
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public static Month parse(String s) {
+s = s.trim();
+for (Month m : Month.values())
+if (m.matches(s))
+return m;
+try {
+return make(Integer.parseInt(s));
+}
+catch (NumberFormatException e) {}
+throw new IllegalArgumentException(&quot;Invalid month &quot; + s);
+}
+</code></pre></div><p><strong>Then Make It Right</strong> 279</p> <div class="language- extra-class"><pre class="language-text"><code>TheisLeapYear method (lines 495–517) can be made a bit more expressive [G16].
+</code></pre></div><p>The next function, leapYearCount(lines 519–536) doesn’t really belong in DayDate.
+Nobody calls it except for two methods in SpreadsheetDate. So I pushed it down [G6].</p> <p>ThelastDayOfMonthfunction (lines 538–560) makes use of the LAST_DAY_OF_MONTH
+array. This array really belongs in the Month enum [G17], so I moved it there. I also simpli-
+fied the function and made it a bit more expressive [G16].</p> <p>Now things start to get a bit more interesting. The next function is addDays(lines 562–
+576). First of all, because this function operates on the variables of DayDate, it should not
+be static [G18]. So I changed it to an instance method. Second, it calls the function
+toSerial. This function should be renamed toOrdinal[N1]. Finally, the method can be
+simplified.</p> <p>The same goes for addMonths(lines 578–602). It should be an instance method [G18].
+The algorithm is a bit complicated, so I used EXPLAINING TEMPORARY VARIABLES^8 [G19]
+to make it more transparent. I also renamed the method getYYY to getYear [N1].</p> <div class="language- extra-class"><pre class="language-text"><code>private boolean matches(String s) {
+return s.equalsIgnoreCase(toString()) ||
+s.equalsIgnoreCase(toShortString());
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public static boolean isLeapYear(int year) {
+boolean fourth = year % 4 == 0;
+boolean hundredth = year % 100 == 0;
+boolean fourHundredth = year % 400 == 0;
+return fourth &amp;&amp; (!hundredth || fourHundredth);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public static int lastDayOfMonth(Month month, int year) {
+if (month == Month.FEBRUARY &amp;&amp; isLeapYear(year))
+return month.lastDay() + 1;
+else
+return month.lastDay();
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public DayDate addDays(int days) {
+return DayDateFactory.makeDate(toOrdinal() + days);
+}
+</code></pre></div><ol start="8"><li>[Beck97].</li></ol> <div class="language- extra-class"><pre class="language-text"><code>public DayDate addMonths(int months) {
+int thisMonthAsOrdinal = 12 * getYear() + getMonth().index - 1;
+int resultMonthAsOrdinal = thisMonthAsOrdinal + months;
+int resultYear = resultMonthAsOrdinal / 12;
+Month resultMonth = Month.make(resultMonthAsOrdinal % 12 + 1);
+</code></pre></div><p>280 <strong>Chapter 16: Refactoring SerialDate</strong></p> <div class="language- extra-class"><pre class="language-text"><code>TheaddYears function (lines 604–626) provides no surprises over the others.
+</code></pre></div><p>There is a little itch at the back of my mind that is bothering me about changing
+these methods from static to instance. Does the expression date.addDays(5)make it
+clear that the dateobject does not change and that a new instance of DayDateis returned?
+Or does it erroneously imply that we are adding five days to the dateobject? You might
+not think that is a big problem, but a bit of code that looks like the following can be very
+deceiving [G20].</p> <p>DayDate date = DateFactory.makeDate(5, Month.DECEMBER, 1952);
+date.addDays(7); // bump date by one week.
+Someone reading this code would very likely just accept that addDaysis changing the
+dateobject. So we need a name that breaks this ambiguity [N4]. So I changed the names to
+plusDays and plusMonths. It seems to me that the intent of the method is captured nicely by</p> <div class="language- extra-class"><pre class="language-text"><code>DayDate date = oldDate.plusDays(5);
+</code></pre></div><p>whereas the following doesn’t read fluidly enough for a reader to simply accept that the
+date object is changed:</p> <p>date.plusDays(5);
+The algorithms continue to get more interesting. getPreviousDayOfWeek(lines 628–
+660) works but is a bit complicated. After some thought about what was really going on
+[G21], I was able to simplify it and use EXPLAINING TEMPORARY VARIABLES[G19] to
+make it clearer. I also changed it from a static method to an instance method [G18], and
+got rid of the duplicate instance method [G5] (lines 997–1008).</p> <div class="language- extra-class"><pre class="language-text"><code>The exact same analysis and result occurred for getFollowingDayOfWeek(lines 662–693).
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>int lastDayOfResultMonth = lastDayOfMonth(resultMonth, resultYear);
+int resultDay = Math.min(getDayOfMonth(), lastDayOfResultMonth);
+return DayDateFactory.makeDate(resultDay, resultMonth, resultYear);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public DayDate plusYears(int years) {
+int resultYear = getYear() + years;
+int lastDayOfMonthInResultYear = lastDayOfMonth(getMonth(), resultYear);
+int resultDay = Math.min(getDayOfMonth(), lastDayOfMonthInResultYear);
+return DayDateFactory.makeDate(resultDay, getMonth(), resultYear);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public DayDate getPreviousDayOfWeek(Day targetDayOfWeek) {
+int offsetToTarget = targetDayOfWeek.index - getDayOfWeek().index;
+if (offsetToTarget &gt;= 0)
+offsetToTarget -= 7;
+return plusDays(offsetToTarget);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public DayDate getFollowingDayOfWeek(Day targetDayOfWeek) {
+int offsetToTarget = targetDayOfWeek.index - getDayOfWeek().index;
+if (offsetToTarget &lt;= 0)
+</code></pre></div><p><strong>Then Make It Right</strong> 281</p> <p>The next function is getNearestDayOfWeek(lines 695–726), which we corrected back
+on page 270. But the changes I made back then aren’t consistent with the current pattern in
+the last two functions [G11]. So I made it consistent and used some EXPLAINING TEMPO-
+RARY VARIABLES [G19] to clarify the algorithm.</p> <p>ThegetEndOfCurrentMonthmethod (lines 728–740) is a little strange because it is an
+instance method that envies [G14] its own class by taking a DayDateargument. I made it a
+true instance method and clarified a few names.</p> <p>Refactoring weekInMonthToString(lines 742–761) turned out to be very interesting
+indeed. Using the refactoring tools of my IDE, I first moved the method to the WeekInMonth
+enum that I created back on page 275. Then I renamed the method to toString. Next, I
+changed it from a static method to an instance method. All the tests still passed. (Can you
+guess where I am going?)</p> <p>Next, I deleted the method entirely! Five asserts failed (lines 411–415, Listing B-4,
+page 374). I changed these lines to use the names of the enumerators (FIRST,
+SECOND,.. .). All the tests passed. Can you see why? Can you also see why each of these
+steps was necessary? The refactoring tool made sure that all previous callers of
+weekInMonthToStringnow called toStringon the weekInMonthenumerator because all enu-
+merators implement toString to simply return their names</p> <p>Unfortunately, I was a bit too clever. As elegant as that wonderful chain of refactor-
+ings was, I finally realized that the only users of this function were the tests I had just mod-
+ified, so I deleted the tests.</p> <p>Fool me once, shame on you. Fool me twice, shame on me! So after determining that
+nobody other than the tests called relativeToString(lines 765–781), I simply deleted the
+function and its tests.</p> <div class="language- extra-class"><pre class="language-text"><code>offsetToTarget += 7;
+return plusDays(offsetToTarget);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public DayDate getNearestDayOfWeek(final Day targetDay) {
+int offsetToThisWeeksTarget = targetDay.index - getDayOfWeek().index;
+int offsetToFutureTarget = (offsetToThisWeeksTarget + 7) % 7;
+int offsetToPreviousTarget = offsetToFutureTarget - 7;
+if (offsetToFutureTarget &gt; 3)
+return plusDays(offsetToPreviousTarget);
+else
+return plusDays(offsetToFutureTarget);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public DayDate getEndOfMonth() {
+Month month = getMonth();
+int year = getYear();
+int lastDay = lastDayOfMonth(month, year);
+return DayDateFactory.makeDate(lastDay, month, year);
+}
+</code></pre></div><p>282 <strong>Chapter 16: Refactoring SerialDate</strong></p> <p>We have finally made it to the abstract methods of this abstract class. And the first one
+is as appropriate as they come: toSerial(lines 838–844). Back on page 279 I had changed
+the name to toOrdinal. Having looked at it in this context, I decided the name should be
+changed to getOrdinalDay.</p> <p>The next abstract method is toDate(lines 838–844). It converts a DayDate to a
+java.util.Date. Why is this method abstract? If we look at its implementation in
+SpreadsheetDate(lines 198–207, Listing B-5, page 382), we see that it doesn’t depend on
+anything in the implementation of that class [G6]. So I pushed it up.</p> <p>ThegetYYYY,getMonth, and getDayOfMonthmethods are nicely abstract. However, the
+getDayOfWeekmethod is another one that should be pulled up from SpreadSheetDate
+because it doesn’t depend on anything that can’t be found in DayDate[G6]. Or does it?</p> <p>If you look carefully (line 247, Listing B-5, page 382), you’ll see that the algorithm
+implicitly depends on the origin of the ordinal day (in other words, the day of the week of
+day 0). So even though this function has no physical dependencies that couldn’t be moved
+toDayDate, it does have a logical dependency.</p> <p>Logical dependencies like this bother me [G22]. If something logical depends on
+the implementation, then something physical should too. Also, it seems to me that the
+algorithm itself could be generic with a much smaller portion of it dependent on the
+implementation[G6].</p> <p>So I created an abstract method in DayDatenamedgetDayOfWeekForOrdinalZeroand
+implemented it in SpreadsheetDateto return Day.SATURDAY. Then I moved the getDayOfWeek
+method up to DayDateand changed it to call getOrdinalDayandgetDayOfWeekForOrdinal-
+Zero.</p> <p>As a side note, look carefully at the comment on line 895 through line 899. Was this
+repetition really necessary? As usual, I deleted this comment along with all the others.</p> <p>The next method is compare(lines 902–913). Again, this method is inappropriately
+abstract [G6], so I pulled the implementation up into DayDate. Also, the name does not
+communicate enough [N1]. This method actually returns the difference in days since the
+argument. So I changed the name to daysSince. Also, I noted that there weren’t any tests
+for this method, so I wrote them.</p> <p>The next six functions (lines 915–980) are all abstract methods that should be imple-
+mented in DayDate. So I pulled them all up from SpreadsheetDate.</p> <p>The last function, isInRange(lines 9 8 2–995) also needs to be pulled up and refac-
+tored. The switchstatement is a bit ugly [G23]and can be replaced by moving the cases
+into the DateInterval enum.</p> <div class="language- extra-class"><pre class="language-text"><code>public Day getDayOfWeek() {
+Day startingDay = getDayOfWeekForOrdinalZero();
+int startingOffset = startingDay.index - Day.SUNDAY.index;
+return Day.make((getOrdinalDay() + startingOffset) % 7 + 1);
+}
+</code></pre></div><p><strong>Then Make It Right</strong> 283</p> <p>That brings us to the end of DayDate. So now we’ll make one more pass over the whole
+class to see how well it flows.</p> <p>First, the opening comment is long out of date, so I shortened and improved it [C2].
+Next, I moved all the remaining enums out into their own files [G12].
+Next, I moved the static variable (dateFormatSymbols) and three static methods
+(getMonthNames <em>,</em> isLeapYear <em>,</em> lastDayOfMonth) into a new class named DateUtil[G6].</p> <p>I moved the abstract methods up to the top where they belong[G24].
+I changed Month.make to Month.fromInt[N1] and did the same for all the other enums.
+I also created a toInt() accessor for all the enums and made the index field private.</p> <p>There was some interesting duplication [G5] in plusYearsandplusMonthsthat I was
+able to eliminate by extracting a new method named correctLastDayOfMonth, making the
+all three methods much clearer.</p> <p>I got rid of the magic number 1 [G25],replacing it with Month.JANUARY.toInt()or
+Day.SUNDAY.toInt(), as appropriate. I spent a little time with SpreadsheetDate, cleaning up
+the algorithms a bit. The end result is contained in Listing B-7, page 394, through
+Listing B-16, page 405.</p> <div class="language- extra-class"><pre class="language-text"><code>public enum DateInterval {
+OPEN {
+public boolean isIn(int d, int left, int right) {
+return d &gt; left &amp;&amp; d &lt; right;
+}
+},
+CLOSED_LEFT {
+public boolean isIn(int d, int left, int right) {
+return d &gt;= left &amp;&amp; d &lt; right;
+}
+},
+CLOSED_RIGHT {
+public boolean isIn(int d, int left, int right) {
+return d &gt; left &amp;&amp; d &lt;= right;
+}
+},
+CLOSED {
+public boolean isIn(int d, int left, int right) {
+return d &gt;= left &amp;&amp; d &lt;= right;
+}
+};
+public abstract boolean isIn(int d, int left, int right);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>public boolean isInRange(DayDate d1, DayDate d2, DateInterval interval) {
+int left = Math.min(d1.getOrdinalDay(), d2.getOrdinalDay());
+int right = Math.max(d1.getOrdinalDay(), d2.getOrdinalDay());
+return interval.isIn(getOrdinalDay(), left, right);
+}
+</code></pre></div><p>284 <strong>Chapter 16: Refactoring SerialDate</strong></p> <p>Interestingly the code coverage in DayDatehas <em>decreased</em> to 84.9 percent! This is not
+because less functionality is being tested; rather it is because the class has shrunk so much
+that the few uncovered lines have a greater weight. DayDatenow has 45 out of 53 execut-
+able statements covered by tests. The uncovered lines are so trivial that they weren’t worth
+testing.</p> <h2 id="conclusion"><a href="#conclusion" class="header-anchor">#</a> Conclusion ..</h2> <p>So once again we’ve followed the Boy Scout Rule. We’ve checked the code in a bit cleaner
+than when we checked it out. It took a little time, but it was worth it. Test coverage was
+increased, some bugs were fixed, the code was clarified and shrunk. The next person to
+look at this code will hopefully find it easier to deal with than we did. That person will also
+probably be able to clean it up a bit more than we did.</p> <h2 id="bibliography"><a href="#bibliography" class="header-anchor">#</a> Bibliography ...</h2> <p><strong>[GOF]:</strong> <em>Design Patterns: Elements of Reusable Object Oriented Software</em> , Gamma et al.,
+Addison-Wesley, 1996.</p> <p><strong>[Simmons04]:</strong> <em>Hardcore Java</em> , Robert Simmons, Jr., O’Reilly, 2004.</p> <p><strong>[Refactoring]:</strong> <em>Refactoring: Improving the Design of Existing Code</em> , Martin Fowler et al.,
+Addison-Wesley, 1999.</p> <p><strong>[Beck97]:</strong> <em>Smalltalk Best Practice Patterns</em> , Kent Beck, Prentice Hall, 1997.</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/kungfu/cleancode/c15.html" class="prev">
+        15. JUnit Internals
+      </a></span> <span class="next"><a href="/docs/kungfu/cleancode/c17.html">
+        17. Smells and Heuristics
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----><!----><!----></div></div>
+    <script src="/docs/assets/js/app.e6f4376b.js" defer></script><script src="/docs/assets/js/2.c567e596.js" defer></script><script src="/docs/assets/js/244.3a3a15ec.js" defer></script><script src="/docs/assets/js/27.2fe5f85e.js" defer></script>
+  </body>
+</html>
