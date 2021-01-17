@@ -19,6 +19,13 @@ module.exports = [
         ]
     },
     {
+        title: 'Building Microservices',
+        children: [
+            'build-microservices/c9',
+            'build-microservices/c10'
+        ]
+    },
+    {
         title: '97 Things Every Programmer Should Know',
         children: [
             ...Array(98).fill(0).map((v, index) => `97things4dev/${index}`)
