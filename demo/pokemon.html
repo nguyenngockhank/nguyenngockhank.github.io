@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokemon weakness</title>
+<style>
+.poke-type {
+    padding: 3px 5px;
+    margin: 3px;
+}
+.poke-type-electric {
+    background: #eed535;
+}
+.poke-type-flying {
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+}
+.poke-type-rock {
+    background-color: #a38c21;
+}
+.poke-type-water {
+    background-color: #4592c4;
+}
+.poke-type-ice {
+    background-color: #51c4e7;
+}
+.poke-type-fire {
+    background-color:#fd7d24;
+}
+.poke-type-normal {
+    background-color:#a4acaf;
+}
+.poke-type-poison {
+    background-color:#b97fc9;
+}
+.poke-type-bug {
+    background-color:#729f3f;
+}
+.poke-type-fighting {
+    background-color:#d56723;;
+}
+.poke-type-fairy {
+    background-color:#fdb9e9;
+}
+.poke-type-dark {
+    background-color:#707070;
+}
+.poke-type-ground {
+    background-color:#fdb9e9;
+}
+.poke-type-psychic {
+    background-color:#fdb9e9;
+}
+.poke-type-steel {
+    background-color:#9eb7b8;
+}
+.poke-type-ghost {
+    background-color:#7b62a3;
+}
+.poke-type-grass {
+    background-color:#9bcc50;
+}
+.poke-type-dragon {
+    background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+}
+</style>
+</head>
+<body>
+
+<h1>Pokemon</h1>
+
+<div id="app">
+    <div v-for="(weakness, type)  in weaknesses">
+        <h3>
+            <poke-type :type="type">{{type}}</poke-type>
+        </h3>
+        <h4>Weakness</h4>
+        <poke-type 
+            v-for="stype in weakness" 
+            :type="stype">
+            {{stype}}
+        </poke-type>
+        <h4>Avantages</h4>
+        <poke-type 
+            v-for="stype in advantages[type]" 
+            :type="stype">
+            {{stype}}
+        </poke-type>
+        <hr>
+    </div>
+</div>
+
+
+<script src="./public/vue.js"></script>
+<script>
+let weaknesses = {
+    bug: ['fire', 'flying', 'rock'],
+    grass: ['fire', 'flying', 'ice', 'poison', 'bug'],
+    dragon: ['fairy', 'ice', 'dragon'],
+    fire: ['water', 'ground', 'rock'],
+    ghost: ['ghost', 'dark'],
+    ground: ['water', 'grass', 'ice'],
+    normal: ['fighting'],
+    psychic: ['ghost', 'dark', 'bug'],
+    steel: ['fire', 'fighting', 'ground'],
+    dark: ['fairy', 'bug', 'fighting'],
+    electric: ['ground'],
+    fighting: ['psychic', 'fairy', 'flying'],
+    fairy: ['steel', 'poison'],
+    flying: ['electric', 'ice', 'rock'],
+    ice: ['fire', 'steel', 'fighting', 'rock'],
+    poison: ['ground', 'psychic'],
+    rock: ['water', 'steel', 'grass', 'fighting', 'ground'],
+    water: ['grass', 'electric'],
+};
+
+// build advantages
+let advantages = {};
+function findWeaknessList(lookupType) {
+    const result = [];
+    for(const type in weaknesses) {
+        const weakness = weaknesses[type];
+        if (weakness.includes(lookupType)) {
+            result.push(type);
+        }
+    }
+    return result;
+}
+
+for(const type in weaknesses) {
+    advantages[type] = findWeaknessList(type);
+}
+</script>
+
+<script>
+
+Vue.component('PokeType', {
+    props: {
+        type: String,
+    },
+    template: `<span :class="'poke-type poke-type-'+ type">{{type}}</span>`,
+})
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        weaknesses: weaknesses,
+        advantages
+    },
+    computed: {
+
+    }
+})
+</script>
+</body>
+</html>
