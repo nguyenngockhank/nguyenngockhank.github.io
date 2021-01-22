@@ -20,7 +20,7 @@ module.exports = [
       title: "Giải Toán",
       children: [
         '/algorithm/string',
-        '/algorithm/rate_limit',
+        // '/algorithm/rate_limit',
         '/algorithm/authority',
         '/algorithm/sort',
         '/algorithm/no_if_loop',
