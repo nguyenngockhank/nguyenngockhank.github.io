@@ -93,7 +93,7 @@ class LowestCostFinder {
             for (const n in neighbors) {
                 const newCost = cost + neighbors[n];
                 const currentCost = this.costs[n]
-
+                // no init & less than
                 if (currentCost === undefined || currentCost > newCost) {
                     this.costs[n] = newCost;
                     this.parents[n] = node;
