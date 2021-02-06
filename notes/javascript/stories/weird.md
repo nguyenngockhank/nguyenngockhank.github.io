@@ -109,6 +109,22 @@ parseInt(string, radix);
 
 ---
 
+## Array 
+
+```javascript
+let arr = [];
+arr['key'] = 'Ok';
+arr[-200] = `I'm still Ok`;
+
+console.log(arr.length); // 0 - amazing =))
+console.log(arr); // [key: "Ok", -200: "I'm still Ok"]
+```
+
+### Phòng tránh 
+
+Đối với array thì chỉ nên xài key là số nguyên thôi, Js lỏng lẻo thế đấy :)) 
+
+
 ## Mất attribute khi "JSON.stringify"
 
 + Server Node: Dùng `express` truyền dữ liệu JSON xuống client
