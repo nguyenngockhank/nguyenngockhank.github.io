@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#canvas-wrapper {
+    margin: 7px;
+    border: 4px solid #000;
+    float: left;
+}
+#myCanvas {
+    padding: 0;
+    margin: 0;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+    <h1>K-Means Visualization</h1>
+    <div id="canvas-wrapper">
+        <canvas id="myCanvas"
+            onmousemove="showCoords(this, event)" 
+            onmouseout="clearCoords()"
+            onclick="handleClickCanvas(this, event)"
+            width="700"
+            height="500"
+        >
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+    </div><!-- #canvas-wrapper -->
+    
+    <div>
+        <h2>Info</h2>
+        <div>
+            K = <input id="k-input"
+                    min="0"
+                    max="5"
+                    oninput="updateK(event.target.value)"  
+                    type="number" value="2" />
+        </div>
+
+        <div>
+            <button onclick="generateClusters()">Random</button>
+            <button onclick="process()">Run</button>
+        </div>
+
+        <hr>
+
+        <div title="Total all distances">
+            Error: <span id="error-points" ></span>
+        </div>
+
+        <hr>
+        <div>
+            Mouse Coordinates (X, Y): 
+            <span id="mouse-position"></span>
+        </div>
+    </div>
+</div>
+
+<hr>
+<script>
+// HELPERS - generic problems
+function randomRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function randomInt(min, max) {
+    return Math.round(randomRange(min, max));
+}
+</script>
+
+<script>
+// HANDLE SHOW / HIDE COORDINATES WHEN MOUSE HOVERS CANVAS
+function getMouseCoords(canvas, event) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+      x: parseInt(event.clientX - rect.left),
+      y: parseInt(event.clientY - rect.top),
+    };
+}
+
+function showCoords(canvas, event) {
+  var coords = getMouseCoords(canvas, event)
+  document.getElementById("mouse-position").innerHTML = coords.x + ", " + coords.y;
+}
+
+function clearCoords() {
+  document.getElementById("mouse-position").innerHTML = "";
+}
+</script>
+
+<script>
+var APP_CONFIG = {
+    CANVAS_MAX_WIDTH: 700,
+    CANVAS_MAX_HEIGHT: 500,
+    CANVAS_OFFSET_LEFT: 0, 
+    CANVAS_OFFSET_TOP: 0,
+    POINT_RADIUS: 5,
+    CLUSTER_COLORS: [
+        'red',
+        'green',
+        'blue',
+        'pink',
+        'yellow',
+    ]
+}
+
+var APP_INFO = {
+    ctx: null,
+    k: 2, // input #k_input
+    points: [], // click on the panel
+    means: [], // click random button
+    error: 0,
+}
+
+function updateK(value) {
+    var k = parseInt(value)
+    APP_INFO['k'] = k
+    APP_INFO.means.length = k
+}
+</script>
+
+<script>
+function randomMeanPoint() {
+    return {
+        x: randomInt(0, APP_CONFIG.CANVAS_MAX_WIDTH),
+        y: randomInt(0, APP_CONFIG.CANVAS_MAX_HEIGHT)
+    }
+}
+
+function distanceOf2Points(p1, p2) {
+    return Math.sqrt(
+        Math.pow(p1.x - p2.x, 2)
+        +
+        Math.pow(p1.y - p2.y, 2),
+    );
+}
+
+function calculateMeanPoint(points) {
+    var sumX = 0;
+    var sumY = 0;
+    var length = points.length;
+    for(var i = 0; i < length; i++) {
+        sumX += points[i].x;
+        sumY += points[i].y;
+    }
+
+    return {
+        x: sumX / length,
+        y: sumY / length,
+    }
+}
+
+
+function drawPoint (point, pointColor, borderColor) {
+    var ctx = APP_INFO.ctx;
+
+    ctx.beginPath();
+    ctx.arc(
+        point.x, point.y, APP_CONFIG.POINT_RADIUS, 
+        /** startAngle */ 0, /** endAngle */ 2 * Math.PI);
+    if (pointColor) {
+        ctx.fillStyle = pointColor;
+        ctx.fill();
+    }
+    if (borderColor) {
+        ctx.strokeStyle = borderColor;
+        ctx.stroke();
+    }
+}
+
+
+function drawCanvas() {
+    APP_INFO.ctx.clearRect(0, 0, APP_CONFIG.CANVAS_MAX_WIDTH, APP_CONFIG.CANVAS_MAX_HEIGHT);
+
+    var CLUSTER_COLORS = APP_CONFIG.CLUSTER_COLORS;
+
+
+    var error = 0;
+    // draw points
+    APP_INFO.points.forEach((point, index) => {
+        error += point.distance;
+        var clusterIndex = point.clusterIndex;
+        var color = CLUSTER_COLORS[clusterIndex] || 'black';
+        drawPoint(point, null, color);
+    })
+
+
+    // draw clusters
+    APP_INFO.means.forEach((meanPoint, index) => {
+        var color = APP_CONFIG.CLUSTER_COLORS[index];
+        drawPoint(meanPoint, color)
+    })
+
+    document.getElementById('error-points').innerHTML = error + '';
+}
+
+function generateClusters() {
+    if (APP_INFO.k <= 0) {
+        return;
+    }
+
+    var ctx = APP_INFO.ctx;
+    for(var i = 0; i < APP_INFO.k; i++) {
+        APP_INFO.means[i] = randomMeanPoint();
+    }
+
+    drawCanvas();
+}
+
+
+function determineClosestCluster(point) {
+    // return randomInt(0, APP_INFO.k - 1);
+    var minDistance = Number.MAX_VALUE;
+    var clusterIndex = -1;
+    for(var i = 0; i < APP_INFO.means.length; i++) {
+        var distance = distanceOf2Points(point, APP_INFO.means[i]);
+        if (minDistance > distance) {
+            minDistance = distance;
+            clusterIndex = i;
+        }
+    }
+
+    console.log('MIN DISTANCE ', minDistance, clusterIndex);
+    return {
+        distance: minDistance,
+        clusterIndex,
+    };
+}
+
+function process() {
+    // calculate distances
+    for(var i = 0; i < APP_INFO.points.length; i++) {
+        var point = APP_INFO.points[i];
+        var result = determineClosestCluster(point);
+        point.clusterIndex = result.clusterIndex;
+        point.distance = result.distance;
+
+    }
+
+    // recalculate clusters
+    for(var i = 0; i < APP_INFO.means.length; i++) {
+        var points = APP_INFO.points.filter(value => value.clusterIndex === i);
+
+        var newMeanPoint = calculateMeanPoint(points);
+
+        console.log("NEW MEAN POINT", newMeanPoint, ' FROM ', points);
+        APP_INFO.means[i] = newMeanPoint;
+    }
+
+    // update UI
+    drawCanvas();
+}
+
+function handleClickCanvas(canvas, event) {
+    if (APP_INFO.k <= 0) {
+        return;
+    }
+    // new point
+    var point = getMouseCoords(canvas, event);
+    APP_INFO.points.push(point);
+
+    // draw point
+    var ctx = canvas.getContext("2d");
+    drawPoint(point, null, 'black');
+
+}
+
+
+// init...
+var canvas = document.getElementById("myCanvas");
+APP_CONFIG.CANVAS_OFFSET_LEFT = canvas.offsetLeft;
+APP_CONFIG.CANVAS_OFFSET_TOP = canvas.offsetTop;
+
+APP_INFO.ctx = canvas.getContext("2d");
+
+// ctx.font = "30px Arial";
+// ctx.fillText("Hello World",10,50);
+</script>
+
+</body>
+</html>
