@@ -144,6 +144,32 @@ WITH RECURSIVE subordinates AS (
 ) SELECT * FROM subordinates;
 ```
 
+## Materialized View
+
+- [postgresqltutorial](https://www.postgresqltutorial.com/postgresql-materialized-views/)
+- [Materialized Views](https://www.postgresql.org/docs/9.3/rules-materializedviews.html)
+
+**Create** 
+```sql
+CREATE MATERIALIZED VIEW "UserDashboard" 
+AS
+   SELECT count(1) AS count , u."isAdmin"
+   FROM "User" u
+   GROUP BY "isAdmin" 
+WITH DATA 
+```
+
+**Refresh** 
+```sql
+REFRESH MATERIALIZED VIEW "UserDashboard";
+-- allow querying when refreshing data
+REFRESH MATERIALIZED VIEW CONCURRENTLY "UserDashboard"; 
+```
+
+**Drop**
+```sql
+DROP MATERIALIZED VIEW view_name;
+```
 
 ## Table Partitioning
 

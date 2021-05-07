@@ -1,7 +1,5 @@
 # Principles
 
-[[toc]]
-
 ## Coding Principles
 
 ### Keep It Simple, Stupid (KISS)
@@ -236,6 +234,63 @@ Identify points of predicted variation or instability; assign responsibilities t
 :::
 
 *Interface is used in broadest sense – not just Java interfaces.*
+
+## Key Design Principles
+
+::: tip Separation of Concerns
+Divide the components of system into specific features so that there is no overlapping among the components functionality. This will provide high cohesion and low coupling. This approach avoids the interdependency among components of system which helps in maintaining the system easy.
+:::
+
+::: tip Single Responsibility Principle
+Each and every module of a system should have one specific responsibility, which helps the user to clearly understand the system. It should also help with integration of the component with other components.
+:::
+
+::: tip Principle of Least Knowledge
+Any component or object should not have the knowledge about internal details of other components. This approach avoids interdependency and helps maintainability.
+:::
+
+::: tip Minimize Large Design Upfront
+Minimize large design upfront if the requirements of an application are unclear. If there is a possibility of modifying requirements, then avoid making a large design for whole system.
+:::
+
+::: tip Do not Repeat the Functionality
+Do not repeat functionality specifies that functionality of components should not to be repeated and hence a piece of code should be implemented in one component only. Duplication of functionality within an application can make it difficult to implement changes, decrease clarity, and introduce potential inconsistencies.
+:::
+
+::: tip Prefer Composition over Inheritance while Reusing the Functionality
+Inheritance creates dependency between children and parent classes and hence it blocks the free use of the child classes. In contrast, the composition provides a great level of freedom and reduces the inheritance hierarchies.
+:::
+
+::: tip Identify Components and Group them in Logical Layers
+Identity components and the area of concern that are needed in system to satisfy the requirements. Then group these related components in a logical layer, which will help the user to understand the structure of the system at a high level. Avoid mixing components of different type of concerns in same layer.
+:::
+
+::: tip Define the Communication Protocol between Layers
+Understand how components will communicate with each other which requires a complete knowledge of deployment scenarios and the production environment.
+:::
+
+::: tip Define Data Format for a Layer
+Various components will interact with each other through data format. Do not mix the data formats so that applications are easy to implement, extend, and maintain. Try to keep data format same for a layer, so that various components need not code/decode the data while communicating with each other. It reduces a processing overhead.
+:::
+
+::: tip System Service Components should be Abstract
+Code related to security, communications, or system services like logging, profiling, and configuration should be abstracted in the separate components. Do not mix this code with business logic, as it is easy to extend design and maintain it.
+:::
+
+::: tip Design Exceptions and Exception Handling Mechanism
+Defining exceptions in advance, helps the components to manage errors or unwanted situation in an elegant manner. The exception management will be same throughout the system.
+:::
+
+::: tip Naming Conventions
+Naming conventions should be defined in advance. They provide a consistent model that helps the users to understand the system easily. It is easier for team members to validate code written by others, and hence will increase the maintainability.
+:::
+
+## Others
+
+- [Return Early Pattern](https://medium.com/swlh/return-early-pattern-3d18a41bba8#:~:text=Return%20early%20is%20the%20way,when%20conditions%20are%20not%20met.)
+- [Demeter’s Law -  Don’t talk to strangers!](https://dev.to/carlillo/demeters-law-dont-talk-to-strangers-10ep)
+
+- Hollywood Principle "don't call us, we'll call you"
 
 ## References 
 
