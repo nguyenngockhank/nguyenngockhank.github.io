@@ -171,6 +171,17 @@ REFRESH MATERIALIZED VIEW CONCURRENTLY "UserDashboard";
 DROP MATERIALIZED VIEW view_name;
 ```
 
+## Delete duplicated rows
+
+```sql
+DELETE FROM
+   basket a
+        USING basket b
+WHERE
+   a.id < b.id
+    AND a.fruit = b.fruit;
+```
+
 ## Table Partitioning
 
 Postgres provides three built-in partitioning methods:

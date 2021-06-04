@@ -12,9 +12,13 @@ Ví dụ vài công cụ hay ho trên thị trường như là:
 # Các cách thực hiện
 
 ## Flow sương sương là 
-- Xác định data muốn lấy ở đâu 
-- Tạo ra request tới server đích
-- Nhận được response từ server rồi bóc tách dữ liệu
+
+1. Xác định data muốn lấy ở đâu 
+2. Tạo ra request lấy nội dung 
+3. Bóc tách dữ liệu
+4. Lưu dữ liệu
+5. Phân tích dữ liệu
+
 - Ngoài ra: còn nhiều thứ khác lắm =))
 
 ## PHP - get_file_contents

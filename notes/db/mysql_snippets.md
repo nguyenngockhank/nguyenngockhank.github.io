@@ -80,6 +80,17 @@ order by (
 ) 
 ```
 
+## View
+
+```sql
+CREATE VIEW PostCountPerCategoryView 
+AS
+SELECT  c.id, c.title, count(1) as count
+FROM post p 
+JOIN category c ON c.id = p.cat_id 
+GROUP BY c.id, c.title
+ORDER BY count DESC
+```
 
 
 ## Lock rows
