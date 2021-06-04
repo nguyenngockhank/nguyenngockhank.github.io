@@ -11,7 +11,6 @@ module.exports = [
         '/common/crawl',
         '/common/refactor',
         '/common/refactor-catalog',
-        '/common/restful',
         '/common/document',
       
       ],

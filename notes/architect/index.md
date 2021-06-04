@@ -19,6 +19,12 @@ That purpose of that shape is to facilitate the development, deployment, operati
 The strategy behind that facilitation is to leave as many options open as possible, for as long as possible.
 :::
 
+## Communication
+
+- [Messaging - Async Communication](./messaging.md)
+- [RestFull - Sync Communication](./restful.md)
+
+
 ## Stack
 ![architecture-stack](./img/architecture-stack.png)
 

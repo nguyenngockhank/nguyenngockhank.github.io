@@ -1,7 +1,13 @@
 module.exports = [
     '',
     'philosophy-sw-design',
-    'ddd',
+    {
+        title: 'Communication',
+        children: [
+            'restful',
+            'messaging',
+        ]
+    },
     {
         title: 'The Architecture of Systems', 
         children: [
@@ -13,6 +19,7 @@ module.exports = [
             'event_driven_A',
             'hexagonal_A',
             'spa',
+            'ddd',
         ]
     },
     {
