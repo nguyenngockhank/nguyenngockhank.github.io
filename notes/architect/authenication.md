@@ -81,8 +81,7 @@ Thường được sử dụng trong các hệ thống `Web API`, `các hệ th�
 - Thông tin dễ lộ => thông thường chỉ lưu 1 số thông tin thiết yếu như `user_id`, `username` mà không lưu thông tin nhạy cảm như `password` vào token
 - Dung lượng truyền tải lớn
 
-## OAuth
-**Viết tắt**: `Open Authentication`
+## Open Authentication aka OAuth
 
 ::: tip 
 `OAuth` ra đời nhằm giải quyết vấn đề trên và xa hơn nữa, đây là một phương thức chứng thực giúp các ứng dụng có thể chia sẻ tài nguyên với nhau mà không cần chia sẻ thông tin username và password.
@@ -97,3 +96,11 @@ Thường được sử dụng trong các hệ thống `Web API`, `các hệ th�
 ![Mô hình OAuth2](@/images/oauth.png)
 
 Tóm tắt [bài viết gốc](https://viblo.asia/p/authentication-story-part-1-authentication-la-lam-gi-63vKj2YMK2R)
+
+## Single Sign-On
+
+When a principal tries to access a resource, she is directed to authenticate with an **identity provider**. Once identity provider is satisfied that the principal has been authenticated, it gives informatin to the **service provider**, allowing it to decide whether to grant her access to the resource.
+
+- **Identity provider** could be an externally hosted system, or something inside your own organization. 
+    - Goolge, for example, provides an OpenID Connect identity provider.
+    - For enterprises, it's common to have your own identity provider, which may be linked to your company's directory service - It could be s.th like *Lightweight Directory Access Protocol (LDAP)* or *Active Directory*

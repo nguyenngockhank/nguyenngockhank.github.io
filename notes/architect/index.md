@@ -19,6 +19,15 @@ That purpose of that shape is to facilitate the development, deployment, operati
 The strategy behind that facilitation is to leave as many options open as possible, for as long as possible.
 :::
 
+## Core responsibilities of the evolutionary architect: 
+- **Vision**: ensure there is a clearly comunicated technical vision for the system that will help your system meet the requirements of your customers & organization.
+- **Empathy**: Understand the impact of your decisions on your customers & colleagues.
+- **Collaboration**: Engage with as many of your peers & colleagues as possible to help define, refine, and execute the vision.
+- **Adaptability**: make sure that the technical vision changes as your customers or organization requires it.
+- **Autonomy**: find the right balance between standardizing & enabling autonomy for your teams.
+- **Governance**: ensure that the system being implemented fits the technical vision.
+
+
 ## Communication
 
 - [Messaging - Async Communication](./messaging.md)

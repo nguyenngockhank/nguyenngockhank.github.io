@@ -1,5 +1,8 @@
 # Domain-Driven Design
 
+<!-- https://medium.com/steve-cruz/domain-driven-design-ddd-file-structure-ade7fb26553d -->
+
+
 Domain-Drive Design do Eric Evans tạo ra trong cuốn sách nổi tiếng của ông về [Domain-Driven Design: Tackling Complexity in the Heart of Software](https://www.amazon.com/dp/0321125215/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=CG11VVP0H8Y8&coliid=I1X0NXLUHTFGE4), xuất bản năm 2003. Cuốn sách của Eric Evans là chìa khóa chính thức hóa nhiều khái niệm phát triển phần mềm hiện nay.
 
 Tôi không thể đưa ra một đánh giá toàn diện về DDD trong một bài viết trên blog. Có quá nhiều khái niệm quan trọng liên quan đến DDD. May mắn thay, đó cũng không phải là mục tiêu ở đây. Tuy nhiên, những gì tôi sẽ làm là liệt kê các khái niệm DDD mà tôi thấy có liên quan đến cách tôi muốn tổ chức mã và cách tôi nghĩ về Kiến trúc: các khái niệm hệ thống rộng tạo thành nền tảng cho phát triển tính năng.

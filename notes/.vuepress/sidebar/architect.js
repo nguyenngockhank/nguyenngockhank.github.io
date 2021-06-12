@@ -20,6 +20,7 @@ module.exports = [
             'hexagonal_A',
             'spa',
             'ddd',
+            'microservices',
         ]
     },
     {
