@@ -48,11 +48,12 @@ module.exports = [
       children: [
         '/terms/javascript',
         '/terms/oop',
-        '/terms/testing',
-        '/terms/ddd',
-        '/terms/concurrent',
+        '/terms/patterns',
         '/terms/principles',
+        '/terms/ddd',
+        '/terms/testing',
         '/terms/12factors',
+        '/terms/concurrent',
       ]
     },
     {
