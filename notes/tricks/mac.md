@@ -136,6 +136,15 @@ host staging
 
 Từ nay có thể xài `ssh staging`
 
+## Icon for files / folders
+- copy image to clipboard 
+- Get info > paste to icon place
+[full description](https://support.apple.com/en-vn/guide/mac-help/mchlp2313/mac)
+
+## Hebernate mode
+
+use this app http://deepsleep.free.fr/
+
 ## Install fonts
 
 [Full Here](https://mackeeper.com/blog/post/542-how-to-install-fonts-on-mac/)

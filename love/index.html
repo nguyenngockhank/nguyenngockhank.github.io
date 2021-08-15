@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Có chàng trai viết lên blockchain</title>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../demo/public/vue.js"></script>
+    <script language="javascript" type="text/javascript" src="../demo/public/web3.min.js"></script>
+    <script>
+        var loveEnvelopesABI = [
+            {
+                "anonymous": false,
+                "inputs": [
+                    {
+                        "indexed": false,
+                        "internalType": "uint256",
+                        "name": "envelopeId",
+                        "type": "uint256"
+                    },
+                    {
+                        "indexed": false,
+                        "internalType": "string",
+                        "name": "content",
+                        "type": "string"
+                    }
+                ],
+                "name": "EnvelopeCreated",
+                "type": "event"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "content",
+                        "type": "string"
+                    }
+                ],
+                "name": "createEnvolope",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    }
+                ],
+                "name": "envelopes",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "content",
+                        "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ]
+    </script>
+</head>
+<body>
+    <h1>Có chàng trai viết lên blockchain... lời yêu thương cô gái ấy</h1>
+
+    <button id="connect" onclick="connectMetaMask()">connect MetaMask</button>
+    <div>
+        <textarea name="" id="content" cols="30" rows="10">anh yeu em nhieu, chi mong em se hieu</textarea>
+        <button id="submit" onclick="createEnvolope()">Send</button>
+    </div>
+<script>
+const appState = {
+    web3Ready: false,
+    constractAddress: "0x208ee0526319c3711ced9e221ef956003c4d0b86",
+    constractInstance: null,
+    userAccount: null,
+}
+
+
+function startApp() {
+    appState.constractInstance = new web3js.eth.Contract(loveEnvelopesABI, appState.constractAddress);
+    console.log(appState.constractInstance)
+
+    connectMetaMask();
+
+
+    ethereum.on('accountsChanged', (accounts) => {
+    // Handle the new accounts, or lack thereof.
+    // "accounts" will always be an array, but it can be empty.
+        _updateAccount(accounts);
+    });
+}
+
+function _updateAccount(accounts) {
+    var firstAcc = accounts[0]
+    if (firstAcc && firstAcc !== appState.userAccount) {
+        appState.userAccount = firstAcc
+        console.log("acc changed", appState.userAccount)
+        $("#connect").hide();
+    }
+}
+
+function createEnvolope() {
+
+    // your quotes
+    // appState.constractInstance.methods.envelopes("0").call().then(data => console.log(data))
+ 
+    // This is going to take a while, so update the UI to let the user know
+    // the transaction has been sent
+    var content = $("#content").text();
+
+    console.log("createEnvolope with content ", content)
+    // Send the tx to our contract:
+    return appState.constractInstance.methods.createEnvolope(content)
+        .send({ from: appState.userAccount,  gas: 150000,
+
+    gasPrice: '30000000000000'  })
+        .on("receipt", function(receipt) {
+            console.log(receipt)
+        })
+        .on("error", function(error) {
+            // Do something to alert the user their transaction has failed
+            alert(error)
+            console.log(error)
+        });
+}
+
+
+function connectMetaMask() {
+  ethereum
+    .request({ method: 'eth_requestAccounts' })
+    .then(function(accounts) {
+        _updateAccount(accounts)
+    })
+}
+
+
+window.addEventListener('load', function() {
+    // Checking if Web3 has been injected by the browser (Mist/MetaMask)
+    if (typeof ethereum !== 'undefined')  {
+        // Use Mist/MetaMask's provider
+        web3js = new Web3(window.ethereum)
+        window.ethereum.enable();
+        appState.web3Ready = ethereum.isConnected()
+    } else {
+        // Handle the case where the user doesn't have Metamask installed
+        // Probably show them a message prompting them to install Metamask
+        console.warn("install Metamask, please!")
+    }
+
+    // Now you can start your app & access web3 freely:
+    startApp()
+
+})
+</script>
+</body>
+</html>
