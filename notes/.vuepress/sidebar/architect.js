@@ -6,6 +6,7 @@ module.exports = [
         children: [
             'restful',
             'messaging',
+            'OrchestrationVsChoreography',
         ]
     },
     {

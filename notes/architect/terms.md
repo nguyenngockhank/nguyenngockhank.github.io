@@ -2,9 +2,46 @@
 
 ![Untitled-Diagram.png](./img/Untitled-Diagram.png)
 
+## Right tool for right job
+- **Object-Oriented Programming** is the tool best suited for defining how we cross architectural boundaries with polymorhpism and plugins
+- **Functional programming** is the tool we use to push data to the boundaries of our applications
+- and **Structured programming** is the tool we use to write algorithms
+
+
+[📓 Functional in the small, OO in the large](https://www.johndcook.com/blog/2009/03/23/functional-in-the-small-oo-in-the-large/)
+
 ## Vertical scaling vs. Horizontal scaling
 - **Horizontal scaling** (*scale out*) means that you scale by adding more machines into your pool of resources 
 - **Vertical scaling** (*scale up*) means that you scale by adding more power (CPU, RAM) to an existing machine.
+
+## Consistency patterns
+
+| #   | Name | Stategy |
+| --- | --- | --- |
+| 1   | Compensating action | Perform an action that undoes prior action(s) |
+| 2   | Retry | Retry until success or timeout |
+| 3   | Ignore | Do nothing in the event of errors |
+| 4   | Restart | Reset to the original state & start again |
+| 5   | Tentative operation | Perform a tentative operation and confirm (or cancel) later |
+
+### Logging for keep consistent:
+
+- **Receiver-based message logging** (RBML): involves sync writing every received message to stable storage before any actIon is taken on it.
+- **Sender-based message logging** (SBML): involves writing the message before it is sent.
+- **Hybrid message logging** (HML)
+
+## Locking Approaches
+- **Pessimistic approaches** lock data records to prevent conflicts.
+- **Optimistic approaches** detect conflicts and fix them.
+
+## Two-phase commit (2PC) vs. SAGA
+- 2PC works as a single commit and aims to perform ACID transactions on distributed systems.
+- On the other hand, SAGA works sequentially, not as a single commit. Each operation gets committed before the subsequent one, and this makes the data eventually consistent. Thus, Saga consists of multiple steps whereas 2PC acts like a single request.
+
+## Orchestration vs Choreography
+- **Service orchestration** represents a single centralized executable business process that coordinates the interaction among different services.
+- **The choreography** describes the interactions between multiple services, which is defined by exchange of messages, rules of interaction and agreements between two or more endpoints.
+[READ MORE](./OrchestrationVsChoreography.md)
 
 ## High availability vs. fault tolerance
 
@@ -32,6 +69,7 @@ All the data flows, flowcharts, data structures, etc. are in these docs, so that
 **Detail Level Design** (DLD) is the most detailed technical document, which describes user stories, error processing algorithms, state transitions, logical sequences, and others. DLD describes the interaction of every low-level process with each other.
 
 ![hld-lld.png](./img/hld-lld.png)
+
 
 
 ## Monolithic vs. Microservices 
@@ -132,11 +170,6 @@ aka Ports & Adapters Architecture
 **2014**
 - C4 Model
 
-
-## Right tool for right job
-- **Object-Oriented Programming** is the tool best suited for defining how we cross architectural boundaries with polymorhpism and plugins
-- **Functional programming** is the tool we use to push data to the boundaries of our applications
-- and **Structured programming** is the tool we use to write algorithms
 
 
 ## Others
