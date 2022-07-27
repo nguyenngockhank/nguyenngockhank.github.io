@@ -2,10 +2,13 @@
 
 CouchDB is a database that completely embraces the web. Store your data with JSON documents. Access your documents with your web browser, via HTTP. Query, combine, and transform your documents with JavaScript. 
 
-## Consistency
+## [Eventual Consistency](https://docs.couchdb.org/en/3.2.0/intro/consistency.html)
+
+- **Consistency**: All database clients see the same data, even with concurrent updates.
+- **Availability**: All database clients are able to access some version of the data.
+- **Partition tolerance**: The database can be split over multiple servers.
 
 ![CouchDb consitency](./img/couch-consistency.png)
-
 
 ## Conflict resources
 CouchDB uses an "optimistic concurrency" model. In the simplest terms, this just means that you send a document version along with your update, and CouchDB rejects the change if the current document version doesn't match what you've sent.
