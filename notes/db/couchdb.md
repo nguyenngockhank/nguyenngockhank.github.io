@@ -1,4 +1,4 @@
-# CouchDB 
+# CouchDB Notes
 
 CouchDB is a database that completely embraces the web. Store your data with JSON documents. Access your documents with your web browser, via HTTP. Query, combine, and transform your documents with JavaScript. 
 

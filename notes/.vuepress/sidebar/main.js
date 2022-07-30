@@ -65,6 +65,7 @@ module.exports = [
         '/db/mysql_snippets',
         '/db/postgre',
         '/db/couchdb',
+        '/db/redis',
         '/db/nosql',
       ]
     },
