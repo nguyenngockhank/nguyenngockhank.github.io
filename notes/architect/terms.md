@@ -10,6 +10,14 @@
 
 [📓 Functional in the small, OO in the large](https://www.johndcook.com/blog/2009/03/23/functional-in-the-small-oo-in-the-large/)
 
+## Availability tactics 
+Availability tactics have one of three purposes:
+- fault detection
+- fault recovery
+- fault prevention.
+
+will often be provided by a software infrastructure, such as a middleware package
+
 ## Vertical scaling vs. Horizontal scaling
 - **Horizontal scaling** (*scale out*) means that you scale by adding more machines into your pool of resources 
 - **Vertical scaling** (*scale up*) means that you scale by adding more power (CPU, RAM) to an existing machine.

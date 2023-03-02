@@ -4,6 +4,10 @@
 Database tuning describes a group of activities used to optimize and homogenize the performance of a database. 
 :::
 
+## Thứ tự thực thi
+
+![sql query execute order](./img/sql-query-exe-order.jpeg)
+
 ## Khóa cửa khóa ngõ
 Nếu nhất quán dữ liệu, ràng buộc toàn vẹn không là vấn đề thì bỏ mấy cái quan hệ khóa chính, khóa ngoại. 
 

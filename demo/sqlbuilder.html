@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Enum Sql builder</title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+</head>
+<body>
+
+<div class="container">
+<h1 class="title">SQL Builder</h1>
+<div id="app">
+    <div>
+        <h2 class="subtitle">I. Create Enum</h2>
+        <b-field label="Enum name">
+            <b-input v-model="createEnumName"></b-input>
+        </b-field>
+
+        <b-field label="Add some values">
+            <b-taginput
+                v-model="createEnumValues"
+                ellipsis
+                icon="label"
+                placeholder="Add a value"
+                aria-close-label="Delete this value">
+            </b-taginput>
+        </b-field>
+
+        <code><pre>
+            await knex.raw(`DO $$
+            BEGIN
+            IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = '{{ createEnumName }}') THEN
+            CREATE TYPE "{{ createEnumName }}" AS ENUM ({{ createEnumValuesSql }});
+            END IF;
+            END$$;`);</pre>
+        </code>
+    </div><!-- END DIV -->
+
+    <div>
+        <h2 class="subtitle">II. Add value to an existing Enum</h2>
+        <b-field label="Enum name">
+            <b-input v-model="addToEnum"></b-input>
+        </b-field>
+
+        <b-field label="Add some values">
+            <b-taginput
+                v-model="addNewValues"
+                ellipsis
+                icon="label"
+                placeholder="Add a value"
+                aria-close-label="Delete this value">
+            </b-taginput>
+        </b-field>
+
+        <code><pre>
+            await knex.raw(`
+            DO $$
+            BEGIN
+                IF EXISTS (SELECT 1 FROM pg_type WHERE typname = '{{ addToEnum }}') THEN
+{{ addNewValuesSql }}
+                END IF;
+            END$$;
+          `);</pre>
+        </code>
+    </div><!-- END DIV -->
+
+
+    <div>
+        <h2 class="subtitle">III. Rename a value </h2>
+        <b-field label="Enum name">
+            <b-input v-model="renameFromEnum"></b-input>
+        </b-field>
+        <b-field label="Old Value">
+            <b-input v-model="renameFromValue"></b-input>
+        </b-field>
+        <b-field label="New Value">
+            <b-input v-model="renameToValue"></b-input>
+        </b-field>
+
+        <code><pre>
+            await knex.raw(`
+                DO $$
+                BEGIN
+                IF EXISTS (
+                    SELECT 1 FROM "pg_enum" where
+                    "enumtypid" = (SELECT "oid" FROM "pg_type" WHERE "typname" = '{{renameFromEnum}}') and
+                    "enumlabel"='{{renameFromValue}}'
+                ) THEN
+                    ALTER TYPE "{{renameFromEnum}}" RENAME VALUE '{{renameFromValue}}' TO '{{renameToValue}}';
+                END IF;
+                END$$;
+            `);</pre>
+        </code>
+    </div><!-- END DIV -->
+</div><!-- #app -->
+</div><!-- .container -->
+
+
+
+<script src="https://unpkg.com/vue@2"></script>
+<script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+
+<script>
+  new Vue({
+    el: '#app',
+    data() {
+      return {
+        // create
+        createEnumName: 'NewEnum',
+        createEnumValues: ["value1", "value2"],
+        // add
+        addToEnum: "AddToEnum",
+        addNewValues: ["new1", "new2"],
+        // rename
+        renameFromEnum: "FromEnum",
+        renameFromValue: "OldValue",
+        renameToValue: "OldValue",
+      }
+    },
+    computed: {
+      createEnumValuesSql() {
+        return this.createEnumValues.map(value => `'${value}'`).join(", ")
+      },
+      addNewValuesSql() {
+        return this.addNewValues.map(value => {
+            return `\t\t\tALTER TYPE \"${this.addToEnum}\" ADD VALUE IF NOT EXISTS '${value}';`
+        }).join("\n")
+      }
+    }
+  })
+</script>
+</body>
+</html>
+
