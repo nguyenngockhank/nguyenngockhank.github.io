@@ -1,6 +1,5 @@
 # Redis Notes
 
-
 - Node Client: [ioredis](https://www.npmjs.com/package/ioredis)
 
 ## Communication Patterns
@@ -123,6 +122,7 @@ await redis.zrange(key, 100000, 1000000, "BYSCORE");
 
 ## Use Lua Scripts
 
+### Generate Id
 Generate flakeId code for example
 
 ```ts
@@ -148,6 +148,73 @@ redis.generateFlakeId(key, (err, result) => {
     const counter = Number.parseInt(result);
     // more code ...
 });
+```
+
+### Rate Limiting 
+
+```ts
+import { ThrottlerStorageRecord } from "@nestjs/throttler/dist/throttler-storage-record.interface";
+import { Cluster, Redis } from "ioredis";
+
+export class ThrottlerStorageRedisService {
+  private scriptSrc: string;
+
+  constructor(private redis: Redis | Cluster) {
+    this.scriptSrc = this.getScriptSrc();
+  }
+
+  private getScriptSrc(): string {
+    // Credits to wyattjoh for the fast implementation you see below.
+    // https://github.com/wyattjoh/rate-limit-redis/blob/main/src/lib.ts
+    return `
+      local totalHits = redis.call("INCR", KEYS[1])
+      local timeToExpire = redis.call("PTTL", KEYS[1])
+      if timeToExpire <= 0
+        then
+          redis.call("PEXPIRE", KEYS[1], tonumber(ARGV[1]))
+          timeToExpire = tonumber(ARGV[1])
+        end
+      return { totalHits, timeToExpire }
+    `
+      .replace(/^\s+/gm, "")
+      .trim();
+  }
+
+  async increment(
+    key: string,
+    ttlSeconds: number,
+  ): Promise<ThrottlerStorageRecord> {
+    // Use EVAL instead of EVALSHA to support both redis instances and clusters.
+    const results = await this.redis.eval(
+      this.scriptSrc,
+      1,
+      key,
+      ttlSeconds * 1000,
+    );
+
+    if (!Array.isArray(results)) {
+      throw new TypeError(
+        `Expected result to be array of values, got ${results}`,
+      );
+    }
+
+    if (results.length !== 2) {
+      throw new Error(`Expected 2 values, got ${results.length}`);
+    }
+
+    const [totalHits, timeToExpire] = results;
+
+    if (typeof totalHits !== "number") {
+      throw new TypeError("Expected totalHits to be a number");
+    }
+
+    if (typeof timeToExpire !== "number") {
+      throw new TypeError("Expected timeToExpire to be a number");
+    }
+
+    return { totalHits, timeToExpire };
+  }
+}
 ```
 
 
