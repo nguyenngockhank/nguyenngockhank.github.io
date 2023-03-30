@@ -1,15 +1,17 @@
-# Table of contents
+# Overview
 
-* [Abstract](README.md)
+## Abstract
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC2119](https://www.ietf.org/rfc/rfc2119).
+
 
 ## Principles
 
 * [Design API first before Code](design-api-first-before-code.md)
 * [API Classifications](one-type-of-data-per-api.md)
-* [Contract](principles/contract/README.md)
-  * [Minimal API Surface](minimal-api-surface.md)
-  * [Robustness Principle](principles/contract/robustness-principle.md)
-  * [Public API Extending Rules](rules-for-public-api.md)
+* [Minimal API Surface](minimal-api-surface.md)
+* [Robustness Principle](principles/contract/robustness-principle.md)
+* [Public API Extending Rules](rules-for-public-api.md)
 
 ## Conventions
 

@@ -4,8 +4,6 @@ description: To make outputted API documentation look clean and professional
 
 # Decorators for Endpoints
 
-<figure><img src="../.gitbook/assets/redoc2.png" alt=""><figcaption></figcaption></figure>
-
 > ## For Controller
 
 ## Required Decorator

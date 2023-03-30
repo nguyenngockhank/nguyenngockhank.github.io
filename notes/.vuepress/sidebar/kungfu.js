@@ -6,12 +6,12 @@ module.exports = [
             ...Array(15).fill(0).map((v, index) => `artofcode/c${index + 1}`)
         ]
     },
-    {
-        title: 'Clean Code',
-        children: [
-            ...Array(17).fill(0).map((v, index) => `cleancode/c${index + 1}`)
-        ]
-    },
+    // {
+    //     title: 'Clean Code',
+    //     children: [
+    //         ...Array(17).fill(0).map((v, index) => `cleancode/c${index + 1}`)
+    //     ]
+    // },
     {
         title: 'A Philosophy of Software Design',
         children: [

@@ -4,16 +4,15 @@ module.exports = [
     {
       title: 'Chuyện muôn thuở',
       children: [
-        '/common/optimize_web',
-        '/common/cross_domain',
-        '/common/seo',
-        '/common/realtime',
-        '/common/crawl',
-        '/common/refactor',
-        '/common/refactor-catalog',
-        '/common/document',
-      
-      ],
+        'optimize_web',
+        'cross_domain',
+        'seo',
+        'realtime',
+        'crawl',
+        'refactor',
+        'refactor-catalog',
+        'document',
+      ].map(item => `/common/${item}`),
     },
     {
       title: "Giải Toán",
@@ -141,11 +140,28 @@ module.exports = [
     //     '/go/clean'
     //   ]
     // },
+    // {
+    //   title: 'CSS',
+    //   children: [
+    //     '/css/cheatsheet',
+    //     '/css/tricks',
+    //   ]
+    // }
     {
-      title: 'CSS',
+      title: 'API Guidelines',
       children: [
-        '/css/cheatsheet',
-        '/css/tricks',
+        // ...['README'].map(item => `/api-guidelines/${item}`),
+        `/api-guidelines/overview`,
+        {
+          title: 'Principles',
+          children: [
+            'design-api-first-before-code',
+            'minimal-api-surface',
+            'one-type-of-data-per-api',
+            'robustness-principle',
+            'rules-for-public-api',
+          ].map(item => `/api-guidelines/principles/${item}`),
+        }
       ]
     }
   ]
