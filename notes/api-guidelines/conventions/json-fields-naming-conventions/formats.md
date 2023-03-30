@@ -1,5 +1,14 @@
 # Formats
 
+## JSON Fields Naming Conventions
+
+* All JSON field names **MUST** follow the [Naming Conventions ](broken-reference)(`camelCase`, American English, etc.)
+* Field names **MUST** be ASCII alpha num characters, underscore (`_`) or dollar sign (`$`)
+* Boolean fields **MUST NOT** be of `null` value
+* Empty arrays **SHOULD NOT**  be `null` (use `[]` instead)
+* Array field names **SHOULD** be plural (e.g. `"orders": []`)
+
+
 ## Date and Time Format
 
 Date and Time **MUST** always conform to the [ISO 8601](https://en.wikipedia.org/wiki/ISO\_8601) format e.g.: `2017-06-21T14:07:17Z` (date time) or `2017-06-21` (date), it **MUST** use the UTC (without time offsets).

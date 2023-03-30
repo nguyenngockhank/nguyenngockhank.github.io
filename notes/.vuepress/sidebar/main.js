@@ -173,7 +173,7 @@ module.exports = [
               title: "Verb and URI (REST)",
               children: [
                 'index',
-                'post-vs-put',
+                'post-vs-put#',
                 'request-methods',
                 'others',
               ].map(prefixMapFn('/api-guidelines/principles/verb-and-uri-rest'))

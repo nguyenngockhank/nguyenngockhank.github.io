@@ -1,8 +1,11 @@
 # API Development Workflow
 
-Visual Overview: [https://miro.com/app/board/uXjVPhlFxvk=/?moveToWidget=3458764549108928932\&cot=14](https://miro.com/app/board/uXjVPhlFxvk=/?moveToWidget=3458764549108928932\&cot=14)
-
-1-Design --> 2-Develop --> 3-Code Review --> 4-QA on Staging --> 5-Production Deployment --> 6-QA on Production
+1-Design 
+2-Develop 
+3-Code Review 
+4-QA on Staging 
+5-Production Deployment 
+6-QA on Production
 
 1. **Draft Design the API First (ideally during Grooming, but can also be during starting working on the US/bug)**
    1. Analyze business requirements
@@ -17,8 +20,7 @@ Visual Overview: [https://miro.com/app/board/uXjVPhlFxvk=/?moveToWidget=34587645
        > e.g.: User has many Decks via curation relation, all of the required affordances should be mapped to relations.
    5. Formalize the design in the [Open API Specification](http://swagger.io/specification/) (OAS, formerly known as "Swagger") version 2.x or 3.0.x format.
       1. Use [Stoplight](https://earth.stoplight.io/) for the whole design process to the publication of the API specification.
-      2. Create a new version from the main version of the API on stoplight:
-         1. ![](.gitbook/assets/image.png)
+      2. Create a new version from the `main` version of the API on stoplight:
    6. Follow the API Guidelines
       1. See **Principles** & **Conventions** sections.
       2. Make sure to provide enough description about:
@@ -42,7 +44,7 @@ Visual Overview: [https://miro.com/app/board/uXjVPhlFxvk=/?moveToWidget=34587645
    5. Properly add decorators for the Endpoint.
       1. **The decorators is the single source of truth of API Documentation**. Everything else (Swagger file, API Documentation deployed on Redoc, Stoplight...) are just deprived versions from the decorators.
 3. **Code Review**
-   1. See [here](coding-guidelines/review-code-api-doc.md) for API Doc Code Review process.
+   1. See [here](./review-code-api-doc.md) for API Doc Code Review process.
    2. Code Reviewer(s) compare the implementation with the original Draft Design.
    3. Code Reviewer(s) continue evaluating the Endpoint and discuss to ensure the end result is satisfying.
 4. **QA Verification on Staging**

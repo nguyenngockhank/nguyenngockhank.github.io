@@ -32,8 +32,5 @@ Us: https://earth.tpondemand.com/entity/26495-update-image-response-v1usersearth
 Doc: https://redocly.github.io/redoc/?url=https://swagger-review.s3.eu-central-1.amazonaws.com/johndoe/swagger.json#tag/Public-Collect-Code/operation/PublicCollectCodeController_createPublicCollectCode
 ```
 
-![](<../.gitbook/assets/Screenshot 2023-03-16 at 15.26.23.png>)
-
-
 
 <mark style="background-color:yellow;">re-export & upload swagger file to S3 again whenever there are new changes to your api documentation.</mark>

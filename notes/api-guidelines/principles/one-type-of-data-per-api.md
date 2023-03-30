@@ -1,6 +1,6 @@
 # API Classifications
 
-> Data should be segmented into one of three types: Static, Dynamic, and Personal.\
+> Data should be segmented into one of three types: Static, Dynamic, and Personal.
 > API CALLS SHOULD INCLUDE ONLY ONE TYPE OF DATA.
 
 * STATIC data is data that once created rarely or never changes or changes rarely (daily, every few hours). Example: product photos and description.
