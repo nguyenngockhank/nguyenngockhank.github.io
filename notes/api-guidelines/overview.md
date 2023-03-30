@@ -15,7 +15,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## Conventions
 
-* [HTTP Status Codes](http-status-codes.md)
+* [HTTP Status Codes](conventions/http-status-codes.md)
 * [Verb and URI (REST)](conventions/verb-and-uri-rest/README.md)
   * [Custom Http Headers](conventions/verb-and-uri-rest/custom-http-headers.md)
   * [Request Methods](conventions/verb-and-uri-rest/request-methods.md)

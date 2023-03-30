@@ -1,4 +1,8 @@
 
+const prefixMapFn = (prefix) => (item) => {
+  return typeof item === "string" ? `${prefix}${item}` : item;
+} 
+  
 
 module.exports = [
     {
@@ -12,7 +16,7 @@ module.exports = [
         'refactor',
         'refactor-catalog',
         'document',
-      ].map(item => `/common/${item}`),
+      ].map(prefixMapFn('/common/')),
     },
     {
       title: "Giải Toán",
@@ -150,7 +154,6 @@ module.exports = [
     {
       title: 'API Guidelines',
       children: [
-        // ...['README'].map(item => `/api-guidelines/${item}`),
         `/api-guidelines/overview`,
         {
           title: 'Principles',
@@ -160,7 +163,38 @@ module.exports = [
             'one-type-of-data-per-api',
             'robustness-principle',
             'rules-for-public-api',
-          ].map(item => `/api-guidelines/principles/${item}`),
+          ].map(prefixMapFn('/api-guidelines/principles'))
+        },
+        {
+          title: 'Conventions',
+          children: [
+            'http-status-codes',
+            {
+              title: "Verb and URI (REST)",
+              children: [
+                'index',
+                'post-vs-put',
+                'request-methods',
+                'others',
+              ].map(prefixMapFn('/api-guidelines/principles/verb-and-uri-rest'))
+            },
+            {
+              title: "JSON Fields Naming Conventions",
+              children: [
+                'formats',
+                'json-structure',
+              ].map(prefixMapFn('/api-guidelines/principles/json-fields-naming-conventions'))
+            },
+            'error-responses',
+          ].map(prefixMapFn('/api-guidelines/principles/')),
+        },
+        {
+          title: "Coding Guidelines",
+          children: [
+            'api-development-workflow',
+            'review-code-api-doc',
+            'decorators-for-endpoints',
+          ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
         }
       ]
     }
