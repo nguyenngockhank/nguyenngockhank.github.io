@@ -14,4 +14,4 @@ That is, send the necessary minimum and be tolerant as possible while consuming 
 
 > With a sufficient number of users of an API, it does not matter what you promise in the contract: all observable behaviours of your system will be depended on by somebody
 >
-> \- [Hyrum's Law](https://www.hyrumslaw.com/)
+> - [Hyrum's Law](https://www.hyrumslaw.com/)

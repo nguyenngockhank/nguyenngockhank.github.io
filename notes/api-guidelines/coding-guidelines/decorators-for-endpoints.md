@@ -113,7 +113,6 @@ class PublicCollectCodeCreateResponseDto {
 
 Notice that <mark style="color:red;">`title`</mark> property from <mark style="color:red;">`PublicCollectCodeCreateResponseDto`</mark> is empty string, this make <mark style="color:red;">Redoc</mark> render cleaner as image below
 
-<figure><img src="../.gitbook/assets/redoc3.png" alt=""><figcaption></figcaption></figure>
 
 ### ApiNotFoundResponse
 

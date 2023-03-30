@@ -158,12 +158,12 @@ module.exports = [
         {
           title: 'Principles',
           children: [
-            'design-api-first-before-code',
-            'minimal-api-surface',
+            // 'design-api-first-before-code',
+            // 'minimal-api-surface',
             'one-type-of-data-per-api',
-            'robustness-principle',
+            // 'robustness-principle',
             'rules-for-public-api',
-          ].map(prefixMapFn('/api-guidelines/principles'))
+          ].map(prefixMapFn('/api-guidelines/principles/'))
         },
         {
           title: 'Conventions',
@@ -172,21 +172,21 @@ module.exports = [
             {
               title: "Verb and URI (REST)",
               children: [
-                'index',
-                'post-vs-put#',
+                '',
+                'post-vs-put',
                 'request-methods',
                 'others',
-              ].map(prefixMapFn('/api-guidelines/principles/verb-and-uri-rest'))
+              ].map(prefixMapFn('/api-guidelines/conventions/verb-and-uri-rest/'))
             },
             {
               title: "JSON Fields Naming Conventions",
               children: [
                 'formats',
                 'json-structure',
-              ].map(prefixMapFn('/api-guidelines/principles/json-fields-naming-conventions'))
+              ].map(prefixMapFn('/api-guidelines/conventions/json-fields-naming-conventions/'))
             },
             'error-responses',
-          ].map(prefixMapFn('/api-guidelines/principles/')),
+          ].map(prefixMapFn('/api-guidelines/conventions/')),
         },
         {
           title: "Coding Guidelines",

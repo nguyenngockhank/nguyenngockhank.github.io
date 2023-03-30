@@ -26,7 +26,7 @@ An URI **MUST NOT** end with a trailing slash (`/`).
 * `POST`: for creating data, or triggering a command. For example:
   * `POST /v1/users`: create user.
   * `POST /v1/events/re-sync`: trigger command re-sync events.
-* `PUT`: create/update data (related: [post-vs-put.md](post-vs-put.md "mention")). For example:
+* `PUT`: create/update data (related: [post-vs-put.md](./post-vs-put.md "mention")). For example:
   * `PUT /v1/users/:userId` : update user with given userId.
 * `DELETE`: delete data. For example:
   * `DELETE /v1/users/:userId` : delete user.
