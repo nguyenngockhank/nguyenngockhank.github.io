@@ -16,6 +16,8 @@ module.exports = [
         'refactor',
         'refactor-catalog',
         'document',
+        'debugging',
+        'deployment/deploy-strategies',
       ].map(prefixMapFn('/common/')),
     },
     {
@@ -62,15 +64,16 @@ module.exports = [
     {
       title: "Database",
       children: [
-        '/db/architect',
-        '/db/use-cases',
-        '/db/optimize',
-        '/db/mysql_snippets',
-        '/db/postgre',
-        '/db/couchdb',
-        '/db/redis',
-        '/db/nosql',
-      ]
+        'architect',
+        'use-cases',
+        'optimize',
+        'mysql_snippets',
+        'postgre',
+        'couchdb',
+        'redis',
+        'nosql',
+        'db-table-design',
+      ].map(prefixMapFn('/db/'))
     },
     {
       title: "Javascript",
