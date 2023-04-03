@@ -10,6 +10,26 @@
 - **Governance**: ensure that the system being implemented fits the technical vision.
 
 
+## Right tool for right job
+- **Object-Oriented Programming** is the tool best suited for defining how we cross architectural boundaries with polymorhpism and plugins
+- **Functional Programming** is the tool we use to push data to the boundaries of our applications
+- and **Structured programming** is the tool we use to write algorithms
+
+
+:::: quote
+- Object-Oriented Programming makes code understandable by encapsulating (isolating) moving parts (complexity).
+- Functional programming makes code understandable by minimizing (reducing) moving parts (complexity).
+
+::: right 
+― Michael Feathers
+:::
+::::
+
+
+- [📓 Functional in the small, OO in the large](https://www.johndcook.com/blog/2009/03/23/functional-in-the-small-oo-in-the-large/)
+- [Functional Core, Imperative Shell – Using Structured Concurrency to Write Maintainable gRPC Endpoints in Kotlin](https://doordash.engineering/2022/07/26/functional-core-imperative-shell-using-structured-concurrency-to-write-maintainable-grpc-endpoints-in-kotlin/)
+
+
 ## Communication Style
 
 - [Messaging - Async Communication](./messaging.md)
