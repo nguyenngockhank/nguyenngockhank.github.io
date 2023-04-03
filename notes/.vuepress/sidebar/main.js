@@ -19,6 +19,15 @@ module.exports = [
         'document',
         'debugging',
         'deployment/deploy-strategies',
+        {
+          title: "Architecture",
+          children: [
+            'architect/authenication',
+            'architect/messaging',
+            'architect/restful',
+            'db/redis.html#cache-strategies',
+          ]
+        }
       ].map(prefixMapFn('/common/')),
     },
     {
