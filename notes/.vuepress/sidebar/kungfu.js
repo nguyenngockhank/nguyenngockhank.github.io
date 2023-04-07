@@ -38,6 +38,32 @@ module.exports = [
             ...Array(16).fill(0).map((v, index) => `nosql-distilled/c${index}`)
         ]
     },
+     {
+      title: 'Go',
+      children: [
+        {
+          title: 'The little Go Book',
+          children: [
+            '/go/the-little-go/intro',
+            '/go/the-little-go/c1',
+            '/go/the-little-go/c2',
+            '/go/the-little-go/c3',
+            '/go/the-little-go/c4',
+            '/go/the-little-go/c5',
+            '/go/the-little-go/c6',
+            '/go/the-little-go/end',
+          ]
+        },
+        '/go/clean'
+      ]
+    },
+    // {
+    //   title: 'CSS',
+    //   children: [
+    //     '/css/cheatsheet',
+    //     '/css/tricks',
+    //   ]
+    // },
     {
         title: 'Others',
         children: [

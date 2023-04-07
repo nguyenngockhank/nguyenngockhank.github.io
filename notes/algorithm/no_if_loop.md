@@ -1,5 +1,7 @@
 # Không dùng If / Loop
 
+[Anti-If: The missing patterns](https://code.joejag.com/2016/anti-if-the-missing-patterns.html)
+
 ## Đếm số lẻ trong mảng 
 
 Cho 1 mảng số nguyên lớn hơn 0, đếm số lẻ trong mảng và không dùng **`if`**

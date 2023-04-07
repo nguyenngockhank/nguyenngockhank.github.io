@@ -2,33 +2,41 @@
 const prefixMapFn = (prefix) => (item) => {
   return typeof item === "string" ? `${prefix}${item}` : item;
 } 
-  
+
+const commonDocs = [
+  'optimize_web',
+  'cross_domain',
+  'seo',
+  'realtime',
+  'crawl',
+  'refactor',
+  // 'refactor-catalog',
+  'code-structure',
+  'document',
+  'debugging',
+  'deployment/deploy-strategies',
+  {
+    title: "Architecture",
+    children: [
+      'architect/authenication',
+      'architect/messaging',
+      'architect/restful',
+      'db/redis.html#cache-strategies',
+    ]
+  }
+].map(prefixMapFn('/common/'));
+
+const oopDocs = [
+  'oop-terms',
+  'ts-designpatterns',
+  'oop-vs-fp',
+].map(prefixMapFn('/oop/'));
+
 
 module.exports = [
     {
       title: 'Chuyện muôn thuở',
-      children: [
-        'optimize_web',
-        'cross_domain',
-        'seo',
-        'realtime',
-        'crawl',
-        'refactor',
-        // 'refactor-catalog',
-        'code-structure',
-        'document',
-        'debugging',
-        'deployment/deploy-strategies',
-        {
-          title: "Architecture",
-          children: [
-            'architect/authenication',
-            'architect/messaging',
-            'architect/restful',
-            'db/redis.html#cache-strategies',
-          ]
-        }
-      ].map(prefixMapFn('/common/')),
+      children: commonDocs,
     },
     {
       title: "Giải Toán",
@@ -42,34 +50,8 @@ module.exports = [
       ]
     },
     {
-      title: "Tools / Toys",
-      children: [
-        '/node/npm',
-        '/tricks/git',
-        '/tricks/linux',
-        '/tricks/mac',
-        '/tools/chrome',
-        '/tools/selenium_ide',
-        '/tools/gg_app_script',
-        '/tools/puppeteer',
-        '/tools/vscode',
-        '/tools/redis',
-        '/tools/docker',
-      ]
-    },
-    {
-      title: "Thuật ngữ",
-      sidebarDepth: 1,
-      children: [
-        '/terms/javascript',
-        '/terms/oop',
-        '/terms/patterns',
-        '/terms/principles',
-        '/terms/ddd',
-        '/terms/testing',
-        '/terms/12factors',
-        '/terms/concurrent',
-      ]
+      title: "OOP",
+      children: oopDocs,
     },
     {
       title: "Database",
@@ -138,32 +120,35 @@ module.exports = [
         '/php/phpdoc',
       ]
     },
-    // {
-    //   title: 'Go',
-    //   children: [
-    //     {
-    //       title: 'The little Go Book',
-    //       children: [
-    //         '/go/the-little-go/intro',
-    //         '/go/the-little-go/c1',
-    //         '/go/the-little-go/c2',
-    //         '/go/the-little-go/c3',
-    //         '/go/the-little-go/c4',
-    //         '/go/the-little-go/c5',
-    //         '/go/the-little-go/c6',
-    //         '/go/the-little-go/end',
-    //       ]
-    //     },
-    //     '/go/clean'
-    //   ]
-    // },
-    // {
-    //   title: 'CSS',
-    //   children: [
-    //     '/css/cheatsheet',
-    //     '/css/tricks',
-    //   ]
-    // }
+    {
+      title: "Tools / Toys",
+      children: [
+        '/node/npm',
+        '/tricks/git',
+        '/tricks/linux',
+        '/tricks/mac',
+        '/tools/chrome',
+        '/tools/selenium_ide',
+        '/tools/gg_app_script',
+        '/tools/puppeteer',
+        '/tools/vscode',
+        '/tools/redis',
+        '/tools/docker',
+      ]
+    },
+    {
+      title: "Thuật ngữ",
+      sidebarDepth: 1,
+      children: [
+        '/terms/javascript',
+        '/terms/patterns',
+        '/terms/principles',
+        '/terms/ddd',
+        '/terms/testing',
+        '/terms/12factors',
+        '/terms/concurrent',
+      ]
+    },
     {
       title: 'API Guidelines',
       children: [

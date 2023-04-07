@@ -42,6 +42,12 @@ A unique design characteristic of MySQL is the seperation of query processing an
 ### The memory engine
 - formerly called *HEAP* tables stores in memory
 
+## Based on CAP
+
+![Based on CAP](./img/db-cap.png)
+
+Master - Replicas => AP
+
 ## Redis
 Here are few use cases when we should use Redis:
 - **Session cache**: stores as hashes. Because user sessions generally have a lot of I/O.
@@ -64,4 +70,9 @@ Cassandra is a distributed database designed to provide extremely **high levels 
 - Routing, Dispatch, and location-based services
 - Recommendation Engines
 
+## Elasticsearch
+- Indexing & full text search. 
+- Logging & Logs Analysis. Elasticsearch is a popular log and log analysis tool. 
+- Search & Query. Elasticsearch's basic full-text search and analytics engine can integrate a wide range of queries, including structured, unstructured, geographical, and metric searches. 
+- Metrics Analysis.
 
