@@ -1,5 +1,7 @@
 # Anti-Patterns
 
+https://sourcemaking.com/antipatterns/software-development-antipatterns
+
 ## Premature Optimization
 Optimizing before you have enough information to make educated conclusions about where and how to do the optimization.
 
@@ -15,9 +17,15 @@ It is very difficult to know exactly what will be the bottleneck in practice. At
 ## Cargo-Cult Programming
 Cargo Cult Programming is a term used to describe the process of developing software without really understanding the languages, tools, techniques, and frameworks used to develop it. 
 
+
+## Copy and Paste Programming
+
+
 ## Lava Flow
 
 Lava flow is considered an anti-pattern, a commonly encountered phenomenon leading to poor design.
+
+## Golden Hammer
 
 ## Dead Code
 
