@@ -32,6 +32,20 @@ const oopDocs = [
   'oop-vs-fp',
 ].map(prefixMapFn('/oop/'));
 
+const toolDocs = [
+  '/node/npm',
+  '/tricks/git',
+  '/tricks/linux',
+  '/tricks/mac',
+  '/tools/chrome',
+  '/tools/selenium_ide',
+  '/tools/gg_app_script',
+  '/tools/puppeteer',
+  '/tools/vscode',
+  '/tools/redis',
+  '/tools/docker',
+  '/aws/aws-services',
+];
 
 module.exports = [
     {
@@ -122,19 +136,7 @@ module.exports = [
     },
     {
       title: "Tools / Toys",
-      children: [
-        '/node/npm',
-        '/tricks/git',
-        '/tricks/linux',
-        '/tricks/mac',
-        '/tools/chrome',
-        '/tools/selenium_ide',
-        '/tools/gg_app_script',
-        '/tools/puppeteer',
-        '/tools/vscode',
-        '/tools/redis',
-        '/tools/docker',
-      ]
+      children: toolDocs,
     },
     {
       title: "Thuật ngữ",

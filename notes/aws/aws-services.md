@@ -15,7 +15,7 @@ Athena is out-of-the-box integrated with AWS Glue Data Catalog, allowing you to 
 
 ### Amazon Kinesis
 
-![Amazon Kinesis](./img/aws%20kinesis%20data%20streams.png)
+<!-- ![Amazon Kinesis](./img/aws%20kinesis%20data%20streams.png) -->
 
 [Amazon Kinesis](https://aws.amazon.com/kinesis/) makes it easy to collect, process, and analyze real-time, streaming data so you can get timely insights and react quickly to new information. Amazon Kinesis offers key capabilities to cost- effectively process streaming data at any scale, along with the flexibility to choose the tools that best suit the requirements of your application. With Amazon Kinesis, you can ingest real-time data such as video, audio, application logs, website clickstreams, and IoT telemetry data for machine learning, analytics, and other applications. Amazon Kinesis enables you to process and analyze data as it arrives and respond instantly instead of having to wait until all your data is collected before the processing can begin.
 
@@ -176,23 +176,23 @@ Amazon ECS has two modes: Fargate launch type and EC2 launch type. With Fargate 
 
 :::: tabs
 
-::: tab File Processing
+::: tab "File Processing"
 ![igm](https://d1.awsstatic.com/product-marketing/Lambda/Diagrams/product-page-diagram_Lambda-RealTimeFileProcessing.a59577de4b6471674a540b878b0b684e0249a18c.png)
 :::
 
-::: tab Stream Processing
+::: tab "Stream Processing"
 ![igm](https://d1.awsstatic.com/product-marketing/Lambda/Diagrams/product-page-diagram_Lambda-RealTimeStreamProcessing.d79d55b5f3a5d6b58142a6c0fc8a29eadc81c02b.png)
 :::
 
-::: tab Web apps
+::: tab "Web apps"
 ![igm](https://d1.awsstatic.com/product-marketing/Lambda/Diagrams/product-page-diagram_Lambda-WebApplications%202.c7f8cf38e12cb1daae9965ca048e10d676094dc1.png)
 :::
 
-::: tab IoT BEs
+::: tab "IoT BEs"
 ![igm](https://d1.awsstatic.com/product-marketing/Lambda/Diagrams/product-page-diagram_Lambda-IoTBackends.3440c7f50a9b73e6a084a242d44009dc0fbe5fab.png)
 :::
 
-::: tab Mobile BEs
+::: tab "Mobile BEs"
 ![igm](https://d1.awsstatic.com/product-marketing/Lambda/Diagrams/product-page-diagram_Lambda-MobileBackends_option2.00f6421e67e8d6bdbc59f3a2db6fa7d7f8508073.png)
 :::
 
