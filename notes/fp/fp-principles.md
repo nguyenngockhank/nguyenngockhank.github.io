@@ -1,5 +1,8 @@
 # Functional Programming Principles
 
+https://www.thoughtworks.com/insights/blog/architecture/domain-driven-design-in-functional-programming
+
+https://medium.com/@kumbhar.pradnya/functional-programming-principles-6f59bc6764ff
 
 ## The three categories of code in FP
 
