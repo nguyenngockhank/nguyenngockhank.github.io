@@ -1,4 +1,4 @@
-# Domain Driven Design (DDD)
+# Domain Driven Design Terms
 
 ::: tip Domain-Driven Design
 is an approach to software development for complex needs by connecting the implementation to an evolving model:
@@ -8,6 +8,16 @@ is an approach to software development for complex needs by connecting the imple
 :::
 
 It provides us with `strategic and tactical modeling tools` to aid designing high-quality software that meets our business goals.
+
+## Strategic pattern 
+Strategic pattern helps you design your domains, sub-domains that are communicated by the ubiquitous language then support you to organize/structure your teams based on that outcome.
+
+![strategic](./img/strategic-design.webp)
+
+## Tactical pattern 
+Tactical pattern will guide you on how to implement your application in a scaling way.
+
+![tactical](./img/tactical-design.webp)
 
 ## Concepts
 
@@ -55,6 +65,10 @@ A language structured around the domain model and used by all team members to co
 
 >  A cluster of associated objects that are treated as a unit for the purpose of data changes. External references are restricted to one member of the AGGREGATE, designated as the root. A set of consistency rules applies within the AGGREGATE’S boundaries.
 
+### Modules
+
+> Modules are little mentioned by the developers, however, their use can be very interesting.
+> Modules help us segregate concepts, can be defined as a package or a namespace depending on the programming languages, and always follow the Ubiquitous Language.
 
 ### Domain Event
 > A domain object that defines an event (something that happens). A domain event is an event that domain experts care about.

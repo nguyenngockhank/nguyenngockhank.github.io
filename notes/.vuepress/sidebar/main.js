@@ -145,7 +145,6 @@ module.exports = [
         '/terms/javascript',
         '/terms/patterns',
         '/terms/principles',
-        '/terms/ddd',
         '/terms/testing',
         '/terms/12factors',
         '/terms/concurrent',

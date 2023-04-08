@@ -1,5 +1,7 @@
 # Concurrent Programming
 
+[Concurrency Patterns](https://en.wikipedia.org/wiki/Concurrency_pattern)
+
 ::: tip Concurrency
 Xử lý đồng thời - Concurrency - là việc nhiều task được xử lý cùng một lúc.
 :::

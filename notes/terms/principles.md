@@ -2,6 +2,17 @@
 
 ## Coding Principles
 
+| Clean Code     | Clean Architecture | 
+| -------------- | -------------------|
+| SOLID          | Layered            |
+| KISS           | Hexagon            |
+| DRY            | Onion              |
+| Naming         | Horizon            |
+| Coding Convention | CQRS - ES       |
+| Algorithm      | Abstraction        |
+| Code Quality   | API first approach |
+
+
 ### Keep It Simple, Stupid (KISS)
 
 ::: quote
@@ -67,6 +78,10 @@ Barbara Liskov’s famous definition of subtypes, from 1988.
 ::: quote
 *The code that implements high-level policy should not depend on the code that implements low-level details. Rather, details should depend on policies.*
 :::
+
+## Document Your Code
+
+Try writing a program, leaving it alone for six months, and come back to modify it. You'll be glad you documented your program instead of having to pour over every function to remember how it works. Work on a coding team? Don't frustrate your fellow developers by forcing them to decipher your syntax.
 
 ## Component Principles
 

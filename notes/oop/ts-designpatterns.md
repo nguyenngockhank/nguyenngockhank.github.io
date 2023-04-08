@@ -6,6 +6,8 @@ A pattern is a state of mind, mostly. Don't ever try to force your code into a s
 
 Deciding "ok, I'm going to write a program that does X using pattern Y" is a recipe for disaster. It might work for hello world class programs fit for demonstrating the code constructs for patterns, but not much more.
 
+https://www.yegor256.com/2016/02/03/design-patterns-and-anti-patterns.html
+
 ## Creational
 
 ### Singleton
