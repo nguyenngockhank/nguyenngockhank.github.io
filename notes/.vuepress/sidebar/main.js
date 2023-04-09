@@ -76,6 +76,7 @@ module.exports = [
         'mysql_snippets',
         'postgre',
         'couchdb',
+        'elasticsearch',
         'redis',
         'nosql',
         'db-table-design',

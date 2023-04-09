@@ -85,18 +85,18 @@ A language structured around the domain model and used by all team members to co
 
 ## Layered Architecture
 
-![Example](@/images/ddd-layers.jpg)
+![Example](./img/ddd-layers.jpg)
 
 More detail
 
-![Example](@/images/ddd-diagram.png)
+![Example](./img/ddd-diagram.png)
 
 ## Typical Scenario
 
-![Typical Scenario](@/images/ddd-typical-scenario.png)
+![Typical Scenario](./img/ddd-typical-scenario.png)
 
 ### Example
-![Example](@/images/ddd-example.png)
+![Example](./img/ddd-example.png)
 
 
 ## References 
