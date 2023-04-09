@@ -20,7 +20,7 @@ module.exports = [
             'event_driven_A',
             'hexagonal_A',
             'spa',
-            'ddd',
+            // 'ddd',
             'microservices',
         ]
     },
