@@ -12,12 +12,12 @@ It provides us with `strategic and tactical modeling tools` to aid designing hig
 ## Strategic pattern 
 Strategic pattern helps you design your domains, sub-domains that are communicated by the ubiquitous language then support you to organize/structure your teams based on that outcome.
 
-![strategic](./img/strategic-design.webp)
+![strategic](./img/strategic-design.png)
 
 ## Tactical pattern 
 Tactical pattern will guide you on how to implement your application in a scaling way.
 
-![tactical](./img/tactical-design.webp)
+![tactical](./img/tactical-design.png)
 
 ## Concepts
 

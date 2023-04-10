@@ -148,7 +148,7 @@ aka EBC aka EIC
 
 
 ## [Domain-Driven Design – DDD (2003)](./ddd.md)
-![Example](@/images/ddd-layers.jpg)
+![Example](@/ddd/img/ddd-layers.jpg)
 
 
 ## Hexagonal Architecture (2005)
