@@ -92,7 +92,7 @@ module.exports = [
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
         '/javascript/functor',
-        '/snippets/mocha',
+        '/javascript/react',
         '/snippets/firebase',
         '/javascript/clean-code',
         {
@@ -105,6 +105,7 @@ module.exports = [
         {
           title: 'Snippets',
           children: [
+            '/snippets/mocha',
             '/snippets/event_storage',
             '/snippets/custom_promise_all',
             '/snippets/access_object',
