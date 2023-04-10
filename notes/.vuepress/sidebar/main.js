@@ -92,7 +92,7 @@ module.exports = [
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
         '/javascript/functor',
-        '/javascript/react',
+        '/javascript/react/react',
         '/snippets/firebase',
         '/javascript/clean-code',
         {
