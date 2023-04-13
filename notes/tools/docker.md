@@ -130,8 +130,6 @@ docker commit <container-name> <new-image-name:tag>
 
 ## Run
 
-
-
 ### Expose Port
 ```sh
 docker run -d -p 5801:5800 --name vnc1 myvnc 
@@ -173,6 +171,17 @@ docker run -it --name <container-name> --mount source=<volume-name>,target=<cont
 # E.g:
 docker run -it --name C1 -v DISK1:/home/dulieu ubuntu:16.0.4
 ```
+
+### Exit 
+
+#### Exit and Stop Docker Container 
+- **Ctrl+C** to send the `SIGINT` signal and stop the process. Next, press **Ctrl+D** to exit and stop the container.
+- Alternatively, type `exit`
+
+#### Exit Docker Container without Stopping It
+
+- press **Ctrl+P** followed by **Ctrl+Q**. This operation detaches the container and allows you to return to your system's shell.
+
 
 ## Volume
 

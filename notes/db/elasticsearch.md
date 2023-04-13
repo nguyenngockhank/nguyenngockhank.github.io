@@ -2,6 +2,7 @@
 # Elastic Search
 
 [Welcome to Elastic Docs](https://www.elastic.co/guide/index.html)
+[Api conventions](https://www.elastic.co/guide/en/elasticsearch/reference/8.7/api-conventions.html)
 
 ## Key terms
 - **Documents** — Data is stored as JSON documents.
@@ -76,3 +77,6 @@ POST /customer/_update/1?pretty
 ```
 DELETE /customer/_doc/1?pretty
 ```
+
+## Other
+[Running the Elastic Stack on Docker](https://www.elastic.co/guide/en/elastic-stack-get-started/8.2/get-started-stack-docker.html)

@@ -62,3 +62,13 @@ https://www.mongodb.com/docs/manual/core/query-plans/
 https://studio3t.com/knowledge-base/articles/build-mongodb-aggregation-queries/
 https://studio3t.com/knowledge-base/categories/import-export/
 
+## Others
+
+
+### Running on docker
+
+https://hub.docker.com/_/mongo
+
+```
+docker run --name some-mongo -d -p 27017:27017 mongo:latest
+```

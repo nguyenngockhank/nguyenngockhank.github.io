@@ -1,6 +1,7 @@
 {
     // "editor.fontFamily": "Fira Code",
     // "editor.fontLigatures": true,
+    "editor.tabCompletion": "on",
     "editor.tabSize": 4,
     // "[markdown]": {
     //     "editor.fontLigatures": true

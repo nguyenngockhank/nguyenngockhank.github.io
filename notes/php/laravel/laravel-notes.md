@@ -1,15 +1,11 @@
-
-
-# Laravel
-
-[[toc]]
+# Laravel Notes
 
 ## Split the routes
 
-1) Create new files to store the routes: `app\routes\main.php`
+1./ Create new files to store the routes: `app\routes\main.php`
 
 
-2) At file `routes.php`, include the seperated routes 
+2./ At file `routes.php`, include the seperated routes 
 
 ```php
 require app_path() . '/routes/main.php';
@@ -17,7 +13,7 @@ require app_path() . '/routes/main.php';
 
 ## Register new Module 
 
-1) Add piece of codes at file `composer.json` 
+1./ Add piece of codes at file `composer.json` 
 
 ```php
 "autoload": {
@@ -27,12 +23,12 @@ require app_path() . '/routes/main.php';
 }
 ```
 
-2) Run the command: 
+2./ Run the command: 
 ```
 composer dump-autoload 
 ```
 
-3) Define a class at `app/modules/Test.php`
+3./ Define a class at `app/modules/Test.php`
 
 ```php
 <?php

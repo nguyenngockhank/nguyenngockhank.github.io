@@ -32,6 +32,11 @@ const oopDocs = [
   'oop-vs-fp',
 ].map(prefixMapFn('/oop/'));
 
+const laravelDocs = [
+  'best-practices',
+  'laravel-notes',
+].map(prefixMapFn('/php/laravel/'));
+
 const toolDocs = [
   '/node/npm',
   '/tricks/git',
@@ -130,10 +135,14 @@ module.exports = [
         '/php/php7',
         '/php/oop',
         '/php/magic',
-        '/php/laravel',
         '/php/wordpress',
         '/php/crunz',
         '/php/phpdoc',
+        // '/php/clean/',
+        {
+          title: "Laravel",
+          children: laravelDocs,
+        },
       ]
     },
     {

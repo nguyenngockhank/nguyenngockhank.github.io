@@ -90,3 +90,23 @@ https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 - Bracket Pair Colorizer: Màu mè cho Các cặp brackets
 - Git History / GitLens
 - Copy Relative Path
+
+
+## User Define snippets
+
+https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+settings: `"editor.tabCompletion": "on"`
+
+`Command + Shift + P` => `Configure User Snippets`
+
+Example
+```js
+{
+  "For Loop": {
+    "prefix": ["for", "for-const"],
+    "body": ["for (const ${2:element} of ${1:array}) {", "\t$0", "}"],
+    "description": "A for loop."
+  }
+}
+```
