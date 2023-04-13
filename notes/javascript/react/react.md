@@ -236,6 +236,7 @@ Additionally, MobX provides observables, computed values, and other state-manage
 
 ::: tab Hooks
 ![React lifetime Hooks](./img/react-hooks-2.jpg)
+![Use effect hooks](./img/use-effect.jpeg)
 :::
 
 ::: tab Class
