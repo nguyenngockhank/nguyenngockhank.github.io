@@ -1,5 +1,11 @@
 # React vs Vue
 
+## Online tools
+
+https://codesandbox.io/s/vue
+
+https://play.vuejs.org/
+
 ## Template syntax
 
 ### Mounting app
@@ -38,6 +44,8 @@ app.mount('#app')
 ::::
 
 ### Fragments
+
+Fragment allows you to return multiple elements from a component by allowing you to group a list of children without adding extra nodes to the DOM.
 
 :::: tabs
 ::: tab React
@@ -88,6 +96,8 @@ Dynamically rendering arbitrary HTML on your website can be very dangerous becau
 :::
 
 ## Computed Properties
+
+Putting too much logic in your templates can make them bloated and hard to maintain.
 
 :::: tabs
 ::: tab React
@@ -173,7 +183,6 @@ function Item({ awesome }) {
 ### Conditional (ternary) operator (`?` `:`)
 
 :::: tabs
-
 ::: tab React
 ```jsx
 return (
@@ -194,10 +203,145 @@ Just using JavaScript Expressions with [Restricted Globals Access](https://githu
 :::
 ::::
 
+## List rendering
+
+:::: tabs
+::: tab React
+```jsx
+const listItems = people.map(person =>
+  <li key={person.id}>{person.name}</li>
+);
+return <ul>{listItems}</ul>;
+```
+:::
+
+::: tab Vue
+```html
+<ul>
+  <li v-for="person in people" :key="person.id">
+    {{ person.name }}
+  </li>
+</ul>
+```
+:::
+::::
+
+## Dynamic Tag
+
+:::: tabs
+::: tab React
+```jsx
+const Heading = ({ level, children }) => {
+  const DynamicTag = `h${level}`; 
+  return <DynamicTag>{children || "Whatever"}</DynamicTag>;
+};
+```
+
+Usage
+```jsx
+<Heading level={1}>Hello</Heading>
+<Heading level={2}></Heading>
+```
+:::
+::: tab Vue
+```html
+<script setup>
+import { computed } from 'vue'
+  
+const props = defineProps({
+  level: Number
+})
+
+const tag = computed(() => {
+  return "h" + props.level
+});
+</script>
+
+<template>
+  <component :is="tag">
+    <slot>Whatever</slot>
+  </component>
+</template>
+```
+
+Usage
+```html
+<Heading :level=1>Hello</Heading>
+<Heading :level=2></Heading>
+```
+:::
+::::
+
 ## Implicit state sharing
 
-https://vuejs.org/guide/components/provide-inject.html
-https://react.dev/learn/passing-data-deeply-with-context
+[Vue - Provide inject](https://vuejs.org/guide/components/provide-inject.html)
+
+[Passing data deeply with Context](https://react.dev/learn/passing-data-deeply-with-context)
+
+
+:::: tabs
+
+::: tab React
+Step 1: Create the context at `LevelContext.js`
+```js
+import { createContext } from 'react';
+export const LevelContext = createContext(1);
+```
+
+Step 2: Use the context at `Heading.js`
+```jsx
+import { useContext } from 'react';
+import { LevelContext } from './LevelContext.js';
+
+export default function Heading({ children }) {
+  const level = useContext(LevelContext); 
+  const DynamicTag = `h${level}`; 
+  return <DynamicTag>{children}</DynamicTag>;
+}
+```
+
+Step 3: Provide the context at `Section.js`
+```js
+import { LevelContext } from './LevelContext.js';
+
+export default function Section({ level, children }) {
+  return (
+    <section className="section">
+      <LevelContext.Provider value={level}>
+        {children}
+      </LevelContext.Provider>
+    </section>
+  );
+}
+```
+:::
+
+::: tab Vue
+
+[Provide / Inject](https://vuejs.org/guide/components/provide-inject.html)
+
+`Section.vue`
+```html
+<script setup>
+import { provide } from 'vue'
+
+provide(/* key */ 'level', /* value */ 0)
+</script>
+```
+
+`Heading.vue`
+```html
+<script setup>
+import { inject } from 'vue'
+const level = inject('level')
+
+const tag = computed(() => {
+  return "h" + level
+});
+</script>
+```
+::: 
+::::
 
 
 ## Event Handling
@@ -207,16 +351,71 @@ https://medium.com/swlh/react-vs-vue-event-handling-cb4327242f50
 
 ## Slots
 
-https://stackoverflow.com/questions/73416124/best-way-to-change-vue-slots-pattern-into-react
+[best-way-to-change-vue-slots-pattern-into-react](https://stackoverflow.com/questions/73416124/best-way-to-change-vue-slots-pattern-into-react)
+
+:::: tabs
+::: tab React
+```jsx
+function FancyButton({ children }) {
+  return (
+    <button type="submit">
+      {children ? children : 'Submit'}
+    </div>
+  );
+}
+```
+
+Parent use
+```jsx
+return (
+  <FancyButton>
+    <span style={{ color: 'red' }}>Click me!</span>
+    <AwesomeIcon name="plus" />
+  </FancyButton>
+);
+```
+:::
+
+::: tab Vue
+
+`FancyButton.vue` template 
+```html
+<button type="submit">
+  <slot>
+    Submit <!-- fallback content -->
+  </slot>
+</button>
+```
+
+Parent template
+```html
+<FancyButton>
+  <span style="color:red">Click me!</span>
+  <AwesomeIcon name="plus" />
+</FancyButton>
+```
+
+Besides, vue let us to have many **slots** in a component. [Read more](https://vuejs.org/guide/components/slots.html#scoped-slots)
+::: 
+::::
 
 ## Functional Components 
-
+...
 
 ## Class & Style bindings
 
-:::: tabs
-::: tab Vue
+- inline styles
+- global css file
+- sass/scss
+- css modules
+- css in js
 
+:::: tabs
+::: tab React
+[Full here](./react.md#style-component)
+:::
+
+::: tab Vue
 Pass an array or an object 
 ```html
 <div class="static"  :class="{ active: isActive, 'text-danger': hasError }" ></div>
@@ -224,5 +423,4 @@ Pass an array or an object
 <div :style="[baseStyles, overridingStyles]"></div>
 ```
 ::: 
-
 ::::

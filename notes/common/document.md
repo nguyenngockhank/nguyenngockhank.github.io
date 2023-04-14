@@ -85,6 +85,7 @@ Dạo này được giao task tạo ra Document cho API, sau đây xin trích
 - Là 1 bộ quy tắc viết document cho API, gồm nhiều tool hay ho giúp chuyên nghiệp hóa hẳn lên =)) 
 - Chỉ cần 1 file config (json / yaml) sẽ tạo ra trang document. [Demo UI](https://editor.swagger.io/)
 - [Swagger UI](https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/) - tool build ra HTML cho riêng bạn. [Simple Repo](https://github.com/swagger-api/swagger-ui/tree/master/docs/samples/webpack-getting-started) 
+- Xài [redocly](https://redocly.github.io/redoc/?url=https://api.apis.guru/v2/specs/instagram.com/1.0.0/swagger.yaml) nếu cảm thấy Swagger UI thật chán ngắt
 - Đọc thêm: [specification](https://swagger.io/docs/specification/about/)
 
 ### [swagger-php](https://github.com/zircote/swagger-php)
@@ -181,3 +182,81 @@ $scanPaths = [
 $swagger = \OpenApi\scan($scanPaths);
 $swagger->saveAs($outputPath);
 ```
+
+### [@nestjs/swagger](https://www.npmjs.com/package/@nestjs/swagger)
+
+Một tool khác liên quan swagger cũng dài ko kém 
+
+```ts
+  @Get("/users/:userIdOrVanityName")
+  @ApiOperation({
+    summary: "Get detail of target user",
+    description:
+      "The request will be called to receive all data of target user",
+  })
+  @ApiOkResponse({
+    description: "The target user data has been retrieve successfully",
+    type: PrivateUserResponseDto,
+  })
+  @UseGuards(UseNewErrorFormatGuard)
+  @ApiParam(userIdOrVanityNameParameter)
+  @ApiQuery({
+    name: "metaTags",
+    example: false,
+    type: Boolean,
+    description: "The meta tags option",
+    required: false,
+  })
+  @ApiQuery({
+    name: "leaderboard",
+    example: false,
+    type: Boolean,
+    description: "The leaderboard option",
+    required: false,
+  })
+  @ApiQuery({
+    name: "owner",
+    example: false,
+    type: Boolean,
+    description: "The owner option",
+    required: false,
+  })
+  @ApiQuery({
+    name: "collecting",
+    example: false,
+    type: Boolean,
+    description: "The collecting option",
+    required: false,
+  })
+  @ApiQuery({
+    name: "code",
+    example: "code",
+    type: Boolean,
+    description: "The code option",
+    required: false,
+  })
+  @ApiQuery({
+    name: "channel",
+    example: "channel",
+    type: Boolean,
+    description: "The channel option",
+    required: false,
+  })
+  @ApiNotFoundResponse({
+    description:
+      "The User with the identity (id or vanityName) cannot be found in the system",
+    type: NotFoundErrorApiProperties,
+  })
+  @ApiInternalServerErrorResponse({
+    description:
+      "The server encountered an unexpected condition that prevented it from fulfilling the request",
+    type: InternalServerErrorApiProperties,
+  })
+  async getUser(...) {
+    this.controller.getUser(
+  }
+```
+
+## UI Component
+
+[**Storybook**](https://storybook.js.org/) is a frontend workshop for building UI components and pages in isolation. Thousands of teams use it for UI development, testing, and documentation. It’s open source and free.

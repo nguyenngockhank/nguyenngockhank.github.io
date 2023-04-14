@@ -98,6 +98,7 @@ module.exports = [
         '/javascript/bookmarklet',
         '/javascript/functor',
         '/javascript/react/react',
+        '/javascript/react/react-vs-vue',
         '/snippets/firebase',
         '/javascript/clean-code',
         {
