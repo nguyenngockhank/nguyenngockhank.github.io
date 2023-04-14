@@ -424,3 +424,9 @@ Pass an array or an object
 ```
 ::: 
 ::::
+
+## Wrapping UI Javascript libraries 
+
+https://victorheid.codes/blog/javascript-libraries-with-vue-3/
+
+https://dev.to/this-is-learning/wrapping-library-in-a-react-hook-193e
