@@ -37,6 +37,14 @@ const laravelDocs = [
   'laravel-notes',
 ].map(prefixMapFn('/php/laravel/'));
 
+const reactDocs = [
+  'react',
+  'mobx',
+  'nextjs',
+  'react-vs-vue',
+  'vue_react',
+].map(prefixMapFn('/react/'));
+
 const toolDocs = [
   '/node/npm',
   '/tricks/git',
@@ -51,6 +59,8 @@ const toolDocs = [
   '/tools/docker',
   '/aws/aws-services',
 ];
+
+
 
 module.exports = [
     {
@@ -97,8 +107,6 @@ module.exports = [
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
         '/javascript/functor',
-        '/javascript/react/react',
-        '/javascript/react/react-vs-vue',
         '/snippets/firebase',
         '/javascript/clean-code',
         {
@@ -119,6 +127,10 @@ module.exports = [
         }
       ]
     },
+    {
+      title: "ReactJS",
+      children: reactDocs,
+    }, 
     {
       title: "VueJS",
       children: [
