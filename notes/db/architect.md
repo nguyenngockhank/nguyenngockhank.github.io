@@ -93,3 +93,4 @@ Các server này giao tiếp với nhau để trao đổi thông tin và giao ti
 - [A Step-by-Step Guide to Create Partitions on MySQL table](http://acmeextension.com/mysql-table-partitioning/)
 - [What's the difference between sharding DB tables and partitioning them?](https://www.quora.com/Whats-the-difference-between-sharding-DB-tables-and-partitioning-them)
 - [Cluster là gì? Tổng quan về Server Clustering](https://topdev.vn/blog/cluster-la-gi/)
+- [Choosing the right database for the job](https://blog.andyet.com/2014/10/01/right-database/)

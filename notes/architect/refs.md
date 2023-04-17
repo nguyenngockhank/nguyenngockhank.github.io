@@ -49,6 +49,6 @@ http://highscalability.com/
 ## Tổng quan
 
 - [The Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
-
 - [Architecture (Vietnamese)](https://edwardthienhoang.wordpress.com/software-architecture/)
+- [awesome-scalability](https://github.com/binhnguyennus/awesome-scalability)
 

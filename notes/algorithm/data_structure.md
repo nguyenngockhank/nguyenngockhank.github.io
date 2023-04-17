@@ -1,29 +1,13 @@
-# String
+# Data structure
 
-## Đếm số lượng số lớn nhất
+A good engineer needs to recognize how data structures are used in our daily lives.
 
-[Birthday Cacke](https://www.hackerrank.com/challenges/birthday-cake-candles/submissions/code/92820701)
-
-
-```javascript
-function birthdayCakeCandles(ar) {
-    let count = 0,  highest = 0;
-
-    for (let i = 0, len = ar.length; i < len; ++i) {
-        let value = ar[i];
-
-        /// found a new highest 
-        if (highest < value) {
-            highest = value;
-            count = 1;
-        } 
-        /// increase if that the highest
-        else if (highest == value) {
-            ++count
-        }
-    }
-
-    return count;
-}
-```
-
+- **list**: keep your Twitter feeds
+- **stack**: support undo/redo of the word editor
+- **queue**: keep printer jobs, or send user actions in-game
+- **heap**: task scheduling
+- **tree**: keep the HTML document, or for AI decision
+- **suffix tree**: for searching string in a document
+- **graph**: for tracking friendship, or path finding
+- **r-tree**: for finding the nearest neighbor
+- **vertex buffer**: for sending data to GPU for rendering

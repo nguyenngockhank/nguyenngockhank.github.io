@@ -291,3 +291,5 @@ Additionally, MobX provides observables, computed values, and other state-manage
 - [How to Test React Components](https://www.freecodecamp.org/news/testing-react-hooks/)
 - [How to Code Your React App with TypeScript](https://www.freecodecamp.org/news/how-to-code-your-react-app-with-typescript/)
 - [Best React State Management Libraries](https://fe-tool.com/awesome-react-state-management)
+- [What is the right way to use Jquery in React?](https://stackoverflow.com/questions/51304288/what-is-the-right-way-to-use-jquery-in-react#:~:text=No.,div%3E%20and%20sets%20its%20text.)
+- [Best Practices With React Hooks](https://www.smashingmagazine.com/2020/04/react-hooks-best-practices/)

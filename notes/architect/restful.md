@@ -212,3 +212,11 @@ Here is top 10 common usage of status codes:
 | [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)  | Not found  | 
 | [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Conflict  | 
 | [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | Internal Server Error  | 
+
+## Comparision
+
+![img](./img/api-architecture-style-comparison.jpeg)
+
+## Others
+
+https://blog.bytebytego.com/p/soap-vs-rest-vs-graphql-vs-rpc

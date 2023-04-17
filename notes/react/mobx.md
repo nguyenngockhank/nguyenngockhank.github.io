@@ -53,3 +53,8 @@ export const ButtonSocialFacebook = observer((props: IProps) => {
   );
 });
 ```
+
+## Others
+
+- [Using Mobx As A State Manager In React Native Applications](https://www.smashingmagazine.com/2020/08/mobx-state-manager-react-native-applications/)
+- [React integration](https://mobx.js.org/react-integration.html)

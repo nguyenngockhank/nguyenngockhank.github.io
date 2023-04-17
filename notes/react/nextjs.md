@@ -275,7 +275,9 @@ Diff from coding styles / convention
 
 ## Other
 
-[Next.js: Using HTTP-Only Cookies for Secure Authentication (2023)](https://maxschmitt.me/posts/next-js-http-only-cookie-auth-tokens)
+- [Next.js: Using HTTP-Only Cookies for Secure Authentication (2023)](https://maxschmitt.me/posts/next-js-http-only-cookie-auth-tokens)
+- [Next.js Examples](https://github.com/vercel/next.js/tree/canary/examples)
+
 
 Helper check 
 

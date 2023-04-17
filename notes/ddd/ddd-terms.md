@@ -108,3 +108,4 @@ More detail
 - [Domain-Driven-Design](https://khalilstemmler.com/articles/domain-driven-design-intro/)
 - [The 6 Most Common Types of Logic in Large Applications](https://khalilstemmler.com/articles/software-design-architecture/organizing-app-logic/)
 - [https://dddcommunity.org/](https://dddcommunity.org/resources/ddd_terms/)
+- [ddd-by-examples](https://github.com/ddd-by-examples/library.git)
