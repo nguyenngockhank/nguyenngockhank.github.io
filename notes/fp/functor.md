@@ -58,3 +58,4 @@ Either (or the disjunct union) is a type that can either hold a value of type A 
 - [What is a functor?](https://medium.com/@dtinth/what-is-a-functor-dcf510b098b6)
 - [Monet.js](https://monet.github.io/)
 - [Building A Maybe In JavaScript](https://www.codingame.com/playgrounds/6272/building-a-maybe-in-javascript)
+- [fp ts document](https://gcanti.github.io/fp-ts/)

@@ -106,7 +106,7 @@ module.exports = [
         '/snippets/regex',
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
-        '/javascript/functor',
+        // '/javascript/functor',
         '/snippets/firebase',
         '/javascript/clean-code',
         {

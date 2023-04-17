@@ -173,3 +173,8 @@ Stratified design is a design technique that builds software in
 layers. It is a practice with long historical roots, with many
 contributions from many people. However, special mention
 goes to Harold Abelson and Gerald Sussman for documenting their insights into the practice
+
+
+
+https://mostly-adequate.gitbook.io/mostly-adequate-guide/
+https://www.youtube.com/playlist?list=PLuPevXgCPUIMbCxBEnc1dNwboH6e2ImQo
