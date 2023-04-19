@@ -1,4 +1,4 @@
-# [NestJs](https://nextjs.org/) overview
+# [NextJs](https://nextjs.org/) overview
 
 ## Abbreviation
 - CSR: Client Site Rendering

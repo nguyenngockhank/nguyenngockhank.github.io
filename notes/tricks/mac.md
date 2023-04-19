@@ -149,7 +149,12 @@ use this app http://deepsleep.free.fr/
 
 [Full Here](https://mackeeper.com/blog/post/542-how-to-install-fonts-on-mac/)
 
+## Switch to bash
 
+```
+exec bash
+exec bash --login
+```
 
 
 
