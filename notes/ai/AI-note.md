@@ -112,9 +112,9 @@ plt.show()
 - Parabole
 
 ## KNN
-- regression
-- categorized
 
+supervised learning - data has labels 
+not use much in practice, because prediction process very slow
 
 ## Vokas
 - feature

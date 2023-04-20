@@ -57,6 +57,8 @@ const toolDocs = [
   '/tools/vscode',
   '/tools/redis',
   '/tools/docker',
+  '/tools/k8s/k8s',
+  '/tools/kafka',
   '/aws/aws-services',
 ];
 
@@ -70,11 +72,12 @@ module.exports = [
     {
       title: "Giải Toán",
       children: [
+        '/algorithm/sum100', 
+        '/algorithm/no_if_loop',
         '/algorithm/string',
         // '/algorithm/rate_limit',
         '/algorithm/authority',
         '/algorithm/sort',
-        '/algorithm/no_if_loop',
         '/algorithm/bakery', 
       ]
     },

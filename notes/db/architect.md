@@ -1,8 +1,6 @@
 # Scalable Database Architectures
 
-[[toc]]
-
-## Replication
+## Replication - Master & Slave
 
 Hiểu nôm na thì đây là kiến trúc nhân bản. 
 
@@ -17,6 +15,9 @@ Vấn đề lớn nhất của phương pháp này là khi ứng dung được c
 
 Ví dụ khi mua hàng, chúng ta mua thì số lượng sản phẩm phải bị giảm đi, Nhưng câu lệnh giảm số lượng sản phẩm đã thưc hiện xong thì trên slave vẫn chưa được cập nhật nên có thể dẫn đến sai logic. Trong trường hợp này chúng ta phải thực hiện dọc trực tiếp trên master thay vì đọc trên slave.
 
+## Replication -  Leader & Followers 
+- One partition is leader, other are followers. Producer writes to leader, followers copy data from leader.
+- If leader fails, a follower is elected to become new leader.
 
 ## Partitioning
 
@@ -28,12 +29,11 @@ Partitioning is a database design technique which is used to improves performanc
 - Mỗi partition là một ngăn, mỗi một ngăn sẽ chưa một số lượng bản ghi theo một quy luật nào đó.
 - Các cách chia thường theo id của bản ghi, hoặc theo thời gian tạo bản ghi theo ngày tháng
 
-### Horizontal partitioning
+### Horizontal partitioning (Sharding)
 
 ::: tip 
 Horizontal partitioning divides a table into multiple tables. Each table then contains the same number of columns, but fewer rows.
 :::
-
 
 
 Ví dụ theo tháng chẳng hạn, thì bảng sẽ chia thành 12 partition, dữ liệu của mỗi tháng của các năm sẽ được đấy vào cùng partition, nôm na có thể hiểu truy vẫn dữ liệu trong một tháng tốc độ sẽ tăng lên 12 lần.
@@ -45,31 +45,19 @@ PARTITION BY HASH( YEAR(created) )
 PARTITIONS 10;
 ```
 
-### Vertical Partitioning
-
-::: tip 
-Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns. Normalization also involves this splitting of columns across tables, but vertical partitioning goes beyond that and partitions columns even when already normalized.
-:::
-
-
-## Partitioning criteria
-
+**criteria**
 - Range partitioning
 - List partitioning
 - Composite partitioning
 - Round-robin partitioning
 - Hash partitioning
 
-## Sharding
+### Vertical Partitioning
 
-::: tip
-Partitioning is more a generic term for dividing data across tables or databases. 
-Sharding is one specific type of partitioning, namely horizontal partitioning.
+::: tip 
+Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns. Normalization also involves this splitting of columns across tables, but vertical partitioning goes beyond that and partitions columns even when already normalized.
 :::
 
-Thường dùng trong ứng dụng dữ liệu người dùng ko liên quan đến dữ liệu cảu người dùng khác. Hoặc nhóm người dùng, các user trong một công ty sẽ lưu vào một sharding node chẳng hạn
-
----
 
 ## Clustering
 
