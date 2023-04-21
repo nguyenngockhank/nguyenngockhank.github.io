@@ -14,7 +14,7 @@ Its architecture uses (a) persistent, sparse matrix, multi-dimensional mapping (
 
 :::: tabs
 
-::: tab "Row-oriented"
+::: tab Row-oriented
 ```
 Customer ID    Attribute    Value
 -----------    ---------    ---------------
@@ -23,7 +23,7 @@ Customer ID    Attribute    Value
 ```
 :::
 
-::: tab "Column-oriented"
+::: tab Column-oriented
 ```
 Customer ID: 100001
 Attribute    Value
@@ -32,11 +32,13 @@ fav color    blue
 fav shirt    golf shirt
 ```
 :::
+
 ::::
 
 Source: 
 - https://stackoverflow.com/questions/62010368/what-exactly-is-a-wide-column-store
 - https://www.baeldung.com/cassandra-column-family-data-model
+
 ## Ring cluster
 
 ![cluster](https://cassandra.apache.org/_/_images/diagrams/apache-cassandra-diagrams-01.jpg)
@@ -44,6 +46,7 @@ Source:
 - Each nodes will be assigned a range of token.
 - Client could connect any nodes to write, that node will become **coordinator** node.
 - Partition keys will be hashed into a token. Coordinator will base on the token to know which node we can store the data.
+- When a Cassandra node becomes unavailable, processing continues and failed writes are temporarily **saved as hints** on the coordinator. If the hints have not expired, they are applied to the node when it becomes available.
 
 ## Replication Factor
 

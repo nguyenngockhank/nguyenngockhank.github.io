@@ -293,3 +293,4 @@ Additionally, MobX provides observables, computed values, and other state-manage
 - [Best React State Management Libraries](https://fe-tool.com/awesome-react-state-management)
 - [What is the right way to use Jquery in React?](https://stackoverflow.com/questions/51304288/what-is-the-right-way-to-use-jquery-in-react#:~:text=No.,div%3E%20and%20sets%20its%20text.)
 - [Best Practices With React Hooks](https://www.smashingmagazine.com/2020/04/react-hooks-best-practices/)
+- [Why custom react hooks could destroy your app performance](https://www.developerway.com/posts/why-custom-react-hooks-could-destroy-your-app-performance)

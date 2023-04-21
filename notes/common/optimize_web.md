@@ -61,6 +61,11 @@ Mình sẽ ko giải thích CDN là gì và làm gì đâu? Mình chỉ giải t
 - Thế cho nên khi sử dụng CDN bạn sẽ sử dụng chung 1 URI thì browser chỉ load lần đầu thôi. 
 - Cách nào cũng ưu nhược điểm riêng... ví dụ khi sử dụng CDN thì mất công phải mất công truy cập DNS Server, phụ thuộc vào 3rd party, tốn tiền =)) ... 
 
+## HTTP Version 
+
+Đổi version xịn sò 😨 cho chạy nhanh hơn này. Nghe giang hồ đồn đại do mấy anh to Google làm ra, có mấy cơ chế ngon nghẻ mà chưa có cơ hội xài =))
+
+[Why is HTTP/2 faster than HTTP/1.1?](https://www.cloudflare.com/learning/performance/http2-vs-http1.1/)
 
 ## :zap: CSS Sprite
 - Cách này là gôm các hình ảnh thành 1 tấm, rồi sử dụng css background xử lý... mục đích để giảm bớt request tới server
@@ -199,58 +204,16 @@ $hook['display_override'][] = array(
 );
 ```
 
+## Presigned URL
 
----
-Sau đây là một cách thức có thể áp dụng trên code backend... 
+Đại loại là tính năng upload hình ảnh mà hình ảnh đang chứa ở AWS S3. Backend ko cần nhận trực tiếp nguyên file từ Frontend, rồi tự mình dùng tấm thân mỏng manh của BE đẩy chiếc file nặng nề ấy lên S3. Chúng ta sẽ dùng công thức của AWS đưa ra đó là Presigned URL
 
-## :zap: Cache ...
-Viết gì nhỉ =)) Có thể là bạn đang sử dụng 1 framework backend nào đó và có đủ thứ docs về Cache. Nào là `memcache`, `redis` ... đọc rất là easy nhưng mà implement nó là cả 1 vùng trời kiến thức, kiến trúc, sáng kiến, cao kiến, phong kiến lun á =)))
+- FE hash md5 cái content file, rồi tên file, gửi lên BE xin cái **Presigned URL** 
+- BE tạo ra **Presigned URL** 
+- FE dùng **Presigned URL** upload file lên AWS S3 
 
-Nói vậy thôi để implement Cache thì chỉ cần biết vài chỗ này thôi =))
-- Nơi xử lý `Cache miss`
-- Nơi xử lý `Cache hit`
-- Nơi xử lý `Cache remove`
-- Nơi xử lý `Cache refresh` 
+[Full ko che - Generate a presigned URL in modular AWS SDK for JavaScript](https://aws.amazon.com/blogs/developer/generate-presigned-url-modular-aws-sdk-javascript/)
 
-Rồi ví dụ: 
-
-:sunglasses: Bạn đang làm một cái website hoành tráng lệ, hệ thống phân quyền các kiểu con đà điểu. 
-
-| Tables         | 
-| -------------  |
-| user           |      
-| function       | 
-| user_functions | 
-
-
-:open_mouth: Bạn nhận thấy sau khi User login thành công, thì mỗi request lên server đều phải xuống database để lấy dữ liệu phân quyền. 
-Sau đó dùng dữ liệu đó để show/ hide một số nút, link trên UI. 
-
-:blush: Bạn thấy có vẻ cần phải optimize chỗ này, bạn lên đọc documents kỹ càng, tự tin apply cache cho nó. 
-
-Giả sử bạn đang xài ORM, khi bạn lấy dữ liệu phân quyền thì đều qua Model hết. 
-Thế nên bạn xử lý `Cache miss` và `Cache hit` tại Model, khi User log out thì `Cache remove`. 
-
-Sau đó hệ thống chạy xì mút cho tới khi... có 1 thằng Admin cấp cao vào báo bug cho bạn =))
-
-:rage: *"Tôi có remove 1 vài chức năng của thằng cấp dưới, nhưng nó không chạy..."*
-
-:dizzy_face: Bạn dằn vặt, cắn rứt, khóc... và rồi Ông bụt hiện lên chỉ cho bạn thiếu làm `Cache refresh` khi có tác nhân tác động. 
-
-:thumbsup: Bạn càng ngày càng thấm câu: "Cái gì đang chạy thì để cmn yên" =))
-
-***:triangular_flag_on_post: KẾT BÀI***
-- Cần phải nắm rõ hệ thống hiện tại 
-- Dự trù được những case có thể xảy ra 
-- Tham khảo từ người lớn, sếp, ...
-- Hoặc "Cái gì đang chạy thì để cmn yên"
-
-
-## :zap: Tối ưu Database
-[📕 Xem bài này](../db/optimize.md)
-
----
-Dưới đây một số cách khác 
 
 ## :zap: Service worker
 Thèng này có tên là "công nhân dịch vụ" hoạt động ngầm underground =)) Giao tiếp với overground qua `postMessage`, cái này cũng giống `iframe`.
@@ -260,7 +223,7 @@ Muốn sử dụng được tính năng này thì điều tiên quyết đó là
 Và nó cũng là xương sống trong việc làm 1 PWA (web có thể dùng offline ). Nhưng mà để nó hợp thức hóa, liên quan hóa với chủ đề tối ưu website thì chỉ nên chú trọng vào phần Backgroun sync & Cache request thôi nhé :v 
 
 ## :zap: CSS Rendering Performance
-[Link tựa vào](https://developers.google.com/web/fundamentals/performance/rendering/)
+[Link tựa vào](https://web.dev/rendering-performance/)
 
 Khi browser render thì cần trải qua 5 bước:
 - **Javascript** > **Style calculations** > **Layout** > **Paint** > **Compositing** 
@@ -303,6 +266,35 @@ Tool mình hay xài:
 - [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) trên google, thật ra có sẵn trong DevTools mà mình thích cài Extension cho dễ coi. 
 - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) tool này trước page mình nó chấm cả 100 giờ còn 60 =))) cập nhật cách tính liên tục =)))
 
+
+## :zap: Cache tại Backend
+Viết gì nhỉ =)) Có thể là bạn đang sử dụng 1 framework backend nào đó và có đủ thứ docs về Cache. Nào là `memcache`, `redis` ... đọc rất là easy nhưng mà implement nó là cả 1 vùng trời kiến thức, kiến trúc, sáng kiến, cao kiến, phong kiến lun á =)))
+
+Nói vậy thôi để implement Cache thì chỉ cần biết vài chỗ này thôi =))
+- Nơi xử lý `Cache miss`
+- Nơi xử lý `Cache hit`
+- Nơi xử lý `Cache remove`
+- Nơi xử lý `Cache refresh` 
+
+Tuy nhiên, khi sử cache thì đây cũng sẽ là thứ bạn cần phải quan tâm. Cache (Redis / Memcache /...) trở thành 1 storage kế tiếp cạnh chiếc Database thân yêu. Đồng nghĩa tại đây chiếc app của bạn đã bước lên con đường trở thành Distributed System. Bạn sẽ đối diện với nhiều thứ hơn như là Consistency hay Availability các kiểu. 
+
+Ví dụ Availability cho case [Cache Miss Storm](https://www.percona.com/blog/cache-miss-storm/)
+
+Hoặc Consistency cho case **cache invalidation**
+
+:::: quote
+There are only two hard things in Computer Science: cache invalidation and naming things.
+::: right 
+― Phil Karlton
+:::
+::::
+
+## 🔗 Tối ưu Database
+[📕 Xem bài này](../db/optimize_db.md)
+
+
+## 🔗 Tối ưu backend sâu hơn
+[Optimize Performance at Backend](./optimize_be.md)
 
 --- 
 Những cách lỗi thời =))

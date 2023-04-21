@@ -1,6 +1,5 @@
 # Redis Notes
 
-- Node Client: [ioredis](https://www.npmjs.com/package/ioredis)
 
 ## Communication Patterns
 
@@ -48,6 +47,7 @@ redis.on("message", (channel, message) => {
 ### Locking 
 
 Package [redis-lock](https://www.npmjs.com/package/redis-lock)
+Package [redlock](https://www.npmjs.com/package/redlock)
 
 - One worker (and only one) worked to be able to acquire rights to a resource
 - Be able to release this lock reliably
@@ -262,6 +262,11 @@ Choose strategies for reading / writing cache when using Redis
 - The application writes directly to the database. 
 - Only data that is read goes to the cache.
 
+## Libraries
+
+- [ioredis](https://www.npmjs.com/package/ioredis) - node client
+- [redlock](https://www.npmjs.com/package/redlock) - distributed lock
+- [bull](https://www.npmjs.com/package/bull) - queue
 
 *Read more*: 
 - [💎 Dealing with concurrency issues when miss cache storm](https://stackoverflow.com/questions/23303463/dealing-with-concurrency-issues-when-caching-for-high-traffic-sites): Use a soft expiration for async update data on cache

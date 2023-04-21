@@ -70,6 +70,23 @@ module.exports = [
       children: commonDocs,
     },
     {
+      title: "Database",
+      children: [
+        'architect',
+        'use-cases',
+        'optimize_db',
+        'mysql_snippets',
+        'postgre',
+        'couchdb',
+        'mongodb',
+        'cassandra',
+        'elasticsearch',
+        'redis',
+        'nosql',
+        'db-table-design',
+      ].map(prefixMapFn('/db/'))
+    },
+    {
       title: "Giải Toán",
       children: [
         '/algorithm/sum100', 
@@ -84,21 +101,6 @@ module.exports = [
     {
       title: "OOP",
       children: oopDocs,
-    },
-    {
-      title: "Database",
-      children: [
-        'architect',
-        'use-cases',
-        'optimize',
-        'mysql_snippets',
-        'postgre',
-        'couchdb',
-        'elasticsearch',
-        'redis',
-        'nosql',
-        'db-table-design',
-      ].map(prefixMapFn('/db/'))
     },
     {
       title: "Javascript",
