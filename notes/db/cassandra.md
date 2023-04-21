@@ -1,17 +1,70 @@
 # Apache Cassandra
 
-Cassandra là `NoSQL`, được phát triển bởi Facebook vào năm 2007. Sau đó nó được tặng cho quỹ Apache vào 2/2010 và nâng cấp lên thành dự án hàng đầu của Apache.
+- Developed by Facebook in 2007. Gifted to Apache 2/2010
+- NoSQL but has structure 
+- A database - column family
+- Can use SQL to manipulate with data
+- Peer to peer database, sharding, more nodes more performance
 
-Thông thường database trong NoSQL thì không cần thiết phải tạo schema ngay lúc đầu. Thế nhưng Cassandra thì lại khác. **Trước khi insert dữ liệu thì cần phải tạo keyspace và schema của table.**
+## Column-oriented Database
 
-Có thể thực hiện được 1 số câu query như select, update, insert, delete, drop.
+Its architecture uses (a) persistent, sparse matrix, multi-dimensional mapping (row-value, column-value, and timestamp) in a tabular format meant for massive scalability (over and above the petabyte scale).
 
-- Dữ liệu được phân tán trên nhiều node khác nhau.
-- Node càng nhiều thì throughput của nó càng tăng.
-- Write throughput luôn luôn cao hơn read throughput.
-- Tính chịu lỗi khá cao, cho dù node bị chết đi chăng nữa thì khi truy vấn sẽ được chuyển hướng đến node khác.
-- Backup, restore dữ liệu 1 cách đơn giản.
-- Tốc độ truy vấn cao
+![Column-oriented](https://i.stack.imgur.com/rDWwy.png)
+
+:::: tabs
+
+::: tab "Row-oriented"
+```
+Customer ID    Attribute    Value
+-----------    ---------    ---------------
+     100001    fav color    blue
+     100001    fav shirt    golf shirt
+```
+:::
+
+::: tab "Column-oriented"
+```
+Customer ID: 100001
+Attribute    Value
+---------    --------------
+fav color    blue
+fav shirt    golf shirt
+```
+:::
+::::
+
+Source: 
+- https://stackoverflow.com/questions/62010368/what-exactly-is-a-wide-column-store
+- https://www.baeldung.com/cassandra-column-family-data-model
+## Ring cluster
+
+![cluster](https://cassandra.apache.org/_/_images/diagrams/apache-cassandra-diagrams-01.jpg)
+
+- Each nodes will be assigned a range of token.
+- Client could connect any nodes to write, that node will become **coordinator** node.
+- Partition keys will be hashed into a token. Coordinator will base on the token to know which node we can store the data.
+
+## Replication Factor
+
+- Replication Factor (RF) = number copies we want to store
+- Replication node will be defined by Replication Strategy
+- Simple strategy = next 2 nodes
+
+## Data consistency
+
+| WRITE | READ | Consistent | Read Availability | Write Availability |
+| --- | --- | --- | --- | --- |
+| All | All | ✅   | Low | Low |
+| Quorum | All | ✅   | Low | Medium |
+| ✅  One | All | ✅   | Low | High |
+| All | Quorum | ✅   | Medium | Low |
+| ✅ Quorum | Quorum | ✅   | Medium | Medium |
+| One | Quorum | ❌   | Medium | High |
+| ✅ All | One | ✅   | High | Low |
+| Quorum | One | ❌   | High | Medium |
+| One | One | ❌   | High | High |
+
 
 ##  Keys
 
@@ -31,8 +84,6 @@ We should only access data using the partison key
 ## CQL
 
 Tables should reflect the queries we are trying to make
-
-
 
 ### Keyspace
 
@@ -186,7 +237,6 @@ VALUES (now(), 'tom', 'jerry');
 :::
 
 ::::
-
 
 
 ## Refs

@@ -81,6 +81,56 @@ Thường được sử dụng trong các hệ thống `Web API`, `các hệ th�
 - Thông tin dễ lộ => thông thường chỉ lưu 1 số thông tin thiết yếu như `user_id`, `username` mà không lưu thông tin nhạy cảm như `password` vào token
 - Dung lượng truyền tải lớn
 
+## Hash based Message Authentication Code (HMAC)
+
+dùng để kiểm tra toàn vẹn + xác thực dữ liệu 
+
+![HMAC](https://media.licdn.com/dms/image/C4D12AQGhsdUJ4h4bNw/article-cover_image-shrink_720_1280/0/1593274127772?e=2147483647&v=beta&t=OI9rOEe6eEFMZ-XiNG7L0OnMxsiUyU9XOcoxk3PNM3M)
+
+- Server sẽ tạo ra public key & private key rồi đưa cho client (shared key)
+- Client tạo HMAC signature từ message + private key => gửi lên server để xin resource 
+- Server nhận request từ client, tạo 1 chiếc HMAC signature khác rồi so sánh với HMAC signature từ client gửi lên => ngon thì process  
+
+
+Ví dụ [Amazon S3 documentation](http://s3.amazonaws.com/doc/s3-developer-guide/RESTAuthentication.html)
+
+```ts
+"Authorization: AWS " + AWSAccessKeyId + ":"  + base64(hmac-sha1(VERB + "\n" 
+							     + CONTENT-MD5 + "\n" 
+							     + CONTENT-TYPE + "\n" 
+							     + DATE + "\n" 
+							     + CanonicalizedAmzHeaders + "\n" 
+							     + CanonicalizedResource))
+```
+
+```
+PUT /quotes/nelson HTTP/1.0
+Authorization: AWS 44CF9590006BF252F707:jZNOcbfWmD/A/f3hSvVzXZjM2HU=
+Content-Md5: c8fdb181845a4ca6b8fec737b3581d76
+Content-Type: text/html
+Date: Thu, 17 Nov 2005 18:49:58 GMT
+X-Amz-Meta-Author: foo@bar.com
+X-Amz-Magic: abracadabra
+```
+
+Usage scenarios
+- Password reset link
+- Links in verifying email addresses in order to create or activate accounts.
+- Authenticating data sent by external applications.
+
+https://www.geeksforgeeks.org/what-is-hmachash-based-message-authentication-code/
+
+
+## Single Sign-On (SSO)
+
+When a principal tries to access a resource, she is directed to authenticate with an **identity provider**. Once identity provider is satisfied that the principal has been authenticated, it gives informatin to the **service provider**, allowing it to decide whether to grant her access to the resource.
+
+- **Identity provider** could be an externally hosted system, or something inside your own organization. 
+    - Goolge, for example, provides an OpenID Connect identity provider.
+    - For enterprises, it's common to have your own identity provider, which may be linked to your company's directory service - It could be s.th like *Lightweight Directory Access Protocol (LDAP)* or *Active Directory*
+
+
+
 ## Open Authentication (OAuth)
 
 ::: tip 
@@ -96,11 +146,3 @@ Thường được sử dụng trong các hệ thống `Web API`, `các hệ th�
 ![Mô hình OAuth2](@/images/oauth.png)
 
 Tóm tắt [bài viết gốc](https://viblo.asia/p/authentication-story-part-1-authentication-la-lam-gi-63vKj2YMK2R)
-
-## Single Sign-On (SSO)
-
-When a principal tries to access a resource, she is directed to authenticate with an **identity provider**. Once identity provider is satisfied that the principal has been authenticated, it gives informatin to the **service provider**, allowing it to decide whether to grant her access to the resource.
-
-- **Identity provider** could be an externally hosted system, or something inside your own organization. 
-    - Goolge, for example, provides an OpenID Connect identity provider.
-    - For enterprises, it's common to have your own identity provider, which may be linked to your company's directory service - It could be s.th like *Lightweight Directory Access Protocol (LDAP)* or *Active Directory*
