@@ -9,6 +9,9 @@
 ## FiraCode (Fonts)
 - [Github - FiraCode](https://github.com/tonsky/FiraCode)
 
+## Npm scripts view
+Command + Shift + P => type `Npm scripts` => `Focus on explorer npm scripts`
+
 
 ## Settings.json
 
@@ -25,13 +28,32 @@ Local: `.vscode/settings.json`
 }
 ```
 
+## Create your own snippets 
+
+https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+settings: `"editor.tabCompletion": "on"`
+
+`Command + Shift + P` => `Configure User Snippets`
+
+Example
+```js
+{
+  "For Loop": {
+    "prefix": ["for", "for-const"],
+    "body": ["for (const ${2:element} of ${1:array}) {", "\t$0", "}"],
+    "description": "A for loop."
+  }
+}
+```
+
 ## Search & Replace
 
 ### New line
 
 `Shift + Enter` will be useful in this case 
 
-### Reg exp
+### Regexp
 
 Use Regexp. [See this article](https://dev.to/rfornal/vs-code-search-and-replace-regex-mn2)
 
@@ -92,21 +114,3 @@ https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 - Copy Relative Path
 
 
-## User Define snippets
-
-https://code.visualstudio.com/docs/editor/userdefinedsnippets
-
-settings: `"editor.tabCompletion": "on"`
-
-`Command + Shift + P` => `Configure User Snippets`
-
-Example
-```js
-{
-  "For Loop": {
-    "prefix": ["for", "for-const"],
-    "body": ["for (const ${2:element} of ${1:array}) {", "\t$0", "}"],
-    "description": "A for loop."
-  }
-}
-```
