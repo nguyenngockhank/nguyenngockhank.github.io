@@ -28,6 +28,7 @@ module.exports = [
         title: 'Khác',
         children: [
             'authenication',
+            'authorization',
             'full_stack_software_design',
             'terms',
             {
