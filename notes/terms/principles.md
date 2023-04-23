@@ -21,11 +21,19 @@ It means you should be writing code as **simple as possible**. Don't get caught 
 
 ### Don't repeat yourself (DRY)
 
-::: quote
+::: tip
 *Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.*
 :::
 
 [Read more](./97things4dev.html#_30-%E2%9C%85-nguyen-tac-dry-don-t-repeat-yourself)
+
+### Principle of Least Surprise (Consistency Principle)
+
+The Principle of Least Surprise is the idea that a user shouldn't be surprised by the way an interaction or object works in an interface or design. This means prioritizing functionality and use over things like consistency to avoid astonishing or surprising your user.
+
+::: quote
+*In interface design, always do the least surprising thing.* - Eric Steven Raymond, The Art of Unix Programming
+:::
 
 ### Separation Of Concerns
 
@@ -52,18 +60,14 @@ An active corollary to Conway's law:
 
 ### Open/Closed principle (OCP)
 
-Bertrand Meyer made this principle famous in the 1980s. 
-
 ::: quote
-*Open for extension but closed for modification.*
+*Open for extension but closed for modification.* - Bertrand Meyer  made this principle famous in the 1980s. 
 :::
 
 ### Liskov substitution principe (LSP)
 
-Barbara Liskov’s famous definition of subtypes, from 1988. 
-
 ::: quote
-*In short, this principle says that to build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another.*
+*In short, this principle says that to build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another.* - Barbara Liskov’s famous definition of subtypes, from 1988. 
 :::
 
 ### Interface segregation principle (ISP)

@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "build": "cd notes && npm run build && cd .. && git add docs && git commit -m \"build\""
+    "build": "cd notes && npm run build && cd .. && git add docs && git commit -m \"build\"",
+    "push": "git push"
   }
 }

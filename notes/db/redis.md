@@ -1,5 +1,9 @@
 # Redis Notes
 
+**Why is Redis so fast?**
+- RAM-based database
+- leverages IO [multiplexing](https://redis.com/blog/multiplexing-explained/) & single threaded execute loop 
+- leverages several efficient lower-level data structures.
 
 ## Communication Patterns
 
@@ -217,50 +221,28 @@ export class ThrottlerStorageRedisService {
 }
 ```
 
+## Redis vs Memcached
 
-## Cache Strategies 
+Criteria | Memcached | Redis 
+---------| ---------| ------ 
+Data structure | plain string values | lists, sets, sorted sets, hashes, ...
+Architecture   | multi-thread  | string thread for reading/writing keys 
+Transaction    | ❌            | support atomic operations 
+Snapshots / Persistence | ❌   | keep data on disks - support RDB / AOF 
+Pub / Sub      | ❌            | ✅ 
+Geospatial support |  ❌       | Geospatial indexes - stores lat & long 
+Server side script |  ❌       | support Lua script
+Cache Eviction     |  LRU       | `noeviction`, `allkeys-lru`, `allkeys-lfu`, ...
+Replication     | ❌           | Leader - Followers
 
-Choose strategies for reading / writing cache when using Redis 
+- RDB - Redis Database Backup : a compact, point-in-time snapshot of the DB at specifict of time
+- AOF - Append Only File 
+- LRU - Least Recently Used 
+-[Geospatial Indexing](https://redis.com/glossary/geospatial-indexing/)
+-[Key eviction](https://redis.io/docs/reference/eviction/)
 
-### Cache Aside
-
-![Image](./img/cache/cache-aside.png)
-- The cache is sitting aside the database. 
-- The application will first request the data from the cache. 
-    - If the data exists **cache hit**, the app will retrieve the data directly. 
-    - If not **cache miss**, the app will request data from the database and write it to the cache so that the data can be retrieved from the cache again next time.
-
-
-### Read through
-
-![Image](./img/cache/cache-read-through.png)
-
-- The cache sits in between the application and the database. 
-- The application only request data from the cache. 
-- If a **cache miss** occurs, the cache is responsible to retrieve data from the database, update itself and return data to the application.
-
-
-### Write through
-
-![Image](./img/cache/cache-write-through.png)
-- The cache sits in between the application and the database. 
-- Every writes from the application must go through the cache to the database.
-
-### Write Back (a.k.a Write Behind)
-
-![Image](./img/cache/cache-write-back.png)
-
-- The application still writes data to the cache. 
-- However, there is a delay in writing from the cache to the database. 
-- The cache only flushes all updated data to the DB once in a while (e.g. every 2 minutes).
-
-### Write Around
-
-![Image](./img/cache/cache-write-around.png)
-
-- Write around usually combines with either **cache aside** or **read through** strategy. 
-- The application writes directly to the database. 
-- Only data that is read goes to the cache.
+##  🔗 Cache applying 
+[Read here](../common/cache/cache-apply.md)
 
 ## Libraries
 

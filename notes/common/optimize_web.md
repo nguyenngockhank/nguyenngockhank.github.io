@@ -204,7 +204,9 @@ $hook['display_override'][] = array(
 );
 ```
 
-## Presigned URL
+## Upload hiệu quả 
+
+### Presigned URL
 
 Đại loại là tính năng upload hình ảnh mà hình ảnh đang chứa ở AWS S3. Backend ko cần nhận trực tiếp nguyên file từ Frontend, rồi tự mình dùng tấm thân mỏng manh của BE đẩy chiếc file nặng nề ấy lên S3. Chúng ta sẽ dùng công thức của AWS đưa ra đó là Presigned URL
 
@@ -214,6 +216,13 @@ $hook['display_override'][] = array(
 
 [Full ko che - Generate a presigned URL in modular AWS SDK for JavaScript](https://aws.amazon.com/blogs/developer/generate-presigned-url-modular-aws-sdk-javascript/)
 
+### Upload multipart
+
+Nếu bạn cần upload 1 cái file "biệt thự", thì cứ chiến thuật chia để trị nhé. Hoặc mạng tắt bật như công tắc thì bí kiếp AWS Docs nói răng 
+- *If you're uploading large objects over a stable high-bandwidth network, use multipart upload to maximize the use of your available bandwidth by uploading object parts in parallel for multi-threaded performance.*
+- *If you're uploading over a spotty network, use multipart upload to increase resiliency to network errors by avoiding upload restarts. When using multipart upload, you need to retry uploading only the parts that are interrupted during the upload. You don't need to restart uploading your object from the beginning.*
+
+Chi tiết tại đây: [Uploading and copying objects using multipart upload](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html)
 
 ## :zap: Service worker
 Thèng này có tên là "công nhân dịch vụ" hoạt động ngầm underground =)) Giao tiếp với overground qua `postMessage`, cái này cũng giống `iframe`.

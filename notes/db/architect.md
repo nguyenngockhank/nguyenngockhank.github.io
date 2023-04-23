@@ -1,23 +1,22 @@
 # Scalable Database Architectures
 
-## Replication - Master & Slave
+## Replication
 
-Hiểu nôm na thì đây là kiến trúc nhân bản. 
+### Replication - Master & Slave
 
-::: tip
-- Chúng ta có 1 server Master và 1 hoặc nhiều server Slave
-    - Master dùng chủ yếu để ghi dữ liệu (có thể dùng để đọc trong trường hợp cần thiết)
-    - Slave dùng để dọc dữ liệu và ko thể ghi dữ liệu.
-:::
+A database architecture divided into a master database and slave databases. The slave database serves as the backup for the master database.
+- Master node is used for writing data or reading data if consistency required
+- Slave nodes are used for reading data, reduce load from master node.
 
+One major issue of this architecture is **relication lag**. Possible solutions to mitigate this problem:
+- **Latency sensitive reads** are sent to the master/primary database.
+- **Reads that immediately follow writes** are routed to the master/primary database.
+- check if a replica is caught up with the master/primary
 
-Vấn đề lớn nhất của phương pháp này là khi ứng dung được cấu hình ghi trên master , đọc trên slave. Nhưng sau khi dư liệu trên master thì mất một khoảng thời gian nhất định gọi là lag dư liệu mới được đồng bộ lên slave.
-
-Ví dụ khi mua hàng, chúng ta mua thì số lượng sản phẩm phải bị giảm đi, Nhưng câu lệnh giảm số lượng sản phẩm đã thưc hiện xong thì trên slave vẫn chưa được cập nhật nên có thể dẫn đến sai logic. Trong trường hợp này chúng ta phải thực hiện dọc trực tiếp trên master thay vì đọc trên slave.
-
-## Replication -  Leader & Followers 
+### Replication -  Leader & Followers 
 - One partition is leader, other are followers. Producer writes to leader, followers copy data from leader.
 - If leader fails, a follower is elected to become new leader.
+
 
 ## Partitioning
 
@@ -28,6 +27,14 @@ Partitioning is a database design technique which is used to improves performanc
 Để dễ hình dung thì 1 bảng dữ liệu gióng như một chiếc hộp nhiều ngăn. 
 - Mỗi partition là một ngăn, mỗi một ngăn sẽ chưa một số lượng bản ghi theo một quy luật nào đó.
 - Các cách chia thường theo id của bản ghi, hoặc theo thời gian tạo bản ghi theo ngày tháng
+
+
+### Vertical Partitioning
+
+::: tip 
+Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns. Normalization also involves this splitting of columns across tables, but vertical partitioning goes beyond that and partitions columns even when already normalized.
+:::
+
 
 ### Horizontal partitioning (Sharding)
 
@@ -51,12 +58,6 @@ PARTITIONS 10;
 - Composite partitioning
 - Round-robin partitioning
 - Hash partitioning
-
-### Vertical Partitioning
-
-::: tip 
-Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns. Normalization also involves this splitting of columns across tables, but vertical partitioning goes beyond that and partitions columns even when already normalized.
-:::
 
 
 ## Clustering

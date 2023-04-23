@@ -73,7 +73,7 @@ module.exports = [
       title: "Database",
       children: [
         'architect',
-        'use-cases',
+        'id-generate',
         'optimize_db',
         'mysql_snippets',
         'postgre',
@@ -83,6 +83,7 @@ module.exports = [
         'elasticsearch',
         'redis',
         'nosql',
+        'use-cases',
         'db-table-design',
       ].map(prefixMapFn('/db/'))
     },

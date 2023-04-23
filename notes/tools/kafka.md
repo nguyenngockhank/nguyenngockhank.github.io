@@ -125,6 +125,13 @@ public void listen(Stat stat) {
 }
 ```
 
+## Why is Kafka fast?
+
+Kafka achieves low latency message delivery through Sequential I/O and **Zero Copy Principle**.
+![Kafka 0 copy](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fff3743a9-915c-44c8-9bc3-562a754035f8_2469x2973.jpeg)
+
+Zero copy is a shortcut to save the multiple data copies between application context and kernel context. This approach brings down the time by ​​approximately 65%.
+
 ## Tools
 [kafkatool](https://www.kafkatool.com/)
 

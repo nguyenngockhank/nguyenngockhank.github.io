@@ -56,8 +56,13 @@ Example.com?cachemiss3
 
 **Solution**
 - Whitelist the allowed parameters, strip invalid parameters
+- Set a short TTL for keys with null value
+- Using Bloom filter. A Bloom filter is a data structure that can rapidly tell us whether an element is present in a set or not. If the key exists,
+the request first goes to the cache and then queries the database if needed. If the key doesn't exist in the data set, it means the key doesn’t exist in the cache/database. In this case, the query will not hit the cache or database layer.
 
-Read more: [cache miss attack](https://inside.caratlane.com/cache-miss-attack-4e515a639e9b)
+Read more: 
+- [cache miss attack](https://inside.caratlane.com/cache-miss-attack-4e515a639e9b)
+- [Bloom Filters: Tại sao các mạng blockchain lại thường sử dụng nó](https://viblo.asia/p/bloom-filters-tai-sao-cac-mang-blockchain-lai-thuong-su-dung-no-GrLZD07eZk0)
 
 ## Payment Security
 ... TBD
@@ -341,3 +346,4 @@ Read more [excess-xss](https://excess-xss.com/)
 - [Rate limiting — A Good Approach for Scalable System](https://medium.com/geekculture/rate-limiting-a-good-approach-for-scalable-system-45e338b77ffc)
 - [Cyber Security Tutorial](https://www.w3schools.com/cybersecurity/index.php)
 - [Tổng hợp các bài viết hay về Web Security](https://whitehat.vn/threads/tong-hop-cac-bai-viet-hay-ve-web-security.9643/)
+- [Top 7 PHP Security Issues And Vulnerabilities](https://spectralops.io/blog/top-7-php-security-issues-and-vulnerabilities/)
