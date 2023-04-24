@@ -21,6 +21,10 @@ Ví dụ nếu câu điều kiện có thể để ở `WHERE` thì không nên 
 ## Khóa cửa khóa ngõ
 Nếu nhất quán dữ liệu, ràng buộc toàn vẹn không là vấn đề thì bỏ mấy cái quan hệ khóa chính, khóa ngoại. Đùa đấy, thật ra là nếu được thì đưa logic ấy lên code luôn :>  
 
+Mấy anh lớn như github, fb không xài *foreign key contraint* để tăng perf, vậy app mình đã đủ lớn chưa :))) 
+
+[Thoughts on Foreign Keys?](https://github.com/github/gh-ost/issues/331#issuecomment-266027731)
+
 ## Thiết kế phá chuẩn
 Đôi khi thiết kế chuẩn, không dư thừa dữ liệu lại gây ra câu query phức tạp như c, như b, như l... nên phá chuẩn, chấp nhận dư thừa là cách có thể xem xét =))
 
@@ -95,7 +99,9 @@ SELECT fields FROM table WHERE field2='something'
 - Không nên sử dụng trên cột có ít giá trị. Vd như `active` và `inactive`. Gần như là full scan bảng :>  
 
 ## Sử dụng ORM hợp lý
-Cân nhắc lúc nào cần sử dụng Lazy loading, lúc nào cần Eager Loading. Nhất là khi làm việc với Array. 
+- Cân nhắc lúc nào cần sử dụng Lazy loading, lúc nào cần Eager Loading. Nhất là khi làm việc với Array. 
+- phân trang bằng **Cursor** thay vì **offset** 
+
 
 ## Job schedule
 Chạy script để thực hiện Job schedule (Crontab)  hoặc Backup database nên thực hiện vào lúc ít người sử dụng sản phẩm nhất.
@@ -111,3 +117,4 @@ Sử dụng `EXPLAIN {{query}}` để phân tích câu lệnh :D Xem được đ
 - [Postgres indexes](https://www.postgresql.org/docs/current/indexes.html)
 - [Is it possible to index on enum?](https://stackoverflow.com/questions/62207344/is-it-possible-to-index-on-enum)
 - [use-the-index-luke.com](https://use-the-index-luke.com/)
+- [](https://ignaciochiazzo.medium.com/paginating-requests-in-apis-d4883d4c1c4c)

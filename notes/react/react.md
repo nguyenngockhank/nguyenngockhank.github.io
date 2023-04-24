@@ -245,46 +245,18 @@ Additionally, MobX provides observables, computed values, and other state-manage
 
 ::::
 
+## Avoid re-render
+- Memoization using `useMemo()` and `useCallback()` Hooks
+- API Call Optimization with [React Query](https://tanstack.com/query/latest/docs/react/overview)
+- Creating Memoized Selectors with [Reselect](https://www.npmjs.com/package/reselect)
+- Replace `useState()` with `useRef()`
+
+[5 Ways to Avoid React Component Re-Renderings](https://blog.bitsrc.io/5-ways-to-avoid-react-component-re-renderings-90241e775b8c)
 
 ## Folder structure
 
 [Full here](https://www.robinwieruch.de/react-folder-structure/)
 
-```
-- src/
---- feature/
------ User/
-------- Profile/
-------- Avatar/
------ Message/
-------- MessageItem/
-------- MessageList/
------ Payment/
-------- PaymentForm/
-------- PaymentWizard/
-------- services/
---------- Currency/
------------ index.js
------------ service.js
------------ test.js
------ Error/
-------- ErrorMessage/
-------- ErrorBoundary/
-------- services/
---------- ErrorTracking/
------------ index.js
------------ service.js
------------ test.js
---- components/
---- hooks/
---- context/
---- services/
------ Format/
-------- Date/
---------- index.js
---------- service.js
---------- test.js
-```
 
 ## Others
 - [Setting up ESLint in React](https://medium.com/@RossWhitehouse/setting-up-eslint-in-react-c20015ef35f7)

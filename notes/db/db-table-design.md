@@ -28,3 +28,16 @@ Wordpress database is a great example
 ![Polymorphic DB Table Design](./img/wp-metadatatable.png)
 
 [Another one](https://stackoverflow.com/questions/3241033/designing-database-to-hold-different-metadata-information)
+
+## Thoughts on Foreign Keys 
+At GitHub we do not use foreign keys, ever, anywhere.
+
+- FKs are in your way to shard your database. Your app is accustomed to rely on FK to maintain integrity, instead of doing it on its own. It may even rely on FK to cascade deletes (shudder). When eventually you want to shard or extract data out, you need to change & test the app to an unknown extent.
+- FKs are a performance impact. The fact they require indexes is likely fine, since those indexes are needed anyhow. But the lookup made for each `insert`/`delete` is an overhead.
+- FKs don't work well with online schema migrations.
+
+
+
+Read more: 
+- [Should I define the relations between tables in the database or just in code?](https://softwareengineering.stackexchange.com/questions/334624/should-i-define-the-relations-between-tables-in-the-database-or-just-in-code)
+- [Thoughts on Foreign Keys?](https://github.com/github/gh-ost/issues/331#issuecomment-266027731)

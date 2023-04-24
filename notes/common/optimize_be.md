@@ -48,4 +48,8 @@ CAP Theorem: Tradeoff between Availability vs Consistency
 - Logging
 - Efficient Code (runtime, memmory alloc)
 
+## Comparision
+
+- [goroutines vs worker threads P1](https://medium.com/@Cazineer/go-goroutines-vs-node-cluster-worker-threads-part-1-26933b44f5ee)
+- [goroutines vs worker threads P1](https://medium.com/@Cazineer/go-goroutines-vs-node-cluster-worker-threads-part-2-52611217340a)
 

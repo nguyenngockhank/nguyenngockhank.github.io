@@ -83,3 +83,5 @@ Các server này giao tiếp với nhau để trao đổi thông tin và giao ti
 - [What's the difference between sharding DB tables and partitioning them?](https://www.quora.com/Whats-the-difference-between-sharding-DB-tables-and-partitioning-them)
 - [Cluster là gì? Tổng quan về Server Clustering](https://topdev.vn/blog/cluster-la-gi/)
 - [Choosing the right database for the job](https://blog.andyet.com/2014/10/01/right-database/)
+- [](https://www.citusdata.com/blog/2017/08/09/principles-of-sharding-for-relational-databases/)
+- [We do not use foreign keys (2016) (github.com/github)](https://news.ycombinator.com/item?id=21486494#:~:text=Maybe%20originally%2C%20but%20lack%20of,not%20use%20foreign%20keys%20either.)

@@ -220,3 +220,5 @@ Here is top 10 common usage of status codes:
 ## Others
 
 https://blog.bytebytego.com/p/soap-vs-rest-vs-graphql-vs-rpc
+
+https://blog.logrocket.com/introduction-to-rpc-using-go-and-node/
