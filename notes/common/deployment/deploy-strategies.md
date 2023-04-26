@@ -54,3 +54,7 @@ A Canary deployment exposes a subset of users to the new version of the applicat
 
 ## A/B
 A/B testing is NOT blue-green deployments. I’ve run into groups that mistake this. A/B testing is a way of testing features in your application for various reasons like usability, popularity, noticeability, etc, and how those factors influence the bottom line
+
+## Others
+
+https://docs.alfresco.com/support/latest/policies/deployment/

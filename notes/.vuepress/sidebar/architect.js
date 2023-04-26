@@ -4,14 +4,19 @@ module.exports = [
     {
         title: 'Communication',
         children: [
-            'restful',
+            '../network/restful',
+            '../network/websocket',
             'messaging',
+            '../tools/kafka',
+            '../tools/kafka-vs-jetstream',
             'OrchestrationVsChoreography',
+            '../network/network',
         ]
     },
     {
         title: 'The Architecture of Systems', 
         children: [
+            'microservices',
             'clean_A',
             'ebi',
             'onion_A',
@@ -21,7 +26,6 @@ module.exports = [
             'hexagonal_A',
             'spa',
             // 'ddd',
-            'microservices',
         ]
     },
     {

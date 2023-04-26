@@ -58,13 +58,18 @@ Thông qua giao thức này Client và Server có thể gửi dữ liệu lên, 
 - **Ưu**: realtime chính hiệu =)) performance nhanh hơn http; hỗ trợ nhiều thứ hay ho rất gì và này nọ
 - **Nhược**: phía server phải nói là phức tạp về phần cài đặt, cấu hình cũng như cần mindset khác với lập trình web thông thường; thực tế thì rất nhiều case dị =))) 
 
-# Nên xài cái nào
+**Lưu ý**:
+Scale ngang của websocket ko hề đơn giản như RESTful API. [Đọc thêm](https://tsh.io/blog/how-to-scale-websocket/)
+
+## Nên xài cái nào
 
 Dựa vào nhiều yếu tốt nhưng mà có vài ý: 
 
 Theo Khánk 
-- Ko nên nghĩ tới `Long polling`, cho mấy anh lớn implement
+- Ko nên nghĩ tới `Long polling`, cho mấy anh lớn implement
 - Nghĩ tới trách nhiệm: khi ta implement xong là có ai support nữa ko, hay mình ôm luôn =))) 
+
+ 
 
  
 

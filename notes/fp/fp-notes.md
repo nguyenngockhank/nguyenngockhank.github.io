@@ -1,5 +1,114 @@
-
 ## Notes
+
+
+**Functional programming (FP), noun.**
+1. a programming paradigm characterized by the use of mathematical functions and the avoidance of side effects
+2. a programming style that uses only pure functions without side effects
+
+**software design, noun.**
+using one’s aesthetic sense to guide programming choices to improve the ease of coding, testing, and maintaining software
+
+
+## A higher order function (HOF) 
+
+is a function that follows at least one of the following conditions
+- Takes on or more functions as argument
+- Returns a function as its result
+
+```ts
+// A higher-order function
+function operateOn(operation, x, y) {
+  return operation(x, y);
+}
+
+// A function that takes two arguments and returns their sum
+function add(x, y) {
+  return x + y;
+}
+
+
+// A function that takes two arguments and returns their product
+function multiply(x, y) {
+  return x * y;
+}
+
+console.log(operateOn(add, 2, 3)); // 5
+console.log(operateOn(multiply, 2, 3)); // 6
+```
+
+### data types
+- Fundamental data types: int, char, float, etc.
+- Derived data types: These data types are derived using built-in data type which are designed by the programmer to store multiple values of same type as per their requirement. For example − Array, Pointer, function, list, etc.
+- User-defined data types: These data types are derived using built-in data types which are wrapped into a single a data type to store multiple values of either same type or different type or both as per the requirement. For example − Class, Structure, etc.
+
+## Immutability
+
+```ts
+let x = [1, 2, 3];
+
+// Modifying x in an impure way
+x.push(4);
+console.log(x); // [1, 2, 3, 4]
+
+// Modifying x in a pure way
+let y = [...x, 4];
+console.log(y); // [1, 2, 3, 4]
+console.log(x); // [1, 2, 3]
+```
+
+## Avoid shared state
+
+```ts
+let counter = 0;
+
+// A function that uses shared state
+function incrementCounter() {
+  counter++;
+  return counter;
+}
+console.log(incrementCounter()); // 1
+console.log(incrementCounter()); // 2
+
+// A function that avoids shared state
+function increment(n) {
+  return n + 1;
+}
+let count = 0;
+console.log(increment(count)); // 1
+count = increment(count);
+console.log(increment(count)); // 2
+```
+
+## Lazy Evaluation
+
+Lazy evaluation is an evaluation strategy which holds the evaluation of an expression until its value is needed. It avoids repeated evaluation.
+
+```ts
+// A generator function that returns an infinite sequence of numbers
+function* naturalNumbers() {
+  let n = 1;
+  while (true) {
+    yield n++;
+  }
+}
+
+const numbers = naturalNumbers();
+console.log(numbers.next().value); // 1
+console.log(numbers.next().value); // 2
+console.log(numbers.next().value); // 3
+```
+
+
+## Stratified design
+
+Stratified design is a design technique that builds software in layers. It is a practice with long historical roots, with many
+contributions from many people. However, special mention goes to Harold Abelson and Gerald Sussman for documenting their insights into the practice
+
+
+https://mostly-adequate.gitbook.io/mostly-adequate-guide/
+https://www.youtube.com/playlist?list=PLuPevXgCPUIMbCxBEnc1dNwboH6e2ImQo
+
+
 
 ::: quote
 *Side effects* are any behavior of a function besides the return value.
@@ -69,9 +178,6 @@ A *first-class value* can be used just like all of the other values in your lang
 *Data orientation* is a style of programming that uses generic data structures to represent facts about events and entities
 :::
 
-::: quote
-*Higher-order functions* take other functions as arguments or return functions as their return values.
-:::
 
 ::: quote
 *Anonymous functions* are functions without names. They can be written inline—right where they are used.
@@ -140,41 +246,3 @@ There’s more than one name for the *watcher* concept. No name is more correct 
 - *Callbacks*
 They’re all correct and represent similar ideas.
 :::
-
-
-**Functional programming (FP), noun.**
-1. a programming paradigm characterized by the use of mathematical functions and the avoidance of side effects
-2. a programming style that uses only pure functions without side effects
-
-**software design, noun.**
-using one’s aesthetic sense to guide programming choices to improve the ease of coding, testing, and maintaining software
-
-
-
-## A higher order function (HOF) 
-is a function that follows at least one of the following conditions
-- Takes on or more functions as argument
-- Returns a function as its result
-
-### data types
-- Fundamental data types: int, char, float, etc.
-- Derived data types: These data types are derived using built-in data type which are designed by the programmer to store multiple values of same type as per their requirement. For example − Array, Pointer, function, list, etc.
-- User-defined data types: These data types are derived using built-in data types which are wrapped into a single a data type to store multiple values of either same type or different type or both as per the requirement. For example − Class, Structure, etc.
-
-## Lazy Evaluation
-
-Lazy evaluation is an evaluation strategy which holds the evaluation of an expression until its value is needed. It avoids repeated evaluation.
-
-
-
-## Stratified design
-
-Stratified design is a design technique that builds software in
-layers. It is a practice with long historical roots, with many
-contributions from many people. However, special mention
-goes to Harold Abelson and Gerald Sussman for documenting their insights into the practice
-
-
-
-https://mostly-adequate.gitbook.io/mostly-adequate-guide/
-https://www.youtube.com/playlist?list=PLuPevXgCPUIMbCxBEnc1dNwboH6e2ImQo

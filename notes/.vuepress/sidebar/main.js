@@ -20,7 +20,7 @@ const commonDocs = [
     children: [
       'architect/authenication',
       'architect/messaging',
-      'architect/restful',
+      'network/restful',
       'db/redis.html#cache-strategies',
     ]
   }
@@ -74,6 +74,7 @@ module.exports = [
       children: [
         'architect',
         'id-generate',
+        'tx-isolation',
         'optimize_db',
         'mysql_snippets',
         'postgre',

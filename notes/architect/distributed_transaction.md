@@ -5,11 +5,13 @@ Kiến trúc Microservices (Microservices architecture - MSA) ngày càng trờ 
 ### Trước hết cần hiểu giao dịch phân tán (distributed transaction) là như thế nào?
 
 Khi xây dựng một kiến trúc microservices nó phân dã kiến trúc của một hệ thống nguyên khối thành các dịch vụ tự đóng gói, ở tầng database nó có thể phá vỡ các giao dịch. Điều này có nghĩa là một giao dịch cục bộ trong hệ thống nguyên khối hiện được phân phối thành nhiều dịch vụ sẽ được gọi theo trình tự.  
+
 Ở đây hiểu hệ thống nguyên khối như kiểu cài cắm môi trường, dựng ứng dụng, dựng chung 1 schema DB trên tất cả một server ý.  
 Cùng xem hình dưới đây, đây là ví dụ đặt hàng của khách hàng với hệ thống nguyên khối (monolithic system) sử dụng giao dịch cục bộ: ![](https://images.viblo.asia/f158dc69-8876-466b-878f-52c99087b498.png)  
+
 Trong ví dụ đặt hàng của khách hàng ở trên, nếu người dùng gửi hành động Đặt hàng (Put Order) tới hệ thống nguyên khối, hệ thống sẽ tạo giao dịch cơ sở dữ liệu cục bộ hoạt động trên nhiều bảng cơ sở dữ liệu. Nếu bất kỳ bước nào thất bại, giao dịch sẽ được rollback. Điều này tuân đảm bảo tính [ACID](https://www.codehub.vn/Tim-Hieu-Ve-Transaction-va-Thuoc-Tinh-ACID-Trong-Co-So-Du-Lieu) (Nguyên tử, Tính nhất quán, Cách ly, Độ bền), được đảm bảo bởi hệ thống cơ sở dữ liệu.  
 
-Khi ta phân tách hệ thống này thành các services là CustomerMicroservice và OrderMicroservice, mỗi service này có cơ sở dữ liệu riêng biệt. Dưới đây là ví dụ đặt hàng của khách hàng với microservices: ![](https://images.viblo.asia/e0b63bee-4795-4ecd-b07f-921e6574b390.png)  
+Khi ta phân tách hệ thống này thành các services là `CustomerMicroservice` và `OrderMicroservice`, mỗi service này có cơ sở dữ liệu riêng biệt. Dưới đây là ví dụ đặt hàng của khách hàng với microservices: ![](https://images.viblo.asia/e0b63bee-4795-4ecd-b07f-921e6574b390.png)  
 Khi yêu cầu Đặt hàng (Put Order) đến từ người dùng, cả hai dịch vụ sẽ được gọi để áp dụng các thay đổi vào cơ sở dữ liệu của từng service. Vì giao dịch trên nhiều cơ sở dữ liệu riêng biệt, đây chính là giao dịch phân tán (**distributed transaction**) mình đang nhắc tới.
 
 ### Có vấn đề gì ở đây nhỉ???
@@ -41,7 +43,8 @@ Tiếp tục nào, ta cùng tìm hiểu 2 mẫu này:
 Trước hết cần hiểu two-phase commit là gì?  
 Như đúng cái tên nói lên tất cả, 2pc có hai giai đoạn: Giai đoạn chuẩn bị (prepare) và giai đoạn cam kết (commit). Trong giai đoạn chuẩn bị, tất cả các dịch vụ nhỏ (services) sẽ được yêu cầu chuẩn bị cho một số xử lý liên quan đến thay đổi dữ liệu có thể được thực hiện nguyên tử. Khi tất cả các dịch vụ được chuẩn bị, giai đoạn cam kết sẽ yêu cầu tất cả các dịch vụ thực hiện các thay đổi thực tế.  
 
-Thông thường, cần phải có một điều phối viên toàn cầu để duy trì vòng đời của giao dịch và điều phối viên sẽ cần gọi các dịch vụ nhỏ trong các giai đoạn chuẩn bị và cam kết. Dưới đây là cách triển khai 2pc cho ví dụ đặt hàng của khách hàng: ![](https://images.viblo.asia/151b2f2e-9670-44af-9eda-6eea6912a883.png)  
+Thông thường, cần phải có một điều phối viên toàn cầu để duy trì vòng đời của giao dịch và điều phối viên sẽ cần gọi các dịch vụ nhỏ trong các giai đoạn chuẩn bị và cam kết. Dưới đây là cách triển khai 2pc cho ví dụ đặt hàng của khách hàng: ![img](https://images.viblo.asia/151b2f2e-9670-44af-9eda-6eea6912a883.png)  
+
 Trong ví dụ trên, khi người dùng gửi yêu cầu tạo orders, điều phối viên (Coordinator) trước tiên sẽ tạo ra một giao dịch toàn cầu với tất cả các thông tin trong bối cảnh cần xử lý. Sau đó, nó sẽ báo cho CustomerMicroservice để chuẩn bị cập nhật quỹ khách hàng với giao dịch đã tạo. CustomerMicroservice sau đó sẽ kiểm tra, ví dụ, nếu khách hàng có đủ tiền để tiến hành giao dịch. Khi đó CustomerMicroservice thấy OK để thực hiện thay đổi, nó sẽ khóa (lock) đối tượng khỏi các thay đổi tiếp theo và thông báo cho điều phối viên rằng nó đã được chuẩn bị.  
 
 Điều tương tự cũng xảy ra trong khi tạo đơn hàng trong OrderMicroservice. Khi điều phối viên đã xác nhận tất cả các dịch vụ đã sẵn sàng áp dụng các thay đổi của chúng, sau đó điều phối viên sẽ yêu cầu các services áp dụng các thay đổi của mình bằng cách yêu cầu cam kết với giao dịch. Tại thời điểm này, tất cả các đối tượng sẽ được mở khóa (unlock).  
@@ -83,6 +86,6 @@ Theo các đánh giá thì mẫu Saga là một cách tốt hơn để giải qu
 
 
 ## Refs 
-(Patterns for distributed transactions)[https://viblo.asia/p/patterns-for-distributed-transactions-within-a-microservices-architecture-bJzKmy2PK9N]
+[Patterns for distributed transactions](https://viblo.asia/p/patterns-for-distributed-transactions-within-a-microservices-architecture-bJzKmy2PK9N)
 
 https://kipalog.com/posts/Mot-so-giai-phap-de-xu-ly-distributed-transaction-trong-he-thong-phan-tan

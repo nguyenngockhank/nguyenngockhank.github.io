@@ -102,6 +102,28 @@ SELECT fields FROM table WHERE field2='something'
 - Cân nhắc lúc nào cần sử dụng Lazy loading, lúc nào cần Eager Loading. Nhất là khi làm việc với Array. 
 - phân trang bằng **Cursor** thay vì **offset** 
 
+### Prisma
+- Biết log [query events](https://www.prisma.io/docs/concepts/components/prisma-client/working-with-prismaclient/logging#event-based-logging) để tìm hiểu vấn đề perf
+
+```js
+prisma.$on('query', (e) => {
+  console.log('Query: ' + e.query)
+  console.log('Params: ' + e.params)
+  console.log('Duration: ' + e.duration + 'ms')
+})
+```
+
+- Mấy chiếc insert/ update sau mặc định sẽ trả về nguyên 1 full tất cả attributes của row => chủ động select để giảm số lượng field result
+
+```js
+prisma.user.create({
+    data: { ...userData },
+    select: {
+        id: true,
+    }
+})
+```
+
 
 ## Job schedule
 Chạy script để thực hiện Job schedule (Crontab)  hoặc Backup database nên thực hiện vào lúc ít người sử dụng sản phẩm nhất.

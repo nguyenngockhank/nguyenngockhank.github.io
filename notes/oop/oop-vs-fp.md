@@ -67,3 +67,23 @@ Classes encapsulate state properties that are then modified by methods, which en
 | Supports both "Abstraction over Data" and "Abstraction over Behavior". | Supports only "Abstraction over Data". | 
 
 [Read more](https://www.tutorialspoint.com/functional_programming/functional_programming_introduction.htm)
+
+
+## g ∘ f patterns (aka From Gof to lambda)
+
+by [Mario Fusco](https://twitter.com/mariofusco)
+
+Pattern                 | Lambda
+----------------------- | --------------
+Command                 | Functions
+Strategy                | Functions
+Template                | Consumer
+Observer                | Consumer
+Decorator               | Functions composition
+Chain of Responsibility | Stream of functions
+Interpreter             | Map of functions
+Visitor                 | Pattern matching + Functions
+
+
+- The video of talk is available [here](https://www.youtube.com/watch?v=lZG74WbnhoE&ab_channel=Devoxx).
+- [Source](https://github.com/thomasbricchi/dp-from-gof-to-lambda)

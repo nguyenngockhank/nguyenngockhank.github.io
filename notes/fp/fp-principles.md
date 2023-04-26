@@ -112,4 +112,3 @@ The ordering and proper timing of actions is difficult. We can make this easier 
 
 
 ### Principle: In an asynchronous context, we use a final callback instead of a return value as our explicit output
-
