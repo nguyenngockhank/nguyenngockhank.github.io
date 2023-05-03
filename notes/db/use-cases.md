@@ -2,6 +2,11 @@
 
 There is no super storage for all cases. Here is a few of my notes about it:
 
+# Database Select process
+![choose-db-process](./img/choose-db.jpeg)
+
+[Original Tweet](https://twitter.com/alexxubyte/status/1653785124474064897/photo/1)
+
 ## Polygot Persistence
 
 ![Polygot Database](./img/polyglot.png)
@@ -69,6 +74,19 @@ Cassandra is a distributed database designed to provide extremely **high levels 
 - Connected Data
 - Routing, Dispatch, and location-based services
 - Recommendation Engines
+    - Collaborative Filtering based Recommendation
+    - Personalized Recommendation
+
+
+RDBMS | GraphDB
+------- | ---------
+Tabular form  | Graph form 
+Stores highly structured data | Maintains semi structured data 
+Depends on key contraints | Relationships are first-class citizends. Constraints can be represents using relationships
+Data is normalized, meaning lots of joins, affecting speed | Better performance (?)
+Expensive with join operations | Eliminates the need for an expensive search / match computation
+
+[Read more](https://www.ucssolutions.com/blog/connecting-the-dots-with-neo4j/)
 
 ## Elasticsearch
 - Indexing & full text search. 

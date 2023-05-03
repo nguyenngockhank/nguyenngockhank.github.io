@@ -28,8 +28,9 @@ const commonDocs = [
 
 const oopDocs = [
   'oop-terms',
-  'ts-designpatterns',
   'oop-vs-fp',
+  'design-patterns',
+  'ts-designpatterns',
 ].map(prefixMapFn('/oop/'));
 
 const laravelDocs = [
