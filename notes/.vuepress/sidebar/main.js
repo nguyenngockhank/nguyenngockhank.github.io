@@ -3,15 +3,19 @@ const prefixMapFn = (prefix) => (item) => {
   return typeof item === "string" ? `${prefix}${item}` : item;
 } 
 
+const cleanCodeDocs = [
+  'clean-code',
+  'code-structure',
+  'refactor',
+  'refactor-catalog',
+].map(prefixMapFn('/common/clean-code/'));
+
 const commonDocs = [
   'optimize_web',
   'cross_domain',
   'seo',
   'realtime',
   'crawl',
-  'refactor',
-  // 'refactor-catalog',
-  'code-structure',
   'document',
   'debugging',
   'deployment/deploy-strategies',
@@ -23,6 +27,10 @@ const commonDocs = [
       'network/restful',
       'db/redis.html#cache-strategies',
     ]
+  },
+  {
+    title: "Clean code",
+    children: cleanCodeDocs,
   }
 ].map(prefixMapFn('/common/'));
 

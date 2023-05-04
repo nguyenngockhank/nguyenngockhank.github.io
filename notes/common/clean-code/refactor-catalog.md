@@ -2,8 +2,6 @@
 
 From **Refactoring - Improving the Design of Existing Code** - *Martin Fowler with contribution by Kent Beck*
 
-[[toc]]
-
 ## A First Set of Refactorings
 
 ### Extract Function 
