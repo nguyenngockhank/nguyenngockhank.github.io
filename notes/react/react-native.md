@@ -235,3 +235,46 @@ https://www.react-native-material.com/docs/components/button
 
 
 https://reactnavigation.org/docs/getting-started/
+
+## Expo 
+
+```
+npm install -g eas-cli
+```
+
+Few errors came when run this
+```
+npx expo run:android --variant release
+```
+
+Config 
+```
+eas update:configure
+```
+
+build android
+```
+ eas build --profile development --platform android
+```
+
+
+Create file `eas.json`
+
+```json
+{
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  }
+}
+```
+
+```
+eas build --profile development --platform android
+```

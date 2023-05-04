@@ -120,6 +120,16 @@ https://afteracademy.com/blog/what-is-data-encapsulation-and-de-encapsulation-in
 - Acknowledgement
 - Re-transmission (timeout & ACK dup)
 
+### Layer 1 vs Layer 2
+
+Layer 1 | Layer 2 
+--------|---------
+cannot organize streams of bit | uses framming to organize or group the bits
+cannot identify computer | uses an addressing process to identify computer
+cannot communicate with the upper-level layers | uses `LLC` to communicate with the upper-level laye
+cannot decide which computer will transmit binary data | uses `MAC` to decide which computer will transmit
+
+
 ### TCP and UDP Application Ports
 In networking, different ports are used for various purposes. Generally, these port ranges can be divided into three categories. Below, you can find these port ranges:
 - Well-Known Ports ( 1 to 1024 )
@@ -153,6 +163,8 @@ In networking, different ports are used for various purposes. Generally, these p
 - 1024 B = 1 KB
 - Bandwith (bps - bit per second)
 - Through put <= Bandwidth ( P (throughput) = S (size of file) / T (time to download) )
+- LLC - Logical Link Control
+- MAC - Media Access Control
 
 ## Refs 
 https://viblo.asia/p/so-sanh-chi-tiet-tcp-va-udp-tai-sao-udp-lai-nhanh-hon-tcp-zOQJw05xLMP

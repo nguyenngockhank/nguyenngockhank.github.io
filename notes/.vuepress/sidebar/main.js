@@ -71,6 +71,13 @@ const toolDocs = [
   '/aws/aws-services',
 ];
 
+const networkDocs = [
+  'network',
+  'address',
+  'obtain-ip',
+  'ethernet',
+].map(prefixMapFn('/network/'));
+
 
 
 module.exports = [
@@ -189,6 +196,10 @@ module.exports = [
         '/terms/12factors',
         '/terms/concurrent',
       ]
+    },
+    {
+      title: "Network",
+      children: networkDocs,
     },
     {
       title: 'API Guidelines',
