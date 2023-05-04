@@ -166,5 +166,10 @@ In networking, different ports are used for various purposes. Generally, these p
 - LLC - Logical Link Control
 - MAC - Media Access Control
 
+## Tools
+- [Decimal to Binary converter](https://www.rapidtables.com/convert/number/decimal-to-binary.html)
+- [Visual Subnet Calculator](https://www.davidc.net/sites/default/subnets/subnets.html)
+- [CIDR](https://cidr.xyz/)
+
 ## Refs 
 https://viblo.asia/p/so-sanh-chi-tiet-tcp-va-udp-tai-sao-udp-lai-nhanh-hon-tcp-zOQJw05xLMP

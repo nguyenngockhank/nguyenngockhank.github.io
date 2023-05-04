@@ -90,8 +90,6 @@ IP               | Subnet mask           | CIDR |  Net ID | Subnet ID | Host ID
 CIDR = Classless Inter-Domain Routing or supernetting
 
 ## Tools
-
-
 - [Decimal to Binary converter](https://www.rapidtables.com/convert/number/decimal-to-binary.html)
 - [Visual Subnet Calculator](https://www.davidc.net/sites/default/subnets/subnets.html)
 - [CIDR](https://cidr.xyz/)

@@ -76,6 +76,9 @@ const networkDocs = [
   'address',
   'obtain-ip',
   'ethernet',
+  'internet-protocol',
+  'devices',
+  'nat',
 ].map(prefixMapFn('/network/'));
 
 
