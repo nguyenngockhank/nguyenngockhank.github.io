@@ -5,6 +5,25 @@
 - leverages IO [multiplexing](https://redis.com/blog/multiplexing-explained/) & single threaded execute loop 
 - leverages several efficient lower-level data structures.
 
+
+## Architecture
+
+![Redis Architecture](./img/Redis-Cluster-Architecture-Diagram-Outline-01.svg)
+
+- **Simple database**, i.e. a single primary shard
+- **HA (highly available) database**, i.e. a pair of primary and replica shards
+- **Clustered database**, which contains multiple primary shards, each managing a subset of the dataset (or in Redis terms, a different range of “hash-slots”)
+- **HA clustered database**, i.e. multiple pairs of primary/replica shards
+
+[Readmore](https://redis.com/redis-enterprise/technology/redis-enterprise-cluster-architecture/)
+
+::: warning Redis Cluster does not guarantee strong consistency
+Redis Cluster does not guarantee strong consistency. In practical terms this means that under certain conditions it is possible that Redis Cluster will lose writes that were acknowledged by the system to the client. 
+
+[Detail](https://redis.io/docs/management/scaling/#redis-cluster-consistency-guarantees)
+:::
+
+
 ## Communication Patterns
 
 ### Use list as event queue
@@ -252,4 +271,4 @@ Replication     | ❌           | Leader - Followers
 
 *Read more*: 
 - [💎 Dealing with concurrency issues when miss cache storm](https://stackoverflow.com/questions/23303463/dealing-with-concurrency-issues-when-caching-for-high-traffic-sites): Use a soft expiration for async update data on cache
- 
+- [Redis Notes - Cluster mode](https://www.stevenchang.tw/blog/2020/12/08/redis-notes-cluster-mode)

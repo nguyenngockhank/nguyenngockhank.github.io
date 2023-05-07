@@ -79,6 +79,7 @@ const networkDocs = [
   'internet-protocol',
   'devices',
   'nat',
+  'network-abbr',
 ].map(prefixMapFn('/network/'));
 
 

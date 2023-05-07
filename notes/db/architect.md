@@ -17,6 +17,9 @@ One major issue of this architecture is **relication lag**. Possible solutions t
 - One partition is leader, other are followers. Producer writes to leader, followers copy data from leader.
 - If leader fails, a follower is elected to become new leader.
 
+*Notes:
+- Another pair name: Primary-Replica / Primary-Secondary
+- E.g: [Redis Sentinel](https://redis.io/docs/management/sentinel/), [mongodb Replica Set](https://www.mongodb.com/docs/manual/core/replica-set-architecture-three-members/)
 
 ## Partitioning
 

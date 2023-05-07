@@ -23,11 +23,11 @@ Choose strategies for applying a cache layer
 
 
 ## Write Strategies
-### Write through
 
+### Write through
 ![Image](./cache-write-through.png)
 - The cache sits in between the application and the database. 
-- Every writes from the application must go through the cache to the database.
+- Every writes from the application must go through the cache to the database. (double write)
 
 ### Write Back (a.k.a Write Behind)
 
@@ -45,7 +45,19 @@ Choose strategies for applying a cache layer
 - The application writes directly to the database. 
 - Only data that is read goes to the cache.
 
+## Invalidate cache
+- At Read side
+    - let the cache item live until its expiration (probably stale data)
+    - use soft expiration (probably stale data)
+- At write side
+    - remove completely cache item from storage if we using **Cache Aside** 
+    - remove soft expiration (probably stale data)
+    - update new value into the cache item (will be problem if data structure of cache item)
+    - emit an event, then cache updator will update itself (CQRS architecture)
+
 ## 🔗 Readmore 
 - [Cache Miss Attack Prevention](../security/software-security.md#cache-miss-attack-prevention)
 - [Cache miss : Escaping the Storm](https://dev.to/uzumakinarut0/cache-miss-escaping-the-storm-1f9j)
 - [Cache Miss Storm](https://www.percona.com/blog/cache-miss-storm/)
+
+https://www.youtube.com/watch?v=jIA7z1gxuc8&ab_channel=HusseinNasser
