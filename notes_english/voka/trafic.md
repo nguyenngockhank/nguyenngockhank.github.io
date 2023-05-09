@@ -2,7 +2,7 @@
 
 ## Phương tiện 
 
-| Từ        |   Nghĩa      |
+| Từ        |   Nghĩa      |
 |:--------- | :---------- |
 | vehicle |  phương tiện |
 | car |  xe hơi |
@@ -28,22 +28,30 @@
 | tram |  xe điện |
 | jet |  máy bay phản lực |
 
+## Đường sá 
+
+| Từ        |   Nghĩa      |
+|:--------- | :---------- |
+| one-way street |  đường một chiều |
+| kerb |  mép vỉa hè |
+| roadside |  lề đường |
+| overpass | cầu vượt |
+| traffic light |  đèn giao thông |
+| traffic jam |  tắc đường |
+| car park |  bãi đỗ xe |
+| T-junction |  ngã ba |
+| crossroads |  ngã tư |
+| roundabout |  bùng binh |
+
 
 ## Khác
 
-| Từ        |   Nghĩa      |
+| Từ        |   Nghĩa      |
 |:--------- | :---------- |
 | road sign |  biển chỉ đường |
-| one-way street |  đường một chiều |
-| overpass | cầu vượt |
-| traffic light |  đèn giao thông |
-| roadside |  lề đường |
 | petrol station |  trạm bơm xăng |
 | pedestrian crossing |  vạch sang đường |
-| T-junction |  ngã ba |
-| roundabout |  bùng binh |
 | accident |  tai nạn |
-| car park |  bãi đỗ xe |
 | driving licence |  bằng lái xe |
 | passenger |  hành khách |
 | flat tyre |  lốp sịt |
@@ -51,11 +59,8 @@
 | speed |  tốc độ |
 | puncture |  thủng xăm |
 | driving test |  thi bằng lái xe |
-| traffic jam |  tắc đường |
-| kerb |  mép vỉa hè |
 | junction |  ngã tư, nơi các con đường giao nhau |
 | driving test |  thi bằng lái xe |
-| crossroads |  ngã tư |
 | corner |  góc phố |
 | breathalyser |  dụng cụ kiểm tra độ cồn trong hơi thở |
 | parking ticket |  vé đỗ xe |

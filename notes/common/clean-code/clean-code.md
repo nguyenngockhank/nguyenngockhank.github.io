@@ -1176,7 +1176,7 @@ Decoupling what from when can dramatically improve both the throughput and struc
 ### Myths and Misconceptions
 
 - Concurrency always improves performance.
-  Concurrency can sometimes improve performance, but only when there is a lot of wait time that can be shared between multiple threads or multiple processors. Neither situ- ation is trivial.
+  Concurrency can sometimes improve performance, but only when there is a lot of wait time that can be shared between multiple threads or multiple processors. Neither situation is trivial.
 - Design does not change when writing concurrent programs.
   In fact, the design of a concurrent algorithm can be remarkably different from the design of a single-threaded system. The decoupling of what from when usually has a huge effect on the structure of the system.
 - Understanding concurrency issues is not important when working with a container such as a Web or EJB container.

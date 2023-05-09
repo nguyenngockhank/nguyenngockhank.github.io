@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "dev-notes": "cd notes && npm run dev",
     "build": "cd notes && npm run build && cd .. && git add docs && git commit -m \"build\"",
     "push": "git push"
   }

@@ -853,8 +853,24 @@ AWS Backup enables you to centralize and automate data protection across AWS ser
 The AWS Storage Gateway is a hybrid storage service that enables your on-premises applications to seamlessly use AWS cloud storage. You can use the service for backup and archiving, disaster recovery, cloud data processing, storage tiering, and migration. Your applications connect to the service through a virtual machine or hardware gateway appliance using standard storage protocols, such as NFS, SMB and iSCSI. The gateway connects to AWS storage services, such as Amazon S3, S3 Glacier, and Amazon EBS, providing storage for files, volumes, and virtual tapes in AWS. The service includes a highly-optimized data transfer mechanism, with bandwidth management, automated network resilience, and efficient data transfer, along with a local cache for low-latency on-premises access to your most active data.
 
 
+## Vokas
+- IAM = Identity and access management
+- AZ = Available Zone
+- VPC = Virtual Private Cloud
+- WAF = Web Applic
+
+https://kungfutech.edu.vn/bai-viet/aws/global-acceleratoration Firewall
+- ACL = Access control list
+- PoP = Points of Presence
+- CDN = Content Delivery Network
+
 ## Resources
 - [AWS Architecture Center](https://aws.amazon.com/architecture/)
 - [AWS White papers](https://aws.amazon.com/whitepapers/)
 - [This Is My Architecture videos](https://aws.amazon.com/architecture/this-is-my-architecture/)
 - [AWSDocumentation](https://aws.amazon.com/documentation-overview/)
+
+
+
+https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90
+

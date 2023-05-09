@@ -1,8 +1,10 @@
 # Không sử dụng `very` nữa
 
+
+## Giao thông
+
 | Should not    | Should       | Meaning   |
 |---------------|--------------|-----------|
-| **`Giao thông`**   | **`Giao thông`**   |  **`Giao thông`**  |
 | very loud     | thunderous   | to vl  |
 | very noisy    | deafening    | ồn vl |
 | very quiet    | hushed / silent | yên tĩnh vl |
@@ -13,7 +15,12 @@
 | very fast     | quick        | nhanh vl  |
 | very quick    | rapid        | nhanh vl lv 2 |
 | very slow        | sluggish     |   |
-| **`Tính cách`**   | **`Tính cách`**    |  **`Tính cách`**    |
+
+
+## Tính cách
+
+| Should not    | Should       | Meaning   |
+|---------------|--------------|-----------|
 | very lazy      | indolent            |   |
 | very nice      | kind    |  tử tế |
 | very rude    | vulgar    |  tục tiểu |
@@ -21,7 +28,11 @@
 | very shy           | timid     | ngần ngại ngùng|
 | very neat     | immaculate |   |
 | very serious | grave / solemn   | trang nghiêm túc |
-| **`Cảm xúc`**  |**`Cảm xúc`**  |**`Cảm xúc`**  |
+
+## Cảm xúc
+
+| Should not    | Should       | Meaning   |
+|---------------|--------------|-----------|
 | very excited      | thrilled     |   |
 | very happy   | jubilant  |   |
 | very glad   | overjoyed  |   |
@@ -37,7 +48,11 @@
 | very thirsty | parched   |   |
 | very hungry  | ravenous  |   |
 | very painful  | excruciating |           |
-| **`Ngoại hình`**  |**`Ngoại hình`**  |**`Ngoại hình`**  |
+
+## Ngoại hình
+
+| Should not    | Should       | Meaning   |
+|---------------|--------------|-----------|
 | very cute   | adorable   |   |
 | very pretty   | beautiful    | Quỷ nhỏ   |
 | very fat       | obese               |   |
@@ -49,11 +64,21 @@
 | very ugly   | hideous    |   |
 | very annoying    | exasperating |   |
 | very pale  | ashen | tái mẹt, nhợt nhạt, xanh xao |
-| **`Kích thước`**  |**`Kích thước`**  |**`Kích thước`**  |
+
+
+## Kích thước
+
+| Should not    | Should       | Meaning   |
+|---------------|--------------|-----------|
 | very litle  | tiny       |   |
 | very roomy     | spacious            |   |
 | very large  | huge       |   |
-| **`Khác`**  |**`Khác`**  |**`Khác`**  |
+
+
+## Khác
+
+| Should not    | Should       | Meaning   |
+|---------------|--------------|-----------|
 | very long-term | enduring            |   |
 | very strong    | unyeilding          |   |
 | very tasty     | delicious           |   |
