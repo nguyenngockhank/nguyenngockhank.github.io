@@ -5,6 +5,7 @@
 - VPC is like a house
 - Subnets are like rooms
 - Internet gateway is like your door
+- Router is like paths 
 
 ## VPC Info
 - Resources to create (VPC Only or More)
