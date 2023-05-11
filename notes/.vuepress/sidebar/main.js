@@ -14,18 +14,26 @@ const commonDocs = [
   'optimize_web',
   'cross_domain',
   'seo',
-  'realtime',
+
   'crawl',
   'document',
   'debugging',
   'deployment/deploy-strategies',
   {
-    title: "Architecture",
+    title: "Realtime",
     children: [
-      'architect/authenication',
+      '/common/realtime',
+      '/network/websocket',
+    ],
+  },
+  {
+    title: "Messaging",
+    children: [
+      // 'architect/authenication',
       'architect/messaging',
-      'network/restful',
-      'db/redis.html#cache-strategies',
+      'db/redis.html#pub-sub',
+      'tools/kafka',
+      'tools/kafka-vs-jetstream',
     ]
   },
   {
@@ -64,11 +72,9 @@ const toolDocs = [
   '/tools/gg_app_script',
   '/tools/puppeteer',
   '/tools/vscode',
-  '/tools/redis',
+  // '/tools/redis',
   '/tools/docker',
   '/tools/k8s/k8s',
-  '/tools/kafka',
-  '/aws/aws-services',
 ];
 
 const networkDocs = [
@@ -83,6 +89,17 @@ const networkDocs = [
 ].map(prefixMapFn('/network/'));
 
 
+const awsDocs = [
+  'cloud',
+  'architecture',
+  'aws-dev-tools',
+  'elb',
+  'arn',
+  'access-keys',
+  'aws-services',
+  'vpc',
+  'misc',
+].map(prefixMapFn('/aws/'));
 
 module.exports = [
     {
@@ -129,7 +146,7 @@ module.exports = [
       children: [
         '/javascript/tricks',
         '/javascript/stories/weird',
-        '/javascript/stories/es6',
+        // '/javascript/stories/es6',
         '/snippets/regex',
         '/javascript/axios_jqueryajax',
         '/javascript/bookmarklet',
@@ -208,6 +225,7 @@ module.exports = [
     {
       title: 'API Guidelines',
       children: [
+        'network/restful',
         `/api-guidelines/overview`,
         {
           title: 'Principles',
@@ -251,5 +269,9 @@ module.exports = [
           ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
         }
       ]
-    }
+    },
+    {
+      title: "AWS",
+      children: awsDocs,
+    },
   ]

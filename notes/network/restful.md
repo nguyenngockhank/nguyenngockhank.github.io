@@ -1,4 +1,4 @@
-# RESTful
+# RESTful Notes
 
 ## RESTful API
 
@@ -191,8 +191,6 @@ All authentication should use SSL. OAuth2 requires authorization server & access
 
 ## References
 
-[RESTful Best Practices](/docs/RESTful-Best-Practices-v1_2.pdf)
-
 
 ### Standard HTTP status codes
 
@@ -217,8 +215,26 @@ Here is top 10 common usage of status codes:
 
 ![img](./img/api-architecture-style-comparison.jpeg)
 
+
+Feature |  REST    | GraphQL 
+--------| ---------| --------
+Client-Server Arch | ✅ | ✅
+Tooling Server | ✅ | ✅
+Tooling Client | ❌ | ✅
+Declarative data fetching | ❌ | ✅
+Stateless | ✅ | ✅
+Cacheable | ✅ | ❌ 
+Format  | JSON, XML, HTML, Plain text | JSON
+Methods | GET, POST, PUT, PATCH, DELETE, OPTIONS | Query & Mutation  & Subscription
+Protocols Used | HTTP | HTTP, Websocket
+Use cases | Public APIs | Mobile APIs, complex, nested data dependencies 
+
+
 ## Others
 
-https://blog.bytebytego.com/p/soap-vs-rest-vs-graphql-vs-rpc
+
+[RESTful Best Practices](/docs/RESTful-Best-Practices-v1_2.pdf)
+[soap-vs-rest-vs-graphql-vs-rpc](https://blog.bytebytego.com/p/soap-vs-rest-vs-graphql-vs-rpc)
+
 
 https://blog.logrocket.com/introduction-to-rpc-using-go-and-node/

@@ -72,7 +72,7 @@ JS Client apps can also 'query' the stream using subject filters
 - JS consumers can automatically re-deliver messages & manage ack at the individual message sequence number level:
     - multiple kinds of ack(s) : ack, nack, term, in process
     - you control the re-delivery attempt backoff timings
-    - can implement Dead Lock Quete (DLQ)  type functionaltiy
+    - can implement Dead Lock Queue (DLQ)  type functionaltiy
 - Kafka consumer groups only support 'Ack All':
     - the client app needs to do it's 'seek' itself for re-deliveries
 

@@ -1,6 +1,4 @@
 # Docker
-[[toc]]
-
 
 ## Terms
 
@@ -42,6 +40,13 @@ docker inspect  <ID or NAME>
 docker rm <ID or NAME>
 
 docker rm -f <ID or NAME>
+```
+
+
+Remove all
+
+```sh
+docker rmi $(docker images) -f
 ```
 :::
 
@@ -111,6 +116,11 @@ Ctrl + P, Ctrl + Q
 ::: tab Remove
 ```sh
 docker rm -f <ID or NAME>
+```
+
+Remove all
+```sh
+docker kill $(docker ps -q)
 ```
 :::
 
@@ -285,3 +295,85 @@ docker image --help
 ```sh
 docker search <keyword>
 ```
+
+
+## Simple build 
+
+:::: tabs
+
+::: tab server.js
+
+```js
+const app = express();
+
+// your code
+const PORT = 8080;
+const HOST = '0.0.0.0';
+app.listen(PORT, HOST);
+```
+:::
+
+::: tab package.json
+```json
+{
+    "scripts": {
+        "start": "node server.js"
+    }
+    // dependencies
+
+    // dev dependencies
+}
+```
+:::
+
+::: tab Dockerfile
+```sh
+FROM node:16
+
+WORKDIR /app
+
+COPY package*.json /app/
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080
+
+CMD ["node", "server. js"]
+```
+:::
+
+::: tab Commands
+
+**Build with tag**
+
+```
+docker build -t yourname/yourapp:v1
+
+docker build -t yourname/yourapp:v2
+```
+
+**Check your new image**
+
+```
+docker images
+```
+
+**Push new image to repo**
+
+```
+docker push yourname/yourapp:v1
+
+docker push yourname/yourapp:v2
+```
+
+**Run your image**
+
+```
+docker run -d -p 8080:8080 yourname/yourapp:v1
+
+docker run -d -p 8080:8081 yourname/yourapp:v2
+```
+:::
+::::

@@ -1,0 +1,107 @@
+# Elastic Load Balancing
+
+## What?
+
+- distribute network traffic to improve app scalability
+- HA & automatic scaling
+- Monitor app health realtime, uncover bottleneck, maintain SLA compliance
+- Integrate  Association for Computing Machinery (ACM), User authentication (Amazon Cognito), SSL/TLS
+
+## Types
+
+Feature | Application LB | Network LB | Gateway LB | Classic LB
+--------|----------------|------------|-------------|-----------
+OSI Layer | 7           | 4 | 3 Gateway + 4 LB | 4 / 7  
+Target type | IP, Instance, Lambda | IP, Instance, ALB |  IP, Instance | 
+Terminates flow/ proxy behavior | ✅ | ✅ | ❌ | ✅
+Protocol listerners | HTTP, HTTPs, gRPC | TCP, UDP, TLS | IP | TCP, SSL/TLS, HTTP, HTTPS
+Reachable via  | VIP  | VIP | Route table entry | 
+
+Application LB Layer 7:
+- Redirects
+- Fixed response
+- Desync Mitigation Mode
+- HTTP header based routing
+- HTTP2/gRPC
+
+## Target group types
+- Amazon EC2 Auto scaling
+- IP Addresses
+- Lambda function (ALB only)
+- Amazon EKS
+- Amazon ECS
+
+
+## Pricing
+- Pay for each running / partial running hour
+- Number of LCU used per hour
+    - ALB: LCU
+    - NLB: NLCU
+    - GLB: GLCU
+- For GLB, pay for GWLBE (AWS PrivateLink)
+- Free Tier:
+    - 12 months, 750 hours shared per month for CLB, ALB
+    - 15GB data for CLB, 15 LCUs for ALB
+
+### LCU
+- Dimensions: Charge at highest elements
+    - New connections per hour
+    - Active connections per hour
+    - Processed bytes per hour
+    - Rule evaluations
+- 1 LCU:
+    - 25 new connections per second
+    - 3,000 active connections per minutes
+    - 1GB data processed for Amazon EC2, containers or IP; 0.4GB data processed for Lambda.
+    - 1,000 rule evaluation per second
+
+### Example
+
+An application receives an average of 500 new connections per seconds, 10,000 active connections per minute. 
+
+Request/response messages has 8KB. 
+
+You configured 20 rules on ALB for validation. 
+
+System is served by 70% EC2 and 30% Lambda. 
+
+As a Solution Architect, what is the pricing estimation for this scenario?
+
+**Analysis:**
+
+- New connections per second (25): 500 => 20 LCU
+- Active connections per minute (3,000): 10,000 => 3.33 LCU
+- Proceed data per hour (1GB EC2, 0.4GB Lambda): 10.08GB for EC2, 4.32GB for Lambda => LCU = 10.08 + 10.8 = 20.88 LCU
+- Rule validation per second (1,000): 20* 500 = 10,000 => LCU = 10
+
+**Pricing (Singapore):**
+- Provision hour: $0.0252
+- LCU = 20.88 * $0.008 = $0.16704
+- Hourly: $0.19224 => Monthly: $138.41
+
+[Detail](https://aws.amazon.com/elasticloadbalancing/pricing/)
+
+## ELB Quotas
+- ELB per Region: 50
+- Target Group per Region: 3,000
+- Listeners per LB: 50
+- Targets per LB: 100
+- Security Group per LB: 5
+- Rules per LB (not counting default rules): 100
+- Certificates per LB (not counting default cer): 25
+- LBs per Target group: 1
+- EC2 / IP per Target group: 1,000
+- Lambda per Target group: 1
+
+[Detail](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-limits.html)
+
+## Notes
+
+- LCU: Load Balancer Capacity Units
+- VIP: Virtual IP Load Balancing
+- ALB: Application Load Balancer
+- NLB: Network Load Balancer
+- GLB: Gateway Load Balancer
+
+## Refs
+https://jayendrapatil.com/tag/elb-vs-alb-vs-nlb/

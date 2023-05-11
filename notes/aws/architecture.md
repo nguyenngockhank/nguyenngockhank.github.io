@@ -17,6 +17,11 @@ A Solutions Architect needs to always consider the following business factors:
 - (**Security**) How secure is this solution?
 - (**Cost**) How much is this going to cost?
 
+
+### Durability vs Availability
+- Durability: likelihood of data loss in the future
+- Availability: probability able to get the object back from the moment you ask for it
+
 ## High Availability
 
 Your ability for your service to **remain available** by ensuring there is **no single point of failure** and/or ensure a certain level of performance
@@ -55,6 +60,10 @@ Your ability to **recover** from a disaster and to prevent **the loss** of data.
 
 ![Scaling_64](./img/Arch_AWS-Elastic-Disaster-Recovery_48.png) **CloudEndure Disaster Recovery** continuously replicates our machines into a low-cost staging area in your target AWS account and preferred Region enabling fast and reliable recovery in case of IT data center failures.
 
+**99.999999999% Durability?**
+- Eleven nine (11 9s)
+- Example: store 10M objects in S3. You can average expect to incur a loss of a SINGLE OBJECT once every 10,000 year.
+
 ## Highly Fault Tolerant
 
 Your ability for your service to ensure there is **no single point of failure**. **Preventing the chance of failure**
@@ -90,3 +99,11 @@ A business continuity plan (BCP) is a document that outlines how a business will
 
 ![Disaster Recovery Options](https://docs.aws.amazon.com/images/whitepapers/latest/disaster-recovery-workloads-on-aws/images/disaster-recovery-strategies.png)
 
+## IOPS vs Throughput
+
+IOPS = Input Output per second  => **expensive**
+Thoughput per volumne: E.g 1000 MiB/s 
+
+E.g: 
+- App for downloading => should choose Thoughput
+- App for read / write much => should choose IOPS

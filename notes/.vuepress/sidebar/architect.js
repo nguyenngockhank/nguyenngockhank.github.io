@@ -1,18 +1,10 @@
 module.exports = [
     '',
     'philosophy-sw-design',
-    {
-        title: 'Communication',
-        children: [
-            '../network/restful',
-            '../network/websocket',
-            'messaging',
-            '../tools/kafka',
-            '../tools/kafka-vs-jetstream',
-            'OrchestrationVsChoreography',
-            '../network/network',
-        ]
-    },
+    'authenication',
+    'authorization',
+    'terms',
+    'OrchestrationVsChoreography',
     {
         title: 'The Architecture of Systems', 
         children: [
@@ -31,10 +23,8 @@ module.exports = [
     {
         title: 'Khác',
         children: [
-            'authenication',
-            'authorization',
             'full_stack_software_design',
-            'terms',
+            '../network/websocket',
             {
                 title: 'Họ làm điều đó như nào?',
                 children: [
