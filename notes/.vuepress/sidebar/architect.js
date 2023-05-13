@@ -24,7 +24,6 @@ module.exports = [
         title: 'Khác',
         children: [
             'full_stack_software_design',
-            '../network/websocket',
             {
                 title: 'Họ làm điều đó như nào?',
                 children: [

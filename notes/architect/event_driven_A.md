@@ -1,4 +1,10 @@
+---
+tags: ["EventDriven"]
+---
+
 # Event-driven architecture 
+
+<TagLinks />
 
 Event-driven architecture (EDA) là mẫu kiến trúc phần mềm (architecture software pattern) trong đó, về cơ bản, hệ thống được xây dựng xung quanh các thao tác như tạo, khám phá, tiêu thụ và đáp trả lại các sự kiện (event). Hiểu đơn giản hơn, EDA là một dạng kiến trúc phần mềm được xây dựng trên luồng các event, sử dụng event như là phương tiện giao tiếp giữa các thành phần hệ thống.
 

@@ -1,4 +1,10 @@
+---
+tags: ["Framework"]
+---
+
 # Laravel Notes
+
+<TagLinks />
 
 ## Split the routes
 

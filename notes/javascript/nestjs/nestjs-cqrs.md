@@ -1,5 +1,11 @@
+---
+tags: ["Comparison", "Framework"]
+---
+
 # NestJS - [CQRS](https://docs.nestjs.com/recipes/cqrs)
 
+
+<TagLinks />
 
 ```
 npm i @nestjs/cqrs

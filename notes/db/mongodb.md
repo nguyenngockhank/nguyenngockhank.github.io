@@ -1,3 +1,7 @@
+---
+tags: ["NoSQL"]
+---
+
 # MongoDB Notes
 
 ## MongoDB vs SQL

@@ -200,3 +200,25 @@ Nói chung túm lại 3 trường sau đây, cần lưu ý, khúc trên cho zui 
 **Access-Control-Allow-Headers** : Như trên. Nói chung ngoài mấy cái sính lễ standard, cái thèng nào là lạ là không được được.
 
 
+
+## Config on Nodejs server
+
+```js
+// Create express server
+const app = express();
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+
+    // authorized headers for preflight requests
+    // https://developer.mozilla.org/en-US/docs/Glossary/preflight_request
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+
+    app.options('*', (req, res) => {
+        // allowed XHR methods  
+        res.header('Access-Control-Allow-Methods', 'GET, PATCH, PUT, POST, DELETE, OPTIONS');
+        res.send();
+    });
+});
+```

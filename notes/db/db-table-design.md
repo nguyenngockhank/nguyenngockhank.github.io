@@ -1,4 +1,10 @@
+---
+tags: ["RDMS", "HLD"]
+---
+
 # Database design 
+
+<TagLinks />
 
 ##  Polymorphic DB Table Design
 

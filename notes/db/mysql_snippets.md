@@ -1,4 +1,10 @@
+---
+tags: ["RDMS"]
+---
+
 # MySql Snippets
+
+<TagLinks />
 
 ## Clone table 
 

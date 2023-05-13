@@ -1,4 +1,10 @@
-# NoSQL
+---
+tags: ["NoSQL", "Comparison"]
+---
+
+# NoSQL Overview
+
+<TagLinks />
 
 ## Definition
 

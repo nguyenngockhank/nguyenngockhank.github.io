@@ -1,10 +1,14 @@
+---
+tags: ["Framework"]
+---
+
 # Giao tiếp trong Vue
 
 Cũng như ngoài thực tế - giao tiếp là 1 kỹ năng mềm rất ư là quan trọng 
 
 Ừm, quan trọng như vậy nên tui có bài viết này
 
-[[toc]]
+<TagLinks />
 
 ## Từ cha xuống con bằng `props` 
 

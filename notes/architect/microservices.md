@@ -1,6 +1,12 @@
+---
+tags: ["DistributedSystem"]
+---
+
 # Microservices
 
 Microservices are small, autonomous services that work together.
+
+<TagLinks />
 
 ## Key principles
 
@@ -216,3 +222,34 @@ Computer speed, memory, and density double every 18 months.
 ::: tip Melvin Conway's Law
 Any organization that designs a system will inevitably produce a design whose structure is a copy of organization's communication structure.
 :::
+
+## Monorepo
+
+::: tip
+Monorepos, short for monolithic repository, refer to a version control strategy in which all projects within an organization are stored in a single repository.
+:::
+
+*📒 Note*: *A monolith could be managed in a monorepo. But a monolith could also be split into multiple repositories. Similarly, a monorepo could be used with microservices instead of a monolith.*
+
+✅ Advantages: 
+- **Improved repository management:** Monorepos allows developers to make changes to multiple projects at once, using advanced tools to detect and test affected areas. This can save time and increase overall stability. E.g upgrade Node version
+- **Better handle relationships between repositories**: Monorepos make it easier to see the relationships between projects and automatically trigger tests for affected areas, improving overall stability and saving time. (shared library, dependencies interfaces, API, RPC, ...)
+- **Easier detection and prevention of code duplication**: using tools like **SonarCube** to analyze the entire repository and refactor duplicate code into shared libraries.
+- **Improved collaboration and domain expertise growth**: Monorepos facilitate better collaboration and understanding of the codebase and business domain, leading to faster problem-solving and a shared understanding of the project.
+
+❌ Disadvantages:
+- **Simplicity**: Setting up and managing multi-repos can be simpler than managing a single monorepo, especially for small projects or projects with a strong separation of concerns.
+- **Better suited for large teams**: In some cases, multi-repos may be better suited for large teams or projects with many distinct sub-projects, as they allow for more flexibility and separation of concerns.
+
+
+### Example Upgrade node version
+Let's say that you have 10 repositories in your company, If you want to upgrade Node.js to the latest LTS version, you have two options:
+- Point all of your repositories to the latest tag and update the latest version in one place. This might lead to unexpected issues, as some projects may not be ready for migration yet.
+- Manually migrate each repository to support the latest version
+
+=> **With a monorepo approach**, You only have to update the version in a single CI configuration and test all of the projects in the monorepo to ensure that everything is working as expected. This can save time and reduce the risk of unexpected issues arising.
+
+
+### [Nx](https://nx.dev/)
+- [Nx and Node Microservices](https://blog.nrwl.io/nx-and-node-microservices-b6df3cd1bad6?gi=4a638c06703e)
+- [monorepo](https://www.devtip.co/monorepo/)

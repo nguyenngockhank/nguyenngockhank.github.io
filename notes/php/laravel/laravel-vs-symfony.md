@@ -1,4 +1,10 @@
+---
+tags: ["Comparison", "Framework"]
+---
+
 # Laravel vs Symfony
+
+<TagLinks />
 
 Criteria | Laravel | Symfony 
 ---------| --------| --------

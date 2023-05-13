@@ -11,9 +11,6 @@ Tất cả các giao tiếp IO đều là async **(non-blocking IO)** như là x
 Tuy nhiên xử lý với file vẫn có những hàm built-in đồng bộ với file như `fs.mkdirSync`, `fs.readdirSync`, `fs.readFileSync`, ... kết thúc với chữ Sync thường dùng trong khởi tạo App. 
 
 ## Packages
-
-- [Sails](https://sailsjs.com/get-started) : API-driven framework for building realtime apps, using MVC conventions (based on Express and Socket.io)
-- [Sequelize](https://sequelize.org/) : Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
 - [inversify](https://www.npmjs.com/package/inversify) : a lightweight inversion of control (IoC) container for TypeScript and JavaScript apps.
 - [dotenv](https://github.com/motdotla/dotenv) :  loads environment variables from a `.env` file into `process.env`.
 - [passport](https://www.npmjs.com/package/passport) : Passport is Express-compatible authentication middleware for Node.js.
@@ -32,3 +29,20 @@ Tuy nhiên xử lý với file vẫn có những hàm built-in đồng bộ vớ
 **Utils:**
 - [flat](https://www.npmjs.com/package/flat) : Take a nested Javascript object and flatten it, or unflatten an object with delimited keys
 - [date-fns](https://date-fns.org/docs/Getting-Started) : like lodash but for Date.
+
+## Keep a node application constantly running
+
+```
+pm2 start server.js --name "app1"
+```
+
+List all nodejs instances 
+
+```
+pm2 list
+```
+
+https://devtut.github.io/nodejs/keep-a-node-application-constantly-running.html#use-pm2-as-a-process-manager
+
+## Others
+[Tutorial](https://devtut.github.io/nodejs/installing-node-js.html#using-node-version-manager-nvm)

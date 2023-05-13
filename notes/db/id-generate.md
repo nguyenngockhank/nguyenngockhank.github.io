@@ -1,3 +1,7 @@
+---
+tags: ["DistributedSystem", "RDMS", "NoSQL"]
+---
+
 # Generate ID
 
 **Requirements**:

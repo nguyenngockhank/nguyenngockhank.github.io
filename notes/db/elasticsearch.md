@@ -1,3 +1,6 @@
+---
+tags: ["NoSQL"]
+---
 
 # Elastic Search
 

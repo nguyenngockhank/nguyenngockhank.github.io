@@ -1,5 +1,10 @@
+---
+tags: ["Performance"]
+---
+
 # Optimize Performance at Backend
 
+<TagLinks />
 
 ## Reducing the time response, cope to load
 - increase the resource
@@ -53,3 +58,5 @@ CAP Theorem: Tradeoff between Availability vs Consistency
 - [goroutines vs worker threads P1](https://medium.com/@Cazineer/go-goroutines-vs-node-cluster-worker-threads-part-1-26933b44f5ee)
 - [goroutines vs worker threads P1](https://medium.com/@Cazineer/go-goroutines-vs-node-cluster-worker-threads-part-2-52611217340a)
 
+## More
+- [Nodejs Performance](https://devtut.github.io/nodejs/node-js-performance.html#increase-maxsockets)

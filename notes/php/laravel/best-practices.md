@@ -1,4 +1,10 @@
-# Best practices
+---
+tags: ["CleanCode"]
+---
+
+# Laravel best practices
+
+<TagLinks />
 
 [laravel-best-practices](https://github.com/alexeymezenin/laravel-best-practices)
 

@@ -1,3 +1,7 @@
+---
+tags: ["NoSQL", "P2P"]
+---
+
 # Apache Cassandra
 
 - Developed by Facebook in 2007. Gifted to Apache 2/2010

@@ -1,4 +1,14 @@
+---
+tags: ["Framework"]
+---
+
 # [NextJs](https://nextjs.org/) overview
+
+https://nextjs.org/docs/getting-started/react-essentials#server-components
+
+https://www.patterns.dev/posts/islands-architecture
+
+<TagLinks />
 
 ## Abbreviation
 - CSR: Client Site Rendering

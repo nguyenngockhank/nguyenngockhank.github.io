@@ -16,3 +16,4 @@ HA   | Highly Available
 DR   | Disaster Recovery
 ASG  | Auto Scaling Groups
 CSP  | Cloud Service Provider
+VPC  | Virtual private cloud

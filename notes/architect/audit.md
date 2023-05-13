@@ -1,8 +1,14 @@
+---
+tags: ["HLD"]
+---
+
 # Logging / Audit notes
 
 ::: tip
 You never know what data you can collect today that will be useful to you tomorrow.
 :::
+
+<TagLinks />
 
 ## Notes 
 - put context into the log

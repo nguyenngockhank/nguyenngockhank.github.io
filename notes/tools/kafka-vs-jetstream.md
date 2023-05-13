@@ -1,3 +1,7 @@
+---
+tags: ["Comparison", "EventDriven"]
+---
+
 # Kafka vs Jetstream
 
 Kafka has connector for Database, publish data change to kafka 

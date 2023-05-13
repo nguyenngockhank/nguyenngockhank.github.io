@@ -1,4 +1,10 @@
+---
+tags: ["DistributedSystem"]
+---
+
 # Messaging
+
+<TagLinks />
 
 - asynchronous communication 
 - one-to-one communication (queuing model) 

@@ -1,4 +1,10 @@
+---
+tags: ["Comparison", "Framework"]
+---
+
 # React vs Vue
+
+<TagLinks />
 
 ## Online tools
 

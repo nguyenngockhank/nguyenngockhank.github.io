@@ -1,3 +1,7 @@
+---
+tags: ["DistributedSystem"]
+---
+
 # Patterns for distributed transactions
 
 Kiến trúc Microservices (Microservices architecture - MSA) ngày càng trờ lên phổ biến. Tuy nhiên có một vấn đề phổ biến là làm thế nào để quản lý các giao dịch phân tán (distributed transaction) trong hệ thống microservices. Mình có đọc được mấy bài hay hay, nay muốn viết lại đôi chút kiến thức về topic này. Mời mọi người cùng đọc bài viết.  

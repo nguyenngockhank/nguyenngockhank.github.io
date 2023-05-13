@@ -1,4 +1,10 @@
+---
+tags: ["Performance", "DistributedSystem", "RDMS"]
+---
+
 # Scalable Database Architectures
+
+<TagLinks />
 
 ## Replication
 

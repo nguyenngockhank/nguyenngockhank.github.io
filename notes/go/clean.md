@@ -1,6 +1,12 @@
+---
+tags: ["CleanCode"]
+---
+
 # Clean Go Code
 
 [Original Post](https://github.com/Pungyeon/clean-go-article/blob/master/README.md)
+
+<TagLinks />
 
 ## Preface: Why Write Clean Code?
 

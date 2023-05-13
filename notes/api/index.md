@@ -1,4 +1,10 @@
-# RESTful Notes
+---
+tags: ["Comparison", "HLD"]
+---
+
+# API Notes
+
+<TagLinks />
 
 ## RESTful API
 
@@ -211,9 +217,9 @@ Here is top 10 common usage of status codes:
 | [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Conflict  | 
 | [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | Internal Server Error  | 
 
-## Comparision
+## REST vs RPC vs GraphQL
 
-![img](./img/api-architecture-style-comparison.jpeg)
+![img](./api-architecture-style-comparison.jpeg)
 
 
 Feature |  REST    | GraphQL 
@@ -230,11 +236,25 @@ Protocols Used | HTTP | HTTP, Websocket
 Use cases | Public APIs | Mobile APIs, complex, nested data dependencies 
 
 
+Read more [soap-vs-rest-vs-graphql-vs-rpc](https://blog.bytebytego.com/p/soap-vs-rest-vs-graphql-vs-rpc)
+
+## API first vs Code First
+
+![API first vs Code First](./codefirst-vs-apifirst.png)
+
+"**API First**" offers several advantages:
+- **Improved system integration**. “API First” encourages developers to carefully consider system interactions from the project’s outset, reducing the need for ongoing modifications during development.
+- **Enhanced collaboration and quality**. APIs serve as a shared specification within the organization, allowing developers, testers, and DevOps to work independently. Agreeing on APIs at the project’s beginning helps eliminate uncertainties and boost software quality. 
+- **Increased scalability**. With defined interfaces for each service, scaling becomes more manageable by spinning up new instances and adjusting load balancer settings.
+
+Read more [Mastering the Art of API Design](https://blog.bytebytego.com/p/api-design)
+
+## API Architectural Styles
+
+![API Architectural Styles](./api-architectures.png)
+
 ## Others
 
-
-[RESTful Best Practices](/docs/RESTful-Best-Practices-v1_2.pdf)
-[soap-vs-rest-vs-graphql-vs-rpc](https://blog.bytebytego.com/p/soap-vs-rest-vs-graphql-vs-rpc)
-
+- [RESTful Best Practices](/docs/RESTful-Best-Practices-v1_2.pdf)
 
 https://blog.logrocket.com/introduction-to-rpc-using-go-and-node/

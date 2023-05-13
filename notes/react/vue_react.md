@@ -1,4 +1,10 @@
+---
+tags: ["Comparison", "Framework"]
+---
+
 # Vue vs. React (Old)
+
+<TagLinks />
 
 ## Similar 
 - virtual DOM

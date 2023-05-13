@@ -23,6 +23,7 @@ const commonDocs = [
     title: "Realtime",
     children: [
       '/common/realtime',
+      '/common/notification/',
       '/network/websocket',
     ],
   },
@@ -225,7 +226,7 @@ module.exports = [
     {
       title: 'API Guidelines',
       children: [
-        'network/restful',
+        '/api/',
         `/api-guidelines/overview`,
         {
           title: 'Principles',

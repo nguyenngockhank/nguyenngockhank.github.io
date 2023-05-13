@@ -1,9 +1,14 @@
+---
+tags: ["CleanCode"]
+---
+
 # Code Refactoring
 
 ::: tip Refactoring
 Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code yet improves its internal structure. It is a disciplined way to clean up code that minimizes the chances of introducing bugs. In essence when you refactor you are **improving the design of the code after it has been written**.
 :::
 
+<TagLinks />
 
 Refactoring có thể thực hiện ở nhiều mức độ
 - Hệ thống 

@@ -1,4 +1,10 @@
+---
+tags: ["CleanCode"]
+---
+
 # Clean Code Notes
+
+<TagLinks />
 
 ## C1 -  Clean Code
 

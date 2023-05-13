@@ -1,9 +1,17 @@
+---
+tags: ["HLD"]
+---
+
+
 # Real time
+
 Con người xã hội ngày càng phát triển và sống càng nhanh đòi hỏi sự phản hồi website là lập tức, tăng tương tác người dùng =)) 
 - Chát không thể đợi lâu được
 - Sàn giao dịch chậm 1 giây là mất cơ hội liền 
 - Game trực tuyến, đánh bài, đánh cờ, các kiểu 
 - ... nói chung là realtime =))) 
+
+<TagLinks />
 
 ## Phương pháp để realtime 
 

@@ -1,4 +1,9 @@
-# oop-vs-fp
+---
+tags: ["Comparison"]
+---
+# OOP vs FP
+
+<TagLinks />
 
 ## Architecture
 

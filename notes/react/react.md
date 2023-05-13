@@ -1,3 +1,7 @@
+---
+tags: ["Framework"]
+---
+
 # React notes
 
 ## Smart vs Pure Components

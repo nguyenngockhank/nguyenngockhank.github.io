@@ -26,3 +26,17 @@ Commands:
 
 ### Element-tabs
 [https://superbiger.github.io/vuepress-plugin-tabs/#install](https://superbiger.github.io/vuepress-plugin-tabs/#install)
+
+## Add tags
+
+https://code.roygreenfeld.com/cookbook/adding-tags-to-vuepress.html
+
+```vue
+---
+tags: ["vuepress", "vuejs"]
+---
+
+# Adding Tags to Vuepress
+
+<TagLinks />
+```

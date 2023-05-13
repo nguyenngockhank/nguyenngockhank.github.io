@@ -1,4 +1,10 @@
+---
+tags: ["Comparison", "DistributedSystem"]
+---
+
 # Orchestration Vs. Choreography
+
+<TagLinks />
 
 ::: tip With Orchestration
 we rely on a central brain to guide & drive the process. like the conductor in an orchestra.

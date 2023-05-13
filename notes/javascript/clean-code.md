@@ -1,6 +1,12 @@
-# Clean Code
+---
+tags: ["CleanCode"]
+---
+
+# JS Clean Code
 
 [Original Resource](https://github.com/ryanmcdermott/clean-code-javascript)
+
+<TagLinks />
 
 ## Introduction
 

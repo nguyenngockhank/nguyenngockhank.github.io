@@ -1,3 +1,7 @@
+---
+tags: ["RDMS"]
+---
+
 # Transaction Isolation Levels
 
 Isolation Level   | Dirty reads | Non-repeatable reads | Phantoms    | Read                             | Write 

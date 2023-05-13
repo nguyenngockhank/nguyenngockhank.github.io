@@ -1,4 +1,10 @@
+---
+tags: ["RDMS"]
+---
+
 # PostgreSql Snippets
+
+<TagLinks />
 
 
 ## Data Type 

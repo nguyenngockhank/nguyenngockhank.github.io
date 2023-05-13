@@ -1,4 +1,10 @@
-# Performance website
+---
+tags: ["Performance"]
+---
+
+# Increase performance website notes
+
+<TagLinks />
 
 Câu hỏi muôn thuở đi phỏng vấn chắc gặp hoài lun :v kkkk nhưng không đơn thuần là đối phó, mà là để ghi nhớ rồi sau này áp dụng hoy 
 

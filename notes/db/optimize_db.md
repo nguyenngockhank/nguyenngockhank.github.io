@@ -1,8 +1,14 @@
+---
+tags: ["Performance"]
+---
+
 # Tối ưu Relational Database (Database Tuning)
 
 ::: tip
 Database tuning describes a group of activities used to optimize and homogenize the performance of a database. 
 :::
+
+<TagLinks />
 
 ## Thứ tự thực thi
 

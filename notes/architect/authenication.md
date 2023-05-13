@@ -1,8 +1,15 @@
+---
+tags: ["HLD"]
+---
+
 # Authentication
 
 ::: tip
 Authentication is the act of proving an assertion, such as the identity of a computer system user.
 :::
+
+<TagLinks />
+
 
 ## Sign in Request 
 

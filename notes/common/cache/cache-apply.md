@@ -1,4 +1,10 @@
+---
+tags: ["Performance"]
+---
+
 # Cache Strategies 
+
+<TagLinks />
 
 Choose strategies for applying a cache layer
 

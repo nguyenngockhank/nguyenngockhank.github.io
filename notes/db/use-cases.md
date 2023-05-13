@@ -1,4 +1,10 @@
+---
+tags: ["NoSQL"]
+---
+
 # Choose a data storage
+
+<TagLinks />
 
 There is no super storage for all cases. Here is a few of my notes about it:
 
@@ -94,3 +100,7 @@ Expensive with join operations | Eliminates the need for an expensive search / m
 - Search & Query. Elasticsearch's basic full-text search and analytics engine can integrate a wide range of queries, including structured, unstructured, geographical, and metric searches. 
 - Metrics Analysis.
 
+
+https://www.guru99.com/nosql-tutorial.html
+
+https://blog.bytebytego.com/p/understanding-database-types
