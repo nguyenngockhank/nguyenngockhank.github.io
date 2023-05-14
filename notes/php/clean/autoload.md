@@ -1,4 +1,8 @@
-# Autoloading
+---
+tags: ["Pattern"]
+---
+
+# PHP Autoloading
 
 ## [PSR-4 Autoloader](https://www.php-fig.org/psr/psr-4/)
 

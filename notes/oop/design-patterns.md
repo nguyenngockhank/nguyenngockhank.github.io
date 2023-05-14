@@ -1,4 +1,10 @@
+---
+tags: ["Pattern", "OOP"]
+---
+
 # Design patterns
+
+<TagLinks />
 
 ## Cheatsheet
 

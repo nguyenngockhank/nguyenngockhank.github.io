@@ -1,6 +1,12 @@
+---
+tags: ["Pattern"]
+---
+
 # Anti-Patterns
 
-https://sourcemaking.com/antipatterns/software-development-antipatterns
+<TagLinks />
+
+[Software Development AntiPatterns](https://sourcemaking.com/antipatterns/software-development-antipatterns)
 
 ## Premature Optimization
 Optimizing before you have enough information to make educated conclusions about where and how to do the optimization.
@@ -9,23 +15,27 @@ It is very difficult to know exactly what will be the bottleneck in practice. At
 
 
 ## Reinventing the Wheel
+// ... 
 
 ## Dependency Hell
+// ... 
 
 ## Spaghetti Code
+// ... 
 
 ## Cargo-Cult Programming
 Cargo Cult Programming is a term used to describe the process of developing software without really understanding the languages, tools, techniques, and frameworks used to develop it. 
 
 
 ## Copy and Paste Programming
-
+// ... 
 
 ## Lava Flow
 
 Lava flow is considered an anti-pattern, a commonly encountered phenomenon leading to poor design.
 
 ## Golden Hammer
+// ... 
 
 ## Dead Code
 
@@ -38,12 +48,13 @@ Have you ever come across a function where no team member knows what it does, bu
 2. One day, one tweak, and it's going to make the system dead
 
 ## Hard Coding / Magic value 
+// ... 
 
 ## Soft Coding
-
+// ... 
 
 ## God Class / The Blob
-
+// ... 
 
 ## Bikeshedding
 
@@ -52,7 +63,6 @@ Tendency to spend excessive amounts of time debating and deciding on trivial and
 ## Analysis Paralysis
 
 Over-analyzing to the point that it prevents action and progress.
-
 
 ## References
 

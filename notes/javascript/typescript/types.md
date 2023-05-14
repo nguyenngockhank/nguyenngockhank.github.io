@@ -1,5 +1,10 @@
+---
+tags: ["Typescript"]
+---
+
 # Types
 
+<TagLinks />
 
 ## Type vs. Interface
 

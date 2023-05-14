@@ -1,8 +1,12 @@
+---
+tags: ["Pattern"]
+---
+
 # Fluent Builder Pattern
 
 ## Long parameter list
 
-Take a look at the function `send_mail()` in file `/application/core/MY_Model.php`
+Take a look at the function 
 
 ```php
 public function send_mail($to, $subject, $message, $toFirstName = null, $toLastName = null, $template = null, $vars = null, $from_name = null, $attachment = array(), $from_email = null, $cc = null, $bcc = null) {

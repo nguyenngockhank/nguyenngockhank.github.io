@@ -1,3 +1,7 @@
+---
+tags: ["OOP", "Pattern"]
+---
+
 # Typescript Design patterns
 
 [KISS](https://en.wikipedia.org/wiki/KISS_principle) first, patterns later, maybe much later

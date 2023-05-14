@@ -1,4 +1,10 @@
+---
+tags: ["FP", "Pattern"]
+---
+
 # Monad 
+
+<TagLinks />
 
 Monads are a design pattern that allows `a user to chain operations` while `the monad manages secret work` behind the scenes.
 
@@ -9,18 +15,12 @@ Monads are a design pattern that allows `a user to chain operations` while `the 
 
 
 
-Monad | Abstracts Away
-------|---------------
-NumberWithLogs / Writer | accumulation of log data
-Option   | possibility of missing values
-Future / Promise | possibility for values to only become available later
-List | branching computation
 
 ## Monad Components: 
 
-1/ `Wrapper Type`
-2/ `Wrap Function` allows entry to monad ecosystem aka `return`, `pure`, `unit`
-3/ `Run Function` runs transformations on monadic values aka `bind`, `flatMap`, `>>=`
+1. `Wrapper Type`
+2. `Wrap Function` allows entry to monad ecosystem aka `return`, `pure`, `unit`
+3. `Run Function` runs transformations on monadic values aka `bind`, `flatMap`, `>>=`
 
 
 ```ts
@@ -62,6 +62,13 @@ function runWithLogs(input: NumberWithLogs, transform: (_: number) => NumberWith
 }
 ```
 
+
+Monad | Abstracts Away
+------|---------------
+NumberWithLogs / Writer | accumulation of log data
+Option   | possibility of missing values
+Future / Promise | possibility for values to only become available later
+List | branching computation
 
 ## Maybe
 

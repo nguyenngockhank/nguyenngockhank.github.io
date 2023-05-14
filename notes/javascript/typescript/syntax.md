@@ -1,5 +1,10 @@
+---
+tags: ["Typescript"]
+---
+
 # Syntax
 
+<TagLinks />
 
 ## Types
 
@@ -84,6 +89,28 @@ The `never` type has the following characteristics:
 - No type is a subtype of or assignable to `never` (except `never` itself).
 - In a function expression or arrow function with no return type annotation, if the function has no `return` statements, or only `return` statements with expressions of type never, and if the end point of the function is not reachable (as determined by control flow analysis), the inferred return type for the function is never.
 - In a function with an explicit `never` return type annotation, all `return` statements (if any) must have expressions of type `never` and the end point of the function must not be reachable.
+
+
+**Use case**: [ Declare a function that throws an Error in TypeScript](https://bobbyhadz.com/blog/typescript-function-that-throws-error)
+
+
+```ts
+function sometimesThrow(): number | never {
+  if (Math.random() > 0.5) {
+    return 100;
+  }
+
+  throw new Error('Something went wrong');
+}
+
+// 👇️ const result: number
+const result = sometimesThrow();
+console.log(result.toFixed());
+```
+
+::: warning
+You can't specify the type of error a function throws
+:::
 
 ### void 
 

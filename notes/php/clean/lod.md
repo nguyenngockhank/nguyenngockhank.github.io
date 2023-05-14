@@ -1,6 +1,6 @@
 # Law of Demeter
 
-Take a look at the class `FileService\BaseService` at path `/application/modules/layout/libraries/FileService/BaseService.php`
+Take a look at the class 
 
 ```php{3}
 abstract class BaseService

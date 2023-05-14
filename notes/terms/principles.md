@@ -1,4 +1,10 @@
+---
+tags: ["Pattern"]
+---
+
 # Principles
+
+<TagLinks />
 
 ## Coding Principles
 
@@ -8,9 +14,9 @@
 | KISS           | Hexagon            |
 | DRY            | Onion              |
 | Naming         | Horizon            |
-| Coding Convention | CQRS - ES       |
+| Coding Convention | [CQRS](../architect/cqrs.md) - ES       |
 | Algorithm      | Abstraction        |
-| Code Quality   | API first approach |
+| Code Quality   | [API first approach](../api/#api-first-vs-code-first) |
 
 
 ### Keep It Simple, Stupid (KISS)

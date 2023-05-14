@@ -1,5 +1,10 @@
+---
+tags: ["FP"]
+---
+
 ## Notes
 
+<TagLinks />
 
 **Functional programming (FP), noun.**
 1. a programming paradigm characterized by the use of mathematical functions and the avoidance of side effects

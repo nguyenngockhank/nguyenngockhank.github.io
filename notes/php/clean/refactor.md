@@ -1,6 +1,10 @@
+---
+tags: ["CleanCode"]
+---
+
 # Refactoring Overview
 
-Take a look at the function `ordinal_suffix()` in file `/application/helpers/application_helper.php`
+Take a look at the function `ordinal_suffix()` 
 
 ```php
 function ordinal_suffix($num)
@@ -23,9 +27,9 @@ Let's see
 - `switch` combine with `ternary operator (?)` make logical complexity 
 
 ## Refactor
-- Rename for function & param & variables
+- Rename for function & param & variables for more descriptive
 - Remove var `$number`
-- Use an associative array a.k.a Map a.k.a Dictionary to replace `switch`
+- Use an associative array a.k.a Map a.k.a Dictionary to remove control flow `switch` 
 - Apply [early-return](./early-return.html) pattern
 
 ```php

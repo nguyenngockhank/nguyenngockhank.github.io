@@ -1,4 +1,10 @@
+---
+tags: [ "Pattern"]
+---
+
 # Dependency Injection
+
+<TagLinks />
 
 ## Dependency Inversion Principle
 ::: tip Dependency Inversion Principle
@@ -39,4 +45,16 @@ All the containers must provide easy support for the following DI lifecycle.
 
 - **Register**: The container must know which dependency to instantiate when it encounters a particular type. This process is called registration. Basically, it must include some way to register type-mapping.
 - **Resolve**: When using the IoC container, we don't need to create objects manually. The container does it for us. This is called resolution. The container must include some methods to resolve the specified type; the container creates an object of the specified type, injects the required dependencies if any and returns the object.
-- **Dispose**: The container must manage the lifetime of the dependent objects. Most IoC containers include different lifetimemanagers to manage an object's lifecycle and dispose it.
+- **Release**: The container must manage the lifetime of the dependent objects. Most IoC containers include different lifetimemanagers to manage an object's lifecycle and dispose it.
+
+See more: [The Register Resolve Release pattern](https://blog.ploeh.dk/2010/09/29/TheRegisterResolveReleasepattern/)
+
+## Frameworks & Libs
+
+Supported by many frameworks 
+- [NestJs Provider](https://docs.nestjs.com/providers)
+- [Laravel Container](https://laravel.com/docs/master/container)
+
+Many libraries like:
+- [php-di](https://php-di.org/)
+- [InversifyJS](https://www.npmjs.com/package/inversify)

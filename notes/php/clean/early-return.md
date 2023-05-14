@@ -1,4 +1,10 @@
+---
+tags: ["Pattern", "CleanCode"]
+---
+
 # "Return Early" Pattern
+
+<TagLinks />
 
 Take a look at the function `track_user_activity()` in file `/application/core/MY_Controller.php`
 
@@ -26,9 +32,13 @@ Ok, let me do a make up on this code
 ```php
 protected function track_user_activity(){
     $user_id = $this->b2be_runtime->getUserID();
-    if(empty($user_id)) return;
+    if(empty($user_id)) {
+        return;
+    }
 
-    if($this->router->fetch_class() != 'internet') return;
+    if($this->router->fetch_class() != 'internet') {
+        return;
+    }
 
     $current_datetime = date('Y-m-d H:i:s');
     // 60+ lines of code here
@@ -37,27 +47,6 @@ protected function track_user_activity(){
 ```
 
 Most of cases you can apply this pattern to keep your code more clean and more readable.
-
-### Consider Using
-
-```php
-function setUserID($userID) {
-    if (!$userID) {
-        return;
-    }
-    $this->userID = $userID;
-}
-```
-
-In this case it doesn't help a lot. Below code is better.
-
-```php
-function setUserID($userID) {
-    if (!$userID) {
-        $this->userID = $userID;
-    }
-}
-```
 
 **Now It's Your Turn!**
 

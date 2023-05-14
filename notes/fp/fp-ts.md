@@ -1,5 +1,11 @@
+---
+tags: ["FP", "Typescript"]
+---
+
 # fp-ts
 
+<TagLinks />
+ 
 https://dev.to/gcanti/getting-started-with-fp-ts-category-4c9a
 
 `Eq`: Equal

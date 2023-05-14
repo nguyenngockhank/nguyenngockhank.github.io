@@ -1,5 +1,5 @@
 ---
-tags: ["Comparison", "Framework"]
+tags: ["Framework", "NestJS"]
 ---
 
 # NestJS - [CQRS](https://docs.nestjs.com/recipes/cqrs)

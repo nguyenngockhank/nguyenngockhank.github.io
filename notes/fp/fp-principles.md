@@ -1,4 +1,12 @@
+---
+tags: ["FP", "Pattern"]
+---
+
+
 # Functional Programming Principles
+
+
+<TagLinks />
 
 https://www.thoughtworks.com/insights/blog/architecture/domain-driven-design-in-functional-programming
 

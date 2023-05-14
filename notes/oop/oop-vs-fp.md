@@ -1,5 +1,5 @@
 ---
-tags: ["Comparison"]
+tags: ["Comparison", "FP", "OOP"]
 ---
 # OOP vs FP
 

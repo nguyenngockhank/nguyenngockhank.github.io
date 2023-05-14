@@ -1,4 +1,10 @@
+---
+tags: ["Pattern"]
+---
+
 # Domain Driven Design Terms
+
+<TagLinks />
 
 ::: tip Domain-Driven Design
 is an approach to software development for complex needs by connecting the implementation to an evolving model:

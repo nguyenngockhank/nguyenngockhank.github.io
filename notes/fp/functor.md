@@ -1,4 +1,10 @@
+---
+tags: ["FP", "Pattern"]
+---
+
 # Functor
+
+<TagLinks />
 
 ::: tip
 In essence, a **functor** is nothing more than a data structure you can **map** functions over with the purpose of **lifting values** from a container, **modifying them**, and then **putting them back** into a container. 
