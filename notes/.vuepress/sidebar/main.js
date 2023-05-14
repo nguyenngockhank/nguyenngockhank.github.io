@@ -136,6 +136,7 @@ module.exports = [
         '/algorithm/authority',
         '/algorithm/sort',
         '/algorithm/bakery', 
+        '/algorithm/upload-large-file',
       ]
     },
     {
