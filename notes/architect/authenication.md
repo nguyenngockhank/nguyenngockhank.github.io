@@ -11,7 +11,7 @@ Authentication is the act of proving an assertion, such as the identity of a com
 <TagLinks />
 
 
-## Sign in Request 
+## Signal in Request 
 
 There is always a sign in HTTP request to be used for Authenication
 
@@ -20,6 +20,7 @@ There is always a sign in HTTP request to be used for Authenication
 - Authorization Header: `Authorization: my_token`
 - Custom Header: `Authorization: my_token`
 - Body: `content=...&token=my_token`
+
 
 ## Basic Authentication
 
@@ -167,14 +168,6 @@ See more:
 - [What is HMAC?](https://www.geeksforgeeks.org/what-is-hmachash-based-message-authentication-code/)
 - [HMAC Definition](https://www.okta.com/identity-101/hmac/)
 
-## Single Sign-On (SSO)
-
-When a principal tries to access a resource, she is directed to authenticate with an **identity provider**. Once identity provider is satisfied that the principal has been authenticated, it gives informatin to the **service provider**, allowing it to decide whether to grant her access to the resource.
-
-- **Identity provider** could be an externally hosted system, or something inside your own organization. 
-    - Goolge, for example, provides an OpenID Connect identity provider.
-    - For enterprises, it's common to have your own identity provider, which may be linked to your company's directory service - It could be s.th like *Lightweight Directory Access Protocol (LDAP)* or *Active Directory*
-
 
 
 ## Open Authentication (OAuth)
@@ -192,3 +185,55 @@ When a principal tries to access a resource, she is directed to authenticate wit
 ![Mô hình OAuth2](@/images/oauth.png)
 
 Tóm tắt [bài viết gốc](https://viblo.asia/p/authentication-story-part-1-authentication-la-lam-gi-63vKj2YMK2R)
+
+## Passwordless Authentication
+
+When it comes to authentication, there are three factors to consider:
+- Knowledge factors: something you know, such as a password
+- Ownership factors: something you own, such as a device or phone number
+- Inherence factors: something unique to you, such as your biometric features
+
+### One-Time Passwords (OTP)
+
+Step 1: The user wants to log in to a website and is asked to enter a username, cell phone number, or email.
+
+Step 2: The server generates an OTP with an expiration time.
+
+Step 3: The server sends the OTP to the user’s device via SMS or email.
+
+Step 4: The user enters the OTP received in the login box.
+
+Step 5-6: The server compares the generated OTP with the one the user entered. If they match, login is granted.
+
+![otp](./img/otp-flow.png)
+
+
+### Single Sign-On (SSO)
+
+When a principal tries to access a resource, she is directed to authenticate with an **identity provider**. Once identity provider is satisfied that the principal has been authenticated, it gives informatin to the **service provider**, allowing it to decide whether to grant her access to the resource.
+
+- **Identity provider** could be an externally hosted system, or something inside your own organization. 
+    - Goolge, for example, provides an OpenID Connect identity provider.
+    - For enterprises, it's common to have your own identity provider, which may be linked to your company's directory service - It could be s.th like *Lightweight Directory Access Protocol (LDAP)* or *Active Directory*
+
+
+The SSO process mainly relies on a **Central Authentication Service (CAS)** server. Here's a step-by-step breakdown of the SSO process:
+
+1. When we attempt to log in to an application, such as Gmail, we're redirected to the **CAS** server.
+2. The **CAS** server verifies our login credentials and creates a **Ticket Granting Ticket (TGT)**. This **TGT** is then stored in a **Ticket Granting Cookie (TGC)** on our browser, **representing our global session.**
+3. CAS generates a **Service Ticket (ST)** for our visit to Gmail and redirects us back to Gmail with the **ST**.
+4. Gmail uses the **ST** to validate our login with the **CAS** server. After validation, we can access Gmail.
+
+When we want to access another application, like YouTube, the process is simplified:
+- Since we already have a **TGC** from our Gmail login, **CAS** recognizes our authenticated status.
+- **CAS** generates a new **ST** for YouTube access, and we can use YouTube without inputting our credentials again.
+
+This process reduces the need to remember and enter multiple sets of credentials for different applications.
+
+![otp](./img/sso-youtube-gg.png)
+
+- SSO: Single Sign-On 
+- CAS: Central Authentication Service 
+- TGT: Ticket Granting Ticket
+- TGC: Ticket Granting Cookie
+- ST: Service Ticket

@@ -8,6 +8,18 @@ tags: ["Performance", "DistributedSystem", "RDMS"]
 
 ## Replication
 
+2 types of replication: 
+- async replication 
+- sync replication
+
+.           | Sync replication | Async replication 
+------------| ------------------|-------------------
+Delay in writes   |    High     |  Low 
+Wait for a laggard node |  Casscading failure | No
+Data loss   |  No  | Maybe 
+Consistency     | Yes   | No
+
+
 ### Replication - Master & Slave
 
 A database architecture divided into a master database and slave databases. The slave database serves as the backup for the master database.
@@ -67,6 +79,10 @@ PARTITIONS 10;
 - Composite partitioning
 - Round-robin partitioning
 - Hash partitioning
+
+
+## Serverless DB
+
 
 
 ## Clustering

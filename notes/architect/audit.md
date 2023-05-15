@@ -10,6 +10,12 @@ You never know what data you can collect today that will be useful to you tomorr
 
 <TagLinks />
 
+## Logging vs Auditing
+
+Logging typically means the recording of implementation level events that happen as the program is running (methods get called, objects are created, etc.). As such it focuses on things that interest programmers
+
+Auditing is about recording domain-level events: a transaction is created, a user is performing an action, etc. In certain types of application (Banking) there is a legal obligation to record such events.
+
 ## Notes 
 - put context into the log
 - Don’t use `debug` level for system monitoring data

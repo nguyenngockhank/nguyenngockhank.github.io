@@ -217,26 +217,13 @@ Here is top 10 common usage of status codes:
 | [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Conflict  | 
 | [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | Internal Server Error  | 
 
-## REST vs RPC vs GraphQL
+## API Architecture Styles
 
 ![img](./api-architecture-style-comparison.jpeg)
 
+See more: [RESTful comparison](./rest-compare.md)
 
-Feature |  REST    | GraphQL 
---------| ---------| --------
-Client-Server Arch | ✅ | ✅
-Tooling Server | ✅ | ✅
-Tooling Client | ❌ | ✅
-Declarative data fetching | ❌ | ✅
-Stateless | ✅ | ✅
-Cacheable | ✅ | ❌ 
-Format  | JSON, XML, HTML, Plain text | JSON
-Methods | GET, POST, PUT, PATCH, DELETE, OPTIONS | Query & Mutation  & Subscription
-Protocols Used | HTTP | HTTP, Websocket
-Use cases | Public APIs | Mobile APIs, complex, nested data dependencies 
-
-
-Read more [soap-vs-rest-vs-graphql-vs-rpc](https://blog.bytebytego.com/p/soap-vs-rest-vs-graphql-vs-rpc)
+![API Architectural Styles](./api-architectures.png)
 
 ## API first vs Code First
 
@@ -249,12 +236,11 @@ Read more [soap-vs-rest-vs-graphql-vs-rpc](https://blog.bytebytego.com/p/soap-vs
 
 Read more [Mastering the Art of API Design](https://blog.bytebytego.com/p/api-design)
 
-## API Architectural Styles
-
-![API Architectural Styles](./api-architectures.png)
 
 ## Others
 
 - [RESTful Best Practices](/docs/RESTful-Best-Practices-v1_2.pdf)
 
 https://blog.logrocket.com/introduction-to-rpc-using-go-and-node/
+
+https://serhatgiydiren.com/distributed-systems-network-communication-remote-procedure-calls/

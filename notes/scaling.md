@@ -9,6 +9,10 @@ https://www.uber.com/en-VN/blog/postgres-to-mysql-migration/
 
 
 ## Discord
+
+
+https://blog.bytebytego.com/i/109085468/how-discord-stores-trillions-of-messages
+
 ###  From Mongodb to Cassandra
 https://www.youtube.com/watch?v=86olupkuLlU&ab_channel=HusseinNasser
 
@@ -39,3 +43,5 @@ https://engineering.grab.com/kafka-connect
 https://engineering.tiki.vn/
 
 https://engineering.tiki.vn/scale-and-whats-next/
+
+

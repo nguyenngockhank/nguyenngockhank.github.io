@@ -296,3 +296,6 @@ function isBrowser() {
     return typeof window !== 'undefined';
 }
 ```
+
+
+https://mobisoftinfotech.com/resources/blog/next-js-framework/

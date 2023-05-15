@@ -14,11 +14,12 @@ const commonDocs = [
   'optimize_web',
   'cross_domain',
   'seo',
-
+  'cache/cache-notes',
   'crawl',
   'document',
   'debugging',
   'deployment/deploy-strategies',
+  'cdn/cdn',
   {
     title: "Realtime",
     children: [

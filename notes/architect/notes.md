@@ -1,6 +1,6 @@
 # Thiết kế phần mềm
 
-[[toc]]
+
 
 ## Phần mềm tốt 
 

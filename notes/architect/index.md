@@ -1,5 +1,68 @@
 # Architecture Overview
 
+## Architecture Characterics
+![Architecture Characterics](./img/arch-characterics.png)
+
+### Creational
+- Availablility
+    - Deployment Stamps
+    - Geodes
+- Scalability
+    - Traffic Pattern
+        - Diurnal Pattern
+        - Thundering Herd
+            - Peak Time
+            - Densely Populated Area
+    - Elasticity
+    - Latency
+- Durability
+    - [Replication](../db/architect.md#replication)
+    - Fault Tolerance
+    - Archivability
+
+### Behavioral
+- Consistency
+    - Data Freshness
+- Observeability
+    - Alerts & Monitoring
+    - L1 / L2 / L3
+    - [Logging](./audit.md)
+- [Security](../common/security/software-security.md)
+    - Auditability
+    - Legality
+        - Compliance
+        - Privacy
+        - Certifications
+    - [Authentication](./authenication.md) & [Authorization](./authorization.md)
+        - MFA
+
+### Structural
+
+- Agility
+    - [Deployability](../common/deployment/deploy-strategies.md)
+        - Installability
+        - Upgradeability
+        - Portability
+    - Configurability
+        - Compatibility
+    - Maintainability
+        - Testability
+        - Ease of Development
+- Extensibility
+    - Modular / Reusability
+    - Pluggability
+- Usability
+    - API Contract
+    - Learnability
+    - Accessibility
+- Resiliency
+    - [Recoverability](../aws/architecture.md#disaster-recovery-options)
+        - Disaster Recovery
+    - Design Patterns
+        - Bulkhead
+        - Circuit Breaker
+        - Leader Election
+
 
 ## Core responsibilities of the evolutionary architect: 
 - **Vision**: ensure there is a clearly comunicated technical vision for the system that will help your system meet the requirements of your customers & organization.

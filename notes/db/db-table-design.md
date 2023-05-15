@@ -6,6 +6,15 @@ tags: ["RDMS", "HLD"]
 
 <TagLinks />
 
+## Database Normalization
+
+Database Normalization is a design step which eliminates redundant data stored in form of large monolithic tables making the overall query execution simpler. 
+
+The main purpose of this normalized data is logical storage of data using relationships between the tables. As originally proposed by **Edgar Codd**, there are six steps involved in the overall process from 1NF to 6NF as described below. Most modern databases follow a standard upto the 4NF step.
+
+![db normalize](https://static.javatpoint.com/dbms/images/dbms-normalization.png)
+
+
 ##  Polymorphic DB Table Design
 
 Look at [Example Person and Organization Example](https://dba.stackexchange.com/questions/179654/developing-a-database-for-a-funds-transfers-business-where-a-people-and-organi)

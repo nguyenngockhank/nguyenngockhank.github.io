@@ -261,7 +261,7 @@ Replication     | ❌           | Leader - Followers
 -[Key eviction](https://redis.io/docs/reference/eviction/)
 
 ##  🔗 Cache applying 
-[Read here](../common/cache/cache-apply.md)
+[Read here](../common/cache/cache-notes.md)
 
 ## Libraries
 
