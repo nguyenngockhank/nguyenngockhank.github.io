@@ -7,6 +7,11 @@ tags: ["RDMS"]
 <TagLinks />
 
 
+## 
+
+
+[Postgres Architecture Explained](https://www.youtube.com/watch?v=Q56kljmIN14)
+
 ## Data Type 
 
 ### Array Type

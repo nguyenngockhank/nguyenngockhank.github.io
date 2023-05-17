@@ -1,6 +1,14 @@
 
 module.exports = [
     {
+        title: "System Design Case Studies", 
+        children: [
+            'case-study/shorten-url',
+            'case-study/payment/',
+            'case-study/youtube/',
+        ],
+    }, 
+    {
         title: 'The Art of Readable Code',
         children: [
             ...Array(15).fill(0).map((v, index) => `artofcode/c${index + 1}`)

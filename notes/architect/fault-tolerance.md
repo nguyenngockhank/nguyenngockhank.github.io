@@ -12,6 +12,17 @@ The **Fault Resilience** is probably the capacity to recover from these type of 
 
 After further reading of Netflix blogs and wikis, it seemed the terms Fault Resilience and Fault Tolerant were used interchangeably.
 
+**Downstream resiliency**
+- Timeout
+- [Retry](#retries): exponential backoff, retry amplification
+- [Circuit breaker](#circuit-breaker)
+
+**Upstream resiliency**
+- Load shedding
+- Load leveling
+- [Rate limiting](#rate-limiter): single process and distributed implementations
+- Constant work
+
 ## Bulkhead vs Rate Limiter
 
 **Bulkhead**
@@ -30,8 +41,10 @@ Ex: Allow 5 calls every 2 second.
 
 The ability of the system to recover from the failure and remain functional makes the system more resilient. It also avoids any cascading failures.
 
+Pros:
 - load shedding
 - fail fast
+
 Code Example
 
 :::: tabs
@@ -121,7 +134,7 @@ How many buckets do we need? This varies, and it depends on the rate-limiting ru
 **Cons**:
 - Two parameters in the algorithm are bucket size and token refill rate. However, it might be challenging to tune them properly.
 
-## Leaking bucket
+### Leaking bucket
 // ... todo
 
 ### Sliding window counter

@@ -90,7 +90,7 @@ From the rough cost estimation, we know serving videos from the CDN costs lots o
 As discussed previously, the interviewer recommended leveraging existing cloud services instead of building everything from scratch. CDN and blob storage are the cloud services we will leverage. Some readers might ask why not building everything by ourselves? Reasons are listed below:
 
 - System design interviews are not about building everything from scratch. Within the limited time frame, choosing the right technology to do a job right is more important than explaining how the technology works in detail. For instance, mentioning blob storage for storing source videos is enough for the interview. Talking about the detailed design for blob storage could be an overkill.
-- Building scalable blob storage or CDN is extremely complex and costly. Even large companies like Netflix or Facebook do not build everything themselves. Netflix leverages Amazon’s cloud services [4], and Facebook uses Akamai’s CDN [5].
+- Building scalable blob storage or CDN is extremely complex and costly. Even large companies like Netflix or Facebook do not build everything themselves. Netflix leverages Amazon’s cloud services, and Facebook uses Akamai’s CDN.
 
 At the high-level, the system comprises three components (Figure 3).
 
@@ -114,17 +114,17 @@ We will explore the high-level design for each of them.
 
 It consists of the following components:
 
-- User: A user watches YouTube on devices such as a computer, mobile phone, or smart TV.
-- Load balancer: A load balancer evenly distributes requests among API servers.
-- API servers: All user requests go through API servers except video streaming.
-- Metadata DB: Video metadata are stored in Metadata DB. It is sharded and replicated to meet performance and high availability requirements.
-- Metadata cache: For better performance, video metadata and user objects are cached.
-- Original storage: A blob storage system is used to store original videos. A quotation in Wikipedia regarding blob storage shows that: “A Binary Large Object (BLOB) is a collection of binary data stored as a single entity in a database management system” [6].
-- Transcoding servers: Video transcoding is also called video encoding. It is the process of converting a video format to other formats (MPEG, HLS, etc), which provide the best video streams possible for different devices and bandwidth capabilities.
-- Transcoded storage: It is a blob storage that stores transcoded video files.
-- CDN: Videos are cached in CDN. When you click the play button, a video is streamed from the CDN.
-- Completion queue: It is a message queue that stores information about video transcoding completion events.
-- Completion handler: This consists of a list of workers that pull event data from the completion queue and update metadata cache and database.
+- **User**: A user watches YouTube on devices such as a computer, mobile phone, or smart TV.
+- **Load balancer**: A load balancer evenly distributes requests among API servers.
+- **API servers**: All user requests go through API servers except video streaming.
+- **Metadata DB**: Video metadata are stored in Metadata DB. It is sharded and replicated to meet performance and high availability requirements.
+- **Metadata cache**: For better performance, video metadata and user objects are cached.
+- **Original storage**: A blob storage system is used to store original videos. A quotation in Wikipedia regarding blob storage shows that: “*A Binary Large Object (BLOB) is a collection of binary data stored as a single entity in a database management system*”.
+- **Transcoding servers**: Video transcoding is also called video encoding. It is the process of converting a video format to other formats (MPEG, HLS, etc), which provide the best video streams possible for different devices and bandwidth capabilities.
+- **Transcoded storage**: It is a blob storage that stores transcoded video files.
+- **CDN**: Videos are cached in CDN. When you click the play button, a video is streamed from the CDN.
+- **Completion queue**: It is a message queue that stores information about video transcoding completion events.
+- **Completion handler**: This consists of a list of workers that pull event data from the completion queue and update metadata cache and database.
 
 Now that we understand each component individually, let us examine how the video uploading flow works. The flow is broken down into two processes running in parallel.
 
@@ -187,24 +187,24 @@ Video transcoding is important for the following reasons:
 
 Many types of encoding formats are available; however, most of them contain two parts:
 
-- Container: This is like a basket that contains the video file, audio, and metadata. You can tell the container format by the file extension, such as .avi, .mov, or .mp4.
-- Codecs: These are compression and decompression algorithms aim to reduce the video size while preserving the video quality. The most used video codecs are H.264, VP9, and HEVC.
+- **Container**: This is like a basket that contains the video file, audio, and metadata. You can tell the container format by the file extension, such as `.avi`, `.mov`, or `.mp4`.
+- **Codecs**: These are compression and decompression algorithms aim to reduce the video size while preserving the video quality. The most used video codecs are `H.264`, `VP9`, and `HEVC`.
 
 ### Directed acyclic graph (DAG) model
 
-Transcoding a video is computationally expensive and time-consuming. Besides, different content creators may have different video processing requirements. For instance, some content creators require watermarks on top of their videos, some provide thumbnail images themselves, and some upload high definition videos, whereas others do not.
+Transcoding a video is computationally expensive and time-consuming. Besides, different content creators may have different video processing requirements. For instance, some content creators require *watermarks* on top of their videos, some provide *thumbnail images themselves*, and some upload high definition videos, whereas others do not.
 
 To support different video processing pipelines and maintain high parallelism, it is important to add some level of abstraction and let client programmers define what tasks to execute. For example, Facebook’s streaming video engine uses a directed acyclic graph (DAG) programming model, which defines tasks in stages so they can be executed sequentially or parallelly. In our design, we adopt a similar DAG model to achieve flexibility and parallelism. Figure 8 represents a DAG for video transcoding.
 
 ![ig](./figure-14-8-6TUJKWRP.svg)
 
 In Figure 8, the original video is split into video, audio, and metadata. Here are some of the tasks that can be applied on a video file:
-- Inspection: Make sure videos have good quality and are not malformed.
-- Video encodings: Videos are converted to support different resolutions, codec, bitrates, etc. Figure 9 shows an example of video encoded files.
-- Thumbnail. Thumbnails can either be uploaded by a user or automatically generated by the system.
-- Watermark: An image overlay on top of your video contains identifying information about your video.
-
+- **Inspection**: Make sure videos have good quality and are not malformed.
+- **Video encodings**: Videos are converted to support different resolutions, codec, bitrates, etc. Figure 9 shows an example of video encoded files.
 ![ig](./figure-14-9-363XWSRP.svg)
+- **Thumbnail**. Thumbnails can either be uploaded by a user or automatically generated by the system.
+- **Watermark**: An image overlay on top of your video contains identifying information about your video.
+
 
 ### Video transcoding architecture
 
@@ -216,20 +216,19 @@ The architecture has six main components: preprocessor, DAG scheduler, resource 
 
 #### Preprocessor
 
-![ig](./figure-14-11-VKQRKCM2.svg)
-
 The preprocessor has 4 responsibilities:
 
-1. Video splitting. Video stream is split or further split into smaller Group of Pictures (GOP) alignment. GOP is a group/chunk of frames arranged in a specific order. Each chunk is an independently playable unit, usually a few seconds in length.
-2. Some old mobile devices or browsers might not support video splitting. Preprocessor split videos by GOP alignment for old clients.
-3. DAG generation. The processor generates DAG based on configuration files client programmers write. Figure 12 is a simplified DAG representation which has 2 nodes and 1 edge:
+1. **Video splitting**. Video stream is split or further split into smaller Group of Pictures (GOP) alignment. GOP is a group/chunk of frames arranged in a specific order. Each chunk is an independently playable unit, usually a few seconds in length.
+2. Some old mobile devices or browsers might not support video splitting. Preprocessor **split videos by GOP alignment** for old clients.
+3. **DAG generation**. The processor generates DAG based on configuration files client programmers write. Figure 12 is a simplified DAG representation which has 2 nodes and 1 edge:
+
 ![ig](./figure-14-12-FKWX3DRN.svg)
+
 This DAG representation is generated from the two configuration files below
 ![ig](./figure-14-13-LRTFEHXK.png)
-4. Cache data. The preprocessor is a cache for segmented videos. For better reliability, the preprocessor stores GOPs and metadata in temporary storage. If video encoding fails, the system could use persisted data for retry operations.
+4. **Cache data**. The preprocessor is a cache for segmented videos. For better reliability, the preprocessor stores GOPs and metadata in temporary storage. If video encoding fails, the system could use persisted data for retry operations.
 
 #### DAG scheduler
-![ig](./figure-14-14-TZNQCING.svg)
 
 The DAG scheduler splits a DAG graph into stages of tasks and puts them in the task queue in the resource manager. Figure 15 shows an example of how the DAG scheduler works.
 
@@ -238,8 +237,6 @@ The DAG scheduler splits a DAG graph into stages of tasks and puts them in the t
 As shown in Figure 15, the original video is split into three stages: Stage 1: video, audio, and metadata. The video file is further split into two tasks in stage 2: video encoding and thumbnail. The audio file requires audio encoding as part of the stage 2 tasks.
 
 #### Resource manager
-
-![ig](./figure-14-16-D65ZJKSR.svg)
 
 The resource manager is responsible for managing the efficiency of resource allocation. It contains 3 queues and a task scheduler as shown in Figure 17.
 
@@ -260,15 +257,11 @@ The resource manager works as follows:
 
 #### Task workers
 
-![ig](./figure-14-18-24OH4P2W.svg)
-
 Task workers run the tasks which are defined in the DAG. Different task workers may run different tasks as shown in Figure 19.
 
 ![ig](./figure-14-19-Y5ZPZAJT.svg)
 
 #### Temporary storage
-
-![ig](./figure-14-20-VAG7ZAYZ.svg)
 
 Multiple storage systems are used here. The choice of storage system depends on factors like data type, data size, access frequency, data life span, etc. For instance, metadata is frequently accessed by workers, and the data size is usually small. Thus, caching metadata in memory is a good idea. For video or audio data, we put them in blob storage. Data in temporary storage is freed up once the corresponding video processing is complete.
 
@@ -351,22 +344,22 @@ All those optimizations are based on content popularity, user access pattern, vi
 ### Error handling
 
 For a large-scale system, system errors are unavoidable. To build a highly fault-tolerant system, we must handle errors gracefully and recover from them fast. Two types of errors exist:
-- Recoverable error. For recoverable errors such as video segment fails to transcode, the general idea is to retry the operation a few times. If the task continues to fail and the system believes it is not recoverable, it returns a proper error code to the client.
-- Non-recoverable error. For non-recoverable errors such as malformed video format, the system stops the running tasks associated with the video and returns the proper error code to the client.
+- **Recoverable error**. For recoverable errors such as video segment fails to transcode, the general idea is to retry the operation a few times. If the task continues to fail and the system believes it is not recoverable, it returns a proper error code to the client.
+- **Non-recoverable error**. For non-recoverable errors such as malformed video format, the system stops the running tasks associated with the video and returns the proper error code to the client.
 
 Typical errors for each system component are covered by the following playbook:
-- Upload error: retry a few times.
-- Split video error: if older versions of clients cannot split videos by GOP alignment, the entire video is passed to the server. The job of splitting videos is done on the server-side.
-- Transcoding error: retry.
-- Preprocessor error: regenerate DAG diagram.
-- DAG scheduler error: reschedule a task.
-- Resource manager queue down: use a replica.
-- Task worker down: retry the task on a new worker.
-- API server down: API servers are stateless so requests will be directed to a different API server.
-- Metadata cache server down: data is replicated multiple times. If one node goes down, you can still access other nodes to fetch data. We can bring up a new cache server to replace the dead one.
-- Metadata DB server down:
-- Master is down. If the master is down, promote one of the slaves to act as the new master.
-- Slave is down. If a slave goes down, you can use another slave for reads and bring up another database server to replace the dead one.
+- **Upload error**: retry a few times.
+- **Split video error**: if older versions of clients cannot split videos by GOP alignment, the entire video is passed to the server. The job of splitting videos is done on the server-side.
+- **Transcoding error**: retry.
+- **Preprocessor error**: regenerate DAG diagram.
+- **DAG scheduler error**: reschedule a task.
+- **Resource manager queue down**: use a replica.
+- **Task worker down**: retry the task on a new worker.
+- **API server down**: API servers are stateless so requests will be directed to a different API server.
+- **Metadata cache server down**: data is replicated multiple times. If one node goes down, you can still access other nodes to fetch data. We can bring up a new cache server to replace the dead one.
+- **Metadata DB server down**:
+    - Master is down. If the master is down, promote one of the slaves to act as the new master.
+    - Slave is down. If a slave Googles down, you can use another slave for reads and bring up another database server to replace the dead one.
 
 ## S4 - Wrap up
 In this chapter, we presented the architecture design for video streaming services like YouTube. If there is extra time at the end of the interview, here are a few additional points:
