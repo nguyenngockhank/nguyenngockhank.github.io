@@ -21,6 +21,31 @@ tags: ["Performance"]
     - Replication log
 - Message broker
 
+## Things to consider when using cache
+
+### Suitable Scenarios:
+- In-memory solution
+- Read heavy system
+- Data is not frequently updated
+
+### Caching Eviction Algorithm:
+- Least Recently Used (LRU)
+- Least Frequently Used (LFU)
+- First-in First-out (FIFO)
+- Random Replacement (RR)
+
+### Key metrics
+- Cache hit ratio
+- Latency
+- Throughput
+- Invalidate rate
+- Memory usage
+- CPU usage
+- Network usage
+
+### Other issue
+- Thunder herd on cold start
+- Time-to-live (TTL)
 
 ## Read Strategies
 

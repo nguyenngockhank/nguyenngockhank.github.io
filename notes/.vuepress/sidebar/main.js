@@ -133,7 +133,6 @@ module.exports = [
         '/algorithm/sum100', 
         '/algorithm/no_if_loop',
         '/algorithm/string',
-        // '/algorithm/rate_limit',
         '/algorithm/authority',
         '/algorithm/sort',
         '/algorithm/bakery', 

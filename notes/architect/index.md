@@ -55,7 +55,7 @@
     - API Contract
     - Learnability
     - Accessibility
-- Resiliency
+- [Resiliency](./fault-tolerance.md)
     - [Recoverability](../aws/architecture.md#disaster-recovery-options)
         - Disaster Recovery
     - Design Patterns
@@ -87,7 +87,6 @@
 ― Michael Feathers
 :::
 ::::
-
 
 - [📓 Functional in the small, OO in the large](https://www.johndcook.com/blog/2009/03/23/functional-in-the-small-oo-in-the-large/)
 - [Functional Core, Imperative Shell – Using Structured Concurrency to Write Maintainable gRPC Endpoints in Kotlin](https://doordash.engineering/2022/07/26/functional-core-imperative-shell-using-structured-concurrency-to-write-maintainable-grpc-endpoints-in-kotlin/)
