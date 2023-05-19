@@ -7,24 +7,19 @@ tags: ["ZCaseStudy"]
 ## S1 - Understand the problem and establish design scope
 System design interview questions are intentionally left open-ended. To design a well-crafted system, it is critical to ask clarification questions.
 
-**Candidate**: Can you give an example of how a URL shortener work?
-
+**Candidate**: Can you give an example of how a URL shortener work?   
 **Interviewer**: Assume URL `https://www.systeminterview.com/q=chatsystem&c=loggedin&v=v3&l=long` is the original URL. Your service creates an alias with shorter length: `https://tinyurl.com/y7keocwj`. If you click the alias, it redirects you to the original URL.
 
-**Candidate**: What is the traffic volume?
-
+**Candidate**: What is the traffic volume?   
 **Interviewer**: 100 million URLs are generated per day.
 
-**Candidate**: How long is the shortened URL?
-
+**Candidate**: How long is the shortened URL?   
 **Interviewer**: As short as possible.
 
-**Candidate**: What characters are allowed in the shortened URL?
-
+**Candidate**: What characters are allowed in the shortened URL?   
 **Interviewer**: Shortened URL can be a combination of numbers (0-9) and characters (a-z, AZ).
 
-**Candidate**: Can shortened URLs be deleted or updated?
-
+**Candidate**: Can shortened URLs be deleted or updated?   
 **Interviewer**: For simplicity, let us assume shortened URLs cannot be deleted or updated. Here are the basic use cases:
 1. URL shortening: given a long URL => return a much shorter URL
 2. URL redirecting: given a shorter URL => redirect to the original URL
@@ -107,7 +102,8 @@ longURL  |
 
 ### Hash model
 
-**Hash value length**
+
+#### Hash value length
 
 The `hashValue` consists of characters from `[0-9, a-z, A-Z]`, containing `10 + 26 + 26 = 62` possible characters
 
@@ -122,7 +118,9 @@ base10  | base62
 
 So, `n = 7`, length of `hashValue` is 7
 
-**Hash + collision resolution**
+#### **Hash + collision resolution**
+
+To shorten a long URL, we should implement a hash function that hashes a long URL to a 7-character string. A straightforward solution is to use well-known hash functions like CRC32, MD5, or SHA-1. The following table compares the hash results after applying different hash functions on [this URL:](https://en.wikipedia.org/wiki/Systems_design).
 
 Hash function | Hash value (Hex) | Length
 -------------- | -------------   |  --------- 
@@ -131,12 +129,39 @@ MD5            | 37693cfc748049e45d87b8c7d8b9aacd | 32
 SHA1           | 23ca86f71e3170af8f47fa24c28323e100543bc3 | 40
 => use CRC32 make sense
 
-**Base 62 conversion**
+Even the shortest hash value (from CRC32) is too long (more than 7 characters). How can we make it shorter?
+
+The first approach is to collect the first 7 characters of a hash value; however, this method can lead to hash collisions. To resolve hash collisions, we can recursively append a new predefined string until no more collision is discovered. This process is explained in Figure below:
+
+![figure](./f5.png)
+
+#### **Base 62 conversion**
 Base conversion is another approach commonly used for URL shorteners. 
 
 Base conversion helps to convert the same number between its different number representation systems. Base62 conversion is used as there are 62 possible characters for `hashValue`. 
 
-**Compare**
+For instance, convert 11157 <sub>10</sub> to base 62 representation => 2TX
+
+-  From its name, base 62 is a way of using 62 characters for encoding. The mappings are:
+0-0, ..., 9-9, 10-a, 11-b, ..., 35-z, 36-A, ..., 61-Z, where ‘a’ stands for 10, ‘Z’ stands for 61,
+etc.
+- 1115710 = 2 x 62<sup>2</sup> + 55 x 62<sup>1</sup> + 59 x 62<sup>0</sup> = `[2, 55, 59] -> [2, T, X]` in base 62
+
+Base 10 | Base62
+--------|------
+0       | 0
+1       | 1
+...     | ...
+9       | 9
+10      | a
+11      | b
+...     | ...
+35      | z
+36      | A
+...     | ...
+61      | Z
+
+#### **Compare**
 Hash + collision resolution | Base 62 conversion
 ---------------------------| ----------------
 fixed short URL length     | the short url length is not fixed. It goes up with the ID
@@ -146,6 +171,8 @@ It is impossible to figure out the next available short URL | It is easy to figu
 
 ### URL shortening deep dive
 
+![image](./f7.png)
+
 1. longURL is the input.
 2. The system **checks if the longURL is in the database.**
 3. If it is, it means the longURL was converted to shortURL before. In this case, fetch the shortURL from the database and return it to the client.
@@ -153,9 +180,23 @@ It is impossible to figure out the next available short URL | It is easy to figu
 5. Convert the ID to shortURL with base 62 conversion.
 6. Create a new database row with the ID, shortURL, and longURL.
 
+To make the flow easier to understand, let us look at a concrete example:
+- Assuming the input longURL is: `https://en.wikipedia.org/wiki/Systems_design`
+- Unique ID generator returns ID: `2009215674938`.
+- Convert the ID to shortURL using the base 62 conversion. ID (2009215674938) is converted to `zn9edcu`.
+- Save ID, shortURL, and longURL to the database as shown in Table
+
+id | shortURL | longURL
+----| ----------| ---------
+2009215674938 | zn9edcu | https://en.wikipedia.org/wiki/Systems_design
+
 The distributed unique ID generator is worth mentioning. Its primary function is to generate **globally unique IDs**, which are used for creating shortURLs. In a highly **distributed environment**, implementing a unique ID generator is challenging.
 
+
 ### URL redirecting deep dive
+
+
+![image](./f8.png)
 
 The flow of URL redirecting is summarized as follows:
 1. A user clicks a short URL link: `https://tinyurl.com/zn9edcu`
