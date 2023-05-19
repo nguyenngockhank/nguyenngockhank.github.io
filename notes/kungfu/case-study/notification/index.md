@@ -253,7 +253,7 @@ The benefits of using notification templates include maintaining a consistent fo
 Users generally receive way too many notifications daily and they can easily feel overwhelmed. Thus, many websites and apps give users fine-grained control over notification settings. This information is stored in the notification setting table, with the following fields:
 
 field   | type   | desc
---------|------- | 
+--------|------- | ----
 user_id | bigint | 
 channel | varchar | push notification, email or SMS
 opt_in   | boolean | opt-in to receive notification
