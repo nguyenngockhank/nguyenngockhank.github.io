@@ -88,7 +88,7 @@ Card schemes are the organizations that process credit card operations. Well kno
 
 The ledger keeps a financial record of the payment transaction. For example, when a user pays the seller $1, we record it as debit $1 from a user and credit $1 to the seller. The ledger system is very important in post-payment analysis, such as calculating the total revenue of the e-commerce website or forecasting future revenue.
 
-Wallet
+#### Wallet
 
 The wallet keeps the account balance of the merchant. It may also record how much a given user has paid in total. 
 
@@ -110,7 +110,7 @@ We use the RESTful API design convention for the payment service.
 
 #### POST /v1/payments
 
-This endpoint executes a payment event. As mentioned above, a single payment event may contain multiple payment orders. The request parameters are listed below:
+This endpoint executes a `payment event`. As mentioned above, a single payment event may contain multiple payment orders. The request parameters are listed below:
 
 Field | Description | Type
 -----|-------------|-------
@@ -209,6 +209,8 @@ The double-entry system states that the sum of all the transaction entries must 
 ### Hosted payment page
 
 Most companies prefer not to store credit card information internally because if they do, they have to deal with complex regulations such as Payment Card Industry Data Security Standard (PCI DSS)  in the United States. To avoid handling credit card information, companies use hosted credit card pages provided by PSPs. For websites, it is a widget or an iframe, while for mobile applications, it may be a pre-built page from the payment SDK. Figure 3 illustrates an example of the checkout experience with PayPal integration. The key point here is that the PSP provides a hosted payment page that captures the customer card information directly, rather than relying on our payment service.
+
+![hosted](./f3.png)
 
 ### Pay-out flow
 
@@ -456,3 +458,9 @@ A payment system is extremely complex. Even though we have covered many topics, 
 Congratulations on getting this far! Now give yourself a pat on the back. Good job!
 
 ## Summary
+
+![summary](./summary.jpeg)
+
+## Refs
+
+https://newsletter.pragmaticengineer.com/p/designing-a-payment-system

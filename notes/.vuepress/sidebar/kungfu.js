@@ -6,6 +6,7 @@ module.exports = [
             'case-study/shorten-url',
             'case-study/payment/',
             'case-study/youtube/',
+            'case-study/web-crawler/',
         ],
     }, 
     {
