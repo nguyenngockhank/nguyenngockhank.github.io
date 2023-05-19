@@ -1,39 +1,35 @@
+---
+tags: ["ZCaseStudy"]
+---
+
 # Design Payment System
 
 ## S1 - Understand the problem and establish design scope
 
 A payment system can mean very different things to different people. Some may think it’s a digital wallet like Apple Pay or Google Pay. Others may think it’s a backend system that handles payments such as PayPal or Stripe. It is very important to determine the exact requirements at the beginning of the interview. These are some questions you can ask the interviewer:
 
-**Candidate**: What kind of payment system are we building?
-
+**Candidate**: What kind of payment system are we building?   
 **Interviewer**: Assume you are building a payment backend for an e-commerce application like Amazon.com. When a customer places an order on Amazon.com, the payment system handles everything related to money movement.
 
-**Candidate**: What payment options are supported? Credit cards, PayPal, bank cards, etc?
-
+**Candidate**: What payment options are supported? Credit cards, PayPal, bank cards, etc?   
 **Interviewer**: The payment system should support all of these options in real life. However, in this interview, we can use credit card payment as an example.
 
-**Candidate**: Do we handle credit card payment processing ourselves?
-
+**Candidate**: Do we handle credit card payment processing ourselves?   
 **Interviewer**: No, we use third-party payment processors, such as Stripe, Braintree, Square, etc. 
 
-**Candidate**: Do we store credit card data in our system?
-
+**Candidate**: Do we store credit card data in our system?   
 **Interviewer**: Due to extremely high security and compliance requirements, we do not store card numbers directly in our system. We rely on third-party payment processors to handle sensitive credit card data.
 
-**Candidate**: Is the application global? Do we need to support different currencies and international payments? 
-
+**Candidate**: Is the application global? Do we need to support different currencies and international payments?    
 **Interviewer**: Great question. Yes, the application would be global but we assume only one currency is used in this interview.
 
-**Candidate**: How many payment transactions per day?
-
+**Candidate**: How many payment transactions per day?   
 **Interviewer**: 1 million transactions per day.
 
-**Candidate**: Do we need to support the pay-out flow, which an e-commerce site like Amazon uses to pay sellers every month?
-
+**Candidate**: Do we need to support the pay-out flow, which an e-commerce site like Amazon uses to pay sellers every month?   
 **Interviewer**: Yes, we need to support that.
 
-**Candidate**: I think I have gathered all the requirements. Is there anything else I should pay attention to?
-
+**Candidate**: I think I have gathered all the requirements. Is there anything else I should pay attention to?   
 **Interviewer**: Yes. A payment system interacts with a lot of internal services (accounting, analytics, etc.) and external services (payment service providers). When a service fails, we may see inconsistent states among services. Therefore, we need to perform reconciliation and fix any inconsistencies. This is also a requirement.
 
 With these questions, we get a clear picture of both the functional and non-functional requirements. In this interview, we focus on designing a payment system that supports the following.

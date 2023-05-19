@@ -3,11 +3,12 @@ module.exports = [
     {
         title: "System Design Case Studies", 
         children: [
-            'case-study/shorten-url',
+            'case-study/url-shorter/',
             'case-study/payment/',
             'case-study/youtube/',
             'case-study/web-crawler/',
             'case-study/chat-system/',
+            'case-study/new-feed/',
         ],
     }, 
     {

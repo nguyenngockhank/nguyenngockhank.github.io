@@ -22,40 +22,31 @@ From these statistics, we know YouTube is enormous, global and makes a lot of mo
 ## S1 - Understand the problem and establish design scope
 As revealed in Figure 1, besides watching a video, you can do a lot more on YouTube. For example, comment, share, or like a video, save a video to playlists, subscribe to a channel, etc. It is impossible to design everything within a 45- or 60-minute interview. Thus, it is important to ask questions to narrow down the scope.
 
-**Candidate**: What features are important?
-
+**Candidate**: What features are important?   
 **Interviewer**: Ability to upload a video and watch a video.
 
-**Candidate**: What clients do we need to support?
-
+**Candidate**: What clients do we need to support?   
 **Interviewer**: Mobile apps, web browsers, and smart TV.
 
-**Candidate**: How many daily active users do we have?
-
+**Candidate**: How many daily active users do we have?   
 **Interviewer**: 5 million
 
-**Candidate**: What is the average daily time spent on the product?
-
+**Candidate**: What is the average daily time spent on the product?   
 **Interviewer**: 30 minutes.
 
-**Candidate**: Do we need to support international users?
-
+**Candidate**: Do we need to support international users?   
 **Interviewer**: Yes, a large percentage of users are international users.
 
-**Candidate**: What are the supported video resolutions?
-
+**Candidate**: What are the supported video resolutions?   
 **Interviewer**: The system accepts most of the video resolutions and formats.
 
-**Candidate**: Is encryption required?
-
+**Candidate**: Is encryption required?   
 **Interviewer**: Yes
 
-**Candidate**: Any file size requirement for videos?
-
+**Candidate**: Any file size requirement for videos?   
 **Interviewer**: Our platform focuses on small and medium-sized videos. The maximum allowed video size is 1GB.
 
-**Candidate**: Can we leverage some of the existing cloud infrastructures provided by Amazon, Google, or Microsoft?
-
+**Candidate**: Can we leverage some of the existing cloud infrastructures provided by Amazon, Google, or Microsoft?   
 **Interviewer**: That is a great question. Building everything from scratch is unrealistic for most companies, it is recommended to leverage some of the existing cloud services.
 
 In the chapter, we focus on designing a video streaming service with the following features:

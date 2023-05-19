@@ -1,4 +1,8 @@
-# Design A Chat System
+---
+tags: ["ZCaseStudy"]
+---
+
+# Design a chat system
 
 A chat app performs different functions for different people. It is extremely important to nail down the exact requirements. For example, you do not want to design a system that focuses on group chat when the interviewer has one-on-one chat in mind. It is important to explore the feature requirements.
 

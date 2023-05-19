@@ -1,3 +1,8 @@
+---
+tags: ["ZCaseStudy"]
+---
+
+
 # Design a Web Crawler
 
 A web crawler is known as a robot or spider. It is widely used by search engines to discover new or updated content on the web. Content can be a web page, an image, a video, a PDF file, etc. A web crawler starts by collecting a few web pages and then follows links on those pages to collect new content. Figure below shows a visual example of the crawl process.
@@ -20,28 +25,22 @@ The basic algorithm of a web crawler is simple:
 
 Does a web crawler work truly as simple as this basic algorithm? Not exactly. Designing a vastly scalable web crawler is an extremely complex task. It is unlikely for anyone to design a massive web crawler within the interview duration. Before jumping into the design, we must ask questions to understand the requirements and establish design scope:
 
-**Candidate**: What is the main purpose of the crawler? Is it used for search engine indexing, data mining, or something else?
-
+**Candidate**: What is the main purpose of the crawler? Is it used for search engine indexing, data mining, or something else?   
 **Interviewer**: Search engine indexing.
 
-**Candidate**: How many web pages does the web crawler collect per month?
-
+**Candidate**: How many web pages does the web crawler collect per month?   
 **Interviewer**: 1 billion pages.
 
-**Candidate**: What content types are included? HTML only or other content types such as PDFs and images as well?
-
+**Candidate**: What content types are included? HTML only or other content types such as PDFs and images as well?   
 **Interviewer**: HTML only.
 
-**Candidate**: Shall we consider newly added or edited web pages?
-
+**Candidate**: Shall we consider newly added or edited web pages?   
 **Interviewer**: Yes, we should consider the newly added or edited web pages.
 
-**Candidate**: Do we need to store HTML pages crawled from the web?
-
+**Candidate**: Do we need to store HTML pages crawled from the web?   
 **Interviewer**: Yes, up to 5 years
 
-**Candidate**: How do we handle web pages with duplicate content? 
-
+**Candidate**: How do we handle web pages with duplicate content?    
 **Interviewer**: Pages with duplicate content should be ignored.
 
 Above are some of the sample questions that you can ask your interviewer. It is important to understand the requirements and clarify ambiguities. Even if you are asked to design a straightforward product like a web crawler, you and your interviewer might not have the same assumptions.
