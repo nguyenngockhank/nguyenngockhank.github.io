@@ -10,6 +10,8 @@ module.exports = [
             'case-study/web-crawler/',
             'case-study/chat-system/',
             'case-study/new-feed/',
+            'case-study/google-drive/',
+            'case-study/search-autocomplete/',
         ],
     }, 
     {
