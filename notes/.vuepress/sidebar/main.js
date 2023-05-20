@@ -100,6 +100,7 @@ const awsDocs = [
   'access-keys',
   'aws-services',
   'vpc',
+  'postgre/',
   'misc',
 ].map(prefixMapFn('/aws/'));
 

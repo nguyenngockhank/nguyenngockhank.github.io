@@ -9,6 +9,7 @@ module.exports = [
             'case-study/youtube/',
             'case-study/web-crawler/',
             'case-study/chat-system/',
+            'case-study/chat-system/part2/',
             'case-study/new-feed/',
             'case-study/google-drive/',
             'case-study/search-autocomplete/',

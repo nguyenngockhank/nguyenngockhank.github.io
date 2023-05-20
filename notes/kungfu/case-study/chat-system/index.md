@@ -2,7 +2,7 @@
 tags: ["ZCaseStudy"]
 ---
 
-# Design a chat system
+# Design a Chat App
 
 A chat app performs different functions for different people. It is extremely important to nail down the exact requirements. For example, you do not want to design a system that focuses on group chat when the interviewer has one-on-one chat in mind. It is important to explore the feature requirements.
 
@@ -327,3 +327,7 @@ If you have extra time at the end of the interview, here are additional talking 
 *   Error handling.
 *   The chat server error. There might be hundreds of thousands, or even more persistent connections to a chat server. If a chat server goes offline, service discovery (Zookeeper) will provide a new chat server for clients to establish new connections with.
 *   Message resent mechanism. Retry and queueing are common techniques for resending messages.
+
+## Refs
+
+https://bytebytego.com/courses/system-design-interview/design-a-chat-system
