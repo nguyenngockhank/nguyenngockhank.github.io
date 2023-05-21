@@ -13,6 +13,8 @@ module.exports = [
             'case-study/new-feed/',
             'case-study/google-drive/',
             'case-study/search-autocomplete/',
+            'case-study/uber/',
+            'case-study/instagram/',
         ],
     }, 
     {
