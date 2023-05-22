@@ -5,7 +5,7 @@ feature in the Facebook app.
 
 If you read the Proximity Service chapter, you may wonder why we need a separate chapter for designing “nearby friends” since it looks similar to proximity services. If you think carefully though, you will find major differences. In proximity services, the addresses for businesses are static as their locations do not change, while in “nearby friends", data is more dynamic because user locations change frequently.
 
-## S1 - Understand the problem and establish design scope
+## Step 1 - Understand the problem and establish design scope
 
 Any backend system at the Facebook scale is complicated. Before starting with the design, we need to ask clarification questions to narrow down the scope.
 
@@ -53,7 +53,7 @@ Let's do a back-of-the-envelope estimation to determine the potential scale and 
 - Users report their locations every 30 seconds
 - Location update QPS = 10 million / 30 = ~334,000
 
-## S2 - Propose High-Level Design and Get Buy-In
+## Step 2 - Propose High-Level Design and Get Buy-In
 
 In this section, we will discuss the following:
 - High-level design

@@ -24,6 +24,9 @@ module.exports = {
   ],
   themeConfig: {
     searchMaxSuggestions: 10,
+    // lastUpdated: 'Last Updated',
+    // nextLinks: true,
+    // prevLinks: true,
     nav: [
       { text: 'Architecture', link: '/architect/'}, 
       { text: 'Home', link: 'https://nguyenngockhank.github.io' },
@@ -101,7 +104,7 @@ module.exports = {
     [
       'vuepress-plugin-right-anchor',
       {
-        showDepth: 1,
+        showDepth: 4,
         ignore: [
           '/',
           // more...

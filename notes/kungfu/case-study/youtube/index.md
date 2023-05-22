@@ -19,7 +19,7 @@ YouTube looks simple: content creators upload videos and viewers click play. Is 
 From these statistics, we know YouTube is enormous, global and makes a lot of money.
 
 
-## S1 - Understand the problem and establish design scope
+## Step 1 - Understand the problem and establish design scope
 As revealed in Figure 1, besides watching a video, you can do a lot more on YouTube. For example, comment, share, or like a video, save a video to playlists, subscribe to a channel, etc. It is impossible to design everything within a 45- or 60-minute interview. Thus, it is important to ask questions to narrow down the scope.
 
 **Candidate**: What features are important?   
@@ -76,7 +76,7 @@ From the rough cost estimation, we know serving videos from the CDN costs lots o
 
 ![img](./figure-14-2-DVJHFDA4.png)
 
-## S2 - Propose high-level design and get buy-in
+## Step 2 - Propose high-level design and get buy-in
 
 As discussed previously, the interviewer recommended leveraging existing cloud services instead of building everything from scratch. CDN and blob storage are the cloud services we will leverage. Some readers might ask why not building everything by ourselves? Reasons are listed below:
 
@@ -161,7 +161,7 @@ Videos are streamed from CDN directly. The edge server closest to you will deliv
 
 ![ig](./figure-14-7-25E4UND4.png)
 
-## S3 - Design deep dive
+## Step 3 - Design deep dive
 
 In the high-level design, the entire system is broken down in two parts: video uploading flow and video streaming flow. In this section, we will refine both flows with important optimizations and introduce error handling mechanisms.
 
@@ -352,7 +352,7 @@ Typical errors for each system component are covered by the following playbook:
     - Master is down. If the master is down, promote one of the slaves to act as the new master.
     - Slave is down. If a slave Googles down, you can use another slave for reads and bring up another database server to replace the dead one.
 
-## S4 - Wrap up
+## Step 4 - Wrap up
 In this chapter, we presented the architecture design for video streaming services like YouTube. If there is extra time at the end of the interview, here are a few additional points:
 - Scale the API tier: Because API servers are stateless, it is easy to scale API tier horizontally.
 - Scale the database: You can talk about database replication and sharding.
