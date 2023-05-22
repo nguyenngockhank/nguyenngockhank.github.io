@@ -13,9 +13,10 @@ module.exports = [
             'case-study/new-feed/',
             'case-study/google-drive/',
             'case-study/search-autocomplete/',
-            'case-study/nearby-friends/',
             'case-study/uber/',
             'case-study/instagram/',
+            'case-study/proximity-service/',
+            'case-study/nearby-friends/',
         ],
     }, 
     {
