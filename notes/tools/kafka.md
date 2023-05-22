@@ -1,4 +1,4 @@
-# Kafka
+# Kafka notes
 
 ## Architecture 
 
