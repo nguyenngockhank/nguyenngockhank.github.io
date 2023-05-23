@@ -63,7 +63,7 @@ The process of translating the points from a 3D globe to a 2D plane is called â€
 
 There are different ways to do map projection, and each comes with its own strengths and limitations. Almost all of them distort the actual geometry. Below we can see some examples.
 
-![img](./f2.png)
+![img](./f2.png)   
 *Figure 2 Map projections*
 
 Google Maps selected a modified version of Mercator projection called Web Mercator. For more details on positioning systems and projections, please refer to.
@@ -90,7 +90,7 @@ each grid into 4 grids and use the same naming strategy. Each sub-grid is now of
 recursively divide the grids until each grid reaches a certain size threshold.
 
 
-![img](./f3.png)
+![img](./f3.png)   
 *Figure 3 Geohashing*
 
 Geohashing has many uses. In our design, we use geohashing for map tiling. For more details on geohashing and its benefits, please refer to.
@@ -103,16 +103,16 @@ There are distinct sets of tiles at different zoom levels. The client chooses th
 
 #### Road data processing for navigation algorithms
 
-Most routing algorithms are variations of Dijkstra's or A* pathfinding algorithms. The exact algorithm choice is a complex topic and we won't go into much detail in this chapter. What is important to note s that all these algorithms operate on a graph data structure, where intersections are nodes and roads are edges of the graph. See Figure 4 for an example:
+Most routing algorithms are variations of Dijkstra's or A* pathfinding algorithms. The exact algorithm choice is a complex topic and we won't go into much detail in this chapter. What is important to note is that all these algorithms operate on a graph data structure, where intersections are nodes and roads are edges of the graph. See Figure 4 for an example:
 
 ![img](./f4.png)
 *Figure 4 Map as a graph*
 
-The pathfinding performance for most of these algorithms is extremely sensitive to the size of the graph. Representing the entire world of road networks as a single graph would consume too much memory and is likely t00 large for any of these algorithms to run efficiently. The graph needs to be broken up into manageable units for these algorithms to work at our design scale.
+The pathfinding performance for most of these algorithms is extremely sensitive to the size of the graph. Representing the entire world of road networks as a single graph would consume too much memory and is likely too large for any of these algorithms to run efficiently. The graph needs to be broken up into manageable units for these algorithms to work at our design scale.
 
 One way to break up road networks around the world is very similar to the tiling concept we discussed for map rendering. By employing a similar subdivision technique as geohashing, we divide the world into small grids. For each grid, we convert the roads within the grid into a small graph data structure that consists of the nodes (intersections) and edges (roads) inside the geographical area covered by the grid. We call these grids routing tiles. Each routing tile holds references to all the other tiles it connects to. This is how the routing algorithms can stitch together a bigger road graph as it traverses these interconnected routing tiles.
 
-By breaking up road networks into routing tiles that can be loaded on demand, the routing algorithms can significantly reduce memory consumption and improve pathfinding performance by only consuming a small subset of the routing tiles at a time, and only loading additional titles as needed.
+By breaking up road networks into routing tiles that can be loaded on demand, the routing algorithms can significantly reduce memory consumption and improve pathfinding performance by only consuming a small subset of the routing tiles at a time, and only loading additional tiles as needed.
 
 ![img](./f5.png)
 *Figure 5 Routing tiles*

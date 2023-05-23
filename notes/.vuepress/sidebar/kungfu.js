@@ -7,6 +7,7 @@ module.exports = [
             'case-study/metrics/',
             'case-study/url-shorter/',
             'case-study/payment/',
+            'case-study/digital-wallet/',
             'case-study/youtube/',
             'case-study/web-crawler/',
             'case-study/chat-system/',
