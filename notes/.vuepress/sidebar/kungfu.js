@@ -4,6 +4,7 @@ module.exports = [
         title: "System Design Case Studies", 
         children: [
             'case-study/notification/',
+            'case-study/metrics/',
             'case-study/url-shorter/',
             'case-study/payment/',
             'case-study/youtube/',
