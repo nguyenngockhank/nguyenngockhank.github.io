@@ -341,7 +341,7 @@ Figure 14 explains the quadtree building process in more detail. The root node r
 ![img](./f14.png)   
 *Figure 14 Build quadtree*
 
-The pseudocode for building quadiree is shown below:
+The pseudocode for building quadtree is shown below:
 
 ```java
 public void buildQuadtree(TreeNode node) {
@@ -389,16 +389,16 @@ Each leaf node contains approximately 100 business IDs. The time complexity to b
 
 **How to get nearby businesses with quadtree?**
 
-1. Build the quadiree in memory.
-2. After the quadiree is built, start searching from the root and traverse the tree, until we find the leaf node where the search origin is. If that leaf node has 100 businesses, return the node. Otherwise, add businesses from its neighbors until enough businesses are retumned.
+1. Build the quadtree in memory.
+2. After the quadtree is built, start searching from the root and traverse the tree, until we find the leaf node where the search origin is. If that leaf node has 100 businesses, return the node. Otherwise, add businesses from its neighbors until enough businesses are retumned.
 
 **Operational considerations for quadtree**
 
 As mentioned above, it may take a few minutes to build a quadtree with 200 million businesses at the server start-up time. It is important to consider the operational implications of such a long server start-up time. While the quadtree is being built, the server cannot serve traffic. Therefore, we should roll out a new release of the server incrementally to a small subset of servers at a time. This avoids taking a large swath of the server cluster offline and causes service brownout. Blue/green deployment can also be used, but an entire cluster of new servers fetching 200 million businesses at the same time from the database service can put a lot of strain on the system. This can be done, but it may complicate the design and you should mention that in the interview.
 
-Another operational consideration is how to update the quadiree as businesses are added and removed over time. The easiest approach would be to incrementally rebuild the quadtree, a small subset of servers at a time, across the entire cluster. But this would mean some servers would return stale data for a short period of time. However, this is generally an acceptable compromise based on the requirements. This can be further mitigated by setting up a business agreement that newly added/updated businesses will only be effective the next day. This means we can update the cache using a nightly job. One potential problem with this approach is that tons of keys will be invalidated at the same time, causing heavy load on cache servers.
+Another operational consideration is how to update the quadtree as businesses are added and removed over time. The easiest approach would be to incrementally rebuild the quadtree, a small subset of servers at a time, across the entire cluster. But this would mean some servers would return stale data for a short period of time. However, this is generally an acceptable compromise based on the requirements. This can be further mitigated by setting up a business agreement that newly added/updated businesses will only be effective the next day. This means we can update the cache using a nightly job. One potential problem with this approach is that tons of keys will be invalidated at the same time, causing heavy load on cache servers.
 
-It's also possible to update the quadiree on the fly as businesses are added and removed. This certainly complicates the design, especially if the quadtree data structure could be accessed by multiple threads. This will require some locking mechanism which could dramatically complicate the quadtree implementation.
+It's also possible to update the quadtree on the fly as businesses are added and removed. This certainly complicates the design, especially if the quadtree data structure could be accessed by multiple threads. This will require some locking mechanism which could dramatically complicate the quadtree implementation.
 
 **Real-world quadtree example**
 
@@ -438,7 +438,7 @@ During an interview, we suggest choosing **geohash or quadtree** because S2 is m
 
 #### Geohash vs quadtree
 
-Before we conclude this section, let’s do a quick comparison between geohash and quadiree. 
+Before we conclude this section, let’s do a quick comparison between geohash and quadtree. 
 
 **Geohash**
 -  Easy to use and implement. No need to build a tree.
@@ -532,11 +532,11 @@ Be mindful when discussing caching with the interviewer, as it will require care
 
 #### Cache key
 
-The most straightforward cache key choice is the location coordinates (iatitude and longitude) of the user. However, this choice has a few issues:
+The most straightforward cache key choice is the location coordinates (latitude and longitude) of the user. However, this choice has a few issues:
 - Location coordinates returned from mobile phones are not accurate as they are just the best estimation. Even if you don't move, the results might be slightly different each time you fetch coordinates on your phone.
 - A user can move from one location to another, causing location coordinates to change slightly. For most applications, this change is not meaningful.
 
-Therefore, location coordinates are not a good cache key. Ideally, small changes in location should still map to the same cache key. The geohash/quadiree solution mentioned earlier handles this problem well because all businesses within a grid map to the same geohash. 
+Therefore, location coordinates are not a good cache key. Ideally, small changes in location should still map to the same cache key. The geohash/quadtree solution mentioned earlier handles this problem well because all businesses within a grid map to the same geohash. 
 
 #### Types of data to cache
 
@@ -570,7 +570,7 @@ public List<String> getNearbyBusinessIds(String geohash) {
 
 When a new business is added, edited, or deleted, the database is updated and the cache invalidated. Since the volume of those operations s relatively small and no locking mechanism is needed for the geohash approach, update operations are easy to deal with.
 
-According to the requirements, a user can choose the following 4 radii on the client: 500m, 1km, 2km, and Skm. Those radii are mapped to geohash lengths of 4, 5, 5, and 6, respectively. To quickly fetch nearby businesses for different radii, we cache data in Redis on all three precisions (geohash_4, geohash_5, and geohash_6).
+According to the requirements, a user can choose the following 4 radii on the client: 500m, 1km, 2km, and 5km. Those radii are mapped to geohash lengths of 4, 5, 5, and 6, respectively. To quickly fetch nearby businesses for different radii, we cache data in Redis on all three precisions (geohash_4, geohash_5, and geohash_6).
 
 As mentioned earlier, we have 200 million businesses and each business belongs to 1 grid in a given precision. Therefore the total memory required is:
 - Storage for Redis values: 8 bytes * 200 million * 3 precisions = ~5 GB
@@ -579,7 +579,7 @@ As mentioned earlier, we have 200 million businesses and each business belongs t
 
 We can get away with one modemn Redis server from the memory usage perspective, but to ensure high availability
 and reduce cross continent latency, we deploy the Redis cluster across the globe. Given the estimated data size, we
-can have the same copy of cache data deployed globally. We call this Redis cache “Geohash™ in our final
+can have the same copy of cache data deployed globally. We call this Redis cache “Geohash" in our final
 architecture diagram (Figure 21).
 
 **Business data needed to render pages on the client**
@@ -614,7 +614,7 @@ Putting everything together, we come up with the following design diagram.
 2. The load balancer forwards the request to the LBS.
 3. Based on the user location and radius info, the LBS finds the geohash length that matches the search. By checking Table 5, 500m map to geohash length = 6.
 4. LBS calculates neighboring geohashes and adds them to the list. The result looks like this: list_of geohashes =
-[my_geohash, neighbor1_gechash, neighbor2_geohash, .., neighborg_gechash]
+[my_geohash, neighbor1_gechash, neighbor2_geohash, .., neighbor9_geohash]
 5. For each geohash in *list_of_geohashes*, LBS calls the “Geohash” Redis server to fetch corresponding business IDs. Calls to fetch business IDs for each geohash can be made in parallel to reduce latency.
 6. Based on the list of business IDs returned, LBS fetches fully hydrated business information from the “Business info" Redis server, then calculates distances between a user and businesses, ranks them, and returns the result to the client.
 

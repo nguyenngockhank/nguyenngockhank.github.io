@@ -10,8 +10,13 @@ module.exports = [
             'case-study/digital-wallet/',
             'case-study/youtube/',
             'case-study/web-crawler/',
-            'case-study/chat-system/',
-            'case-study/chat-system/part2/',
+            {
+                title: "Chat system",
+                children: [
+                    'case-study/chat-system/',
+                    'case-study/chat-system/part2/',
+                ]
+            },
             'case-study/new-feed/',
             'case-study/google-drive/',
             'case-study/search-autocomplete/',
@@ -20,6 +25,7 @@ module.exports = [
             'case-study/google-maps/',
             'case-study/proximity-service/',
             'case-study/nearby-friends/',
+            'case-study/tinder/',
         ],
     }, 
     {
