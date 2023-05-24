@@ -8,8 +8,21 @@ module.exports = [
             'case-study/url-shorter/',
             'case-study/payment/',
             'case-study/digital-wallet/',
-            'case-study/youtube/',
             'case-study/web-crawler/',
+            {
+                title: "Video",
+                children: [
+                    'case-study/youtube/',
+                    'case-study/youtube/part2/',
+                ],
+            },
+            {
+                title: "Typeahead Suggestion",
+                children: [
+                    'case-study/search-autocomplete/',
+                    'case-study/search-autocomplete/part2/',
+                ]
+            },
             {
                 title: "Chat system",
                 children: [
@@ -17,6 +30,7 @@ module.exports = [
                     'case-study/chat-system/part2/',
                     'case-study/chat-system/whatsapp/',
                     'case-study/chat-system/telegram/',
+                    'case-study/chat-system/fb-messenger/',
                 ]
             },
             {
@@ -26,13 +40,19 @@ module.exports = [
                     'case-study/instagram/part2/',
                 ]
             },
+            {
+                title: "Location",
+                children: [
+                    'case-study/proximity-service/',
+                    'case-study/proximity-service/part2/',
+                    'case-study/nearby-friends/',
+                    'case-study/google-maps/',
+                    'case-study/uber/',
+                    'case-study/uber/part2/',
+                ]
+            },
             'case-study/new-feed/',
             'case-study/google-drive/',
-            'case-study/search-autocomplete/',
-            'case-study/uber/',
-            'case-study/google-maps/',
-            'case-study/proximity-service/',
-            'case-study/nearby-friends/',
             'case-study/tinder/',
         ],
     }, 
