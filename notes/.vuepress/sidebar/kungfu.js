@@ -15,6 +15,8 @@ module.exports = [
                 children: [
                     'case-study/chat-system/',
                     'case-study/chat-system/part2/',
+                    'case-study/chat-system/whatsapp/',
+                    'case-study/chat-system/telegram/',
                 ]
             },
             'case-study/new-feed/',

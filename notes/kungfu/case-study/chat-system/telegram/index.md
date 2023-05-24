@@ -1,4 +1,4 @@
-# Telegram System Architecture
+# Telegram System 
 
 Telegram is one of the popular instant messaging applications that provides reliable communication services to millions of users worldwide. It was launched in 2013. It is a cloud-based messaging platform that offers end-to-end encryption for user communication. Telegram’s system architecture is designed to provide high performance, scalability, and reliability. It is a distributed system that consists of multiple components and services, including servers, data centers, and clients. The architecture is based on a client-server model, where clients communicate with servers to send and receive messages and other types of data.
 
@@ -55,7 +55,6 @@ Active users | 2 billion  | 500 million
 - Audio: MP3, AAC, OGG, FLAC
 - **Documents**: PDF, DOCX, PPTX, XLSX
 - **Archives**: ZIP, RAR, TAR
-
 - Allow users to make voice and video calls with other Telegram users
 - Allow users to create custom themes and app design.
 - Allow users to mute notifications for specific chats or groups to avoid being disturbed by frequent messages

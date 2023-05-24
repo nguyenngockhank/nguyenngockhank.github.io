@@ -40,7 +40,7 @@ using technologies such as WebSockets.
 
 ## Component Design
 
-![alt](./f2.png)   
+![alt](./48.png)   
 *Figure 9.2: Sequence Diagram for User Profile Creation*
 
 The sequence diagram above shows the sequence of operations which gets executed
@@ -100,7 +100,7 @@ The indexer determines the geo-shards to be queried based on user location and r
 fetch the list of all the users in those indexes and returns that list to the RecommendationEngine. The engine applies filtering on the list based on user preferences and returns the
 final list of recommendations to the user
 
-![alt](./f4.png)   
+![alt](./50.png)   
 *Figure 9.4: Fetch User recommendations*
 
 
