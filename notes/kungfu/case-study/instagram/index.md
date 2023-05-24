@@ -1,226 +1,307 @@
 # Design Instagram
 
+*Note*: This is our prototype on designing a photo-sharing system such as Instagram for
+users to upload and share media files. We have created this design based on our research
+going through Instagram Engineering tech-talks. These talks are quite informative and
+detailed, and for the same reason, we have taken inspiration from those talks. We have
+provided the list of the tech talks we have referenced here
+
 ## Introduction
 
-I believe Instagram is the app on which most people share their daily stories and record their living memory because it is a free photo & video-sharing and social networking service.
+### Problem statement
+In this chapter we will be designing a photo-sharing platform similar to Instagram where
+users can upload their photos and share it with their followers. Subsequently, the users
+will be able to view personalized feeds containing posts from all the other users that they
+follow.
 
-### Functional Requirements
+### Gathering Requirements
 
-- Users upload the photos or videos
-- Users can view the photos and videos
-- Users can search based on photo titles
-- Users can follow/unfollow other users
-- Users can search users IDs via the search bar
-- Create a Newsfeed for each user he or she follows
-- Can archive your photos album
-- Can share your stories through chat
-- Can block/restrict other users
-- Can like and comment other users post
-- Users can create a post
+**In scope** The application should be able to support the following requirements.
+- Users should be able to upload photos and view the photos they have uploaded.
+- Users should be able to follow other users.
+- Users can view feeds containing posts from the users they follow.
+- Users should be able to like and comment the posts.
 
-### Non-Functional Requirements
+**Out of scope**
+- Sending and receiving messages from other users. We have covered it in our article on designing WhatsApp.
+- Generating machine learning based personalized recommendations to discover new people, photos, videos, and stories relevant one’s interest.
 
-- Highly scalable
-- Highly consistency
-- High availability
-- High reliability
-- User data should be durable (Any uploaded photos should never be lost)
-- The maximum latency for generating the News Feed is 150 ms.
+## Detailed design
 
-### Back of the envelope estimation
+### Architecture
+The high-level design consists of two important functions; one is to upload photos and
+other is to view or search photos. Our service will need storage to store the photos and
+some database servers to store metadata information about the photos
 
-Now, we do some mathematics for **Data Size calculation**
+![img](./28.png)   
+*Figure 6.1: Architecture of photo sharing application*
 
-- Assume the registered users = 500 million
-- 30% of active user = 150 million
-- the number of registered celebrities = 10 K
-- The number of reading requests = 100* the number of uploads (writing) requests
-- At the peak time, set the average traffic = X, we want to handle 6X
+Therefore, when the server receives a request for an action (post, like etc.) from a client
+it performs two parallel operations:
+1. Persisting the action in the data store
+2. Publishes the action in a streaming data store for a pub-sub model.
 
-#### Active Users:
+It is followed by, the various services (such as, User Feed Service, Media Counter Service) read the actions from the streaming data store and performs their specific tasks. The streaming data store makes the system extensible to support other use-cases (e.g. media search index, locations search index, and so forth) in future.
 
-- Post 3 times a week, each post has 1 MB image + text
-- Each post receives at least 10 likes and 2–3 comments
-- Follow 100 users, followed by 50 users
-- Load a news feed refresh 2 times a day
+::: tip FUN FACTS
+In this talk, Rodrigo Schmidt, director of engineering at Instagram talks
+about the different challenges they have faced in scaling the data infrastructure at Instagram
+:::
 
-#### Celebrities
+### System components
 
-- Post 2 times a week, each post has a >500K image + text
-- Each post receives >50 K likes + >1K comments
-- Followed by 5 million users
-- Load the newsfeed 2 times a day
+The system will comprise of several micro-services each performing a separate task. We
+will use a graph database such as Neo4j to store the information. The reason we have
+chosen a graph data-model is that our data will contain complex relationships between
+data entities such as users, posts, and comments as nodes of the graph. After that, we will
+use edges of the graph to store relationships such as follows, likes, comments, and so forth.
+Additionally, we can use columnar databases like Cassandra to store information like user
+feeds, activities, and counters.
 
-#### Query per second (QPS)
+![img](./29.png)   
+*Figure 6.2: High level system components*
 
-**1. Post**
-- Create_post_avg = `(150 Million + 10 K)*2 / (7*24*60*60)) = 496/s`
-- Create_post_peak = `496 / s*6 = 3k/s`
+## Component Design
 
-**2. Like**
-- like_post_avg = `(150 million *10+10K*50K)*(2/(7*24*60*60)) = 6.6 k/s`
-- like_post_peak = 6.6 k/s*6 = 40 k/s
-
-**3. Comment**
-- comment_post_avg = `(150 million82 +10K*1K) = 1k/s`
-- Comment_post_peak = 1k/s *6 = 6k/s
-
-**4. Follow Feed**
-- get_follow_feed_avg = `(150 million +10K)*(2/(24*60*60))= 3.5k/s`
-- get_follow_feed_peak = `3.5k/s * 6 =21.8 k/s`
-
-**5. Data Size**
-- user_id in `64base([‘a-z’,‘A-Z’,‘0–9’,‘-’,‘_’])`, we need 5 bits ~ 1Byte
-- 500 Million + 10K *5 bits ~1 Byte = 1G user
-
-#### Capacity Estimation
-
-- The daily active users to upload= 1 million
-- Daily uploaded photos = 5 million
-- Uploaded photos per seconds in a day = 57 photos
-- The average photos size = 150 KB
-- The storage usage in a day = `5 million * 150KB = 716GB`
-- The service keep those data for 10 years, the storage needed, `716 GB *365 * 10 years = 2553 TB ≈ 2.6 PB`
-- The daily active users to view = 10 million
-- The hourly news feed produce is 10 million, which is 2800 RPS (requests per second)
-- If we have 1 search a day then, that’s 10 million searches a day, which is 115 RPS.
-
-## System Component Design
-
-![image](./f1.png)
-
-- Upload photo and videos = write
-- View photos and videos = read
-- Read/write ratio = 20:80
-- The web server can support 1000 active connections simultaneously
-- 200 connections will be occupied for writing, and writing (uploading) is going to keep the connection open for a long time
+### Posting on Instagram
 
 
-So, the better method is to have 2 DB for writing and reading respectively. Also, separating photos’ read and write requests will allow us to scale and optimize each process independently. The following diagram can work for the read-write process.
+![img](./30.png)   
+*Figure 6.3: Synchronous and Asynchronous process for posting on Instagram*
 
+There are two major processes which gets executed when a user posts a photo on Instagram. The synchronous process is the first step, which is responsible for uploading image content on file storage, persisting the media metadata in graph data-storage, returning the confirmation message to the user and triggering the process to update the user activity. The second process occurs asynchronously by persisting user activity in a columnar
+data-storage (Cassandra) and triggering the process to pre-compute the feed of followers
+of non-celebrity users (having few thousand followers). We don’t pre-compute feeds for
+celebrity users (have 1M+ followers) as the process to fan-out the feeds to all the followers
+will be extremely compute and I/O intensive
 
-![image](./f2.png)
+#### API Design
 
-### News Feed Generation services
-
-- Update the users for the latest post from the users he or she is following
-- So, every user's newsfeed is unique. The combination is very complex
-- To generate a new feed, the system must fetch the metadata (likes, comments, time, location and etc) of those photos and pass it to the ranking algorithm to determine which photos should be arranged in the newsfeed based on metadata.
-- From the backend, it will require querying lots of tables simultaneously and then ranking them using predefined parameters, hence this approach will result in higher latency. It will take a lot of time to generate a newsfeed.
-- So, the pre-generating news feed is adopted. We create a server dedicated to generating the newsfeed unique to each user and storing it in a separate newsfeed table. With this approach, when the user clicks the update, the newsfeed from the DB will be displayed to the user.
-
-### Serving the News Feed
-
-- **Push** — when a new photo/video is uploaded by a user then, will update all of his/her followers. Long-pooling is used. If a user follows a lot of people or celebrities, the server has to keep push updates to the user quite frequently.
-- **Pull** — Users will refresh their newsfeed (make a pull request to the server). The new post will not be visible until users don’t refresh.
-- **Hybrid Approach** — Apply the pull-based approach for all the users with lots of followers or celebrities. Apply push-based approach for the normal users.
-
-### Load Balancing
-
-- diving the traffic among the group of servers thus resulting in improved response and availability of a website or application
-- Use **Least Bandwidth Method**
-- The algorithm will choose the server which serves the least amount of traffic, measured in megabits per second (Mbps)
-- Place between the client and the server or the server and the database
-
-## Data Architecture
-
-![img](./f3.jpg)
-
-### Database Design
-
-**Data related to user**
-- **User ID (primary key)**: unique user Id to make users globally distinguishable
-- **Name**: the name of the user
-- **Email**: the email id of the user
-- **Password**: Password of the user to facilitate the login feature
-- **Create Date**: The date on which the user was registered
-
-**Data related to photos (AWS S3)**
-- **photo id** (primary Key): a unique 10B photo id to identify each photo
-- **UserId**: The id of a user who uploaded the photo
-- **Path**: the path/URL of object storage where the photos are stored
-- **Latitude & Longitude**: we will store this information to find the location of the photo.
-- **Date & time**: the date & timestamp at which the photo was uploaded
-
-![img](./f4.png)
-
-**Data related to users following & followers**
-- **Following**: UserId of all the users followed by the user
-- **Followers**: UserId of all the people following the user
-
-![img](./f5.png)
-
-So, we need 2 different choices of databases:
-1. relational databases (MySQL)
-2. NoSQL Databases (Cassandra)
-
-### Data Model
-
-#### User Table
-
-user_id | follow_list | follower_list | last_login | nickname, region, ... 
---------| ------------| -------------| -----------| ------------
-PK     | a list of user_ids | a list of user_ids |  timestamp, to see if user is active enough for us to cache feed | other data
-
-
-#### Post Table
-
-photo_id | user_id | timestamp | text | num_likes | num_comments 
---------| ---------| ------| --------| ---------| ---------
-PK      |    2nd key | 2nd key | optional | avoid `select count(*)` |avoid `select count(*)`
-
-- Partition key: **photo_id**
-- Secondary key: **user_id** & **timestamp** 
-
-
-![img](./f6.png)
-
-![img](./f7.png)
-
-- typical queries : to get all users that user X follow — send feed for user X
-- get all users that follows user X — push user X’s post to follower’s feed
-- get all user that are active (cache follower feed for active users)
-
-## Interface/API
+We have provided the API design of posting an image on Instagram below. We will send
+the file and data over in one request using the multipart/form-data content type. The
+MultiPart/Form-Data contains a series of parts. Each part is expected to contain a content-disposition header [RFC 2183] where the disposition type is "form-data”.
 
 ```
-create_post(user_id, image, text, timestamp) -> success/failure
-
-comment_post(user_id, post_id, comment, timestamp) -> success/failure
-
-like_post(user_id, post_id, timestamp) -> success/failure
-
-get_follow_feed(user_id, timestamp) -> list of newest posts from user follow list, ordered by time, limit 20
-
-get_profile_feed(user_id, user2_id, timestamp) -> list of newest posts from user2, ordered by time, limit 20
+POST /users/<user_id>/posts
 ```
 
-## System Architecture
+**Sample Request Body:** 
+```
+Content-Type: multipart/form-data; boundary=ExampleFormBoundary
+--ExampleFormBoundary
+Content-Disposition: form-data; name="file"; filename="test.png"
+Content-Type: image/png
+{image file data bytes}
+--ExampleFormBoundary--
+```
 
-![img](./f8.png)
+**Sample Response:**
 
-![img](./f9.png)
+```json
+{
+    "type": "ImageFile",
+    "id": "667",
+    "createdAt": "1466623229",
+    "createdBy": "9",
+    "name": "test.png",
+    "updatedAt": "1466623230",
+    "updatedBy": "9",
+    "fullImageUrl": "https://mybucket.s3.amazonaws.com/myfolder/test.jpg",
+    "size": {
+        "type": "Size",
+        "width": "316",
+        "height": "316"
+    }
+}
+```
 
-### Overview
+### Precompute Feeds
 
-#### Post
+![img](./31.png)   
+*Figure 6.4: Precompute feeds from non celebrity users*
 
-![img](./f10.png)
+This process gets executed when non-celebrity users make a post on Instagram. It is
+triggered when a message is added in the User Feed Service Queue. Once the message is
+added in the queue, the User Feed Service makes a call to the Followers Service to fetch the
+list of followers of the user. After that, the post gets added to the feed of all the followers
+in the columnar data storage.
 
-#### Feed
+### Fetching User Feed
 
-![img](./f11.png)
+![img](./32.png)   
+*Figure 6.5: Sequence of operations involved in fetching user feed*
 
-### Detail
+When a user requests for feed then there will be two parallel threads involved in fetching the user feeds to optimize for latency. The first thread will fetch the feeds from noncelebrity users which the user follow. These feeds are populated by the fan-out mechanism
+described in the PreCompute Feeds section above. The second thread is responsible for
+fetching the feeds of celebrity users whom the user follow. After that, the User Feed Service will merge the feeds from celebrity and non-celebrity users and return the merged
+feeds to the user who requested the feed.
 
-#### Post
+#### API Design
 
-![img](./f12.png)
+```
+GET /users/<user_id>/feeds
+```
 
-#### Feed
+**Sample Response**: The response below can be mapped directly to the graph data model
+mentioned in the next section.
 
-![img](./f13.png)
+```
+{
+/// ...
+“feeds”: [
+    {
+        “postId”: “post001”,
+        “postOwnerId” : “user001”,
+        “postOwnerName” : “Bill Gates”,
+        “mediaURL” : “https://mybucket.s3.amazonaws.com/myfolder/test.jpg”,
+        “numberOfLikes” : 400000
+        “numberOfComments” : 19789
+        “comments”: [
+            {
+                “commenterUserId” : “user004”,
+                “commenterName” : “JeffBezos”
+                “comment” : “Amazing!”
+                “likes” : [
+                    {
+                    “likerId” : “user003”,
+                    “likerUserName” : “Bob”
+                    }
+                ]
+            }
+        ]
+    }
+]
+}
+```
 
-![img](./f15.png)
+## Data Models
 
-![aws-arch](./aws-arch.png)
+### Graph Data Model
+
+![img](./33.png)   
+*Figure 6.6: Graph representation of users, posts and comments*
+
+We can use a graph database such as Neo4j which stores data-entities such as user
+information, posts, comments, and so forth as nodes in the graph. The edges between
+the nodes are used to store the relationship between data entities such as followers, posts,
+comments, likes, and replies. All the nodes are added to an index called nodeIndex for
+faster lookups. We have chosen this NoSQL based solution over relational databases as it
+provides the scalability to have hierarchies which go beyond two levels and extensibility
+due to the schema-less behavior of NoSQL data storage.
+
+#### Sample Queries supported by Graph Database
+
+**Fetch all the followers of Jeff Bezos**
+
+```java
+Node jeffBezos = nodeIndex.get(“userId”, “user004”);
+List<Node> jeffBezosFollowers = new ArrayList();
+
+for (Relationship relationship: jeffBezos.getRelationships(INGOING, FOLLOWS))
+{
+    jeffBezosFollowers.add(relationship.getStartNode());
+}
+```
+
+**Fetch all the posts of Bill Gates**
+
+```java
+Node billGates = nodeIndex.get(“userId”, “user001”);
+List<Node> billGatesPosts = new ArrayList();
+
+for (Relationship relationship: billGates.getRelationships(OUTGOING, POSTS)) {
+    billGatesPosts.add(relationship.getEndNode());
+}
+```
+
+**Fetch all the posts of Bill Gates on which Jeff Bezos has commented**
+
+```java
+List<Node> commentsOnBillGatesPosts = new ArrayList<>();
+for(Node billGatesPost : billGatesPosts) {
+    for (Relationship relationship: billGates.getRelationships(INGOING, COMMENTED_ON)) {
+        commentsOnBillGatesPosts.add(relationship.getStartNode());
+    }
+}
+
+List<Node> jeffBezosComments = new ArrayList();
+for (Relationship relationship: jeffBezos.getRelationships(OUTGOING, COMMENTS))
+{
+    jeffBezosComments.add(relationship.getEndNode());
+}
+
+List<Node> jeffBezosCommentsOnBillGatesPosts =
+commentsOnBillGatesPosts.intersect(jeffBezosComments);
+```
+
+### Columnar Data Models
+
+![img](./34.png)   
+*Figure 6.7: Columnar Data Model for user feed and activities*
+
+We will use columnar data storage such as Cassandra to store data entities like user feed
+and activities. Each row will contain feed/activity information of the user. We can also have
+a TTL based functionality to evict older posts. The data model will look something similar
+to:
+
+`User_id -> List<post_id>`
+
+::: tip FUN FACT
+In this talk, Dikang Gu, a software engineer at Instagram core infra team
+has mentioned about how they use Cassandra to serve critical usecases, high scalability
+requirements, and some pain points.
+:::
+
+### Streaming Data Model
+
+We can use cloud technologies such as Amazon Kinesis or Azure Stream Analytics for
+collecting, processing, and analyzing real-time, streaming data to get timely insights and
+react quickly to new information(e.g. a new like, comment, etc.). We have listed below the
+de-normalized form of some major streaming data entities and action.
+
+![img](./35.png)   
+*Figure 6.8: De-normalized major data-entities and actions*
+
+The data entities A and B above show the containers which contain denormalized information about the Users and their Posts. Subsequently, the data entities C and D denote 
+the different actions which users may take. The entity C denotes the event where a user
+likes a post and entity D denotes the action when a user follows another user. These actions
+are read by the related micro-services from the stream and processed accordingly. For instance, the *LikeEvent* can be read by the *Media Counter Service* and is used to update the 
+media count in the data storage.
+
+## Optimization
+
+We will use a cache having an LRU based eviction policy for caching user feeds of active
+users. This will not only reduce the overall latency in displaying the user-feeds to users but will also prevent re-computation of user-feeds
+
+![img](./36.png)   
+*Figure 6.9: LRU bases cache for storing user feeds of active users*
+
+There is a room for optimization in providing the best content in the user feeds. We
+can do this by ranking the new feeds (the ones generated after users last login) from those
+who the user follows. We can apply machine learning techniques to rank the user feeds
+by assigning scores to the individual feeds which would indicate the probability of click,
+like, comment and so forth. We can do this by representing each feed by a feature vector
+which contains information about the user, the feed and the interactions which the user has
+had with the people in the feed (e.g. whether the user had clicked/liked/commented on the
+previous feeds by the people in the story). It’s apparent that the most important features for
+feed ranking will be related to social network. Some of the keys of understanding the user
+network are listed below.
+
+- Who is the user a close follower of? For example, one user is a close follower of Elon Musk while another user can be a close follower of Gordon Ramsay.
+- Whose photos the user always like?
+- Whose links are most interesting to the user?
+
+We can use deep neural networks which would take the several features (> 100K dense
+features) which we require for training the model. Those features will be passed through
+the n-fold layers, and will be used for predicting the probability of the different events
+(likes, comments, shares, etc.).
+
+
+::: tip FUN FACT
+In this talk, Lars Backstrom, VP of Engineering @ Facebook talks about
+the machine learning done to create personalized news feeds for users. He talks about
+the classical machine learning approach they used in the initial phases for personalizing
+News Feeds by using decision trees and logistic regression. He then goes to talk about the
+improvements they have observed in using neural networks.
+:::
+

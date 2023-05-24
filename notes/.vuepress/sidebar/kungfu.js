@@ -19,10 +19,16 @@ module.exports = [
                     'case-study/chat-system/telegram/',
                 ]
             },
+            {
+                title: "Instagram",
+                children: [
+                    'case-study/instagram/',
+                    'case-study/instagram/part2/',
+                ]
+            },
             'case-study/new-feed/',
             'case-study/google-drive/',
             'case-study/search-autocomplete/',
-            'case-study/instagram/',
             'case-study/uber/',
             'case-study/google-maps/',
             'case-study/proximity-service/',
