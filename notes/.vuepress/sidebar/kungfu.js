@@ -34,10 +34,13 @@ module.exports = [
                 ]
             },
             {
-                title: "Instagram",
+                title: "Social Network",
                 children: [
                     'case-study/instagram/',
                     'case-study/instagram/part2/',
+                    'case-study/twitter/',
+                    'case-study/tinder/',
+                    'case-study/new-feed/',
                 ]
             },
             {
@@ -52,9 +55,8 @@ module.exports = [
                     'case-study/grab-nearby-drivers/',
                 ]
             },
-            'case-study/new-feed/',
             'case-study/google-drive/',
-            'case-study/tinder/',
+            'case-study/google-docs/',
             'case-study/ticket-master/',
         ],
     }, 

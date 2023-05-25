@@ -39,6 +39,39 @@ One major issue of this architecture is **relication lag**. Possible solutions t
 - Another pair name: Primary-Replica / Primary-Secondary
 - E.g: [Redis Sentinel](https://redis.io/docs/management/sentinel/), [mongodb Replica Set](https://www.mongodb.com/docs/manual/core/replica-set-architecture-three-members/)
 
+### Replication - Leader-Leader 
+
+The problem with a single leader setup is that when the leader is down, nobody will be available to take writes until a new leader is available. 
+
+In a leader-leader configuration, there will be multiple leader nodes to take writes. 
+
+The system will replicate the data to each leader to keep them up to date. 
+ 
+Each leader can still have follower replication for backup and reads.
+
+
+The advantage of this approach is the writer will be more available since if one leader goes down, the other leader can take over. Another advantage is that if the leader is closer to a user, the latency will be faster than other leaders.
+
+However, note that the performance will probably worsen because the **new leader might be further away**. 
+Also, you have to deal with **replication lag** where the new leader might not have the most updated data. 
+
+- complexity of conflicting data. For example, if users are writing the same key to each of the leaders, while there are multiple ways to resolve the conflict and the solution depends on the application, there is additional complexity the engineers have to worry about. Similarly, if the leader goes down, a new leader has to be selected to take write.
+
+
+### Leaderless Replication
+
+In a leaderless replication, a write request (also known as quorum write) is committed to some replicas, and if at least w nodes are successful, the main write query is successful. 
+
+A read request (also known as quorum read) reads from some of the nodes, and at least r nodes are successful before the main read query is considered successful. 
+
+For example, take a cluster of 3; if the user configured w to 2, 2 of the nodes need to acknowledge success before the write request is successful. If any one of the nodes is down, the write can continue to operate. The algorithm is true for read query as well as defined by r.
+
+w and r are tunable numbers where the higher the w and r, the greater the probability your read request will read up-to-date data. For now, imagine n is the number of nodes in the cluster. If r = n, you’re guaranteed to find the latest data, whereas if r = 1, you are more likely to randomly hit a node that might not be up to date. Similarly, for w, if you always write the data to all the nodes with w = n, even if r is 1, you’re guaranteed to read the latest value. Since w + r > n has a stronger guarantee for up to date data than w + r <= n.
+
+The advantage of doing leaderless replication is you don’t have to worry about leader selection and election when the leader is down. In addition, the cluster can continue to take writes and reads even when some nodes are down. Thus, the leaderless leads to better availability.
+
+The disadvantage of doing leaderless replication is you have to deal with the complexity of data consistency. Multiple requests can write the same key to multiple nodes, similar to multi-leader replication. As the write gets propagated to different nodes during quorum write, it’s unclear which update should be the winner. In an interview, you should talk about the conflict resolution strategy of your design if you chose leaderless replication.
+
 ## Partitioning
 
 ::: tip 

@@ -46,9 +46,58 @@ https://www.igismap.com/haversine-formula-calculate-geographic-distance-earth/
 ## Geospatial database
 
 ### S2 Geometry (Google S2)
-https://www.npmjs.com/package/s2-geometry
+
+https://github.com/radarlabs/s2
 
 https://www.npmjs.com/package/s2-geometry
+
+
+https://stackoverflow.com/questions/57686995/how-to-perform-the-search-operation-using-google-s2-geometry
+
+
+
+I would break this problem up into several steps:
+
+1. Pick an appropriate S2-Level for your application. In your case, since you're querying by 5 KM radii, I'd pick level 13 cells, that have an average size of 1.27 km^2.
+2. Generate a level-13 cell covering of the 5 KM radius around the person.
+3. Get a level-13 cell from the lat/lng of the car.
+4. Do a contains check of the car S2 Cell to the 5 KM radius S2 Cell covering.
+
+```js
+const s2 = require('@radarlabs/s2');
+
+// s2 cell level of ~1.27 km^2
+const level = 13;
+
+// cell covering of enclosure around a person
+const enclosureLLs = [
+  [40.77933906065449, -73.96983146667479],
+  [40.77933906065449, -73.9634370803833],
+  [40.78483079505022, -73.9634370803833],
+  [40.78483079505022, -73.96983146667479],
+].map((latlng) => {
+  const [lat, lng] = latlng;
+  return new s2.LatLng(lat, lng);
+});
+
+const enclosureCells = new Set(s2.RegionCoverer.getCoveringTokens(enclosureLLs, { min: level, max: level }));
+//-> Set { '89c25894', '89c2589c' }
+
+// arbitrary vehicle lat longs
+
+const vehicle1 = new s2.CellId(new s2.LatLng(40.78340103809933,  -73.96515369415283)).parent(level);
+// -> '89c2589c'
+
+const vehicle2 = new s2.CellId(new s2.LatLng(40.782848623761375, -73.95506858825684)).parent(level);
+// -> '89c258a4'
+
+
+console.log(enclosureCells.has(vehicle1.token()));
+// -> true
+
+console.log(enclosureCells.has(vehicle2.token()));
+// -> false
+```
 
 ### Mongodb - 2dsphere Indexes
 
