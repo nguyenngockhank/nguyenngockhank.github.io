@@ -49,11 +49,13 @@ module.exports = [
                     'case-study/google-maps/',
                     'case-study/uber/',
                     'case-study/uber/part2/',
+                    'case-study/grab-nearby-drivers/',
                 ]
             },
             'case-study/new-feed/',
             'case-study/google-drive/',
             'case-study/tinder/',
+            'case-study/ticket-master/',
         ],
     }, 
     {
