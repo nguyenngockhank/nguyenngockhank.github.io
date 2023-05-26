@@ -4,7 +4,7 @@ tags: ["ZCaseStudy"]
 
 # Design Payment System
 
-## S1 - Understand the problem and establish design scope
+## Step 1 - Understand the problem and establish design scope
 
 A payment system can mean very different things to different people. Some may think it’s a digital wallet like Apple Pay or Google Pay. Others may think it’s a backend system that handles payments such as PayPal or Stripe. It is very important to determine the exact requirements at the beginning of the interview. These are some questions you can ask the interviewer:
 
@@ -48,7 +48,7 @@ The system needs to process 1 million transactions per day, which is 1,000,000 t
 
 10 TPS is not a big number for a typical database, which means the focus of this system design interview is on how to correctly handle payment transactions, rather than aiming for high throughput.
 
-## S2 - Propose High-Level Design and Get Buy-In
+## Step 2 - Propose High-Level Design and Get Buy-In
 
 At a high level, the payment flow is broken down into two steps to reflect how money flows:
 - Pay-in flow
@@ -452,10 +452,6 @@ A payment system is extremely complex. Even though we have covered many topics, 
 - Google/Apple pay integration. Please read if interested. 
 
 Congratulations on getting this far! Now give yourself a pat on the back. Good job!
-
-## Summary
-
-![summary](./summary.jpeg)
 
 ## Refs
 

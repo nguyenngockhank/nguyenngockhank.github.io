@@ -9,7 +9,7 @@ If you read the Proximity Service chapter, you may wonder why we need a separate
 
 Any backend system at the Facebook scale is complicated. Before starting with the design, we need to ask clarification questions to narrow down the scope.
 
-**Candidate**: How geographically close is considered to be “nearby™?   
+**Candidate**: How geographically close is considered to be “nearby"?   
 **Interviewer**: 5 miles. This number should be configurable.
 
 **Candidate**: Can | assume the distance is calculated as the straight-line distance between two users? In real life, there could be, for example, a river in between the users, resulting in a longer travel distance.   
@@ -60,7 +60,7 @@ In this section, we will discuss the following:
 - APl design
 - Data model
 
-In other chapters, we usually discuss API design and data model before the high-level design. However, for this problem, the communication protocol between client and server might not be a straightforward HTTP protocol, as we need to push location data to allfriends. Without understanding the high-level design, its difficult to know what the APls look like. Therefore, we discuss the high-level design first.
+In other chapters, we usually discuss API design and data model before the high-level design. However, for this problem, the communication protocol between client and server might not be a straightforward HTTP protocol, as we need to push location data to allfriends. Without understanding the high-level design, its difficult to know what the APIs look like. Therefore, we discuss the high-level design first.
 
 ### High-level design
 
@@ -108,7 +108,7 @@ This is a cluster of stateless HTTP servers that handles the typical request/res
 
 This is a cluster of stateful servers that handles the near real-time update of friends locations. Each client maintains one persistent WebSocket connection to one of these servers. When there is location update from a friend who is within the search radius, the update is sent on this connection to the client.
 
-Another major responsibility of the WebSocket servers is to handle client initialization for the “nearby friends™ feature. It seeds the mobile client with the locations of all nearby online friends. We will discuss how this is done in more detail later.
+Another major responsibility of the WebSocket servers is to handle client initialization for the “nearby friends" feature. It seeds the mobile client with the locations of all nearby online friends. We will discuss how this is done in more detail later.
 
 Note "WebSocket connection” and "WebSocket connection handler” are interchangeable in this chapter.
 
@@ -296,7 +296,7 @@ example, the key and value for the hash ring could look like this:
 Key: /config/pub_sub.ring
 Value: ['p_1",p.2", 'p_3", "p_4']
 ```
-2. The ability for clients (in this case, the WebSocket servers) to subscribe to any updates to the “Value™ (Redis pub/sub servers). Under the “Key" mentioned in point 1, we store a hash ring of all the active Redis pub/sub servers in the service discovery component. The hash ring is used by the publishers and subscribers of the Redis pub/sub servers to
+2. The ability for clients (in this case, the WebSocket servers) to subscribe to any updates to the “Value" (Redis pub/sub servers). Under the “Key" mentioned in point 1, we store a hash ring of all the active Redis pub/sub servers in the service discovery component. The hash ring is used by the publishers and subscribers of the Redis pub/sub servers to
 determine the pub/sub server to talk to for each channel. For example, channel 2 lives in Redis pub/sub server 1 in
 Figure below.
 
@@ -361,7 +361,7 @@ New: ["p_1_new","p_2", "p_3", "p_4"]
 
 What should the dlient do when the user adds or removes a friend? When a new friend is added, the client's WebSocket connection handler on the server needs to be notified, so it can subscribe to the new friend’s pub/sub channel.
 
-Since the “nearby friends" feature is within the ecosystem of a larger app, we can assume that the “nearby friends™ feature could register a callback on the mobile client whenever a new friend is added. The callback, upon invocation, sends a message to the WebSocket server to subscribe to the new friend's pub/sub channel. The WebSocket server also returns a message containing the new friend's latest location and timestamp, if they are active.
+Since the “nearby friends" feature is within the ecosystem of a larger app, we can assume that the “nearby friends" feature could register a callback on the mobile client whenever a new friend is added. The callback, upon invocation, sends a message to the WebSocket server to subscribe to the new friend's pub/sub channel. The WebSocket server also returns a message containing the new friend's latest location and timestamp, if they are active.
 
 Likewise, the client could register a callback in the application whenever a friend is removed. The callback would send a message to the WebSocket server to unsubscribe from the friend’s pub/sub channel.
 
@@ -373,7 +373,7 @@ It is worth discussing whether a user with many friends could cause performance 
 
 In 2 scenario with thousands of friends, the pub/sub subscribers will be scattered among the many WebSocket servers in the dluster. The update load would be spread among them and it's unlikely to cause any hotspots.
 
-The user would place a bit more load on the pub/sub server where their channel lives. Since there are over 100 pub/sub servers, these “whale™ users would be spread out among the pub/sub servers and the incremental load should not overwhelm any single one.
+The user would place a bit more load on the pub/sub server where their channel lives. Since there are over 100 pub/sub servers, these “whale" users would be spread out among the pub/sub servers and the incremental load should not overwhelm any single one.
 
 ### Nearby random person
 

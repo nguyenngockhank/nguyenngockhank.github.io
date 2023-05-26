@@ -9,6 +9,10 @@ module.exports = [
             'case-study/payment/',
             'case-study/digital-wallet/',
             'case-study/web-crawler/',
+            'case-study/hotel/',
+            'case-study/google-drive/',
+            'case-study/google-docs/',
+            'case-study/ticket-master/',
             {
                 title: "Video",
                 children: [
@@ -55,9 +59,6 @@ module.exports = [
                     'case-study/grab-nearby-drivers/',
                 ]
             },
-            'case-study/google-drive/',
-            'case-study/google-docs/',
-            'case-study/ticket-master/',
         ],
     }, 
     {
