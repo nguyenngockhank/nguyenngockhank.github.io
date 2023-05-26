@@ -265,13 +265,13 @@ So, which one is the better choice for us? Just like many things in life, there 
 Knowing the advantages and disadvantages of each approach is more important than picking a winner during an interview. Table 3 compares the pros and cons of push and pull architectures 
 
 . | Pull  | Push
+----| -----| -----
 Easy debugging | The `/metrics` endpoint on application  servers used for pulling metrics can be used to view metrics at any fime. You can even do this on your laptop. **Pull wins.** | If the metrics collector doesn't receive metrics, the problem might be caused by network issues.
 Health check | If an application server doesn't respond to the pull, you can quickly figure out if an application server is down. **Pull wins.** | If the metrics collector doesn't receive metrics, the problem might be caused by network issues.
 Short-lived jobs |   | Some of the batch jobs might be short-lived and don't last long enough to be pulled. **Push wins.** This can be fixed by introducing push gateways for the pull model.
 Firewall or complicated network setups | Having servers pulling metrics requires all metric endpoints to be reachable. This is potentially problematic in multiple data center setups. It might require a more elaborate network infrastructure | If the metrics collector is set up with a load balancer and an auto-scaling group, it is possible to receive data from anywhere. **Push wins.**
 Performance | Pull methods typically use TCP | Push methods typically use UDP. This means the push method provides lower-latency transports of metrics. The counterargument here is that the effort of establishing a TCP connection is small compared to sending the metrics payload,
-Data authenticity | Application servers to collect metrics from are defined in config files in
-advance. Metrics gathered from those servers are guaranteed to be authentic | Any kind of client can push metrics to the metrics collector. This can be fixed by whitelisting servers from which to accept metrics, or by requiring authentication.
+Data authenticity | Application servers to collect metrics from are defined in config files in advance. Metrics gathered from those servers are guaranteed to be authentic | Any kind of client can push metrics to the metrics collector. This can be fixed by whitelisting servers from which to accept metrics, or by requiring authentication.
 
 
 As mentioned above, pull vs push is a routine debate topic and there is no clear answer. A large organization probably needs to support both, especially with the popularity of serverless [23] these days. There might not be a way to install an agent from which to push data in the first place.

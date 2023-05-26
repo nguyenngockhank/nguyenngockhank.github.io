@@ -5,36 +5,22 @@ module.exports = [
         children: [
             'case-study/notification/',
             'case-study/metrics/',
-            'case-study/url-shorter/',
-            'case-study/payment/',
-            'case-study/digital-wallet/',
             'case-study/web-crawler/',
             'case-study/hotel/',
-            'case-study/google-drive/',
-            'case-study/google-docs/',
             'case-study/ticket-master/',
             {
-                title: "Video",
+                title: "Online tools",
                 children: [
-                    'case-study/youtube/',
-                    'case-study/youtube/part2/',
-                ],
-            },
-            {
-                title: "Typeahead Suggestion",
-                children: [
-                    'case-study/search-autocomplete/',
-                    'case-study/search-autocomplete/part2/',
+                    'case-study/url-shorter/',
+                    'case-study/google-docs/',
+                    'case-study/google-drive/',
                 ]
             },
             {
-                title: "Chat system",
+                title: "FinTech",
                 children: [
-                    'case-study/chat-system/',
-                    'case-study/chat-system/part2/',
-                    'case-study/chat-system/whatsapp/',
-                    'case-study/chat-system/telegram/',
-                    'case-study/chat-system/fb-messenger/',
+                    'case-study/payment/',
+                    'case-study/digital-wallet/',
                 ]
             },
             {
@@ -59,6 +45,31 @@ module.exports = [
                     'case-study/grab-nearby-drivers/',
                 ]
             },
+            {
+                title: "Video",
+                children: [
+                    'case-study/youtube/',
+                    'case-study/youtube/part2/',
+                ],
+            },
+            {
+                title: "Typeahead Suggestion",
+                children: [
+                    'case-study/search-autocomplete/',
+                    'case-study/search-autocomplete/part2/',
+                ]
+            },
+            {
+                title: "Chat system",
+                children: [
+                    'case-study/chat-system/',
+                    'case-study/chat-system/part2/',
+                    'case-study/chat-system/whatsapp/',
+                    'case-study/chat-system/telegram/',
+                    'case-study/chat-system/fb-messenger/',
+                ]
+            },
+         
         ],
     }, 
     {
