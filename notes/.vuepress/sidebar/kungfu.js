@@ -30,6 +30,7 @@ module.exports = [
                 children: [
                     'case-study/instagram/',
                     'case-study/instagram/part2/',
+                    'case-study/instagram/part3/',
                     'case-study/twitter/',
                     'case-study/tinder/',
                     'case-study/new-feed/',
