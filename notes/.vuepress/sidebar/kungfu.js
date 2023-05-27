@@ -21,6 +21,7 @@ module.exports = [
                 children: [
                     'case-study/payment/',
                     'case-study/digital-wallet/',
+                    'case-study/stock-exchange/',
                 ]
             },
             {
