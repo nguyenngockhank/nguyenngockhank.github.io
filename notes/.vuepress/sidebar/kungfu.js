@@ -14,6 +14,7 @@ module.exports = [
                     'case-study/url-shorter/',
                     'case-study/google-docs/',
                     'case-study/google-drive/',
+                    'case-study/email/',
                 ]
             },
             {
