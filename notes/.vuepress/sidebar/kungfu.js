@@ -5,19 +5,20 @@ module.exports = [
         children: [
             'case-study/notification/',
             'case-study/metrics/',
-            'case-study/web-crawler/',
             'case-study/hotel/',
             'case-study/ticket-master/',
             {
                 title: "Online tools",
                 children: [
-                    'case-study/pastebin/',
-                    'case-study/url-shorter/part2/',
                     'case-study/google-docs/',
                     'case-study/dropbox/',
                     'case-study/google-drive/',
                     'case-study/email/',
                     'case-study/url-shorter/',
+                    'case-study/url-shorter/part2/',
+                    'case-study/pastebin/',
+                    'case-study/web-crawler/',
+                    'case-study/web-crawler/part2/',
                 ]
             },
             {

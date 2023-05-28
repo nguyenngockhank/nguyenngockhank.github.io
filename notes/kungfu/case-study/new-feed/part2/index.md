@@ -203,16 +203,16 @@ The process of pushing a post to all the followers is called a fanout. By analog
 called fanout-on-write, while the pull approach is called fanout-on-load. Let’s discuss different options
 for publishing feed data to users.
 
-1. “Pull” model or Fan-out-on-load: This method involves keeping all the recent feed data in memory so that users can pull it from the server whenever they need it. Clients can pull the feed data on a regular basis or manually whenever they need it. Possible problems with this approach are 
+1. **“Pull” model or Fan-out-on-load**: This method involves keeping all the recent feed data in memory so that users can pull it from the server whenever they need it. Clients can pull the feed data on a regular basis or manually whenever they need it. Possible problems with this approach are 
     - a. New data might not be shown to the users until they issue a pull request
     - b. It’s hard to find the right pull cadence, as most of the time pull requests will result in an empty  response if there is no new data, causing waste of resources.
-2. “Push” model or Fan-out-on-write: For a push system, once a user has published a post, we
+2. **“Push” model or Fan-out-on-write**: For a push system, once a user has published a post, we
 can immediately push this post to all the followers. The advantage is that when fetching feed
 you don’t need to go through your friend’s list and get feeds for each of them. It significantly
 reduces read operations. To efficiently handle this, users have to maintain a Long Poll request
 with the server for receiving the updates. A possible problem with this approach is that when a
 user has millions of followers (a celebrity-user) the server has to push updates to a lot of people.
-3. Hybrid: An alternate method to handle feed data could be to use a hybrid approach, i.e., to do a
+3. **Hybrid**: An alternate method to handle feed data could be to use a hybrid approach, i.e., to do a
 combination of fan-out-on-write and fan-out-on-load. Specifically, we can stop pushing posts
 from users with a high number of followers (a celebrity user) and only push data for those users
 who have a few hundred (or thousand) followers. For celebrity users, we can let the followers

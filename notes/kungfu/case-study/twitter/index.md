@@ -1,6 +1,6 @@
 # Design Twitter
 
-Note: : This is our prototype on designing a microblogging and social networking platform on which users interact with each other using messages known as “tweets”. Users can post, like, and retweet tweets for which notifications will be sent to the all the partaking users. We have created this design based on our research going through Twitter and Instagram Engineering tech-talks. These talks are quite informative and detailed, and for the same reason, we have taken inspiration from those talks.
+Note: This is our prototype on designing a microblogging and social networking platform on which users interact with each other using messages known as “tweets”. Users can post, like, and retweet tweets for which notifications will be sent to the all the partaking users. We have created this design based on our research going through Twitter and Instagram Engineering tech-talks. These talks are quite informative and detailed, and for the same reason, we have taken inspiration from those talks.
 
 ## Introduction
 
