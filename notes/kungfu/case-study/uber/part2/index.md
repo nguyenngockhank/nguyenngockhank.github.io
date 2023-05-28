@@ -1,8 +1,10 @@
 # Design Uber (2nd)
 
 Let's design a ride-sharing service like Uber, which connects passengers who need a ride with drivers
-who have a car. Similar Services: Lyft, Didi, Via, Sidecar etc. Difficulty level: Hard Prerequisite:
-Designing Yelp 
+who have a car. Similar Services: Lyft, Didi, Via, Sidecar etc. 
+Difficulty level: Hard 
+
+Prerequisite: Designing Yelp 
 
 ## 1. What is Uber?
 Uber enables its customers to book drivers for taxi rides. Uber drivers use their personal cars to drive

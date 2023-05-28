@@ -37,6 +37,7 @@ module.exports = [
                     'case-study/twitter/',
                     'case-study/tinder/',
                     'case-study/new-feed/',
+                    'case-study/new-feed/part2/',
                 ]
             },
             {

@@ -1,7 +1,9 @@
 # Design Ticketmaster
 
 Let's design an online ticketing system that sells movie tickets like Ticketmaster or BookMyShow.
-Similar Services: bookmyshow.com, ticketmaster.com Difficulty Level: Hard
+Similar Services: bookmyshow.com, ticketmaster.com 
+
+Difficulty Level: Hard
 
 ## 1. What is an online movie ticket booking system?
 A movie ticket booking system provides its customers the ability to purchase theatre seats online. Eticketing systems allow the customers to browse through movies currently being played and to book

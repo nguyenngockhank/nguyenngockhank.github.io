@@ -2,7 +2,9 @@
 
 Let's design a Pastebin like web service, where users can store plain text. Users of the service will enter
 a piece of text and get a randomly generated URL to access it. Similar Services: pastebin.com,
-pasted.co, chopapp.com Difficulty Level: Easy
+pasted.co, chopapp.com 
+
+Difficulty Level: Easy
 
 ## 1. What is Pastebin?
 

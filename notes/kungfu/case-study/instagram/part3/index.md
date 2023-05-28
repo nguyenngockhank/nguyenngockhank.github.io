@@ -1,7 +1,9 @@
 # Design Instagram (3rd)
 
 Let's design a photo-sharing service like Instagram, where users can upload photos to share them with
-other users. Similar Services: Flickr, Picasa Difficulty Level: Medium
+other users. Similar Services: Flickr, Picasa 
+
+Difficulty Level: Medium
 
 ## 1. What is Instagram?
 

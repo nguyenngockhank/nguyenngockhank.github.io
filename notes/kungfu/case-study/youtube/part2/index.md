@@ -1,8 +1,9 @@
 # Designing Youtube or Netflix
 
 Let's design a video sharing service like Youtube, where users will be able to upload/view/search
-videos. Similar Services: netflix.com, vimeo.com, dailymotion.com, veoh.com Difficulty Level:
-Medium
+videos. Similar Services: netflix.com, vimeo.com, dailymotion.com, veoh.com 
+
+Difficulty Level: Medium
 
 ## 1. Why Youtube?
 Youtube is one of the most popular video sharing websites in the world. Users of the service can

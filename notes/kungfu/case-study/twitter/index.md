@@ -4,7 +4,7 @@ Note: : This is our prototype on designing a microblogging and social networking
 
 ## Introduction
 
-## Problem Statement
+### Problem Statement
 
 In this chapter, we will design a microblogging platform similar to Twitter where users can post a tweet and it will be shared it with the user followers. Subsequently, the users will be able to view personalized feeds containing posts from all the other users that they follow.
 
