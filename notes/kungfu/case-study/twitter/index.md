@@ -8,7 +8,7 @@ Note: : This is our prototype on designing a microblogging and social networking
 
 In this chapter, we will design a microblogging platform similar to Twitter where users can post a tweet and it will be shared it with the user followers. Subsequently, the users will be able to view personalized feeds containing posts from all the other users that they follow.
 
-### 7.1.2 Gathering Requirements 
+### Gathering Requirements 
 
 **In Scope** The application
 - Users should be able to post and view their tweets. • Users should be able to follow other users.
