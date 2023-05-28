@@ -35,10 +35,13 @@ module.exports = [
                     'case-study/instagram/',
                     'case-study/instagram/part2/',
                     'case-study/instagram/part3/',
-                    'case-study/twitter/',
                     'case-study/tinder/',
+                    'case-study/twitter/',
                     'case-study/new-feed/',
                     'case-study/new-feed/part2/',
+                    'case-study/twitter/twitter-search/',
+                    'case-study/search-autocomplete/',
+                    'case-study/search-autocomplete/part2/',
                 ]
             },
             {
@@ -59,13 +62,6 @@ module.exports = [
                     'case-study/youtube/',
                     'case-study/youtube/part2/',
                 ],
-            },
-            {
-                title: "Typeahead Suggestion",
-                children: [
-                    'case-study/search-autocomplete/',
-                    'case-study/search-autocomplete/part2/',
-                ]
             },
             {
                 title: "Chat system",
