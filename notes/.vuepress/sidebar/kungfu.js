@@ -11,10 +11,12 @@ module.exports = [
             {
                 title: "Online tools",
                 children: [
-                    'case-study/url-shorter/',
+                    'case-study/pastebin/',
+                    'case-study/url-shorter/part2/',
                     'case-study/google-docs/',
                     'case-study/google-drive/',
                     'case-study/email/',
+                    'case-study/url-shorter/',
                 ]
             },
             {
