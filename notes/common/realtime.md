@@ -39,6 +39,35 @@ Cách này thì Facebook, Github đang xài
 - **Ưu**: Độ trễ thấp hơn short polling, ít request từ client gửi hơn 
 - **Nhược**: **response trả về không đồng bộ**, phải xử lý vấn đề timeout của cả client và server...
  
+[How to use long-polling in NodeJs](https://stackoverflow.com/questions/45853418/how-to-use-long-polling-in-native-javascript-and-node-js)
+
+```js
+var requestCounter = 0;
+
+var responses = {
+  /* Keyed by room Id =*/
+  "room_abc" : [ /* array of responses */]
+};
+
+app.get('/', function (req, res) {
+    requestCounter += 1;
+
+    var room = /* assuming request is for room_abc */ "room_abc";
+
+    // Stash the response and reply later when an event comes through
+    responses[room].push(res);
+
+    // Every 3rd request, assume there is an event for the chat room, room_abc.
+    // Reply to all of the response object for room abc.
+    if (requestCounter % 3 === 0) {
+        responses["room_abc"].forEach((res) => {
+            res.send("room member 123 says: hi there!");
+            res.end();
+        });
+    }
+});
+```
+
 ## Server Send Event (SSE)
 Cái này éo support IE =)) Yêu cầu browser phải có `EventSource`, Polyfill thì vẫn được 
 
@@ -69,13 +98,6 @@ Thông qua giao thức này Client và Server có thể gửi dữ liệu lên, 
 **Lưu ý**:
 Scale ngang của websocket ko hề đơn giản như RESTful API. [Đọc thêm](https://tsh.io/blog/how-to-scale-websocket/)
 
-## Nên xài cái nào
-
-Dựa vào nhiều yếu tốt nhưng mà có vài ý: 
-
-Theo Khánk 
-- Ko nên nghĩ tới `Long polling`, cho mấy anh lớn implement
-- Nghĩ tới trách nhiệm: khi ta implement xong là có ai support nữa ko, hay mình ôm luôn =))) 
 
  
 

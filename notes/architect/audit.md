@@ -64,6 +64,19 @@ Auditing is about recording domain-level events: a transaction is created, a use
 - large messages
 - known errors, all errors  
 
+## Architecture
+
+![arch](../kungfu/case-study/metrics/f6.png)
+
+- metrics source - your app 
+- collector - promtail
+- DB - prometheus/S3
+- query service - loki
+- visual - grafana, 
+- alert is alertmanager
+
+![k8s monitoring](./img/Prometheus-Server_Chart.png)
+
 ## Refs
 
 https://stackoverflow.com/questions/967970/what-information-should-i-be-logging-in-my-web-app
@@ -73,3 +86,8 @@ https://www.dataset.com/blog/the-10-commandments-of-logging/
 https://www.freecodecamp.org/news/how-to-use-logs-effectively-in-your-code/
 
 https://www.bloghoctap.com/security/authentication-authorization-va-accounting.html
+
+[Four Minute Paper: Facebook’s time series database, Gorilla](https://jessicagreben.medium.com/four-minute-paper-facebooks-time-series-database-gorilla-800697717d72)
+
+
+[Kubernetes Monitoring: Install Prometheus and Grafana using Helm](https://k21academy.com/docker-kubernetes/prometheus-grafana-monitoring/)

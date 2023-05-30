@@ -92,7 +92,7 @@ module.exports = {
       },
     ],
     // end containers
-    'vuepress-plugin-element-tabs',
+    ['vuepress-plugin-element-tabs',],
     ['@vuepress/back-to-top', true],
     ['@vuepress/pwa', {
       serviceWorker: true,
