@@ -1,6 +1,6 @@
 # Distributed Email Service
 
-In this chapter we design a large-scale email service, such as Gmail, Outlook, or Yahoo Mail. The growth of the intemet has led to an explosion in the volume of emails. In 2020, Gmail had over 1.8 billion active users andOutlook had over 400 million users worldwide. 
+In this chapter we design a large-scale email service, such as Gmail, Outlook, or Yahoo Mail. The growth of the Internet has led to an explosion in the volume of emails. In 2020, Gmail had over 1.8 billion active users andOutlook had over 400 million users worldwide. 
 
 ![Figure 1](./f1.png)   
 *Figure 1 Popular email providers*
@@ -19,6 +19,7 @@ Over the years, email services have changed significantly in complexity and scal
 - Filter emails by read and unread status.
 - Search emails by subject, sender, and body.
 - Anti-spam and anti-virus.   
+
 **Interviewer**: That's a good list. We don’t need to worry about authentication. Let's focus on the other  features you mentioned.
 
 **Candidate**: How do users connect with mail servers?   
@@ -32,6 +33,7 @@ Over the years, email services have changed significantly in complexity and scal
 Next, let's go over the most important non-functional requirements.
 
 **Reliability**. We should not lose email data.
+
 **Availability**. Email and user data should be automatically replicated across multiple nodes to ensure availability. Besides, the system should continue to function despite partial system failures.
 
 **Scalability**. As the number of users grows, the system should be able to handle the increasing number of users and emails. The performance of the system should not degrade with more users or emails.
@@ -42,7 +44,7 @@ Next, let's go over the most important non-functional requirements.
 
 Let's do a back-of-the-envelope calculation to determine the scale and to discover some challenges our solution will need to address. By design, emails are storage heavy applications.
 - 1 billion users.
-- Assume the average number of emails a person sends per day is 10. QPS for sending emails = 1049 * 10 / (10~5) = 100,000.
+- Assume the average number of emails a person sends per day is 10. QPS for sending emails = 10^9 * 10 / (10~5) = 100,000.
 - Assume the average number of emails a person receives in a day is 40 [3] and the average size of email metadata is 50KB. Metadata refers to everything related to an email, excluding attachment files. Assume metadata is stored in a database. Storage requirement for maintaining metadata in 1 year: 1 billion
 users * 40 emails / day * 365 days * 50 KB = 730 PB.
 - Assume 20% of emails contain an attachment and the average attachment size is 500 KB.
@@ -90,7 +92,7 @@ mail server with the next lowest priority, which is alt.gmail-smtp-in..google.co
 An email attachment is sent along with an email message, commonly with Base64 encoding [6]. There is usually a
 size limit for an email attachment. For example, Outlook and Gmail limit the size of attachments to 20MB and 25M8
 respectively as of June 2021. This number is highly configurable and varies from individual to corporate accounts.
-Multipurpose Intemet Mail Extension (MIME) [7] is a specification that allows the attachment to be sent over the
+Multipurpose Internet Mail Extension (MIME) [7] is a specification that allows the attachment to be sent over the
 internet.
 
 ### Traditional mail servers
@@ -143,11 +145,12 @@ This section covers email APIs, distributed email server architecture, email sen
 
 Email APIs can mean very different things for different mail clients, or at different stages of an email's life cycle. For example:
 
-« SMTP/POP/IMAP APIs for native mobile clients.
-« SMTP communications between sender and receiver mail servers.
-« RESTful AP| over HTTP for full-featured and interactive web-based email applications.
-Due to the length limitations of this book, we cover only some of the most important APIs for webmail. A common
-way for webmail to communicate is through the HTTP protocol.
+- SMTP/POP/IMAP APIs for native mobile clients.
+- SMTP communications between sender and receiver mail servers.
+- RESTful API over HTTP for full-featured and interactive web-based email applications.
+
+Due to the length limitations of this book, we cover only some of the most important APIs for webmail. A common way for webmail to communicate is through the HTTP protocol.
+
 1. Endpoint: `POST /v1/messages`
 Sends a message to the recipients in the To, Cc, and Bcc headers.
 
@@ -204,7 +207,7 @@ easier. The high-level design is shown in Figure 5.
 ![Figure 5](./f5.png)   
 *Figure 5 High-level design*
 
-Let us take a close ook at each component.
+Let us take a close look at each component.
 
 **Webmail**. Users use web browsers to receive and send emails.
 
@@ -225,16 +228,16 @@ Protocol (IMAP) subprotocol over WebSocket [11],
 discuss the database choice in the deep dive section
 
 **Attachment store**. We choose object stores such as Amazon Simple Storage Service (S3) as the attachment store.
-S3is a scalable storage infrastructure that's suitable for storing large files such as images, videos, files, etc.
+S3 is a scalable storage infrastructure that's suitable for storing large files such as images, videos, files, etc.
 Attachments can take up to 25MB in size. NoSQL column-family databases like Cassandra might not be a good fit
-for the following two reasons;
+for the following two reasons:
 
-- Even though Cassandra supports blob data type and its maximum theoretical size for a blob is 2GB, the practical limit is less than TMB [12].
+- Even though Cassandra supports blob data type and its maximum theoretical size for a blob is 2GB, the practical limit is less than 1MB [12].
 - Another problem with putting attachments in Cassandra is that we can't use a row cache as attachments take too much memory space.
 
 **Distributed cache.** Since the most recent emails are repeatedly loaded by a client, caching recent emails in
 memory significantly improves the load time. We can use Redis here because it offers rich features such as lists and
-itis easy to scale.
+it is easy to scale.
 
 **Search store.** The search store is a distributed document store. It uses a data structure called inverted index [13]
 that supports very fast full-text searches. We will discuss this in more detail in the deep dive section
@@ -258,9 +261,9 @@ The email sending flow is shown in Figure 6.
 4. Message queues
     - 4a. If basic email validation succeeds, the email data is passed to the outgoing queue. If the attachment is too large to fit in the queue, we could store the attachment in the object store and save the object reference in the queued message
     - 4p.If basic email validation fails, the email is put in the error queue.
-5. SMTP outgaing workers pull messages from the outgoing queue and make sure emails are spam and virus free.
+5. SMTP outgoing workers pull messages from the outgoing queue and make sure emails are spam and virus free.
 6. The outgoing email is stored in the “Sent Folder” of the storage layer.
-7. SMTP outgaing workers send the email to the recipient mail server.
+7. SMTP outgoing workers send the email to the recipient mail server.
 
 Each message in the outgoing queue contains all the metadata required to create an email. A distributed message queue is a critical component that allows asynchronous mail processing. By decoupling SMTP outgoing workers from the web servers, we can scale SMTP outgoing workers independently.
 
@@ -309,15 +312,14 @@ In this section, we discuss the characteristics of email metadata, choosing the 
 
 **Choosing the right database**
 
-At Gmail or Outlook scale, the database system is usually custom-made to reduce input/output operations per second (I0PS) [16], s this can easily become a major constraint in the system. Choosing the right database is not easy. It is helpful to consider all the options we have on the table before deciding the most suitable one.
+At Gmail or Outlook scale, the database system is usually custom-made to reduce input/output operations per second (IOPS) [16], s this can easily become a major constraint in the system. Choosing the right database is not easy. It is helpful to consider all the options we have on the table before deciding the most suitable one.
 - Relational database. The main motivation behind this is to search through emails efficiently. We can build
 indexes for email header and body. With indexes, simple search queries are fast. However, relational databases
 are typically optimized for small chunks of data entries and are not ideal for large ones. A typical email is
 usually larger than a few KB and can easily be over 100KB when HTML is involved. You might argue that the
 BLOB data type is designed to support large data entries. However, search queries over unstructured BLOB data
 type are not efficient. So relational databases such as MySQL or PostgreSQL are not good fits.
-- Distributed object storage. Another potential solution is to store raw emails in cloud storage such as Amazon
-53, which can be a good option for backup storage, but it's hard to efficiently support features such as marking
+- Distributed object storage. Another potential solution is to store raw emails in cloud storage such as Amazon S3, which can be a good option for backup storage, but it's hard to efficiently support features such as marking
 emails as read, searching emails based on keywords, threading emails, etc.
 - NoSQL databases. Google Bigtable is used by Gmail, so it's definitely a viable solution. However, Bigtable is not
 open sourced and how email search is implemented remains a mystery. Cassandra might be a good option as
@@ -327,7 +329,7 @@ Based on the above analysis, very few existing solutions seem to fit our needs p
 providers tend to build their own highly customized databases. However, in an interview setting, we won't have
 time to design a new distributed database, but it's important to explain the following characteristics that the
 database should have.
-- Asingle column can be a single-digit of MB.
+- A single column can be a single-digit of MB.
 - Strong data consistency.
 - Designed to reduce disk I/O
 - It should be highly available and fault-tolerant.
@@ -343,7 +345,7 @@ Now let us define the tables. The primary key contains two companents, the parti
 - Partition key: responsible for distributing data across nodes. As a general rule, we want to spread the data evenly.
 - Clustering key: responsible for sorting data within a partition.
 
-At a high level, an email service needs to suppart the following queries at the data layer:
+At a high level, an email service needs to support the following queries at the data layer:
 - The first query is to get all folders for a user.
 - The second query is to display all emails for a specific folder.
 - The third query is to create/delete/get a specific email.
@@ -429,7 +431,7 @@ Threads are a feature supported by many email clients. It groups email replies w
 {
     "headers": {
         "Message-Id": "<7BA@4B2A-430C-4D12-8B57-862103C34501@gmail.com>",
-        "In-Reply-To": "<CAEWTXuPFN=LzECiDItgYoVue3kgFvInJUSHTt6TWagmail.com>",
+        "In-Reply-To": "<CAEWTXuPFN=LzECiDItgYoVue3kgFvInJUSHTt6TW@gmail.com>",
         "References": ["<7BA@4B2A-430C-4D12-8857-862103C34501@gmail.com>"]
     }
 }

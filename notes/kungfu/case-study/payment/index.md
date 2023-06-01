@@ -1,5 +1,5 @@
 ---
-tags: ["ZCaseStudy"]
+tags: ["ZCaseStudy", "Payment"]
 ---
 
 # Design Payment System

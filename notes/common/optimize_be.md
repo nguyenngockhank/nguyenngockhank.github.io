@@ -18,6 +18,18 @@ tags: ["Performance"]
     - message queues & events
     - graceful service
 
+## Increase concurrency
+- Optimize code performance
+- Scale-out
+    - Cloning to multiple processes (X-Axis) (Stateless pattern)
+    - Splitting by functions (Y-Axis) (Domain Driven pattern)
+    - Data partitioning (Z-Axis) (Sharding)
+
+### Race condtion 
+Solutions:
+- Distributed locks
+- Data sharding
+- Use a queue - multiple consumers (balancing)
 
 ## Materialized View - CQRS 
 - Caching layer

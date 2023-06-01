@@ -31,8 +31,6 @@ Mấy anh lớn như github, fb không xài *foreign key contraint* để tăng 
 
 [Thoughts on Foreign Keys?](https://github.com/github/gh-ost/issues/331#issuecomment-266027731)
 
-## Thiết kế phá chuẩn
-Đôi khi thiết kế chuẩn, không dư thừa dữ liệu lại gây ra câu query phức tạp như c, như b, như l... nên phá chuẩn, chấp nhận dư thừa là cách có thể xem xét =))
 
 ## Sử dụng có chọn lọc
 
@@ -41,6 +39,27 @@ Mấy anh lớn như github, fb không xài *foreign key contraint* để tăng 
 - Ý thức sort: không chỉ là `ORDER BY` là diễn ra sort mà kể cả `DISTINCT` hay `GROUP BY` hoặc là `UNION` 
     - Không sử dụng `HAVING` nếu có thể dùng `WHERE`. Đơn giản là `WHERE` sẽ giới hạn record trả về trước khi `SORT` rồi `GROUP BY`.
     - Phân biệt giữa 2 cái này: `UNION ALL` hay `UNION`. Cái sau có sử dụng `DISTINCT` để loại bỏ record giống nhau. 
+
+## Thiết kế phá chuẩn
+Đôi khi thiết kế chuẩn, không dư thừa dữ liệu lại gây ra câu query phức tạp như c, như b, như l... nên phá chuẩn, chấp nhận dư thừa là cách có thể xem xét =))
+
+Ví dụ, 
+
+Sử dụng cassandra, ta có những thông tin của bảng **emails** dưới đây
+- user_id là partition key
+- email_id là sort key 
+
+Field | type
+-------| -----
+email_id | bigint 
+user_id |  bigint 
+from    | text
+subject | text
+preview  | text 
+is_read  | boolean
+
+`is_read` là field để xem email user đã đọc hay chưa, để tăng tốc độ read hơn ta có thể tách bảng **read_emails** và **unread_emails**, đánh đổi là code phức tạp hơn và khó bảo trì hơn 👿👿👿
+
 
 ## Index column
 

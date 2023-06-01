@@ -10,20 +10,20 @@ In this chapter, we design a hotel reservation system for a hotel chain such as 
 
 The hotel reservation system is complicated and its components vary based on business use cases. Before diving into the design, you should ask the **Interviewer** clarification questions to narrow down the scope.
 
-**Candidate**: What is the scale of the system?
+**Candidate**: What is the scale of the system?   
 **Interviewer**: Let's assume we are building a website for a hotel chain that has 5,000 hotels and 1 million rooms in total.
 
 **Candidate**: Do customers pay when they make reservations or when they arrive at the hotel?
 **Interviewer**: For simplicity, they pay in full when they make reservations.
 
 **Candidate**: Do customers book hotel rooms through the hotel's website only? Do we need to support other
-reservation options such as phone calls?
+reservation options such as phone calls?    
 **Interviewer**: Let's assume people could book a hotel room through the hotel website or app.
 
-**Candidate**: Can customers cancel their reservations?
+**Candidate**: Can customers cancel their reservations?    
 **Interviewer**: Yes.
 
-**Candidate**: Are there any other things we need to consider?
+**Candidate**: Are there any other things we need to consider?    
 **Interviewer**: Yes, we allow 10% overbooking. In case you do not know, overbooking means the hotel will sell more
 rooms than they actually have. Hotels do this in anticipation that some customers will cancel their reservations.
 
@@ -111,7 +111,7 @@ Making a new reservation is a very important feature. The request parameters of 
 ```json
 {
     "startDate":"2021-04-28",
-    "endDate":"2021-04-36",
+    "endDate":"2021-04-30",
     "hotelID":"245",
     "roomID":"U12354673389",
     "reservationID":"13422445"
@@ -204,7 +204,7 @@ Now we've talked about the high-level design, let's go deeper into the following
 
 As mentioned in the high-level design, when we reserve a hotel room, we actually reserve a type of room, as opposed to a specific room. What do we need to change about the API and schema to accommodate this?
 
-For the reservation API, roomID is replaced by roomTypelD in the request parameter. The APl to make a reservation
+For the reservation API, roomID is replaced by roomTypeID in the request parameter. The APl to make a reservation
 looks like this:
 
 ```
@@ -215,9 +215,9 @@ POST /v1/reservations
 ```json
 {
     "startDate":"2021-64-28",
-    "endDate":"2621-04-30",
+    "endDate":"2021-04-30",
     "hotelID":"245",
-    "roomTypelD": "12354673380" ,
+    "roomTypeID": "12354673380" ,
     "roomCount": "3",
     "reservationID":"13422445"
 }
@@ -261,7 +261,7 @@ hotel_id | room_type_id | date | total_inventory | total_reserved
 
 The *room_type_inventory* table is utilized to check if a customer can reserve a specific type of room or not. The input
 and output for a reservation might look like this:
-- Input: startDate (2021-07-01), endDate (2021-07-03), roomTypeld, hotelld, numberOfRoomsToReserve
+- Input: startDate (2021-07-01), endDate (2021-07-03), roomTypeID, hotelId, numberOfRoomsToReserve
 - Output: True if the specified type of room has inventory and users can book it. Otherwise, it returns false.
 
 From the SQL perspective, it contains the following two steps:
@@ -270,7 +270,7 @@ From the SQL perspective, it contains the following two steps:
 ```sql
 SELECT date, total_inventory, total_reserved
 FROM room_type_inventory
-WHERE room_type_id = ${roomTypeId} AND hotel_id = ${hotelld}
+WHERE room_type_id = ${roomTypeId} AND hotel_id = ${hotelId}
 AND date between ${startDate} and ${endDate}
 ```
 This query returns data like this:

@@ -97,9 +97,35 @@ A lot of things can go wrong with models:
     - Every message is replicated on a set of machines as part of the write commit. If a message is replicated on to *n* brokers, that means the system can tolerate failure of *n-*1 instances.
 - `The producer-to-broker communication can fail`, which causes messages to be losts.
     - This is generally solved by **acknowledgements**
-    - Duplicate messages being produced can be avoided by having a sequence no. for messages.
+    - Duplicate messages being produced can be avoided by having a sequence number for messages.
 - `The consumer-to-broker message communication can fail`, which causes messages to be losts.
     - Hence, messages should not be deleted from the Broker, unless there is an explicit acknowledgement from the consumer that the message has been processed.
+
+## Order of messages
+
+### Order in producing messages
+
+Example we have "PostCreated" then "PostTitleUpdated", when `The producer-to-broker communication can fail`, in distributed system the order of message in broker can be wrong. 
+
+**Solution**: 
+- Use a **UndispatchedEvent** with a schedule sender
+- After publish successfully, sender will remove rows in table
+- Can send multiple events at a same time as long as aggregate_id different
+
+
+Field        | Desc 
+-------------| ----
+event_id     | PK - as a deduplicate id in broker
+aggregate_id | root of aggregate, different aggregate_id can be sent in parallelly
+created_at   | timestamp (use this field to make sure the order)
+event_payload  | body of event
+
+### Order in receiving messages
+
+Solution, routing the relevant messages to a consumer
+- use the partition key / group id of broker
+
+[Understanding Kafka Topic Partitions](https://medium.com/event-driven-utopia/understanding-kafka-topic-partitions-ae40f80552e8)
 
 
 ## Brokerless messaging
