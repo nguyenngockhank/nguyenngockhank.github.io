@@ -390,16 +390,6 @@ Design Find My Friend: For a given point on the map, give me all the friends nea
 Sometimes candidates mention Quadtree as if it is a database. A Quadtree is technically an in-memory data structure, not a database.
 :::
 
-### Advanced Discussion
-
-A geodatabase is a very niche database, so it’s doubtful the interviewer will
-go too deep into this. Don’t overly index on geospatial knowledge if you’re
-just studying for the interview.
-
-If you want to self-learn to go deeper, in that case, you can go into the
-2dsphere index, which essentially divides up the world into multiple levels
-of granularity of grids and stores them into B-Tree. Another option is
-Google S2, which uses Hilbert Curve to enumerate the cells.
 
 ## ZooKeeper
 
@@ -470,7 +460,18 @@ Expensive with join operations | Eliminates the need for an expensive search / m
 - OLAP: Online Analytical Processing
 
 
+## Distinction between OLTP and OLAP systems
 
+Features | OLTP System <br /> (Operational Data) | OLAP System <br /> (Data Warehouse)
+---------| ------------ | -----------
+Data source | From Traditional or original source | From diverse databases
+Aim of data  | Organizational basic activities running | For planning and problem solving known Business support system
+Data type | images of ongoing business transaction | Business activities from various sections
+Insertion and updating | Insert and update are by end users which is fast | Periodic refreshing inform of Batch jobs
+Queries | Simple queries that return small records | Complex aggregate queries
+Efficiency | Very high speed to answer queries | Takes some time depending on the requirement but can be improved using index
+Space hold | holds very small history | Comprehensive history due to aggregation
+Database design | Greatly normalized due to many tables involvement | Highly denormalised with few tables using Star and snowflake schema.
 
 
 https://www.guru99.com/nosql-tutorial.html

@@ -31,17 +31,109 @@ https://www.youtube.com/watch?v=mWNLMg2WxY0&t=4s&ab_channel=%C4%90aIT%E1%BB%9D
 
 ### Haversine formula - find distance between 2 points
 
+![formula](https://images.prismic.io/sketchplanations/e1e45776-aa40-4806-820e-b5c5b8050f4b_SP+687+-+The+haversine+formula.png?auto=compress%2Cformat&fit=max&w=640&q=50)
+
 ```
-a = sin²(ΔlatDifference/2) + cos(lat1).cos(lt2).sin²(ΔlonDifference/2)
+a = sin²(ΔlatDifference /2) + cos(lat1).cos(lt2).sin²(ΔlonDifference/2)
 c = 2.atan2(√a, √(1−a))
 d = R.c
 ```
+
+where,
+
+- `ΔlatDifference = lat1 – lat2 (difference of latitude)`
+- `ΔlonDifference = lon1 – lon2 (difference of longitude)`
+- R is radius of earth i.e 6371 KM or 3961 miles
+- d is the distance computed between two points.
 
 https://www.npmjs.com/package/haversine
 
 https://www.npmjs.com/package/geo-haversine
 
 https://www.igismap.com/haversine-formula-calculate-geographic-distance-earth/
+
+```js
+// convert coordinates to standard format based on the passed format option
+var convertCoordinates = function (format, coordinates) {
+  switch (format) {
+  case '[lat,lon]':
+    return { latitude: coordinates[0], longitude: coordinates[1] }
+  case '[lon,lat]':
+    return { latitude: coordinates[1], longitude: coordinates[0] }
+  case '{lon,lat}':
+    return { latitude: coordinates.lat, longitude: coordinates.lon }
+  case '{lat,lng}':
+    return { latitude: coordinates.lat, longitude: coordinates.lng }
+  case 'geojson':
+    return { latitude: coordinates.geometry.coordinates[1], longitude: coordinates.geometry.coordinates[0] }
+  default:
+    return coordinates
+  }
+}
+
+
+// convert to radians
+var toRad = function (num) {
+  return num * Math.PI / 180
+}
+
+// main function
+var haversine = (function () {
+  var RADII = {
+    km:    6371,
+    mile:  3960,
+    meter: 6371000,
+    nmi:   3440
+  }
+
+  return function haversine (startCoordinates, endCoordinates, options) {
+    options   = options || {}
+
+    var R = options.unit in RADII
+      ? RADII[options.unit]
+      : RADII.km
+
+    var start = convertCoordinates(options.format, startCoordinates)
+    var end = convertCoordinates(options.format, endCoordinates)
+
+    var dLat = toRad(end.latitude - start.latitude)
+    var dLon = toRad(end.longitude - start.longitude)
+    var lat1 = toRad(start.latitude)
+    var lat2 = toRad(end.latitude)
+
+    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2)
+
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+
+    if (options.threshold) {
+      return options.threshold > (R * c)
+    }
+
+    return R * c
+  }
+
+})()
+
+
+// usage
+const start = {
+  latitude: 30.849635,
+  longitude: -83.24559
+}
+
+const end = {
+  latitude: 27.950575,
+  longitude: -82.457178
+}
+
+console.log(haversine(start, end))
+console.log(haversine(start, end, {unit: 'mile'}))
+console.log(haversine(start, end, {unit: 'meter'}))
+console.log(haversine(start, end, {threshold: 1}))
+console.log(haversine(start, end, {threshold: 1, unit: 'mile'}))
+console.log(haversine(start, end, {threshold: 1, unit: 'meter'}))
+```
 
 ## Geospatial database
 
@@ -127,6 +219,24 @@ https://www.arangodb.com/2018/01/introduction-geo-indexes-performance-characteri
 https://www.youtube.com/watch?v=nsVsdHeTXIE
 
 
+## GeoJSON
+
+GeoJSON is a format for encoding a variety of geographic data structures.
+
+```json
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [125.6, 10.1]
+  },
+  "properties": {
+    "name": "Dinagat Islands"
+  }
+}
+```
+
+GeoJSON supports the following geometry types: `Point`, `LineString`, `Polygon`, `MultiPoint`, `MultiLineString`, and `MultiPolygon`. Geometric objects with additional properties are `Feature` objects. Sets of features are contained by `FeatureCollection` objects.
 
 
 ## AWS 
@@ -149,3 +259,36 @@ If the part of the surface of the earth which you want to draw is relatively sma
 This is simple [equirectangular projection](https://en.wikipedia.org/wiki/Equirectangular_projection). In most cases, you'll be able to compute cos(φ0) only once, which makes subsequent computations of large numbers of points really cheap.
 
 https://stackoverflow.com/questions/16266809/convert-from-latitude-longitude-to-x-y
+
+### Create a bounding box around the geo point 
+
+I have a geo latitude and longitude (ex: 39.6199,-79.9535). How can I build a bounding box around the point with 1km of radius?
+
+The distance between two longitude lines changes according to the latitude line you're on. It can be computed as:
+
+```
+3960 * 2 * pi /360 * cosine(latitude) in miles
+```
+
+The distance between two latitude lines is constant everywhere: **69 miles.**
+
+So, in order to draw a square of 1x1 miles around a geographical location you should find the two latitude lines parallel to the latitude of the point with distance 0.5 mile along south and north. Then find two parallel longitude lines with 0.5 miles distance along west and east.
+
+For example, 0.5 mile means 0.5/69 latitude difference. 
+
+If the latitude of the given point is `39.6199` then the latitudes of upper and lower sides of the square have latitude values: 
+`36.6199+(0.5/69)` and `36.6199-(0.5/69)` respectively.
+
+
+[Readmore](https://stackoverflow.com/questions/12448629/create-a-bounding-box-around-the-geo-point)
+
+### Check if geo-point is inside or outside of polygon
+
+[Read more](https://stackoverflow.com/questions/43892459/check-if-geo-point-is-inside-or-outside-of-polygon)
+
+[Nodejs - polygon-lookup](https://www.npmjs.com/package/polygon-lookup)
+
+
+## Tools
+
+https://github.com/pelias/pelias

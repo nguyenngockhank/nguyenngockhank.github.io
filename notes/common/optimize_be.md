@@ -25,7 +25,7 @@ tags: ["Performance"]
     - Splitting by functions (Y-Axis) (Domain Driven pattern)
     - Data partitioning (Z-Axis) (Sharding)
 
-### Race condtion 
+### Race condition 
 Solutions:
 - Distributed locks
 - Data sharding
@@ -55,8 +55,6 @@ Solutions:
 CAP Theorem: Tradeoff between Availability vs Consistency
 :::
 
-## Concurrent optimization
-... 
 
 ## Tools
 - Timers
@@ -68,7 +66,7 @@ CAP Theorem: Tradeoff between Availability vs Consistency
 ## Comparision
 
 - [goroutines vs worker threads P1](https://medium.com/@Cazineer/go-goroutines-vs-node-cluster-worker-threads-part-1-26933b44f5ee)
-- [goroutines vs worker threads P1](https://medium.com/@Cazineer/go-goroutines-vs-node-cluster-worker-threads-part-2-52611217340a)
+- [goroutines vs worker threads P2](https://medium.com/@Cazineer/go-goroutines-vs-node-cluster-worker-threads-part-2-52611217340a)
 
 ## More
 - [Nodejs Performance](https://devtut.github.io/nodejs/node-js-performance.html#increase-maxsockets)
