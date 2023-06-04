@@ -5,8 +5,7 @@ module.exports = [
         children: [
             'case-study/notification/',
             'case-study/metrics/',
-            'case-study/hotel/',
-            'case-study/ticket-master/',
+            'case-study/ad-click/',
             {
                 title: "Online tools",
                 children: [
@@ -22,11 +21,13 @@ module.exports = [
                 ]
             },
             {
-                title: "FinTech",
+                title: "Booking System",
                 children: [
                     'case-study/payment/',
                     'case-study/digital-wallet/',
                     'case-study/stock-exchange/',
+                    'case-study/hotel/',
+                    'case-study/ticket-master/',
                 ]
             },
             {

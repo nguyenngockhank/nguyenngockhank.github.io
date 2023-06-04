@@ -123,7 +123,6 @@ For communication between clients (web and mobile applications) and servers, an 
 ![Compare](./payment-gateway-providers-compared.png)
 
 
-
 ## Payment security
 
 The table below summarizes techniques that are commonly used in payment security.
@@ -160,6 +159,20 @@ let result = decimal / 3
 
 - [Monetary value in integer over decimal datatype](https://dba.stackexchange.com/questions/248815/monetary-value-in-integer-over-decimal-datatype)
 - [best data type is for storing money values](https://laracasts.com/discuss/channels/laravel/best-data-type-is-for-storing-money-values)
+
+## Stripe API Redesign
+
+Stage 1  2011: The Stripe API, or what could be described as “7 lines of code”, revolved around the Charge concept. At this point, it exclusively handled card payments.
+
+Stage 2  2011-2015: the Stripe API introduced the Token API. Its goal was to enable its customers to avoid the complex and tedious process of adhering to PCI compliance requirements.
+
+Stage 3  2015: ACH and Bitcoin payments entered the scene. Because these types of transactions needed some time to “finalize”, Stripe integrated a feedback loop into the API. The change helped indicate the success of the charge.
+
+Stage 4  2015-2017: This stage saw the addition of even more payment methods, including AliPay, WeChat Pay, and iDeal. As a result, the Source API was developed as an abstraction to support these varying payment methods.
+
+Stage 5  2017-2018: As the number of supported payment methods grew, the team spent several months drafting a **Unified Payments API**, with the introduction of *PaymentIntents* and *PaymentMethod*.
+
+Stage 6  2018-2020: Stripe invested two years to migrate their clients to the **Unified Payments API**.
 
 ## Acronyms 
 - PCI DSS = Payment Card Industry Data Security Standard
