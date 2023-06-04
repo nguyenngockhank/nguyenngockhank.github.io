@@ -95,6 +95,8 @@ const awsDocs = [
   'cloud',
   'architecture',
   'aws-dev-tools',
+  'ec2/',
+  'sg/',
   'elb',
   'arn',
   'access-keys',

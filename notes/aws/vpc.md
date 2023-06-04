@@ -118,17 +118,6 @@ All traffic | All       | All        | Custom  - from Public SG
 ### Network Access Control List (NACL)
 ... todo
 
-## Security Group vs NACLs
-
-Feature | SG    | NACL 
---------| ----- | -------
-Operates at | instance level | subnet level
-Apply to | `associated` instances | all instances deployed in associated subnet
-Support |  Allow rules only | Allow & Deny rules
-Rules are evaluted | before deciding allow traffic | in order, start with lowest numbered rule when deciding allow traffic
-State | **Stateful**. Return traffic is allowed, regardless of the rules | **Stateless**. Return traffic must be explicitly allowed by rules
-Relationship | SG & resource is `n - n`  | NACL & subnet is `n - 1`
-
 ## Others
 
 ## Instance from private subnet call outside

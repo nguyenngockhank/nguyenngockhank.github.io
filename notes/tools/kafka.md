@@ -35,7 +35,7 @@ manages cluster, brokers, topics, offsets, events,...
 - is a set of consumers which corporate to consume data from topics
 - each consumer in group reads 1 partition in topic
 - If **total of consumers <= total of partitions**, some consumers read one more partitions
-- If **total of consumers > total of partitions**, some consumers will be idle
+- If **total of consumers > total of partitions**, some consumers will be idle. It means consumers in the same group can not read the same partition.
 - One consumer group can consume many topics
 
 ![consumer group](https://ibm.github.io/event-streams/images/kafka_overview.png)

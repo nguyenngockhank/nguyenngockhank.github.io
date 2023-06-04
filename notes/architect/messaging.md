@@ -120,6 +120,10 @@ aggregate_id | root of aggregate, different aggregate_id can be sent in parallel
 created_at   | timestamp (use this field to make sure the order)
 event_payload  | body of event
 
+See more: 
+- [Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html)
+- [Node pkg: pg-trx-outbox](https://www.npmjs.com/package/pg-trx-outbox)
+
 ### Order in receiving messages
 
 Solution, routing the relevant messages to a consumer

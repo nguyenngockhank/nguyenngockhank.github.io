@@ -254,6 +254,98 @@ CREATE DATABASE logistics
 TABLESPACE ts_primary;
 ```
 
+## 2PC 
+
+use this feature with one coordinator and two nodes
+- The step with [C] means operation on the coordinator node, 
+- and with [P] means operation on foreign servers (participant nodes).
+
+### Configuration
+
+1. [C] Set GUC parameter max_foreign_prepared_transactions
+
+```
+$ $EDITOR postgresql.conf
+max_connections = 100
+max_prepared_foreign_transactions = 200 # max_connections = 100 and two foreign servers
+max_foreign_transaction_resolvers = 1
+foreign_twophase_commit = required
+foreign_transaction_resolution_interval = 5s
+froeign_transaction_resolver_timeout = 60s
+```
+
+2. [P] Set GUC parameter max_prepared_transactions
+
+```
+$ $EDITOR postgresql.conf
+max_prepared_transactions = 100 # same as max_connections of the coordinator server
+log_statement = all # for testing
+log_line_prefix = '<F1> ' # for fs2 server we can set '<F2> '
+```
+
+3. [C] Create postgres_fdw extension
+
+4. [C] Create foreign servers with two_phase_commit parameter = on
+
+```
+=# CREATE SERVER fs1 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'fs1', dbname 'postgres', port '5432');
+CREATE SERVER
+
+=# CREATE SERVER fs2 FOREIGN DATA WRAPPER postgres_fdw OPTIONS (host 'fs2', dbname 'postgres', port '5342');
+CREATE SERVER
+
+=# SELECT * FROM pg_foreign_server;
+ oid  | srvname | srvowner | srvfdw | srvtype | srvversion | srvacl |              srvoptions
+-------+---------+----------+--------+---------+------------+--------+--------------------------------------
+16451 | fs1     |       10 |  16387 |         |            |        | {host=fs1,dbname=postgres,port=5432}
+16452 | fs2     |       10 |  16387 |         |            |        | {host=fs2,dbname=postgres,port=5432}
+```
+
+5. [C] Create user mapping
+
+```
+=# CREATE USER MAPPING FOR PUBLIC SERVER fs1;
+CREATE USER MAPPING
+
+=# CREATE USER MAPPING FOR PUBLIC SERVER fs2;
+CREATE USER MAPPING
+```
+
+### Example
+
+```
+=# BEIGN;
+=# INSERT INTO ft1 VALUES (1);
+=# INSERT INTO ft2 VALUES (1);
+=# COMMIT;
+```
+
+
+We will see the following server logs on fs1 server and fs2 server.
+
+```
+<FS1> LOG:  statement: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+<FS1> LOG:  execute pgsql_fdw_prep_1: INSERT INTO public.s1(col) VALUES ($1)
+<FS1> DETAIL:  parameters: $1 = '1'
+<FS1> LOG:  statement: DEALLOCATE pgsql_fdw_prep_1
+
+<FS2> LOG:  statement: START TRANSACTION ISOLATION LEVEL REPEATABLE READ
+<FS2> LOG:  execute pgsql_fdw_prep_2: INSERT INTO public.s2(col) VALUES ($1)
+<FS2> DETAIL:  parameters: $1 = '1'
+<FS2> LOG:  statement: DEALLOCATE pgsql_fdw_prep_2
+
+<FS1> LOG:  statement: PREPARE TRANSACTION 'fx_68464475_515_16400_10'
+<FS2> LOG:  statement: PREPARE TRANSACTION 'fx_658736079_515_16410_10'
+<FS1> LOG:  statement: COMMIT PREPARED 'fx_68464475_515_16400_10'
+<FS2> LOG:  statement: COMMIT PREPARED 'fx_658736079_515_16410_10'
+```
+
+::: warning PREPARE TRANSACTION
+PREPARE TRANSACTION is not intended for use in applications or interactive sessions. Its purpose is to allow an external transaction manager to perform atomic global transactions across multiple databases or other transactional resources. Unless you're writing a transaction manager, you probably shouldn't be using PREPARE TRANSACTION.
+:::
+
+https://wiki.postgresql.org/wiki/Atomic_Commit_of_Distributed_Transactions
+
 ## References 
 
 - [PostgreSQL Tutorial](https://www.tutorialspoint.com/postgresql/index.htm)
