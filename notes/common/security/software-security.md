@@ -1,3 +1,7 @@
+---
+tags: ['Security']
+---
+
 # Software Security
 
 ::: tip

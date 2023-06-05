@@ -34,49 +34,56 @@ tags: ["Payment"]
 7. The merchant displays a status page with the transaction status (accepted or denied). And the issuer bank also sends an appropriate message to the customer.
 8. Within a day or a couple of days, during clearing process, the issuing bank transfers funds to the merchant's account.
 
-## Debit / Credit Cards 
+## Integration
+
+![flow](./integration.png)
+*Typicla Payment gateway integration*
 
 ### Authorization & Capture
 
 - **Authorization**  The bank checks for sufficient funds and, if successful, holds the amount on the customer’s account to guarantee it or the merchant.
 - **Capture** The money moves from the issuing bank to the merchant’s account. 
 
-### Return money to consumer
 
-**Mollie 2 flows**
+Separating authorization and capture is useful if you need to take additional actions between confirming that a customer is able to pay and collecting their payment. For example, if you’re selling stock-limited items, you may need to confirm that an item purchased by your customer using Checkout is still available before capturing their payment and fulfilling the purchase. 
+
+
+### [Stripe: Separate authorization & capture](https://stripe.com/docs/payments/accept-a-payment?platform=web&ui=checkout#auth-and-capture)
+
+```js{10}
+const session = await stripe.checkout.sessions.create({
+  line_items: [
+    {
+      price: '{{PRICE_ID}}',
+      quantity: 1,
+    },
+  ],
+  mode: 'payment',
+  payment_intent_data: {
+    capture_method: 'manual',
+  },
+  success_url: 'https://example.com/success.html',
+  cancel_url: 'https://example.com/cancel.html',
+});
+```
+
+To capture an uncaptured payment use [capture API](https://stripe.com/docs/api/payment_intents/capture)
+
+```js
+const paymentIntent = await stripe.paymentIntents.capture(
+  'pi_3NDBAc2eZvKYlo2C0KIz0yl1'
+);
+```
+
+### [Mollie: Two flows: authorized and paid](https://docs.mollie.com/orders/status-changes#two-flows-authorized-and-paid)
 ![mollie order status](https://assets.docs.mollie.com/_images/order-status-flow@2x.png)
-
-[Mollie: Two flows: authorized and paid](https://docs.mollie.com/orders/status-changes#two-flows-authorized-and-paid)
 
 We take action `cancel` the payment when `authorized`, `refund` if payment `paid`, `completed`, `shipping`. 
 - `refund` action could be charged double (from the original payment, and the refund payment)
 - increase action `cancel` to avoid being charged
 
-### Storing Cards info
+- [Cancel order lines](https://docs.mollie.com/reference/v2/orders-api/cancel-order-lines)
 
-::: warning ⚠️⚠️⚠️ Can a Merchant Store Credit Card Information?
-To answer briefly, yes, merchants can store credit card information.
-
-The long answer is that merchants must be **PCI compliant** to store their credit card data. However, there’s also some data you can keep and some you can’t make sure you securely handle your customers’ credit card information.
-
-[Read more: PCI requirements for storing credit card](https://www.pcidssguide.com/pci-requirements-for-storing-credit-card-information/)
-:::
-
-::: tip Use Tokenization
-Tokenization is the process uses to collect sensitive card or bank account details, or personally identifiable information (PII), directly from your customers in a secure manner. 
-
-**A token representing this information is returned to your server to use**. You should use our recommended payments integrations to perform this process **client-side**. This ensures that no sensitive card data touches your server, and allows your integration to operate in a PCI-compliant way.
-
-[Read more: Stripe tokens](https://stripe.com/docs/api/tokens)
-:::
-
-
-
-## Integration
-
-
-![flow](./integration.png)
-*Typicla Payment gateway integration*
 
 ### Avoid missing payment status changes  
 
@@ -92,10 +99,54 @@ Tokenization is the process uses to collect sensitive card or bank account detai
 - [Mollie: Order status changes](https://docs.mollie.com/orders/status-changesges)
 - [Stripe: How payment intents work](https://stripe.com/docs/payments/intents)
 
-::: warning Stripe Failed Payment
-A **failed** payemnt intent of Stripe can become a **succeeded** after retrying.
+::: danger Stripe Failed Payment
+A **failed** payemnt intent of Stripe can become a **succeeded** after payer retries.
 ::: 
 
+
+### Tokenization
+
+::: danger ⚠️⚠️⚠️ Can a Merchant Store Credit Card Information?
+To answer briefly, yes, merchants can store credit card information.
+
+The long answer is that merchants must be **PCI compliant** to store their credit card data. However, there’s also some data you can keep and some you can’t make sure you securely handle your customers’ credit card information.
+
+[Read more: PCI requirements for storing credit card](https://www.pcidssguide.com/pci-requirements-for-storing-credit-card-information/)
+:::
+
+::: tip Use Tokenization
+Tokenization is the process uses to collect sensitive card or bank account details, or personally identifiable information (PII), directly from your customers in a secure manner. 
+
+**A token representing this information is returned to your server to use**. You should use our recommended payments integrations to perform this process **client-side**. This ensures that no sensitive card data touches your server, and allows your integration to operate in a PCI-compliant way.
+
+:::
+
+
+![mollie](https://assets.docs.mollie.com/_images/components-flow@2x.png)
+*Mollie Components in your checkout*
+
+Note: Card Token is valid in 1 hour
+
+
+Read more: 
+- [Stripe - Token Management (Beta)](https://stripe.com/docs/issuing/controls/token-management)
+- [Stripe - Save payment method details](https://stripe.com/docs/payments/accept-a-payment?platform=web&ui=checkout#save-payment-method-details)
+- [Mollie - Create payment (Credit card)](https://docs.mollie.com/reference/v2/payments-api/create-payment#credit-card)
+
+
+### Recurring payments
+
+::: warning Reducing the risk of chargebacks
+To reduce the risk of chargebacks, it’s recommended to communicate how often and how much the customer will be charged as clearly as possible. We suggest notifying the customer a couple of days in advance of the next payment, for example by sending them an email.
+:::
+
+**Types**:
+- Subscriptions: billings, recurring donations, ...
+- Installments: let you split a payment into a few recurring charges
+
+**Refs**: 
+- [Mollie Recurring ](https://docs.mollie.com/payments/recurring)
+- [Stripe Recurring payments](https://stripe.com/docs/recurring-payments)
 
 ### Avoid double charge
 
@@ -118,9 +169,6 @@ For communication between clients (web and mobile applications) and servers, an 
 
 <!-- https://www.altexsoft.com/blog/business/payment-gateway-integration/ -->
 
-### Popular PSP(s)
-
-![Compare](./payment-gateway-providers-compared.png)
 
 
 ## Payment security
@@ -137,6 +185,12 @@ Distributed denial-of-service attack (DDoS) | Rate limiting and firewall
 Card theft |  Tokenization. Instead of using real card numbers, tokens are stored and used for payment
 PCI compliance | PCI DSS is an information security standard for organizations that handle branded credit cards
 Fraud | Address verification, card verification value (CVV), user behavior analysis, etc.
+
+
+
+## Popular PSP(s)
+
+![Compare](./payment-gateway-providers-compared.png)
 
 ## Database Design 
 
