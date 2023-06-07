@@ -2,6 +2,11 @@
 
 [geo-intro - read this](https://aeturrell.github.io/coding-for-economists/geo-intro.html)
 
+## Zip codes
+
+A ZIP Code is a system of postal codes used by the United States Postal Service (USPS). 
+
+https://en.wikipedia.org/wiki/List_of_postal_codes
 
 ## Project 3D to 2D 
 
@@ -27,6 +32,25 @@ https://www.npmjs.com/package/latlon-geohash
 ### Dijkstra - find the shortest path 
 
 https://www.youtube.com/watch?v=mWNLMg2WxY0&t=4s&ab_channel=%C4%90aIT%E1%BB%9D
+
+### Degree precision versus length 
+
+
+DMS = degrees, minutes, and seconds
+
+decimal places | decimal degrees | DMS      | Object that can be unambiguously recognized at this scale | N/S or E/W at equator
+-----         | ------- |        ---------- | --------- | -----
+0              |	1.0	           | 1° 00′ 0″	      | country or large region	            |   111 km
+1              |	0.1	           | 0° 06′ 0″	      | large city or district	            |   11.1 km	
+2              |	0.01	         | 0° 00′ 36″	      | town or village	                    |   1.11 km	
+3              |	0.001	         | 0° 00′ 3.6″	    | neighborhood, street	              |   111 m	
+4              |	0.0001	       | 0° 00′ 0.36″	    | individual street, large buildings	|   11.1 m	
+5              |	0.00001	       | 0° 00′ 0.036″	  | individual trees, houses	          |   1.11 m	
+6              |	0.000001	     | 0° 00′ 0.0036″	  | individual humans	                  |   111 mm	
+7              |	0.0000001	     | 0° 00′ 0.00036″	| practical limit of commercial surveying	| 11.1 mm	
+8              |	0.00000001	   | 0° 00′ 0.000036″	| specialized surveying (e.g. tectonic plate mapping)	| 1.11 mm	
+		
+https://en.wikipedia.org/wiki/Decimal_degrees
 
 
 ### Haversine formula - find distance between 2 points

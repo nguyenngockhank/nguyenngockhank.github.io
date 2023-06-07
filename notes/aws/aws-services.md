@@ -1,5 +1,7 @@
 # Amazon Services Overview
 
+![diff cloud](./services-mapping.jpeg)
+
 ## Analytics 
 
 ### Amazon Athena

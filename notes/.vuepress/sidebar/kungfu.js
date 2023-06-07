@@ -46,7 +46,7 @@ module.exports = [
                 ]
             },
             {
-                title: "Location",
+                title: "Location-based",
                 children: [
                     'case-study/proximity-service/',
                     'case-study/proximity-service/part2/',

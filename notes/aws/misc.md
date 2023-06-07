@@ -131,8 +131,8 @@ Recovery | ❌ | You may get it back if not associate to someone else
 - The storage is a disk that physically attached to host
 - Ideal workload: buffers, caches, scratch data, temporary content
 - Data is lost when:
-- Underlying disk drive fails
-- Instance stop / hibernates / terminates
+    - Underlying disk drive fails
+    - Instance stop / hibernates / terminates
 - Very high IOPS: up to million IOPS (Eg: i3.16xlarge 3.3M read and 1.4M write IOPS)
 - Ref: [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/storage-optimized-instances.html#storage-instances-diskperf)
 
@@ -147,6 +147,17 @@ Recovery | ❌ | You may get it back if not associate to someone else
     - BeforeAllowTraffic
     - AfterAllowTraffic
 - Ref: https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html
+
+## Elastic Network interfaces (ENI)
+- Logical component in a VPC that represents a **virtual network card**
+- The ENI can have the following attributes:
+    - Primary private IPv4, one or more secondary IPv4
+    - One Elastic IP (IPv4) per private IPv4
+    - One Public IPv4
+    - One or more security groups
+    - A MAC address
+- You can create ENI independently and attach them on the fly (**move them**) on EC2 instances for failover
+- Bound to a specific availability zone (AZ)
 
 ## Amazon Macie
 

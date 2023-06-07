@@ -1,6 +1,4 @@
-# EC2
-
-EC2 = Elastic Compute Cloud
+# Elastic Compute Cloud (EC2)
 
 ## Overview
 
@@ -306,6 +304,73 @@ each partition represent a rack in AWS
 - A partition failure can affect many EC2 but won’t affect other partitions
 - EC2 instances get access to the partition information as metadata
 
-
-
 **Use case**: HDFS, HBase, Cassandra, Kafka
+
+## Hibernate
+
+We know we can stop, terminate instances
+- **Stop** – the data on disk (EBS) is kept intact in the next start
+- **Terminate** – any EBS volumes (root) also set-up to be destroyed is lost
+
+On start, the following happens:
+- First start: the OS boots & the EC2 User Data script is run
+- Following starts: the OS boots up
+- Then your application starts, caches get warmed up, and that can take time! 
+
+![hibernate](./hibernation-flow.png)
+
+### Overview
+- The in-memory (RAM) state is preserved
+- The instance boot is much faster! (the OS is not stopped / restarted)
+- Under the hood: the RAM state is written to a file in the root EBS volume
+- The root EBS volume must be encrypted
+
+Use cases:
+- Long-running processing
+- Saving the RAM state
+- Services that take time to initialize
+
+
+### Good to know
+- Supported Instance Families – C3, C4, C5, I3, M3, M4, R3, R4, T2, T3, …
+- Instance RAM Size – must be less than 150 GB.
+- Instance Size – not supported for bare metal instances.
+- AMI – Amazon Linux 2, Linux AMI, Ubuntu, RHEL, CentOS & Windows…
+- Root Volume – must be EBS, encrypted, not instance store, and large
+- Available for On-Demand, Reserved and Spot Instances
+- An instance can NOT be hibernated more than 60 days
+
+
+## EC2 Instance Store
+- EBS volumes are network drives with good but “limited” performance
+- If you need a high-performance hardware disk, use EC2 Instance Store
+- [Better I/O performance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/storage-optimized-instances.html#storage-instances-diskperf)
+
+- EC2 Instance Store lose their storage if they’re stopped (ephemeral)
+- Good for buffer / cache / scratch data / temporary content
+- Risk of data loss if hardware fails
+- Backups and Replication are your responsibility 
+
+
+## Amazon Machine Image (AMI)
+
+- AMI are a **customization** of an EC2 instance
+    - You add your own software, configuration, operating system, monitoring…
+    - Faster boot / configuration time because all your software is pre-packaged
+- AMI are built for a **specific region** (and can be copied across regions)
+- You can launch EC2 instances from:
+    - A Public AMI: AWS provided
+    - Your own AMI: you make and maintain them yourself
+    - An AWS Marketplace AMI: an AMI someone else made (and potentially sells)
+
+### AMI Process (from an EC2 instance)
+
+![ami](./ami_lifecycle.png)
+
+- Start an EC2 instance and customize it
+- Stop the instance (for data integrity)
+- Build an AMI – this will also create EBS snapshots
+- Launch instances from other AMIs
+
+
+[Tạo AMI từ EC2](https://hiepsharing.com/tao-ami-tu-ec2-instance/)

@@ -107,3 +107,7 @@ Thoughput per volumne: E.g 1000 MiB/s
 E.g: 
 - App for downloading => should choose Thoughput
 - App for read / write much => should choose IOPS
+
+## Services in Different Clounds
+
+![diff cloud](./services-mapping.jpeg)

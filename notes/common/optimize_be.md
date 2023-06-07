@@ -21,7 +21,7 @@ tags: ["Performance"]
 ## Increase concurrency
 - Optimize code performance
 - Scale-out
-    - Cloning to multiple processes (X-Axis) (Stateless pattern)
+    - Cloning to multiple processes (X-Axis) (Stateless pattern, Replica In DB)
     - Splitting by functions (Y-Axis) (Domain Driven pattern)
     - Data partitioning (Z-Axis) (Sharding)
 

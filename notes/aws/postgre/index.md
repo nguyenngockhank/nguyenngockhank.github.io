@@ -42,7 +42,7 @@ Read Replicas | 5 | 15
 Cross-region read replicas | ✅ | ✅
 Replica Lag | Few seconds | Few hundred-milliseconds
 Max lag | Few minutes | 30 seconds
-Replica Sync Types | Async | Sync
+Replica Sync Types | Async | Async (lower latency)
 Replication mechanism | Secondary Replica | Six copies, 3 AZs
 
 ### Storage
@@ -81,3 +81,6 @@ Database Cloning | ❌ | ✅
 Query Plan Management | ❌ | ✅
 Serverless | ❌ | ✅
 
+## Refs
+
+https://aws.amazon.com/blogs/database/is-amazon-rds-for-postgresql-or-amazon-aurora-postgresql-a-better-choice-for-me/

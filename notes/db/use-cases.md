@@ -8,16 +8,23 @@ tags: ["NoSQL"]
 
 There is no super storage for all cases. Here is a few of my notes about it:
 
-## Based on CAP
+## Database types overview
 
-![Based on CAP](./img/db-cap.png)
+![Database types](./img/types-db.jpeg)
+
+[Ref](https://blog.devgenius.io/mastering-the-database-duality-exploring-the-realm-of-sql-and-nosql-with-cheatsheet-33a73f752460)
 
 ## Database Select process
+
 ![choose-db-process](./img/choose-db.jpeg)
 
 [Original Tweet](https://twitter.com/alexxubyte/status/1653785124474064897/photo/1)
 
-## Polygot Persistence
+### Select based on CAP
+
+![Based on CAP](./img/db-cap.png)
+
+### Polygot Persistence
 
 ![Polygot Database](./img/polyglot.png)
 

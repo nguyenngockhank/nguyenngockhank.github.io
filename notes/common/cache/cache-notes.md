@@ -6,6 +6,8 @@ tags: ["Performance"]
 
 <TagLinks />
 
+![Overview](./cache-overview.jpg)
+
 ## Cache levels
 - Browser / Client side
 - CDN

@@ -55,6 +55,18 @@ Five cultural and architectural principles underpin microservices development:
     - Logs and metrics 
 - **Client** — Client applications, such as websites and mobile applications, interact with your microservice backend.
 
+### The Scale Cube∂ 
+
+![scaling cube](./img/ms-scaling.png)
+
+**X-axis**: This is usually referred as scale-out and scale-in which can be achieved with Public-Cloud providers and also **Kubernetes**. One can scale-out using the resource utilisation like CPU, I/O or custom-metrics upon to your architecture.
+
+**Y-axis**: Functional decomposition can be achieved by decoupling your architecture into functions. **Microservices** is an example for functional decomposing.
+
+**Z-axis**: With Data Partitioning, the functions are able to run with a subset of data. Although there maybe several ways to achieve that, **Event Sourcing** is one of the most scalable and widely accepted approach for that.
+
+
+
 ### Synchoronous vs Asynchoronous Communication
 
 - **With sync communication**, a call is made to a remote server, which blocks until the operation completes.

@@ -96,14 +96,22 @@ const awsDocs = [
   'architecture',
   'aws-dev-tools',
   'ec2/',
+  'elb/',
   'sg/',
-  'elb',
   'arn',
   'access-keys',
   'aws-services',
   'vpc',
   'postgre/',
   'misc',
+  {
+    title: "Storage",
+    children: [
+      'ebs',
+      'efs/',
+      's3'
+    ].map(prefixMapFn('/aws/'))
+  },
 ].map(prefixMapFn('/aws/'));
 
 module.exports = [
