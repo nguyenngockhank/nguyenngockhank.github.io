@@ -48,6 +48,13 @@ ECR  | Elastic Container Registry
 [ENI](./misc.md#elastic-network-interfaces-eni) | Elastic Network interface
 EIP | Elastic IP 
 
+## F
+
+Abbr | Meaning  | Desc
+---  | ----- | ---
+FIFO | First In First Out | 
+
+
 ## H 
 
 Abbr | Meaning  | Desc
@@ -113,6 +120,7 @@ SSE-S3 | SSE with Amazon S3-Managed Keys
 SSE-KMS | SSE with KMS Keys stored in AWS KMS
 SSE-C | SSE with Customer-Provided Keys
 SSD  | Solid-state drive
+SQS  | Simple Queue Service
 
 ## T 
 

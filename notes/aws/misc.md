@@ -149,6 +149,25 @@ Recovery | ❌ | You may get it back if not associate to someone else
 - You can create ENI independently and attach them on the fly (**move them**) on EC2 instances for failover
 - Bound to a specific availability zone (AZ)
 
+## Storage Comparison
+
+![img](./img/storage-options.png)
+
+- **S3**: Object Storage
+- **S3 Glacier**: Object Archival
+- **EBS volumes**: Network storage for one EC2 instance at a time
+- **Instance Storage**: Physical storage for your EC2 instance (high IOPS)
+- **EFS**: Network File System for Linux instances, POSIX filesystem
+- **FSx for Windows**: Network File System for Windows servers
+- **FSx for Lustre**: High Performance Computing Linux file system
+- **FSx for NetApp ONTAP**: High OS Compatibility
+- **FSx for OpenZFS**: Managed ZFS file system
+- **Storage Gateway**: S3 & FSx File Gateway, Volume Gateway (cache & stored), Tape Gateway
+- **Transfer Family**: FTP, FTPS, SFTP interface on top of Amazon S3 or Amazon EFS
+- **DataSync**: Schedule data sync from on-premises to AWS, or AWS to AWS
+- **Snowcone / Snowball / Snowmobile**: to move large amount of data to the cloud, physically
+- **Database**: for specific workloads, usually with indexing and querying
+
 ## Amazon Macie
 
 ![Amazon Macie](./img/Arch_Amazon-Macie_48.png)
