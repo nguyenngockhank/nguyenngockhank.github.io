@@ -98,20 +98,23 @@ const awsDocs = [
   'ec2/',
   'elb/',
   'sg/',
+  'route53/',
   'arn',
   'access-keys',
   'aws-services',
   'vpc',
-  'postgre/',
-  'misc',
   {
     title: "Storage",
     children: [
+      'postgre/',
       'ebs',
       'efs/',
-      's3'
+      // { title: 'EC2 Instance Store', path: '/aws/ec2/#ec2-instance-store' },
+      's3',
     ].map(prefixMapFn('/aws/'))
   },
+  'misc',
+  'aws-abbr'
 ].map(prefixMapFn('/aws/'));
 
 module.exports = [

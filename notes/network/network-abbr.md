@@ -10,10 +10,8 @@
 | [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard "Advanced Encryption Standard") | Advanced Encryption Standard | Security | [U.S. FIPS PUB 197](http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf) |
 | [ANSI](https://en.wikipedia.org/wiki/ANSI "ANSI") | American National Standards Institute | Organization | [ANSI](http://www.ansi.org/) |
 | [API](https://en.wikipedia.org/wiki/Application_programming_interface "Application programming interface") | Application Programming Interface | Software | [API](https://en.wikipedia.org/wiki/API "API") |
-| [ARP](https://en.wikipedia.org/wiki/Address_Resolution_Protocol "Address Resolution Protocol") | Address Resolution Protocol | Link layer | RFC 1122 |
+| [ARP](./obtain-ip.md#address-resolution-protocol-arp) | Address Resolution Protocol | Link layer | RFC 1122 |
 | [ATM](https://en.wikipedia.org/wiki/Asynchronous_Transfer_Mode "Asynchronous Transfer Mode") | Asynchronous Transfer Mode | Telecom | [ATM cell description](https://web.archive.org/web/20160331225803/http://www.vceexamstest.com/cisco-real-questions.html) |
-
-- [ARP](./obtain-ip.md): Address Resolution Protocol
 
 ## B + C
 
@@ -165,8 +163,6 @@
 | [MPLS](https://en.wikipedia.org/wiki/Multiprotocol_Label_Switching "Multiprotocol Label Switching") | Multiprotocol Label Switching | network technology |     |
 | [MTU](https://en.wikipedia.org/wiki/Maximum_transmission_unit "Maximum transmission unit") | Maximum Transmission Unit | Multiple layers |     |
 
-- MAN: Metropolitan Area Network 
-- MAC: Media Access Control
 
 ## N
 
@@ -174,7 +170,7 @@
 | --- | --- | --- | --- |
 | [NAC](https://en.wikipedia.org/wiki/Network_Access_Control "Network Access Control") | Network access control | Link and other layers | [IEEE 802.1x](http://standards.ieee.org/getieee802/download/802.1X-2004.pdf) |
 | [NAS](https://en.wikipedia.org/wiki/Network-attached_storage "Network-attached storage") | Network-attached storage | Hardware / Storage | [Computer data storage](https://en.wikipedia.org/wiki/Computer_data_storage "Computer data storage") |
-| [NAT](https://en.wikipedia.org/wiki/Network_address_translation "Network address translation") | Network Address Translation | Internet Layer | [Cisco Internet Protocol Journal: A look Inside Network Address Translators](http://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_7-3/anatomy.html) |
+| [NAT](./nat.md) | Network Address Translation | Internet Layer | [Cisco Internet Protocol Journal: A look Inside Network Address Translators](http://www.cisco.com/web/about/ac123/ac147/archived_issues/ipj_7-3/anatomy.html) |
 | [NBMA](https://en.wikipedia.org/wiki/NBMA "NBMA") | Non-Broadcast Multiple Access (e.g. Frame Relay ATM) | Telecom | See [ATM](https://en.wikipedia.org/wiki/Asynchronous_Transfer_Mode "Asynchronous Transfer Mode"), [Frame Relay](https://en.wikipedia.org/wiki/Frame_Relay "Frame Relay") and [X.25](https://en.wikipedia.org/wiki/X.25 "X.25"), for examples. |
 | [NIC](https://en.wikipedia.org/wiki/Network_Interface_Controller "Network Interface Controller") | Network Interface Card | Physical layer | [Telecom Glossary](http://www.atis.org/glossary/definition.aspx?id=3535) |
 | [NRZ](https://en.wikipedia.org/wiki/Non-return-to-zero "Non-return-to-zero") | Non-return-to-zero | Physical layer | [Federal Standard 1037C](http://www.its.bldrdoc.gov/fs-1037/fs-1037c.htm) |

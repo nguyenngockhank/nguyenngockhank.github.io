@@ -342,14 +342,18 @@ Use cases:
 
 
 ## EC2 Instance Store
-- EBS volumes are network drives with good but “limited” performance
-- If you need a high-performance hardware disk, use EC2 Instance Store
-- [Better I/O performance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/storage-optimized-instances.html#storage-instances-diskperf)
 
-- EC2 Instance Store lose their storage if they’re stopped (ephemeral)
+- Provide temporary block level storage for instance. 
+- The storage is a disk that physically attached to host.
 - Good for buffer / cache / scratch data / temporary content
-- Risk of data loss if hardware fails
+- Ideal workload: buffers, caches, scratch data, temporary content
+- Data is lost when:
+    - Underlying disk drive fails
+    - Instance stop / hibernates / terminates
 - Backups and Replication are your responsibility 
+- Very high IOPS: up to million IOPS (Eg: i3.16xlarge 3.3M read and 1.4M write IOPS).  If you need a high-performance hardware disk, use EC2 Instance Store
+
+**Ref**: [Better I/O performance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/storage-optimized-instances.html#storage-instances-diskperf)
 
 
 ## Amazon Machine Image (AMI)

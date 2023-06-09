@@ -6,7 +6,7 @@ An Access Key is commonly referred to as **AWS Credentials**
 
 A user must be granted access to use Access Keys
 
-::: warning Notes
+::: danger Notes
 - Never share your access keys
 - Never commmit access keys to a **codebase**
 - You can have 2 active Access keys

@@ -125,16 +125,6 @@ Quotas |  Unlimited | 5
 Share publicity | ✅, but not recommended. | ✅
 Recovery | ❌ | You may get it back if not associate to someone else
 
-## EC2 Instance Store
-
-- Provide temporary block level storage for instance
-- The storage is a disk that physically attached to host
-- Ideal workload: buffers, caches, scratch data, temporary content
-- Data is lost when:
-    - Underlying disk drive fails
-    - Instance stop / hibernates / terminates
-- Very high IOPS: up to million IOPS (Eg: i3.16xlarge 3.3M read and 1.4M write IOPS)
-- Ref: [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/storage-optimized-instances.html#storage-instances-diskperf)
 
 ## Amazon ECS - Lifecycle event hooks
 
@@ -199,3 +189,8 @@ With the Nitro System, we are able to break apart those functions, offload them 
 - Customers: Epic Games, DIRECTV, Intuit, Lyft, Formula 1
 - Ref: [https://aws.amazon.com/ec2/graviton/](https://aws.amazon.com/ec2/graviton/)
 
+
+## Creating a Multi-Region Application with AWS Services
+
+- [Part 1, Compute, Networking, and Security](https://aws.amazon.com/blogs/architecture/creating-a-multi-region-application-with-aws-services-part-1-compute-and-security/)
+- [ Part 2, Data and Replication](https://aws.amazon.com/blogs/architecture/creating-a-multi-region-application-with-aws-services-part-2-data-and-replication/)
