@@ -110,7 +110,7 @@ const awsDocs = [
       'ebs',
       'efs/',
       // { title: 'EC2 Instance Store', path: '/aws/ec2/#ec2-instance-store' },
-      's3',
+      's3/',
     ].map(prefixMapFn('/aws/'))
   },
   'misc',

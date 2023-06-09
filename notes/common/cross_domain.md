@@ -93,6 +93,9 @@ vậy là sau khi insert thẻ script vào cuối body thì hàm `myDisplayFunct
 
 ## CORS (Cross-origin resource sharing)
 
+- Cross-Origin Resource Sharing (CORS)
+- Origin = scheme (protocol) + host (domain) + port
+
 Giúp AJAX vượt qua giới hạn =))
 
 ### Simple request

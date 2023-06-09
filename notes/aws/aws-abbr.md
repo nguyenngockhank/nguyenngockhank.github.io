@@ -8,6 +8,7 @@ Abbr | Meaning  | Desc
 ALB  | Application Load Balancing | L7
 [ASG](./elb/#auto-scaling-group-asg)  | Auto Scaling Groups 
 [AMI](./ec2/#amazon-machine-image-ami) | Amazon Machine Image | 
+ACL  | Access Control List 
 
 ## B
 
@@ -24,6 +25,8 @@ CLI  | AWS Command Line Interface
 CDK  | Cloud Development Kit
 [CIDR](../network/address.md#subnetting) | Classless Inter-Domain Routing / supernetting | a method of assigning IP addresses improves the efficiency of address distribution
 CFN  | AWS CloudFormation
+CRR | Cross-Region Replication
+[CORS](./s3/#cors) | Cross-Origin Resource Sharing
 
 ## D 
 
@@ -58,12 +61,25 @@ Abbr | Meaning  | Desc
 IAM  | Identity and Access Management | 
 IOPS | input/output operations per second | 
 IaC  | Infrastructure as Code
+IA   | Infrequent Access
+
+## K
+
+Abbr | Meaning  | Desc
+---  | ----- | ---
+KMS | Key Management Service 
 
 ## N
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 [NACL](./misc.md#network-access-control-list-nacl)  | Network Access Control List | Firewall works at Subnet level
+
+## M
+
+Abbr | Meaning  | Desc
+---  | ----- | ---
+MFA  | Multi-Factor Authentication | 
 
 ## V
 
@@ -94,6 +110,11 @@ SLD | Second Level Domain
 SDK  | Software Development Kit
 [SG](./sg/)  | Security Group
 SPOF | Single point of failure
+SRR  | Same-Region Replication | 
+SSE  | Server-Side Encryption | 
+SSE-S3 | SSE with Amazon S3-Managed Keys
+SSE-KMS | SSE with KMS Keys stored in AWS KMS
+SSE-C | SSE with Customer-Provided Keys
 
 ## W 
 
@@ -101,3 +122,4 @@ SPOF | Single point of failure
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 [WAF](./misc.md#aws-web-application-firewall-waf)  | Web Application Firewall | Protects your web app
+WORM | Write Once Read Many
