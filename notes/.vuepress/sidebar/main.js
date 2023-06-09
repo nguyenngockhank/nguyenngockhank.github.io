@@ -94,6 +94,7 @@ const networkDocs = [
 const awsDocs = [
   'cloud',
   'architecture',
+  'global-infra/',
   'aws-dev-tools',
   'ec2/',
   'elb/',

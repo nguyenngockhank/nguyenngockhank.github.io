@@ -34,6 +34,7 @@ Abbr | Meaning  | Desc
 ---  | ----- | ---
 [DNS](./route53/#what-is-dns)  | Domain Name Server | translates human friendly hostnames into the machine IP addresses
 [DR](./architecture.md#disaster-recovery-options)   | Disaster Recovery
+DC  | Data Center
 
 ## E
 
@@ -52,7 +53,7 @@ EIP | Elastic IP
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 [HA](./architecture.md#high-availability)  | Highly Availability | ensuring there is no SPOF
-
+HDD | Hard Disk Drive
 
 ## I 
 
@@ -81,17 +82,13 @@ Abbr | Meaning  | Desc
 ---  | ----- | ---
 MFA  | Multi-Factor Authentication | 
 
-## V
+## O
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
-[VPC](./vpc.md)  | Virtual Private Cloud | 
+OAC  | Origin Access Control 
+OAC  | Origin Access Identity
 
-## T 
-
-Abbr | Meaning  | Desc
----  | ----- | ---
-TLD | Top Level Domain
 
 ## R
 
@@ -115,6 +112,20 @@ SSE  | Server-Side Encryption |
 SSE-S3 | SSE with Amazon S3-Managed Keys
 SSE-KMS | SSE with KMS Keys stored in AWS KMS
 SSE-C | SSE with Customer-Provided Keys
+SSD  | Solid-state drive
+
+## T 
+
+Abbr | Meaning  | Desc
+---  | ----- | ---
+TLD | Top Level Domain
+
+## V
+
+Abbr | Meaning  | Desc
+---  | ----- | ---
+[VPC](./vpc.md)  | Virtual Private Cloud | 
+
 
 ## W 
 
