@@ -108,7 +108,8 @@ const awsDocs = [
     title: "Messaging Services",
     children: [
       'sqs/',
-      'sns/'
+      'sns/',
+      'kinesis/'
     ].map(prefixMapFn('/aws/'))
   },
   {

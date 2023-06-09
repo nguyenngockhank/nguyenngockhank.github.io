@@ -88,6 +88,7 @@ Abbr | Meaning  | Desc
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 MFA  | Multi-Factor Authentication | 
+MSK  | Managed Streaming for Apache Kafka | 
 
 ## O
 
