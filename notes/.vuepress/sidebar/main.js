@@ -105,6 +105,13 @@ const awsDocs = [
   'aws-services',
   'vpc',
   {
+    title: "Messaging Services",
+    children: [
+      'sqs/',
+      'sns/'
+    ].map(prefixMapFn('/aws/'))
+  },
+  {
     title: "Storage",
     children: [
       'postgre/',

@@ -120,7 +120,8 @@ SSE-S3 | SSE with Amazon S3-Managed Keys
 SSE-KMS | SSE with KMS Keys stored in AWS KMS
 SSE-C | SSE with Customer-Provided Keys
 SSD  | Solid-state drive
-SQS  | Simple Queue Service
+[SQS](./sqs/)  | Simple Queue Service
+SNS  | Simple Notification Service 
 
 ## T 
 

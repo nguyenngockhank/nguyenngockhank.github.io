@@ -90,4 +90,4 @@ FIFO = First In First Out (ordering of messages in the queue)
 
 **If the load is too big**, some transactions may be lost => SQS as a buffer to database writes
 
-[write to db](./sqs-as-buffer-to-db-write.png)
+![write to db](./sqs-as-buffer-to-db-write.png)
