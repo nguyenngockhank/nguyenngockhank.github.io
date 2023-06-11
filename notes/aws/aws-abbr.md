@@ -9,6 +9,7 @@ ALB  | Application Load Balancing | L7
 [ASG](./elb/#auto-scaling-group-asg)  | Auto Scaling Groups 
 [AMI](./ec2/#amazon-machine-image-ami) | Amazon Machine Image | 
 ACL  | Access Control List 
+ASR  | Automatic Speech Recognition 
 
 ## B
 
@@ -35,7 +36,7 @@ Abbr | Meaning  | Desc
 [DNS](./route53/#what-is-dns)  | Domain Name Server | translates human friendly hostnames into the machine IP addresses
 [DR](./architecture.md#disaster-recovery-options)   | Disaster Recovery
 DC  | Data Center
-[DAX](./dynamo/#) | DynamoDB Accelerator
+[DAX](./dynamo/#dynamodb-accelerator-dax) | DynamoDB Accelerator | inmemory cache for DynamoDB
 
 ## E
 
@@ -84,6 +85,7 @@ KMS | Key Management Service
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 [NACL](./misc.md#network-access-control-list-nacl)  | Network Access Control List | Firewall works at Subnet level
+NLP | Natural Language Processing
 
 ## M
 
@@ -98,6 +100,13 @@ Abbr | Meaning  | Desc
 ---  | ----- | ---
 OAC  | Origin Access Control 
 OAC  | Origin Access Identity
+
+## Q
+
+
+Abbr | Meaning  | Desc
+---  | ----- | ---
+QLDB | Quantum Ledger Database
 
 
 ## R
@@ -119,24 +128,28 @@ SDK  | Software Development Kit
 SPOF | Single point of failure
 SRR  | Same-Region Replication | 
 SSE  | Server-Side Encryption | 
-SSE-S3 | SSE with Amazon S3-Managed Keys
-SSE-KMS | SSE with KMS Keys stored in AWS KMS
-SSE-C | SSE with Customer-Provided Keys
+[SSE-S3](./s3/#sse-s3) | SSE with Amazon S3-Managed Keys
+[SSE-KMS](./s3/#sse-kms)  | SSE with KMS Keys stored in AWS KMS
+[SSE-C](./s3/#sse-c) | SSE with Customer-Provided Keys
 SSD  | Solid-state drive
 [SQS](./sqs/)  | Simple Queue Service
-SNS  | Simple Notification Service 
+[SNS](./sns/)  | Simple Notification Service 
+SSML | Speech Synthesis Markup Language
+
 
 ## T 
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 TLD | Top Level Domain
+TTL | Time to live
 
 ## P
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 PITR | Point-In-Time Recovery
+PHI | Protected Health Information
 
 ## V
 

@@ -104,6 +104,7 @@ const awsDocs = [
   'access-keys',
   'aws-services',
   'vpc',
+  'ml/',
   {
     title: "Messaging Services",
     children: [
@@ -115,11 +116,13 @@ const awsDocs = [
   {
     title: "Storage",
     children: [
+      'db/',
       'postgre/',
       'ebs',
       'efs/',
       // { title: 'EC2 Instance Store', path: '/aws/ec2/#ec2-instance-store' },
       's3/',
+      'dynamo/'
     ].map(prefixMapFn('/aws/'))
   },
   'misc',
