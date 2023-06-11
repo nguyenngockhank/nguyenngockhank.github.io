@@ -35,6 +35,7 @@ Abbr | Meaning  | Desc
 [DNS](./route53/#what-is-dns)  | Domain Name Server | translates human friendly hostnames into the machine IP addresses
 [DR](./architecture.md#disaster-recovery-options)   | Disaster Recovery
 DC  | Data Center
+[DAX](./dynamo/#) | DynamoDB Accelerator
 
 ## E
 
@@ -47,6 +48,7 @@ Abbr | Meaning  | Desc
 ECR  | Elastic Container Registry
 [ENI](./misc.md#elastic-network-interfaces-eni) | Elastic Network interface
 EIP | Elastic IP 
+ETL | Extract, Transform and Load
 
 ## F
 
@@ -129,6 +131,12 @@ SNS  | Simple Notification Service
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 TLD | Top Level Domain
+
+## P
+
+Abbr | Meaning  | Desc
+---  | ----- | ---
+PITR | Point-In-Time Recovery
 
 ## V
 
