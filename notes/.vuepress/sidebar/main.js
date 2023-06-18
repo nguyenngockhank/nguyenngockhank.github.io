@@ -104,13 +104,20 @@ const awsDocs = [
   'access-keys',
   'aws-services',
   'vpc',
-  'ml/',
+
   {
     title: "Messaging Services",
     children: [
       'sqs/',
       'sns/',
       'kinesis/'
+    ].map(prefixMapFn('/aws/'))
+  },
+  {
+    title: "Data processing", 
+    children: [
+      'ml/',
+      'data-analytics/',
     ].map(prefixMapFn('/aws/'))
   },
   {
