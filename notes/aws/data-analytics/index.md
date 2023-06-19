@@ -12,7 +12,9 @@
 
 **Use cases**: Business intelligence / analytics / reporting, analyze & query VPC Flow Logs, ELB Logs, **CloudTrail trails**, etc...
 
-**Exam Tip**: analyze data in S3 using serverless SQL, use Athena
+::: tip Exam Tip
+analyze data in S3 using serverless SQL, use Athena
+:::
 
 ### Performance Improvement
 

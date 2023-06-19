@@ -99,12 +99,17 @@ const awsDocs = [
   'ec2/',
   'elb/',
   'sg/',
-  'route53/',
   'arn',
   'access-keys',
   'aws-services',
-  'vpc',
-
+  {
+    title: "Network",
+    children: [
+      'vpc/',
+      'vpc',
+      'route53/',
+    ].map(prefixMapFn('/aws/'))
+  }, 
   {
     title: "Messaging Services",
     children: [

@@ -28,6 +28,7 @@ CDK  | Cloud Development Kit
 CFN  | AWS CloudFormation
 CRR | Cross-Region Replication
 [CORS](./s3/#cors) | Cross-Origin Resource Sharing
+CGW | Customer Gateway
 
 ## D 
 
@@ -37,6 +38,8 @@ Abbr | Meaning  | Desc
 [DR](./architecture.md#disaster-recovery-options)   | Disaster Recovery
 DC  | Data Center
 [DAX](./dynamo/#dynamodb-accelerator-dax) | DynamoDB Accelerator | inmemory cache for DynamoDB
+DX | Direct Connect
+
 
 ## E
 
@@ -50,6 +53,7 @@ ECR  | Elastic Container Registry
 [ENI](./misc.md#elastic-network-interfaces-eni) | Elastic Network interface
 EIP | Elastic IP 
 ETL | Extract, Transform and Load
+ECMP | Equal-cost multi-path routing
 
 ## F
 
@@ -73,6 +77,9 @@ IAM  | Identity and Access Management |
 IOPS | input/output operations per second | 
 IaC  | Infrastructure as Code
 IA   | Infrequent Access
+IANA | Internet Assigned Numbers Authority
+IGW  |  Internet Gateway
+
 
 ## K
 
@@ -84,7 +91,8 @@ KMS | Key Management Service
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
-[NACL](./misc.md#network-access-control-list-nacl)  | Network Access Control List | Firewall works at Subnet level
+[NACL](./vpc/#network-access-control-list-nacl)  | Network Access Control List | Firewall works at Subnet level
+[NAT](./vpc/#nat-gateway) | Network Address Translation
 NLP | Natural Language Processing
 
 ## M
@@ -115,6 +123,7 @@ Abbr | Meaning  | Desc
 ---  | ----- | ---
 [RTO](./architecture.md#business-continuity-plan-bcp)  | Recovery Point Objective  | the maximum acceptable amount of data loss
 [RPO](./architecture.md#business-continuity-plan-bcp)  | Recovery Time Objective | the maximum amount of downtime your busines
+RAM | Resource Access Manager
 
 ## S
 
@@ -143,6 +152,7 @@ Abbr | Meaning  | Desc
 ---  | ----- | ---
 TLD | Top Level Domain
 TTL | Time to live
+TGW | Transit Gateway
 
 ## P
 
@@ -156,6 +166,7 @@ PHI | Protected Health Information
 Abbr | Meaning  | Desc
 ---  | ----- | ---
 [VPC](./vpc.md)  | Virtual Private Cloud | 
+VGW | Virtual Private Gateway | 
 
 
 ## W 

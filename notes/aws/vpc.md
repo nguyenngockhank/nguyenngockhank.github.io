@@ -1,4 +1,4 @@
-# Virtual Private Cloud (VPC)
+# VPC Notes
 
 ![vpc](./img/vpc-overview.png)
 
