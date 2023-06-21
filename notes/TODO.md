@@ -16,3 +16,10 @@ https://codeopinion.com/fintech-mindset-to-software-design/
 https://grpc.io/docs/what-is-grpc/introduction/
 
 https://www.quora.com/Does-gRPC-work-over-just-a-raw-TCP-connection
+
+## Distributed pattens 
+
+https://martinfowler.com/articles/patterns-of-distributed-systems/
+
+
+https://zzzcode.ai/answer-question
