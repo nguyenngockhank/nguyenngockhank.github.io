@@ -69,6 +69,7 @@ const toolDocs = [
   '/tricks/git',
   '/tricks/linux',
   '/tricks/mac',
+  '/tricks/youtube',
   '/tools/chrome',
   '/tools/selenium_ide',
   '/tools/gg_app_script',
@@ -141,6 +142,35 @@ const awsDocs = [
   'aws-abbr'
 ].map(prefixMapFn('/aws/'));
 
+const javascriptDocs = [
+  '/javascript/tricks',
+  '/javascript/stories/weird',
+  // '/javascript/stories/es6',
+  '/snippets/regex',
+  '/javascript/axios_jqueryajax',
+  '/javascript/bookmarklet',
+  // '/javascript/functor',
+  '/javascript/kafka-in-node',
+  '/snippets/firebase',
+  '/javascript/clean-code',
+  {
+    title: 'Typescript',
+    children: [
+      'javascript/typescript/syntax',
+      'javascript/typescript/types'
+    ],
+  },
+  {
+    title: 'Snippets',
+    children: [
+      '/snippets/mocha',
+      '/snippets/event_storage',
+      '/snippets/custom_promise_all',
+      '/snippets/access_object',
+    ]
+  }
+]
+
 module.exports = [
     {
       title: 'Chuyện muôn thuở',
@@ -183,33 +213,7 @@ module.exports = [
     },
     {
       title: "Javascript",
-      children: [
-        '/javascript/tricks',
-        '/javascript/stories/weird',
-        // '/javascript/stories/es6',
-        '/snippets/regex',
-        '/javascript/axios_jqueryajax',
-        '/javascript/bookmarklet',
-        // '/javascript/functor',
-        '/snippets/firebase',
-        '/javascript/clean-code',
-        {
-          title: 'Typescript',
-          children: [
-            'javascript/typescript/syntax',
-            'javascript/typescript/types'
-          ],
-        },
-        {
-          title: 'Snippets',
-          children: [
-            '/snippets/mocha',
-            '/snippets/event_storage',
-            '/snippets/custom_promise_all',
-            '/snippets/access_object',
-          ]
-        }
-      ]
+      children: javascriptDocs,
     },
     {
       title: "ReactJS",
