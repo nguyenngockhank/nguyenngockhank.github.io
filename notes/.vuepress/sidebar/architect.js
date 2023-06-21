@@ -3,6 +3,7 @@ module.exports = [
     'philosophy-sw-design',
     'authenication',
     'authorization',
+    'distributed-patterns',
     'terms',
     'OrchestrationVsChoreography',
     {

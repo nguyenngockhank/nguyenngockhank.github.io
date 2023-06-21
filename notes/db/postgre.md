@@ -7,9 +7,6 @@ tags: ["RDMS"]
 <TagLinks />
 
 
-## 
-
-
 [Postgres Architecture Explained](https://www.youtube.com/watch?v=Q56kljmIN14)
 
 ## Data Type 
@@ -217,6 +214,77 @@ CREATE TABLE sale_201901 PARTITION OF sale
 CREATE TABLE sale_201902 PARTITION OF sale
    FOR VALUES FROM ('2019-02-01') TO ('2019-03-01');
 ```
+
+## Change Data Capture (CDC)
+
+### 1. Using Triggers
+
+```sql
+CREATE OR REPLACE FUNCTION audit_log() RETURNS TRIGGER AS $
+BEGIN
+  IF (TG_OP = 'DELETE') THEN
+    INSERT INTO audit_table (id, old_data, operation) VALUES (OLD.id, OLD.data, 'DELETE');
+  ELSIF (TG_OP = 'UPDATE') THEN
+    INSERT INTO audit_table (id, old_data, new_data, operation) VALUES (NEW.id, OLD.data, NEW.data, 'UPDATE');
+  ELSIF (TG_OP = 'INSERT') THEN
+    INSERT INTO audit_table (id, new_data, operation) VALUES (NEW.id, NEW.data, 'INSERT');
+  END IF;
+  RETURN NEW;
+END;
+$ LANGUAGE plpgsql;
+
+CREATE TRIGGER audit_trigger
+AFTER INSERT OR UPDATE OR DELETE ON my_table
+FOR EACH ROW
+EXECUTE FUNCTION audit_log();
+```
+
+### 2. Using Logical Replication
+
+In this example, we create a publication called `my_publication` for the `my_table` table on the publisher database. We then create a subscription called `my_subscription` on the subscriber database that connects to the publisher database and subscribes to the `my_publication` publication.
+
+```sql
+-- On the publisher database
+CREATE PUBLICATION my_publication FOR TABLE my_table;
+
+-- On the subscriber database
+CREATE SUBSCRIPTION my_subscription
+CONNECTION 'host=192.168.1.100 dbname=my_database user=my_user password=my_password'
+PUBLICATION my_publication;
+```
+
+### 3. Using Change Data Capture (CDC)
+
+Change Data Capture (CDC) is a feature in PostgreSQL that allows you to capture data changes in real-time and store them in a separate table. You can use CDC to capture data changes without affecting the performance of the database.
+
+```sql
+-- Enable the pglogical extension
+CREATE EXTENSION pglogical;
+
+-- Create a replication set
+SELECT pglogical.create_replication_set('my_replication_set', true);
+
+-- Add the table to the replication set
+SELECT pglogical.replication_set_add_table('my_replication_set', 'my_table', true);
+
+-- Create a replication node
+SELECT pglogical.create_node(
+  node_name := 'my_node',
+  dsn := 'host=192.168.1.100 dbname=my_database user=my_user password=my_password'
+);
+
+-- Create a replication slot
+SELECT pglogical.create_replication_slot('my_slot', 'my_node', true);
+
+-- Start the replication worker
+SELECT pglogical.start_replication(
+  slot_name := 'my_slot',
+  create_slot := false,
+  replication_sets := ARRAY['my_replication_set']
+);
+```
+
+In this example, we enable the pglogical extension and create a replication set called `my_replication_set`. We then add the `my_table` table to the replication set and create a replication node called `my_node` that connects to the publisher database. We create a replication slot called my_slot and start the replication worker to capture data changes in real-time.
 
 ## Unlogged Table
 

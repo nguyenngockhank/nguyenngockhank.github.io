@@ -176,7 +176,42 @@ mysql -p -u [user] [database] < backup-file.sql
 :::
 ::::
 
+## Change Data Capture (CDC)
 
+### 1. Triggers
+
+```sql
+CREATE TRIGGER capture_users_changes
+AFTER INSERT, UPDATE, DELETE ON users
+FOR EACH ROW
+BEGIN
+  INSERT INTO users_audit (user_id, action, old_value, new_value, timestamp)
+  VALUES (NEW.id, 
+          CASE 
+            WHEN OLD.id IS NULL THEN 'INSERT'
+            WHEN NEW.deleted_at IS NOT NULL THEN 'DELETE'
+            ELSE 'UPDATE'
+          END,
+          OLD.name,
+          NEW.name,
+          NOW());
+END;
+```
+
+### 2. Binary Logs
+
+```sql
+SET GLOBAL binlog_format = 'ROW';
+SET GLOBAL log_bin = ON;
+```
+
+This enables row-based binary logging, which logs the actual changes to the rows in the database. You can then use the mysqlbinlog utility to read the binary logs and extract the changes you are interested in.
+
+### 3. Using Third-Party Tools
+
+- Debezium
+- MaxScale
+- MySQL Enterprise Audit
 
 ## Hot Fix
 
