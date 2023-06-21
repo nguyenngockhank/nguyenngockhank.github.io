@@ -182,6 +182,7 @@ module.exports = [
         'architect',
         'id-generate',
         'tx-isolation',
+        'acid',
         'optimize_db',
         'mysql_snippets',
         'postgre',

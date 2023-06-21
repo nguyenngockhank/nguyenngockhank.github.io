@@ -4,6 +4,7 @@ module.exports = [
     'authenication',
     'authorization',
     'distributed-patterns',
+    'mistakes',
     'terms',
     'OrchestrationVsChoreography',
     {

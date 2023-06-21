@@ -22,21 +22,6 @@ will often be provided by a software infrastructure, such as a middleware packag
 - **Horizontal scaling** (*scale out*) means that you scale by adding more machines into your pool of resources 
 - **Vertical scaling** (*scale up*) means that you scale by adding more power (CPU, RAM) to an existing machine.
 
-## Consistency patterns
-
-| #   | Name | Stategy |
-| --- | --- | --- |
-| 1   | Compensating action | Perform an action that undoes prior action(s) |
-| 2   | Retry | Retry until success or timeout |
-| 3   | Ignore | Do nothing in the event of errors |
-| 4   | Restart | Reset to the original state & start again |
-| 5   | Tentative operation | Perform a tentative operation and confirm (or cancel) later |
-
-### Logging for keep consistent:
-
-- **Receiver-based message logging** (RBML): involves sync writing every received message to stable storage before any actIon is taken on it.
-- **Sender-based message logging** (SBML): involves writing the message before it is sent.
-- **Hybrid message logging** (HML)
 
 ## Locking Approaches
 - **Pessimistic approaches** lock data records to prevent conflicts.
