@@ -132,10 +132,6 @@ aka EBC aka EIC
 ![Example](@/images/architecture/spa/9c897-15aa2cnrij2fvo0rztjczhq.png)
 
 
-## [Domain-Driven Design – DDD (2003)](./ddd.md)
-![Example](@/ddd/img/ddd-layers.jpg)
-
-
 ## Hexagonal Architecture (2005)
 aka Ports & Adapters Architecture
 ![hexagonal](@/images/architecture/hexagonal-arch-4-ports-adapters2.png)

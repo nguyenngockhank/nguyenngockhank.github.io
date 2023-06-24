@@ -9,7 +9,7 @@ SOA is a design pattern that involves breaking down a system into smaller, indep
 MapReduce is a pattern that involves breaking down a large data processing task into smaller, independent tasks that can be processed in parallel. This pattern is commonly used in distributed systems to improve performance and scalability.
 
 
-## Event-Driven Architecture (EDA) Patterns
+## 💎 Event-Driven Architecture (EDA) Patterns
 
 ### Event Notification
 
@@ -28,7 +28,7 @@ Command Query Responsibility Segregation (CQRS) is a pattern used to separate th
 The saga pattern is used to manage long-running transactions in an event-driven system. In this pattern, a saga is a sequence of events that are executed in a specific order. If an event fails, the saga can be rolled back to a previous state. This pattern is useful when a system needs to handle complex transactions that involve multiple components.
 
 
-## Fault-Tolerance
+## 💎 Fault-Tolerance
 
 ### Redundancy
 
@@ -71,7 +71,7 @@ Failover is a pattern that involves switching to a backup system when the primar
 A circuit breaker is a pattern that prevents a component from repeatedly failing and causing cascading failures in the system. The circuit breaker monitors the number of failures that occur within a certain period of time, and if the number exceeds a threshold, it trips the circuit and stops sending requests to the component. This allows the component to recover and prevents it from causing further failures in the system.
 
 
-## Communication Patterns
+## 💎 Communication Patterns
 
 ### Request-Reply Pattern
 The request-reply pattern is one of the most common communication patterns used in distributed systems. In this pattern, a client sends a request to a server, and the server responds with a reply. The request-reply pattern is synchronous, meaning that the client waits for the server to respond before continuing with its execution. This pattern is commonly used in client-server architectures, where the client sends a request to the server and waits for a response.
@@ -89,7 +89,7 @@ Publish-Subscribe is a pattern that involves sending messages to a group of subs
 #### Message Queue Pattern
 The message queue pattern is a communication pattern used in distributed systems to decouple the sender and receiver of a message. In this pattern, a sender sends a message to a message queue, and the receiver retrieves the message from the queue. The message queue pattern is asynchronous, meaning that the sender does not wait for the receiver to receive the message before continuing with its execution. This pattern is commonly used in microservices architectures, where services communicate with each other through message queues.
 
-## Optimizing Performance
+## 💎 Optimizing Performance
 
 ### Caching
 
@@ -128,7 +128,7 @@ Replication is a technique used to create copies of data across multiple servers
 - **Master-master replication**: where multiple servers act as masters and can both read and write data.
 - **Multi-master replication**: where multiple servers can both read and write data, and conflicts are resolved using a consensus algorithm.
 
-## Idempotency Patterns
+## 💎 Idempotency Patterns
 
 ### Idempotency Keys
 
@@ -138,7 +138,7 @@ One common pattern for achieving idempotency is to use idempotency keys. An idem
 
 Another pattern for achieving idempotency is to use idempotent state machines. In this pattern, the system maintains a state machine that tracks the progress of an operation. Each state in the state machine is idempotent, meaning that it can be repeated without changing the result beyond the initial application. When an operation is performed, the system transitions to the next state in the state machine. If the operation is repeated, the system will recognize that it has already transitioned to the next state and will not repeat the transition. This pattern is commonly used in distributed systems that perform complex operations, such as payment processing or order fulfillment.
 
-## Patterns for concurrency
+## 💎 Patterns for concurrency
 
 ### Locking
 Locking is a common pattern used to manage concurrency in distributed systems. It involves acquiring a lock on a shared resource to prevent other processes from accessing it simultaneously. Locking can be implemented using various techniques such as mutual exclusion, semaphores, and monitors. However, locking can also introduce performance overhead and can lead to deadlocks if not implemented correctly.
@@ -156,7 +156,7 @@ The actor model is a pattern that involves modeling concurrent processes as acto
 ### Data Partitioning
 Data partitioning is a pattern that involves partitioning data across multiple nodes in a distributed system. Each node is responsible for a subset of the data, allowing processes to access data independently and concurrently. Data partitioning can be implemented using various techniques such as sharding, consistent hashing, and range partitioning. Data partitioning can be more scalable than locking or message passing in some cases, as it allows processes to access data independently and concurrently.
 
-## Patterns for Increasing Concurrency
+## 💎 Patterns for Increasing Concurrency
 
 ### 1. Thread Pool Pattern
 
@@ -205,7 +205,7 @@ myActor.tell("Task", ActorRef.noSender());
 ```
 
 
-## Patterns for Race Condition
+## 💎 Patterns for Race Condition
 
 ### Read-Modify-Write
 
@@ -231,7 +231,7 @@ Versioning is a pattern for avoiding race conditions in distributed systems by u
 
 To avoid conflicts, we should use a consistent ordering of updates across all processes or threads. For example, we can use a global ordering of updates based on the version number of the resource.
 
-## Locking Patterns
+## 💎 Locking Patterns
 
 ### 1. Centralized Locking
 Centralized locking is a simple and effective pattern for locking in distributed systems. In this pattern, a single node is responsible for managing the locks for all the resources in the system. When a process needs to access a resource, it requests a lock from the centralized lock manager. The lock manager grants the lock if it is available, and the process can access the resource. Once the process is done, it releases the lock, and the lock manager makes it available for other processes.
@@ -255,7 +255,24 @@ The main advantage of pessimistic locking is its simplicity and reliability. It 
 
 In conclusion, locking is a critical aspect of distributed systems, and choosing the right locking pattern depends on the specific requirements of the system. Centralized locking is simple and effective but can become a bottleneck. Distributed locking is scalable but requires more complex coordination. Optimistic locking allows high concurrency but requires careful handling of conflicts. Pessimistic locking is simple and reliable but can reduce concurrency and performance.
 
-## Patterns for Ensuring Data Consistency
+## 💎 Distributed transaction patterns
+
+### Two-Phase Commit (2PC):
+This pattern involves a coordinator and multiple participants. The coordinator initiates the transaction and sends a prepare message to all participants. Each participant replies with an agreement or abort decision. If all participants agree, the coordinator sends a commit message to all participants, and they perform the transaction. If any participant aborts, the coordinator sends an abort message to all participants, and they roll back the transaction. While 2PC ensures consistency, it can be slow and prone to blocking if the coordinator fails.
+
+### Saga: 
+A saga is a sequence of local transactions, each executed within a single service, that together form a distributed transaction. Each local transaction updates the data within its own service and publishes events to trigger subsequent local transactions in other services. If a local transaction fails, compensating actions are executed to undo the changes made by previous transactions. Sagas are more flexible than 2PC but require careful design to handle failures and ensure eventual consistency.
+
+### Eventual Consistency:
+Instead of enforcing immediate consistency, this pattern allows services to operate independently and asynchronously replicate data changes. Services publish events when they make changes to their data, and other services subscribe to these events to update their own data. While this pattern simplifies the transaction management, it introduces the challenge of handling eventual consistency and resolving conflicts.
+
+### Compensating Transaction: 
+This pattern is used when a transaction needs to be rolled back due to a failure or error. A compensating transaction is designed to undo the changes made by the original transaction. For example, if a payment transaction fails, a compensating transaction can be triggered to reverse the payment. This pattern requires careful design to ensure that compensating transactions are idempotent and can be executed safely.
+
+### Idempotent Retry: 
+In this pattern, a failed transaction can be retried without causing any side effects. Each transaction is designed to be idempotent, meaning that executing it multiple times produces the same result as executing it once. By retrying the transaction, eventual consistency can be achieved even in the presence of failures.
+
+## 💎 Patterns for Ensuring Data Consistency
 
 ### 1. Two-Phase Commit (2PC)
 Two-Phase Commit (2PC) is a widely used pattern for ensuring data consistency in distributed systems. In this pattern, a coordinator node is responsible for coordinating the transaction between multiple nodes. The coordinator sends a "prepare" message to all the nodes involved in the transaction, asking them to prepare for the transaction. If all the nodes respond with a "yes" message, the coordinator sends a "commit" message to all the nodes, asking them to commit the transaction. If any node responds with a "no" message, the coordinator sends an "abort" message to all the nodes, asking them to abort the transaction.
@@ -270,7 +287,7 @@ Eventual consistency is a pattern that allows for data consistency to be achieve
 Conflict-Free Replicated Data Types (CRDTs) are a family of data structures that can be used to ensure data consistency in distributed systems. CRDTs are designed to be replicated across multiple nodes in a system, and they ensure that updates to the data structure are conflict-free. This means that updates can be applied in any order, and the data structure will always converge to a consistent state.
 
 
-## Consistency patterns
+## 💎 Consistency patterns
 
 | #   | Name | Stategy |
 | --- | --- | --- |
