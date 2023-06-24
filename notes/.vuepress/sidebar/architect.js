@@ -3,10 +3,22 @@ module.exports = [
     'authenication',
     'authorization',
     {
-        title: "Distributed System",
+        title: "Distributed System Patterns",
+        children: [
+            'patterns/2pc/',
+            'patterns/retry',
+            'patterns/circuit-breaker',
+            'patterns/stateless',
+            'patterns/graceful-degradation',
+            'patterns/bulkhead',
+            'fault-tolerance',
+            'distributed-patterns',
+        ]
+    },
+    {
+        title: "Microservice",
         children: [
             'microservices',
-            'distributed-patterns',
             'mistakes',
             'OrchestrationVsChoreography',
         ]
@@ -34,7 +46,6 @@ module.exports = [
             {
                 title: 'Họ làm điều đó như nào?',
                 children: [
-                    'circuit_breaker',
                     '/db/pinterest_shard',
                 ]
             },

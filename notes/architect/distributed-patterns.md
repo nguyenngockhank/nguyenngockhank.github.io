@@ -1,3 +1,7 @@
+---
+tags: ['Pattern', "DistributedSystem"]
+---
+
 # Patterns of Distributed Systems
 
 
@@ -53,6 +57,8 @@ Graceful degradation is a pattern that allows a system to continue operating eve
 ### Retry pattern 
 
 The Retry pattern  is used to handle transient failures in a distributed system. It works by retrying a failed operation a certain number of times before giving up. This allows the system to recover from temporary failures and continue to function.
+
+[Read more](./patterns/retry.md)
 
 ### Timeout Pattern
 
@@ -258,7 +264,8 @@ In conclusion, locking is a critical aspect of distributed systems, and choosing
 ## 💎 Distributed transaction patterns
 
 ### Two-Phase Commit (2PC):
-This pattern involves a coordinator and multiple participants. The coordinator initiates the transaction and sends a prepare message to all participants. Each participant replies with an agreement or abort decision. If all participants agree, the coordinator sends a commit message to all participants, and they perform the transaction. If any participant aborts, the coordinator sends an abort message to all participants, and they roll back the transaction. While 2PC ensures consistency, it can be slow and prone to blocking if the coordinator fails.
+
+[Read here](./2pc/)
 
 ### Saga: 
 A saga is a sequence of local transactions, each executed within a single service, that together form a distributed transaction. Each local transaction updates the data within its own service and publishes events to trigger subsequent local transactions in other services. If a local transaction fails, compensating actions are executed to undo the changes made by previous transactions. Sagas are more flexible than 2PC but require careful design to handle failures and ensure eventual consistency.
@@ -275,7 +282,8 @@ In this pattern, a failed transaction can be retried without causing any side ef
 ## 💎 Patterns for Ensuring Data Consistency
 
 ### 1. Two-Phase Commit (2PC)
-Two-Phase Commit (2PC) is a widely used pattern for ensuring data consistency in distributed systems. In this pattern, a coordinator node is responsible for coordinating the transaction between multiple nodes. The coordinator sends a "prepare" message to all the nodes involved in the transaction, asking them to prepare for the transaction. If all the nodes respond with a "yes" message, the coordinator sends a "commit" message to all the nodes, asking them to commit the transaction. If any node responds with a "no" message, the coordinator sends an "abort" message to all the nodes, asking them to abort the transaction.
+
+[Read here](./2pc/)
 
 ### 2. Saga Pattern
 The Saga pattern is another pattern that can be used to ensure data consistency in distributed systems. In this pattern, a long-running transaction is broken down into a series of smaller transactions, each of which is executed by a separate node. Each transaction updates the state of the system and publishes an event to notify other nodes of the change. If a transaction fails, the Saga pattern uses compensating transactions to undo the changes made by the failed transaction and restore the system to its previous state.
