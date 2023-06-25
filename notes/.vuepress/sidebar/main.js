@@ -4,11 +4,14 @@ const prefixMapFn = (prefix) => (item) => {
 } 
 
 const cleanCodeDocs = [
-  'clean-code',
+  'naming',
+  'deps',
+  'testing',
   'code-structure',
+  'notes',
   'refactor',
   'refactor-catalog',
-].map(prefixMapFn('/common/clean-code/'));
+].map(prefixMapFn('/clean-code/'));
 
 const commonDocs = [
   'optimize_web',

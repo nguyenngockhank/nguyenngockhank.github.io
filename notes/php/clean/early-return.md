@@ -1,7 +1,3 @@
----
-tags: ["Pattern", "CleanCode"]
----
-
 # "Return Early" Pattern
 
 <TagLinks />

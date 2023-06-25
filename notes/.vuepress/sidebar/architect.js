@@ -2,6 +2,7 @@ module.exports = [
     '',
     'authenication',
     'authorization',
+    'cohesion-coupling',
     {
         title: "Distributed System Patterns",
         children: [
@@ -24,8 +25,9 @@ module.exports = [
         ]
     },
     {
-        title: 'Architecture of Systems', 
+        title: 'Architectures', 
         children: [
+            'lambda-arch/',
             'ddd/',
             'clean_A',
             'ebi',

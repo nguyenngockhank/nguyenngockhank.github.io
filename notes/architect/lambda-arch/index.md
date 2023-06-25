@@ -1,3 +1,7 @@
+---
+tags: [ "Architecture"]
+---
+
 # Lambda Architecture
 
 ## Asynchronous Processing
