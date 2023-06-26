@@ -7,6 +7,12 @@ module.exports = [
             'case-study/metrics/',
             'case-study/ad-click/',
             {
+                title: "Data storage",
+                children: [
+                    'case-study/dynamo/',
+                ]
+            },
+            {
                 title: "Online tools",
                 children: [
                     'case-study/google-docs/',

@@ -58,6 +58,11 @@ Source:
 - Replication node will be defined by Replication Strategy
 - Simple strategy = next 2 nodes
 
+## Consistent hashing
+ <!-- Physical Node vs VNode -->
+
+... TODO
+
 ## Data consistency
 
 | WRITE | READ | Consistent | Read Availability | Write Availability |
