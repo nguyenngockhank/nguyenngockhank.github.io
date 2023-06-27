@@ -254,3 +254,5 @@ VALUES (now(), 'tom', 'jerry');
 ## Refs
 
 - [Distributed Database Things to Know: Cassandra Datacenter & Racks](https://www.datastax.com/blog/distributed-database-things-know-cassandra-datacenter-racks)
+- [ow to set metadata column family in Cassandra.](https://zzzcode.ai/answer-question?id=f6bd0847-fdab-4102-ba72-f93f5e938129)
+- [create a table with column family](https://zzzcode.ai/answer-question?id=067d6890-19bb-4d34-ad03-d6f36c07a57b)

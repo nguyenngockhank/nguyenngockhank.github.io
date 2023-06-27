@@ -10,6 +10,7 @@ module.exports = [
                 title: "Data storage",
                 children: [
                     'case-study/dynamo/',
+                    'case-study/bigtable/',
                 ]
             },
             {
