@@ -11,6 +11,7 @@ module.exports = [
                 children: [
                     'case-study/dynamo/',
                     'case-study/bigtable/',
+                    'case-study/s3/',
                 ]
             },
             {
