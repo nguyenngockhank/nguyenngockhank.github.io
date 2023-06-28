@@ -99,17 +99,6 @@ Master-slave replication reduces the chance of update conflicts but peer-to-peer
 - **ACID**: Atomicity, Consistency, Isolation and Durability
 - **CAP**: Consistency, Availability and Partition tolerance 
 
-### Oracle vs. Riak DB
-
-![Oracle vs. Key-Value Database](../kungfu/nosql-distilled/img/image--033.jpg)
-
-### Oracle vs. MongoDB
-
-![Oracle vs. MongoDB](../kungfu/nosql-distilled/img/image--036.jpg)
-
-### RDBMS vs. Cassandra
-
-![RDBMS vs. Cassandra](../kungfu/nosql-distilled/img/image--040.jpg)
 
 ## References 
 

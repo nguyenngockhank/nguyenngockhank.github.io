@@ -91,25 +91,6 @@ module.exports = [
             ...Array(15).fill(0).map((v, index) => `artofcode/c${index + 1}`)
         ]
     },
-    // {
-    //     title: 'Clean Code',
-    //     children: [
-    //         ...Array(17).fill(0).map((v, index) => `cleancode/c${index + 1}`)
-    //     ]
-    // },
-    {
-        title: 'A Philosophy of Software Design',
-        children: [
-            ...Array(21).fill(0).map((v, index) => `philosophy/c${index + 1}`)
-        ]
-    },
-    {
-        title: 'Building Microservices',
-        children: [
-            'build-microservices/c9',
-            'build-microservices/c10'
-        ]
-    },
     {
         title: '97 Things Every Programmer Should Know',
         children: [
@@ -117,13 +98,6 @@ module.exports = [
         ]
     },
     {
-        title: "NoSql Distilled",
-        children: [
-            'nosql-distilled/00',
-            ...Array(16).fill(0).map((v, index) => `nosql-distilled/c${index}`)
-        ]
-    },
-     {
       title: 'Go',
       children: [
         {
@@ -149,10 +123,10 @@ module.exports = [
     //     '/css/tricks',
     //   ]
     // },
-    {
-        title: 'Others',
-        children: [
-            `tips4sercurity`
-        ]
-    }
+    // {
+    //     title: 'Others',
+    //     children: [
+    //         `tips4sercurity`
+    //     ]
+    // }
 ]
