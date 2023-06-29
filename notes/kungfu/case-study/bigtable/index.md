@@ -1,6 +1,6 @@
 # Design BigTable
 
-## Introduction
+## Overview
 
 ### Goal
 

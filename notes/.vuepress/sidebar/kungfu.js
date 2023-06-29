@@ -12,15 +12,16 @@ module.exports = [
                     'case-study/dynamo/',
                     'case-study/bigtable/',
                     'case-study/s3/',
+                    'case-study/gfs/',
                     'case-study/kafka/',
+                    'case-study/dropbox/',
+                    'case-study/google-drive/',
                 ]
             },
             {
                 title: "Online tools",
                 children: [
                     'case-study/google-docs/',
-                    'case-study/dropbox/',
-                    'case-study/google-drive/',
                     'case-study/email/',
                     'case-study/url-shorter/',
                     'case-study/url-shorter/part2/',

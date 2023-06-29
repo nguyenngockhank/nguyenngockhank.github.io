@@ -2,7 +2,7 @@
 
 Dynamo is a **highly available key-value store** developed by Amazon for their internal use. Many Amazon services, such as shopping cart, bestseller lists, sales rank, product catalog, etc., need only primary-key access to data. A multi-table relational database system would be an overkill for such services and would also limit scalability and availability. Dynamo provides a flexible design to let applications choose their desired level of availability and consistency.
 
-## Introduction
+## Overview
 ### Goal
 
 Design a distributed key-value store that is highly available (i.e., reliable), highly scalable, and completely decentralized.
