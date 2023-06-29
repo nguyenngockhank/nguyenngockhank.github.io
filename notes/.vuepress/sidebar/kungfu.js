@@ -12,6 +12,7 @@ module.exports = [
                     'case-study/dynamo/',
                     'case-study/bigtable/',
                     'case-study/s3/',
+                    'case-study/kafka/',
                 ]
             },
             {
