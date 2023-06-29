@@ -5,6 +5,8 @@ tags: ["Payment"]
 
 # Payment notes 
 
+![Payment overview](./payment-overview.png)
+
 ## Payment flow
 
 - **Payer / Card holder** that decides to pay for the service.
@@ -81,7 +83,6 @@ const paymentIntent = await stripe.paymentIntents.capture(
 We take action `cancel` the payment when `authorized`, `refund` if payment `paid`, `completed`, `shipping`. 
 - `refund` action could be charged double (from the original payment, and the refund payment)
 - increase action `cancel` to avoid being charged
-
 - [Cancel order lines](https://docs.mollie.com/reference/v2/orders-api/cancel-order-lines)
 
 

@@ -28,6 +28,7 @@ module.exports = [
         title: 'Architectures', 
         children: [
             'lambda-arch/',
+            'eventsource',
             'ddd/',
             'clean_A',
             'ebi',
