@@ -14,27 +14,22 @@ const cleanCodeDocs = [
 ].map(prefixMapFn('/clean-code/'));
 
 const commonDocs = [
-  'optimize_web',
-  'cross_domain',
-  'seo',
-  'cache/cache-notes',
-  'crawl',
-  'document',
-  'debugging',
-  'deployment/deploy-strategies',
-  'cdn/cdn',
   {
-    title: "Realtime",
+    title: "Optimize Perf",
+    children: [
+      '/common/optimize_web',
+      '/common/optimize_be',
+      '/db/optimize_db',
+      '/common/cache/',
+      '/common/cdn/cdn',
+    ]
+  },
+  {
+    title: "Communication",
     children: [
       '/common/realtime',
       '/common/notification/',
       '/network/websocket',
-    ],
-  },
-  {
-    title: "Messaging",
-    children: [
-      // 'architect/authenication',
       'architect/messaging',
       'db/redis.html#pub-sub',
       'tools/kafka',
@@ -44,7 +39,13 @@ const commonDocs = [
   {
     title: "Clean code",
     children: cleanCodeDocs,
-  }
+  }, 
+  'deployment/deploy-strategies',
+  'seo',
+  'crawl',
+  'document',
+  'debugging',
+  'cross_domain',
 ].map(prefixMapFn('/common/'));
 
 const oopDocs = [
@@ -180,6 +181,54 @@ module.exports = [
       children: commonDocs,
     },
     {
+      title: 'API Guidelines',
+      children: [
+        '/api/',
+        `/api-guidelines/overview`,
+        {
+          title: 'Principles',
+          children: [
+            // 'design-api-first-before-code',
+            // 'minimal-api-surface',
+            'one-type-of-data-per-api',
+            // 'robustness-principle',
+            'rules-for-public-api',
+          ].map(prefixMapFn('/api-guidelines/principles/'))
+        },
+        {
+          title: 'Conventions',
+          children: [
+            'http-status-codes',
+            {
+              title: "Verb and URI (REST)",
+              children: [
+                '',
+                'post-vs-put',
+                'request-methods',
+                'others',
+              ].map(prefixMapFn('/api-guidelines/conventions/verb-and-uri-rest/'))
+            },
+            {
+              title: "JSON Fields Naming Conventions",
+              children: [
+                'formats',
+                'json-structure',
+              ].map(prefixMapFn('/api-guidelines/conventions/json-fields-naming-conventions/'))
+            },
+            'error-responses',
+          ].map(prefixMapFn('/api-guidelines/conventions/')),
+        },
+        {
+          title: "Coding Guidelines",
+          children: [
+            'api-development-workflow',
+            'review-code-api-doc',
+            'decorators-for-endpoints',
+          ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
+        }
+      ]
+    },
+    {
       title: "Database",
       children: [
         'architect',
@@ -270,54 +319,7 @@ module.exports = [
       title: "Network",
       children: networkDocs,
     },
-    {
-      title: 'API Guidelines',
-      children: [
-        '/api/',
-        `/api-guidelines/overview`,
-        {
-          title: 'Principles',
-          children: [
-            // 'design-api-first-before-code',
-            // 'minimal-api-surface',
-            'one-type-of-data-per-api',
-            // 'robustness-principle',
-            'rules-for-public-api',
-          ].map(prefixMapFn('/api-guidelines/principles/'))
-        },
-        {
-          title: 'Conventions',
-          children: [
-            'http-status-codes',
-            {
-              title: "Verb and URI (REST)",
-              children: [
-                '',
-                'post-vs-put',
-                'request-methods',
-                'others',
-              ].map(prefixMapFn('/api-guidelines/conventions/verb-and-uri-rest/'))
-            },
-            {
-              title: "JSON Fields Naming Conventions",
-              children: [
-                'formats',
-                'json-structure',
-              ].map(prefixMapFn('/api-guidelines/conventions/json-fields-naming-conventions/'))
-            },
-            'error-responses',
-          ].map(prefixMapFn('/api-guidelines/conventions/')),
-        },
-        {
-          title: "Coding Guidelines",
-          children: [
-            'api-development-workflow',
-            'review-code-api-doc',
-            'decorators-for-endpoints',
-          ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
-        }
-      ]
-    },
+ 
     {
       title: "AWS",
       children: awsDocs,

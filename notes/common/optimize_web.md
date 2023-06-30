@@ -2,7 +2,7 @@
 tags: ["Performance"]
 ---
 
-# Increase performance website notes
+# Optimize performance for Web
 
 <TagLinks />
 
@@ -10,6 +10,9 @@ Câu hỏi muôn thuở đi phỏng vấn chắc gặp hoài lun :v kkkk nhưng 
 
 ***:gem: KIM CHỈ NAM***
 ------
+
+![overview](../k-img/perf-web.png)
+
 
 :thumbsup: Cái mục đích, mục tiêu khi mà tối ưu website đó là nhanh hơn, mượt hơn, xì mút hơn... chủ yếu là tạo thêm phần sung sướng tột đỉnh cho người dùng :star2:
 
@@ -26,13 +29,6 @@ Câu hỏi muôn thuở đi phỏng vấn chắc gặp hoài lun :v kkkk nhưng 
 - giảm khối lượng & thời gian response
 - giảm sự ngăn cản render trên browser
 - xử lý trước một số thao tác khi CPU rãnh... 
-
----
-
-:ok_hand: Mình sẽ giới thiệu, từ trên xuống dưới, từ code ít tới code nhiều =))
-
-[[toc]]
-
 
 ## :zap: Gzip
 - Cách này server sẽ trả về những file đã được nén lại. Cách hoạt động của Gzip thì được hỗ trợ bởi các Browser 4.0 hết roài, khỏi lo. 

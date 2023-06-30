@@ -5,7 +5,7 @@ tags: ["Payment"]
 
 # Payment notes 
 
-![Payment overview](./payment-overview.png)
+![Payment overview](@/k-img/payment-overview.png)
 
 ## Payment flow
 

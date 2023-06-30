@@ -94,8 +94,10 @@
 
 ## Communication Style
 
+![communication notes](../k-img/communication.png)
+
 - [Messaging - Async Communication](./messaging.md)
-- [RestFull - Sync Communication](./restful.md)
+- [RestFull - Sync Communication](../api/)
 - [Orchestration Vs. Choreography](./OrchestrationVsChoreography.md)
 
 

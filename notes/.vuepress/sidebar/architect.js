@@ -16,28 +16,29 @@ module.exports = [
             'distributed-patterns',
         ]
     },
-    {
-        title: "Microservice",
-        children: [
-            'microservices',
-            'mistakes',
-            'OrchestrationVsChoreography',
-        ]
-    },
+   
     {
         title: 'Architectures', 
         children: [
+            {
+                title: "Microservice",
+                children: [
+                    'microservices',
+                    'mistakes',
+                    'OrchestrationVsChoreography',
+                ]
+            },
             'lambda-arch/',
             'eventsource',
             'ddd/',
-            'clean_A',
-            'ebi',
-            'onion_A',
-            'soa',
-            'cqrs',
-            'event_driven_A',
-            'hexagonal_A',
-            'spa',
+            // 'clean_A',
+            // 'ebi',
+            // 'onion_A',
+            // 'soa',
+            // 'cqrs',
+            // 'event_driven_A',
+            // 'hexagonal_A',
+            // 'spa',
         ]
     },
     {

@@ -31,6 +31,16 @@ Log Structured Storage là trường phái Database dựa trên Append-only Log,
 
 http://redbook.cs.berkeley.edu/redbook3/aries/sld013.htm
 
+## Tree 
+
+## Trie 
+
+## Suffix Tree 
+
+https://www.geeksforgeeks.org/ukkonens-suffix-tree-construction-part-1/
+
+
+
 ## Binary tree
 
 ### AVL Tree

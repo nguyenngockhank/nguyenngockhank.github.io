@@ -1,5 +1,5 @@
 ---
-tags: ["DistributedSystem", "Pattern"]
+tags: ["DistributedSystem", "Communication"]
 ---
 
 # Messaging

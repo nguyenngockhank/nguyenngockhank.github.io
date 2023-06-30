@@ -1,14 +1,16 @@
 ---
-tags: ["Comparison", "HLD"]
+tags: ["Comparison", "Communication"]
 ---
 
-# API Notes
+# RESTful Notes
 
 <TagLinks />
 
 ## RESTful API
 
 RESTful API is an architectural style for developing web services that builds upon existing systems and features of HTTP. 
+
+![REST Notes](../k-img/rest-notes.png)
 
 REST is easier to archive than SOAP.
 
@@ -217,13 +219,6 @@ Here is top 10 common usage of status codes:
 | [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409) | Conflict  | 
 | [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500) | Internal Server Error  | 
 
-## API Architecture Styles
-
-![img](./api-architecture-style-comparison.jpeg)
-
-See more: [RESTful comparison](./rest-compare.md)
-
-![API Architectural Styles](./api-architectures.png)
 
 ## API first vs Code First
 

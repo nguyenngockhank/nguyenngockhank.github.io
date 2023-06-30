@@ -1,5 +1,5 @@
 ---
-tags: [ "DS Tx Pattern", "DistributedSystem"]
+tags: [ "DistributedSystem"]
 ---
 
 # Two-phase commit (2PC)
