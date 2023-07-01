@@ -135,7 +135,7 @@ JS Client apps can also 'query' the stream using subject filters
 
 ## Security
 - Security models:
-    - Kafka: plain or certificate based authenication
+    - Kafka: plain or certificate based authentication
     - JS: plain, certificate or JWT-based delegated authentication/authorization with accounts and users
 - Multi-tenant security model:
     - JS

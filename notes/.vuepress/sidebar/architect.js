@@ -1,6 +1,6 @@
 module.exports = [
     '',
-    'authenication',
+    'authentication',
     'authorization',
     'cohesion-coupling',
     {

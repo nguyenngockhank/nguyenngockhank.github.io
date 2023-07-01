@@ -161,7 +161,7 @@ xhr.withCredentials = true;
 
 ---
 
-Ví dụ: Mọi chuyện đều yên ổn cho tới khi sếp tôi đọc được đâu và muốn nhét cái Json web token vào làm authenication 
+Ví dụ: Mọi chuyện đều yên ổn cho tới khi sếp tôi đọc được đâu và muốn nhét cái Json web token vào làm authentication 
 
 ```javascript
 var url = 'http://api.alice.com/cors';

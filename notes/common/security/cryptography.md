@@ -155,7 +155,7 @@ This is a 512-bit hash function.
 
 ## Message Authentication Code (MAC)
 
-[See more HMAC](../../architect/authenication.md#hash-based-message-authentication-code-hmac)
+[See more HMAC](../../architect/authentication.md#hash-based-message-authentication-code-hmac)
 
 MAC algorithm is a symmetric key cryptographic technique to provide message authentication. For establishing MAC process, the sender and receiver share a symmetric key K.
 

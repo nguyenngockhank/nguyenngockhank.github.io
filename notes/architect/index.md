@@ -33,7 +33,7 @@
         - Compliance
         - Privacy
         - Certifications
-    - [Authentication](./authenication.md) & [Authorization](./authorization.md)
+    - [Authentication](./authentication.md) & [Authorization](./authorization.md)
         - MFA
 
 ### Structural

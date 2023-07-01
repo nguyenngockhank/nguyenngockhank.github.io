@@ -36,7 +36,7 @@ $html = get_file_contents($url); // send request => recieve html into $html
 ## PHP - CURL 
 
 ### Ngữ cảnh
-Thích hợp với Request cần Authenication. Các request khác GET. 
+Thích hợp với Request cần authentication. Các request khác GET. 
 VD: Data nằm trên trang Admin =))) kiểu là hack đc pass của admin rồi, giờ chỉ còn việc lụm data zìa thôi 
 
 ### Vài dòng code

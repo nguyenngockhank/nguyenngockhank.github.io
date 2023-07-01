@@ -22,7 +22,7 @@ $.get( "/user/12345", function( data, textStatus , jqXHR ) {
 })
 ```
 
-## Set header `Authenication token`
+## Set header `authentication token`
 
 ```js
 // axios

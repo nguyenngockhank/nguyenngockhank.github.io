@@ -52,7 +52,7 @@ var config = {
 firebase.initializeApp(config);
 ```
 
-## Authenication
+## authentication
 
 Let's choose Google for example 
 
