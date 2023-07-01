@@ -12,6 +12,7 @@ module.exports = [
             'patterns/stateless',
             'patterns/graceful-degradation',
             'patterns/bulkhead',
+            'patterns/high-water-mark/',
             'fault-tolerance',
             'distributed-patterns',
         ]

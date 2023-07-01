@@ -183,7 +183,7 @@ module.exports = [
     {
       title: 'API Guidelines',
       children: [
-        '/api/',
+        '/rest/',
         `/api-guidelines/overview`,
         {
           title: 'Principles',
