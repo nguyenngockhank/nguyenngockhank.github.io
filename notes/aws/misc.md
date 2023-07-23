@@ -125,6 +125,37 @@ Quotas |  Unlimited | 5
 Share publicity | ✅, but not recommended. | ✅
 Recovery | ❌ | You may get it back if not associate to someone else
 
+## NAT Gateway vs Internet Gateway
+
+In AWS, both NAT Gateway and Internet Gateway are used to enable communication between resources in a Virtual Private Cloud (VPC) and the internet. However, they serve different purposes and have distinct functionalities.
+
+
+### NAT Gateway
+A NAT Gateway, short for Network Address Translation Gateway, is a managed service provided by AWS that allows resources within a private subnet to access the internet while keeping their private IP addresses hidden. It acts as a bridge between the private subnet and the internet, translating the private IP addresses of the resources into public IP addresses.
+
+Key features of NAT Gateway include:
+
+1. Outbound traffic: NAT Gateway primarily handles outbound traffic from the private subnet to the internet. It allows resources within the private subnet to initiate connections with external services, such as accessing software updates, downloading packages, or making API calls.
+
+2. Elastic IP: NAT Gateway requires an Elastic IP (EIP) address, which is a static public IP address assigned to the NAT Gateway. This EIP is used for communication with the internet and remains associated with the NAT Gateway even if it fails or is replaced.
+
+3. High availability: NAT Gateway is designed to be highly available and automatically scales to handle increased traffic. AWS manages the underlying infrastructure, ensuring reliability and availability.
+
+4. Security: NAT Gateway provides an additional layer of security by acting as a barrier between the private subnet and the internet. It helps protect the resources within the private subnet by preventing direct inbound connections from the internet.
+
+### Internet Gateway
+
+An Internet Gateway, often referred to as an IGW, is another managed service provided by AWS that enables communication between a VPC and the internet. It serves as the entry and exit point for traffic between the VPC and the internet.
+
+Key features of Internet Gateway include:
+
+1. Inbound and outbound traffic: Unlike NAT Gateway, an Internet Gateway handles both inbound and outbound traffic. It allows resources within the VPC to communicate with the internet and vice versa.
+
+2. Public IP addresses: Internet Gateway enables resources within the VPC to have public IP addresses, which are accessible from the internet. This allows external services or users to initiate connections with resources within the VPC.
+
+3. Routing: Internet Gateway is responsible for routing traffic between the VPC and the internet. It uses route tables to determine the destination of the traffic and forwards it accordingly.
+
+4. Security: While Internet Gateway provides connectivity to the internet, it does not provide any security features by itself. Additional security measures, such as Network Access Control Lists (NACLs) and Security Groups, need to be implemented to control inbound and outbound traffic.
 
 ## Amazon ECS - Lifecycle event hooks
 

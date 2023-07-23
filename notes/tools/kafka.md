@@ -125,6 +125,66 @@ public void listen(Stat stat) {
 }
 ```
 
+## Schema registry
+
+```js
+const { Kafka } = require('kafkajs');
+const { KafkaAvro } = require('kafka-avro');
+
+// Configure the Kafka client:
+const kafka = new Kafka({
+  clientId: 'my-app',
+  brokers: ['localhost:9092'],
+});
+
+// Create a KafkaAvro instance
+const kafkaAvro = new KafkaAvro({
+  kafka,
+  schemaRegistry: 'http://localhost:8081',
+});
+
+// Define the Avro schema
+const userSchema = {
+  type: 'record',
+  name: 'User',
+  fields: [
+    { name: 'id', type: 'int' },
+    { name: 'name', type: 'string' },
+    { name: 'email', type: 'string' },
+  ],
+};
+
+// Register the Avro schema with the Schema Registry
+await kafkaAvro.register(userSchema);
+
+// Produce a message with the Avro schema
+const producer = kafka.producer();
+await producer.connect();
+
+const user = { id: 1, name: 'John Doe', email: 'johndoe@example.com' };
+const encodedMessage = await kafkaAvro.encode(userSchema, user);
+
+await producer.send({
+  topic: 'my-topic',
+  messages: [{ value: encodedMessage }],
+});
+
+await producer.disconnect();
+
+
+// Consume a message with the Avro schema
+const consumer = kafka.consumer({ groupId: 'my-group' });
+await consumer.connect();
+await consumer.subscribe({ topic: 'my-topic', fromBeginning: true });
+
+await consumer.run({
+  eachMessage: async ({ topic, partition, message }) => {
+    const decodedMessage = await kafkaAvro.decode(message.value);
+    console.log(decodedMessage);
+  },
+});
+```
+
 ## Why is Kafka fast?
 
 Kafka achieves low latency message delivery through Sequential I/O and **Zero Copy Principle**.
@@ -132,8 +192,20 @@ Kafka achieves low latency message delivery through Sequential I/O and **Zero Co
 
 Zero copy is a shortcut to save the multiple data copies between application context and kernel context. This approach brings down the time by ​​approximately 65%.
 
+## Use cases 
+
+- Message Broker
+- Metrics
+- Website Activity Tracking
+- Event Sourcing
+- Commit Logs
+- Log Aggregation
+- Kafka Stream Processing
+
+
 ## Tools
-[kafkatool](https://www.kafkatool.com/)
+- [kafkatool](https://www.kafkatool.com/)
+- [Kafka use cases](https://www.javatpoint.com/apache-kafka-use-cases)
 
 
 https://www.tutorialspoint.com/apache_kafka/index.htm

@@ -241,22 +241,6 @@ EXECUTE FUNCTION audit_log();
 
 ### 2. Using Logical Replication
 
-In this example, we create a publication called `my_publication` for the `my_table` table on the publisher database. We then create a subscription called `my_subscription` on the subscriber database that connects to the publisher database and subscribes to the `my_publication` publication.
-
-```sql
--- On the publisher database
-CREATE PUBLICATION my_publication FOR TABLE my_table;
-
--- On the subscriber database
-CREATE SUBSCRIPTION my_subscription
-CONNECTION 'host=192.168.1.100 dbname=my_database user=my_user password=my_password'
-PUBLICATION my_publication;
-```
-
-### 3. Using Change Data Capture (CDC)
-
-Change Data Capture (CDC) is a feature in PostgreSQL that allows you to capture data changes in real-time and store them in a separate table. You can use CDC to capture data changes without affecting the performance of the database.
-
 ```sql
 -- Enable the pglogical extension
 CREATE EXTENSION pglogical;
@@ -285,6 +269,66 @@ SELECT pglogical.start_replication(
 ```
 
 In this example, we enable the pglogical extension and create a replication set called `my_replication_set`. We then add the `my_table` table to the replication set and create a replication node called `my_node` that connects to the publisher database. We create a replication slot called my_slot and start the replication worker to capture data changes in real-time.
+
+
+### 3. Using Change Data Capture (CDC)
+
+Change Data Capture (CDC) is a feature in PostgreSQL that allows you to capture data changes in real-time and store them in a separate table. You can use CDC to capture data changes without affecting the performance of the database.
+
+1. Enable the `wal_level` parameter in the `postgresql.conf` file. This parameter determines the amount of information written to the Write-Ahead Log (WAL). Set it to `logical` to enable logical decoding, which is required for CDC.
+
+```
+wal_level = logical
+```
+
+2. Restart the Postgres server to apply the changes made to the `postgresql.conf` file.
+
+
+3. Create a replication slot using the `pg_create_logical_replication_slot` function. This function creates a replication slot that can be used to capture changes.
+
+```sql
+SELECT pg_create_logical_replication_slot('cdc_slot', 'wal2json');
+```
+In the above example, we create a replication slot named `cdc_slot` using the `wal2json` output plugin. The `wal2json` plugin converts the Write-Ahead Log (WAL) into a JSON format, making it easier to consume the changes.
+
+
+4. Create a publication to define the tables and columns you want to capture changes for. A publication is a named collection of tables and columns that are tracked for changes.
+
+```sql
+CREATE PUBLICATION cdc_publication FOR TABLE table1, table2;
+```
+
+In the above example, we create a publication named `cdc_publication` for `table1` and `table2`. Any changes made to these tables will be captured by CDC.
+
+5. Create a subscription to consume the changes captured by CDC. A subscription defines the connection details and the publication to subscribe to.
+
+```sql
+CREATE SUBSCRIPTION cdc_subscription CONNECTION 'host=127.0.0.1 port=5432 dbname=mydb user=myuser password=mypassword' PUBLICATION cdc_publication;
+```
+
+In the above example, we create a subscription named `cdc_subscription` that connects to the database `mydb` using the provided connection details. It subscribes to the `cdc_publication` publication.
+
+Once you have completed these steps, CDC will be set up in your Postgres database. Any changes made to the tables included in the publication will be captured and made available for consumption through the subscription.
+
+You can query the changes using the `pg_logical_slot_get_changes` function or any other method supported by the output plugin you have chosen.
+
+Remember to monitor the size of the replication slot and the disk space used by the changes captured by CDC to ensure it does not grow excessively.
+
+
+#### Example 2
+
+In this example, we create a publication called `my_publication` for the `my_table` table on the publisher database. We then create a subscription called `my_subscription` on the subscriber database that connects to the publisher database and subscribes to the `my_publication` publication.
+
+```sql
+-- On the publisher database
+CREATE PUBLICATION my_publication FOR TABLE my_table;
+
+-- On the subscriber database
+CREATE SUBSCRIPTION my_subscription
+CONNECTION 'host=192.168.1.100 dbname=my_database user=my_user password=my_password'
+PUBLICATION my_publication;
+```
+
 
 ## Unlogged Table
 

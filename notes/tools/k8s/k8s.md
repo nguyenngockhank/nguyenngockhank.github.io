@@ -83,3 +83,6 @@ PersistentVolumeClaim (pvc) là yêu cầu sử dụng không gian lưu trữ (s
 
 
 https://stackoverflow.com/questions/45079988/ingress-vs-load-balancer
+
+
+https://jlvbcoop.com/en/eventbus-kubernetes/

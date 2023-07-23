@@ -1,5 +1,26 @@
 # Data structure
 
+## Unordered data structures 
+
+![key-value and connected elements](https://pbs.twimg.com/media/F1AXBhOWwAE1896?format=jpg&name=4096x4096)
+
+useful for storing and retrieving information that doesn't follow a specific order. 
+For speed, they utilize key-value pairs or relationships between elements.
+
+## Hierarchical data structures
+
+![tree-like](https://pbs.twimg.com/media/F1AXA8sX0AAbp2P?format=jpg&name=4096x4096)
+
+Hierarchical data structures represent data in a tree-like shape. 
+
+They are great for organizing and managing data with ordered parent-child relationships to quickly search, access, and insert elements quickly.
+
+## Linear data structures
+
+![array](https://pbs.twimg.com/media/F1AXAbAWwAERvCm?format=jpg&name=4096x4096)
+
+Linear data structures are used to arrange items sequentially and in a specific order. They can be traversed in a linear fashion, which makes them ideal for organizing and manipulating data when access, insertion, or removal must take place in a specific sequence or place.
+
 ## [Skiplist](https://en.wikipedia.org/wiki/Skip_list)
 - a common in-memory index type
 - to build the `Sorted Set`

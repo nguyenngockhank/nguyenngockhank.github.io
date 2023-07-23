@@ -64,12 +64,94 @@ UNION ALL | `$unionWith`
 [Aggregation Pipeline Stages](https://www.mongodb.com/docs/manual/reference/operator/aggregation-pipeline/)
 
 
+### Example
+
+For example, you can use the `$match` stage to filter documents, the `$group` stage to group documents by a specific field, and the `$project` stage to reshape the output.
+
+```js
+
+async function runAggregation() {
+  const pipeline = [
+    { $match: { status: 'active' } },
+    { $group: { _id: '$category', total: { $sum: '$quantity' } } },
+    { $project: { category: '$_id', total: 1, _id: 0 } }
+  ];
+
+  try {
+    const collection = client.db().collection('products');
+    const result = await collection.aggregate(pipeline).toArray();
+    console.log(result);
+  } catch (error) {
+    console.error('Error executing aggregation', error);
+  } finally {
+    await client.close();
+  }
+}
+
+runAggregation();
+```
+
 ## Migration
 
 https://dba.stackexchange.com/questions/203926/how-to-find-all-invalid-document-based-on-jsonschema-validator/203950#203950
 
 https://www.mongodb.com/community/forums/t/can-i-update-a-schema/154565
 
+
+## Indexes 
+
+### Single Field Index
+
+This is the most basic type of index in MongoDB. It indexes a single field in a collection. Single field indexes can significantly improve the performance of queries that involve filtering or sorting based on that field.
+
+Here's an example of creating a single field index on the "name" field of a collection called "users":
+
+```js
+db.users.createIndex({ name: 1 });
+```
+
+### Compound Index
+
+A compound index is created on multiple fields in a collection. It can improve the performance of queries that involve filtering or sorting based on multiple fields.
+
+Here's an example of creating a compound index on the "name" and "age" fields of a collection called "users":
+
+```js
+db.users.createIndex({ name: 1, age: -1 });
+```
+
+### Text Index
+
+Text indexes are used to perform full-text search on string content. They enable efficient searching of text fields for words or phrases. Text indexes are particularly useful when implementing search functionality in applications.
+
+Here's an example of creating a text index on the "description" field of a collection called "products":
+
+```js
+db.products.createIndex({ description: "text" });
+```
+
+### Geospatial Index
+
+Geospatial indexes are used to optimize queries that involve geospatial data. They enable efficient querying of data based on location and support various geospatial operations like finding nearby points or calculating distances.
+
+Here's an example of creating a geospatial index on the "location" field of a collection called "places":
+
+```js
+db.places.createIndex({ location: "2dsphere" });
+```
+
+### Hashed Index
+
+Hashed indexes are useful for sharding data across multiple servers in a MongoDB cluster. They distribute data evenly based on the hash value of a field. Hashed indexes are typically used for fields with high cardinality.
+Here's an example of creating a hashed index on the "user_id" field of a collection called "orders":
+
+```js
+db.orders.createIndex({ user_id: "hashed" });
+```
+
+These are just a few examples of the types of indexes available in MongoDB. Each index type serves a specific purpose and can greatly enhance the performance of queries in different scenarios. It's important to choose the appropriate index type based on the nature of your data and the types of queries you need to optimize.
+
+Remember, creating indexes comes with a trade-off in terms of increased storage space and write performance. Therefore, it's essential to carefully analyze your application's requirements and query patterns before deciding on the indexes to create.
 
 ## Example data
 

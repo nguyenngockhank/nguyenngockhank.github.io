@@ -114,6 +114,33 @@ client.search(searchParams, (err, resp) => {
 
 In this example, we search for the word `car` using the `my_analyzer` analyzer. The analyzer will expand the search to include the synonyms `automobile`. The search results will include all documents that contain the word `car` or `automobile`.
 
+### Alternative to Data given  
+
+```js
+{
+  // ... 
+  filter: {
+    your_synonym_filter_name: {
+      type: 'synonym',
+      synonyms_path: 'path_to_synonyms_file'
+    }
+  }
+}
+```
+
+Use `synonyms_path` instead `synonyms`
+
+Each line in the file `path_to_synonyms_file` should contain a group of synonyms separated by commas
+
+```
+car, automobile
+bike, bicycle
+bus, coach, minibus
+train, railway
+plane, airplane, aircraft
+```
+
+
 ## Searching for Mistyped Words
 
 ### 1. Use Fuzzy Query
@@ -271,6 +298,53 @@ await client.indices.create({
     mappings,
   }
 });
+```
+
+
+## Use Geo-point
+
+```js
+// create index
+await client.indices.create({
+  index: 'my_index',
+  body: {
+    mappings: {
+      properties: {
+        location: { type: 'geo_point' }
+      }
+    }
+  }
+});
+
+// index document
+await client.index({
+  index: 'my_index',
+  body: {
+    location: {
+      lat: 40.7128,
+      lon: -74.0060
+    }
+  }
+});
+
+
+// searching
+const response = await client.search({
+  index: 'my_index',
+  body: {
+    query: {
+      geo_distance: {
+        distance: '10km',
+        location: {
+          lat: 40.7128,
+          lon: -74.0060
+        }
+      }
+    }
+  }
+});
+
+console.log(response.hits.hits);
 ```
 
 ## Match query vs Term query
@@ -491,3 +565,4 @@ DELETE /customer/_doc/1?pretty
 ## Other
 - TF-IDF = Term Frequency–Inverse Document Frequency
 - [Running the Elastic Stack on Docker](https://www.elastic.co/guide/en/elastic-stack-get-started/8.2/get-started-stack-docker.html)
+- [Use Cases, Architecture, and 6 Best Practices](https://granulate.io/blog/elasticsearch-use-cases-architecture-6-best-practices/)
