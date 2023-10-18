@@ -6,6 +6,36 @@
 
 https://xuanthulab.net/kubernetes/
 
+## Resource types
+
+In Kubernetes, resource types are the building blocks that define the various components and objects that can be managed within a cluster. Each resource type represents a specific kind of object that can be created, updated, or deleted in a Kubernetes cluster.
+
+Kubernetes provides a wide range of resource types to cater to different requirements and functionalities. Some common resource types include:
+
+1. **Pods**: Pods are the smallest and most basic unit in Kubernetes. They represent a single instance of a running process in a cluster.
+
+2. **Deployments**: Deployments are used to manage the lifecycle of a set of pods. They provide declarative updates for pods and their associated resources, such as replica sets.
+
+3. **Services**: Services enable communication between different pods and external clients. They provide a stable network endpoint for accessing a set of pods.
+
+4. **ReplicaSets**: ReplicaSets are used to ensure a specified number of pod replicas are running at all times. They are the underlying mechanism behind deployments and provide scaling and self-healing capabilities.
+
+5. **StatefulSets**: StatefulSets are used to manage stateful applications that require stable network identities and persistent storage. They provide guarantees for ordering and uniqueness of pod names, as well as stable network identities and persistent storage volumes.
+
+6. **ConfigMaps**: onfigMaps are used to store configuration data that can be consumed by pods. They allow you to decouple configuration from your application code and provide a way to manage configuration changes without redeploying your application.
+
+7. **Secrets**: Secrets are similar to ConfigMaps but are specifically designed for storing sensitive information, such as *passwords* or *API keys*, that should not be exposed in plain text.  They are similar to ConfigMaps but provide encryption and additional security features. They are base64-encoded and can be mounted as files or used as environment variables in pods.
+
+8. **Persistent Volumes**: PersistentVolumes (PVs) are used to provide persistent storage for stateful applications. They represent a piece of network-attached storage in the cluster and can be dynamically provisioned or statically defined.
+
+9. **PersistentVolumeClaims**: PersistentVolumeClaims (PVCs) are used to request storage resources from PersistentVolumes. They provide a way for applications to dynamically request and bind to available storage resources.
+
+10. **Namespaces**: Namespaces are used to create virtual clusters within a physical Kubernetes cluster. They provide a way to divide cluster resources between multiple users or teams.
+
+## How t
+
+## Others
+
 ### Pod
 
 Kubernetes không chạy các container một cách trực tiếp, thay vào đó nó bọc `một` hoặc `vài container` vào với nhau trong một cấu trúc gọi là **POD**. Các container cùng một pod thì chia sẻ với nhau tài nguyên và mạng cục bộ của pod.

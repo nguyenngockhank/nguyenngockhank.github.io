@@ -2,7 +2,16 @@ module.exports = [
     '',
     'authentication',
     'authorization',
-    'cohesion-coupling',
+    {
+        title: "Microservices",
+        children: [
+            'microservices',
+            'mistakes',
+            'OrchestrationVsChoreography',
+            'microservice/cohesion-coupling/',
+            'microservice/cross-cutting-concerns/',
+        ]
+    },
     {
         title: "Distributed System Patterns",
         children: [
@@ -17,18 +26,10 @@ module.exports = [
             'distributed-patterns',
         ]
     },
-   
+
     {
         title: 'Architectures', 
         children: [
-            {
-                title: "Microservice",
-                children: [
-                    'microservices',
-                    'mistakes',
-                    'OrchestrationVsChoreography',
-                ]
-            },
             'lambda-arch/',
             'eventsource',
             'ddd/',

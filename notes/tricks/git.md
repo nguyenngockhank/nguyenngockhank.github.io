@@ -122,6 +122,31 @@ Best practice khuyên là:
 
 Nếu là người không rành và có kinh nghiệm làm việc với rebase thì merge sẽ là cách làm an toàn hơn, nó sẽ không phá mất cái history của repo, cho nên với cách merge cho một shared branch thì việc nhiều người làm chung trên một branch sẽ không xảy ra sự cố, mặc dù history sẽ khá nhập nhằng.
 
+## Specifying the Private SSH Key in Git
+
+```
+GIT_SSH_COMMAND="ssh -i /path/to/privatekey/ git <command>
+```
+
+Example
+```
+GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519" git clone git@bitbucket.org:chromawallet/stuttgart-mp.git
+```
+
+Create alias that we save time to type
+
+At `~/.zprofile` or `~/.bash_profile`, append the below line
+
+```
+alias w3tech='GIT_SSH_COMMAND="ssh -i ~/.ssh/id_ed25519"'
+```
+
+Then, use like this
+
+```
+w3tech git clone git@bitbucket.org:chromawallet/stuttgart-mp.git
+```
+
 
 ## Refs 
 

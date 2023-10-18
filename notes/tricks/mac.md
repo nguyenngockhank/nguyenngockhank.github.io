@@ -104,7 +104,13 @@ ifconfig |grep inet
 
 ## SSH
 
-### Tạo SSH key
+### List all SSH 
+
+```
+ls -al ~/.ssh
+```
+
+### Create an SSH keys
 
 ```
 ssh-keygen -t rsa -b 2048
@@ -115,6 +121,12 @@ Hỏi gì cũng Enter hết :v
 - Với lại khỏi SSH mà phải nhập lại Mật khẩu
 
 *Note*: `apple` là tên máy của mềnh
+
+**Copy public key**
+
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
 
 ### Tạo SSH key tại thư mục hiện tại 
 
