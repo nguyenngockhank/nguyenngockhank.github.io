@@ -19,7 +19,6 @@ https://www.patterns.dev/posts/islands-architecture
 
 ## Rendering
 
-
 Name | Description 
 ----------- |------
 Static | automatically rendered as static HTML (uses no initial props)
@@ -124,6 +123,7 @@ router.query | empty when pre-rendering, update after hydration | always availab
 next build   | output an HTML | output an JS file
 
 
+
 ## File-system Routing
 
 ```
@@ -162,7 +162,7 @@ Optional catch all  | `pages/posts/[[...slug]].tsx`  | /posts/  |`{}`
 
 ## Navigation
 
-### Navigate between pages wit Link
+### Navigate between pages with Link
 
 ```tsx
 import Link from 'next/link'
@@ -238,6 +238,8 @@ You'll receive the updated `pathname` and the `query` via the `router` object (a
   }, [])
 ```
 
+
+
 ### How prefetching works
 
 https://web.dev/route-prefetching-in-nextjs/
@@ -247,6 +249,99 @@ https://web.dev/route-prefetching-in-nextjs/
 - Prefetching is **only enabled in production.**
 - But it will be disabled in slow network or when users have Save-Data turned on.
 
+## Optimization
+
+### [Images](https://nextjs.org/docs/app/building-your-application/optimizing/images)
+```tsx
+import Image from 'next/image'
+```
+
+- use `<Image />` from `next/image` instead of others. [Read more](https://nextjs.org/docs/app/api-reference/components/image)
+- attributes to optimize perf `priority`, `sizes`, `quality`, `blurDataURL`
+- Nextjs automatically detect browser's supported image formats
+- fallback with `onError`
+
+### Font
+
+`next/font` will automatically optimize your fonts (including custom fonts) and remove external network requests for improved privacy and performance.
+
+### [Lazy Loading](https://nextjs.org/docs/app/building-your-application/optimizing/lazy-loading#nextdynamic)
+
+```ts
+import dynamic from 'next/dynamic'
+```
+
+`next/dynamic` is a composite of `React.lazy()` and `Suspense`. 
+
+**1/ Loading lazy component**
+
+Lazyload offscreen sections is a good choice
+
+Should not implement manually if you don’t want to face another hundred problems in React (optimize useEffect, rerender state, exceed resources, …). [Read more](ttps://huzaima.io/blog/lazy-loading-react-components-intersection-observer )
+
+```js
+const PresentationMarketPlace = dynamic(() =>
+  import('./PresentationMarketPlace').then((c) => c.PresentationMarketPlace)
+)
+
+const LazySection = ({ section, props }: { section: SectionInfo; props: any }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    fallbackInView: true,
+    threshold: 0.5,
+  })
+  return <Box ref={ref}>{inView ? createElement(PresentationMarketPlace, props) : <LogoLoading />}</Box>
+}
+```
+
+
+**2/ Loading External Libraries**
+
+```tsx
+<input
+    type="text"
+    placeholder="Search"
+    onChange={async (e) => {
+      const { value } = e.currentTarget
+      // Dynamically load fuse.js
+      const Fuse = (await import('fuse.js')).default
+      const fuse = new Fuse(names)
+      setResults(fuse.search(value))
+    }}
+  />
+```
+
+### Shallow routing 
+
+Shallow routing is a technique that allows you to update the URL of a page without reloading the page itself or fetching new data from the server. This can improve the user experience by making page transitions faster and smoother. 
+
+```tsx
+<Link shallow={true} />
+
+router.push(targetUrl, { shallow: true })
+```
+
+**Read more**
+- [Shallow routing](https://webkul.com/blog/shallow-routing-in-next-js/)
+- https://github.com/vercel/next.js/discussions/48110
+
+### optimizePackageImports
+
+Use `@next/bundle-analyzer` to analyze which included in bundled file
+
+I figured out Nextjs using Webpack to build the script chunks. 
+- In the Webpack world, there is a **Tree-shaking** definition, that will remove the dead code in the external package.
+- Even though Vercel says no to that concept, they have another solution that processes cheaper than Tree-shaking. [Read more](https://vercel.com/blog/how-we-optimized-package-imports-in-next-js)
+
+Applied in `next.config.js` file
+
+```js
+module.exports = {
+  experimental: {
+    optimizePackageImports: ["my-lib", "@/components", "lodash"]
+  }
+}
+```
 
 
 ## Comparation
