@@ -9,6 +9,24 @@
 - **Docker Image**: (immutable)
 - **Docker Container**: … 
 
+## How does Docker Work?
+
+Docker's architecture comprises three main components:
+
+🔹 Docker Client
+This is the interface through which users interact. It communicates with the Docker daemon.
+
+🔹 Docker Host
+Here, the Docker daemon listens for Docker API requests and manages various Docker objects, including images, containers, networks, and volumes.
+
+🔹 Docker Registry
+This is where Docker images are stored. Docker Hub, for instance, is a widely-used public registry.
+
+
+![docker working](https://lh3.googleusercontent.com/pw/ABLVV86cphVayhq7FjqV3xFPSpsJjiGRJ1eymYS8oFCEk-Hau07NtwAuSedDBbrN13ygw4HJ35v4YhpiPzDy0qSujJ9mE-5bhzjwRNlNknUvFhuAoYO-9y-fkr5l-Ro79kHpJ3IlLT1tWD7PSfhNTHe8xqN13A4h0BohmSUn9PtFLh99nDDPLdAyY-S8lky3dWlExGuM7DybYx1vHqTE9YKFJWyi1ne72P22J59AzW-9ehR7cNlYBd8xU97IcWoq6HjJrF7orFoVwml3mz-OE8a605oErN4UgRhcbg2diVOBl9ZTMyVLigXa-U5Sih3b4ku-i-2puO-gEhWLMi48CUBQu1glUwhdivbXeACHrMJdzILrujj_b9Q_0eFh9GG7qkG-1BtMgbRisgxbCmt-pSOTnOf_sYrdfNkJavyhOqTUa2HeiLuQwiyV_gLRE_biOHqAFe911LFSp4h-cnxcHCIygA--QQ2TQCNehDnu7g6cqttQzZkR9kVcg9cTdamFz89OIC3ZFVslkuUpfB6CkOX1UEU3B44fefBqsxm1Na5CuNxM2lpgoGhLv0fapTS-zjk49kFTX1P--xZ4sYg4VOTR1ju9MuWrin4wRXILakQAkECWE7ALRAcj75FoQ-VopyVUxpq9xU77L3OcSfyHQ8OZKRYNUVJ_gmBusuyNoUczD9mugscv8l7CLM9VawsZunZQCsoM4xqRIC_1dJkERIkFbt6y4BV9rovrY-hkAj75solwhIi_2mMAgpMf5A20Ul7iLzIXeYyGtJW2CpVT9t03KO3nSYoxGVxkRuT9YhTI8beq5JxWZWN5SN94uaPYmw-TphfXbhHJtWyMrk_mhG3RTRxWacn2CCaQJz_i2Aihzk3vJGuMei13vgQYC-p8bTvVUbuWrVV8VUdC3bfktk_80LpQR3izBENh4pH91HvHxg=w572-h569-s-no-gm)
+
+[Read more](https://twitter.com/bytebytego/status/1725033713497694253)
+
 ## Image
 
 ![Image with container](./img/docker-image-container.png)

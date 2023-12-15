@@ -33,7 +33,7 @@ In this approach, the client process tracks the number of failed requests. If th
 // create once
 CircuitBreakerConfig config = CircuitBreakerConfig.custom()
                                     •failureRateThreshold(50)
-                                    waitDurationIn0penState(Duration.ofMillis(1000))
+                                    .waitDurationIn0penState(Duration.ofMillis(1000))
                                     .ringBufferSizeInHalf0penState (5)
                                     .ringBufferSizeInClosedState (100)
                                     .build () ;

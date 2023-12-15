@@ -1,5 +1,5 @@
 ---
-tags: ["DistributedSystem", "Communication"]
+tags: ["DistributedSystem", "Communication", "MessageQueue", "PubSub"]
 ---
 
 # Messaging

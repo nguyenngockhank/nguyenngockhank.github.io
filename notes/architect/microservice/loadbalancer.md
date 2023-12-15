@@ -12,7 +12,29 @@ It shall be used in conjunction by **Azure API Management** (API gateway). Azure
 
 ![images](https://i.stack.imgur.com/Tih2R.png)
 
+## Reverse proxy vs. API gateway vs. load balancer
+
+![compare](https://lh3.googleusercontent.com/pw/ABLVV85NUp0j2suINAld47fvfH8_q-_YA3rrLxL_3f4xqhafrNjr33Jtzim_WZfUVtvvPhNVmc-SWhkcZvr66LMdi4CHi9EstF6EPlanVgdEpd__94stjtrdnSf6Y72c5ae2gR38FpJICxpg-wOHOmd1STwd7x3AvDfj-YKeo97a8dMG2ZrcImmS15orO8Y_3NsdBgUi5oXqm8OSzqwIhvQYeFehfsDG9Wux86n1BlKLKMmDk6BwolyyxFOZVoY4ouDfRM3fXZSg5KSsUXF9iwKuQ7QXfaoP53gdekQCW56A62HiQWSpLgnFRIaSusIAbEwyVw2CncetHhVSxRx_tHKxvl6jDzB3agkUnf7vKJ7O4X1fgpB9IfviauPGgq2u1nOR9rI72Bs7I_5srGuyYCsBWGcH2ldmsRb3LV3zd0vb1HM5hEXogn_6YjzC2yaEO3Xqd30RXnfVBSNo6avxoYFwe-Ac7_9tAEAUKa2PjcWOoqUt3mEPqfCrHTEtYotSVhWio1lyKmrCoT0UxRhNY9eBMtOoYIaYODZZNElUD6bGMVkv3tNo8UElDngHXeO2oQC07EH8gMidDW1QBRtHfRn7lDoSxqMdrXwEkOvToNFhJfCEPJZZbETmUHcc2fz53QNyt5uNZ6Wy4QS2nTLKTNqRPwPF7JsnSbJrKoQx3OhWpiMzqqKI8Qim0wdvf6ziVmMAztru95qDt5AfLUH13mBsBHmN1ujcC4NkFd1jwgCSS2OTxd5X8rVk6BKE8YNJWsx6nIBmc_8oIqquVg-OJuCrQNGju3LLnNRiG2hdfhbOoSCGqTcx2UVn-D0WVoObJ5Os63aaNsScsSbh9t8AHnPwvL1DkxqWvydbnUPfLwvrjyaUreVSulWMBKKzTBDwTS5v2rmmiOvug9CyLjdZFjjpEy3FSovPojrQ6iSBJbgoZg=w783-h925-s-no-gm)
+
+As modern websites and applications are like busy beehives, we use a variety of tools to manage the buzz. Here we'll explore three superheroes: Reverse Proxy, API Gateway, and Load Balancer.
+
+🔹Reverse Proxy: change identity
+- Fetching data secretly, keeping servers hidden.
+- Perfect for shielding sensitive websites from cyber-attacks and prying eyes.
+
+🔹API Gateway: postman
+- Delivers requests to the right services.
+- Ideal for bustling applications with numerous intercommunicating services.
+
+🔹Load Balancer: traffic cop
+- Directs traffic evenly across servers, preventing bottlenecks
+- Essential for popular websites with heavy traffic and high demand.
+
+In a nutshell, choose a Reverse Proxy for stealth, an API Gateway for organized communications, and a Load Balancer for traffic control.  Sometimes, it's wise to have all three - they make a super team that keeps your digital kingdom safe and efficient.
+
 ## Routing Algorithms 
+
+![techniques](https://lh3.googleusercontent.com/pw/ABLVV86Qi57-XGwhzrNhBWSPLtDPHYqsHdvThHM-3TrDAgRUNXTi9YyJKc3zz2P7DMLcAhBgQCjBHJJRfTOwzHcBgBNCE-X5786FB-h09lU9ssglsVyNr5vNjDF1I2lOOt_1ECda3tPlOPtASei4fwmRXkVCHcb63jExAfg2JVpbQme502zq84HNFFkj3O1eUQRkTcnobvtklc9UVSbxyRlQ_TzmG8sSesbfvWnTUK_LNU9FjBh5-h8KOmbYVVlRg4s6-yUb8UvuTtZsXnOp5gYKl93Dgb5pjaSaVlIQn1HgZbhTTgNqojKhygclXfjR0-LRLQ735GSxUIvzughwLrvcagcsXEjEF_EXM318k_Zz04QBca0p4vlC0UfY_FcEfhx8gBi2dC7mzm41BnMsd18uo9uVOmGnF-aw0gRj8lHvJgjBE3yoiNSJ-QzDNChyiDEyiGEzfb5xM2n4B6bx1COXHuaba0B8bVOQF9t33sv40rpcdjmzxZDeGOEqTJ0YK48RDZF3yE1XvtzfX0t839uLK3y3Onl0TFKDIfR48M909bvxK3_8scx9jS-m5AcB6NCGq3uEQDxSdLnWjYBAfkAcFiqCPyVH3qqEwoGGU1k0TfQMHw9WflRjSF_AjgW3lwSExfjaUOrMt9iLav8sNd9aJ3xzAkQfvOXCe9YmQatxSzfoDDuJufc5PQpoFEhT82pT9QbFEWmWsqgkk70JwoqvHCzOGURXlr5UpSHhDcLVvcsQywAUl6ZtPwiH-yAUqVUxst02L29I6aJ8gkThuRqlhYbKgXVuCFmsANTUV_niYXbxHer69HzfkYONIP0GNltOsmWeL-QH7ZS8dQkdC52whJ6cNT1HwdVywNzzlshg6KiQ26soXNcAqWFKA0f1QEnN7xhotvlEVxjOqmgx-l1NNUatNmp9lVb7f_8G76TRzg=w720-h900-s-no-gm)
 
 ### Round robin
 The client requests are sent to different service instances in sequential order. The services are usually required to be stateless.
@@ -63,3 +85,4 @@ To distribute the load across the database instances, you can use a connection p
 Using a connection pool or a database proxy allows you to distribute the workload across the database instances without the need for a load balancer. It also provides additional benefits such as connection pooling, query caching, and request routing based on the application's needs.
 
 In summary, while load balancers are not typically used directly for databases in a microservice architecture, you can achieve load balancing and high availability by using database clustering mechanisms and connection pooling or a database proxy. These approaches ensure that the workload is distributed across multiple database instances, providing fault tolerance and scalability.
+

@@ -20,6 +20,30 @@ This implies that effective software uses a hybrid all 3 programming paradigms s
 
 While you could take a strictly functional or strictly object-oriented approach to writing code, understanding where each excels will improve the quality of your designs.
 
+## Imperative Vs Functional Vs Object-oriented Programming
+
+![compare](https://lh3.googleusercontent.com/pw/ABLVV87HhW57ofpydQRdH4PBs5X-LPRMntRfhzjeE5k08NJbEIouXSe7eAF9s94y54yHCOXOdn8hGOQL6deGtDd0KQD-LzT_VcMTwbw6JLTZn0gLv0Ieo2f4X0CtqVv2fzBTgPHQcsA46Y7gXOQ02TVASavm5OvmIQUZXSgVAvWDHoXHnmxYOKFDlUqqWloR_Kpw8KFGFkZkjgoMqtkQMdf2WiSjyCbolerqsb1SOwux0QQksob_VL8HdiPFsDLKOoMgrJ3ydx3yV16KsHQSMXS6PRAw13XlOo4Rh2NMTKUr9b0kQLP-5unRHlkBMJPDTIYIxDjBSuug0T9goZJjymfBGGtsVBYCDkK2nPGgQujNJfik8d4CSb2poL8USxf2G2AZC8Hlz0fYih9QjR1V5PqETxVul9adieClbvnRb8jDh0PoiQbi9Tb4qOP_xPmhA3QIU7JUBQauvkfg7XbBh-X9ejvL_K9qX7bvuozg-ZGcrjmRV9DuITlYtGIn5dhn5l4K8TIzuvqIpuDZbTF_DQKQBP2BO7gwZoN1Mr-LRN80l3RszeGFcK9bNlqQjYOUD3gZginUqnYl3QTmtsg-MA_uZ8pAga0dvPuZpMs6i3fz7D8MLpCvI4pXlJofshqfiA5Vb86j-RTvAWvGHcKRX2sHNLjfSxWFtQnNBbMfbZQn-aLRA1Uc37DL7XRfjsP-eePnW2OPP3ggBj-qa1B64A2RT8N2TgJOtm7KH6vym48DyD-_Q6dwLmlVBMzyIWnyIu3TfRdrQZlfY628te7PnVumtazOR7fYkETfxcAL76q6YoZQ7P0B8aKw9jRmD9zXhzkp0pZQzzOw9Ue91wmMnjkcAkNV2V_1HOVZTi8KwcHn5ubM_RrOjFCdeLXzouUa3AeF97uDL5pV6lp_9BMumS2AEPXUe3kSKqvqFofmBx_bDw=w499-h640-s-no-gm)
+
+
+In software development, different programming paradigms offer unique ways to structure code. Three main paradigms are Imperative, Functional, and Object-oriented programming, each with distinct approaches to problem-solving.
+
+### 1. Imperative Programming:
+- Works by changing program state through a sequence of commands.
+- Uses control structures like loops and conditional statements for execution flow.
+- Emphasizes on mutable data and explicit steps for task completion.
+- Examples: C, Python, and most procedural languages.
+
+### 2. Functional Programming:
+- Relies on pure functions, emphasizing computation without side effects.
+- Promotes immutability and the avoidance of mutable state.
+- Supports higher-order functions, recursion, and declarative programming.
+- Examples: Haskell, Lisp, Scala, and functional features in languages like JavaScript.
+
+### 3. Object-oriented Programming:
+- Focuses on modeling real-world entities as objects, containing data and methods.
+- Encourages concepts such as inheritance, encapsulation, and polymorphism.
+- Utilizes classes, objects, and interfaces to structure code.
+- Examples: Java, C++, Python, and Ruby.
 
 ### Functional Core, Imperative Shell
 

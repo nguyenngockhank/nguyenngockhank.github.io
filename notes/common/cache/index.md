@@ -6,7 +6,7 @@ tags: ["Performance"]
 
 <TagLinks />
 
-![Overview](./cache-overview.jpg)
+![Overview](https://lh3.googleusercontent.com/pw/ABLVV87V_mZmk1dJjUnX3E-iQgbgPGK6fznHpHbFt0Wgsq1vKRGxYclUYEhHRbfebhC8UMTuNduZnABUHHag7hEoE30Y5dnypEpAofQTFDqzq8SMN4pxUQmUcF-FQygwWdcvFYDoxd4aW2a9cKhm3EZSIREky_U7iWR4UeCEarvIh11d1PnF7TS0wyv7AmeqmLXcqWVNx13U3_mV3-204Zl91PUazYHuUR3MNWoNaLXhMhp-3kg5cs9k3RkSEGl6Zrzx2JuVVZ1IVD5kPad4gehi9PuCuWJvNqX1TbGtYGhoOgTgELrW4aand-3RMJoyL0zscARMd30OCZ5BTUyWSTC2OzYkxwtyvfXH5PJxJNfZmtlpU-6IcjodiVfq4qGHI5IxsePqn1s8e68DHA3vjo4PMHGniMAyWwmkWTaUZkaM14LNeOEItJF_oEqMbgwOUTXMFDjhzd46WnDvO5JUAVhiRTkcRTi1iPGY5Upz7xve6OwnpfkrzppW2e0RrHcqtTxzr3PSfD37T9mha4yUSO1p1is9n1ZJd8zDLNPMHor_zV6zbF1ARf-0JR9t6HezWr6zzoQ-an-QNMWdfmvZVEyJgtuMB3iibyDOM4JH__lOCGqcELVGzNOs7A-dP0t9dYUAoX5UjvuxZGGwOLc_tGJVKcFU4wdlgKdLMTYX-fzAFAHKqOvgHiegSywLKp-IYCalH4A6C8nsIKMxb2_MFVZBe6oR4Wy5zwhVBdA0Rkgzc35UE3MOCgudMiFnEIwhhpGQ9NC53FskeSwqv0djnmsBA0zzlOZFV8jJb297CNCvJ0NSvyru00C87KgMBQ-C2gaU7l6DNUFy8umTQJcpbLe9-bb8vf2IBHH8bIc0luWJi8WHomfZxhNlsKWdFgBQRl2iFYQG67fqgHTV8xfeyN6IyTeSDnARmbRS8Qrupr7UoA=w1238-h925-s-no-gm?authuser=1)
 
 ## Cache levels
 - Browser / Client side
@@ -51,9 +51,10 @@ tags: ["Performance"]
 
 ## Read Strategies
 
+![Strategies](https://lh3.googleusercontent.com/pw/ABLVV86xAmQoPxVYftkU-Qis2KtoqZpQbv8PXihiH9Ui66sVMgCPxE_7EfjEp-Irgc7tryPz6FK9Xcyn3g93fHDhv7ZK8Baut7tnJrKRP527WL64SO3MRbNuCiZe0QkgUa0v3rxuWIJZgF7wTn-sxg_82KSr0wYMVi0r1Au-pTnKdLIqXelNoXnj1056nTWiAl4Fe_rdY9nDhdW0up1T2Xwn-wrzviIyoaI0lPOhEayj57wrx3GsG1gV7nIiZ16y3eK-Om7zqm3YIROgBifi_NJwq4gRJg2b4VJh5PPRxzpyGfditQDWi2UgOWlhufJV75Ov0Ee3DT7M5mxaoDHqmmW39PVz-M33p2A9zaIFTggD2AR97fYv6QmdItdSRTTsPWhza4FojpHdL6xnAJkNdPxR84ufxVqiSV7bqUCzokRtnv5ej2HV6AoMa3BcvQtlFTStab_CTsIUhgRSNw2QwAwDFBJ6hYa34ItIUciPSwGs-PLk60hjHUaZGacmq9JpacYYiDL94T52Tsi6MOe03eJFGs-qSdDCyTlODm3wCu-BdxT0-Etq3164kkFg5-7UunGrRh6EDItpDfPLJ-Ym2BCo07IF4JeRY9Z3QKxHVz1LIDtblfLO8HcJ1nwBI6910YGY9XgyMSsOuIJTTOZ5LrjPQWJCEIwIHeIIGryi3YdCGPcoj6hGrYFTGsgRz580-uoGhoZknxURTN_p_8IL_pg5sR2Q9IM4tbup15_UxkfHelMeO7cIpPjwsn51ovnx_-WTMfyynlaiuDy8lBAso2PTjNMs5lX7dKHS4yTJRGLsXS4QfaAfxU-GtfhqmWVAspdpBH9WRpalQY4QPq6YqYx-Ig6VsjAvWPYoml2bw5PA9rBTioJbsBYNN_KM1_fjEDK1QAHHGiQYnmLWi0NIIAikOvs_ATzJRNixm1mo22DuYw=w783-h925-s-no-gm)
+
 ### Cache Aside
 
-![Image](./cache-aside.png)
 - The cache is sitting aside the database. 
 - The application will first request the data from the cache. 
     - If the data exists **cache hit**, the app will retrieve the data directly. 
@@ -61,8 +62,6 @@ tags: ["Performance"]
 
 
 ### Read through
-
-![Image](./cache-read-through.png)
 
 - The cache sits in between the application and the database. 
 - The application only request data from the cache. 

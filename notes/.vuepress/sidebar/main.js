@@ -31,6 +31,7 @@ const commonDocs = [
       '/common/notification/',
       '/network/websocket',
       'architect/messaging',
+      'architect/queue',
       'db/redis.html#pub-sub',
       'tools/kafka',
       'tools/kafka-vs-jetstream',
