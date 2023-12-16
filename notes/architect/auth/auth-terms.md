@@ -25,6 +25,17 @@ When you login to a website, your identity needs to be managed. Here is how diff
 - **SSO** - Single Sign On uses a central authentication service. This allows a single login to work across multiple sites. By using SSO (single sign-on), you can sign on only once and log in to multiple websites. It uses CAS (central authentication service) to maintain cross-site information
 - **OAuth2** - Allows limited access to your data on one site by another site, without giving away passwords. By using OAuth 2.0, you can authorize one website to access your information on another website
 
+
+## What are the differences between cookies and sessions?
+
+Cookies and sessions are both used to carry user information over HTTP requests, including user login status, user permissions, etc.
+
+### 🔹 Cookies
+Cookies typically have size limits (4KB). They carry small pieces of information and are stored on the users’ devices. Cookies are sent with each subsequent user request. Users can choose to ban cookies in their browsers.
+
+### 🔹 Sessions
+Unlike cookies, sessions are created and stored on the server side. There is usually a unique session ID generated on the server, which is attached to a specific user session. This session ID is returned to the client side in a cookie. Sessions can hold larger amounts of data. Since the session data is not directly accessed by the client, the session offers more security.
+
 ## Password Authentication
 Password authentication is a fundamental and widely used mechanism for verifying a user's identity on websites and applications. In this method, users enter their unique username and password combination to gain access to protected resources. The entered credentials are checked against stored user information in the system, and if they match, the user is granted access.
 
