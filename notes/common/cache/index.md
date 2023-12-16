@@ -90,21 +90,16 @@ The Refresh-ahead strategy refreshes the **hot data** before it gets expired.
 ## Write Strategies
 
 ### Write through
-![Image](./cache-write-through.png)
 - The cache sits in between the application and the database. 
 - Every writes from the application must go through the cache to the database. (double write)
 
 ### Write Back (a.k.a Write Behind)
-
-![Image](./cache-write-back.png)
 
 - The application still writes data to the cache. 
 - However, there is a delay in writing from the cache to the database. 
 - The cache only flushes all updated data to the DB once in a while (e.g. every 2 minutes).
 
 ### Write Around
-
-![Image](./cache-write-around.png)
 
 - Write around usually combines with either **cache aside** or **read through** strategy. 
 - The application writes directly to the database. 

@@ -31,6 +31,8 @@ After further reading of Netflix blogs and wikis, it seemed the terms Fault Resi
 
 There are various resilience patterns that can be applied to microservices, categorized by their impact on downstream and upstream components. Let's explore some of these patterns in detail.
 
+![patterns](https://pbs.twimg.com/media/Fci8m7HaMAA9UTx?format=jpg&name=large)
+
 Pattern | Impact on 
 --------   | ----
 [Retry](./patterns/retry.md) (exponential backoff, retry amplification) | Downstream / Upstream
@@ -43,6 +45,9 @@ Load shedding | Upstream
 [Fallback](#fallback) | Upstream
 Failover | Upstream
 [Stateless](#stateless-services) |  
+
+These patterns are usually not used alone. To apply them effectively, we need to understand why we need them, how they work, and their limitations.
+
 
 ## Fallback
 

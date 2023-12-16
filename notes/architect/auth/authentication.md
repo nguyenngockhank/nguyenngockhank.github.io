@@ -10,18 +10,14 @@ Authentication is the act of proving an assertion, such as the identity of a com
 
 <TagLinks />
 
-## Terms
+## Top 4 Forms of Authentication Mechanisms
 
-![Terms](https://lh3.googleusercontent.com/pw/ABLVV85fV--d3G0js3T341g0t4kXhCpMLeKC0I2lskPpMHNLnN4UF4YNrdKbvFwvU2qXIUqLc_--AnEUyyRfiKUilUmEnjgeIw9axZZ9twAUhPUa6_KnhX9RPDUwrcppRWGOV6IiotQ9d4IIh44nYHSY-7m4pP4V6GbwCzILjbQKPwXLg8vv5JoabI_j9VXe3n3QfRYGKSryIFVahOD0RDphcWOXOyAcs_Puri9rdf7voHPeRVMdvOl9T5IEiXsbIkq-ADAAuh9PEcpEZWgwb0lgJyXoeXpzcLZGZg0xOTnjLD4IcTpfPv82UKQNwUs8kAskl393B3VOwY5VvJSzdmhhJOrTCH7cofL7wIEla2U_fLmaH_3CGS-UxwVxcsjPzsCeQUWZLPAnwi4-rZGhPw9ltTj-tkcKI3xsxUvNbpEbVBokb60aPNVhKcjsdvsqofTsbaW3619Ct7PdqhyXsS8itJOc0sNnTkDCGB4FFg6FvUJW0aKxGiIZAd3mxjp9o4lolAgxOK4yk1feoe70hM0ACqa86E2UM0T4IxmIC3-0FHimhawHd0EPCY_5ws-noofxq6_Ed2Azqrm5F4-yMQyuyhDDhAq76kyIVqR4zcRGogJ7dznXGXDMBpHZKn7u8oRoQre0XAzEglinruGwDTTZ4afCD4KI_fNz8YcMYYHfTNwa9EDkJrvAnEG16EippOZLjtiU8ucsPbK39owk3UunxDVG7Q0rMgc_XGYCgC7rh5PYDa9RWZepO2OYA6klHXbKxJiGI_av1Xm04oXX8EuQVgs5tGrXyjwUi-gRbZp8naNw5f20_i1LjUvoffFWL46n7oIuxFhHKXh9DFnATBXR2h2SoC_MetSppn5P37qQlHsdflg-bT6J-uj39eaPT9zxec9A0x5TekG2JPtjmVsDBjuvL9WOdtJIVpkt-uc5ZA=w428-h561-s-no-gm)
+![top 4 Mechanisms](https://pbs.twimg.com/media/F7VSpIKbEAAt_IP?format=jpg&name=4096x4096)
 
-When you login to a website, your identity needs to be managed. Here is how different solutions work:
-
-- Session - The server stores your identity and gives the browser a session ID cookie. This allows the server to track login state. But cookies don't work well across devices.
-- Token - Your identity is encoded into a token sent to the browser. The browser sends this token on future requests for authentication. No server session storage is required. But tokens need encryption/decryption.
-- JWT - JSON Web Tokens standardize identity tokens using digital signatures for trust. The signature is contained in the token so no server session is needed.
-- SSO - Single Sign On uses a central authentication service. This allows a single login to work across multiple sites.
-- OAuth2 - Allows limited access to your data on one site by another site, without giving away passwords.
-- QR Code - Encodes a random token into a QR code for mobile login. Scanning the code logs you in without typing a password.
+1. SSH Keys: Cryptographic keys are used to access remote systems and servers securely
+2. OAuth Tokens: Tokens that provide limited access to user data on third-party applications
+3. SSL Certificates: Digital certificates ensure secure and encrypted communication between servers and clients
+4. Credentials: User authentication information is used to verify and grant access to various systems and services
 
 ## Signal in Request 
 
@@ -92,7 +88,6 @@ A `token` is an authorization file that cannot be tampered with. It is generated
 :::
 
 Used for system `Web API`, `Distributed system`, `micro-services`, system has multi-platform `mobile`, `IoT`, `server`,... or UI / API seperation
-
 
 
 ## Session-based vs Token-based Authentication
@@ -181,23 +176,6 @@ See more:
 - [HMAC Definition](https://www.okta.com/identity-101/hmac/)
 
 
-
-## Open Authentication (OAuth)
-
-::: tip 
-`OAuth` ra đời nhằm giải quyết vấn đề trên và xa hơn nữa, đây là một phương thức chứng thực giúp các ứng dụng có thể chia sẻ tài nguyên với nhau mà không cần chia sẻ thông tin username và password.
-:::
-
-- **Ứng dụng**  (website hoặc mobile app)yêu cầu ủy quyền để truy cập vào **Resource Server** (Gmail,Facebook, Twitter hay Github…) thông qua User
-- Nếu **User** ủy quyền cho yêu cầu trên, **Ứng dụng** sẽ nhận được *`ủy quyền từ phía User`* (dưới dạng một token string)
-- **Ứng dụng** gửi thông tin *`định danh`* (ID) của mình kèm theo *`ủy quyền của User`* tới **Authorization Server**
-- Nếu *`thông tin định danh`* được xác thực và ủy quyền hợp lệ, **Authorization Server** sẽ trả về cho **Ứng dụng** *`access_token`*. Đến đây quá trình ủy quyền hoàn tất.
-- Nếu *`access_token`* hợp lệ, **Resource Server** sẽ trả về dữ liệu của tài nguyên đã được yêu cầu cho **Ứng dụng**.
-
-![Mô hình OAuth2](@/images/oauth.png)
-
-Tóm tắt [bài viết gốc](https://viblo.asia/p/authentication-story-part-1-authentication-la-lam-gi-63vKj2YMK2R)
-
 ## OAuth 2.0
 
 ![Flow](https://lh3.googleusercontent.com/pw/ABLVV87fIPgyI8R1LyS-TIK2CtlhJZn_KbbxS0QF3vIOEwrVbJvp1EN2X-7kVIHzhFGcVeX7IOlMNrHD_Gy65aihVcvgWx5gecxc6qWqrXGPlXtoQaGOMpM41HR-j_jtotlx5803gNBFQ16F0kg8DZ25HgV_b8Vt51TDrkN4r9e_bHH9b5aCKgngYxTMBT0NXn4hKZUzqVf7bY1DitbvTTWie44C-ChrVlocCvX_tIwDsNz0Dj3MuFqG46kdda6VHHdnh-bd9-UP8C_QfN56rDHqm1dNSwakQ1Zp7BFF2cRjk_xbPwWyvgMikPX-3faMUR1_w7Hv8SNLOVoDdYQ2I84ZsZOyE_f8288Qqj50TYT3fLlFU55klzR1brmXmbn5UaOCAfAAyIpEWPnf37c3wA_yCqJP1MjLLzolqDsaDnPE6W27zBwx6xjXkOetI6OA1LiI_HJ3qx4GRJcyO_BiskDwS9NdalcDdCbJLBgkSSu39ImQetpY4wg5sEw1ZDQiUr3Gu852RlZzFWmlQkrOINGU3U8K1GBbyIJ643paXRCXTx_8IpMOpxpfmSfiQ5WCoBycdr_u7_bmmckqnJgGuyTZjuAbP7q7jzjB3ug2KayUhpTgcQGnLfH_yBqssKRWu5poZTccR98-WFnNcIvirZxZAiVzumTjRckFikZHo7mTM2uDHq5CoOuCb67nZiiA1ba1YBX9f9_Abx3-4jpssdhuCPlJKdtTkQrYk72-i4fW7k7Xz7VvYQGFmY_lmJ06TwIe3GpOEdDZAToUd-AIR2lk1VeG1-XkVWFZ-2zsjlBXytObyUcg6e4oOui1Ca9jdpdd8eoV-ouwiXpapsU9hgvAYWxY1IL18T7M11V_5jLgtciF_23xiUhKvaRX8Sl2uzI6EzD6bT-m3aEcNsu0v80V8Jr5hxKodzTj37OMPyD_xg=w692-h900-s-no-gm)
@@ -221,55 +199,3 @@ Accessing User Profile: Apps with an OAuth token can access certain parts of you
 Remember, OAuth 2.0 is all about keeping you and your data safe while making your online experiences seamless and hassle-free across different applications and services.
 
 [Read more](https://twitter.com/bytebytego/status/1725770574402928644)
-
-## Passwordless Authentication
-
-When it comes to authentication, there are three factors to consider:
-- Knowledge factors: something you know, such as a password
-- Ownership factors: something you own, such as a device or phone number
-- Inherence factors: something unique to you, such as your biometric features
-
-### One-Time Passwords (OTP)
-
-Step 1: The user wants to log in to a website and is asked to enter a username, cell phone number, or email.
-
-Step 2: The server generates an OTP with an expiration time.
-
-Step 3: The server sends the OTP to the user’s device via SMS or email.
-
-Step 4: The user enters the OTP received in the login box.
-
-Step 5-6: The server compares the generated OTP with the one the user entered. If they match, login is granted.
-
-![otp](./img/otp-flow.png)
-
-
-### Single Sign-On (SSO)
-
-When a principal tries to access a resource, she is directed to authenticate with an **identity provider**. Once identity provider is satisfied that the principal has been authenticated, it gives informatin to the **service provider**, allowing it to decide whether to grant her access to the resource.
-
-- **Identity provider** could be an externally hosted system, or something inside your own organization. 
-    - Goolge, for example, provides an OpenID Connect identity provider.
-    - For enterprises, it's common to have your own identity provider, which may be linked to your company's directory service - It could be s.th like *Lightweight Directory Access Protocol (LDAP)* or *Active Directory*
-
-
-The SSO process mainly relies on a **Central Authentication Service (CAS)** server. Here's a step-by-step breakdown of the SSO process:
-
-1. When we attempt to log in to an application, such as Gmail, we're redirected to the **CAS** server.
-2. The **CAS** server verifies our login credentials and creates a **Ticket Granting Ticket (TGT)**. This **TGT** is then stored in a **Ticket Granting Cookie (TGC)** on our browser, **representing our global session.**
-3. CAS generates a **Service Ticket (ST)** for our visit to Gmail and redirects us back to Gmail with the **ST**.
-4. Gmail uses the **ST** to validate our login with the **CAS** server. After validation, we can access Gmail.
-
-When we want to access another application, like YouTube, the process is simplified:
-- Since we already have a **TGC** from our Gmail login, **CAS** recognizes our authenticated status.
-- **CAS** generates a new **ST** for YouTube access, and we can use YouTube without inputting our credentials again.
-
-This process reduces the need to remember and enter multiple sets of credentials for different applications.
-
-![otp](./img/sso-youtube-gg.png)
-
-- SSO: Single Sign-On 
-- CAS: Central Authentication Service 
-- TGT: Ticket Granting Ticket
-- TGC: Ticket Granting Cookie
-- ST: Service Ticket

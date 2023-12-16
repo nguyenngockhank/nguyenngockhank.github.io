@@ -1,7 +1,19 @@
 module.exports = [
     '',
-    'authentication',
-    'authorization',
+    {
+        title: "Auth",
+        children: [
+            'auth/auth-terms',
+            'auth/password-notes',
+            'auth/passwordless',
+            'auth/ssh',
+            'auth/jwt',
+            'auth/mfa',
+            'auth/authentication',
+            'auth/authorization',
+            'auth/sso',
+        ]
+    },
     {
         title: "Microservices",
         children: [
