@@ -108,6 +108,7 @@ const awsDocs = [
   'arn',
   'access-keys',
   'aws-services',
+  'reduce-costs',
   {
     title: "Network",
     children: [

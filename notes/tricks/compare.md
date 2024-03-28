@@ -1,8 +1,16 @@
+---
+tags: ["Comparison"]
+---
+
 # Comparision
 
 - [FP vs. OO](https://blog.cleancoder.com/uncle-bob/2018/04/13/FPvsOO.html)
 
 - [Solution Architecture vs. Software Architecture](https://dotnetcalgary.com/solution-architecture-vs-software-architecture/)
+
+## API Gateway vs Load balancer vs Proxies vs Service Mesh
+
+![compare](https://i.pinimg.com/originals/f8/a0/67/f8a067eb303f0bb99cda1cf4c60efb04.jpg)
 
 
 ## Architectural Styles vs. Architectural Patterns vs. Design Patterns

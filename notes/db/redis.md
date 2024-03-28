@@ -1,14 +1,20 @@
 # Redis Notes
 
-**Why is Redis so fast?**
+![So fast](https://i.pinimg.com/originals/ff/e7/ce/ffe7ce9709b19d43d785dc401d51379c.jpg)
+
+## Why is Redis so fast?
 - RAM-based database
 - leverages IO [multiplexing](https://redis.com/blog/multiplexing-explained/) & single threaded execute loop 
 - leverages several efficient lower-level data structures.
 
 
-## Architecture
+## Architecture Evolves
 
-![Redis Architecture](./img/Redis-Cluster-Architecture-Diagram-Outline-01.svg)
+![History](https://i.pinimg.com/originals/88/7b/99/887b99e3692d2bf71be03322149ca0cf.jpg)
+
+
+![History](https://i.pinimg.com/originals/88/7b/99/887b99e3692d2bf71be03322149ca0cf.jpg)
+
 
 - **Simple database**, i.e. a single primary shard
 - **HA (highly available) database**, i.e. a pair of primary and replica shards

@@ -1,6 +1,5 @@
 # API Gateway
 
-
 ## Ingress Controller vs API Gateway
 
 ### Ingress Controller

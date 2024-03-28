@@ -178,7 +178,7 @@ See more:
 
 ## OAuth 2.0
 
-![Flow](https://lh3.googleusercontent.com/pw/ABLVV87fIPgyI8R1LyS-TIK2CtlhJZn_KbbxS0QF3vIOEwrVbJvp1EN2X-7kVIHzhFGcVeX7IOlMNrHD_Gy65aihVcvgWx5gecxc6qWqrXGPlXtoQaGOMpM41HR-j_jtotlx5803gNBFQ16F0kg8DZ25HgV_b8Vt51TDrkN4r9e_bHH9b5aCKgngYxTMBT0NXn4hKZUzqVf7bY1DitbvTTWie44C-ChrVlocCvX_tIwDsNz0Dj3MuFqG46kdda6VHHdnh-bd9-UP8C_QfN56rDHqm1dNSwakQ1Zp7BFF2cRjk_xbPwWyvgMikPX-3faMUR1_w7Hv8SNLOVoDdYQ2I84ZsZOyE_f8288Qqj50TYT3fLlFU55klzR1brmXmbn5UaOCAfAAyIpEWPnf37c3wA_yCqJP1MjLLzolqDsaDnPE6W27zBwx6xjXkOetI6OA1LiI_HJ3qx4GRJcyO_BiskDwS9NdalcDdCbJLBgkSSu39ImQetpY4wg5sEw1ZDQiUr3Gu852RlZzFWmlQkrOINGU3U8K1GBbyIJ643paXRCXTx_8IpMOpxpfmSfiQ5WCoBycdr_u7_bmmckqnJgGuyTZjuAbP7q7jzjB3ug2KayUhpTgcQGnLfH_yBqssKRWu5poZTccR98-WFnNcIvirZxZAiVzumTjRckFikZHo7mTM2uDHq5CoOuCb67nZiiA1ba1YBX9f9_Abx3-4jpssdhuCPlJKdtTkQrYk72-i4fW7k7Xz7VvYQGFmY_lmJ06TwIe3GpOEdDZAToUd-AIR2lk1VeG1-XkVWFZ-2zsjlBXytObyUcg6e4oOui1Ca9jdpdd8eoV-ouwiXpapsU9hgvAYWxY1IL18T7M11V_5jLgtciF_23xiUhKvaRX8Sl2uzI6EzD6bT-m3aEcNsu0v80V8Jr5hxKodzTj37OMPyD_xg=w692-h900-s-no-gm)
+![Flow](https://i.pinimg.com/originals/e2/1d/91/e21d91aecfc848e8638d7fb829fc778e.jpg)
 
 OAuth 2.0 (Open Authorization) Explained With Simple Terms.
 
@@ -199,3 +199,7 @@ Accessing User Profile: Apps with an OAuth token can access certain parts of you
 Remember, OAuth 2.0 is all about keeping you and your data safe while making your online experiences seamless and hassle-free across different applications and services.
 
 [Read more](https://twitter.com/bytebytego/status/1725770574402928644)
+
+## SSO
+
+![SSO](https://i.pinimg.com/originals/b9/76/21/b97621cc764ff1926d3a74bcb5c71765.jpg)
