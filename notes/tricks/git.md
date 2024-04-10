@@ -73,6 +73,14 @@ git rebase -i HEAD~3
 ```
 
 
+**Get all commits from all branches**
+
+```sh
+git reflog
+# or
+git log --reflog
+```
+
 ## Others
 
 ### Last-Updated timestamp
