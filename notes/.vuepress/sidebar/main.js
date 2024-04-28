@@ -1,7 +1,7 @@
 
 const prefixMapFn = (prefix) => (item) => {
   return typeof item === "string" ? `${prefix}${item}` : item;
-} 
+}
 
 const cleanCodeDocs = [
   'naming',
@@ -40,7 +40,7 @@ const commonDocs = [
   {
     title: "Clean code",
     children: cleanCodeDocs,
-  }, 
+  },
   'deployment/deploy-strategies',
   'seo',
   'crawl',
@@ -116,7 +116,7 @@ const awsDocs = [
       'vpc',
       'route53/',
     ].map(prefixMapFn('/aws/'))
-  }, 
+  },
   {
     title: "Messaging Services",
     children: [
@@ -126,7 +126,7 @@ const awsDocs = [
     ].map(prefixMapFn('/aws/'))
   },
   {
-    title: "Data processing", 
+    title: "Data processing",
     children: [
       'ml/',
       'data-analytics/',
@@ -178,152 +178,154 @@ const javascriptDocs = [
 ]
 
 module.exports = [
-    {
-      title: 'Chuyện muôn thuở',
-      children: commonDocs,
-    },
-    {
-      title: 'API Guidelines',
-      children: [
-        '/rest/',
-        `/api-guidelines/overview`,
-        {
-          title: 'Principles',
-          children: [
-            // 'design-api-first-before-code',
-            // 'minimal-api-surface',
-            'one-type-of-data-per-api',
-            // 'robustness-principle',
-            'rules-for-public-api',
-          ].map(prefixMapFn('/api-guidelines/principles/'))
-        },
-        {
-          title: 'Conventions',
-          children: [
-            'http-status-codes',
-            {
-              title: "Verb and URI (REST)",
-              children: [
-                '',
-                'post-vs-put',
-                'request-methods',
-                'others',
-              ].map(prefixMapFn('/api-guidelines/conventions/verb-and-uri-rest/'))
-            },
-            {
-              title: "JSON Fields Naming Conventions",
-              children: [
-                'formats',
-                'json-structure',
-              ].map(prefixMapFn('/api-guidelines/conventions/json-fields-naming-conventions/'))
-            },
-            'error-responses',
-          ].map(prefixMapFn('/api-guidelines/conventions/')),
-        },
-        {
-          title: "Coding Guidelines",
-          children: [
-            'api-development-workflow',
-            'review-code-api-doc',
-            'decorators-for-endpoints',
-          ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
-        }
-      ]
-    },
-    {
-      title: "Database",
-      children: [
-        'architect',
-        'id-generate',
-        'tx-isolation',
-        'acid',
-        'optimize_db',
-        'mysql_snippets',
-        'postgre',
-        'couchdb',
-        'mongodb',
-        'cassandra',
-        'elasticsearch',
-        'redis',
-        'nosql',
-        'use-cases',
-        'db-table-design',
-      ].map(prefixMapFn('/db/'))
-    },
-    {
-      title: "Giải Toán",
-      children: [
-        '/algorithm/sum100', 
-        '/algorithm/no_if_loop',
-        '/algorithm/string',
-        '/algorithm/authority',
-        '/algorithm/sort',
-        '/algorithm/bakery', 
-        '/algorithm/upload-large-file',
-      ]
-    },
-    {
-      title: "OOP",
-      children: oopDocs,
-    },
-    {
-      title: "Javascript",
-      children: javascriptDocs,
-    },
-    {
-      title: "ReactJS",
-      children: reactDocs,
-    }, 
-    {
-      title: "VueJS",
-      children: [
-        '/vue/communication',
-        '/vue/shorthands',
-        '/vue/dynamic',
-        '/vue/tricks',
-        '/vue/vuepress',
-        '/vue/test',
-      ]
-    },
-    {
-      title: "PHP",
-      children: [
-        '/php/php7',
-        '/php/oop',
-        '/php/magic',
-        '/php/wordpress',
-        '/php/crunz',
-        '/php/phpdoc',
-        // '/php/clean/',
-        {
-          title: "Laravel",
-          children: laravelDocs,
-        },
-      ]
-    },
-    {
-      title: "Tools / Toys",
-      children: toolDocs,
-    },
-    {
-      title: "Thuật ngữ",
-      sidebarDepth: 1,
-      children: [
-        '/terms/javascript',
-        '/terms/patterns',
-        '/terms/principles',
-        '/terms/testing',
-        '/terms/12factors',
-        '/terms/concurrent',
-      ]
-    },
-    {
-      title: "Network",
-      children: networkDocs,
-    },
- 
-    {
-      title: "AWS",
-      children: awsDocs,
-    },
-  ]
+  {
+    title: 'Chuyện muôn thuở',
+    children: commonDocs,
+  },
+  {
+    title: 'API Guidelines',
+    children: [
+      '/rest/',
+      `/api-guidelines/overview`,
+      {
+        title: 'Principles',
+        children: [
+          // 'design-api-first-before-code',
+          // 'minimal-api-surface',
+          'one-type-of-data-per-api',
+          // 'robustness-principle',
+          'rules-for-public-api',
+        ].map(prefixMapFn('/api-guidelines/principles/'))
+      },
+      {
+        title: 'Conventions',
+        children: [
+          'http-status-codes',
+          {
+            title: "Verb and URI (REST)",
+            children: [
+              '',
+              'post-vs-put',
+              'request-methods',
+              'others',
+            ].map(prefixMapFn('/api-guidelines/conventions/verb-and-uri-rest/'))
+          },
+          {
+            title: "JSON Fields Naming Conventions",
+            children: [
+              'formats',
+              'json-structure',
+            ].map(prefixMapFn('/api-guidelines/conventions/json-fields-naming-conventions/'))
+          },
+          'error-responses',
+        ].map(prefixMapFn('/api-guidelines/conventions/')),
+      },
+      {
+        title: "Coding Guidelines",
+        children: [
+          'api-development-workflow',
+          'review-code-api-doc',
+          'decorators-for-endpoints',
+        ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
+      }
+    ]
+  },
+  {
+    title: "Database",
+    children: [
+      'architect',
+      'id-generate',
+      'tx-isolation',
+      'acid',
+      'optimize_db',
+      'mysql_snippets',
+      'postgre',
+      'couchdb',
+      'mongodb',
+      'cassandra',
+      'elasticsearch',
+      'redis',
+      'nosql',
+      'use-cases',
+      'db-table-design',
+    ].map(prefixMapFn('/db/'))
+  },
+  {
+    title: "Giải Toán",
+    children: [
+      '/algorithm/sum100',
+      '/algorithm/no_if_loop',
+      // '/algorithm/string',
+      '/algorithm/authority',
+      // '/algorithm/sort',
+      '/algorithm/bakery',
+      '/algorithm/upload-large-file',
+      '/datastructure/queue',
+    ]
+  },
+  {
+    title: "OOP",
+    children: oopDocs,
+  },
+  {
+    title: "Javascript",
+    children: javascriptDocs,
+  },
+  {
+    title: "ReactJS",
+    children: reactDocs,
+  },
+  {
+    title: "VueJS",
+    children: [
+      '/vue/communication',
+      '/vue/shorthands',
+      '/vue/dynamic',
+      '/vue/tricks',
+      '/vue/vuepress',
+      '/vue/test',
+    ]
+  },
+  {
+    title: "PHP",
+    children: [
+      '/php/php7',
+      '/php/oop',
+      '/php/magic',
+      '/php/wordpress',
+      '/php/crunz',
+      '/php/phpdoc',
+      // '/php/clean/',
+      {
+        title: "Laravel",
+        children: laravelDocs,
+      },
+    ]
+  },
+  {
+    title: "Tools / Toys",
+    children: toolDocs,
+  },
+  {
+    title: "Thuật ngữ",
+    sidebarDepth: 1,
+    children: [
+      '/terms/javascript',
+      '/terms/patterns',
+      '/terms/principles',
+      '/terms/testing',
+      '/terms/12factors',
+      '/terms/concurrent',
+      '/data/terms'
+    ]
+  },
+  {
+    title: "Network",
+    children: networkDocs,
+  },
+
+  {
+    title: "AWS",
+    children: awsDocs,
+  },
+]

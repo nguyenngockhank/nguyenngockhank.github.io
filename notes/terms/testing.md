@@ -1,5 +1,6 @@
 # Software Testing
 
+![pipelines](https://i.pinimg.com/originals/3a/8f/1f/3a8f1ffd6f42da94e7d7a7c31fc71d12.jpg)
 
 ## Common Types
 
