@@ -320,6 +320,14 @@ module.exports = [
     ]
   },
   {
+    title: "Payment",
+    children: [
+      '/terms/payment/',
+
+      '/terms/payment/stripe',
+    ]
+  },
+  {
     title: "Network",
     children: networkDocs,
   },
