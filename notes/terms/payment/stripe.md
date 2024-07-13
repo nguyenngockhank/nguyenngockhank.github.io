@@ -55,6 +55,12 @@ import {
 
 import { PaymentIntentResult, StripePaymentElementOptions, loadStripe } from '@stripe/stripe-js'
 
+const options = {
+    defaultValues: {
+        email: useCognito?.attributes?.email || '',
+    },
+}
+
 <Elements options={options} stripe={loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY as string)}>
     <form id='payment-form' onSubmit={handleSubmit}>
         <PaymentElement
@@ -67,11 +73,7 @@ import { PaymentIntentResult, StripePaymentElementOptions, loadStripe } from '@s
             <LinkAuthenticationElement
                 id='link-authentication-element'
                 // Optional prop for prefilling customer information
-                options={{
-                defaultValues: {
-                    email: useCognito?.attributes?.email || '',
-                },
-                }}
+                options={options}
             />
         )}
 
