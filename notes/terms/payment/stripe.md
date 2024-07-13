@@ -69,7 +69,7 @@ import { PaymentIntentResult, StripePaymentElementOptions, loadStripe } from '@s
                 // Optional prop for prefilling customer information
                 options={{
                 defaultValues: {
-                    email: useCognito.attributes.email || '',
+                    email: useCognito?.attributes?.email || '',
                 },
                 }}
             />
@@ -111,7 +111,6 @@ function () {
     }
   }
 }
-
 ```
 
 ## Stripe Connect 
