@@ -17,10 +17,12 @@ const commonDocs = [
   {
     title: "Optimize Perf",
     children: [
+      '/common/optimize_overview',
       '/common/optimize_web',
       '/common/optimize_be',
       '/db/optimize_db',
-      '/common/cache/',
+      '/common/cache/overview',
+      // '/common/cache/',
       '/common/cdn/cdn',
     ]
   },
@@ -70,7 +72,9 @@ const reactDocs = [
 ].map(prefixMapFn('/react/'));
 
 const toolDocs = [
+  '/tools/redis_overview',
   '/node/npm',
+  // '/tools/redis',
   '/tricks/git',
   '/tricks/linux',
   '/tricks/mac',
@@ -80,7 +84,6 @@ const toolDocs = [
   '/tools/gg_app_script',
   '/tools/puppeteer',
   '/tools/vscode',
-  // '/tools/redis',
   '/tools/docker',
   '/tools/k8s/k8s',
 ];
@@ -181,6 +184,10 @@ module.exports = [
   {
     title: 'Chuyện muôn thuở',
     children: commonDocs,
+  },
+  {
+    title: "Tools / Toys",
+    children: toolDocs,
   },
   {
     title: 'API Guidelines',
@@ -301,10 +308,6 @@ module.exports = [
         children: laravelDocs,
       },
     ]
-  },
-  {
-    title: "Tools / Toys",
-    children: toolDocs,
   },
   {
     title: "Thuật ngữ",
