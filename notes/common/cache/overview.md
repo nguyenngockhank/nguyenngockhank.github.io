@@ -33,3 +33,4 @@ tags: ["Performance", "Cache", "Overview"]
 ## Read more
 
 - [Redis overview](../../tools/redis_overview.md)
+- [Caching Strategies (geeksforgeeks)](https://www.geeksforgeeks.org/caching-strategies-for-api/)

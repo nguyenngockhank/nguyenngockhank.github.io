@@ -20,6 +20,7 @@ const commonDocs = [
       '/common/optimize_overview',
       '/common/optimize_web',
       '/common/optimize_be',
+      '/common/scaling_overview',
       '/db/optimize_db',
       '/common/cache/overview',
       // '/common/cache/',
