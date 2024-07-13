@@ -21,10 +21,9 @@ const commonDocs = [
       '/common/optimize_web',
       '/common/optimize_be',
       '/common/scaling_overview',
-      // '/db/optimize_db',
       '/common/cache/overview',
-      // '/common/cache/',
       '/common/cdn/cdn',
+      '/common/system_design_overview',
     ]
   },
   {

@@ -39,3 +39,7 @@ tags: ["Performance", "Scaling", "Overview"]
 ### Figma 
 
 ![Figma](https://i.pinimg.com/originals/3f/fc/01/3ffc017b0929387c7600911f3bec22b4.jpg)
+
+### Scale a website
+
+![Scale a website](https://i.pinimg.com/originals/30/8d/2d/308d2d128d2f1e9a30a8e186824d3f90.jpg)

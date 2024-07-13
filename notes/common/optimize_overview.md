@@ -6,11 +6,20 @@ tags: ["Performance", "Overview"]
 
 <TagLinks />
 
+## Best practices for code
+
+![Best practices for code](https://i.pinimg.com/originals/a9/57/37/a95737bbc12eebbb446c5ef4954e7a86.jpg)
+
 ## FE Performance
 
 ### Web Optimization
 
 ![Web](https://i.pinimg.com/originals/3a/6b/b0/3a6bb0968b2dd04726d022e830cdf2f0.jpg)
+
+### Web Perf Metrics
+
+![Web Perf Metrics](https://i.pinimg.com/originals/bc/fe/7e/bcfe7e1622c57e02b805b8dd6936e61e.jpg)
+
 
 ### FE Cheatsheet 
 ![FE](https://i.pinimg.com/originals/16/99/a7/1699a73db8200995e4c12ecc9cbaca42.jpg)
