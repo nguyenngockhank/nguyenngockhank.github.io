@@ -4,7 +4,10 @@ tags: ["ResiliencePattern", "DistributedSystem"]
 
 # Stateless Pattern
 
+
 Stateless services are a fundamental concept in microservices architecture. In this context, a stateless service refers to a service that does not store any state or session information between requests. Each request made to a stateless service is treated independently, without any knowledge of previous requests.
+
+![Stateless Pattern](https://i.pinimg.com/originals/f5/4f/a3/f54fa38ce9a0020295bda27678320cc6.png)
 
 In a traditional monolithic application, the server typically maintains session state for each user. This session state includes information such as user authentication, shopping cart contents, or any other data that needs to persist across multiple requests. However, in a microservices architecture, services are designed to be independent and self-contained. They do not rely on shared session state or maintain any user-specific data.
 

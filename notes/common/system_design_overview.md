@@ -20,6 +20,7 @@ tags: ["Overview"]
 
 ![Trade-offs](https://i.pinimg.com/originals/d6/1b/ab/d61bab5a9e06681e042d546ee3ab6d97.jpg)
 
+
 ## Availability
 
 ![High Availability](https://i.pinimg.com/originals/45/fa/a4/45faa4e8462022687dde510818f6ce7d.jpg)
@@ -32,6 +33,11 @@ tags: ["Overview"]
 
 ### Load balancing
 ![LB use cases](https://i.pinimg.com/originals/a3/e2/cc/a3e2cc55eb078dfad046b58aca6d3e0e.jpg)
+
+## Microservices 
+[😎 Detail here](../architect/microservices.md)
+
+![Top patterns](https://i.pinimg.com/736x/2e/ab/fd/2eabfd161aa129b8f2a3ceb6afe85693.jpg)
 
 
 ## Communication
@@ -78,7 +84,7 @@ tags: ["Overview"]
 
 ## EDA
 
-### Architecture
+### EDA Architecture
 
 ![EDA Architecture](https://i.pinimg.com/originals/83/0b/7a/830b7aeac45dbf81108e7d56b26bc130.jpg)
 

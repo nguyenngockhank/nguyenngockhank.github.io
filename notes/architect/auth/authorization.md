@@ -9,8 +9,16 @@ Authorization is the application of constraints on who (or what) can perform att
 - **Session management** identifies which subsequent HTTP requests are being made by that same user.
 - **Authorization** determines whether the user is allowed to carry out the action that they are attempting to perform.
 
-
 <TagLinks />
+
+## Authorization types
+![Permission types](https://i.pinimg.com/originals/b9/fc/ee/b9fceeef7532a3720682830b3e4664cf.jpg)
+
+- Access control list
+- Discretionary access control
+- Mandatory access control 
+- Attribute-based access control
+- Role-based access control
 
 
 ## Categorized by user perspective 

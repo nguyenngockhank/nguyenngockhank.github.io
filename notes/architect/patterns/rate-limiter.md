@@ -1,6 +1,5 @@
 # Rate limiter 
 
-
 **Algorithms**: 
 - Token bucket
 - Leaking bucket

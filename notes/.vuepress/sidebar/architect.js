@@ -1,6 +1,13 @@
 module.exports = [
     '',
     {
+        title: "Messages / Events",
+        children: [
+            'messaging',
+            'queue',
+        ]
+    },
+    {
         title: "Auth",
         children: [
             'auth/auth-terms',
@@ -21,6 +28,7 @@ module.exports = [
             'mistakes',
             'OrchestrationVsChoreography',
             'microservice/cohesion-coupling/',
+            'microservice/loadbalancer',
             'microservice/cross-cutting-concerns/',
         ]
     },
@@ -40,7 +48,7 @@ module.exports = [
     },
 
     {
-        title: 'Architectures', 
+        title: 'Architectures',
         children: [
             'lambda-arch/',
             'eventsource',

@@ -54,6 +54,7 @@ how many messages can be processed / sec by messaging system.
 - There is not network I/O which is absolutely necessary
 :::
 
+
 ## Models
 
 ### Queuing Model
@@ -67,6 +68,11 @@ how many messages can be processed / sec by messaging system.
 - Messaging systems also provide load balancing semantics with **Topics** using something called **virtual topics**
 
 *Note*: [Read more about virtual topic](https://tuhrig.de/queues-vs-topics-vs-virtual-topics-in-activemq/)
+
+### Event driven architecture
+
+![Event driven architecture](https://i.pinimg.com/564x/68/4b/bc/684bbca2196fb2fdafc5caeb75847b80.jpg)
+
 
 ## Delivery semantics
 

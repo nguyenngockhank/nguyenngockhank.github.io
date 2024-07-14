@@ -6,6 +6,8 @@ tags: [ "ResiliencePattern", "DistributedSystem"]
 
 If your request failed — wait a bit and try again. That’s basically it, retrying makes sense, because network might degrade for a moment or GC hit that particular instance your request came to.
 
+![Retry patterns](https://i.pinimg.com/originals/d1/ca/0c/d1ca0c625b789c2f9f2834d83adf8f54.gif)
+
 **Distinguish retryable errors from non-retryable.** It’s pointless to retry request, when user doesn’t have permissions or payload doesn’t structured properly. Contrary, **retrying request timeouts or 5xx is good**.
 
 **Adopt error budgeting** — this technique, when you **stop making retries if rate of retryable errors exceeds threshold**, e.g. if 20% of interactions with service D results in error, stop retrying it and try to degrade gracefully. Amount of errors might be tracked with rolling window over N last seconds.

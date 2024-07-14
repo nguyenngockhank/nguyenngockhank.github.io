@@ -1,20 +1,24 @@
-# Load balancers
+---
+tags: ["Tools", "Performance", "Cache", "Overview"]
+---
 
-## Load balancer and API Gateway confusion
+# Load balancer
 
-API gateway predominately does API management and provides various other key features such as IAM (Identity and Access Management), Rate limiting, circuit breakers. Hence, it mainly eliminates the need to implement API-specific code for functionalities such as security, caching, throttling, and monitoring for each of the microservice. Microservices typically expose the REST APIs for use in front ends, other microservices and 3rd party apps with help of API gateway.
+<TagLinks />
 
-However, normally, the API Management does not include load balancing function, so it should be used in conjunction with a load balancer to achieve the same.
+## Use cases
+![Load balancer use cases](https://i.pinimg.com/564x/db/4f/eb/db4feb17e82e66ebd4cc2a82ec56f07e.jpg)
 
-In system architecture based on Azure, there is Azure Application Gateway which is a load balancer that runs on Layer 7 and provides more features than traditional load balancer (Layer 4) in terms of routing traffic using routing decisions based on additional attributes of HTTP request or content of traffic. This can also be termed as an application load balancer. 
-
-It shall be used in conjunction by **Azure API Management** (API gateway). Azure has a **Traffic Manager** for operating at DNS level which uses DNS to direct client requests to the most appropriate service endpoint based on a traffic-routing method and the health of the endpoints. **Traffic manager** also uses the rules configured at the DNS level and enables dstribution of the the load over multiple regions and data centers. Within every region or data center, there shall be **application gateways** coupled with load balancers such that, the application gateways shall help in determining the application server to fetch response from and the load balancer shall help in load balancing.
-
-![images](https://i.stack.imgur.com/Tih2R.png)
+- Traffic distribution
+- High Availability
+- SSL termination
+- Session Persistence
+- Scalablitity 
+- Health Monitoring
 
 ## Reverse proxy vs. API gateway vs. load balancer
 
-![compare](https://lh3.googleusercontent.com/pw/ABLVV85NUp0j2suINAld47fvfH8_q-_YA3rrLxL_3f4xqhafrNjr33Jtzim_WZfUVtvvPhNVmc-SWhkcZvr66LMdi4CHi9EstF6EPlanVgdEpd__94stjtrdnSf6Y72c5ae2gR38FpJICxpg-wOHOmd1STwd7x3AvDfj-YKeo97a8dMG2ZrcImmS15orO8Y_3NsdBgUi5oXqm8OSzqwIhvQYeFehfsDG9Wux86n1BlKLKMmDk6BwolyyxFOZVoY4ouDfRM3fXZSg5KSsUXF9iwKuQ7QXfaoP53gdekQCW56A62HiQWSpLgnFRIaSusIAbEwyVw2CncetHhVSxRx_tHKxvl6jDzB3agkUnf7vKJ7O4X1fgpB9IfviauPGgq2u1nOR9rI72Bs7I_5srGuyYCsBWGcH2ldmsRb3LV3zd0vb1HM5hEXogn_6YjzC2yaEO3Xqd30RXnfVBSNo6avxoYFwe-Ac7_9tAEAUKa2PjcWOoqUt3mEPqfCrHTEtYotSVhWio1lyKmrCoT0UxRhNY9eBMtOoYIaYODZZNElUD6bGMVkv3tNo8UElDngHXeO2oQC07EH8gMidDW1QBRtHfRn7lDoSxqMdrXwEkOvToNFhJfCEPJZZbETmUHcc2fz53QNyt5uNZ6Wy4QS2nTLKTNqRPwPF7JsnSbJrKoQx3OhWpiMzqqKI8Qim0wdvf6ziVmMAztru95qDt5AfLUH13mBsBHmN1ujcC4NkFd1jwgCSS2OTxd5X8rVk6BKE8YNJWsx6nIBmc_8oIqquVg-OJuCrQNGju3LLnNRiG2hdfhbOoSCGqTcx2UVn-D0WVoObJ5Os63aaNsScsSbh9t8AHnPwvL1DkxqWvydbnUPfLwvrjyaUreVSulWMBKKzTBDwTS5v2rmmiOvug9CyLjdZFjjpEy3FSovPojrQ6iSBJbgoZg=w783-h925-s-no-gm)
+![compare](https://i.pinimg.com/originals/d5/ec/53/d5ec538270b4b742a47b44ee7f600e9a.jpg)
 
 As modern websites and applications are like busy beehives, we use a variety of tools to manage the buzz. Here we'll explore three superheroes: Reverse Proxy, API Gateway, and Load Balancer.
 
@@ -30,29 +34,25 @@ As modern websites and applications are like busy beehives, we use a variety of 
 - Directs traffic evenly across servers, preventing bottlenecks
 - Essential for popular websites with heavy traffic and high demand.
 
-In a nutshell, choose a Reverse Proxy for stealth, an API Gateway for organized communications, and a Load Balancer for traffic control.  Sometimes, it's wise to have all three - they make a super team that keeps your digital kingdom safe and efficient.
+In a nutshell, choose a Reverse Proxy for **stealth**, an API Gateway for organized **communications**, and a Load Balancer for **traffic control**.  Sometimes, it's wise to have all three - they make a super team that keeps your digital kingdom safe and efficient.
+
+
+### LB Techniques
+
+![Load balancing Techniques](https://i.pinimg.com/originals/9e/06/72/9e0672a6bd30e5c46c90baacec6a0c92.webp)
+
+## Cloud cheatsheet
+![Load balancer cloud](https://i.pinimg.com/originals/df/b3/e9/dfb3e9118bf3eb2ec196203ee41c8e53.gif)
 
 ## Routing Algorithms 
+![Load balancing algorithms](https://i.pinimg.com/originals/0f/14/f0/0f14f06051422509611730ac1b1897c6.jpg)
 
-![techniques](https://lh3.googleusercontent.com/pw/ABLVV86Qi57-XGwhzrNhBWSPLtDPHYqsHdvThHM-3TrDAgRUNXTi9YyJKc3zz2P7DMLcAhBgQCjBHJJRfTOwzHcBgBNCE-X5786FB-h09lU9ssglsVyNr5vNjDF1I2lOOt_1ECda3tPlOPtASei4fwmRXkVCHcb63jExAfg2JVpbQme502zq84HNFFkj3O1eUQRkTcnobvtklc9UVSbxyRlQ_TzmG8sSesbfvWnTUK_LNU9FjBh5-h8KOmbYVVlRg4s6-yUb8UvuTtZsXnOp5gYKl93Dgb5pjaSaVlIQn1HgZbhTTgNqojKhygclXfjR0-LRLQ735GSxUIvzughwLrvcagcsXEjEF_EXM318k_Zz04QBca0p4vlC0UfY_FcEfhx8gBi2dC7mzm41BnMsd18uo9uVOmGnF-aw0gRj8lHvJgjBE3yoiNSJ-QzDNChyiDEyiGEzfb5xM2n4B6bx1COXHuaba0B8bVOQF9t33sv40rpcdjmzxZDeGOEqTJ0YK48RDZF3yE1XvtzfX0t839uLK3y3Onl0TFKDIfR48M909bvxK3_8scx9jS-m5AcB6NCGq3uEQDxSdLnWjYBAfkAcFiqCPyVH3qqEwoGGU1k0TfQMHw9WflRjSF_AjgW3lwSExfjaUOrMt9iLav8sNd9aJ3xzAkQfvOXCe9YmQatxSzfoDDuJufc5PQpoFEhT82pT9QbFEWmWsqgkk70JwoqvHCzOGURXlr5UpSHhDcLVvcsQywAUl6ZtPwiH-yAUqVUxst02L29I6aJ8gkThuRqlhYbKgXVuCFmsANTUV_niYXbxHer69HzfkYONIP0GNltOsmWeL-QH7ZS8dQkdC52whJ6cNT1HwdVywNzzlshg6KiQ26soXNcAqWFKA0f1QEnN7xhotvlEVxjOqmgx-l1NNUatNmp9lVb7f_8G76TRzg=w720-h900-s-no-gm)
-
-### Round robin
-The client requests are sent to different service instances in sequential order. The services are usually required to be stateless.
-
-### Sticky round-robin
-This is an improvement of the round-robin algorithm. If Alice’s first request goes to service A, the following requests go to service A as well.
-
-### Weighted round-robin
-The admin can specify the weight for each service. The ones with a higher weight handle more requests than others.
-
-### Hash
-This algorithm applies a hash function on the incoming requests' IP or URL. The requests are routed to relevant instances based on the hash function result.
-
-### Least connections
-A new request is sent to the service instance with the least concurrent connections.
-
-### Least response time
-A new request is sent to the service instance with the fastest response time.
+- **Round robin**: The client requests are sent to different service instances in sequential order. The services are usually required to be stateless.
+- **Sticky round-robin**: This is an improvement of the round-robin algorithm. If Alice’s first request goes to service A, the following requests go to service A as well.
+- **Weighted round-robin**: The admin can specify the weight for each service. The ones with a higher weight handle more requests than others.
+- **Hash**: This algorithm applies a hash function on the incoming requests' IP or URL. The requests are routed to relevant instances based on the hash function result.
+- **Least connections**: A new request is sent to the service instance with the least concurrent connections.
+- **Least response time**: A new request is sent to the service instance with the fastest response time.
 
 ## Tools
 

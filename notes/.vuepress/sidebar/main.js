@@ -23,17 +23,17 @@ const commonDocs = [
       '/common/scaling_overview',
       '/common/cache/overview',
       '/common/cdn/cdn',
-      '/common/system_design_overview',
     ]
   },
+  'system_design_overview',
   {
     title: "Communication",
     children: [
       '/common/realtime',
       '/common/notification/',
       '/network/websocket',
-      'architect/messaging',
-      'architect/queue',
+      // 'architect/messaging',
+      // 'architect/queue',
       'db/redis.html#pub-sub',
       'tools/kafka',
       'tools/kafka-vs-jetstream',

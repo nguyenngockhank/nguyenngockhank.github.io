@@ -10,14 +10,23 @@ Authentication is the act of proving an assertion, such as the identity of a com
 
 <TagLinks />
 
-## Top 4 Forms of Authentication Mechanisms
+## Top Mechanisms
 
+### Most used
 ![top 4 Mechanisms](https://pbs.twimg.com/media/F7VSpIKbEAAt_IP?format=jpg&name=4096x4096)
 
 1. SSH Keys: Cryptographic keys are used to access remote systems and servers securely
 2. OAuth Tokens: Tokens that provide limited access to user data on third-party applications
 3. SSL Certificates: Digital certificates ensure secure and encrypted communication between servers and clients
 4. Credentials: User authentication information is used to verify and grant access to various systems and services
+
+### REST API 
+
+![REST API  Mechanisms](https://i.pinimg.com/564x/be/47/f7/be47f72b69e82bf37f9a652faa4c057d.jpg)
+- Basic Authentication
+- Token Authentication
+- OAuth Authentication
+- API Key Authentication
 
 ## Signal in Request 
 

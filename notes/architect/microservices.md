@@ -1,8 +1,8 @@
 ---
-tags: ["DistributedSystem"]
+tags: ["Overview", "DistributedSystem"]
 ---
 
-# Microservices
+# Microservices Overview
 
 Microservices are small, autonomous services that work together.
 
@@ -10,8 +10,10 @@ Microservices are small, autonomous services that work together.
 
 ## Key principles
 
-Five cultural and architectural principles underpin microservices development:
-- Autonomy
+![Key principles](https://i.pinimg.com/originals/dc/dd/06/dcdd062ae3da1f35fe764b3a8e608a11.png)
+
+- Decoupling
+- Autonomy  
 - Resilience
 - Transparency 
 - Automation 
@@ -45,6 +47,8 @@ Five cultural and architectural principles underpin microservices development:
 
 ## Architecture
 
+![Microservices Architecture](https://i.pinimg.com/564x/33/3c/0a/333c0aaa18e06b9014aa36dd8409907d.jpg)
+
 ### 4 Tiers
 - **Platform** — A microservice platform provides tooling, infrastructure, and high-level primitives to support the rapid development, operation, and deployment of microservices. A mature platform layer enables engineers to focus on building features, not plumbing.
 - **Services** —In this tier, the services that you build interact with each other to provide business and technical capabilities, supported by the underlying platform.
@@ -69,6 +73,8 @@ Five cultural and architectural principles underpin microservices development:
 
 ### Synchoronous vs Asynchoronous Communication
 
+![Synchoronous vs Asynchoronous Communication](https://i.pinimg.com/originals/81/93/3d/81933dbbf73e3b42d9ecfb4e53f24f79.png)
+
 - **With sync communication**, a call is made to a remote server, which blocks until the operation completes.
 - **With async communication**, the caller doesn't wait for the operation to complete before returning, and may not even care whether or not the operation completes at all.
     - Async communication can be very useful for long-running jobs
@@ -77,13 +83,20 @@ Five cultural and architectural principles underpin microservices development:
     - *resquest / response*
     - *event-based*
 
+![Communication](https://i.pinimg.com/originals/8d/ea/68/8dea68df11d4a6667a7b8d4fb4b66361.jpg)
 
 ### Orchestration vs Choreography
+
+![Orchestration vs Choreography](https://i.pinimg.com/564x/42/f6/2a/42f62ac11ccc93116996e4c0bf2cb642.jpg)
+
 - **With Orchestration**: we rely on a central brain to guide & drive the process. like the conductor in an orchestra.
 - **With Choreography:** we inform each part of the system of its job, and let it work out the details, like dancers all finding their way and reacting to others around them in a ballet.
 
 
 ### API Gateway
+
+![API Gateway](https://i.pinimg.com/736x/a2/56/5e/a2565e46303f80c8e673f4f222b87893.jpg)
+
 - Act as a facade to reduce complexity
 - Security Gate: Authentication, Rate limiting
 - Caching
@@ -115,11 +128,19 @@ We want related behavior to sit together, and unrelated behavior to sit elsewher
 
 ### two-phase commit (2PC)
 
+![2PC](https://i.pinimg.com/originals/b3/82/38/b3823890b41bd27190c5a8eb52d80c7d.png)
+
 [Read 2PC more](./2pc/)
 
-### Event-based communication
-...
 ### Sagas
+
+**Orchestration based SAGA**
+![Orchestration based SAGA](https://i.pinimg.com/originals/23/d0/6d/23d06dfe44d7ec67419e388a34c7bf5f.png)
+
+
+**Choreography based SAGA**
+![Choreography based SAGA](https://i.pinimg.com/originals/6e/6f/e1/6e6fe1bb0689a77f3d2d1e8e11b6f46e.webp)
+
 - The choreographed approach is a basic example of the saga pattern. A saga is a coordinated series of local transactions; a previous step triggers each step in the saga.
 - As each local transaction is atomic 
 - The system isn’t guaranteed to be returned to the original state
@@ -172,6 +193,8 @@ We want related behavior to sit together, and unrelated behavior to sit elsewher
 
 ## Reliable Services
 
+![Top patterns](https://i.pinimg.com/736x/2e/ab/fd/2eabfd161aa129b8f2a3ceb6afe85693.jpg)
+
 ### Designing reliable communication
 
 [Detail](./distributed-patterns.md#fault-tolerance)
@@ -191,44 +214,19 @@ We want related behavior to sit together, and unrelated behavior to sit elsewher
 - Frameworks
 - Service mesh
 
-## Patterns for Reusability
-
-### 1. Service Decomposition
-
-One of the fundamental principles of microservices architecture is the decomposition of monolithic applications into smaller, independent services. By breaking down the application into smaller components, each with a specific responsibility, it becomes **easier to reuse these services across different applications or business processes**. This decomposition allows for better maintainability and scalability, as well as the ability to replace or upgrade individual services without impacting the entire system.
-
-### 2. Service Abstraction
-
-By abstracting the implementation details of a service behind a well-defined interface, other services can interact with it without being tightly coupled to its internal workings. This allows for easier substitution of one service with another that provides the same interface, enabling seamless reusability. Service abstraction also facilitates the testing and mocking of services, as dependencies can be easily replaced with stubs or mocks.
-
-### 3. Service Composition
-
-Service composition is the practice of combining multiple services to create new, higher-level services. This pattern allows for the **reuse of existing services to build more complex functionality**. By composing services together, organizations can create tailored solutions without having to develop everything from scratch. Service composition can be achieved through synchronous or asynchronous communication between services, depending on the specific requirements of the system.
-
-### 4. Service Registry
-
-A service registry is a central repository that keeps track of available services in a microservices architecture. By registering services with the registry, other services can discover and utilize them without having to know their exact locations or configurations. This pattern promotes **reusability by providing a centralized mechanism for service discovery and enables dynamic binding between services**. Service registries can be implemented using technologies like Consul, Eureka, or etcd.
-
-### 5. API Gateway
-An API gateway acts as a single entry point for client applications to access multiple microservices. It provides a unified interface and handles requests from clients, routing them to the appropriate services. By consolidating the access to multiple services behind a single API gateway, organizations can **achieve reusability by abstracting the complexities of service communication from the clients**. API gateways also enable the implementation of cross-cutting concerns like authentication, rate limiting, and caching.
-
-### 6. Event-Driven Architecture
-
-Event-driven architecture is a pattern that promotes loose coupling and scalability in microservices. By using an event-driven approach, services can communicate with each other through events, enabling asynchronous and decoupled interactions. This pattern allows for the reuse of services as they can react to events emitted by other services without direct dependencies. Event-driven architecture also facilitates the implementation of event sourcing and event-driven sagas, which can further enhance reusability and fault tolerance.
-
 ## Observability
-...
+
+![Observability](https://i.pinimg.com/originals/57/0c/00/570c00cb3c499cdcbb5259957e550f9d.jpg)
 
 ## Integration
 
-### Shared Database
+![Top Integration](https://i.pinimg.com/originals/ed/87/8f/ed878f86f68125fcc8aeb081aae19469.jpg)
 
+### Shared Database
 - The consumer is tied to a specific technology of the service. Good bye, loose coupling.
 - If the service makes change that can update & deploy into many consumers. Bye, cohesion.
 
-
 ### Summary 
-
 - Avoid database integration at all costs.
 - Understand the trade-offs between REST & RPC, but strongly consider REST as a good starting point for request/response integration.
 - Prefer Choreography over Orchestration
@@ -259,6 +257,8 @@ Any organization that designs a system will inevitably produce a design whose st
 :::
 
 ## Monorepo
+
+![Monorepo](https://i.pinimg.com/originals/42/01/52/420152c4c4ebd42d9d70c833abae8f48.png)
 
 ::: tip
 Monorepos, short for monolithic repository, refer to a version control strategy in which all projects within an organization are stored in a single repository.

@@ -4,9 +4,12 @@ tags: ['Pattern', "ResiliencePattern", "DistributedSystem"]
 
 # Graceful Degradation Pattern
 
+
 The Graceful Degradation pattern is a design approach used in applications to handle failures and ensure the system remains functional even when certain components or services are unavailable or experiencing issues. It focuses on gracefully handling errors and degrading the system's functionality in a controlled manner, rather than completely failing or crashing.
 
 In a microservices architecture, where different services communicate with each other, it is crucial to handle failures effectively to maintain the overall system's stability. The Graceful Degradation pattern helps achieve this by allowing the system to continue functioning, albeit with reduced capabilities, when a service or component becomes unavailable.
+
+![Graceful Degradation](https://i.pinimg.com/originals/d9/e5/88/d9e5882f423fb65016653734050dbc23.png)
 
 ## Key principles and techniques
 

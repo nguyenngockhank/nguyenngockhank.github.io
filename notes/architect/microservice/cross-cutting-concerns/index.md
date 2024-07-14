@@ -8,11 +8,23 @@ Examples of cross-cutting concerns include logging, security, caching, and error
 
 However, in a Microservices architecture, where each service is independent and autonomous, handling cross-cutting concerns requires a different approach.
 
+
+## Terms Comparision
+![Compare](https://i.pinimg.com/originals/f8/a0/67/f8a067eb303f0bb99cda1cf4c60efb04.jpg)
+
+
 ## Service meshes
+
 One way to handle cross-cutting concerns in a Microservices architecture is by using the concept of service meshes. A service mesh is a dedicated infrastructure layer that provides a set of common functionalities to all services in the architecture. It acts as a communication layer between services and can handle cross-cutting concerns such as service discovery, load balancing, and circuit breaking.
 
 ## API Gateways
+
+![API Gateway use cases](https://i.pinimg.com/736x/a2/56/5e/a2565e46303f80c8e673f4f222b87893.jpg)
+
 Another approach is to use API gateways. An API gateway is a single entry point for all client requests and acts as a proxy for the underlying services. It can handle cross-cutting concerns such as authentication, authorization, and rate limiting. By centralizing these concerns in the API gateway, individual services can focus on their core business logic.
+
+## Load balancing 
+![Load balancer use cases](https://i.pinimg.com/564x/db/4f/eb/db4feb17e82e66ebd4cc2a82ec56f07e.jpg)
 
 ## Event-driven architectures
 Additionally, using event-driven architectures can help address cross-cutting concerns. By using an event bus or message broker, services can publish and subscribe to events, allowing them to react to changes or updates in a decoupled manner. This can be useful for handling cross-cutting concerns such as logging, auditing, and notifications.

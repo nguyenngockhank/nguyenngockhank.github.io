@@ -51,7 +51,6 @@ This is where Docker images are stored. Docker Hub, for instance, is a widely-us
 
 ![Docker Workflow](https://i.pinimg.com/originals/a8/6e/9d/a86e9daa473b910f5ef2640e2d989f06.jpg)
 
-![Image with container](./img/docker-image-container.png)
 
 ## Use cases
 

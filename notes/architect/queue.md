@@ -8,7 +8,7 @@ tags: ["DistributedSystem", "Communication", "MessageQueue"]
 
 ## Types of queues 
 
-![types](https://lh3.googleusercontent.com/pw/ABLVV87rUUOHYws8ljDCaZDiNoRzkl2jaFoLbX3BhFyry7p3j-NfU1di7TbB6PKxHR1cdIeOIFmPKxgwW11iwJrRgaQ1-kMUi4Lkibj6QpuHQodeh4acE_4O5UC89tszSBJSVrEvta58ShP8nXqrm_mkDDgvVeUQ_RlwJaRuy9QDrgUMvda37RBsiJw290szoD_sjeanHNWDNJqNOf25_qWXP2Virinl5t0zoioZc_porXZDzrCxJFgdhmLIPRNPqqKgOtyKtXFSrwCIhVWk9Tlf9yYZwt1j2_l9PtduK3TCJ2E70Jzdqu6Es8KJP4jluN3uHFW8nps2fBdlarsjpYTGx7g7cGDJ5KGmQDMgC2alP0M850vcGQjb6vQG9hZKGrtQkPwXYGAKssxk3ymKIg2arkI9DmkUnPbJrW76i6qq02bY1Mk0ynfw1HQi4pKu5HzbaT_gqe2Xa4QlOqe0tLmITLcXgFr3pYoxGLf-F6Glv56ijFZAl4yDq-OyJ8vqgRsbnHmP1lwG9YwkQV3UxBec20bxBgqM82LeJCzPXlJGhLuzLaqhPuTGONysw-Ub5j3RQqu6G9zEC7qed5eJhtfLueVIYV6Kj1k6nzaQ6mR-z1PfyRmmdyVrdISGZz0LAXJ_UVI4-aw34-t5Dxfwq7RDvCPtuaHkF8HIXx_FRVVUW_Y0nAB6OewZsn3Yinp6twK86hIHBiTMp41e7kJhVnwVfuVQNlP-8I0MU-emAvLsP1yFlvbQEafX8Ckj5EesbMuvJ_IkPx8r9_lGSU1Qpm8Q9R_L499MzDa9nSgQ3l390RWiLEk4N1P6Q8XpfWIXGs9QZRqCuX8NVAZUOkPguXT5BXJurcSRaSsfP5EB3GDEG3-NWot2h5eEp34fESeNAGrfMZ8nUk5_dcYKnfRKsd2UCFrHMNPmyJovAFHXgyP1pw=w710-h925-s-no-gm)
+![types](https://i.pinimg.com/originals/c9/4d/b5/c94db5ee8dbe814e3077b1acc135db4a.jpg)
 
 Explaining the 4 Most Commonly Used Types of Queues in a Single Diagram.
 
@@ -32,9 +32,13 @@ A typical use case is assigning patients with the highest severity to the emerge
 ### 4. Deque
 Deque is also called double-ended queue. The insertion and deletion can happen at both the head and the tail. Deque supports both FIFO and LIFO (Last In First Out), so we can use it to implement a stack data structure.
 
+## Cloud patterns 
+
+![Cloud patterns](https://i.pinimg.com/originals/25/26/5f/25265fe7b5f7229e79f8948f258f692b.gif)
+
 ## How do Message Queues Evolve
 
-![evolve](https://lh3.googleusercontent.com/pw/ABLVV84D6-m1_Sv42RZw2bRP917v81pkcbN7-V9ErWyazB7nrF_gCi6tN_wlj02yNlTErMXiauYsCYxt7A_CijtponFkfX1WIIGumWp_gyZN9QO650_EfNef7wxjLVoZQBrqyjm4KDlUmGeb1NAF1k9KeyrRlOPsexgAXH1SgkmdguP5qAjN8Za7o9UVCvJ9X4FMncauv6ynQzbTWDPbJw_aDHEsTF9QRWn9hcuDUKFxXNg50YU2i0iLJ9p_DA7vIq27tmOXIEHeHRKNNJTDsXg0fXPkFD92gRyhWjnahV1U5XVXrkFyVxdyMK-wHPfO0EY5WSyU7KcOaSm8woG8NbOEpG8d2veqF9ZdWX-g_F5kMponW-upTz92c4yBt0dDLpN2VKyxa9T26yFG28_52jtBKCvoaf7CoY21qxDo8XpHz_hRkmFnjCbsrKwdixReugNOknGVUbG-CX3xk4J-z2cND-bJCC2vyziXCQegfrCqhv_nk-yI5r-KQ8bfrJU81L15eEACSQPX1Z5ct4Y2clXQOBsllXDozNZzElqFwM-4iaMZSP2xohTA1KvLrhUp7rWFEXCo7XNUpUTs8tYMKX3IQknrttPbjBarr_dum_j2mnI6RMyU7VLQmnzEYhtPYjTHMSyBHXd4OMVOXx3zypGAeYuoxQnccX6XXE61skH3ejIbvjwfnVicffWEuqQUokT3GOtrpwQmdEo3Km4RaHOnAPUwctHmeqIZibm25BVxrI-s48RkoZLTsZI742QA7-i_cUIKnnwpLc1Dmfey0v3c_zeSjNgDoNy_xQcRaMDeCk2lCx867ZwI8nh5qVXsHHy1710QEr_9_Ib0THI-adTjhSqq_gid1ZT8cJ-K47pvDgLlHBY1f8ESgr3isDBxH68ZLcvJccVU9XqzAz-0W5xgZk0ucpg1N5z-WlrcGzS_Yw=w716-h925-s-no-gm)
+![evolve](https://i.pinimg.com/originals/4c/65/43/4c6543127c625d12579e9b930f38b42c.gif)
 
 **IBM MQ -> RabbitMQ -> Kafka ->Pulsar, How do message queue architectures evolve?** 
  

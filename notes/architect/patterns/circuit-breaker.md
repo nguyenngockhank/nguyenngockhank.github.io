@@ -1,3 +1,7 @@
+---
+tags: ['Pattern', "ResiliencePattern"]
+---
+
 # Circuit Breaker Pattern
 
 The Circuit Breaker Pattern is a design pattern used in software development to handle and prevent failures in distributed systems. It is especially useful in scenarios where services or components communicate with each other over a network, such as in microservices architectures.
@@ -9,6 +13,8 @@ The main idea behind the Circuit Breaker Pattern is to add a layer of protection
 When the circuit is open, subsequent calls to the service are not made, and instead, a fallback mechanism is triggered. This fallback mechanism can be used to return a default value, provide cached data, or invoke an alternative service. By doing so, the Circuit Breaker Pattern helps to isolate the failure and prevent it from affecting the entire system.
 
 Once the service or component recovers and becomes available again, the circuit can be closed, allowing subsequent calls to be made. However, the Circuit Breaker Pattern also introduces a mechanism to gradually close the circuit by allowing a limited number of test requests to be made. If these test requests fail, the circuit remains open, indicating that the service is still not fully recovered.
+
+![Circuit Breaker Pattern](https://i.pinimg.com/originals/99/c6/7e/99c67e6d1d72684d57252529f48e4111.png)
 
 ## Implementing
 
