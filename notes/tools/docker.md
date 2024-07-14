@@ -1,6 +1,16 @@
+---
+tags: ["Tools", "Overview", "Docker"]
+---
+
 # Docker
 
-## Terms
+<TagLinks />
+
+## Concepts
+
+![Containerization](https://i.pinimg.com/originals/3f/d2/d7/3fd2d748354c025f35683a353caf98d7.jpg)
+
+![Docker Concepts](https://i.pinimg.com/originals/4d/b0/16/4db0165a062171a6d27585b97963bc64.jpg)
 
 - **Docker Hub**: store Docker Image
 - **Docker Engine**: create **Docker Image** & run **Docker Container**
@@ -9,7 +19,13 @@
 - **Docker Image**: (immutable)
 - **Docker Container**: … 
 
-## How does Docker Work?
+### Benifits
+
+![Docker Benifits](https://i.pinimg.com/originals/61/33/fc/6133fca7dcb2f21f3fff1a1efed9943e.jpg)
+
+## How it works
+
+![How docker works](https://i.pinimg.com/564x/8f/17/c7/8f17c768e07f06fd55bd3277aca28dd7.jpg)
 
 Docker's architecture comprises three main components:
 
@@ -22,14 +38,26 @@ Here, the Docker daemon listens for Docker API requests and manages various Dock
 🔹 Docker Registry
 This is where Docker images are stored. Docker Hub, for instance, is a widely-used public registry.
 
-
-![docker working](https://lh3.googleusercontent.com/pw/ABLVV86cphVayhq7FjqV3xFPSpsJjiGRJ1eymYS8oFCEk-Hau07NtwAuSedDBbrN13ygw4HJ35v4YhpiPzDy0qSujJ9mE-5bhzjwRNlNknUvFhuAoYO-9y-fkr5l-Ro79kHpJ3IlLT1tWD7PSfhNTHe8xqN13A4h0BohmSUn9PtFLh99nDDPLdAyY-S8lky3dWlExGuM7DybYx1vHqTE9YKFJWyi1ne72P22J59AzW-9ehR7cNlYBd8xU97IcWoq6HjJrF7orFoVwml3mz-OE8a605oErN4UgRhcbg2diVOBl9ZTMyVLigXa-U5Sih3b4ku-i-2puO-gEhWLMi48CUBQu1glUwhdivbXeACHrMJdzILrujj_b9Q_0eFh9GG7qkG-1BtMgbRisgxbCmt-pSOTnOf_sYrdfNkJavyhOqTUa2HeiLuQwiyV_gLRE_biOHqAFe911LFSp4h-cnxcHCIygA--QQ2TQCNehDnu7g6cqttQzZkR9kVcg9cTdamFz89OIC3ZFVslkuUpfB6CkOX1UEU3B44fefBqsxm1Na5CuNxM2lpgoGhLv0fapTS-zjk49kFTX1P--xZ4sYg4VOTR1ju9MuWrin4wRXILakQAkECWE7ALRAcj75FoQ-VopyVUxpq9xU77L3OcSfyHQ8OZKRYNUVJ_gmBusuyNoUczD9mugscv8l7CLM9VawsZunZQCsoM4xqRIC_1dJkERIkFbt6y4BV9rovrY-hkAj75solwhIi_2mMAgpMf5A20Ul7iLzIXeYyGtJW2CpVT9t03KO3nSYoxGVxkRuT9YhTI8beq5JxWZWN5SN94uaPYmw-TphfXbhHJtWyMrk_mhG3RTRxWacn2CCaQJz_i2Aihzk3vJGuMei13vgQYC-p8bTvVUbuWrVV8VUdC3bfktk_80LpQR3izBENh4pH91HvHxg=w572-h569-s-no-gm)
-
 [Read more](https://twitter.com/bytebytego/status/1725033713497694253)
 
-## Image
+## Workflow 
+
+![Docker Workflow 2](https://i.pinimg.com/564x/54/a1/d6/54a1d64b88eb46f786b49bd2763c5521.jpg)
+
+![Docker Workflow](https://i.pinimg.com/originals/a8/6e/9d/a86e9daa473b910f5ef2640e2d989f06.jpg)
 
 ![Image with container](./img/docker-image-container.png)
+
+## Use cases
+
+![Docker use cases](https://i.pinimg.com/564x/ca/e4/4c/cae44c113990bb6f9637a3dc25693d29.jpg)
+
+## Commands 
+
+![Docker commands](https://i.pinimg.com/564x/e2/2f/9a/e22f9ae8c602a7662a737344170cd597.jpg)
+
+### Image
+
 
 :::: tabs
 ::: tab "List All"
@@ -91,7 +119,7 @@ docker tag f <image-name:tag>
 
 
 
-## Container
+### Container
 
 :::: tabs
 ::: tab "List All"
@@ -156,9 +184,9 @@ Container must be stoped before committing.
 docker commit <container-name> <new-image-name:tag>
 ```
 
-## Run
+### Run
 
-### Expose Port
+#### Expose Port
 ```sh
 docker run -d -p 5801:5800 --name vnc1 myvnc 
 ```
@@ -169,7 +197,7 @@ multi ports
 docker run -d -p 5801:5801 -p 5802:5802 .....
 ```
 
-### Volume
+#### Volume
 
 ```sh
 docker run -it -v <path-host>:<container-path> <ID or NAME>
@@ -184,7 +212,7 @@ docker run -it --name C2 --volumes-from C1 ubuntu:latest
 ```
 
 
-### With Volume
+#### With Volume
 
 ```sh
 docker run -it --name <container-name> --mount source=<volume-name>,target=<container-path> <image-name:tag>
@@ -211,7 +239,7 @@ docker run -it --name C1 -v DISK1:/home/dulieu ubuntu:16.0.4
 - press **Ctrl+P** followed by **Ctrl+Q**. This operation detaches the container and allows you to return to your system's shell.
 
 
-## Volume
+### Volume
 
 :::: tabs
 
@@ -254,7 +282,7 @@ docker volume rm D1
 ::::
 
 
-## Network
+### Network
 
 [Detail](https://www.tutorialspoint.com/docker/docker_networking.htm)
 [Detail](https://docs.docker.com/engine/reference/commandline/network_connect/#:~:text=Connect%20a%20container%20to%20a%20network%20when%20it%20starts,connect%20it%20to%20a%20network.)
@@ -395,3 +423,7 @@ docker run -d -p 8080:8081 yourname/yourapp:v2
 ```
 :::
 ::::
+
+## Docker vs K8S
+
+![Docker vs K8S](https://i.pinimg.com/originals/f7/de/0c/f7de0c5b6ccfb3b41c61131416925a1a.jpg)

@@ -48,7 +48,11 @@ tags: ["Overview"]
 
 ## API Design
 
-![api design](https://i.pinimg.com/originals/97/36/dc/9736dcbd39c67fb01945c7c6ede7c2df.jpg)
+![api design](https://i.pinimg.com/originals/ec/8d/10/ec8d10a1da9f5fc5c3d2a65c7b0a5ce4.png)
+
+### Examples
+
+![Examples](https://i.pinimg.com/originals/97/36/dc/9736dcbd39c67fb01945c7c6ede7c2df.jpg)
 
 ## Resiliency & Fault Tolerance
 

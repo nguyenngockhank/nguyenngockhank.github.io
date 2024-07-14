@@ -1,5 +1,5 @@
 ---
-tags: ["Performance", "Cache", "Redis", "Overview"]
+tags: ["Tools", "Performance", "Cache", "Redis", "Overview"]
 ---
 
 # Redis overview
