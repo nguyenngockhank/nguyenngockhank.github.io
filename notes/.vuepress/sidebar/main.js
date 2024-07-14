@@ -72,10 +72,13 @@ const reactDocs = [
 ].map(prefixMapFn('/react/'));
 
 const toolDocs = [
+  '/tools/docker',
+  '/tools/k8s/k8s',
   '/tools/redis_overview',
+  '/tools/kafka/kafka_overview',
+  '/tricks/git',
   '/node/npm',
   // '/tools/redis',
-  '/tricks/git',
   '/tricks/linux',
   '/tricks/mac',
   '/tricks/youtube',
@@ -84,8 +87,6 @@ const toolDocs = [
   '/tools/gg_app_script',
   '/tools/puppeteer',
   '/tools/vscode',
-  '/tools/docker',
-  '/tools/k8s/k8s',
 ];
 
 const networkDocs = [

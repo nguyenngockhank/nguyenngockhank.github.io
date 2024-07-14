@@ -6,6 +6,9 @@ tags: ["Tools", "Overview", "K8S", "Docker"]
 
 <TagLinks />
 
+![K8s in a nutshell](https://i.pinimg.com/564x/22/5d/1d/225d1d0392b4140c433bc58303f54355.jpg)
+
+
 ## Architecture
 
 ![img](https://i.pinimg.com/564x/cd/bc/67/cdbc678eb4b1626b83ca25141236da34.jpg)

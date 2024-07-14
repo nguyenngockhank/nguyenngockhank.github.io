@@ -12,6 +12,11 @@ tags: ["Tools", "Overview", "Docker"]
 
 ![Docker Concepts](https://i.pinimg.com/originals/4d/b0/16/4db0165a062171a6d27585b97963bc64.jpg)
 
+
+### Main components 
+
+![Docker Main components](https://i.pinimg.com/originals/07/c0/4d/07c04dbd6041c90bdffa362cdc870a2e.gif)
+
 - **Docker Hub**: store Docker Image
 - **Docker Engine**: create **Docker Image** & run **Docker Container**
 - **Docker Machine**: create **Docker Engine** on Server

@@ -24,7 +24,7 @@ tags: ["Overview"]
 
 ![High Availability](https://i.pinimg.com/originals/45/fa/a4/45faa4e8462022687dde510818f6ce7d.jpg)
 
-## Scalability Techniques
+## Scalability 
 
 ### DB Scaling
 

@@ -1,3 +1,7 @@
+---
+tags: ["Kafka"]
+---
+
 # Design Kafka
 
 ## Overview
