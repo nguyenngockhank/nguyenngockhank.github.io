@@ -193,6 +193,8 @@ We want related behavior to sit together, and unrelated behavior to sit elsewher
 
 ## Reliable Services
 
+![Best practices](https://i.pinimg.com/564x/7f/be/40/7fbe40c1758dd162e13501145d82bb6b.jpg)
+
 ![Top patterns](https://i.pinimg.com/736x/2e/ab/fd/2eabfd161aa129b8f2a3ceb6afe85693.jpg)
 
 ### Designing reliable communication
