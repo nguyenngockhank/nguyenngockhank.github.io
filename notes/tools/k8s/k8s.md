@@ -1,5 +1,5 @@
 ---
-tags: ["Tools", "Overview", "K8S"]
+tags: ["Tools", "Overview", "K8S", "Docker"]
 ---
 
 # Kubernetes (K8S) notes
@@ -172,6 +172,12 @@ https://jlvbcoop.com/en/eventbus-kubernetes/
 ![Top 10 patterns for k8s beginners](https://i.pinimg.com/originals/18/dc/fc/18dcfc30165f26851b1a1746300a9eec.png)
 
 https://developers.redhat.com/blog/2020/05/11/top-10-must-know-kubernetes-design-patterns#behavioral_patterns
+
+## On cloud 
+
+### EKS 
+
+![EKS](https://i.pinimg.com/564x/c4/40/2a/c4402a404a150acf42b1a905d1ca49d3.jpg)
 
 ## Ecosystem 
 

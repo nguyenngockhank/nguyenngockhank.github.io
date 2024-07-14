@@ -1,13 +1,21 @@
+---
+tags: ["Tools", "Overview", "git"]
+---
+
 # Git notes
 
-## Commands
+<TagLinks />
+
+## Workflow 
+
+![git workflow & commands](https://i.pinimg.com/originals/f4/d7/2f/f4d72f61f6d9f171fd08b0be6bd62e98.jpg)
+
+## ⚡️ Command Tips
+
+![Command overview](https://i.pinimg.com/originals/38/5d/71/385d713df113bef1da676040566cdcaf.jpg)
 
 ### ⚡️ Branch
 
-**Get current branch**
-```sh
-git branch
-```
 
 **Create new branch**
 ```sh
@@ -54,26 +62,23 @@ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
 git remote rm <<<remote_name>>>
 ```
 
-
-## ⚡️ Tips
-
-**Cherry pick**
+### **Cherry pick**
 ```sh
 git cherry-pick <<<commit_hash>>>
 ```
 
-**Override last commit**
+### **Override last commit**
 ```sh
 git commit --amend -m "Message"
 ```
 
-**Combine commits**
+### **Combine commits**
 ```sh
 git rebase -i HEAD~3
 ```
 
 
-**Get all commits from all branches**
+### **Get all commits from all branches**
 
 ```sh
 git reflog
@@ -123,6 +128,8 @@ console.log(git.branch());
 ```
 
 ### Merge và Rebase ???
+
+![Merge vs Rebase](https://i.pinimg.com/564x/8c/da/74/8cda743d62684fbb2051e2f580fe3763.jpg)
 
 Best practice khuyên là:
 - Rebase origin/branch vào branch (pull)
