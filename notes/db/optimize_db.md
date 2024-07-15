@@ -10,9 +10,9 @@ Database tuning describes a group of activities used to optimize and homogenize 
 
 <TagLinks />
 
-## Thứ tự thực thi
+## SQL Execution Order
 
-![sql query execute order](./img/sql-query-exe-order.jpeg)
+![sql query execute order](https://i.pinimg.com/736x/ae/3e/fd/ae3efd2e5f6b3cb8669e2bbcd9c0d983.jpg)
 
 
 Thầy tôi dạy câu thần chú `Chọn, chiếu, kết sau` đại loại câu này là để nhắc nhở lấy data vừa đủ thôi, buffet ăn không hết tội lắm
@@ -24,7 +24,8 @@ Biết thứ tự này, các bạn sẽ biết thứ tự mấy cái lệnh th�
 
 Ví dụ nếu câu điều kiện có thể để ở `WHERE` thì không nên đặt ở `HAVING` vì `WHERE` chạy trước. 
 
-## Khóa cửa khóa ngõ
+## Foreign Keys
+
 Nếu nhất quán dữ liệu, ràng buộc toàn vẹn không là vấn đề thì bỏ mấy cái quan hệ khóa chính, khóa ngoại. Đùa đấy, thật ra là nếu được thì đưa logic ấy lên code luôn :>  
 
 Mấy anh lớn như github, fb không xài *foreign key contraint* để tăng perf, vậy app mình đã đủ lớn chưa :))) 
@@ -40,8 +41,11 @@ Mấy anh lớn như github, fb không xài *foreign key contraint* để tăng 
     - Không sử dụng `HAVING` nếu có thể dùng `WHERE`. Đơn giản là `WHERE` sẽ giới hạn record trả về trước khi `SORT` rồi `GROUP BY`.
     - Phân biệt giữa 2 cái này: `UNION ALL` hay `UNION`. Cái sau có sử dụng `DISTINCT` để loại bỏ record giống nhau. 
 
-## Thiết kế phá chuẩn
+## Denomalize - Thiết kế phá chuẩn
+
 Đôi khi thiết kế chuẩn, không dư thừa dữ liệu lại gây ra câu query phức tạp như c, như b, như l... nên phá chuẩn, chấp nhận dư thừa là cách có thể xem xét =))
+
+![Denomalize](https://i.pinimg.com/736x/53/97/bd/5397bd286bd3c4356b754d6201d03cdb.jpg)
 
 Ví dụ, 
 
@@ -62,6 +66,8 @@ is_read  | boolean
 
 
 ## Index column
+
+![DB Indexing](https://i.pinimg.com/originals/0d/fe/31/0dfe31930989156b19c26e8b884d4dd1.jpg)
 
 Có vài Index loại cơ bản
 

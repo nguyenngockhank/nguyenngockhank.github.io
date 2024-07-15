@@ -241,6 +241,7 @@ module.exports = [
   {
     title: "Database",
     children: [
+      'db_overview',
       'architect',
       'id-generate',
       'tx-isolation',

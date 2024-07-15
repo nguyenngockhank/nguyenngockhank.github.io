@@ -6,6 +6,25 @@ tags: ["RDMS", "HLD"]
 
 <TagLinks />
 
+## CAP theorem
+
+The CAP theorem says that a distributed system can deliver on only two of three desired characteristics: consistency, availability and partition tolerance.
+
+![CAP](https://i.pinimg.com/originals/5d/45/a0/5d45a01c6048b0ec7c085f8191932212.jpg)
+
+## DB Isolation options
+
+Data isolation ensures that modules are independent and loosely coupled. 
+
+![DB Isolation options](https://i.pinimg.com/564x/76/1f/68/761f684da8d15a28ec2faad9a250e5c4.jpg)
+
+
+A modular monolith has strict rules for data integrity: 
+ 
+- Each module can only access its own tables 
+- No sharing of tables or objects between modules 
+- Joins are only allowed between tables of the same module 
+
 ## Database Normalization
 
 Database Normalization is a design step which eliminates redundant data stored in form of large monolithic tables making the overall query execution simpler. 

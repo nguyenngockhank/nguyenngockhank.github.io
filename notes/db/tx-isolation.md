@@ -4,6 +4,11 @@ tags: ["RDMS"]
 
 # Transaction Isolation Levels
 
+
+![Transaction Isolation Levels](https://i.pinimg.com/originals/0c/09/f2/0c09f26cbaaef6d7571318eba8e2344c.jpg)
+
+## Comparision
+
 Isolation Level   | Dirty reads | Non-repeatable reads | Phantoms    | Read                             | Write 
 ----------------- | ----------- | -------------------- | --------    | -------------------------------- | --------
 Serializable      | Impossible  | Impossible           | Impossible  | Shared Lock                      | Exclusive Lock
@@ -26,7 +31,11 @@ Read Uncommitted  | Probaly     | Probaly              | Probaly     | No Lock  
 2. Transaction B inserts an additional row that satisfies the WHERE clause.
 3. Transaction A re-evaluates the WHERE condition and picks up the additional row.
 
+
 ## Explicit / Exclusive Locking 
+
+![Types of db locks](https://i.pinimg.com/originals/6b/d7/e8/6bd7e893f0f83d85d02288e8b25941d2.jpg)
+
 - Table-Level Locks
 - Row-Level Locks
 - Page-Level Locks

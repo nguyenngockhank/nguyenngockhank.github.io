@@ -11,6 +11,8 @@ tags: ["DistributedSystem", "RDMS", "NoSQL"]
 - 64 bits
 - Highly scalable, low latency
 
+![Generate ID](https://i.pinimg.com/564x/3d/59/a6/3d59a68c59c98ada1128c88e9efebaf9.jpg)
+
 ## DB Auto-increment
 - ✅ Easy to setup 
 - ❌ Only works in a singler server setup 

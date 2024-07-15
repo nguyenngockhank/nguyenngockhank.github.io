@@ -2,22 +2,39 @@
 tags: ["Performance", "DistributedSystem", "RDMS"]
 ---
 
-# Scalable Database Architectures
+# Database Scaling Architectures
 
 <TagLinks />
 
+## Scaling Overview
+
+![DB Scaling](https://i.pinimg.com/originals/85/31/93/853193390c22d55b2a9ff1e4b9eebc0b.jpg)
+
 ## Replication
 
-2 types of replication: 
-- async replication 
-- sync replication
+### Replication sync types
 
+2 types of replication: 
+
+**Async replication**
+![Async replication](https://i.pinimg.com/736x/86/f0/ba/86f0ba6fbac45d3653f59c10e5c4663c.jpg)
+
+
+**Sync replication**
+![sync replication](https://i.pinimg.com/736x/ba/7e/e0/ba7ee0b5f9bd1d1ba0b5ad47d397bfe5.jpg)
+
+**Comparision**
 .           | Sync replication | Async replication 
 ------------| ------------------|-------------------
 Delay in writes   |    High     |  Low 
 Wait for a laggard node |  Casscading failure | No
 Data loss   |  No  | Maybe 
 Consistency     | Yes   | No
+
+
+### Replication Architectures
+
+![Replication](https://i.pinimg.com/736x/0c/ec/f6/0cecf6c7ee7caf4c95e528c518c43409.jpg)
 
 
 ### Replication - Master & Slave
@@ -92,6 +109,8 @@ Vertical partitioning involves creating tables with fewer columns and using addi
 
 ### Horizontal partitioning (Sharding)
 
+![DB Sharding](https://i.pinimg.com/736x/d2/08/a9/d208a94673bfa406a598caef87dcc798.jpg)
+
 ::: tip 
 Horizontal partitioning divides a table into multiple tables. Each table then contains the same number of columns, but fewer rows.
 :::
@@ -115,8 +134,12 @@ PARTITIONS 10;
 
 
 ## Serverless DB
-// ... TODO
 
+![What is Serverless DB](https://i.pinimg.com/736x/d5/40/b6/d540b61b05bf75618728156f7c43a670.jpg)
+
+Aurora Serverless has the ability to scale capacity automatically up or down as per business requirements. For example, an eCommerce website preparing for a major promotion can scale the load to multiple databases within a few milliseconds. In comparison to regular cloud databases, which necessitate the provision and administration of database instances, Aurora Serverless can automatically start up and shut down.
+
+By decoupling the compute layer from the data storage layer, Aurora Serverless is able to charge fees in a more precise manner. Additionally, Aurora Serverless can be a combination of provisioned and serverless instances, enabling existing provisioned databases to become a part of the serverless pool.
 
 ## Clustering
 
