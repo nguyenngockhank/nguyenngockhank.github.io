@@ -8,10 +8,26 @@ tags: ["Performance", "Scaling", "Overview"]
 
 ![Strategies](https://i.pinimg.com/originals/75/1a/fb/751afb05aa046248242be94a90673836.jpg)
 
+- Stateless services
+- Horizontal scaling
+- Load balancing
+- Auto scaling
+- Caching
+- Database replication
+- Database sharding
+- Async processing
 
 ## DB Scaling
 
 ![DB Scaling](https://i.pinimg.com/originals/85/31/93/853193390c22d55b2a9ff1e4b9eebc0b.jpg)
+
+- Indexing
+- Materialized views
+- Vertical scaling
+- Sharding
+- Replication
+- Database caching
+- Denomarlization
 
 ### Replication
 

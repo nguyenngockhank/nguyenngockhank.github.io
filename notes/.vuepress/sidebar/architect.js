@@ -1,6 +1,14 @@
 module.exports = [
     '',
     {
+        title: 'Cloud',
+        children: [
+            'cloud_overview',
+            'serverless_overview',
+        ]
+    },
+
+    {
         title: "Messages / Events",
         children: [
             'messaging',

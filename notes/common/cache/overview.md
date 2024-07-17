@@ -26,9 +26,20 @@ tags: ["Performance", "Cache", "Overview"]
 
 ![Eviction](https://i.pinimg.com/originals/b2/81/6d/b2816d0f475473ac976a8ecd0613d420.jpg)
 
+- Least Recently used (LRU)
+- Most recently used (MRU)
+- Least Frequently used (LFU)
+- Time-to-live (TTL)
+- Two-tiered caching
+
 ## Problems
 
 ![Problems](https://i.pinimg.com/originals/15/ef/66/15ef66af07686594ba7638ac7e718618.jpg)
+
+- Thunder hurd problem: a large amount of keys expire at the same time
+- Cache Penetration: data empty from cache & DB
+- Cache breakdown: hot key expires => a large amount of queries hit DB
+- Cache crash
 
 ## Read more
 
