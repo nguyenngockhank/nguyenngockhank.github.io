@@ -54,7 +54,12 @@ module.exports = [
             'distributed-patterns',
         ]
     },
-
+    {
+        title: 'Security',
+        children: [
+            'security/sercurity_overview',
+        ]
+    },
     {
         title: 'Architectures',
         children: [

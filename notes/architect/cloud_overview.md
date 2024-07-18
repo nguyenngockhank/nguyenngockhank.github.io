@@ -3,6 +3,8 @@
 ## Types 
 ![type of cloud computing](https://i.pinimg.com/564x/08/42/3d/08423de1d0d376cbf61550ac9e8914a5.jpg)
 
+![models](https://i.pinimg.com/originals/4d/ad/15/4dad151ed396a0b2cfa40ba264946d0e.jpg)
+
 ## Load balancer
 
 ![Load balancer cloud](https://i.pinimg.com/originals/df/b3/e9/dfb3e9118bf3eb2ec196203ee41c8e53.gif)

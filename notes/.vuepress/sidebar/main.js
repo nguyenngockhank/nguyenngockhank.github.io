@@ -4,6 +4,7 @@ const prefixMapFn = (prefix) => (item) => {
 }
 
 const cleanCodeDocs = [
+  'cleancode_overview',
   'naming',
   'deps',
   'testing',

@@ -99,3 +99,7 @@ tags: ["Overview"]
 ![Disaster recoverys](https://i.pinimg.com/originals/a4/98/b5/a498b583fe6c43f999c14f14009a37b3.png)
 
 ![Disaster recovery strategies](https://i.pinimg.com/originals/0a/3d/78/0a3d78effd581a1f9a12d9ca50d999cf.jpg)
+
+## Idempotency
+
+![Idempotency](https://i.pinimg.com/736x/66/e4/f8/66e4f81e0acdfe9b0bbc1795b25cad85.jpg)

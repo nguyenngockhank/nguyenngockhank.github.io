@@ -68,6 +68,8 @@ tags: ["Performance", "Overview"]
     - Compress data before sending over network
     - use libs like gZip or zLib
 
+![Latency numbers](https://i.pinimg.com/736x/3a/4b/a2/3a4ba2779db53d12a3fdd50bec3dafed.jpg)
+
 ## Database scaling
 
 ![DB Scaling](https://i.pinimg.com/originals/85/31/93/853193390c22d55b2a9ff1e4b9eebc0b.jpg)
