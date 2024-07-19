@@ -212,3 +212,7 @@ Remember, OAuth 2.0 is all about keeping you and your data safe while making you
 ## SSO
 
 ![SSO](https://i.pinimg.com/originals/b9/76/21/b97621cc764ff1926d3a74bcb5c71765.jpg)
+
+## MFA 
+
+![MFA](https://i.pinimg.com/originals/aa/f5/69/aaf5697967a610490b5e0593d1a1549a.jpg)

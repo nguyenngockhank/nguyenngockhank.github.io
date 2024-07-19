@@ -84,6 +84,7 @@ const toolDocs = [
   '/tricks/mac',
   '/tricks/youtube',
   '/tools/chrome',
+  '/tools/yaml',
   '/tools/selenium_ide',
   '/tools/gg_app_script',
   '/tools/puppeteer',
