@@ -40,36 +40,17 @@ Bật chế độ print mode để style... chứ `Ctrl + P` riết chắc mệt
 
 **Cách làm** 
 
-Bước 0: 
-> Bật developer tool lên, không biết thì... đi ngủ thôi ... xỉn roài
-
-Bước 1: 
-> Command+Shift+P (Mac) 
-
-> hoặc Control+Shift+P (Windows, Linux, Chrome OS)
-
-Bước 2: 
-
-> Nhập `Rendering`  chọn `Show Rendering`
-
-Bước 3: 
-
-> Tại tab render `Emulate CSS media` chọn `print`.
+- Bước 0: Bật developer tool lên, không biết thì... đi ngủ thôi ... xỉn roài
+- Bước 1: `Command+Shift+P (Mac)`  hoặc `Control+Shift+P (Windows, Linux, Chrome OS)`
+- Bước 2:  Nhập `Rendering`  chọn `Show Rendering`
+- Bước 3: Tại tab render `Emulate CSS media` chọn `print`.
 
 
 ## Chặn 1 resource
 
-Bước 1: giống trên kia
-
-> Command+Shift+P (Mac) 
-> hoặc Control+Shift+P (Windows, Linux, Chrome OS)
-
-Bước 2: 
-Chọn `Request Blocking`
-
-Bước 3
-`+` Thêm pattern
-
+- Bước 1: `Command+Shift+P (Mac)`  hoặc `Control+Shift+P (Windows, Linux, Chrome OS)`
+- Bước 2: Chọn `Request Blocking`
+- Bước 3: `+` Thêm pattern
 
 ## Extensions
 

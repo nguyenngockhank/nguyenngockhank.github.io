@@ -80,7 +80,6 @@ const toolDocs = [
   '/tricks/git',
   '/node/npm',
   // '/tools/redis',
-  '/tricks/linux',
   '/tricks/mac',
   '/tricks/youtube',
   '/tools/chrome',
@@ -89,6 +88,16 @@ const toolDocs = [
   '/tools/gg_app_script',
   '/tools/puppeteer',
   '/tools/vscode',
+  {
+    title: "Linux",
+    children: [
+      'linux_notes',
+      'linux_ssh',
+      'crontab',
+      'grep',
+      'linux_network',
+    ].map(prefixMapFn('/linux/'))
+  }
 ];
 
 const networkDocs = [
@@ -320,6 +329,7 @@ module.exports = [
       '/terms/javascript',
       '/terms/patterns',
       '/terms/principles',
+      '/terms/pipeline',
       '/terms/testing',
       '/terms/12factors',
       '/terms/concurrent',
