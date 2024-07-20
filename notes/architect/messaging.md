@@ -2,7 +2,7 @@
 tags: ["DistributedSystem", "Communication", "MessageQueue", "PubSub"]
 ---
 
-# Messaging
+# Messaging / Events
 
 <TagLinks />
 

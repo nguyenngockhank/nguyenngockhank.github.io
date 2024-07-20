@@ -32,6 +32,10 @@ A typical use case is assigning patients with the highest severity to the emerge
 ### 4. Deque
 Deque is also called double-ended queue. The insertion and deletion can happen at both the head and the tail. Deque supports both FIFO and LIFO (Last In First Out), so we can use it to implement a stack data structure.
 
+## With vs Without
+
+![With vs Without Message queue](https://i.pinimg.com/originals/20/11/63/2011636b56689eb7f102ff049ecc3cef.jpg)
+
 ## Cloud patterns 
 
 ![Cloud patterns](https://i.pinimg.com/originals/25/26/5f/25265fe7b5f7229e79f8948f258f692b.gif)

@@ -35,26 +35,19 @@ tags: ["Overview"]
 ![LB use cases](https://i.pinimg.com/originals/a3/e2/cc/a3e2cc55eb078dfad046b58aca6d3e0e.jpg)
 
 ## Microservices 
+
 [😎 Detail here](../architect/microservices.md)
 
 ![Best practices](https://i.pinimg.com/564x/7f/be/40/7fbe40c1758dd162e13501145d82bb6b.jpg)
 
 ![Top patterns](https://i.pinimg.com/736x/2e/ab/fd/2eabfd161aa129b8f2a3ceb6afe85693.jpg)
 
+![Most-used distributed system patterns](https://i.pinimg.com/originals/cb/d0/97/cbd0976edbc9f7d5dd084741adf310cc.jpg)
 
-## Communication
-
-### Protocols
-
-![Communication protocols](https://i.pinimg.com/originals/31/e3/1c/31e31c112b618fca7a2a93b4aab4c34e.jpg)
-
-### Services Communication
-
-![Services Communication](https://i.pinimg.com/originals/8d/ea/68/8dea68df11d4a6667a7b8d4fb4b66361.jpg)
 
 <!-- ![Services Communication 2](https://i.pinimg.com/originals/c0/07/8d/c0078d1ad4fe40de11b7afa500809b13.jpg) -->
 
-## API Design
+## REST API Design
 
 ![api design](https://i.pinimg.com/originals/ec/8d/10/ec8d10a1da9f5fc5c3d2a65c7b0a5ce4.png)
 

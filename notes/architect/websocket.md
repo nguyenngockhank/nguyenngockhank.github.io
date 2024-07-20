@@ -12,6 +12,8 @@ While originally designed to facilitate the communication between a server and b
 
 HTTP and WebSocket both are communication protocols used in client-server communication. 
 
+![WS vs HTTP](https://i.pinimg.com/originals/5f/21/4b/5f214b74300a553d5440f7f027c8211c.webp)
+
 Connection via WS | Connection via HTTP
 ------------------| --------------------
 Bi-directional communication | Unidirectional communication 
@@ -19,6 +21,14 @@ Connection is kept alive untile terminated by client or server| Connection is te
 Real time data is received on a single communication channel & can be continuously updated | HTTP data requests use simple RESTfull API. They send a ome-tine current state response for a query
 Best used for applications in need of quick connections & realtime data | Best used for applications that dont reqire quick, 2-way connections
 E.g: crypto market cap, multiplayer game, collaborative platform, messaging app | E.g: Browser search, email, social media updates, final game scores, ...
+
+## WS vs SSE
+
+Feature | WS | SSE
+-------- | ----------| --------------------
+Communication Direction | wo-way (full duplex) |	One-way (server to browser)
+Complexity	| More complex	|  Simpler
+Data Format	F| lexible (text and binary) | Primarily text-based
 
 ## WS vs XMPP
 

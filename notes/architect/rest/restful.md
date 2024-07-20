@@ -10,7 +10,7 @@ tags: ["Comparison", "Communication"]
 
 RESTful API is an architectural style for developing web services that builds upon existing systems and features of HTTP. 
 
-![REST Notes](../k-img/rest-notes.png)
+![REST Notes](./rest-notes.png)
 
 REST is easier to archive than SOAP.
 

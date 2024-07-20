@@ -26,13 +26,11 @@ const commonDocs = [
       '/common/cdn/cdn',
     ]
   },
-  'system_design_overview',
   {
     title: "Communication",
     children: [
       '/common/realtime',
       '/common/notification/',
-      '/network/websocket',
       // 'architect/messaging',
       // 'architect/queue',
       'db/redis.html#pub-sub',
@@ -204,7 +202,6 @@ module.exports = [
   {
     title: 'API Guidelines',
     children: [
-      '/rest/',
       `/api-guidelines/overview`,
       {
         title: 'Principles',

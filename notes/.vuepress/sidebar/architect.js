@@ -1,5 +1,6 @@
 module.exports = [
     '',
+    'system_design_overview',
     {
         title: 'Cloud',
         children: [
@@ -9,10 +10,15 @@ module.exports = [
     },
 
     {
-        title: "Messages / Events",
+        title: "Communication",
         children: [
+            'communication_overview',
             'messaging',
             'queue',
+            'rest/restful',
+            'grpc',
+            'graphql',
+            'websocket',
         ]
     },
     {

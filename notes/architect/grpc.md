@@ -1,7 +1,35 @@
 # gRPC in NodeJs
 
+![gRPC](https://i.pinimg.com/originals/2c/eb/38/2ceb38ed0b65baa885b60544791469b1.jpg)
 
-## Example
+
+## Concepts
+
+### RPC (Remote Procedure Call)
+
+- A general concept in distributed systems where a program can execute a subroutine on another computer in a network.
+- Acts like calling a local function, but across a network connection.
+- Various RPC protocols exist, each with its own way of defining messages and data exchange.
+
+### gRPC (gRPC Remote Procedure Calls)
+
+- An open-source, high-performance RPC framework based on HTTP/2.
+- Offers a standardized way to create, implement, and consume RPC APIs.
+- Key characteristics:
+  - **Protocol Buffers**: Uses Protocol Buffers for defining data structures and message formats. Protocol Buffers are language-neutral and efficient for network transmission due to their compact binary format.
+  - **HTTP/2**: Leverages HTTP/2 for efficient multiplexing of requests and responses, leading to faster communication compared to traditional HTTP/1.1.
+  - **Strongly Typed**: Enforces strong data typing for better code maintainability and catching errors early in development.
+  - **Platform Neutral**: Supports various programming languages, making it suitable for heterogeneous environments.
+
+### RPC vs. Traditional RPC
+
+gRPC builds upon the core RPC concept but provides several advantages:
+
+- **Performance**: Protocol Buffers and HTTP/2 improve efficiency and speed compared to text-based formats like JSON used in some RPC protocols.
+- **Interoperability**: Language-neutral definition of data structures facilitates communication across different programming languages.
+- **Developer Experience**: Strong typing and code generation tools streamline development and reduce errors.
+
+## Example gRPC in Nodejs
 
 [Quick start](https://grpc.io/docs/languages/node/quickstart/)
 

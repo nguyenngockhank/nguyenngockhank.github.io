@@ -1,3 +1,7 @@
+---
+tags: ["Overview"]
+---
+
 # Database overview
 
 ## Terms

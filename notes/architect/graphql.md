@@ -1,8 +1,27 @@
-# GraphQL Snippets
+# GraphQL notes
 
 GraphQl doest NOT replace SQL but it's a replacement for REST API.
 
+![what is graphql](https://i.pinimg.com/originals/ce/01/9f/ce019f0d8d5e7ca1cdf5019f82f16994.jpg)
+
 [Online tool here](https://graphql.github.io/swapi-graphql/)
+
+## protocol-agnostic
+
+GraphQL itself is **protocol-agnostic**, meaning it doesn't dictate a specific network protocol for communication. It focuses on the data structure and query language for requesting and receiving data.
+
+However, GraphQL is most commonly used with **HTTP** (Hypertext Transfer Protocol). Here's why:
+- **Widely Supported**: HTTP is the foundation of the web, making it a familiar and universally supported choice for most servers and clients.
+- **Flexibility**: HTTP offers various methods (GET, POST) that can be adapted to different GraphQL request types.
+- **Existing Tools and Libraries**: A wealth of existing tools and libraries exist for handling HTTP communication, simplifying development with GraphQL.
+
+**Alternative Protocols**:
+
+While HTTP is dominant, GraphQL can theoretically be used with other protocols like:
+- **WebSockets**: For real-time data updates where two-way communication is necessary.
+- **gRPC**: For potential performance benefits, especially in high-performance environments with language compatibility for gRPC and Protocol Buffers.
+
+**Key Point**: The network protocol choice primarily affects how data is transferred, while GraphQL handles the data structure and querying logic itself.
 
 ## Queries
 
