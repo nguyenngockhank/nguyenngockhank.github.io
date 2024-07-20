@@ -64,6 +64,7 @@ module.exports = [
         title: 'Security',
         children: [
             'security/sercurity_overview',
+            'security/cryptography',
         ]
     },
     {
