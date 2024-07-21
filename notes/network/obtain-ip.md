@@ -6,6 +6,8 @@
     - last 3 bytes: Vendor Assigned (NIC Cards, Interfaces)
 - IP Network (4 bytes): network layer (L2)
 
+![Mac address vs IP address](https://i.pinimg.com/originals/ac/a6/2b/aca62b626dbe44ae7b5a74680be6626f.jpg)
+
 ## Static addressing 
 ... 
 
@@ -33,6 +35,8 @@ defined range of IP addresses (scope) on A DHCP server
 
 
 ## Address Resolution Protocol (ARP)
+
+![How ARP works?](https://i.pinimg.com/originals/55/43/29/554329e35223862f715870a9013d5bf5.jpg)
 
 - ARP enables a computer to **find the MAC address** of the computer that is associated with an **IP address**
 - In order for devices to communicate, the sending devices need both **IP addresses** & the **MAC addresses** of the destination devices.

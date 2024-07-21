@@ -49,13 +49,13 @@ Tùy theo những mức độ này thì "cấu trúc bên trong" "hành vi bên 
 
 ## When to refactor
 
-<collapse title="💥 Rule of Three"  :show="false">
-<ol>
-    <li>When you’re doing something for the first time, just get it done.</li>
-    <li>When you’re doing something similar for the second time, cringe at having to repeat but do the same thing anyway.</li>
-    <li>When you’re doing something for the third time, start refactoring.</li>
-</ol>
-</collapse>
+**Rules of three**
+- When you’re doing something for the first time, just get it done.
+- When you’re doing something similar for the second time, cringe at having to repeat but do the same thing anyway.
+- When you’re doing something for the third time, start refactoring.
+
+![Refactoring tips](https://i.pinimg.com/originals/49/0e/8f/490e8f754d8aa80fcd3a562eabc73b17.jpg)
+
 
 <collapse title="💥 When adding a feature" :show="false">
 <ul>

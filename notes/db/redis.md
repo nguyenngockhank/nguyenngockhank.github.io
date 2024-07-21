@@ -12,10 +12,6 @@
 
 ![History](https://i.pinimg.com/originals/88/7b/99/887b99e3692d2bf71be03322149ca0cf.jpg)
 
-
-![History](https://i.pinimg.com/originals/88/7b/99/887b99e3692d2bf71be03322149ca0cf.jpg)
-
-
 - **Simple database**, i.e. a single primary shard
 - **HA (highly available) database**, i.e. a pair of primary and replica shards
 - **Clustered database**, which contains multiple primary shards, each managing a subset of the dataset (or in Redis terms, a different range of “hash-slots”)

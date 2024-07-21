@@ -19,6 +19,14 @@ tags: ["Overview"]
 ## Security 
 ![Security](https://i.pinimg.com/originals/10/3c/bd/103cbdaffe08c9786dc15925b7558bfd.gif)
 
+## Monitoring
+
+![Cloud Monitoring](https://i.pinimg.com/originals/07/b4/09/07b4098d659414101c89ebafbb528967.jpg)
+
+## Database 
+
+![Cloud Database](https://i.pinimg.com/originals/24/3b/e8/243be8c63812b48b3fdc7ad5b5379e09.jpg)
+
 
 ## Disaster recovery 
 

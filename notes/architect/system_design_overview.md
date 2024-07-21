@@ -34,6 +34,9 @@ tags: ["Overview"]
 ### Load balancing
 ![LB use cases](https://i.pinimg.com/originals/a3/e2/cc/a3e2cc55eb078dfad046b58aca6d3e0e.jpg)
 
+### API Gateway 
+![API Gateway use cases](https://i.pinimg.com/originals/f4/6f/12/f46f1212ed3c9840e7e1c8d50d257d06.png)
+
 ## Microservices 
 
 [😎 Detail here](../architect/microservices.md)

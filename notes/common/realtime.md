@@ -69,6 +69,9 @@ app.get('/', function (req, res) {
 ```
 
 ## Server Send Event (SSE)
+
+![Server-sent events](https://i.pinimg.com/originals/8c/f5/d4/8cf5d426dc818c8c9c7cd8a51a4c9192.jpg)
+
 Cái này éo support IE =)) Yêu cầu browser phải có `EventSource`, Polyfill thì vẫn được 
 
 Cái này thì client sẽ kết nối bền vững với server 1 lần rồi sau đó, cứ nhận dữ liệu mới từ server trả về... đây là đường 1 chiều ( `pub - sub  1-way`)  =)) 

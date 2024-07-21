@@ -43,6 +43,7 @@ module.exports = [
             'OrchestrationVsChoreography',
             'microservice/cohesion-coupling/',
             'microservice/loadbalancer',
+            'microservice/apigateway',
             'microservice/cross-cutting-concerns/',
         ]
     },
@@ -64,6 +65,7 @@ module.exports = [
         title: 'Security',
         children: [
             'security/sercurity_overview',
+            'security/cyber_attack',
             'security/cryptography',
         ]
     },

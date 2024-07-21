@@ -107,6 +107,8 @@ A **failed** payemnt intent of Stripe can become a **succeeded** after payer ret
 
 ### Tokenization
 
+![Tokenization](https://i.pinimg.com/originals/02/8f/14/028f14f35c0f6bd9fcc4dfdbe54918d3.jpg)
+
 ::: danger ⚠️⚠️⚠️ Can a Merchant Store Credit Card Information?
 To answer briefly, yes, merchants can store credit card information.
 
@@ -121,10 +123,6 @@ Tokenization is the process uses to collect sensitive card or bank account detai
 **A token representing this information is returned to your server to use**. You should use our recommended payments integrations to perform this process **client-side**. This ensures that no sensitive card data touches your server, and allows your integration to operate in a PCI-compliant way.
 
 :::
-
-
-![mollie](https://assets.docs.mollie.com/_images/components-flow@2x.png)
-*Mollie Components in your checkout*
 
 Note: Card Token is valid in 1 hour
 
@@ -214,6 +212,33 @@ let result = decimal / 3
 
 - [Monetary value in integer over decimal datatype](https://dba.stackexchange.com/questions/248815/monetary-value-in-integer-over-decimal-datatype)
 - [best data type is for storing money values](https://laracasts.com/discuss/channels/laravel/best-data-type-is-for-storing-money-values)
+
+## Payment reconciliation
+
+![Payment reconciliation](https://i.pinimg.com/originals/72/9d/c9/729dc9e71675d04479968afee8ddde39.jpg)
+
+### Foreign Currency:
+
+Dealing with different currencies adds complexity.
+Conversions between currencies by payment providers (like Paypal) need to be reconciled.
+
+### Multiple Events per Purchase:
+
+A single purchase triggers multiple financial events (debits & credits) at different times:
+When you use Paypal (considering time and currency).
+When money moves from Paypal to your bank (potentially involving another currency conversion).
+All these transactions need to be reconciled for accurate accounting.
+
+###  Platform-Specific Buyer Issues:
+
+Paypal's "shadow transaction" is an example. Funds reserved for a pending purchase (A) might be used partially for a newer purchase (B) if A gets cancelled. This can lead to confusion with bank withdrawals for B.
+
+### Ideal Reconciliation Process:
+
+A smooth flow of information between your shop, payment provider, and accounting system is key.
+Order IDs and payment IDs should be carried through the process to create invoices automatically.
+This allows for easier reconciliation of accounts receivable and payable.
+ 
 
 ## Stripe API Redesign
 

@@ -4,6 +4,8 @@ tags: ["CleanCode"]
 
 # Refactoring Overview
 
+![Refactoring tips](https://i.pinimg.com/originals/49/0e/8f/490e8f754d8aa80fcd3a562eabc73b17.jpg)
+
 Take a look at the function `ordinal_suffix()` 
 
 ```php

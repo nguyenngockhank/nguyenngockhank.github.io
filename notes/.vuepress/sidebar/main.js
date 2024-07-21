@@ -31,11 +31,6 @@ const commonDocs = [
     children: [
       '/common/realtime',
       '/common/notification/',
-      // 'architect/messaging',
-      // 'architect/queue',
-      'db/redis.html#pub-sub',
-      'tools/kafka',
-      'tools/kafka-vs-jetstream',
     ]
   },
   {
@@ -73,8 +68,7 @@ const reactDocs = [
 const toolDocs = [
   '/tools/docker',
   '/tools/k8s/k8s',
-  '/tools/redis_overview',
-  '/tools/kafka/kafka_overview',
+
   '/tricks/git',
   '/node/npm',
   // '/tools/redis',
@@ -86,6 +80,21 @@ const toolDocs = [
   '/tools/gg_app_script',
   '/tools/puppeteer',
   '/tools/vscode',
+  {
+    title: "Redis",
+    children: [
+      '/tools/redis_overview',
+      '/db/redis',
+    ]
+  },
+  {
+    title: "Kafka",
+    children: [
+      'kafka/kafka_overview',
+      'kafka',
+      'kafka-vs-jetstream',
+    ].map(prefixMapFn('/tools/'))
+  },
   {
     title: "Linux",
     children: [
@@ -106,6 +115,7 @@ const networkDocs = [
   'internet-protocol',
   'devices',
   'nat',
+  'firewall',
   'network-abbr',
 ].map(prefixMapFn('/network/'));
 

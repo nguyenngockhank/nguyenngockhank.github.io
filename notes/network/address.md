@@ -17,7 +17,13 @@ IP = **NETWORK ADDRESS** + **HOST ADDRESS** = 32 bits . E.g: `131.108.122.204`
 - The router uses the network address to identify the destination network of a packet within an internetwork 
 - The router uses the IP address to locate the particular computer connected to that network
 
-## IP Address classes 
+![Mac address vs IP address](https://i.pinimg.com/originals/ac/a6/2b/aca62b626dbe44ae7b5a74680be6626f.jpg)
+
+## Types of IP address
+
+![Types of IP address](https://i.pinimg.com/originals/9f/d7/8c/9fd78cc710d75b2a9060cdde55358079.jpg)
+
+### IP Address classes 
 
 ![classes](./img/ip-classes.png)
 
@@ -39,19 +45,18 @@ IP = **NETWORK ADDRESS** + **HOST ADDRESS** = 32 bits . E.g: `131.108.122.204`
     - Network address - used to identify the network itself. An IP has `0s` in all host bits
     - Broadcast address - used for broadcasting packets to all devices on a network. An IP has `1s` in all host bits
 
-## Public IP address
+### Public IP address
 - the stability of the Internet
 - Unique addresses are required for each device on a network. To make that an organization known as the Internet Network Information Center (InterNIC) handled this procedure. Now replate by the Intreernet Assigned Numbers Authority (IANA)
 - must be obtained from an Internet Service Provider (ISP) or a registry at some expense
 
-## Private IP address
+### Private IP address
 - According to RFC-1918
 - Class A: `10.0.0.0`
 - Class B: `172.16.0.0` - `172.31.0.0`
 - Class C: `192.168.0.0` - `192.168.255.0`
 
-
-## IPv4 versus IPv6
+### IPv4 versus IPv6
 4 octets vs 16 octets 
 
 ## Subnetting

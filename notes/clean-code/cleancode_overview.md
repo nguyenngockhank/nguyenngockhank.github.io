@@ -15,6 +15,9 @@ tags: ["Overview"]
 ### 10 good principles 
 ![Principles](https://i.pinimg.com/originals/5f/08/67/5f0867f8d9311258ce2e75b0929e0f5d.jpg)
 
+### Refactoring tips
+
+![Refactoring tips](https://i.pinimg.com/originals/49/0e/8f/490e8f754d8aa80fcd3a562eabc73b17.jpg)
 
 
 ### SOLID 
@@ -22,7 +25,7 @@ tags: ["Overview"]
 ![SOLID](https://i.pinimg.com/originals/94/a7/d7/94a7d7d96fc53ddc9cf08de84bb6074d.jpg)
 
 
-## Design patterns
+## OOD patterns
 
 > An antipattern is just like a pattern, except that instead of a solution, it gives something that looks superficially like a solution but isn't one.
 

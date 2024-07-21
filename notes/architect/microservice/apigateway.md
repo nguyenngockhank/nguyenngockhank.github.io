@@ -1,5 +1,24 @@
 # API Gateway
 
+
+## What does API Gateway do?
+
+![API Gateway do](https://i.pinimg.com/originals/5e/94/35/5e94357c0c9d77000b237df663cdd4ee.jpg)
+- Parameter validation
+- Allow-list / Deny-list
+- Authentication / Authorization
+- Rate limit
+- Dyammic routing
+- Service Discovery
+- Protocol Conversion
+- Error handling
+- Circuit break
+- Logging / monitoring
+- Cache
+
+### Use cases
+![API Gateway use cases](https://i.pinimg.com/originals/f4/6f/12/f46f1212ed3c9840e7e1c8d50d257d06.png)
+
 ## Ingress Controller vs API Gateway
 
 ### Ingress Controller

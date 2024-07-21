@@ -37,15 +37,16 @@ As modern websites and applications are like busy beehives, we use a variety of 
 In a nutshell, choose a Reverse Proxy for **stealth**, an API Gateway for organized **communications**, and a Load Balancer for **traffic control**.  Sometimes, it's wise to have all three - they make a super team that keeps your digital kingdom safe and efficient.
 
 
-### LB Techniques
-
-![Load balancing Techniques](https://i.pinimg.com/originals/9e/06/72/9e0672a6bd30e5c46c90baacec6a0c92.webp)
-
 ## Cloud cheatsheet
 ![Load balancer cloud](https://i.pinimg.com/originals/df/b3/e9/dfb3e9118bf3eb2ec196203ee41c8e53.gif)
 
 ## Routing Algorithms 
 ![Load balancing algorithms](https://i.pinimg.com/originals/0f/14/f0/0f14f06051422509611730ac1b1897c6.jpg)
+
+### LB Techniques
+
+![Load balancing Techniques](https://i.pinimg.com/originals/9e/06/72/9e0672a6bd30e5c46c90baacec6a0c92.webp)
+
 
 - **Round robin**: The client requests are sent to different service instances in sequential order. The services are usually required to be stateless.
 - **Sticky round-robin**: This is an improvement of the round-robin algorithm. If Alice’s first request goes to service A, the following requests go to service A as well.

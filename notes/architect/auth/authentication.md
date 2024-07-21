@@ -215,4 +215,6 @@ Remember, OAuth 2.0 is all about keeping you and your data safe while making you
 
 ## MFA 
 
+![What is MFA](https://i.pinimg.com/originals/28/c2/8c/28c28c76a06a68290040dda7191f5772.jpg)
+
 ![MFA](https://i.pinimg.com/originals/aa/f5/69/aaf5697967a610490b5e0593d1a1549a.jpg)

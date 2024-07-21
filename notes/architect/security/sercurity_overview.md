@@ -4,6 +4,11 @@
 
 ![Tools for Privacy](https://i.pinimg.com/564x/61/ce/e6/61cee6b356c9d301334060d94df94dd9.jpg)
 
+## Cybersecurity Teams
+
+![Cybersecurity Teams](https://i.pinimg.com/originals/40/e8/f0/40e8f08dd4c97cd15f46b56fd04f824e.jpg)
+
+
 ## Cybersecurity tactics
 
 ![Cybersecurity tactics](https://i.pinimg.com/originals/4e/2e/15/4e2e15f5ae98e9233ffcf0643b481e0c.jpg)
@@ -18,13 +23,17 @@
 - Keep all pertinent security software up to date
 - Backup your computer & settings often
 
-## Types of Threats
+## Cybersecurity Tips
 
-![Types of Threats](https://i.pinimg.com/564x/e7/c8/83/e7c883aa1342c9ef9d1063cf3a53c583.jpg)
+![Cybersecurity Tips](https://i.pinimg.com/564x/2d/5c/d3/2d5cd30c08738f48cd3dbb4f73c72253.jpg)
 
-## Top Cyber Attacks
+## Managing sensitive data
 
-![Top Cyber Attacks](https://i.pinimg.com/originals/31/30/e4/3130e42595ae72428b33bf75a512e44c.gif)
+![Managing sensitive data](https://i.pinimg.com/originals/35/4f/59/354f5939e12e98b63a2336dbcbce7dfc.jpg)
+
+### Common password mistakes
+
+![Common password mistakes](https://i.pinimg.com/564x/ca/60/8d/ca608de601e223a34e3b72b89abeb401.jpg)
 
 ## API Security
 
@@ -33,6 +42,8 @@
 - OAuth2
 - WebAuthn
 
+### Best practices
+![API Security best practices](https://i.pinimg.com/originals/ae/16/d3/ae16d3c804c4d1e8f034ad659d208b45.jpg)
 
 ## Network Security 
 
@@ -42,3 +53,7 @@
 
 ![Security](https://i.pinimg.com/originals/10/3c/bd/103cbdaffe08c9786dc15925b7558bfd.gif)
 
+
+## Endpoint Detection Response (EDR)
+
+![Endpoint Detection Response](https://i.pinimg.com/originals/47/1a/d0/471ad0a8a6d419633cfa67345231d224.jpg)

@@ -1,5 +1,8 @@
 # Debugging
 
+## Debugging tips
+![Debugging tips](https://i.pinimg.com/originals/87/e4/6c/87e46cac98bd04323a6a6563896de23e.jpg)
+
 ## Improve your debugging strategies
 
 - The common basic debugging strategy is the `standard strategy`, which means 'try this and see if it works.' However, sometimes this approach leads to a dead end, and you run out of ideas to try.
