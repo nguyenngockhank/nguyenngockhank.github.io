@@ -51,3 +51,19 @@ tags: ["Overview"]
 ## Learning path
 
 ![Learning path](https://i.pinimg.com/736x/01/43/62/01436286ed5f27b2ec722a3cffe9efce.jpg)
+
+## Quick Tips
+
+What may be some tips that I as a developer can follow to write clean code?
+
+1. `Never assume, ask, question` Requirements are never complete, it just gets refined with time. Don’t assume when something is unclear.
+2. `Think of behaviour in terms of conditions` Good behavior is about compliance to conditions,ensure combinations are well taken care.
+3. `Be friends with bug(s)` Do not hate bugs, for they are the ones from who teach you constantly to do better. Learn from each, so that you find it and not others.
+4. `Use smart checklists` While coding, be sensitive as what issues can occur. Sensitise & prevent rather than rely only on test to find issues.
+5. `Treat code as a living entity` Nothing is frozen. Refactor, refactor constantly to simplify. Clean code is really never done, how much you can do is simply limited by time.
+6. `Be sensitive to NFRs` Non-functional requirements cannot be ‘fitted’ in later, so pay attention to load, performance, usability scaling, security, maintainability etc. always.
+7. `Don’t be scared to inject bad inputs` Checking correctness with good inputs are fine, but it is incorrect inputs/settings that create unwanted technical debt. Get these out of way early, by ensuring robustness at early stage.
+8. `Be purposeful of issues to find via unit test` There are different types of issues that may be there, be clear as to what to strive to prevent, what to go after via unit test and what at higher levels of testing. Ensure clarity of what you are going after. 
+9. `Strive to understand how your code will be consumed` It is not meeting a spec, it is not working in isolation, it is about visualising who (i.e other code) will use/consume my code so it can take care of the situations in future.
+10. `Unit test is not an after thought or compliance`
+The act of unit testing is not a chore or compliance to satisfy someone, it should be natural thing that we do to ensure our code does not stray. Treat this as part of coding, not as another activity post code. Write a script while doing this or jot down stuff to perform this manually. Stay lightweight so that you can repeat this continually. After all, development should be friction-less.
