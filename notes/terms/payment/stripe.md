@@ -1,6 +1,10 @@
-# Stripe code examples
+# Stripe notes
 
-## Init 
+## Snippets
+
+### Basic 
+
+#### Init
 
 Backend 
 ```ts
@@ -88,7 +92,7 @@ const options = {
 </Elements>
 ```
 
-## Submit
+#### Submit
 
 ```tsx
 
@@ -115,9 +119,9 @@ function () {
 }
 ```
 
-## Stripe Connect 
+### Stripe Connect 
 
-### [separate charges and transfers](https://docs.stripe.com/connect/separate-charges-and-transfers)
+#### [separate charges and transfers](https://docs.stripe.com/connect/separate-charges-and-transfers)
 
 Backend `createPaymentIntent`
 ```ts
@@ -178,10 +182,9 @@ async handleWebhook(@Req() req: RequestWithRawBody) {
 ```
 
 
-## Add Cards / Payment methods 
+### Add Cards / Payment methods 
 
-
-### Attach 
+#### Attach 
 
 Frontend
 
@@ -211,14 +214,14 @@ const attachPaymentToCustomer = await this._stripe.paymentMethods.attach(payment
 })
 ```
 
-### Detach 
+#### Detach 
 
 Backend 
 ```ts
 await this.stripeService.detachPaymentMethod(paymentMethodId)
 ```
 
-### Get
+#### Get
 
 Backend
 ```ts
@@ -227,7 +230,7 @@ const paymentMethods = await this._stripe.customers.listPaymentMethods(stripeCus
 })
 ```
 
-### FE
+#### FE
 
 ```ts
 const NEW_CARD_OPTION = 'card'
@@ -259,3 +262,19 @@ if (isInputNewCard) {
 }
 
 ```
+
+## Stripe API Redesign
+
+![Stripe API Redesign](https://i.pinimg.com/originals/c1/1e/57/c11e5748cadfaccab53c6406e721d243.jpg)
+
+Stage 1  2011: The Stripe API, or what could be described as “7 lines of code”, revolved around the Charge concept. At this point, it exclusively handled card payments.
+
+Stage 2  2011-2015: the Stripe API introduced the Token API. Its goal was to enable its customers to avoid the complex and tedious process of adhering to PCI compliance requirements.
+
+Stage 3  2015: ACH and Bitcoin payments entered the scene. Because these types of transactions needed some time to “finalize”, Stripe integrated a feedback loop into the API. The change helped indicate the success of the charge.
+
+Stage 4  2015-2017: This stage saw the addition of even more payment methods, including AliPay, WeChat Pay, and iDeal. As a result, the Source API was developed as an abstraction to support these varying payment methods.
+
+Stage 5  2017-2018: As the number of supported payment methods grew, the team spent several months drafting a **Unified Payments API**, with the introduction of *PaymentIntents* and *PaymentMethod*.
+
+Stage 6  2018-2020: Stripe invested two years to migrate their clients to the **Unified Payments API**.

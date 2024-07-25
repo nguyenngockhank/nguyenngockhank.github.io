@@ -1,5 +1,6 @@
 # API Gateway
 
+![API Gateway 101](https://i.pinimg.com/originals/3b/27/34/3b273450556d7ee3031efc151547b3d4.jpg)
 
 ## What does API Gateway do?
 

@@ -19,6 +19,8 @@ Có thể phân ra 2 loại chính đó là `Client pull` và `Server push`.
 - Polling: Short Polling và Long Polling là loại Client pull
 - Websockets và Sever Send Event là loại Server push 
 
+![polling vs sse vs websocket](https://i.pinimg.com/originals/37/1f/44/371f44eb9da161378f6115a6918c4237.jpg)
+
 ## Short Polling 
 Dùng AJAX để hỏi thăm server liên tục xem có dữ liệu mới không? 
 

@@ -347,7 +347,8 @@ module.exports = [
     title: "Payment",
     children: [
       '/terms/payment/',
-
+      '/terms/payment/accounting',
+      '/terms/payment/payment_network',
       '/terms/payment/stripe',
     ]
   },
