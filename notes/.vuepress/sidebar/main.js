@@ -280,14 +280,15 @@ module.exports = [
   {
     title: "Giải Toán",
     children: [
+      '/algorithm/algo_overview',
       '/algorithm/sum100',
       '/algorithm/no_if_loop',
       // '/algorithm/string',
       '/algorithm/authority',
       // '/algorithm/sort',
-      '/algorithm/bakery',
+      // '/algorithm/bakery',
       '/algorithm/upload-large-file',
-      '/datastructure/queue',
+      // '/datastructure/queue',
     ]
   },
   {

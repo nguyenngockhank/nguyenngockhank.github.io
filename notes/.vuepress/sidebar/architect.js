@@ -64,7 +64,7 @@ module.exports = [
     {
         title: 'Security',
         children: [
-            'security/sercurity_overview',
+            'security/security_overview',
             'security/cyber_attack',
             'security/cryptography',
         ]
@@ -91,12 +91,12 @@ module.exports = [
             'terms',
             'philosophy-sw-design',
             'full_stack_software_design',
-            {
-                title: 'Họ làm điều đó như nào?',
-                children: [
-                    '/db/pinterest_shard',
-                ]
-            },
+            // {
+            //     title: 'Họ làm điều đó như nào?',
+            //     children: [
+            //         '/db/pinterest_shard',
+            //     ]
+            // },
         ]
     },
 ]

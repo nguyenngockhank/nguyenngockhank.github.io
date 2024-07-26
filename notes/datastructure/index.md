@@ -1,36 +1,5 @@
 # Data structure
 
-## Unordered data structures 
-
-![key-value and connected elements](https://pbs.twimg.com/media/F1AXBhOWwAE1896?format=jpg&name=4096x4096)
-
-useful for storing and retrieving information that doesn't follow a specific order. 
-For speed, they utilize key-value pairs or relationships between elements.
-
-## Hierarchical data structures
-
-![tree-like](https://pbs.twimg.com/media/F1AXA8sX0AAbp2P?format=jpg&name=4096x4096)
-
-Hierarchical data structures represent data in a tree-like shape. 
-
-They are great for organizing and managing data with ordered parent-child relationships to quickly search, access, and insert elements quickly.
-
-## Linear data structures
-
-![array](https://pbs.twimg.com/media/F1AXAbAWwAERvCm?format=jpg&name=4096x4096)
-
-Linear data structures are used to arrange items sequentially and in a specific order. They can be traversed in a linear fashion, which makes them ideal for organizing and manipulating data when access, insertion, or removal must take place in a specific sequence or place.
-
-## [Skiplist](https://en.wikipedia.org/wiki/Skip_list)
-- a common in-memory index type
-- to build the `Sorted Set`
-- allows for fast lookups, range queries, and other operations
-- DB used: Redis
-
-https://www.geeksforgeeks.org/skip-list/
-
-https://www.npmjs.com/package/ts-skiplist
-
 ## Log Structured Storage
 
 Log Structured Storage là trường phái Database dựa trên Append-only Log, tức là dữ liệu được ghi lưu lại dưới dạng log, chỉ có ghi xuống cuối file chứ không thể ghi đè.
@@ -122,22 +91,8 @@ immutable on-disk “Map” implementation
 ### MemTable 
 - use data structure AVL Tree or Red Black Tree 
 
-## Bloom filter
-
-A Bloom filter is a **space-efficient probabilistic** data structure that is used to test whether an element is a member of a set.
-
-![bloom](./bloom-1.png)
-
-Use case: 
-- avoid attack miss cache attack 
-
-Refs
-- Node Package [bloom-filters](https://www.npmjs.com/package/bloom-filters)
-- [Bloom filters Introduction](https://www.geeksforgeeks.org/bloom-filters-introduction-and-python-implementation/?ref=gcse)
-
 
 https://www.scylladb.com/glossary/sstable/
-
 
 
 ## Data structure

@@ -44,6 +44,14 @@ tags: ["Overview"]
 ![Behavioral DP](https://i.pinimg.com/originals/8b/77/ca/8b77ca2587f29a3780d71111446e791a.png)
 
 
+### Prefer composition over Inheritance
+
+**Inheritance** may be a fundamental feature of OOP, but it is typically over used. The problem with **inheritance** is that it is not as flexible as it looks. Most things you are trying to achieve with **inheritance** can also be achieved with **composition**.
+
+The downside of **inheritance** is that if any errors are made (i.e. in the base class) then they will be inherited down to all the other classes. It also makes bug fixing very difficult as it can be hard to identify in which class an error has been made. In large programs **inheritance** can be very overused.
+
+![Composition vs Inheritance](https://i.pinimg.com/736x/54/17/20/54172065cc6c1a707dcc1450410e3628.jpg)
+
 ## Standards
 
 ![Standards](https://i.pinimg.com/originals/cc/c7/4d/ccc74d56b7763a357ea3638bc053ccc9.jpg)
@@ -67,3 +75,7 @@ What may be some tips that I as a developer can follow to write clean code?
 9. `Strive to understand how your code will be consumed` It is not meeting a spec, it is not working in isolation, it is about visualising who (i.e other code) will use/consume my code so it can take care of the situations in future.
 10. `Unit test is not an after thought or compliance`
 The act of unit testing is not a chore or compliance to satisfy someone, it should be natural thing that we do to ensure our code does not stray. Treat this as part of coding, not as another activity post code. Write a script while doing this or jot down stuff to perform this manually. Stay lightweight so that you can repeat this continually. After all, development should be friction-less.
+
+### Debugging tips
+
+![Debugging tips](https://i.pinimg.com/originals/87/e4/6c/87e46cac98bd04323a6a6563896de23e.jpg)

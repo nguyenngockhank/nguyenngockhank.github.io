@@ -9,6 +9,10 @@ tags: ["Overview"]
 
 ![models](https://i.pinimg.com/originals/4d/ad/15/4dad151ed396a0b2cfa40ba264946d0e.jpg)
 
+## 12 Factor app
+
+![12 Factor app](https://i.pinimg.com/564x/f5/fb/1f/f5fb1f009c907578c4e4f1cb007078ab.jpg)
+
 ## Load balancer
 
 ![Load balancer cloud](https://i.pinimg.com/originals/df/b3/e9/dfb3e9118bf3eb2ec196203ee41c8e53.gif)
