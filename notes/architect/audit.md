@@ -10,22 +10,116 @@ You never know what data you can collect today that will be useful to you tomorr
 
 <TagLinks />
 
-## Logging vs Auditing
+## Correlation ID Pattern 
 
-Logging typically means the recording of implementation level events that happen as the program is running (methods get called, objects are created, etc.). As such it focuses on things that interest programmers
+A correlation ID is a unique identifier assigned to a request as it enters a distributed system. It's propagated through all components involved in processing the request, serving as a thread that connects related log entries, metrics, and traces. This pattern is essential for debugging, monitoring, and troubleshooting complex distributed systems.
 
-Auditing is about recording domain-level events: a transaction is created, a user is performing an action, etc. In certain types of application (Banking) there is a legal obligation to record such events.
+![Correlation ID Pattern ](https://i.pinimg.com/originals/1b/b0/f7/1bb0f7f9bd2f2df15b8aae755aad8c34.jpg)
 
-## Notes 
-- put context into the log
-- Don’t use `debug` level for system monitoring data
-- Do NOT log sensitive information!
+### How It Works
+1. **Generation**: A correlation ID is typically generated at the entry point of a system (e.g., API gateway, load balancer).
+2. **Propagation**: The ID is included in subsequent requests or messages as they move through the system. This can be done through headers, message bodies, or context propagation mechanisms.
+3. **Correlation**: Log entries, metrics, and traces are enriched with the correlation ID. This allows for grouping related data points together for analysis.
 
-## Types 
+### Benefits of Correlation ID
+- **Improved Debugging**: By correlating log entries, developers can quickly identify the flow of a request and pinpoint issues.
+- **Enhanced Monitoring**: Correlation IDs enable tracking request performance and identifying bottlenecks.
+- **Facilitated Troubleshooting**: When problems occur, correlation IDs help to isolate the affected components.
+- **Security Analysis**: Correlation IDs can aid in detecting suspicious activity by linking related events.
+
+## Observer Pattern
+
+The observers are objects that register themselves to the subject and react to the notifications. This pattern is useful for monitoring and logging, as it allows you to **decouple the logic of the subject from the logic of the observers, and to add or remove observers dynamically**.
+
+![Read more for other patterns](https://www.linkedin.com/advice/0/what-best-design-patterns-monitoring-logging-r92ue)
+
+## Comparision
+
+### Logging vs Auditing
+
+Logging typically means the **recording of implementation level events** that happen as the program is running (methods get called, objects are created, etc.). As such it focuses on things that interest programmers
+
+Auditing is about **recording domain-level events**: a transaction is created, a user is performing an action, etc. In certain types of application (Banking) there is a legal obligation to record such events.
+
+### Logging vs Tracing vs Metrics
+![Logging vs Auditing](https://i.pinimg.com/originals/57/0c/00/570c00cb3c499cdcbb5259957e550f9d.jpg)
+
+
+Feature | Logging | Tracing | Metrics 
+------- | ------- | --------  | --------
+**Purpose** | Records discrete events or states within an application | Tracks the flow of requests through a distributed system. | Aggregates numerical data points over time to provide insights into system health and performance.
+**Data** | Textual information, often including timestamps, severity levels, and additional context. | Time-stamped records of actions and their durations, forming a timeline of request execution. | Numerical values, often collected at regular intervals.
+**Use Cases** | Debugging, auditing, security analysis, and troubleshooting specific issues. |  Identifying performance bottlenecks, understanding request latency, and diagnosing complex issues. | Monitoring system performance, detecting anomalies, and setting alerts.
+**Examples** | Error messages, audit logs, configuration changes. | Distributed tracing, service maps, dependency analysis. | CPU usage, memory consumption, response times, error rates.
+
+### Auditing vs. Profiling vs. Statistics 
+
+Feature | Auditing | Profiling | Statistics 
+------- | ------- | --------  | --------
+**Focus** | Compliance, security, and accountability. | Performance and optimization. |  Data analysis and inference.
+**Purpose** |  To examine records and processes to ensure adherence to rules, regulations, or standards. | To analyze system or application behavior to identify performance bottlenecks and areas for improvement. |  To collect, organize, analyze, interpret, and present data to draw conclusions.
+**Methods** | Reviewing logs, documentation, and system activities. |  Measuring resource utilization, code execution time, and memory usage. | Descriptive statistics, inferential statistics, and data visualization.
+**Example** |  Auditing financial transactions to detect fraud or ensuring compliance with data privacy regulations. | Profiling a web application to determine which parts are causing slow load times. |  Conducting a statistical analysis of customer behavior to identify trends and preferences.
+
 
 - **Auditing**: this is sometimes a business requirement. The idea is to capture significant events that matter to the management or legal people. These are statements that describe usually what users of the system are doing (like who signed-in, who edited that, etc…).
 - **Profiling**: as logs are timestamped (sometimes to the millisecond level), it can become a good tool to profile sections of a program, for instance by logging the start and end of an operation, you can either automatically (by parsing the log) or during troubleshooting infer some performance metrics without adding those metrics to the program itself.
 - **Statistics**: if you log each time a certain event happens (like a certain kind of error or event) you can compute interesting statistics about the running program (or the user behaviors). It’s also possible to hook this to an alert system that can detect too many errors in a row.
+
+## Practices  
+
+Effective logging is crucial for maintaining a healthy and resilient system. Here are some key practices:
+
+### Log Level Management
+Use appropriate log levels:
+- TRACE: Extremely detailed, used for debugging.
+- DEBUG: Detailed information for diagnosing problems.
+- INFO: General operational information.
+- WARN: Potential issues or unexpected conditions.
+- ERROR: Errors that prevent correct operation.
+- FATAL: Critical errors that terminate the application.
+
+
+### Log Formatting
+- **Structured logging**: Use a structured format (JSON, XML, or custom) for easier parsing and analysis.
+- **Include essential information**: Timestamp, thread ID, process ID, log level, class/method name, and message.
+- **Consider additional context**: Correlation ID, user ID, IP address, environment, and exception details.
+
+E.g: [Package bunyan for nodejs](https://www.npmjs.com/package/bunyan)
+
+### Log Rotation
+- Implement log rotation: Prevent log files from growing indefinitely.
+- Retain logs appropriately: Balance storage requirements with troubleshooting needs.
+
+### Log Aggregation and Centralization
+- **Centralize logs**: Collect logs from multiple sources into a centralized repository.
+- **Use a log management platform**: Tools like `Elasticsearch`, `Logstash`, and `Kibana` (ELK Stack) can help manage and analyze logs.
+
+### Error Handling and Logging
+- **Log exceptions**: Capture detailed exception information, including stack traces.
+- **Provide context**: Include relevant data to understand the error's cause.
+- **Avoid logging sensitive information**: Protect user data and security.
+
+E.g: [Package verror for js](https://www.npmjs.com/package/verror)
+
+### Performance Considerations
+- Minimize log overhead: Avoid excessive logging that impacts performance.
+- Optimize log formatting: Use efficient formats to reduce log size.
+- Consider asynchronous logging: Improve performance by offloading log writing.
+
+### Security
+- Protect SENSITIVE information: Avoid logging sensitive data like passwords, credit card numbers, or personal information.
+- Encrypt logs: Consider encrypting logs to protect data in transit and at rest.
+- Implement access controls: Restrict access to log data to authorized personnel.
+
+### Additional Tips
+- Use a logging framework: Leverage existing libraries to simplify logging.
+- Test your logging configuration: Ensure logs are generated as expected.
+- Monitor log volume: Keep track of log growth to prevent issues.
+- Review and refine logs: Regularly assess log effectiveness and make improvements.
+- Avoid excessive logging: Overlogging can impact performance and storage.
+- Don’t use `debug` level for system monitoring data
+
 
 ## Log what 
 
@@ -153,6 +247,16 @@ logger.debug("Database connection string: " + dbConnectionString);
 
 ![arch](../kungfu/case-study/metrics/f6.png)
 
+- **Metrics source**: This can be application servers, SQL databases, message queues, etc.
+- **Metrics collector**: It gathers metrics data and writes data into the time-series database.
+- **Time-series database**: This stores metrics data as time series. It usually provides a custom query interface for analyzing and summarizing a large amount of time-series data. It maintains indexes on labels to facilitate the fast lookup of time-series data by labels. (prometheus / S3 / ...)
+- **Kafka**: Kafka is used as a highly reliable and scalable distributed messaging platform. It decouples the data collection and data processing services from each other.
+- **Consumers**: Consumers or streaming processing services such as Apache Storm, Flink and Spark, process and push data to the time-series database.
+- **Query service**: The query service makes it easy to query and retrieve data from the time-series database. This should be a very thin wrapper if we choose a good time-series database. It could also be entirely replaced by the time-series database’s own query interface.
+- **Alerting system**: This sends alert notifications to various alerting destinations.
+- **Visualization system**: This shows metrics in the form of various graphs/charts.
+
+**E.g Prometheus stack:**
 - metrics source - your app 
 - collector - promtail
 - DB - prometheus/S3
@@ -161,6 +265,14 @@ logger.debug("Database connection string: " + dbConnectionString);
 - alert is alertmanager
 
 ![k8s monitoring](./img/Prometheus-Server_Chart.png)
+
+
+### Prometheus Architecture
+![Prometheus arch](https://i.pinimg.com/originals/eb/77/98/eb779867085ce444c6552de66cb22e06.jpg)
+
+### ELK 
+
+![ELK arch](https://i.pinimg.com/564x/d5/b2/bf/d5b2bf0b2019bfcb2e67361f707ce780.jpg)
 
 ## Refs
 

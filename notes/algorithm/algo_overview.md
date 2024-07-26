@@ -2,6 +2,8 @@
 
 ## Essential Algos
 
+![10 common algos](https://i.pinimg.com/736x/ed/be/4d/edbe4d9c3aba5b95d1e4ee911a1c31f3.jpg)
+
 ![Essential Algos](https://i.pinimg.com/736x/57/b6/0a/57b60a8d0975585455c2304a0018f812.jpg)
 
 
@@ -21,9 +23,25 @@
 
 ![Generate Ids](https://i.pinimg.com/564x/3d/59/a6/3d59a68c59c98ada1128c88e9efebaf9.jpg)
 
+### Pagination
+
+![Pagination](https://i.pinimg.com/originals/d9/13/8b/d9138b427392b49ab03c76b99ff9ac9b.jpg)
+
+### Locking 
+
+![Locking concurrency](https://i.pinimg.com/originals/64/a5/98/64a598fe190fb7675a80180d73fd7b5c.png)
+
 ## Data structure 
 
 ![Data structure cheatsheet](https://i.pinimg.com/564x/e1/ed/b9/e1edb99e16875b42f26b6aa2e017d799.jpg)
+
+- Arrays
+- Linked list
+- Stack
+- Queue
+- Hash table
+- Tree
+- Graph
 
 ### Unordered data structures 
 
@@ -63,6 +81,7 @@ https://www.npmjs.com/package/ts-skiplist
 
 A Bloom filter is a **space-efficient probabilistic** data structure that is used to test whether an element is a member of a set.
 
+![Bloom filter](https://i.pinimg.com/originals/92/bd/47/92bd474a86e4c58dd75fddaec02129b8.png)
 <!-- ![bloom](./bloom-1.png) -->
 
 Use case: 

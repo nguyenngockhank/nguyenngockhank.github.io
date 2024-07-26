@@ -52,19 +52,6 @@ Example:
 - Increase 1% from saving 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Clock skew 
 
 ## References 

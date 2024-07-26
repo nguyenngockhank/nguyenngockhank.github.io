@@ -34,17 +34,8 @@
 
 ![terms](https://i.pinimg.com/originals/26/fa/98/26fa988a2e1e2fbc0f3f4cccb7145361.jpg)
 
-## Data structures
 
-![terms](https://i.pinimg.com/originals/e1/ed/b9/e1edb99e16875b42f26b6aa2e017d799.jpg)
 
-- Arrays
-- Linked list
-- Stack
-- Queue
-- Hash table
-- Tree
-- Graph
 
 ## Data verfication & validation
 

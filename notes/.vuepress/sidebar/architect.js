@@ -19,6 +19,7 @@ module.exports = [
             'grpc',
             'graphql',
             'websocket',
+            'audit'
         ]
     },
     {
