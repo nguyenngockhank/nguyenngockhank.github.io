@@ -4,29 +4,6 @@ tags: ["Framework"]
 
 # React notes
 
-## Smart vs Pure Components
-
-**different names**
-Often also preferred as other different names: 
-- smart vs dumb components
-- container vs presentation components
-- stateful vs stateless component
-
-**functions**
-- Smart components are ones that has direct access to store (e.g import) and doesn't contain any styling.
-- Pure components are components without inner state. They only receives react props from outside and render accordingly. 
-
-**coding rules of thumb**
-Pure components are predictable, keep the code base into simple understandable unit, and therefore, maintainable.
-
-Pure components are hugely not attached to (mobx) store business logics so they are reusable in different business context given similar UI.
-
-We need to make use the best of it as much as possible:
-- Prefer pure components over smart components whenever possible.
-- **DO NOT MIX** pure component with smart component.
-- Pure component should have story written in storybook with all possible realistic scenarios of props value inputs.
-- Created storybook story scenarios must have ui-regression test cases.
-
 ## Naming Convention
 
 > There are only two hard problems in Computer Science: cache invalidation and naming things — Phil Karlton
@@ -211,8 +188,13 @@ const Button = styled.a`
 
 ## State Management Libraries
 
+### zustand
+
+Zustand is a popular state management library for React applications. It's designed to be simple, fast, and scalable, offering a more straightforward approach compared to more complex solutions like Redux
+
+![Zustand vs Redux architecture](https://i.pinimg.com/originals/87/de/0e/87de0e4bcea3c41db0226b30280faede.png)
+
 ### react-redux
-![react-redux](./img/redux.jpg)
 
 Redux is a predictable state container for JavaScript apps. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
 
@@ -249,17 +231,31 @@ Additionally, MobX provides observables, computed values, and other state-manage
 
 ::::
 
-## Avoid re-render
+
+## Folder structure
+
+[Full here](https://www.robinwieruch.de/react-folder-structure/)
+
+
+## Diffing & reconciliation 
+
+- React will compare elements between re-renders with elements in the same place in the returned array on any level of hierarchy. The  first one with the first one, the second with the second, etc.
+- If the type of the element and its position in the array is the same, React will re-render that element. If the type changes at that position, then React will unmount the previous component and mount the new one.
+- An array of children will always have the same number of children (if it's not dynamic). Conditional elements ( `isSomething ? <A /> : <B />` ) will take just one place, even if one of them is `null`.
+- If the array is dynamic, then React can't reliably identify those elements between re-renders. So we use the `key` attribute to help it. This is important when the array can change the number of its items or their position between re-renders (re-order, add, remove), and especially important if those elements are wrapped in `React.memo`
+- We can use the key outside of dynamic arrays as well to force React to recognize elements at the same position in the array with
+the same type as different. Or to force it to recognize elements at different positions with the same type as the same.
+- We can also force unmounting of a component with a `key` if that key changes between re-renders based on some information (like routing). This is sometimes called "state reset".
+
+## Avoid rerendering
+- Using **moving state down** pattern to avoid rerender
+- Using **components as props** and **children as props** pattern to avoid rerender
 - Memoization using `useMemo()` and `useCallback()` Hooks
 - API Call Optimization with [React Query](https://tanstack.com/query/latest/docs/react/overview)
 - Creating Memoized Selectors with [Reselect](https://www.npmjs.com/package/reselect)
 - Replace `useState()` with `useRef()`
 
 [5 Ways to Avoid React Component Re-Renderings](https://blog.bitsrc.io/5-ways-to-avoid-react-component-re-renderings-90241e775b8c)
-
-## Folder structure
-
-[Full here](https://www.robinwieruch.de/react-folder-structure/)
 
 
 ## Others

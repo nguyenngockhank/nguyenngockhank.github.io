@@ -59,6 +59,7 @@ const laravelDocs = [
 
 const reactDocs = [
   'react',
+  'react-patterns',
   'mobx',
   'nextjs',
   'react-vs-vue',
