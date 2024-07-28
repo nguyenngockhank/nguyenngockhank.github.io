@@ -24,6 +24,10 @@ There is no super storage for all cases. Here is a few of my notes about it:
 
 ![Based on CAP](./img/db-cap.png)
 
+### DB used in Netflix
+
+![DB used in Netflix](https://i.pinimg.com/564x/40/27/95/402795027d4abfb8502859f573d3c138.jpg)
+
 ### Polygot Persistence
 
 ![Polygot Database](./img/polyglot.png)
@@ -466,19 +470,6 @@ Expensive with join operations | Eliminates the need for an expensive search / m
 
 - OLAP: Online Analytical Processing
 
-
-## Distinction between OLTP and OLAP systems
-
-Features | OLTP System <br /> (Operational Data) | OLAP System <br /> (Data Warehouse)
----------| ------------ | -----------
-Data source | From Traditional or original source | From diverse databases
-Aim of data  | Organizational basic activities running | For planning and problem solving known Business support system
-Data type | images of ongoing business transaction | Business activities from various sections
-Insertion and updating | Insert and update are by end users which is fast | Periodic refreshing inform of Batch jobs
-Queries | Simple queries that return small records | Complex aggregate queries
-Efficiency | Very high speed to answer queries | Takes some time depending on the requirement but can be improved using index
-Space hold | holds very small history | Comprehensive history due to aggregation
-Database design | Greatly normalized due to many tables involvement | Highly denormalised with few tables using Star and snowflake schema.
 
 
 https://www.guru99.com/nosql-tutorial.html

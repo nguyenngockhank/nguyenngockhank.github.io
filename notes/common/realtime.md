@@ -103,6 +103,9 @@ Thông qua giao thức này Client và Server có thể gửi dữ liệu lên, 
 **Lưu ý**:
 Scale ngang của websocket ko hề đơn giản như RESTful API. [Đọc thêm](https://tsh.io/blog/how-to-scale-websocket/)
 
+## Others 
+
+- [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding)
 
  
 

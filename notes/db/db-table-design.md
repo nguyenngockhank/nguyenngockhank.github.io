@@ -12,6 +12,11 @@ The CAP theorem says that a distributed system can deliver on only two of three 
 
 ![CAP](https://i.pinimg.com/originals/5d/45/a0/5d45a01c6048b0ec7c085f8191932212.jpg)
 
+## Normalization 
+
+![Normalization](https://i.pinimg.com/736x/f9/54/e0/f954e03a9bd7c5879a607655cf5f9480.jpg)
+
+
 ## DB Isolation options
 
 Data isolation ensures that modules are independent and loosely coupled. 

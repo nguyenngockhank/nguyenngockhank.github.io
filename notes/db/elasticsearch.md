@@ -16,6 +16,7 @@ tags: ["NoSQL"]
 - **Cluster** — Group of nodes that have the same cluster.name attribute.
 - Optimistic concurrency control
 
+![Elastic Search use cases](https://i.pinimg.com/originals/50/56/a3/5056a31a74c1a46f086991d4bc292ab4.jpg)
 
 ### How to Communicate
 - Elastic search provides REST apis. E.g creating index, listing all indices, querying a document, etc

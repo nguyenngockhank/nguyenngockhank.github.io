@@ -66,6 +66,10 @@ Feature | Auditing | Profiling | Statistics
 - **Profiling**: as logs are timestamped (sometimes to the millisecond level), it can become a good tool to profile sections of a program, for instance by logging the start and end of an operation, you can either automatically (by parsing the log) or during troubleshooting infer some performance metrics without adding those metrics to the program itself.
 - **Statistics**: if you log each time a certain event happens (like a certain kind of error or event) you can compute interesting statistics about the running program (or the user behaviors). It’s also possible to hook this to an alert system that can detect too many errors in a row.
 
+### Metrics vs Logs
+
+![Metrics vs Logs](https://i.pinimg.com/564x/bb/c9/8d/bbc98da8e48d4054120d695526e7b198.jpg)
+
 ## Practices  
 
 Effective logging is crucial for maintaining a healthy and resilient system. Here are some key practices:

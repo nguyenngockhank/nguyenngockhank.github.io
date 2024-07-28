@@ -35,6 +35,7 @@
 
 ![Data structure cheatsheet](https://i.pinimg.com/564x/e1/ed/b9/e1edb99e16875b42f26b6aa2e017d799.jpg)
 
+![Data structure list2](https://i.pinimg.com/736x/90/ef/ed/90efed321dc519b64ffb140de061454c.jpg)
 - Arrays
 - Linked list
 - Stack
