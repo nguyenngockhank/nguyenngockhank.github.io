@@ -32,6 +32,9 @@ Technologies | Ethernet & Token Rings | MPLS, ATM, Frame replay & ISDN, ...
 Cost         | Less expensive  | More expensive
 Physical layer connectivity | Generally Copper & Fiber medium. Multimode Fider is preferred. | Fiber medium. Single mode Fiber is preferred
 
+### WAN vs LAN vs PAN vs MAN
+![WAN, LAN, PAN, MA](https://i.pinimg.com/originals/ee/ab/1b/eeab1b7bf4972150ba3ea132178f9413.jpg)
+
 ### Categories by switching
 
 ![network compare](./img/switch-compare.png)
@@ -159,9 +162,14 @@ In networking, different ports are used for various purposes. Generally, these p
 
 ## Protocols
 
+### Common protocols
 ![Popular Protocols](https://i.pinimg.com/originals/83/c2/92/83c2922614273368856c218de9a2971d.jpg)
 
 ![Network protocols](https://i.pinimg.com/originals/6c/d6/ae/6cd6ae665b0f748c124b29c19db38439.jpg)
+
+### Common servers
+
+![Common servers](https://i.pinimg.com/originals/a3/7c/8e/a37c8ea1c19e9d9dff701ce69f5f3988.jpg)
 
 ## Vokas 
 - Round-trip time (RTT)

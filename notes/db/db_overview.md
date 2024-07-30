@@ -11,6 +11,10 @@ tags: ["Overview"]
 
 ![Storage & use cases](https://i.pinimg.com/originals/b9/09/29/b90929e8de0bc16e95e267e95edabdc0.jpg)
 
+### Hierarchical DB use cases 
+
+![Hierarchical Database use cases ](https://i.pinimg.com/736x/e9/da/78/e9da780f1b9943f6878b52a15338ad6a.jpg)
+
 ## Terms
 
 ![Terms](https://i.pinimg.com/564x/13/3a/cd/133acd07c01498c62e06cde824d3985c.jpg)

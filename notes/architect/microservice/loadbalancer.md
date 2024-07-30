@@ -6,6 +6,8 @@ tags: ["Tools", "Performance", "Cache", "Overview"]
 
 <TagLinks />
 
+![Load balancer overview](https://i.pinimg.com/originals/39/79/e7/3979e7fe0e40656655490dddba653486.jpg)
+
 ## Use cases
 ![Load balancer use cases](https://i.pinimg.com/564x/db/4f/eb/db4feb17e82e66ebd4cc2a82ec56f07e.jpg)
 

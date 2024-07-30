@@ -170,7 +170,11 @@ https://jlvbcoop.com/en/eventbus-kubernetes/
 
 ## Design patterns
 
+### Patterns Overview
 ![K8S Design patterns Overview](https://i.pinimg.com/originals/08/d3/da/08d3da84b06cdb09de9e77e3aa8ae309.png)
+
+### Top Patterns
+![Top K8S patterns](https://i.pinimg.com/originals/3e/1b/3c/3e1b3cc6dd4af66d7243d49aa1282de2.jpg)
 
 ![Top 10 patterns for k8s beginners](https://i.pinimg.com/originals/18/dc/fc/18dcfc30165f26851b1a1746300a9eec.png)
 

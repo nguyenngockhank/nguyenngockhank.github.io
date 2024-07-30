@@ -18,6 +18,8 @@
 
 ## DNS Attacks
 
+![Top DNS Attacks](https://i.pinimg.com/originals/43/ff/42/43ff42b42244d9c2964d50dfa395bf5b.jpg)
+
 ![DNS Attacks](https://i.pinimg.com/564x/d2/3c/41/d23c418988378e120f7a78ad135c7a3d.jpg)
 
 ![DNS cache poisoning](https://i.pinimg.com/originals/db/85/91/db85910081f67e22db06a9877781cf14.jpg)

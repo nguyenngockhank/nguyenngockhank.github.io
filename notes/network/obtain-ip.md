@@ -1,4 +1,4 @@
-# Obtain IP Adress
+# Obtaining IP / ARP / DHCP
 
 ## IP Address assignment
 - MAC Address (6 bytes) : data link layer (L3)

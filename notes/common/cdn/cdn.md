@@ -13,6 +13,10 @@ Cloud gaming is online gaming that uses cloud computing to provide users with hi
 
 Together, these technologies are transforming how we access and consume digital content. By providing faster, more reliable, and more immersive experiences for users, they are helping to drive the growth of the digital economy and create new opportunities for businesses and consumers alike.
 
+## Why CDN popular?
+
+![Why CDN popular?](https://i.pinimg.com/originals/08/72/2e/08722eb382d2ae7c38a14c29e165941c.jpg)
+
 ## How it works
 
 Suppose Bob who lives in New York wants to visit an eCommerce website that is deployed in London. If the request goes to servers located in London, the response will be quite slow. So we deploy CDN servers close to where Bob lives, and the content will be loaded from the nearby CDN server. 
