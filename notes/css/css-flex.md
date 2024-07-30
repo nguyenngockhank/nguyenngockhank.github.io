@@ -1,23 +1,24 @@
-# CSS Flexbox
+# Flexbox
 
 [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 [Properties in action](https://codepen.io/enxaneta/full/adLPwv/)
 
-## Flex Container Properties
+## Overview
+![Flex overview](https://i.pinimg.com/564x/6f/ff/42/6fff424aa0a2c6b000f5ef473ab2eb3c.jpg)
+
+## Container Properties
 
 ```css
 .container {
   display: flex; /* or inline-flex */
-
   flex-direction: row | row-reverse | column | column-reverse;
   flex-wrap: nowrap | wrap | wrap-reverse;
-
   flex-flow: row nowrap; /** shorthand for the flex-direction and flex-wrap  */
 }
 ```
 
-### **Justify Content**
+###  Justify Content
 
 ```css
 .container {

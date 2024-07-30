@@ -295,27 +295,40 @@ module.exports = [
     ]
   },
   {
+    title: 'Front end',
+    children: [
+      {
+        title: "ReactJS",
+        children: reactDocs,
+      },
+      {
+        title: "VueJS",
+        children: [
+          '/vue/communication',
+          '/vue/shorthands',
+          '/vue/dynamic',
+          '/vue/tricks',
+          '/vue/vuepress',
+          '/vue/test',
+        ]
+      },
+      {
+        title: 'HTML / CSS',
+        children: [
+          'box-model',
+          'css-flex',
+          'tricks',
+        ].map(prefixMapFn('/css/'))
+      }
+    ]
+  },
+  {
     title: "OOP",
     children: oopDocs,
   },
   {
     title: "Javascript",
     children: javascriptDocs,
-  },
-  {
-    title: "ReactJS",
-    children: reactDocs,
-  },
-  {
-    title: "VueJS",
-    children: [
-      '/vue/communication',
-      '/vue/shorthands',
-      '/vue/dynamic',
-      '/vue/tricks',
-      '/vue/vuepress',
-      '/vue/test',
-    ]
   },
   {
     title: "PHP",
