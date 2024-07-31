@@ -1,4 +1,94 @@
-# Concurrent Programming
+# Concurrency
+
+## Terms
+
+### Race condition
+
+Race conditions occur when multiple threads or processes access shared data concurrently, and the outcome depends on the unpredictable order of execution. Locking mechanisms are fundamental tools to prevent these issues. 
+
+### Critical section
+
+A critical section is a part of a program where shared resources are accessed, and concurrent execution can lead to conflicts or inconsistencies.
+
+**Why Critical Sections are Important**
+- **Preventing race conditions**: Ensures data integrity and consistency.   
+- **Protecting shared resources**: Avoids conflicts when multiple threads or processes access the same data.   
+- **Guaranteeing correct program execution**: Ensures that operations on shared data are performed atomically
+
+E.g: Bank account
+
+### Deadlock
+
+A deadlock is a situation in concurrent programming where two or more processes or threads are blocked, each waiting for the other to release a resource. This creates a circular dependency, preventing any process from proceeding.
+
+**Conditions for Deadlock**
+
+To occur, four conditions must be present simultaneously:
+1. **Mutual exclusion**: Resources are held exclusively by one process at a time.
+2. **Hold and wait**: A process holds at least one resource and is waiting for additional resources.   
+3. **No preemption**: Resources cannot be forcibly taken away from a process; they must be released voluntarily.   
+4. **Circular wait**: A chain of processes exists, where each process is waiting for a resource held by the next process in the chain.
+
+**Mitigate the risk of deadlocks**
+- The **timeout pattern** is a strategy to mitigate the risk of deadlocks by imposing a time limit on resource acquisition attempts.
+
+**Preventing Deadlock**
+- **Deadlock prevention**: Avoiding all four conditions simultaneously.
+- **Deadlock avoidance**: Dynamically allocating resources to prevent deadlock.   
+- **Deadlock detection and recovery**: Allowing deadlocks to occur but detecting and resolving them.
+
+### Atomicity
+
+Atomicity is a fundamental property in concurrent programming and database systems that guarantees that a sequence of operations is executed as a single, indivisible unit. This means that either all operations within the unit are completed successfully, or none of them are. There is no partial completion.
+
+### Thread safe
+
+Thread safety is a property of code that guarantees correct behavior when accessed by multiple threads concurrently. In simpler terms, it means that a piece of code can be executed by multiple threads without causing unexpected results, data corruption, or race conditions
+
+**Pure Functions - A Cornerstone of Thread Safety**
+
+Pure functions are a powerful tool in achieving thread safety. They are functions that:
+- Always producethe same output for the same input.
+- Have no side effects (i.e., they don't modify any external state).
+
+**Why are pure functions inherently thread-safe?**
+
+- **No shared state**: Since pure functions don't rely on or modify external state, there's no possibility of race conditions.
+- **Deterministic**: Given the same inputs, a pure function will always produce the same output, regardless of the execution context or thread.
+- **Composable**: Pure functions can be easily combined and reused without worrying about unintended consequences.
+
+### Pessimistic Locking
+
+Pessimistic locking is a concurrency control mechanism that operates under the premise that data conflicts or inconsistencies are probable when multiple users or processes access the same resource simultaneously.
+
+**Patterns**
+- Mutex (Mutual Exclusion)
+- Semaphore
+- Read-Write Locks
+- Database-Level Locking
+
+
+### Optimistic Locking
+
+Optimistic locking is a concurrency control mechanism used in computer systems, particularly in databases, to manage concurrent access to shared resources with an optimistic assumption that conflicts are infrequent or less likely to occur.
+
+**Patterns**
+- Version Numbering
+- Timestamping
+- Check-and-Set (CAS)
+    - A compare-and-swap atomic operation is used to update a value conditionally.
+    - The operation compares the expected value with the current value.
+    - If they match, the new value is set atomically.
+    - If they don't match, the operation fails, indicating a conflict.
+
+
+### Pessimistic vs Optimistic 
+
+![Pessimistic vs Optimistic](https://i.pinimg.com/originals/64/a5/98/64a598fe190fb7675a80180d73fd7b5c.png)
+
+
+![Pessimistic Locking vs Optimistic Locking](https://i.pinimg.com/originals/d7/11/c1/d711c1351f7aaf035bcc9130e000ed98.jpg)
+
 
 ## Increasing Concurrency 
 
@@ -44,39 +134,6 @@
 **Testing and Debugging**: Concurrency-related bugs can be difficult to reproduce and debug due to their non-deterministic nature. Testing and debugging concurrent systems require specialized techniques and tools to identify and fix issues effectively.
 
 
-## Terms
-
-
-### Critical section
-
-::: tip Critical section
-Critical section là một đoạn code chỉ được thực thi duy nhất bởi một thread nào đó tại một thời điểm. Nếu có nhiều hơn một thread thực thi đoạn code này sẽ xảy ra lỗi. 
-:::
-
-Ví dụ đó có thể là đoạn code truy cập tới các shared resources như file, data, global variables,…
-
-### Race condition
-
-::: tip Race condition
-Race condition: là khi nhiều threads access vào một shared source mà không đảm bảo rằng thread này kết thúc thực thi trên dữ liệu trước khi thread kia truy cập dữ liệu. Nghĩa là các threads đồng thời cùng đọc và cùng ghi trên dữ liệu. Có thể hiểu race condition là trường hợp sẽ xảy ra nếu không quản lý tốt critical section. 
-:::
-
-### Deadlock
-
-::: tip Deadlock
-là hiện tượng hai hay nhiều tác vụ phải chờ đợi lẫn nhau để hoàn thành.
-:::
-
-### Thread safe
-::: tip Thread safe
-một code được gọi là thread safe code khi trong môi trường multi-threading, nó được thực thi mà không xảy ra bất cứ lỗi nào.
-:::
-
-### Atomicity
-
-::: tip Atomicity
-một tác vụ hoặc một công việc cụ thể được cho là atomic khi nó không thể bị gián đoạn. Có nghĩa là nó được đảm bảo sẽ được hoàn thành, không có trường hợp trả ra một trạng thái không hợp lệ nào đó (lỗi). Đây cũng là một ví dụ của thread safe.
-:::
 
 ## Lamport's bakery algorithm
 

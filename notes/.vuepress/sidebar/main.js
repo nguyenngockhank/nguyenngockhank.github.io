@@ -43,6 +43,7 @@ const commonDocs = [
   'document',
   'debugging',
   'cross_domain',
+  'concurrent',
 ].map(prefixMapFn('/common/'));
 
 const oopDocs = [
@@ -356,7 +357,6 @@ module.exports = [
       '/terms/pipeline',
       '/terms/testing',
       '/terms/12factors',
-      '/terms/concurrent',
       '/data/terms'
     ]
   },
