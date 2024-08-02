@@ -13,6 +13,16 @@ Con người xã hội ngày càng phát triển và sống càng nhanh đòi h�
 
 <TagLinks />
 
+
+### Realtime Classification
+
+Classification | Examples | Latency measured in | Tolerance for delay 
+--- | --- | --- | --- 
+Hard | Pacemaker, anti-lock brakes | microseconds - milliseconds | None - total system failure, potential loss of life 
+Soft | Airline reservation system, online stock quotes, VoIP (Skype) | milliseconds - seconds | Low - no system failure, no life at risk 
+Near | Skype video, home automation | seconds - minutes | High - no system failure, no life at risk 
+
+
 ## Phương pháp để realtime 
 
 Có thể phân ra 2 loại chính đó là `Client pull` và `Server push`.  

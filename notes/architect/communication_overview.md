@@ -18,6 +18,14 @@ tags: ["Overview", "Comparision"]
 
 ![Protocols explained](https://i.pinimg.com/736x/18/b0/be/18b0be8a0429b95c6e37aff029c684ef.jpg)
 
+### Realtime Classification
+
+Classification | Examples | Latency measured in | Tolerance for delay 
+--- | --- | --- | --- 
+Hard | Pacemaker, anti-lock brakes | microseconds - milliseconds | None - total system failure, potential loss of life 
+Soft | Airline reservation system, online stock quotes, VoIP (Skype) | milliseconds - seconds | Low - no system failure, no life at risk 
+Near | Skype video, home automation | seconds - minutes | High - no system failure, no life at risk 
+
 ## Among Services
 
 ![Services Communication](https://i.pinimg.com/originals/8d/ea/68/8dea68df11d4a6667a7b8d4fb4b66361.jpg)
