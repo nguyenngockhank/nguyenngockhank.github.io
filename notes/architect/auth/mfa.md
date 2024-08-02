@@ -1,5 +1,16 @@
 # Multi-factor Authentication (MFA)
 
+Multi-Factor Authentication (MFA) is a security process that requires users to provide multiple forms of verification to gain access to a system or account. This adds an extra layer of protection beyond just a password.
+
+### How it works:
+MFA typically involves combining two or more of the following factors:
+
+- **Something you know**: This is usually a password or PIN.   
+- **Something you have**: This could be a physical token, like a security key, or a code sent to your phone.   
+- **Something you are**: This refers to biometric data, such as a fingerprint or facial recognition.
+
+![Factors](https://i.pinimg.com/originals/fe/58/1d/fe581d69d975741fa73abf1eb3e29b88.jpg)
+
 ## How does Google Authenticator work?
 
 ![how-mfa-work](https://lh3.googleusercontent.com/pw/ABLVV84M1j50eV8F-sHVw5ttV3OwN16LHbXwLLv6uM8LxfUy3pfovRBVRw00B07r1qBsWbJ-ArXgB1KM3w0IQTPK9zE2y1hHECK7SQnqdAl_zFNuZgFgQYs=w2400)

@@ -10,12 +10,16 @@ When it comes to authentication, there are three factors to consider:
 - Ownership factors: something you own, such as a device or phone number
 - Inherence factors: something unique to you, such as your biometric features
 
+![Factors](https://i.pinimg.com/originals/fe/58/1d/fe581d69d975741fa73abf1eb3e29b88.jpg)
+
 Passwords fall under “something you know”. One-Time Passwords (OTP) prove that the user owns a cell phone or a device, while biometric authentication proves "something unique to you".
 
 ## One-Time Passwords (OTP)
 One-Time Passwords (OTP) are widely used as a more secure method of authentication. Unlike static passwords, which can be reused, OTPs are valid for a limited time, typically a few minutes. This means that even if someone intercepts an OTP, they can’t use it to log in later. Additionally, OTPs require “something you own” as well as “something you know” to log in. This can be a cell phone number or email address that the user has access to, making it harder for hackers to steal.
 
 However, it's important to note that using SMS as the delivery method for OTPs can be less secure than other methods. This is because SMS messages can be intercepted or redirected by hackers, particularly if the user's phone number has been compromised. In some cases, attackers have been able to hijack phone numbers by convincing the mobile carrier to transfer the number to a new SIM card. Once the attacker has control of the number, they can intercept any OTPs sent via SMS. For this reason, it's recommended to use alternative delivery methods, such as email or mobile apps, whenever possible.
+
+![One-Time Passwords (OTP)](https://i.pinimg.com/originals/2d/78/2e/2d782e8d647408707d371b58c1a0b502.jpg)
 
 Here’s how OTPs work in more detail:
 
@@ -27,9 +31,30 @@ Here’s how OTPs work in more detail:
 
 Alternatively, a hardware or software key can be used to generate OTPs for multi-factor authentication (MFA). For example, Google 2FA uses a software key that generates a new OTP every 30 seconds. When logging in, users enter their password and the current OTP displayed on their device. This adds an extra layer of security as hackers would need access to the user’s device to steal the OTP. More on MFA later.
 
-## SSO (Single Sign-On) 
 
-[Readmore](./sso.md)
+## Passkeys: A Password-Free Future
+
+A passkey is a digital credential that replaces traditional passwords. It's a more secure and convenient way to log in to websites and apps.
+
+![Passkeys](https://i.pinimg.com/originals/29/c4/41/29c441a2a7b1007754e382c2458ceda4.png)
+
+### How it works:
+
+**Creation**
+- The end-user needs to confirm the account information and present their credentials (face ID, touch ID, etc.).
+- A private key is generated based on the public key provided by the website. The private key is stored on the device.
+
+**Authentication**
+- When the user tries to sign in to a website, they use the generated private key. Just select the account information and present the credentials to unlock the private key.
+- Consequently, there is no risk of password leakage since no passwords are stored in the websites' databases.
+
+**Implementation**
+- Library: [SimpleWebAuthn](https://simplewebauthn.dev/docs/packages/server)
+- Project example [repo](https://github.com/MasterKale/SimpleWebAuthn)
+    - [server file](https://github.com/MasterKale/SimpleWebAuthn/blob/master/example/index.ts)
+    - [client file](https://github.com/MasterKale/SimpleWebAuthn/blob/master/example/public/index.html)
+
+
 
 ## OAuth 2.0 and OpenID Connect (OIDC)
 
@@ -60,3 +85,8 @@ OAuth 2.0 offers four types of authorization grants to accommodate different sit
 The standard provides multiple modes to cater to different application scenarios and requirements, ensuring flexibility and adaptability for diverse situations.
 
 The authorization code grant is one example worth examining. The specifications for the other three grant types are available in RFC-6749.
+
+
+## SSO (Single Sign-On) 
+
+[Readmore](./sso.md)

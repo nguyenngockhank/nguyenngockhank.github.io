@@ -28,12 +28,12 @@ module.exports = [
             'auth/auth-terms',
             'auth/password-notes',
             'auth/passwordless',
-            'auth/ssh',
             'auth/jwt',
             'auth/mfa',
             'auth/authentication',
             'auth/authorization',
             'auth/sso',
+            'auth/ssh',
         ]
     },
     {
