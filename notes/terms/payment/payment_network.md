@@ -53,3 +53,34 @@ Step 5: The acquiring bank then transfers money to the merchant’s bank.
 Step 4: The card network clears the transactions from different acquiring banks. Clearing is a process in which mutual offset transactions are netted, so the number of total transactions is reduced.
  
 In the process, the card network takes on the burden of talking to each bank and receives service fees in return.
+
+
+## FedNow (instant payment)
+
+JPMorgan, Wells Fargo, and other major banks will use the new Federal Reserve's 'FedNow' instant payment system. Let's take a look at how it works.
+
+Federal Reserve launched FedNow instant payment service on 20 Jul. It allows retail clients to send and receive money within seconds and it is available 24x7.
+
+![FedNow](https://i.pinimg.com/originals/e3/c9/5e/e3c95e2ca672803932bec5e394f82a09.webp)
+
+**What does this mean?**
+1. Peer-to-peer payment services in the private sector like Venmo or PayPal act as intermediaries between banks, so we need to leverage payment schemes for clearing and Fed systems for settlement. However, FedNow can directly settle the transactions in central bank accounts.
+2. Fedwire, another real-time payments system, will still function in large-value or low-value payments. FedNow is not designed to replace Fedwire.
+
+### FedNow VS Automated Clearing House (ACH)
+![FedNow VS ACH](https://i.pinimg.com/originals/a9/9e/ae/a99eae90f16be296a0db8fc9b0955f43.jpg)
+
+**FedNow** 
+- Step 0 - Bob wants to pay Alice $1000.
+- Step 1 - Bob initiates a payment transaction using FedNow.
+- Step 2 - The sender’s bank submits a payment message to FedNow.
+- Step 3 - The FedNow service validates the payment message.
+- Step 4 - The FedNow service sends the payment message to the receiver’s bank, where it is confirmed.
+- Step 5 - The receiver’s bank replies to FedNow, confirming that the payment is accepted.
+- Step 6 - The FedNow service debits and credits the designated accounts of the sender and receiver’s banks.
+- Step 7 - The FedNow service notifies the sender’s bank and receiver’s bank that the settlement is complete.
+- Step 8 - The banks debit and credit the bank accounts.
+
+### Refs
+- [Bytebytego - original post](https://blog.bytebytego.com/i/135537446/what-is-fednow-instant-payment)
+- [Q & A](https://www.klaros.com/post/q-a-on-the-federal-reserve-s-fednow-service)

@@ -1,5 +1,27 @@
 # Stripe notes
 
+
+## Paypal vs Stripe 
+
+Feature	| PayPal |	Stripe
+----- | ---- | -----
+Focus	| C2B	| B2B
+Checkout  customization | 	Limited	| High
+API |	Basic	| Robust
+Fees |	Generally higher	| More competitive
+User base |	Larger |	Smaller
+
+### Digital Wallets
+Stripe supports digital wallet payments.    Stripe offers integration with various popular digital wallets, allowing customers to make purchases using their preferred payment method. This includes wallets like:   
+- Apple Pay   
+- Google Pay
+- Samsung Pay
+
+By accepting digital wallet payments, Stripe makes the checkout process smoother and more convenient for customers.   
+
+**Stripe also has its own Issuing product** which allows businesses to create and manage their own virtual and physical cards. These cards can then be added to digital wallets, providing another level of integration.   
+
+
 ## Snippets
 
 ### Basic 

@@ -2,19 +2,22 @@
 tags: ["Payment"]
 ---
 
-
 # Payment notes 
 
 ![Payment overview](@/k-img/payment-overview.png)
 
 ## Payment flow
 
+### Types of payment
+- domestic money transfer
+- cross border money transfer
+
+### Terms
 - **Payer / Card holder** that decides to pay for the service.
 - **Merchant** (business owner or service provider) to whose account the funds are transmitted.
 - **Acquirer** processes payments on behalf of the merchant and routes them through the **Card Networks** (such as Visa or Mastercard) to the issuing bank. 
 - Seldom acquirers may attract third party providers to help process payments. Payment service providers (PSP) can offer the organisation of payment reception, Internet acquiring, agency cooperation scheme, act as international or local companies, have different conditions for opening accounts.
 - **Issuer bank** that extends cards to consumers on behalf of the card networks.
-
 
 :::: tabs 
 
@@ -186,11 +189,6 @@ Card theft |  Tokenization. Instead of using real card numbers, tokens are store
 PCI compliance | PCI DSS is an information security standard for organizations that handle branded credit cards
 Fraud | Address verification, card verification value (CVV), user behavior analysis, etc.
 
-
-
-## Popular PSP(s)
-
-![Compare](./payment-gateway-providers-compared.png)
 
 ## Database Design 
 

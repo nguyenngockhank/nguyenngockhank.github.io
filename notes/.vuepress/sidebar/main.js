@@ -365,8 +365,11 @@ module.exports = [
     children: [
       '/terms/payment/',
       '/terms/payment/accounting',
+      '/terms/payment/scan_to_pay',
       '/terms/payment/payment_network',
       '/terms/payment/stripe',
+      '/terms/payment/paypal',
+      '/terms/payment/psp',
     ]
   },
   {
