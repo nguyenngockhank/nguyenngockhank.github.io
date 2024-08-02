@@ -1,5 +1,5 @@
 ---
-tags: [ "ResiliencePattern", "DistributedSystem"]
+tags: ['Pattern', "ResiliencePattern", "DistributedSystem"]
 ---
 
 # Retry pattern

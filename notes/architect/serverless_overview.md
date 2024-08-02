@@ -1,3 +1,7 @@
+---
+tags: ['Pattern', "Architecture"]
+---
+
 # Serverless overview
 
 ## Architecture

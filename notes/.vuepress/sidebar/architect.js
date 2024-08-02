@@ -73,9 +73,10 @@ module.exports = [
     {
         title: 'Architectures',
         children: [
-            'lambda-arch/',
+            'eda',
             'eventsource',
             'ddd/',
+            'lambda-arch/',
             // 'clean_A',
             // 'ebi',
             // 'onion_A',

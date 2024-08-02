@@ -86,9 +86,6 @@ tags: ["Overview"]
 
 ![EDA Architecture](https://i.pinimg.com/originals/83/0b/7a/830b7aeac45dbf81108e7d56b26bc130.jpg)
 
-### Rules 
-
-![Rules](https://i.pinimg.com/originals/1b/c7/a5/1bc7a50757d22f95963a9eecf12661e3.jpg)
 
 ## Disaster recovery 
 

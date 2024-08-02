@@ -1,18 +1,46 @@
+---
+tags: ['Pattern', "Architecture"]
+---
+
 # Event Sourcing 
+
+Event Sourcing is a data management pattern where the state of an application is represented by a sequence of events. Instead of storing the current state of an object, you store a log of all the events that have happened to it.
+
+![Event sourcing](https://i.pinimg.com/originals/ed/da/aa/eddaaad962d688c328101153c5d91654.jpg)
 
 ## Overview
 
-Event sourcing is a software design pattern that focuses on capturing and storing the changes made to an application's state as a sequence of events. Instead of persisting the current state of an object, event sourcing stores the series of events that led to the current state. These events are immutable and can be replayed to reconstruct the state of the application at any point in time.
+### How it works
+- **Event Creation**: Whenever a change occurs in the system, an event is generated to capture the change.   
+- **Event Appending**: The event is appended to an immutable event store. This log is append-only, meaning events can only be added, never modified or deleted.  
+- **State Reconstruction**: When needed, the current state of the system can be reconstructed by replaying all events from the beginning. 
 
-In event sourcing, events are the primary source of truth. They represent meaningful actions or occurrences within the system. Each event is stored in an event log or event store, which serves as a historical record of all the events that have occurred. This log can be used to rebuild the state of the application by replaying the events in the same order they were originally recorded.
+### Key Characteristics:
+- **Immutability**: Events are immutable, meaning they cannot be changed once created.   
+- **Append-only**: Events are added to the end of the event store, ensuring data integrity.   
+- **Replayability**: The system can be restored to any point in time by replaying events up to that point. 
 
-By using event sourcing, developers can achieve several benefits. One of the key advantages is the ability to have a complete audit trail of all changes made to the system. Since events are **immutable** and stored in a log, it becomes easier to track and analyze the history of the application. This can be particularly useful in scenarios where compliance or regulatory requirements are important.
+### Benefits of Event Sourcing:
+- **Auditability**: The complete history of the system is preserved, allowing for easy auditing and debugging.   
+- **Time Travel Debugging**: You can replay events to recreate specific system states.   
+- **Event-Driven Architecture**: Event Sourcing naturally fits into Event-Driven Architectures, enabling real-time processing and distributed systems.   
+- **CQRS (Command Query Responsibility Segregation)**: Event Sourcing often complements CQRS by providing an event store as the source of truth.
 
-Another benefit of event sourcing is the ability to derive different views or projections of the application's state. By replaying the events, developers can create different representations of the data, tailored to specific use cases or requirements. This allows for greater flexibility and adaptability in the system.
+### Use cases
 
-Event sourcing also enables **temporal queries**, as developers can query the event log for specific points in time or ranges of time. This can be useful for debugging, troubleshooting, or analyzing the behavior of the system at different points in its history.
+![Use cases](https://i.pinimg.com/originals/5d/b7/e7/5db7e7745894c482e4a7d1ad02e495ae.jpg)
 
-To implement event sourcing, developers typically use an event sourcing framework or library that provides the necessary infrastructure for event storage, retrieval, and replay. These frameworks often include features such as event serialization, event handlers, and event replay mechanisms.
+- **Financial systems**: Tracking transactions and generating reports.   
+- **Gaming**: Storing game state for replay and analysis.
+- **IoT systems**: Capturing sensor data for analysis and troubleshooting.   
+- **Fraud detection**: Analyzing event logs to identify suspicious patterns.
+
+### CRUD vs Event Sourcing
+![CRUD vs ES](https://i.pinimg.com/originals/92/1e/53/921e532b0adebc33c2e0eb4dec2d0c94.jpg)
+
+### Event sourcing & CQRS 
+
+![Event sourcing & CQRS](https://i.pinimg.com/originals/13/41/f6/1341f69dcdcb1434395689f060c1e183.webp)
 
 ## Terms
 
@@ -28,7 +56,7 @@ To implement event sourcing, developers typically use an event sourcing framewor
 
 **Snapshot**: A snapshot is a point-in-time representation of an aggregate's state. It is used to optimize the process of reconstructing an aggregate's state by reducing the number of events that need to be replayed. Snapshots are periodically taken and stored in the event store alongside the events.
 
-## Projection vs Snapshot
+### Projection vs Snapshot
 
 ### Projection
 A projection in event sourcing refers to the process of transforming a stream of events into a read model that can be queried for specific information. It is essentially a way to create a denormalized view of the events that have occurred in the system.
@@ -46,23 +74,6 @@ Snapshots are typically taken at regular intervals or when a certain threshold i
 
 By using snapshots, the system can significantly reduce the time and resources required to rebuild the state of an aggregate, especially when dealing with large event streams.
 
-
-## How to build
-
-### 1. Custom Implementation
-One way to build event sourcing is to implement it from scratch using your preferred programming language and database. This approach gives you complete control over the implementation and allows you to tailor it to your specific requirements. You can use a database to store the events and design your own event store and event sourcing infrastructure. While this approach provides flexibility, it requires a deep understanding of event sourcing concepts and can be time-consuming to develop and maintain.
-
-### 2. Event Sourcing Frameworks
-Another option is to use event sourcing frameworks that provide a set of tools and libraries to simplify the implementation of event sourcing. These frameworks often come with built-in support for event storage, event replay, and event handling. Some popular event sourcing frameworks include `Axon Framework` (Java), `EventStore` (C#), and `Eventuate` (Java and Scala). These frameworks abstract away the complexities of event sourcing, allowing you to focus on implementing the business logic of your application.
-
-### 3. Cloud-based Event Sourcing Services
-If you prefer a managed solution, you can consider using cloud-based event sourcing services. These services provide a fully managed infrastructure for event sourcing, allowing you to focus on developing your application without worrying about infrastructure management. Examples of cloud-based event sourcing services include `AWS EventBridge`, `Azure Event Grid`, and `Google Cloud Pub/Sub`. These services offer scalability, reliability, and ease of use, but they may come with additional costs and dependencies on the cloud provider.
-
-### 4. Event Sourcing Databases
-There are also specialized databases designed specifically for event sourcing. These databases provide built-in support for storing and querying events, making it easier to implement event sourcing. Examples of event sourcing databases include `EventStoreDB`, `Apache Kafka`, and `Apache Pulsar`. These databases often offer features like event streaming, event replay, and event-driven architectures, making them a popular choice for event sourcing implementations.
-
-### 5. Hybrid Approaches
-Lastly, you can also consider hybrid approaches that combine event sourcing with other architectural patterns. For example, you can use a combination of event sourcing and command-query responsibility segregation (CQRS) to separate the write and read models of your application. This allows you to optimize the read and write operations independently, improving performance and scalability. Frameworks like Axon Framework and Lagom provide support for both event sourcing and CQRS, making it easier to implement hybrid architectures.
 
 ## Common Problems
 
@@ -109,3 +120,29 @@ Since events are the source of truth in an event sourcing system, it is importan
 
 ### 7. Monitor and Measure Performance
 Event sourcing can introduce additional complexity and overhead compared to traditional data storage approaches. It is important to monitor and measure the performance of your event sourcing system to identify any bottlenecks or performance issues. Use tools and techniques like event sourcing frameworks, distributed tracing, and performance testing to ensure the system meets the required performance criteria.
+
+## Tools for Event Stores
+
+Choosing the right tool for your event store is crucial for the success of your event sourcing implementation. Here are some popular options:
+
+**Dedicated Event Stores**
+- **EventStoreDB**: Specifically designed for event sourcing, offering high performance, scalability, and features like projections and subscriptions.   
+- **Apache Kafka**: While primarily a message queue, it can also be used as an event store, offering high throughput and durability.
+
+**Relational Databases**
+- **PostgreSQL**: With extensions like pg_cron and hstore, PostgreSQL can be adapted for event sourcing, but it's generally not the optimal choice due to performance limitations for append-only workloads.
+- **SQL Server**: Similar to PostgreSQL, it can be used for event sourcing but has performance limitations compared to dedicated solutions.
+
+**NoSQL Databases**
+- **MongoDB**: Can be used for event storage, but it's not optimized for append-only workloads and might have performance issues at scale.
+- **Cassandra**: Offers high performance and scalability, but it might require additional development effort for event sourcing specific features.
+
+**Other Options**
+- **Custom-built event stores:** For specific requirements or performance optimization, you can build your own event store. However, this requires significant development effort and expertise.
+
+**Key Considerations When Choosing an Event Store**
+- **Performance**: The event store should handle high write throughput and low latency.
+- **Scalability**: It should be able to handle increasing data volumes and growing numbers of events.   
+- **Durability**: Events should be persisted reliably to prevent data loss.
+- **Features**: Consider features like projections, subscriptions, and query capabilities that align with your application's needs.
+- **Cost**: Evaluate the cost of the event store, including licensing, hardware, and operational expenses.
