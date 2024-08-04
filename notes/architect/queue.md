@@ -41,6 +41,9 @@ Deque is also called double-ended queue. The insertion and deletion can happen a
 
 ![With vs Without Message queue](https://i.pinimg.com/originals/20/11/63/2011636b56689eb7f102ff049ecc3cef.jpg)
 
+## RabbitMQ Patterns
+
+![RabbitMQ Patterns](https://i.pinimg.com/originals/ad/c4/53/adc45307ef73505d3491840bd59e3457.jpg)
 
 ## How do Message Queues Evolve
 

@@ -45,7 +45,10 @@ tags: ["Performance", "Overview"]
 
 ![API](https://i.pinimg.com/originals/9e/37/63/9e3763e98d29cb7b1b1f8bd3abb75f02.jpg)
 
-### Reduce latency
+### API Latency factors
+![api latency factors](https://i.pinimg.com/originals/7c/4b/95/7c4b954fbffed386a81ad6e0fdce262f.png)
+
+### Reducing latency methods
 
 ![latency](https://i.pinimg.com/originals/57/a7/a2/57a7a2dd14780364932d4a19fc6cb71c.jpg)
 
@@ -68,6 +71,7 @@ tags: ["Performance", "Overview"]
     - Compress data before sending over network
     - use libs like gZip or zLib
 
+### Latency numbers
 ![Latency numbers](https://i.pinimg.com/736x/3a/4b/a2/3a4ba2779db53d12a3fdd50bec3dafed.jpg)
 
 ## Database scaling

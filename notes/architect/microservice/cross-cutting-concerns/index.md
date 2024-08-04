@@ -1,5 +1,6 @@
 # Cross-cutting concerns
 
+## Overview
 ![overview](./overview.png)
 
 Cross-cutting concerns are aspects of a software system that affect multiple components or modules. 
@@ -8,6 +9,8 @@ Examples of cross-cutting concerns include logging, security, caching, and error
 
 However, in a Microservices architecture, where each service is independent and autonomous, handling cross-cutting concerns requires a different approach.
 
+### Clean Architecture
+![clean arch cross cutting concerns](https://i.pinimg.com/originals/63/76/39/6376390b9a909df598dbf67baae86162.jpg)
 
 ## Terms Comparision
 ![Compare](https://i.pinimg.com/originals/f8/a0/67/f8a067eb303f0bb99cda1cf4c60efb04.jpg)

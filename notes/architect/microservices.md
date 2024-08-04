@@ -69,7 +69,9 @@ Microservices are small, autonomous services that work together.
 
 **Z-axis**: With Data Partitioning, the functions are able to run with a subset of data. Although there maybe several ways to achieve that, **Event Sourcing** is one of the most scalable and widely accepted approach for that.
 
+### Maturity matrix
 
+![Microservice maturity matrix](https://i.pinimg.com/originals/57/af/76/57af76bb91429430c3c12a0b11b0de89.jpg)
 
 ### Synchoronous vs Asynchoronous Communication
 

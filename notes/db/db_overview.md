@@ -70,3 +70,6 @@ Change Data Capture (CDC) is a process that identifies and tracks modifications 
     - Buffer database
     - Recovery manager
 
+## Popular opensource
+
+![Popular opensource](https://i.pinimg.com/originals/ad/99/dd/ad99dd4b6da33a7713b10f020e908880.jpg)

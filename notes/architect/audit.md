@@ -10,6 +10,18 @@ You never know what data you can collect today that will be useful to you tomorr
 
 <TagLinks />
 
+## Terms
+- **Agent**: A software process that continuously records data inputs and reports them to a monitoring system.
+- **Alarm**: A piece of configuration describing an undesirable condition and alerts issued in response to it.
+- **Alert**: A notification message informing about a change of state, typically signifying a potential problem.
+- **Alerting**: The process of configuring alarms and alerts.
+- **Data Input**: A numeric value with an accompanying set of properties gathered at the source of the measurement by a monitoring agent.
+- **Data Point**: A numeric value summarizing one or multiple data inputs reported in a defined time interval. A series of data points makes up a timeseries.
+- **Metric**: A collection of data inputs described by a set of properties. Timeseries are often mistakenly referred to as metrics. Monitoring metrics should not be confused with **performance metrics** either, which are a set of high level business performance indicators.
+- **Monitor**: A process evaluating the most recent data points on a timeseries for threshold fit. This is an integral part of an alarm.
+- **Monitoring**: The process of collecting and retrieving relevant data describing a change of state.
+- **Timeseries**: A list of data points sorted in natural temporal order, most commonly presented on a plot.
+
 ## Correlation ID Pattern 
 
 A correlation ID is a unique identifier assigned to a request as it enters a distributed system. It's propagated through all components involved in processing the request, serving as a thread that connects related log entries, metrics, and traces. This pattern is essential for debugging, monitoring, and troubleshooting complex distributed systems.
@@ -31,7 +43,7 @@ A correlation ID is a unique identifier assigned to a request as it enters a dis
 
 The observers are objects that register themselves to the subject and react to the notifications. This pattern is useful for monitoring and logging, as it allows you to **decouple the logic of the subject from the logic of the observers, and to add or remove observers dynamically**.
 
-![Read more for other patterns](https://www.linkedin.com/advice/0/what-best-design-patterns-monitoring-logging-r92ue)
+[Read more for other patterns](https://www.linkedin.com/advice/0/what-best-design-patterns-monitoring-logging-r92ue)
 
 ## Comparision
 

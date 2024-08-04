@@ -23,6 +23,14 @@ The Belgium-based system is run by its member banks and handles millions of paym
 - The **Slice Processor B** validate MON then authorizes **Regional Processor B**
 - The **Bank B** sends UAK/UNK to **Regional Processor B**
 
+## Money movement 
+
+![Money movement](https://i.pinimg.com/originals/15/71/b0/1571b0631acb440ea33dc07edb759c74.jpg)
+
+## Foreign exchange
+
+![Foreign exchange](https://i.pinimg.com/originals/f4/65/f3/f465f3b25afa3f72507a5f99eca4fe3c.jpg)
+
 ## How Visa works?
 
 ![How Visa works?](https://i.pinimg.com/originals/d4/7d/3d/d47d3defc268a8e17816a67d8ecff2d7.jpg)
@@ -54,6 +62,9 @@ Step 4: The card network clears the transactions from different acquiring banks.
  
 In the process, the card network takes on the burden of talking to each bank and receives service fees in return.
 
+### How Visa makes money?
+
+![Visa makes money](https://i.pinimg.com/originals/0b/91/0d/0b910d0697f9a842b19fbac0266a4a5c.jpg)
 
 ## FedNow (instant payment)
 

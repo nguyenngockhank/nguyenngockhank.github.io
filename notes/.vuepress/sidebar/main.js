@@ -365,6 +365,7 @@ module.exports = [
     children: [
       '/terms/payment/',
       '/terms/payment/accounting',
+      '/terms/payment/reconciliation',
       '/terms/payment/scan_to_pay',
       '/terms/payment/payment_network',
       '/terms/payment/stripe',

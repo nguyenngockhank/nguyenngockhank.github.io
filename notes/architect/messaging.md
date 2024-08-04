@@ -126,6 +126,9 @@ aggregate_id | root of aggregate, different aggregate_id can be sent in parallel
 created_at   | timestamp (use this field to make sure the order)
 event_payload  | body of event
 
+**Outbox pattern**
+![Outbox pattern](https://i.pinimg.com/originals/83/c2/74/83c274943fd12f32efe8c473115cda2b.jpg)
+
 See more: 
 - [Transactional outbox](https://microservices.io/patterns/data/transactional-outbox.html)
 - [Node pkg: pg-trx-outbox](https://www.npmjs.com/package/pg-trx-outbox)

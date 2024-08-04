@@ -75,6 +75,7 @@ module.exports = [
         children: [
             'eda',
             'eventsource',
+            'cqrs',
             'ddd/',
             'lambda-arch/',
             // 'clean_A',

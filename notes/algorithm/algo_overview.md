@@ -11,9 +11,17 @@
 
 ![Validation](https://i.pinimg.com/564x/12/c2/7b/12c27b7fb4c7a886718dd6d67587d13f.jpg)
 
-### Load balancing algos
+### Load balancing 
 
 ![Load balancing algos](https://i.pinimg.com/564x/32/08/5e/32085e17f4315262381f6f620e6deecd.jpg)
+
+### Rate limiting
+
+![Rate limiting](https://i.pinimg.com/originals/25/74/97/257497d9a5ed6744230f92ae334f7a40.png)
+- fixed window
+- sliding window
+- token bucket
+- concurrency
 
 ### Retry 
 
