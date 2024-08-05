@@ -195,3 +195,89 @@ const useDebounce = (callback) => {
 - To fix this, we can memoize those with `useMemo` or through the usage of Refs.
 - If we simply memoize them or use Refs "naively", we won't have access to the component's latest data, like state or props. This is happening because a closure is created when we initialize Ref, which freezes values at the time it's created.
 - To escape the closure trap, we can leverage the mutable nature of the Ref object and gain access to the latest data by constantly updating the "closed" function in `ref.current` within `useEffect` .
+
+## Anti patterns
+
+An anti-pattern is a common solution to a problem that, despite initially appearing effective, ultimately leads to more negative consequences than positive ones. It's essentially a bad practice that's widely used.
+Common anti-patterns in React 
+
+### Props drilling
+the practice of passing props through multiple levels of a component tree in React. While it might seem straightforward at first, it can lead to several issues as your application grows:
+
+**Problems**
+- Increased complexity: As the component tree deepens, managing and passing props becomes increasingly convoluted.
+- Reduced maintainability: Changes to the prop structure can require modifications in multiple components.
+- Performance impact: Unnecessary re-renders can occur if props are passed down to components that don't use them.
+
+**Solution**
+Use store or context for avoiding props drilling
+
+### In-component data transformation
+In-component data transformation refers to the process of manipulating data within a React component before rendering it to the UI. This is often necessary when the data received from an API or other source doesn't match the exact format required for display.
+
+**Problems**
+- Lack of clarity: Combining data fetching, transformation, and rendering tasks within a single component makes it harder to pinpoint the component’s exact purpose 
+- Reduced reusability: Should another component require the same or a similar transformation, we’d be duplicating logic
+- Testing challenges: Testing this component now requires considering the transformation logic, making tests more convoluted
+
+**Solution**
+Use Anti-corruption layer pattern
+
+![Anti-corruption in react](https://i.pinimg.com/originals/9a/d6/95/9ad695dad2e32ba07f720f1726b00b9e.png)
+
+### Duplicated code
+Duplicated code refers to code segments that appear multiple times within a software project. It's often a sign of code redundancy and can lead to various problems.
+
+**Examples of Duplicated Code:**
+- Identical code blocks: Exact copies of code in different parts of the program.
+- Similar code logic: Code with the same functionality but implemented differently.
+- Code with minor variations: Code that is almost identical but with slight differences.
+
+**Problems**
+- Increased maintenance effort: Changes need to be made in multiple places.
+- Higher chances of errors: Inconsistencies can arise when updating one copy but not the others.
+- Reduced code readability: Code becomes harder to understand with repeated sections.
+- Lower code reusability: Potential for creating reusable functions or modules is missed.
+
+**Solution**
+The DRY (don’t repeat yourself) principle comes to the rescue here. 
+
+By centralizing common logic into utility/helper functions or hooks or higher-order components (HOCs), the code becomes more maintainable and readable, and less prone to errors.
+
+### Complicated logic in views
+The beauty of modern frontend frameworks, including React, is the distinct separation of concerns. By design, components should be oblivious to the intricacies of business logic, focusing instead on presentation. However, a recurrent pitfall that developers encounter is the infusion of business logic within view components. This not only disrupts the clean separation but also bloats components and makes them harder to test and reuse.
+
+**Problems**
+- Reusability: If another component requires a similar filter, the logic would need to be duplicated 
+- Testing: Unit testing becomes more complex as you’re not just testing the rendering, but also the business logic 
+- Maintenance: As the application grows and more logic is added, this component can become unwieldy and harder to maintain
+
+### Long component with too much responsibility
+React encourages the creation of modular, reusable components. However, as features get added, a component can quickly grow in size and responsibility, turning into an unwieldy behemoth. A long component that manages various tasks becomes difficult to maintain, understand, and test.
+
+A component violates the single-responsibility principle (SRP), which advocates that a component should fulfill only one function. By taking on multiple roles, it becomes more complex and less maintainable.
+
+**Solution**
+Use separation of concern principle. Look the image,
+
+![layered arch in react](https://i.pinimg.com/originals/a6/71/45/a6714521c7ad850971f539179c021a55.png)
+
+It's just an example that shows how to extract a long or complicated code into pieces
+
+**Applying separation of concern**
+- Split code into layers 
+  - UI layer
+  - Business logic layer
+  - Infrastructure layer
+- At UI layer
+  - Container (Smart) component 
+  - Presentational (Dump) component
+  - hooks hold logic in UI
+- At business layer
+  - Business models (contract) that Infrastructure layer & UI layer must follow
+  - ViewModel and DTO (currently we only use DTO)
+- At Infra layer
+  - Fetcher: request to API server, Blockchain to get the data from remote server
+  - Adaptor: functions that transform responses from remote data source into the business models. 
+  - Some query to get data from local (cookie, localStorage, indexeddb, ...)  
+  - ...

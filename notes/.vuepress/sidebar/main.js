@@ -313,6 +313,7 @@ module.exports = [
           '/vue/test',
         ]
       },
+      '/javascript/fe-memory-leak',
       {
         title: 'HTML / CSS',
         children: [

@@ -45,6 +45,7 @@ module.exports = [
             'microservice/cohesion-coupling/',
             'microservice/loadbalancer',
             'microservice/apigateway',
+            'service-mesh',
             'microservice/cross-cutting-concerns/',
         ]
     },

@@ -20,6 +20,18 @@ tags: ["Overview"]
 
 ![Trade-offs](https://i.pinimg.com/originals/d6/1b/ab/d61bab5a9e06681e042d546ee3ab6d97.jpg)
 
+## Common problems
+
+![System design Common problems](https://i.pinimg.com/originals/ac/1d/bf/ac1dbf0e2e4e2ae5da49b66ccc464827.jpg)
+
+- Read heavy system
+- Write high traffic
+- Single point of failure
+- High Availability
+- High Latency
+- Handle large files
+- Monitoring & Alerting
+- Slow database queries
 
 ## Availability
 
