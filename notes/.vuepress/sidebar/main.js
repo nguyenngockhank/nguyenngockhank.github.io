@@ -38,6 +38,7 @@ const commonDocs = [
     children: cleanCodeDocs,
   },
   'deployment-overview',
+  'i18n',
   'seo',
   'crawl',
   'document',
@@ -293,6 +294,7 @@ module.exports = [
       // '/algorithm/bakery',
       '/algorithm/upload-large-file',
       // '/datastructure/queue',
+      '/geo'
     ]
   },
   {
