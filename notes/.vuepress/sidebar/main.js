@@ -8,6 +8,7 @@ const cleanCodeDocs = [
   'naming',
   'deps',
   'testing',
+  'reusability',
   'code-structure',
   'notes',
   'refactor',
