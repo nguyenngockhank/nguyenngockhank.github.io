@@ -1,11 +1,19 @@
-# Rate limiter 
+# Rate limiter Pattern
 
-**Algorithms**: 
-- Token bucket
-- Leaking bucket
-- Fixed window counter 
-- Sliding window log
-- Sliding window counter
+The rate limiter pattern is a design technique used to control the rate at which incoming requests or actions are processed by a system. It's essentially a mechanism to manage the throughput of a service by limiting the number of requests it can handle within a specific timeframe.  
+
+**Why is it important?**
+- **Protects from overload**: Prevents system crashes due to excessive traffic.   
+- **Fairness**: Ensures equal access to resources for all users.   
+- **API abuse prevention**: Stops malicious attacks like DDoS.
+- **Resource management**: Optimizes resource utilization.   
+
+
+## Algorithms
+- **Fixed Window Counter**: Simplest approach, counts requests within a fixed time window.   
+- **Sliding Log Window**: Maintains a sliding window of fixed size and counts requests within that window.   
+- **Token Bucket**: Continuously generates tokens at a fixed rate. Each request consumes a token.   
+- **Leaky Bucket**: Similar to Token Bucket but with a leakage rate, allowing for burstiness. 
 
 ## Token bucket
 
@@ -34,8 +42,22 @@ How many buckets do we need? This varies, and it depends on the rate-limiting ru
 **Cons**:
 - Two parameters in the algorithm are bucket size and token refill rate. However, it might be challenging to tune them properly.
 
-### Leaking bucket
-// ... todo
+## Leaking bucket
+
+Imagine a leaky bucket. Water (packets) is poured into the bucket at an arbitrary rate. However, there's a hole at the bottom, allowing water to leak out at a constant rate. If the water is poured in faster than it can leak out, the bucket will eventually overflow.
+
+### How it Works
+In the context of network traffic, the leaky bucket algorithm operates similarly:
+- **Bucket**: Represents a buffer to store incoming packets.
+- **Input Rate**: Packets arrive at the bucket at a variable rate.
+- **Output Rate**: Packets are removed from the bucket and sent at a constant rate.
+- **Overflow**: If the bucket fills up before packets can be removed, incoming packets are typically dropped.
+
+### Key Characteristics
+- **Smooths traffic**: It ensures a constant output rate regardless of the input burstiness.
+- **Simple implementation**: Relatively easy to implement compared to other algorithms.
+- **Packet loss**: Can lead to packet loss if the input rate exceeds the output rate for an extended period.
+
 
 ### Sliding window counter
 

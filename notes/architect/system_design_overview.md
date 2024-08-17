@@ -70,27 +70,9 @@ tags: ["Overview"]
 
 ![Examples](https://i.pinimg.com/originals/97/36/dc/9736dcbd39c67fb01945c7c6ede7c2df.jpg)
 
-## Resiliency & Fault Tolerance
+## [Resiliency & Fault Tolerance](./fault-tolerance.md)
 
-### Resiliency Patterns
-
-![Resiliency Patterns](https://i.pinimg.com/originals/61/02/b3/6102b34511df25a3d1f3725287386999.jpg)
-
-### Anti-corruption layer
-
-![Anti-corruption layer](https://i.pinimg.com/originals/e8/c1/37/e8c137b69e20ba17967e8943d0ea37bc.jpg)
-
-### Retry patterns
-
-![Retry patterns](https://i.pinimg.com/originals/17/b2/83/17b2832a2bdfaab8b327b231f9d40098.png)
-
-### Prevent misuse & overload 
-
-![Prevent misuse & overload](https://i.pinimg.com/originals/fb/f1/24/fbf124331c55fcd17df9de428d7d328f.jpg)
-
-### Shopify case study
-![Shopify](https://i.pinimg.com/originals/e6/df/9b/e6df9be1ce7a843d30c408cee0c8bada.jpg)
-
+![Fault Tolerance Cheatsheet](https://i.pinimg.com/originals/13/94/1f/13941f1dec6fcd28cd7f5a2ecab88e67.jpg)
 
 ## EDA
 

@@ -2,7 +2,9 @@
 tags: ['Pattern', "ResiliencePattern", "DistributedSystem"]
 ---
 
-# Fault Tolerance / Resilience Patterns
+# Fault Tolerance Patterns
+
+Fault Tolerance aka Resilience Patterns
 
 <TagLinks />
 
@@ -12,20 +14,9 @@ The **Fault Resilience** is probably the capacity to recover from these type of 
 
 After further reading of Netflix blogs and wikis, it seemed the terms Fault Resilience and Fault Tolerant were used interchangeably.
 
-<!-- 
+## Cheatsheet
 
-**Downstream resiliency**
-- Timeout
-- [Retry](#retries): 
-- [Circuit breaker](#circuit-breaker)
-
-**Upstream resiliency**
-- Load shedding
-- Load leveling
-- Rate limiting
-- Constant work 
-
--->
+![Cheatsheet](https://i.pinimg.com/originals/13/94/1f/13941f1dec6fcd28cd7f5a2ecab88e67.jpg)
 
 ## Pattern List 
 
@@ -47,6 +38,24 @@ Failover | Upstream
 [Stateless](#stateless-services) |  
 
 These patterns are usually not used alone. To apply them effectively, we need to understand why we need them, how they work, and their limitations.
+
+
+## Shopify case study
+![Shopify](https://i.pinimg.com/originals/e6/df/9b/e6df9be1ce7a843d30c408cee0c8bada.jpg)
+
+## Prevent misuse & overload 
+
+![Prevent misuse & overload](https://i.pinimg.com/originals/fb/f1/24/fbf124331c55fcd17df9de428d7d328f.jpg)
+
+## Anti-corruption layer
+
+![Anti-corruption layer](https://i.pinimg.com/originals/e8/c1/37/e8c137b69e20ba17967e8943d0ea37bc.jpg)
+
+
+## Retry patterns
+
+![Retry patterns](https://i.pinimg.com/originals/17/b2/83/17b2832a2bdfaab8b327b231f9d40098.png)
+
 
 
 ## Fallback

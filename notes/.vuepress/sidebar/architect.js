@@ -53,13 +53,20 @@ module.exports = [
         title: "Distributed System Patterns",
         children: [
             'patterns/2pc/',
-            'patterns/retry',
             'patterns/circuit-breaker',
             'patterns/stateless',
-            'patterns/graceful-degradation',
-            'patterns/bulkhead',
             'patterns/high-water-mark/',
-            'fault-tolerance',
+            {
+                title: 'Fault tolerance',
+                children: [
+                    'fault-tolerance',
+                    'patterns/graceful-degradation',
+                    'patterns/retry',
+                    'patterns/rate-limiter',
+                    'patterns/bulkhead',
+                    'ddd/acl',
+                ]
+            },
             'distributed-patterns',
         ]
     },

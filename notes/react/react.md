@@ -216,6 +216,7 @@ Additionally, MobX provides observables, computed values, and other state-manage
 [Detail](./mobx.md)
 
 ## Lifetime Diagram
+
 ### Class version
 
 :::: tabs
@@ -228,9 +229,11 @@ Additionally, MobX provides observables, computed values, and other state-manage
 ::: tab Class
 ![React lifetime](./img/react-lifetime.jpg)
 :::
-
 ::::
 
+### useEffect vs useLayoutEffect
+
+![useEffect vs useLayoutEffect](https://i.pinimg.com/originals/d7/04/29/d7042933af74af595961a36031030fc3.jpg)
 
 ## Folder structure
 
