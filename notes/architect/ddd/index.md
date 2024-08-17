@@ -67,56 +67,44 @@ Services represent operations or behaviors that do not naturally belong to a spe
 ### Domain Events
 Domain events are messages or notifications that capture something significant that has happened within the domain. They represent a change or an occurrence that other parts of the system might be interested in.
 
-## Context Mapping
+## Knowledge Crunching
+Knowledge crunching is the process of deeply investigating and analyzing domain knowledge to extract the essential information needed to build a robust domain model. It involves sifting through a wealth of information, identifying patterns, and distilling complex concepts into a simplified, understandable form.
 
-Context mapping is a tool that allows developers and domain experts to identify the relationship between bounded contexts and the relationship between the teams that are responsible for them.
+### Key aspects of knowledge crunching:
+- **Collaboration**: Typically involves close collaboration between developers and domain experts.
+- **Extraction**: Focuses on extracting the most relevant information from a vast amount of data.
+- **Domain Modeling**: Aims to create a clear and accurate representation of the domain.
+- **Iterative Process**: Often involves multiple rounds of refinement and adjustment.
 
-There are different ways of how we can integrate between two or more bounded contexts
+### Popular Techniques for Knowledge Crunching:
+- **Event Storming**: A collaborative workshop format to explore the domain through events.
+- **Event Modeling**: A visual approach to understanding the domain by modeling events and their relationships.
 
-### Partnership
+In essence, knowledge crunching is the foundation for effective Domain-Driven Design (DDD). By thoroughly understanding the domain, developers can create software solutions that closely align with business requirements.
 
-When teams in two Contexts will succeed or fail together, a cooperative relationship needs to emerge. The teams institute a process for coordinated planning of development and joint management of integration. The teams must cooperate on the evolution of their interfaces to accommodate the development needs of both systems. Interdependent features should be scheduled so that they are completed for the same release.
+### Decomposing Domain Knowledge 
 
-### Shared Kernel
+Decomposing domain knowledge into generic, core, and supporting domains is a crucial step in DDD to effectively manage complexity and focus on the core business capabilities.
 
-Sharing part of the model and associated code forms a very intimate interdependency, which can leverage design work or undermine it. Designate with an explicit boundary some subset of the domain model that the teams agree to share. Keep the kernel small. This explicit shared stuff has special status and shouldn’t be changed without consultation with the other team. Define a continuous integration process that will keep the kernel model tight and align the Ubiquitous Language of the teams.
+**Understanding the Domains**
+- **Core Domain**: The heart of your business. It represents the unique value proposition and competitive advantage. It demands the most attention, resources, and innovation.
+    - Example: For an e-commerce platform, the core domain might be product catalog management, order processing, and inventory management.
+- **Supporting Domain**: Provides essential services to the core domain but doesn't directly contribute to the competitive advantage. They are often shared across different parts of the system.
+    - Example: For an e-commerce platform, supporting domains might include user management, search, and payment processing.
+- **Generic Domain**: Contains well-understood and standardized business capabilities that are not unique to your business. They can often be purchased as off-the-shelf solutions.
+    - Example: For an e-commerce platform, generic domains might include email, logging, and caching.
 
+**Example: E-commerce Platform**
+- **Core Domain**: Product catalog, order processing, inventory management, pricing, promotions.
+- **Supporting Domain**: User management, search, payment processing, shipping, returns.
+- **Generic Domain**: Email, logging, caching, security.
 
-### Customer-Supplier Development
-
-When two teams are in an upstream-downstream relationship, where the upstream team may succeed interdependently of the fate of the downstream team, the needs of the downstream team come to be addressed in a variety of ways with a wide range of consequences. Downstream priorities factor into upstream planning. Negotiate and budget tasks for downstream requirements so that everyone understands the commitment and schedule.
-
-### Conformist
-
-When two development teams have an upstream/downstream relationship in which the upstream team has no motivation to provide for the downstream team’s needs, the downstream team is helpless. Altruism may motivate upstream developers to make promises, but they are unlikely to be fulfilled. The downstream team eliminates the complexity of translation between bounded contexts by slavishly adhering to the model of the upstream team.
-
-### Anticorruption Layer
-
-Translation layers can be simple, even elegant, when bridging well-designed Bounded Contexts with cooperative teams. But when control or communication is not adequate to pull off a shared kernel, partner, or customer-supplier relationship, translation becomes more complex. The translation layer takes on a more defensive tone. As a downstream client, create an isolating layer to provide your system with functionality of the upstream system in terms of your own domain model. This layer talks to the other system through its existing interface, requiring little or no modification to the other system. Internally, the layer translates in one or both directions as necessary between the two models.
-
-### Open Host Service
-
-Define a protocol that gives access to your subsystem as a set of services. Open the protocol so that all who need to integrate with you can use it. Enhance and expand the protocol to handle new integration requirements, except when a single team has idiosyncratic needs. The, use a one-off translator to augment the protocol for that special case so that the shared protocol can stay simple and coherent.
-
-### Published Language
-
-The translation between the models of two Bounded Contexts requires a common language. Use a well-documented shared language that can express the necessary domain information as a common medium of communication, translating as necessary into and out of that language. Published Language is often combined with Open Host Service.
-
-### Separate Ways
-
-We must be ruthless when it comes to defining requirements. If two sets of functionality have no significant relationship, they can be completely cut loose from each other. Integration is always expensive, and sometimes the benefit is small. Declare a Bounded Context to have no connection to the others at all, enabling developers to find simple, specialized solutions within this small scope.
-
-### Big Ball of Mud
-
-As we survey existing systems, we find that, in fact, there are parts of systems, often large ones, where models are mixed and boundaries are inconsistent. Draw a boundary around the entire mess and designate it a Big Ball of Mud. Do not try to apply sophisticated modeling within this Context. Be alert to the tendency for such systems to sprawl into other Contexts.
-
-### Cheatsheet
-
-![img](./img/context-map-cheat-sheet.png)
-
-- [ddd-crew / context mapping](https://github.com/ddd-crew/context-mapping)
-- [Vladik Khononov / Chapter 4. Context Mapping](https://www.oreilly.com/library/view/what-is-domain-driven/9781492057802/ch04.html)
-
+#### Steps to Decompose Domain Knowledge
+- **Identify the Problem Space**: Clearly define the business problem you're trying to solve.
+- **Identify Core Capabilities**: Determine the unique value propositions and competitive advantages.
+- **Identify Supporting Capabilities**: Identify the essential services needed to support the core domain.
+- **Identify Generic Capabilities**: Identify the standardized business capabilities that can be outsourced or purchased.
+- **Refine and Iterate**: Continuously refine the domain decomposition as understanding grows.
 
 ## Layered Architecture
 

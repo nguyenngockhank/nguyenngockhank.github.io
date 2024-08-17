@@ -79,6 +79,14 @@ module.exports = [
             'cqrs',
             'ddd/',
             'lambda-arch/',
+            {
+                title: "DDD",
+                children: [
+                    'ddd/',
+                    'ddd/acl',
+                    'ddd/context-mapping',
+                ]
+            }
             // 'clean_A',
             // 'ebi',
             // 'onion_A',

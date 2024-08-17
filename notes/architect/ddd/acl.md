@@ -2,12 +2,32 @@
 
 ## Overview
 
-In Domain Driven Design (DDD), the Anticorruption Layer is a crucial component that helps to integrate different systems or subsystems with conflicting models or languages. It acts as a protective shield, ensuring that the domain model remains pure and untainted by external influences. Let's explore an example to understand how the Anticorruption Layer works in practice.
+![ACL](https://i.pinimg.com/originals/e8/c1/37/e8c137b69e20ba17967e8943d0ea37bc.jpg)
+
+### What is Corruption in DDD?
+In DDD, "corruption" means compromising the integrity of the domain model. This can happen when:
+
+- **External constraints are imposed**: When outside factors (like legacy systems, databases, or unrelated business rules) influence the domain model, changing its structure or behavior.
+- **DDD principles are violated**: Not following core DDD principles, such as accurately modeling the domain, using a common language, or separating concerns, can degrade the model.
+- **Inconsistency between the domain model and code**: When the domain model isn't accurately reflected in the code, it can lead to hard-to-find and fix bugs.
+
+### Why is Corruption a Problem?
+- **Reduced understandability**: A corrupted domain model becomes harder to understand and maintain.
+- **Increased risk of errors**: Unexpected changes to the model can introduce potential bugs.
+- **Development challenges**: Creating new features becomes more difficult with an unclear domain model.
+
+
+### Anticorruption Layer
+The Anticorruption Layer is a crucial component that helps to integrate different systems or subsystems with conflicting models or languages. It acts as a protective shield, ensuring that the domain model remains pure and untainted by external influences. Let's explore an example to understand how the Anticorruption Layer works in practice.
 
 Imagine a scenario where you are working on a project that involves integrating two legacy systems: System A and System B. Both systems have their own domain models and terminologies, making it challenging to establish a common understanding between them. To overcome this challenge, you can introduce an Anticorruption Layer.
 
 The Anticorruption Layer acts as a translation layer between the two systems, ensuring that the domain model of each system remains intact and isolated from the other. It prevents any direct communication or coupling between the systems, allowing them to evolve independently.
 
+### Benefits of ACL:
+- **Protects the domain model**: Prevents unwanted changes to the model.
+- **Increases reusability**: The domain model becomes more independent and can be reused in other contexts.
+- **Reduces complexity**: Separates concerns between the domain model and external systems.
 
 ## Implemetation
 
