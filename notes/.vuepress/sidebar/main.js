@@ -84,6 +84,7 @@ const toolDocs = [
   '/tools/gg_app_script',
   '/tools/puppeteer',
   '/tools/vscode',
+  '/tools/nginx',
   {
     title: "Redis",
     children: [
