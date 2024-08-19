@@ -169,12 +169,25 @@ Optimistic locking is a concurrency control mechanism used in computer systems, 
 
 ## Hardware
 
+![SISD vs MISD vs SIMD vs MIMD](https://i.pinimg.com/originals/6f/aa/67/6faa67a50db3c09c3ed47a3760ce3595.png)
+
 - Execution depends on the actual hardware. Modern hardware has multiple processing resources—multiple cores, multiprocessors, or computer clusters—and they are optimized for executing programs.
 - Flynn’s taxonomy describes four types of architecture based on whether the system processes single or multiple instructions at a time (SI or MI) and whether each instruction acts on single or multiple blocks of data (SD or MD).
 - A GPU is an example of SIMD architecture. It’s optimized for highly parallel task execution.
 - Modern multiprocessors and multicore processors are examples of MIMD. They are far more complex because they’re multipurpose.
 - The processor or CPU is the brain of the computer system, but it’s difficult to work with directly. In programming, an additional level of abstraction is introduced between the application and the system: the runtime system.
 - To exploit parallel execution, an application developer needs a processing unit that is suitable for the problem. A CPU has a higher clock frequency and a wider set of instructions that can be executed in parallel, while a GPU operates at a lower clock speed and executes only one instruction across all of the cores, but it does so at incredible speed due to massive parallelism
+
+## Operation system
+
+- The mechanism by which threads and processes synchronize themselves and exchange data is called **interprocess communication (IPC)**.
+- Each IPC mechanism has advantages and disadvantages. Each is the optimal solution for a particular problem:
+    - A shared-memory mechanism is used when threads or processes need to efficiently exchange large amounts of data but have a problem with synchronizing access to the data.
+    -  Pipes provide an efficient way to implement synchronous communication between producer–consumer processes. Named pipes provide a simple interface for transferring data between two processes, whether on the same computer or on a network.
+    -  A message queue between processes or threads is a way of asynchronously exchanging data. Message queues are used to implement weakly coupled systems.
+    - Sockets are a two-way communication channel that can use networking capabilities. Here, data communication takes place through the socket interface instead of the file interface. In most cases, sockets provide the best combination of performance, scalability, and ease of use.
+- A **thread pool** is a collection of worker threads that efficiently execute incoming tasks on behalf of the program’s main thread. Worker threads in a thread pool are designed to be reused once the task is completed and protect against the unexpected failure of the task, such as raising an exception, without affecting the worker thread itself.
+
 
 ## Amdahl's Law
 
