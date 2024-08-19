@@ -2,6 +2,40 @@
 
 ## Terms
 
+### Layers of Concurrency
+- **Hardware layer**: This is the lowest level, where machine instructions are executed using signals to interact with physical components. Understanding this layer is crucial for optimizing application performance on modern, complex architectures.
+- **Runtime system layer**: This layer includes operating systems, system calls, and device drivers. While it hides complexities from the application layer, it significantly affects concurrent systems.
+- **Application layer**: This is the highest level, where software engineers write code to implement algorithms and business logic using abstract concepts.
+
+
+### Task & Serial execution & Sequential computations
+
+- A **task** can be thought of as a logically independent piece of work.
+- **Sequential computing** means each task in a program depends on the execution of all previous tasks in the order in which they are listed in the code.
+- **Serial execution** refers to a set of ordered instructions executed one at a time on
+one processing unit. Serial execution is required when the input to each task
+requires the output of a previous task.
+- **Parallel execution** refers to executing multiple computations at the same time.
+Parallel execution can be used when the tasks can be performed independently.
+- **Parallel computing** uses multiple processing elements simultaneously to solve a problem. This often leads to significant program redesign—decomposition of the problem, creating or adapting an algorithm, adding  synchronization points to the program, and so on.
+
+**Sequential Computations**
+- **Definition**: Tasks are executed one after the other, following a linear order.   
+- **Characteristics**:
+    - Predictable and deterministic.
+    - Often simpler to reason about and debug.
+    - Limited by the speed of a single processor.
+    - Example: A single-threaded program performing calculations step-by-step.
+
+**Serial execution**
+- **Definition**: 
+    - Tasks are executed one at a time on a single processor. 
+    - Serial execution is like a single-lane road where cars can only pass one at a time.
+- **Characteristics**:
+    - Similar to sequential computations but more specific to hardware execution.
+    - Can be part of a larger concurrent system.
+    - Example: A single thread running on a single core of a multi-core processor.
+
 ### Race condition
 
 Race conditions occur when multiple threads or processes access shared data concurrently, and the outcome depends on the unpredictable order of execution. Locking mechanisms are fundamental tools to prevent these issues. 
@@ -133,7 +167,64 @@ Optimistic locking is a concurrency control mechanism used in computer systems, 
 
 **Testing and Debugging**: Concurrency-related bugs can be difficult to reproduce and debug due to their non-deterministic nature. Testing and debugging concurrent systems require specialized techniques and tools to identify and fix issues effectively.
 
+## Hardware
 
+- Execution depends on the actual hardware. Modern hardware has multiple processing resources—multiple cores, multiprocessors, or computer clusters—and they are optimized for executing programs.
+- Flynn’s taxonomy describes four types of architecture based on whether the system processes single or multiple instructions at a time (SI or MI) and whether each instruction acts on single or multiple blocks of data (SD or MD).
+- A GPU is an example of SIMD architecture. It’s optimized for highly parallel task execution.
+- Modern multiprocessors and multicore processors are examples of MIMD. They are far more complex because they’re multipurpose.
+- The processor or CPU is the brain of the computer system, but it’s difficult to work with directly. In programming, an additional level of abstraction is introduced between the application and the system: the runtime system.
+- To exploit parallel execution, an application developer needs a processing unit that is suitable for the problem. A CPU has a higher clock frequency and a wider set of instructions that can be executed in parallel, while a GPU operates at a lower clock speed and executes only one instruction across all of the cores, but it does so at incredible speed due to massive parallelism
+
+## Amdahl's Law
+
+Amdahl's Law is a formula used in computer architecture to predict the maximum potential speedup in latency of the execution of a task at fixed workload that can be expected of a system whose resources are improved. 
+
+In simpler terms, it tells us that the overall performance improvement of a system is limited by the portion of the system that cannot be improved. This is often referred to as the **bottleneck**.
+
+### **Key points:**
+- **Speedup is limited**: No matter how much you improve the parallel part of a system, the overall speedup is capped by the sequential part.   
+- **Identifies bottlenecks**: It helps pinpoint the parts of a system that need the most improvement.
+- **Practical implications**: It's crucial for understanding the limits of parallel computing and for making informed decisions about system design.
+
+### **Formula:**
+```
+S = 1 / (1 - P + P/N)
+```
+- S: Speedup
+- P: Proportion of the program that can be parallelized   
+- N: Number of processors
+
+
+### **Ví dụ**
+Giả sử một chương trình có 80% phần có thể song song hóa và 20% phần phải thực hiện tuần tự. Nếu chúng ta tăng số lượng bộ xử lý lên gấp đôi, tốc độ tăng tối đa sẽ là:
+
+```
+S = 1 / (1 - 0.8 + 0.8/2) = 1.67
+```
+
+Điều này có nghĩa là hiệu suất chỉ tăng được 67%. Dù tăng số lượng bộ xử lý lên bao nhiêu đi nữa, hiệu suất vẫn bị giới hạn ở mức này do phần 20% phải thực hiện tuần tự.
+
+## Gustafson's Law
+
+Gustafson's Law is a principle in computer architecture that describes the potential speedup of a task using parallel computing compared to running it on a single-core machine. Unlike Amdahl's Law, which focuses on a fixed problem size, Gustafson's Law considers the possibility of increasing problem size as the number of processors grows. 
+
+
+### Key points 
+- **Problem size scaling**: It assumes that the problem size can be increased proportionally to the number of processors.   
+- **Constant execution time**: The overall execution time remains constant even as the problem size and number of processors increase.
+- **Linear speedup**: The speedup achieved is often linear with the number of processors.
+
+
+Feature	| Amdahl's Law	| Gustafson's Law
+---- | ---- | ----
+Problem size	| Fixed	| Increases with number of processors
+Speedup	| Limited by sequential portion	| Can approach linear speedup
+Focus	| Improving performance of existing applications |	Solving larger problems
+
+**Real-world Implications**
+- Amdahl's Law: More relevant for optimizing existing applications on multi-core processors.
+- Gustafson's Law: More applicable for large-scale parallel computing problems like scientific simulations and data analysis.
 
 ## Lamport's bakery algorithm
 
