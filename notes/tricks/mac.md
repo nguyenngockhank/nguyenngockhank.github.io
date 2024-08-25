@@ -19,6 +19,15 @@ Command + Shift + G
 
 Mở & sửa file `hosts`
 
+## Tăng tốc độ gõ phím terminal 
+
+```
+defaults write -g InitialKeyRepeat -int 12
+
+defaults write -g KeyRepeat -int 0.9
+```
+
+
 ## Sủ dụng Preview
 
 [Dùng Preview trong Mac để phóng to chi tiết, nhấn mạnh một vùng, ghi chú, chỉnh sửa ảnh...
