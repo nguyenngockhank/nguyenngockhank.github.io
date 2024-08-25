@@ -3,6 +3,9 @@
 Distributed systems are complex and challenging to design, implement, and maintain. They require careful planning, attention to detail, and a deep understanding of the underlying principles and technologies. Unfortunately, many developers make common mistakes when building distributed systems, which can lead to poor performance, reliability, and security. In this article, we will discuss some of the most common mistakes made in distributed systems and how to avoid them.
 
 
+![Dont build distributed system](https://i.pinimg.com/originals/ce/9f/a5/ce9fa57641c64ceac8e0fcf0af10ab7b.jpg)
+
+
 ## 1. Lack of Proper Testing
 One of the most common mistakes made in distributed systems is a lack of proper testing. Testing distributed systems is challenging because they involve multiple components, networks, and protocols. Developers must test their systems under various conditions, such as network latency, packet loss, and node failures. They must also test their systems at scale to ensure that they can handle the expected load. Without proper testing, developers risk deploying systems that are unreliable, insecure, or perform poorly.
 

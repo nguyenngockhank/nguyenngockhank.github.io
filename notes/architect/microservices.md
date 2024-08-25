@@ -134,6 +134,26 @@ We want related behavior to sit together, and unrelated behavior to sit elsewher
 
 [Read 2PC more](./2pc/)
 
+
+### Avoid distributed tx; fix granularity instead
+
+90% of the frustration in microservices is due to the wrong size.
+
+![Avoid distributed tx](https://i.pinimg.com/originals/24/a6/28/24a628d7191f9196ab9c01c4e040b2b5.jpg)
+
+We all want decoupled services; they are easy to maintain, scale, and more (you probably know all the cases now).
+
+But that trivial ATOMICITY you had in monolithic applications becomes a problem in distributed ones.
+
+When we make these smaller parts too tiny, we end up needing to tie them together more than we should.
+ 
+Let me tell you a secret: it is totally fine to merge those services. 
+
+Remember, some of these decisions were made with less domain knowledge. 
+
+Sure, you will find exceptions where two different services need different architectures, even frameworks. In those situations, go for the SAGAs they will help.
+
+
 ### Sagas
 
 **Orchestration based SAGA**

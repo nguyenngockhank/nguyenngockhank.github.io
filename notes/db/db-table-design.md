@@ -12,10 +12,51 @@ The CAP theorem says that a distributed system can deliver on only two of three 
 
 ![CAP](https://i.pinimg.com/originals/5d/45/a0/5d45a01c6048b0ec7c085f8191932212.jpg)
 
-## Normalization 
+## Tips 
+
+![](https://i.pinimg.com/originals/b8/0b/ed/b80bed198927552727cd7b82943185b9.jpg)
+
+### Normalize Your Data
 
 ![Normalization](https://i.pinimg.com/736x/f9/54/e0/f954e03a9bd7c5879a607655cf5f9480.jpg)
 
+- First Normal Form (1NF): Each column should contain atomic (indivisible) values, and each column should contain values of a single type.
+- Second Normal Form (2NF): Every non-key column must depend on the entire primary key, not just part of it. This applies to tables with composite primary keys (a primary key made of multiple columns).
+- Third Normal Form (3NF): Every non-key column must depend only on the primary key and nothing else (i.e., no transitive dependencies).
+
+
+### Use Appropriate Data Types
+
+Choosing the right data types will impact performance and storage efficiency. Always:
+
+- Use the smallest data type that can hold your data.
+- **Avoid** using `TEXT` or `BLOB` unless absolutely necessary.
+- Be mindful of **precision requirements** for `numeric data` types.
+- Use `DATE` or `TIMESTAMP` for **date/time** data instead of strings.
+
+### Indexing Strategy
+
+Indexes will improve query performance but can also slow down `INSERT`, `UPDATE`, and `DELETE` operations if overused. Develop a balanced indexing strategy:
+
+- Index columns are often used in `WHERE`, `JOIN`, and `ORDER BY` clauses.
+- Avoid indexing columns that are often updated.
+- Use composite indexes for queries involving many columns.
+**Example**: Add an index if you do lookups often for the email column.
+
+### Use Constraints and Relationships
+
+Enforce data integrity and relationships through constraints:
+
+- Use primary keys to identify rows uniquely.
+- Define foreign keys to enforce referential integrity between tables.
+- Define unique constraints for columns that require unique values.
+- Apply check constraints to enforce domain rules at the database level.
+**Example**: Use `NOT NULL` constraints to ensure critical columns are always filled.
+
+### Partition Large Tables
+- Horizontal Partitioning: Split a table into many tables containing the same columns but different rows.
+- **Vertical Partitioning**: Split a table into many tables containing different columns.
+**Example**: Separate infrequently accessed columns into a different table to reduce the size of the main table.
 
 ## DB Isolation options
 

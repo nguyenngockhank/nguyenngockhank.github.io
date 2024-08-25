@@ -14,6 +14,29 @@ There is no super storage for all cases. Here is a few of my notes about it:
 
 [Ref](https://blog.devgenius.io/mastering-the-database-duality-exploring-the-realm-of-sql-and-nosql-with-cheatsheet-33a73f752460)
 
+
+## Hot, Warm, and Cold data
+
+![data storage](https://i.pinimg.com/originals/3b/8b/fe/3b8bfedd921c339a95d8cfbfd6af5a40.jpg)
+
+**Hot data**
+- What It Is: Data that you need often and fast.
+- Where It's Stored: On fast storage like SSDs or even in memory.
+- Examples: Things like product recommendations or cached search results.
+- Cost: Storing hot data is expensive, but accessing it is cheap because it's always ready to go.
+
+**Warm Data**
+- What It Is: Data you access occasionally, like once a month.
+- Where It's Stored: On slower but still accessible storage, e.g., Amazon S3 Infrequently Accessed Tier, Google Nearline.
+- Examples: Older logs or data that are not as frequently needed. This could be data that you use for reporting or analytics.
+- Cost: It is cheaper to store than hot data, but accessing it costs a bit more.
+
+**Cold Data**
+- What It Is: Data are rarely accessed and primarily kept for long-term storage.
+- Where It's Stored: On the cheapest storage options, like HDDs or cloud archive services.
+- Examples: Old backups or records that you keep for compliance reasons.
+- Cost: It is very cheap to store but can be slow and expensive to access.
+
 ## Database Select process
 
 ![choose-db-process](./img/choose-db.jpeg)

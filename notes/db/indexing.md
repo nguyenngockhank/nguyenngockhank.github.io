@@ -15,6 +15,30 @@ Database indexes are not hashmaps. Hashmap is an in-memory data structure. You m
 LSM = Log-structured merge-tree
 B-Tree = Binary Tre
 
+## Cardinality
+
+![Cardinality](https://i.pinimg.com/originals/06/b6/2b/06b62b6acb0010624e641b517cf96efd.jpg)
+
+Cardinality refers to the number of unique values in a column relative to a table's total number of rows. 
+-  **High Cardinality** means the column has many unique values.
+-  **Low Cardinality** means the column has few unique values.
+
+Creating an index on a column with low Cardinality is most of the time ineffective because:
+1. Low Cardinality means each indexed value points to many rows, reducing the index's ability to narrow down the search.
+2. Maintaining an index has a cost of storage and update time. For low cardinality columns, this overhead might outweigh the benefits.
+3. Database query optimizers are smart; they know column statistics, including Cardinality. When they detect a low cardinality index, they often ignore it and perform a **full table scan** instead.
+
+
+**When to consider a Low Cardinality column?**
+
+There are scenarios where indexing a low cardinality column might be beneficial.
+
+For example, combining low and high cardinality columns can be effective.
+
+```sql
+CREATE INDEX idx_dept_emp ON Employees(Department, ID);
+```
+
 
 ## Why isn't a trie index used in databases for string indexing?
 
