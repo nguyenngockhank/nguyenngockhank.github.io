@@ -6,7 +6,7 @@ tags: ["Tools", "Overview", "Kafka"]
 
 <TagLinks />
 
-![Kafka overview](https://i.pinimg.com/564x/88/ed/4d/88ed4d785c0a726ce5b2f7f83b9ba776.jpg)
+![Kafka 101](https://i.pinimg.com/originals/cc/64/01/cc6401766323277d004da6120f564a36.jpg)
 
 ## Why kafka fast?
 

@@ -51,8 +51,14 @@ tags: ["Overview"]
 
 ## Cost reduction 
 
+### Techniques
+
 ![Cost reduction](https://i.pinimg.com/564x/a7/37/c3/a737c3735a050749518a47823cfc9c2d.jpg)
 
+### Strategies
+![Cloud cost optimization](https://i.pinimg.com/originals/67/33/d6/6733d679dce40964c815927af1a51593.png)
+
+### Hidden costs
 ![Hidden costs](https://i.pinimg.com/736x/74/f3/ab/74f3ab399ad1c6b3efbe7854c3ab912e.jpg)
 
 ## Anti patterns

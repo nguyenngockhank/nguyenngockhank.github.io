@@ -38,7 +38,6 @@ const commonDocs = [
     title: "Clean code",
     children: cleanCodeDocs,
   },
-  'deployment-overview',
   'i18n',
   'seo',
   'crawl',
@@ -70,6 +69,33 @@ const reactDocs = [
 ].map(prefixMapFn('/react/'));
 
 const toolDocs = [
+  '/devops/devops_overview',
+  {
+    title: "Redis",
+    children: [
+      '/tools/redis_overview',
+      '/db/redis',
+    ]
+  },
+  {
+    title: "Kafka",
+    children: [
+      'kafka/kafka_overview',
+      'kafka/kafka',
+      'kafka/kafka-vs-jetstream',
+    ].map(prefixMapFn('/tools/'))
+  },
+  {
+    title: "Linux",
+    children: [
+      'linux_notes',
+      'linux_ssh',
+      'crontab',
+      'grep',
+      'linux_network',
+    ].map(prefixMapFn('/linux/'))
+  },
+  '/devops/deployment-overview',
   '/tools/docker',
   '/tools/k8s/k8s',
 
@@ -85,31 +111,7 @@ const toolDocs = [
   '/tools/puppeteer',
   '/tools/vscode',
   '/tools/nginx',
-  {
-    title: "Redis",
-    children: [
-      '/tools/redis_overview',
-      '/db/redis',
-    ]
-  },
-  {
-    title: "Kafka",
-    children: [
-      'kafka/kafka_overview',
-      'kafka',
-      'kafka-vs-jetstream',
-    ].map(prefixMapFn('/tools/'))
-  },
-  {
-    title: "Linux",
-    children: [
-      'linux_notes',
-      'linux_ssh',
-      'crontab',
-      'grep',
-      'linux_network',
-    ].map(prefixMapFn('/linux/'))
-  }
+
 ];
 
 const networkDocs = [
@@ -211,7 +213,7 @@ module.exports = [
     children: commonDocs,
   },
   {
-    title: "Tools / Toys",
+    title: "Devops",
     children: toolDocs,
   },
   {

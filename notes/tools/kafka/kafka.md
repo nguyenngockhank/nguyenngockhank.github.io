@@ -1,5 +1,7 @@
 # Kafka notes
 
+![Kafka overview](https://i.pinimg.com/564x/88/ed/4d/88ed4d785c0a726ce5b2f7f83b9ba776.jpg)
+
 ## Architecture 
 
 Event streaming platform

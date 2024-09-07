@@ -4,6 +4,8 @@ tags: ['Pattern', "Architecture"]
 
 # Serverless overview
 
+![Serverless computing](https://i.pinimg.com/originals/e2/c4/22/e2c42229a63c731f4b73f9c5adb82fb7.jpg)
+
 ## Architecture
 
 ![Serverless Architecture](https://i.pinimg.com/originals/d0/13/51/d013513b67a7f22f02720c7a5f2c0c92.gif)

@@ -16,9 +16,12 @@ tags: ["Overview"]
 
 ![Cheatsheet](https://i.pinimg.com/originals/2e/f1/e2/2ef1e2df2a9d233cc8263ecd626f1ecf.jpg)
 
-### Trade-offs
+## Trade-offs
+
+![10 Trade-offs](https://i.pinimg.com/originals/ba/c2/d8/bac2d80dec0ee6dfa51f4da87563bc09.jpg)
 
 ![Trade-offs](https://i.pinimg.com/originals/d6/1b/ab/d61bab5a9e06681e042d546ee3ab6d97.jpg)
+
 
 ## Common problems
 
@@ -38,6 +41,11 @@ tags: ["Overview"]
 ![High Availability](https://i.pinimg.com/originals/45/fa/a4/45faa4e8462022687dde510818f6ce7d.jpg)
 
 ## Scalability 
+
+### Data layer
+
+![Data layer](https://i.pinimg.com/originals/ea/b7/fe/eab7feb3d7f29dbb574e03bb6e6264fd.jpg)
+
 
 ### DB Scaling
 
