@@ -102,6 +102,44 @@ See more:
 - [Class Table Inheritance](https://www.martinfowler.com/eaaCatalog/classTableInheritance.html)
 - [Concrete Table Inheritance](https://www.martinfowler.com/eaaCatalog/concreteTableInheritance.html)
 
+## Entity-Attribute-Value (EAV) 
+
+Entity-Attribute-Value (EAV) is a database design paradigm that is particularly effective for handling **dynamic** and **unpredictable** data structures. Instead of creating a fixed schema with predefined columns, EAV stores data in a more flexible manner:
+
+- **Entity**: Represents a subject or object.
+- **Attribute**: Describes a property or characteristic of an entity.
+- **Value**: The specific data associated with an attribute for a given entity.
+
+### How EAV Works
+In an EAV database, there are typically three main tables:
+
+1. **Entity Table**: Stores unique identifiers for each entity.
+2. **Attribute Table**: Contains a list of all possible attributes that can be associated with entities.
+3. **Value Table**: Relates entities, attributes, and their corresponding values.
+
+
+### Examples
+
+**Simple DB Design** 
+![Simple EAV DB Schema](https://i.pinimg.com/originals/1c/a4/68/1ca4686217f9bdff495a41ca9fcba12e.png)
+
+
+**Magento DB Design** 
+![Magento DB Schema](https://i.pinimg.com/originals/83/73/b3/8373b3432033e426bf6f0bd27f4fc02e.webp)
+
+### Pros & cons
+
+**Advantages:**
+- **Flexibility**: New attributes like "PreferredColor" or "LastLoginDate" can be added without modifying the database schema.
+- **Scalability**: Handles large datasets with varying customer information efficiently.
+- **Data Mining**: Ideal for analyzing customer preferences, purchase behavior, and other patterns.
+
+
+**Disadvantages** :
+- **Query Performance**: Queries that involve multiple attributes can be less efficient than in a traditional relational database, especially for large datasets.
+- **Complexity**: Managing the EAV model can be more complex than traditional relational databases, requiring careful consideration of indexing and query optimization.
+
+
 ## Metadata DB Table Design 
 
 Wordpress database is a great example 
