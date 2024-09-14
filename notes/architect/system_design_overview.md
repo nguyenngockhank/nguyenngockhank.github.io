@@ -99,4 +99,24 @@ tags: ["Overview"]
 
 ![Idempotency](https://i.pinimg.com/736x/66/e4/f8/66e4f81e0acdfe9b0bbc1795b25cad85.jpg)
 
-## CAP Theorem & PACELC Theorem
+## Theorem
+
+### CAP Theorem
+
+The CAP Theorem, also known as **Brewer's Theorem**, is a fundamental principle in distributed computing that states:
+
+> In a distributed system, it is impossible to simultaneously achieve Consistency, Availability, and Partition Tolerance.
+
+### PACELC Theorem
+
+The PACELC theorem expands on the CAP theorem and states: 
+
+> In distributed computer systems, you have to make tradeoffs between consistency and availability in the presence of network partitions, and between consistency and latency in the absence of network partitions.
+
+Feature | CAP Theorem	| PACELC Theorem
+------ | --------------- | ----------
+Focus	|  Network partitions | 	Both partitions and non-partitioned scenarios
+Guarantees	|  Consistency, Availability, Partition Tolerance	|  Consistency, Availability, Partition Tolerance, Latency
+Trade-offs in Partitioned Scenarios | 	Consistency vs. Availability	|  Consistency vs. Availability
+Trade-offs in Non-Partitioned Scenarios	|  N/A	|  Latency vs. Consistency
+Best Use Cases	|  Systems that prioritize consistency or availability in the face of partitions | 	Systems that need to balance consistency, availability, and latency in all scenarios

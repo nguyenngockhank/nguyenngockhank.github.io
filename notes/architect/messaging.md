@@ -6,9 +6,10 @@ tags: ["DistributedSystem", "Communication", "MessageQueue", "PubSub"]
 
 <TagLinks />
 
-- asynchronous communication 
+## Type of message model
 - one-to-one communication (queuing model) 
 - one-to-many (Pub/Sub model) 
+- asynchronous communication 
 
 ![Messaging models](./img/mess-models.png)
 
@@ -53,6 +54,12 @@ how many messages can be processed / sec by messaging system.
 - The broker can become a bottleneck, where all messages need to squeeze through. This can affect performance
 - There is not network I/O which is absolutely necessary
 :::
+
+### Event broker as Scatter-Gather component
+Event broker can often be considered a Scatter-Gather component in microservice architectures.
+
+- **Scattering**: When an event is published to the event broker, it is broadcast to multiple subscribers (microservices) that are interested in that event. This is similar to the "scattering" phase of the Scatter-Gather pattern, where a task or data is distributed to multiple workers.
+- **Gathering**: While there's no explicit "gathering" phase as in the traditional **Scatter-Gather pattern**, the event broker acts as a centralized point where multiple microservices can asynchronously receive and process the same event. This effectively gathers the responses from different components, though not in a synchronized or coordinated manner.
 
 
 ## Models

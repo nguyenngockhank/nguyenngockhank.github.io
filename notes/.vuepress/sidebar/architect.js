@@ -1,6 +1,13 @@
 module.exports = [
     '',
-    'system_design_overview',
+    {
+        title: 'System design',
+        children: [
+            'system_design_overview',
+            'patterns/app-logic-patterns',
+            'transaction',
+        ]
+    },
     {
         title: 'Cloud',
         children: [
