@@ -100,8 +100,6 @@ const toolDocs = [
   '/tools/k8s/k8s',
 
   '/tricks/git',
-  '/node/npm',
-  // '/tools/redis',
   '/tricks/mac',
   '/tricks/youtube',
   '/tools/chrome',
@@ -189,6 +187,17 @@ const javascriptDocs = [
   '/javascript/kafka-in-node',
   '/snippets/firebase',
   '/javascript/clean-code',
+  {
+    title: "NodeJs",
+    children: [
+      'npm',
+      'n',
+      'module-resolution',
+      'node_arguments',
+      'modularity',
+      'tools',
+    ].map(prefixMapFn('/node/'))
+  },
   {
     title: 'Typescript',
     children: [
