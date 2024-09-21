@@ -180,6 +180,11 @@ https://jlvbcoop.com/en/eventbus-kubernetes/
 
 https://developers.redhat.com/blog/2020/05/11/top-10-must-know-kubernetes-design-patterns#behavioral_patterns
 
+
+### Scaling patterns
+
+![Scaling patterns](https://i.pinimg.com/originals/f0/7f/65/f07f658f829a40e723384845c8d4444c.jpg)
+
 ## On cloud 
 
 ### EKS 

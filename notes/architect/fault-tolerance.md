@@ -18,6 +18,23 @@ After further reading of Netflix blogs and wikis, it seemed the terms Fault Resi
 
 ![Cheatsheet](https://i.pinimg.com/originals/13/94/1f/13941f1dec6fcd28cd7f5a2ecab88e67.jpg)
 
+### 2 metrics for Resilient system
+
+![2 metrics for Resilient system](https://i.pinimg.com/originals/25/af/31/25af31741a249fcf5e17aadfc20e9f0e.jpg)
+
+**Error budgetting**
+
+```
+Allowable Downtime = Total tiem & (1 - Uptime %)
+```
+
+**Mean time to Recovery** (MTTR)
+
+```
+MTTR = Total Downtime / Number of incidents
+```
+
+
 ## Pattern List 
 
 There are various resilience patterns that can be applied to microservices, categorized by their impact on downstream and upstream components. Let's explore some of these patterns in detail.

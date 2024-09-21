@@ -78,6 +78,10 @@ Here's a breakdown of the key concepts:
 - `>>` (append redirection): Similar to `>,` but instead of overwriting, it appends the output to the end of the existing file.
 - `<` (input redirection): This feeds the contents of a file as standard input (stdin) to a command.
 
+### Logical volume management (LVM)
+
+![lvm](https://i.pinimg.com/originals/0e/56/12/0e5612a0eba95b8c77acf485dc407603.jpg)
+
 ## Linux admin tips & tricks
 
 ![Linux admin tips & tricks](https://i.pinimg.com/originals/a2/b4/1d/a2b41d97ea327209a6759b032a22f204.jpg)

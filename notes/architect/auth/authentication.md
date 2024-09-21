@@ -28,6 +28,19 @@ Authentication is the act of proving an assertion, such as the identity of a com
 - OAuth Authentication
 - API Key Authentication
 
+### API key vs Token 
+
+![API key vs Token](https://i.pinimg.com/originals/db/f0/1a/dbf01ac0e071ae556f3a25770083fc87.jpg)
+
+Feature | Api keys | Tokens 
+------- | -------- | ------
+Purpose | Application identification |  User authentication
+Lifespan | Long-lived, static |  Short-lived, dynamic
+Permissions |  Fixed set | User-specific, variable 
+User context |  No user information | Contains user data
+Security |  Less secure if compromised. Regular Rotation helps. |  More secure, limited lifespan
+
+
 ## Signal in Request 
 
 There is always a sign in HTTP request to be used for Authenication
