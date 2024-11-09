@@ -42,6 +42,10 @@
 - OAuth2
 - WebAuthn
 
+### Cheatsheet
+
+![Cheatsheet to build secure apis](https://i.pinimg.com/736x/e5/c4/9d/e5c49d04b098affa6f81900dceb674bd.jpg)
+
 ### Best practices
 ![API Security best practices](https://i.pinimg.com/originals/ae/16/d3/ae16d3c804c4d1e8f034ad659d208b45.jpg)
 

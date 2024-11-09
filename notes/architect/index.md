@@ -63,6 +63,9 @@
         - Circuit Breaker
         - Leader Election
 
+## Architectural Patterns
+
+![Architectural Patterns](https://i.pinimg.com/736x/c0/8d/52/c08d5287d81e1865a0ff1815c79d5ff8.jpg)
 
 ## Core responsibilities of the evolutionary architect: 
 - **Vision**: ensure there is a clearly comunicated technical vision for the system that will help your system meet the requirements of your customers & organization.

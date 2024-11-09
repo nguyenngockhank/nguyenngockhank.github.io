@@ -1,5 +1,9 @@
 # Ansible
 
+## Architecture
+
+![ansible architectuer](https://i.pinimg.com/736x/76/be/4a/76be4a0c1e2f0c98f12f1af2a2093ec3.jpg)
+
 ## Commands 
 
 ### Install 

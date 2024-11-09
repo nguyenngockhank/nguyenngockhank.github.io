@@ -2,6 +2,8 @@
 
 > GREP = Global Regular Expression search & Print
 
+![linux grep](https://i.pinimg.com/736x/37/7c/1f/377c1faac2c0a0a2dab716e0d030f941.jpg)
+
 ## Use cases
 
 - **Log analysis**: Search log files for errors, warnings, or specific events.

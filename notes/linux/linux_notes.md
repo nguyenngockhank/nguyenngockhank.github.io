@@ -24,10 +24,12 @@ The shell acts as the user interface for Linux. It allows you to interact with t
 
 ### File types
 
+![Linux File types](https://i.pinimg.com/736x/c7/3f/e1/c73fe100746d6777931a63b945ec45f9.jpg)
 ![Linux File types](https://i.pinimg.com/736x/82/ca/80/82ca80c7340753af7441fdffa4c7a09a.jpg)
 
 ### Permissions
 
+![Linux Perms](https://i.pinimg.com/736x/07/34/6b/07346b712ebb57ddd3313d096e30ae26.jpg)
 ![Linux Permissions](https://i.pinimg.com/736x/b9/f1/86/b9f186b2c9d4f5489ea2b091469bdc82.jpg)
 
 #### Permission Types
@@ -88,39 +90,7 @@ Here's a breakdown of the key concepts:
 
 ## Commands / Tools
 
-### Basic commands 
-
 ![Basic commands](https://i.pinimg.com/736x/14/bd/9a/14bd9a16da3028c21bbb946d72e1377e.jpg)
-
-![Commands cheatsheet](https://i.pinimg.com/736x/5b/90/77/5b90777aec62fd0aaa79be688b41a578.jpg)
-
-![Important commands](https://i.pinimg.com/736x/e8/2b/76/e82b7605591eb8de3fe5be75a6d2793c.jpg)
-
-### Log parsing tools
-
-![Log parsing](https://i.pinimg.com/originals/7e/b1/5e/7eb15ecc6732d3f5cb9922393a375891.jpg)
-
-![Log parsing 2](https://i.pinimg.com/564x/a1/1f/e7/a11fe7f0794e13a70856bf175acc5bfb.jpg)
-
-- group
-- ngrep
-- cut
-- sed
-- sort
-- uniq
-- diff
-- awk
-- head / tail
-- less
-- comm
-- csvcut
-- jq
-- tr
-- ccze
-
-### Network tools
-
-![Networking tools](https://i.pinimg.com/originals/c4/43/ff/c443ff43401968352c102d21972ca902.png)
 
 ## Datetime
 
@@ -135,25 +105,4 @@ Output example: `Australia/Melbourne`
 date +%Z
 ```
 **Output example**: `AEDT`. [Check list here](https://24timezones.com/time-zone/aedt)
-
-
-## Sử dụng `Vi`
-
-[SGK](https://helpdesk.inet.vn/knowledgebase/huong-dan-co-ban-su-dung-vi-trong-linux)
-
-Tóm tắt lệnh hay xài
-- `Esc` để chuyển đổi qua lại từ command mode với insert mode.
-- `:w!` lưu tập tin
-- `:x!` lưu tập tin và thoát
-- `:wq` ZZ lưu tập tin và thoát
-- `:q!` không lưu và thoát
-
-## Sử dụng `Nano`
-
-[SGK](https://hocvps.com/cach-su-dung-nano-editor/)
-
-- Ký hiệu `^` thay cho phím `Ctrl`
-- `Ctrl+O` lưu file
-- `Ctrl+X` thoát khỏi editor (có thể cần ấn thêm Y/N)
-- `Ctrl+W` search
 

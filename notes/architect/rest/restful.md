@@ -36,6 +36,12 @@ REST is easier to archive than SOAP.
 
 `HEAD`, `GET`, `OPTIONS` and `TRACE` have no side effects on server
 
+
+## Tips for API Design
+
+![Tips 4 design](https://i.pinimg.com/736x/19/2e/ef/192eeff1ebd8ae69da841d01bb538b14.jpg)
+
+
 ## Richardson Maturity Model
 
 Richardson Maturity Model is a measure of how RESTful an API definition is. It defines 4 levels

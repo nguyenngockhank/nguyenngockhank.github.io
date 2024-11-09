@@ -6,6 +6,10 @@ tags: ["Tools", "Performance", "Cache", "Redis", "Overview"]
 
 <TagLinks />
 
+## Learning Roadmap
+
+![Redis 101](https://i.pinimg.com/736x/bd/30/42/bd30421db001314c46adfc04acab8966.jpg)
+
 ## Architecture
 
 ![Architecture](https://i.pinimg.com/originals/f0/54/60/f05460c7100f173d446bc383c09c0903.jpg)

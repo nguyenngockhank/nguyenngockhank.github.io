@@ -89,9 +89,16 @@ const toolDocs = [
     title: "Linux",
     children: [
       'linux_notes',
-      'linux_ssh',
+      {
+        title: 'Linux Tools',
+        children: [
+          'bash_script',
+          'grep',
+          'linux_tools',
+          'linux_ssh',
+        ].map(prefixMapFn('/linux/'))
+      },
       'crontab',
-      'grep',
       'linux_network',
     ].map(prefixMapFn('/linux/'))
   },
