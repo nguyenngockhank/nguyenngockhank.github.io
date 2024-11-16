@@ -67,6 +67,17 @@ git remote rm <<<remote_name>>>
 git cherry-pick <<<commit_hash>>>
 ```
 
+To cherry-pick all the commits from commit A to commit B (where A is older than B), run:
+
+```sh
+git cherry-pick A^..B
+```
+
+If you want to ignore A itself, run:
+```sh
+git cherry-pick A..B
+```
+
 ### **Override last commit**
 ```sh
 git commit --amend -m "Message"
@@ -162,7 +173,15 @@ Then, use like this
 w3tech git clone git@bitbucket.org:chromawallet/stuttgart-mp.git
 ```
 
+## Errors
 
+```
+error: cannot open '.git/FETCH_HEAD': Permission denied
+```
+
+Solution: `sudo chown -R <username> .`
+
+Eg: `sudo chown -R ubuntu .`
 ## Refs 
 
 [Git Cheatsheet](https://education.github.com/git-cheat-sheet-education.pdf)
