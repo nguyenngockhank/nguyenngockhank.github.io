@@ -93,6 +93,12 @@ Security        |	Low	               |    High |	Moderate
 
 ![Https encryption](https://i.pinimg.com/originals/c8/a2/24/c8a224f4f68f596977121025703d8189.gif)
 
+### Encryption:
+- **Public-Key Cryptography**: HTTPS uses a combination of public-key and symmetric-key cryptography to secure communication.
+    - **Public Key**: This key is publicly available and used to encrypt data.   
+    - **Private Key**: This key is kept secret by the website owner and is used to decrypt data encrypted with the public key.   
+- **Symmetric-Key Encryption**: After the initial handshake using public-key cryptography, a symmetric key is generated and used for faster encryption and decryption of the actual data transfer.
+
 ## Hashing
 
 ### Store pass in DB
