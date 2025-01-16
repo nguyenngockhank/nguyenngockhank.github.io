@@ -15,6 +15,17 @@
 
 ![Devops tools](https://i.pinimg.com/originals/97/0e/4b/970e4b986041dc7eb3778974f611c191.jpg)
 
+## Iac landscape
+
+**Benefits**
+- Availability
+- Performance
+- Repeatable infrastructure
+- Cost efficiency
+- Better quality of service
+
+![Iac landscape](https://i.pinimg.com/736x/c0/5c/1c/c05c1cbb08f94f7e194a541887433655.jpg)
+
 ## Manage config
 
 ![Manage config vs IaC](https://i.pinimg.com/originals/31/98/1f/31981fbab7c45fe45d8319e9b316ceb2.jpg)

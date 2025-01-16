@@ -42,20 +42,11 @@ tags: ["Overview"]
 
 ## Scalability 
 
-### Data layer
+[👉👉👉 READ MORE](./scalability.md)
 
-![Data layer](https://i.pinimg.com/originals/ea/b7/fe/eab7feb3d7f29dbb574e03bb6e6264fd.jpg)
+![Crash course Architectual scalability](https://i.pinimg.com/736x/ca/b6/91/cab6918414f243eb10beff0b85894991.jpg)
 
-
-### DB Scaling
-
-![DB Scaling](https://i.pinimg.com/originals/85/31/93/853193390c22d55b2a9ff1e4b9eebc0b.jpg)
-
-### Load balancing
-![LB use cases](https://i.pinimg.com/originals/a3/e2/cc/a3e2cc55eb078dfad046b58aca6d3e0e.jpg)
-
-### API Gateway 
-![API Gateway use cases](https://i.pinimg.com/originals/f4/6f/12/f46f1212ed3c9840e7e1c8d50d257d06.png)
+[👉👉👉 READ MORE](./scalability.md)
 
 ## Microservices 
 

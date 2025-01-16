@@ -4,6 +4,7 @@ module.exports = [
         title: 'System design',
         children: [
             'system_design_overview',
+            'scalability',
             'patterns/app-logic-patterns',
             'transaction',
         ]

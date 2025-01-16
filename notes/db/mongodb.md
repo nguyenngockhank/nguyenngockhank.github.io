@@ -234,15 +234,18 @@ https://www.mongodb.com/docs/manual/core/query-plans/
 https://studio3t.com/knowledge-base/articles/build-mongodb-aggregation-queries/
 https://studio3t.com/knowledge-base/categories/import-export/
 
+
+### Tools
+- [Compass](https://www.mongodb.com/products/tools/compass): The GUI for MongoDB 
+- [studio3t](https://studio3t.com/download/)
+- [robomongo](https://robomongo.org/)
+
 ## Others
 
 - [cassandra-vs-mongodb](https://www.instaclustr.com/blog/cassandra-vs-mongodb/)
 - [MongoDB Limits and Thresholds](https://www.mongodb.com/docs/manual/reference/limits/)
-
-### Tools
-- [studio3t](https://studio3t.com/download/)
-- [robomongo](https://robomongo.org/)
 - [Mongoose vs. MongoDB](https://leanylabs.com/blog/mongoose-vs-mongodb/)
+
 
 ### Running on docker
 
