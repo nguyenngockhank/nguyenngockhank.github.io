@@ -12,8 +12,10 @@
 
 ```sh
 python3 -m pip install --upgrade pip
-
 pip install ansible
+
+# OR
+brew install ansible
 ```
 
 ### Invertory file
@@ -48,11 +50,6 @@ Host server-uat
 ansible-inventory -i inventory.ini --list
 ```
 
-### Ping
-
-```sh
-ansible myhosts -m ping -i inventory.ini
-```
 
 ### Execute a command on servers
 ```sh

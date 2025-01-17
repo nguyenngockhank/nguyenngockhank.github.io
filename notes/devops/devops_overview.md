@@ -33,3 +33,7 @@
 ## Observability 
 
 ![Devops Observability](https://i.pinimg.com/originals/af/b3/cb/afb3cb3f571e1d0dc9d1d0fa3a2df25a.jpg)
+
+## Notes 
+- [Terraform](./terraform.md)
+- [Ansible](./ansible.md)

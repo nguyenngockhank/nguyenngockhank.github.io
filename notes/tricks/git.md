@@ -97,6 +97,11 @@ git reflog
 git log --reflog
 ```
 
+## Git-secret
+
+Store private data in git repo. [Read more](./git-secret.md)
+
+
 ## Others
 
 ### Last-Updated timestamp

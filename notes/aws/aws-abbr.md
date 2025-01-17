@@ -4,6 +4,7 @@
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
+ACM  | AWS Certificate Manager | 
 [ARN](./arn.md)  | Amazon Resource Name | 
 ALB  | Application Load Balancing | L7
 [ASG](./elb/#auto-scaling-group-asg)  | Auto Scaling Groups 
@@ -45,13 +46,15 @@ DX | Direct Connect
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
+SES  | Amazon Simple Email Service | [Detail](https://aws.amazon.com/ses/)
+ECR  | Amazon Elastic Container Registry | [Detail](https://aws.amazon.com/ecr/)
+ECS  | Amazon Elastic Container Service | [Detail](https://aws.amazon.com/ecs/)
+[ELB](./elb/)  | Elastic Load Balancing | [Detail](https://aws.amazon.com/elasticloadbalancing/)
 [EC2](./ec2/)  | Elastic Compute Cloud
-[ELB](./elb/)  | Elastic Load Balancing
 [EFS](./efs/)  | Elastic File System |
 [EBS](./ebs.md) | Elastic Block Store | 
-ECR  | Elastic Container Registry
 [ENI](./misc.md#elastic-network-interfaces-eni) | Elastic Network interface
-EIP | Elastic IP 
+EIP | Elastic IP  | [Detail](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html)
 ETL | Extract, Transform and Load
 ECMP | Equal-cost multi-path routing
 
@@ -78,7 +81,7 @@ IOPS | input/output operations per second |
 IaC  | Infrastructure as Code
 IA   | Infrequent Access
 IANA | Internet Assigned Numbers Authority
-IGW  |  Internet Gateway
+IGW  | Internet Gateway
 
 
 ## K
@@ -129,7 +132,8 @@ RAM | Resource Access Manager
 
 Abbr | Meaning  | Desc
 ---  | ----- | ---
-[S3](./s3.md)   | Simple Storage Service
+[S3](./s3.md) | Simple Storage Service | [Detail](https://aws.amazon.com/s3/)
+SES | 
 SLA | Service-level agreements
 SLD | Second Level Domain
 SDK  | Software Development Kit
