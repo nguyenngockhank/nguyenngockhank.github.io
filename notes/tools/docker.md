@@ -56,6 +56,95 @@ This is where Docker images are stored. Docker Hub, for instance, is a widely-us
 
 ![Docker use cases](https://i.pinimg.com/564x/ca/e4/4c/cae44c113990bb6f9637a3dc25693d29.jpg)
 
+
+## Reduce Docker Image Size
+
+### 1. Using distroless/minimal base images. 
+Use `Alpine`: Lightweight, Minimalist, Security-focused
+
+### 2. Multistage builds
+
+:::: tabs
+
+::: tab Before
+```sh
+FROM node:16
+
+COPY . .
+
+RUN npm install
+
+EXPOSE 8080
+
+CMD [ "node", "index.js" ]
+```
+::: 
+
+::: tab After
+```sh
+FROM node:16 as build
+
+WORKDIR /app
+COPY package.json index.js env ./
+RUN npm install
+
+FROM node:alpine as main
+
+COPY --from=build /app /
+EXPOSE 8080
+CMD ["index.js"]
+```
+
+- `COPY --from=build /app /`: This is the key to multi-stage builds. It copies the entire `/app` directory (including the *node_modules* folder and your application code) from the first stage (**build**) into the root directory (`/`) of the current stage (**main**).  This effectively transfers the built application into the much smaller Alpine-based image.
+:::
+::::
+
+## 3. Minimizing the number of layers
+
+Docker images work in the following way – each `RUN`, `COPY`, `FROM` Dockerfile instructions add a **new layer** & each layer adds to the build execution time & increases the storage requirements of the image.
+
+### 4. Understanding caching
+
+As Docker uses layered filesystem, each instruction creates a layer. Due to which, Docker caches the layer and can reuse it if it hasn’t changed. => **installing dependencies & packages earlier** inside the `Dockerfile` before the `COPY` commands.
+
+:::: tabs 
+
+::: tab Better
+```sh
+FROM ubuntu:latest
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update -y && \
+    apt-get upgrade -y && \
+    apt-get install -y vim net-tools dnsutils
+
+COPY . .
+```
+:::
+
+::: tab "Less Optimal"
+
+```sh
+FROM ubuntu:latest
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+COPY . .
+
+RUN apt-get update -y && \
+    apt-get upgrade -y && \
+    apt-get install -y vim net-tools dnsutils
+```
+:::
+
+::::
+
+### 5. Keeping data elsewhere
+- As a rule, only the **necessary files** need to be copied over the docker image. Docker can ignore the files present in the working directory if configured in the `.dockerignore` file.
+- Storing **application data** in the image will unnecessarily increase the size of the images.
+- It’s highly recommended to use the volume feature of the container runtimes to keep the image separate from the data.
+
 ## Commands 
 
 ![Docker commands](https://i.pinimg.com/564x/e2/2f/9a/e22f9ae8c602a7662a737344170cd597.jpg)
