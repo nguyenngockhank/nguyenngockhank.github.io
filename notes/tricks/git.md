@@ -97,6 +97,18 @@ git reflog
 git log --reflog
 ```
 
+### Remove a file from git history 
+
+::: warning
+This is a destructive action that rewrites the history of the entire repository. Make sure you know what you are doing
+:::
+
+```sh
+git filter-branch --force --index-filter \
+  "git rm --cached --ignore-unmatch Game_Changer_Static_Woltemade_5a9b31f5a4.webm" \
+  --prune-empty --tag-name-filter cat -- --all
+```
+
 ## Git-secret
 
 Store private data in git repo. [Read more](./git-secret.md)

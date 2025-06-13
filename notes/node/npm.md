@@ -211,3 +211,22 @@ Common Npx Use Cases:
 - **Trying out packages**: Use npx to quickly test a package without installing it globally.
 - **Running scripts**: If a package provides a script, you can run it with npx.
 - **Creating temporary projects**: Use `npx` to create a new project directory and install necessary packages for a one-time task.
+
+
+## Errors
+
+
+```sh
+npm ERR! EACCES: permission denied, rename '/Users/nguyenkhanh/.npm/_cacache/tmp/5155ee36' -> '/Users/nguyenkhanh/.npm/_cacache/content-v2/sha512/b8/6c/e9ddd2f819f343cfe8ce6fc36293556b7ead4b1e6d331128b3ac68470021621655127e55409d6b94023959973e577cb873195bee9c6e1576ba70f020f69e'
+npm ERR! File exists: /Users/nguyenkhanh/.npm/_cacache/content-v2/sha512/b8/6c/e9ddd2f819f343cfe8ce6fc36293556b7ead4b1e6d331128b3ac68470021621655127e55409d6b94023959973e577cb873195bee9c6e1576ba70f020f69e
+npm ERR! Remove the existing file and try again, or run npm
+npm ERR! with --force to overwrite files recklessly.
+```
+
+=> 
+
+::: tip 
+```sh
+sudo chown -R $USER /usr/local/lib/node_modules
+```
+:::
