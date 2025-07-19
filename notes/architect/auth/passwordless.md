@@ -36,6 +36,9 @@ Alternatively, a hardware or software key can be used to generate OTPs for multi
 
 A passkey is a digital credential that replaces traditional passwords. It's a more secure and convenient way to log in to websites and apps.
 
+[Detail](./passkey.md)
+
+
 ![Passkeys](https://i.pinimg.com/originals/29/c4/41/29c441a2a7b1007754e382c2458ceda4.png)
 
 ### How it works:

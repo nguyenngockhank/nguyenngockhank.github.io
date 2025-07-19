@@ -229,4 +229,37 @@ npm ERR! with --force to overwrite files recklessly.
 ```sh
 sudo chown -R $USER /usr/local/lib/node_modules
 ```
+
+
+Tip 1.  Fix ownership of .npm directory
+
+```
+sudo chown -R $(whoami) ~/.npm
+```
+
+
+Tip 2. Clear npm cache
+
+```
+npm cache clean --force
+```
+
+Tip 3.  Avoid using sudo with npm install globally
+
+```
+# install nvm if not installed
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# restart terminal or source ~/.bashrc or ~/.zshrc
+
+# install node
+nvm install --lts
+```
+
+4. If issue persists
+
+```
+sudo rm -rf ~/.npm/_cacache
+```
+
 :::
