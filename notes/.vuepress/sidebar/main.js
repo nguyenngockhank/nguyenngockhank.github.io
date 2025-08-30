@@ -68,6 +68,14 @@ const reactDocs = [
   'vue_react',
 ].map(prefixMapFn('/react/'));
 
+const reactNativeDocs = [
+  'overview',
+  'storage',
+  'links',
+  'sharing',
+  'ota',
+].map(prefixMapFn('/react-native/'));
+
 const toolDocs = [
   '/devops/devops_overview',
   {
@@ -128,6 +136,7 @@ const networkDocs = [
   'devices',
   'nat',
   'firewall',
+  'dns-record',
   'network-abbr',
 ].map(prefixMapFn('/network/'));
 
@@ -323,6 +332,10 @@ module.exports = [
       {
         title: "ReactJS",
         children: reactDocs,
+      },
+      {
+        title: "React native",
+        children: reactNativeDocs,
       },
       {
         title: "VueJS",
