@@ -74,6 +74,9 @@ public/
 :::: tabs
 
 ::: tab apple-app-site-association
+
+Apple will cache your content 24h. Check at `https://app-site-association.cdn-apple.com/a/v1/your.domain.com`
+
 ```json
 {
   "applinks": {
@@ -82,9 +85,7 @@ public/
       {
         "appID": "yourapp.id.ios",
         "paths": [
-          "/",
-          "/post/*",
-          "/store/*"
+          "*"
         ]
       }
     ]
@@ -105,6 +106,9 @@ public/
 
 
 ::: tab assetlinks.json
+
+Go to *Google play console*  > *Your app* > *side bar* > *Grow users* > *Deep links* > `+ Add domain` to generate your content (included sha256 cert)
+
 ```json
 [
   {
@@ -115,8 +119,6 @@ public/
       "namespace": "android_app",
       "package_name": "yourapp.id.android",
       "sha256_cert_fingerprints": [
-        "5d:e3:26:ca:fd:...",
-        "8b:73:87:b7:78:...",
         "2b:50:88:30:75:..."
       ]
     }
@@ -127,6 +129,24 @@ public/
 :::
 ::::
 
+
+#### In app need to handle 404 case 
+
+```ts
+import { Redirect, usePathname } from 'expo-router'
+import { useEffect } from 'react'
+
+export default function NotFound() {
+  const path = usePathname()
+
+  useEffect(() => {
+    console.warn('404 path attempted:', path)
+  }, [path])
+
+  // Whenever a path doesn’t exist, redirect straight to home
+  return <Redirect href="/" />
+}
+```
 
 
 ### Solutions for Deferred Deep Linking
