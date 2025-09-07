@@ -75,6 +75,7 @@ const reactNativeDocs = [
   'sharing',
   'ota',
   'iap',
+  'i18n',
 ].map(prefixMapFn('/react-native/'));
 
 const toolDocs = [
