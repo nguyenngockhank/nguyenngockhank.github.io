@@ -86,3 +86,27 @@ Record Name | Type | Value
 - Global Accelerator accelerator
 - Route 53 record in the same hosted zone
 - **You cannot set an ALIAS record for an EC2 DNS name**
+
+## Email-Related DNS Records 
+
+| **Record Type** | **Purpose / Description** |
+|------------------|----------------------------|
+| **MX** | Specifies which mail server receives incoming emails for the domain. |
+| **A** | Maps the mail server’s hostname to its IPv4 address. |
+| **AAAA** | Maps the mail server’s hostname to its IPv6 address. |
+| **TXT (SPF)** | Defines which mail servers are authorized to send emails for the domain (anti-spoofing). |
+| **TXT (DKIM)** | Publishes a public key used to verify that outgoing emails haven’t been tampered with. |
+| **TXT (DMARC)** | Tells receiving mail servers how to handle messages that fail SPF/DKIM checks and where to send reports. |
+| **PTR** | Provides reverse DNS lookup — ensures the mail server’s IP matches its domain (used for spam prevention). |
+| **TXT (MTA-STS)** | Announces that the domain enforces secure SMTP delivery using TLS. |
+| **CNAME (DKIM selector)** | Delegates DKIM key hosting to another mail provider or subdomain. |
+
+**Quick Notes**:
+- TTL (Time To Live): How long DNS resolvers cache the record (in seconds).
+- Priority: Only applies to MX (lower = higher priority).
+- SPF, DKIM, DMARC are all stored as TXT records even though they serve different authentication functions.
+    - SPF: Sender Policy Framework
+    - DKIM:  DomainKeys Identified Mail
+    - DMARC: Domain-based Message Authentication, Reporting, and Conformance
+- PTR must be configured by the mail server’s IP owner (ISP or hosting provider).
+- MTA-STS (and newer TLS-RPT) enhance secure SMTP delivery over TLS.

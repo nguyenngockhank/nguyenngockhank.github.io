@@ -1,7 +1,16 @@
-# Internet Protocol 
+# IP - Internet Protocol 
 
-- Routable & routed protocol
-- Used at layer 3 (Network) 
+## What
+
+IP handles **addressing** and **routing** — it ensures data packets get from one device to another across networks. Used at layer 3 (Network) 
+
+Function |	Description
+-------- | ---------
+Addressing | 	Every device has an IP address (e.g., `192.168.1.10` or `2001:db8::1`)
+Routing | 	Finds the best path for packets to travel across networks
+Packetizing |	Breaks data into small pieces called IP packets (datagrams)
+Best-effort delivery |	Sends packets, but doesn’t guarantee delivery, order, or integrity
+
 - IP is the most widely used implementation of a hierarchical network-addressing scheme
 - IP is a connectionless, unreliable, best-effort delivery protocol. Layer 
 - Packet includes **header** - addressing & other control information + **actual data** - whatever is passed down from the higher layers.

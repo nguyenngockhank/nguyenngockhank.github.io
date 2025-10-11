@@ -132,14 +132,26 @@ const toolDocs = [
 
 const networkDocs = [
   'network',
-  'address',
-  'obtain-ip',
-  'ethernet',
-  'internet-protocol',
+  'osi',
   'devices',
-  'nat',
+  'tcp',
+  'socket',
+  'ethernet',
   'firewall',
-  'dns-record',
+  'email',
+  {
+    title: "Internet",
+    children: [
+      'internet-protocol',
+      'address',
+      'nat',
+      'dhcp',
+      'arp',
+      'dns',
+      'dns-record',
+      'bgp',
+    ].map(prefixMapFn('/network/'))
+  },
   'network-abbr',
 ].map(prefixMapFn('/network/'));
 
@@ -151,7 +163,6 @@ const awsDocs = [
   // 'aws-dev-tools',
   'ec2/',
   'elb/',
-  'sg/',
   'arn',
   // 'access-keys',
   'aws-services',
@@ -159,6 +170,9 @@ const awsDocs = [
   {
     title: "Network",
     children: [
+      'aws-network',
+      'sg/',
+      'nacl',
       'vpc/',
       'vpc',
       'route53/',

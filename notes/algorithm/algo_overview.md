@@ -93,7 +93,7 @@ A Bloom filter is a **space-efficient probabilistic** data structure that is use
 ![Bloom filter](https://i.pinimg.com/originals/92/bd/47/92bd474a86e4c58dd75fddaec02129b8.png)
 <!-- ![bloom](./bloom-1.png) -->
 
-Use case: 
+🟢 Use case: 
 - avoid attack miss cache attack 
 
 Refs

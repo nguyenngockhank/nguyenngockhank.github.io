@@ -1,5 +1,8 @@
 # Security Groups
 
+
+A Security Group (SG) is a **virtual firewall** for your `EC2 instances`, `RDS databases`, `ECS tasks`, and other `AWS resources` at the **instance level**.
+
 - Security Groups are the fundamental of network security in AWS
 - They control how traffic is allowed into or out of our EC2 Instances
 - Security groups only contain **allow** rules
@@ -16,13 +19,51 @@
     - Control of inbound network (from other to the instance) 
     - Control of outbound network (from the instance to other)
 
-Type | Protocol | Port Range | Source  | Description 
------| ----- | ----| ----| -----
-HTTP | TCP | 80 | 0.0.0.0/0 | test http page 
-SSH | TCP | 22 122.149.168.85/32
-Custom TCP Rule | TCP | 4567 |  0.0.0.0/0 | java app
 
 ![sgflow](./sg-flow.png)
+
+### Example 
+```
+[ Internet ]
+     │
+     ▼
+[ ALB Security Group ]
+  Inbound: 80,443 from 0.0.0.0/0
+  Outbound: 8080 to App SG
+     │
+     ▼
+[ App Server Security Group ]
+  Inbound: 8080 from ALB SG
+  Outbound: 3306 to DB SG
+     │
+     ▼
+[ Database Security Group ]
+  Inbound: 3306 from App SG
+```
+### Example 1 — Basic Web Server Security Group
+
+Direction |	Protocol | Port Range |	Source/Destination	| Description
+---------- | --------- | ---------- | ---------- | ----------
+Inbound | TCP	| 22	 | Your IP (e.g. 203.0.113.10/32) |	SSH access
+Inbound	| TCP	| 80	 | 0.0.0.0/0	| Allow HTTP (web traffic)
+Inbound	| TCP	| 443    | 0.0.0.0/0	| Allow HTTPS (secure web traffic)
+Outbound |	All	| All    | 0.0.0.0/0	| Allow all outbound traffic
+
+### Example 2 — Private App Server (Only From Load Balancer)
+
+Direction |	Protocol | Port Range |	Source/Destination	| Description
+---------- | --------- | ---------- | ---------- | ----------
+Inbound	   |  TCP	   | 8080      | SG of Load Balancer (`sg-xxxx`) |	Allow only traffic from ALB
+Outbound   |	TCP    |	3306   |	SG of Database (`sg-yyyy`) |	Allow DB access
+Outbound   |	All    | 	All	   | 0.0.0.0/0	| Allow other outbound (optional)
+
+### Example 3 — Database Security Group
+
+Direction |	Protocol | Port Range |	Source/Destination	| Description
+---------- | --------- | ---------- | ---------- | ----------
+Inbound	   |  TCP	   | 3306      | App Server SG (`sg-xxxx`) |	Allow DB access from app servers
+Outbound   |None    |	—   |	— |	Databases rarely initiate outbound traffic
+
 
 ## Good to know
 
@@ -35,16 +76,6 @@ Custom TCP Rule | TCP | 4567 |  0.0.0.0/0 | java app
 - All inbound traffic is **blocked** by default
 - All outbound traffic is **authorised** by default
 
-## Security Group vs NACLs
-
-Feature | SG    | NACL 
---------| ----- | -------
-Operates at | instance level | subnet level
-Apply to | `associated` instances | all instances deployed in associated subnet
-Support |  Allow rules only | Allow & Deny rules
-Rules are evaluted | before deciding allow traffic | in order, start with lowest numbered rule when deciding allow traffic
-State | **Stateful**. Return traffic is allowed, regardless of the rules | **Stateless**. Return traffic must be explicitly allowed by rules
-Relationship | SG & resource is `n - n`  | NACL & subnet is `n - 1`
 
 ## Classic Ports to know
 - 22 = SSH (Secure Shell) - log into a Linux instance
