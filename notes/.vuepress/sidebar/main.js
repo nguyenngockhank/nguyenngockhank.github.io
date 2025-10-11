@@ -249,6 +249,55 @@ const javascriptDocs = [
   }
 ]
 
+
+const apiGuideline = {
+  title: 'API Guidelines',
+  children: [
+    `/api-guidelines/overview`,
+    {
+      title: 'Principles',
+      children: [
+        // 'design-api-first-before-code',
+        // 'minimal-api-surface',
+        'one-type-of-data-per-api',
+        // 'robustness-principle',
+        'rules-for-public-api',
+      ].map(prefixMapFn('/api-guidelines/principles/'))
+    },
+    {
+      title: 'Conventions',
+      children: [
+        'http-status-codes',
+        {
+          title: "Verb and URI (REST)",
+          children: [
+            '',
+            'post-vs-put',
+            'request-methods',
+            'others',
+          ].map(prefixMapFn('/api-guidelines/conventions/verb-and-uri-rest/'))
+        },
+        {
+          title: "JSON Fields Naming Conventions",
+          children: [
+            'formats',
+            'json-structure',
+          ].map(prefixMapFn('/api-guidelines/conventions/json-fields-naming-conventions/'))
+        },
+        'error-responses',
+      ].map(prefixMapFn('/api-guidelines/conventions/')),
+    },
+    {
+      title: "Coding Guidelines",
+      children: [
+        'api-development-workflow',
+        'review-code-api-doc',
+        'decorators-for-endpoints',
+      ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
+    }
+  ]
+}
+
 module.exports = [
   {
     title: 'Chuyện muôn thuở',
@@ -258,53 +307,7 @@ module.exports = [
     title: "Devops",
     children: toolDocs,
   },
-  {
-    title: 'API Guidelines',
-    children: [
-      `/api-guidelines/overview`,
-      {
-        title: 'Principles',
-        children: [
-          // 'design-api-first-before-code',
-          // 'minimal-api-surface',
-          'one-type-of-data-per-api',
-          // 'robustness-principle',
-          'rules-for-public-api',
-        ].map(prefixMapFn('/api-guidelines/principles/'))
-      },
-      {
-        title: 'Conventions',
-        children: [
-          'http-status-codes',
-          {
-            title: "Verb and URI (REST)",
-            children: [
-              '',
-              'post-vs-put',
-              'request-methods',
-              'others',
-            ].map(prefixMapFn('/api-guidelines/conventions/verb-and-uri-rest/'))
-          },
-          {
-            title: "JSON Fields Naming Conventions",
-            children: [
-              'formats',
-              'json-structure',
-            ].map(prefixMapFn('/api-guidelines/conventions/json-fields-naming-conventions/'))
-          },
-          'error-responses',
-        ].map(prefixMapFn('/api-guidelines/conventions/')),
-      },
-      {
-        title: "Coding Guidelines",
-        children: [
-          'api-development-workflow',
-          'review-code-api-doc',
-          'decorators-for-endpoints',
-        ].map(prefixMapFn('/api-guidelines/coding-guidelines/')),
-      }
-    ]
-  },
+
   {
     title: "Database",
     children: [
@@ -400,19 +403,7 @@ module.exports = [
       },
     ]
   },
-  {
-    title: "Thuật ngữ",
-    sidebarDepth: 1,
-    children: [
-      '/terms/javascript',
-      '/terms/patterns',
-      '/terms/principles',
-      '/terms/pipeline',
-      '/terms/testing',
-      '/terms/12factors',
-      '/data/terms'
-    ]
-  },
+
   {
     title: "Payment",
     children: [
@@ -430,9 +421,24 @@ module.exports = [
     title: "Network",
     children: networkDocs,
   },
-
   {
     title: "AWS",
     children: awsDocs,
+  },
+  {
+    title: "Misc",
+    sidebarDepth: 1,
+    children: [
+      '/terms/analog',
+      '/tools/rfid',
+      '/terms/javascript',
+      '/terms/patterns',
+      '/terms/principles',
+      '/terms/pipeline',
+      '/terms/testing',
+      '/terms/12factors',
+      '/data/terms',
+      apiGuideline
+    ]
   },
 ]
