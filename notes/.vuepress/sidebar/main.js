@@ -76,6 +76,7 @@ const reactNativeDocs = [
   'ota',
   'iap',
   'i18n',
+  'android',
 ].map(prefixMapFn('/react-native/'));
 
 const toolDocs = [
