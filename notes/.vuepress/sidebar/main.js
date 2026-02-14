@@ -73,7 +73,7 @@ const reactNativeDocs = [
   'storage',
   'links',
   'sharing',
-  'ota',
+  // 'ota',
   'iap',
   'i18n',
   'android',
