@@ -90,3 +90,21 @@ On Android, keeping too many views alive offscreen hurts memory & GPU performanc
  
 />
 ```
+
+## Android HTTP Requests Blocked (Cleartext Traffic)
+
+On Android 9 (API level 28) and above, apps block all HTTP (non-secure) requests by default. This means any API call like `http://example.com` will fail in React Native with errors such as `CLEARTEXT communication not permitted` or `Network request failed`.
+
+### Why it happens
+
+Android enforces a network security policy that only allows HTTPS to protect against data leaks and man-in-the-middle attacks.
+
+#### How to fix
+
+- Recommended (production): Switch your API to HTTPS (`https://...`)
+- For development only:
+    - Enable cleartext in AndroidManifest.xml:
+        ```xml
+        <application android:usesCleartextTraffic="true" />
+        ```
+    - Or define a network_security_config to allow specific domains

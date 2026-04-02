@@ -10,6 +10,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+
 ## Edit file hosts
 Mở finder 
 ```
@@ -170,6 +171,80 @@ use this app http://deepsleep.free.fr/
 
 [Full Here](https://mackeeper.com/blog/post/542-how-to-install-fonts-on-mac/)
 
+## Epub to pdf 
+
+Use [calibre](https://calibre-ebook.com/download) to manage ebooks & convert by cli
+
+```
+which ebook-convert
+
+ebook-convert input.epub output.pdf
+```
+
+## Split pdf 
+
+### Basic commands 
+```sh
+# install 
+brew install qpdf
+
+
+# see page number 
+qpdf --show-npages input.pdf
+
+# split file 
+qpdf input.pdf --pages . 1-3 -- output_part1.pdf
+qpdf input.pdf --pages . 4-6 -- output_part2.pdf
+
+```
+
+### Setup more
+
+Create file `~/splitpdf.sh` with content below and dont forget make it executable `chmod +x split_pdf.sh`
+
+Usage: `~/splitpdf.sh input.pdf [chunk_size]`
+
+```sh
+#!/bin/bash
+
+# Default chunk_size = 500
+if [ -z "$1" ]; then
+  echo "Usage: $0 input.pdf [chunk_size]"
+  exit 1
+fi
+
+INPUT="$1"
+CHUNK_SIZE=${2:-500}  # default 500 pages per chunk
+
+if [ ! -f "$INPUT" ]; then
+  echo "File $INPUT not found!"
+  exit 1
+fi
+
+NUM_PAGES=$(qpdf --show-npages "$INPUT")
+echo "Splitting '$INPUT' ($NUM_PAGES pages) into chunks of $CHUNK_SIZE pages..."
+
+CHUNK_START=1
+CHUNK_NUM=1
+
+while [ $CHUNK_START -le $NUM_PAGES ]; do
+  CHUNK_END=$((CHUNK_START + CHUNK_SIZE - 1))
+  if [ $CHUNK_END -gt $NUM_PAGES ]; then
+    CHUNK_END=$NUM_PAGES
+  fi
+
+  OUTPUT="chunk_${CHUNK_NUM}_pages_${CHUNK_START}_to_${CHUNK_END}.pdf"
+  qpdf "$INPUT" --pages . $CHUNK_START-$CHUNK_END -- "$OUTPUT"
+  echo "Created $OUTPUT"
+
+  CHUNK_START=$((CHUNK_END + 1))
+  CHUNK_NUM=$((CHUNK_NUM + 1))
+done
+
+echo "Done!"
+```
+
+
 ## Switch to bash
 
 ```
@@ -204,4 +279,5 @@ Sources/Extra Reading:
 - https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man8/fsck_exfat.8.html
 - https://craigsmith.id.au/2014/07/06/repairing-a-corrupted-mac-osx-exfat-partition/
 - https://discussions.apple.com/thread/4154638?tstart=0
+
 

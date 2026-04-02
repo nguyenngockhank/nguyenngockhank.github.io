@@ -73,10 +73,14 @@ const reactNativeDocs = [
   'storage',
   'links',
   'sharing',
-  'ota',
-  'iap',
+
+  // 'ota',
+  'fetch',
   'i18n',
+  'lingui',
+  'timezone',
   'android',
+  'iap',
 ].map(prefixMapFn('/react-native/'));
 
 const toolDocs = [
