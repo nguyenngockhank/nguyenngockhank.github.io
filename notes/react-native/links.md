@@ -194,3 +194,146 @@ Branch.io makes a single link (https://yourcompany.app.link/Jb5l) do all of the 
 - **Act as a deferred deep link** for new users, ensuring they land on the right content after installation.
 - **Provide a fallback** to a web page or app store for users who don't have the app.
 - **Collect analytics** on every click, install, and open, giving marketers valuable data about which campaigns are working.
+
+
+##  Deferred Deep Link Alternative (Heuristic-Based Approach)
+
+When official deferred deep linking solutions are unavailable, deprecated, or not suitable (e.g., avoiding third-party SDKs), a backend-driven heuristic approach can be used to approximate post-install routing.
+
+This method does not rely on deterministic attribution. Instead, it uses probabilistic matching between a web click session and the first app launch.
+
+### Overview
+
+Flow:
+
+1. User clicks a campaign link on the web
+2. Web server generates an install token and stores session metadata
+3. User is redirected to the App Store / Play Store
+4. After installation, the app opens for the first time
+5. App calls a backend API to resolve the install
+6. Backend matches the app session with a previous web click using heuristics
+7. If a confident match is found, the backend returns the deep link payload
+
+### Step 1 — Capture Click Session
+
+When the user clicks a link such as:  `https://yourdomain.com/invite?campaign=abc123`
+
+The web service should:
+- Generate an `install_token`
+- Store:
+  - token
+  - campaign id
+  - IP address
+  - user agent
+  - timestamp
+- Redirect to the App Store / Play Store
+
+Example stored record:
+
+```
+token: abc123xyz
+campaign: invite_campaign
+ip: 203.0.113.10
+user_agent: iPhone iOS 17 Safari
+created_at: 2026-02-13T10:00:00Z
+deep_link_payload:
+  route: invite
+  params:
+    inviterId: 999
+```
+
+
+### Step 2 — App First Launch
+
+On the first app open:
+
+- Collect basic device information:
+  - platform (iOS / Android)
+  - OS version
+  - device model
+  - app version
+- Call: `POST /install/resolve`
+
+Body:
+```
+{
+  "device_info": {
+    "platform": "ios",
+    "os_version": "17.2",
+    "device_model": "iPhone15,3",
+    "app_version": "1.0.0"
+  }
+}
+```
+
+### Step 3 — Heuristic Matching Logic
+
+The backend compares the first-launch request with recent click sessions.
+
+Signals used:
+
+**1. IP Address**
+- Compare click IP vs. app launch IP
+- Strong indicator if identical and recent
+
+**2. OS + Device Data**
+- Platform match (iOS vs Android)
+- OS version similarity
+
+**3. Time Window**
+- Installs usually occur shortly after click
+- Typical matching window: 0–30 minutes
+
+**4. Campaign Context**
+- If only one recent click exists for a campaign, match probability increases 
+
+### Example Scoring Algorithm
+
+```
+score = 0
+
+if (ip_match) score += 50
+if (platform_match) score += 20
+if (os_version_match) score += 20
+
+time_diff = now - click_time
+
+if (time_diff < 5min) score += 30
+else if (time_diff < 15min) score += 10
+```
+
+### Step 4 — App Routing
+
+If a deep link payload is returned:
+- Navigate to the intended screen
+- Optionally confirm with the user if confidence is medium
+
+```
+"You were invited by John. Join now?"
+[Accept] [Skip]
+```
+
+**Confidence Levels (Recommended)**: Return a confidence score from backend:
+- high → auto route
+- medium → ask user confirmation
+- low → ignore
+
+
+### Limitations
+- Not deterministic attribution
+- Possible device/session collision
+- Less reliable for high-scale marketing campaigns
+- Cannot fully replace official attribution SDKs
+
+### When This Approach Is Appropriate
+Recommended for:
+
+- referral systems
+- invite flows
+- internal growth features
+- content sharing
+
+Not recommended for:
+- paid ad attribution
+- affiliate payouts
+- ROAS measurement
