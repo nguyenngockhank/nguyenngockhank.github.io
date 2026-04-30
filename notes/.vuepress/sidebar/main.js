@@ -70,6 +70,7 @@ const reactDocs = [
 
 const reactNativeDocs = [
   'overview',
+  'expo',
   'storage',
   'links',
   'sharing',
