@@ -1,13 +1,15 @@
 {
   "scripts": {
-    "dev": "vuepress dev",
-    "build": "vuepress build"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.31",
     "@vuepress/plugin-back-to-top": "^1.0.0-rc.1",
-    "@vuepress/plugin-google-analytics": "^1.1.0",
     "@vuepress/plugin-pwa": "^1.0.0-rc.1",
-    "vuepress": "^1.7.1",
+    "@vuepress/theme-default": "^2.0.0-rc.137",
+    "vue": "^3.5.44",
+    "vuepress": "^2.0.0-rc.31",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-element-tabs": "^0.1.8",
     "vuepress-plugin-right-anchor": "^0.4.4"

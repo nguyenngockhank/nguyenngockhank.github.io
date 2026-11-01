@@ -1,0 +1,3 @@
+import comp from "/Volumes/KHANKSSD/PROJECTS/nguyenngockhank.github.io/tech/docs/.vuepress/.temp/pages/index.html.vue"
+const data = JSON.parse("{\"path\":\"/\",\"title\":\"Home\",\"lang\":\"en-US\",\"frontmatter\":{\"home\":true,\"title\":\"Home\",\"heroImage\":\"https://assets.sotaychemgio.com/logo.jpg\",\"actions\":[{\"text\":\"Get Started\",\"link\":\"/ai-knowledge.html\",\"type\":\"primary\"},{\"text\":\"Old version\",\"link\":\"https://nguyenngockhank.github.io/docs\",\"type\":\"secondary\"}],\"footer\":\"MIT Licensed | Copyright © 2018-present VuePress Community\"},\"headers\":[],\"git\":{},\"filePathRelative\":\"README.md\"}")
+export { comp, data }
