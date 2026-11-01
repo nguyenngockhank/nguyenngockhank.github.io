@@ -1,4 +1,4 @@
 node_modules
 books
-tech/.vuepress/.temp/*
-tech/.vuepress/.cache/*
+.temp
+.cache
