@@ -141,7 +141,7 @@ export default {
 
 This file has a very robust setup for getting users into the app from the web:
 
-- **scheme**: `frf`: Allows opening the app via `frf://`.
+- **scheme**: `stcg`: Allows opening the app via `stcg://`.
 - **associatedDomains** (iOS) & **intentFilters** (Android): These configure Universal Links. If a user clicks a link to `link.sotaychemgio.com`, the phone will open the app directly instead of the browser.
 
 
@@ -152,3 +152,29 @@ This file has a very robust setup for getting users into the app from the web:
 **4. Native Permissions (Privacy)**
 - **expo-image-picker** & **expo-camera**: Custom messages for profile pictures and QR scanning.
 - **expo-tracking-transparency**: Required by Apple to track users for personalized ads.
+
+## Upgrade Expo 
+
+from Expo 53 to Expo 58 
+
+- expo packages 
+- use `whatwg-fetch` instead of `fetch`
+  - create custom fetch for `openapi-fetch`
+  - use `parseAx: "text"` for some request
+- upgrade `react-native-video`
+  - fullscreen mode 
+  - handling volume 
+- postion / offset on android
+- keyboard: install more `react-native-keyboard-controller`
+  - input at the bottom of the screen
+  - input should display when keyboard opened
+  - tap on outside area should dismiss keyboard
+- install `@futurejj/react-native-visibility-sensor` to handle visibility sensor (scroll up & down)
+- splash => accept to use `enableFullScreenImage_legacy` for ios
+- replace `import { getInfoAsync } from 'expo-file-system'` by `import { File } from 'expo-file-system'`
+
+
+
+
+
+  
