@@ -7,6 +7,7 @@ export default defineUserConfig({
   dest: '../note',
   title: 'Nguyễn Khánk\'s Wiki',
   description: 'Wikipedia của tui',
+  base: '/note',
 
   theme: defaultTheme({
     logo: 'https://assets.sotaychemgio.com/logo.jpg',
