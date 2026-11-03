@@ -1,0 +1,41 @@
+import{_ as s,c as e,a,o as i}from"./app-DOyrCucJ.js";const l={};function d(c,n){return i(),e("div",null,[...n[0]||(n[0]=[a(`<h1 id="ai-cases" tabindex="-1"><a class="header-anchor" href="#ai-cases"><span>AI Cases</span></a></h1><h2 id="agents-md" tabindex="-1"><a class="header-anchor" href="#agents-md"><span>AGENTS.md</span></a></h2><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line"># Project Instructions</span>
+<span class="line"></span>
+<span class="line">## Before Working</span>
+<span class="line">1. Read docs/index.md.</span>
+<span class="line">2. Identify the relevant domain and execution flow.</span>
+<span class="line">3. Inspect the actual source files before making assumptions.</span>
+<span class="line">4. Check related tests and dependencies.</span>
+<span class="line"></span>
+<span class="line">## Architecture</span>
+<span class="line">- Follow existing module boundaries.</span>
+<span class="line">- Do not introduce new abstractions without justification.</span>
+<span class="line">- Prefer existing utilities and hooks.</span>
+<span class="line"></span>
+<span class="line">## After Changes</span>
+<span class="line">- Run relevant tests.</span>
+<span class="line">- Update architecture documentation if behavior or boundaries changed.</span>
+<span class="line">- Regenerate structural indexes when source structure changes.</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="docs-index-md" tabindex="-1"><a class="header-anchor" href="#docs-index-md"><span>docs/index.md</span></a></h2><p>docs/index.md – Điểm khởi đầu kiến thức Đây là file giúp Agent định hướng.</p><div class="language-text line-numbers-mode" data-highlighter="prismjs" data-ext="text"><pre><code><span class="line"># Codebase Knowledge Index</span>
+<span class="line"></span>
+<span class="line">## Architecture</span>
+<span class="line">- [System Overview](architecture/overview.md)</span>
+<span class="line">- [Module Map](architecture/module-map.md)</span>
+<span class="line">- [Dependencies](architecture/dependency-map.md)</span>
+<span class="line"></span>
+<span class="line">## Domains</span>
+<span class="line">- [Authentication](domains/authentication.md)</span>
+<span class="line">- [Social](domains/social.md)</span>
+<span class="line">- [Subscription](domains/subscription.md)</span>
+<span class="line"></span>
+<span class="line">## Execution Flows</span>
+<span class="line">- [App Startup](flows/app-startup.md)</span>
+<span class="line">- [Purchase](flows/purchase-flow.md)</span>
+<span class="line"></span>
+<span class="line">## Generated Indexes</span>
+<span class="line">- File Index: generated/file-index.json</span>
+<span class="line">- Symbol Index: generated/symbol-index.json</span>
+<span class="line">- Dependency Graph: generated/dependency-graph.json</span>
+<span class="line"></span>
+<span class="line">## Instructions</span>
+<span class="line">Always verify documentation against actual source code.</span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>`,6)])])}const t=s(l,[["render",d]]),p=JSON.parse('{"path":"/cases.html","title":"AI Cases","lang":"en-US","frontmatter":{},"headers":[{"level":2,"title":"AGENTS.md","slug":"agents-md","link":"#agents-md","children":[]},{"level":2,"title":"docs/index.md","slug":"docs-index-md","link":"#docs-index-md","children":[]}],"git":{},"filePathRelative":"cases.md"}');export{t as comp,p as data};
